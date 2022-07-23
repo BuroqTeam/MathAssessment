@@ -1,3 +1,4 @@
+using Extension;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -10,8 +11,8 @@ public class Pattern1 : MonoBehaviour
     public GameObject QuestionObject;
     public TextAsset JsonText;
 
-    //Pattern1Data Obj1 = new Pattern1Data();
 
+    // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
 
     void Start()
     {
@@ -23,40 +24,38 @@ public class Pattern1 : MonoBehaviour
     public void WriteTest()
     {
         var jsonObj = JObject.Parse(JsonText.text);
+        int ranNum = Random.Range(0, 10);       
 
-        //Obj1.title = jsonObj["chapters"][0]["questions"][3]["question"]["title"].Value<string>();
-        //QuestionObject.GetComponent<TEXDraw>().text = Obj1.title;
-        
-        var likeObj = jsonObj["chapters"][0]["questions"][3]["question"].ToObject<Pattern1Data>();
+        // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
+        var Pattern1Obj = jsonObj["chapters"][4]["questions"][ranNum]["question"].ToObject<Pattern1Data>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.  
+        Debug.Log("Current Question Number = " + ranNum + " " + "Type of variable : " + Pattern1Obj.options.GetType());
 
-        QuestionObject.GetComponent<TEXDraw>().text = likeObj.title;
+        QuestionObject.GetComponent<TEXDraw>().text = Pattern1Obj.title;
+
+        List<string> str = Pattern1Obj.options;
+        str = str.ShuffleList();
+        Pattern1Obj.options = str;
 
         for (int i = 0; i < ABCD.Count; i++)
         {
-            var likeName = jsonObj["chapters"][0]["questions"][3]["question"]["options"][i].Value<string>();
-
+            var likeName = Pattern1Obj.options[i];
             ABCD[i].GetComponent<AnswerPattern1>().PatternOne = this;
 
             if (likeName.Contains('*'))
-            {                
-                //ABCD[i].GetComponent<AnswerPattern1>().ABCD = ABCD;
+            {
                 ABCD[i].GetComponent<AnswerPattern1>()._IsTrue = true;
                 likeName = likeName.Replace("[*]", "");
             }
             ABCD[i].GetComponent<AnswerPattern1>().WriteCurrentAnswer(likeName);
-        }
-
-        
+        }        
     }
-
 
 
     public void UnClickedButtons()
     {
         for (int i = 0; i < ABCD.Count; i++)
         {
-            ABCD[i].transform.GetChild(0).gameObject.SetActive(false);
-            //ABCD[i].transform.GetComponent<AnswerPattern1>().Clicked.gameObject.SetActive(false);
+            ABCD[i].transform.GetChild(0).gameObject.SetActive(false);            
         }
     }
 
@@ -67,5 +66,6 @@ public class Pattern1 : MonoBehaviour
 public class Pattern1Data
 {
     public string title;
+    //public string[] options;
     public List<string> options;
 }

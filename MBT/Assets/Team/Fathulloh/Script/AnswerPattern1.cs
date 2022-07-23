@@ -21,27 +21,27 @@ public class AnswerPattern1 : MonoBehaviour
     }
     
 
+    /// <summary>
+    /// Button bosilganda ishlovchi method.
+    /// </summary>
     public void ClickAnswer()
     {
-        //for (int i = 0; i < ABCD.Count; i++)
-        //{
-        //    //if (ABCD[i] == gameObject)
-        //    //{
-
-        //    //}
-        //    //else 
-        //    //{
-        //    //    DisableObject();
-        //    //    Debug.Log(" " + ABCD[i].transform.GetChild(0).gameObject.name);
-        //    //}
-        //    ABCD[i].transform.GetChild(0).GetComponent<AnswerPattern1>().DisableObject();
-        //}
-
         PatternOne.UnClickedButtons();
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        if (_IsTrue)
+        {
+            Debug.Log("Correct Answer.");
+        }
+        else
+        {
+            Debug.Log("Wrong Answer.");
+        }
     }
 
 
+    /// <summary>
+    /// Bosilgan variyantlarni o'chirish uchun ishlatiladi.
+    /// </summary>
     public void DisableObject()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
