@@ -35,15 +35,9 @@ public class Pattern_3 : MonoBehaviour
         
     }
 }
-[SerializeField]
-public class PlayerStats
-{
-
-}
-
 
 [SerializeField]
-public class Pattern2Data
+public class Pattern3Data
 {
     public string title;
     public string[] options;
