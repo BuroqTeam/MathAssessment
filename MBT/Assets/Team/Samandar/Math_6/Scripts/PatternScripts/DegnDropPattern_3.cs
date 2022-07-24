@@ -7,49 +7,52 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 {
 
     public List<GameObject> NumberArea;
+    private RectTransform rectTransform;
+
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
-       
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Check();
+
     }
 
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(pos.x, pos.y, 0);
-        
+        transform.position = new Vector2(pos.x, pos.y);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Check()
     {
         for (int i = 0; i < NumberArea.Count; i++)
         {
-            //float flov_1 = Vector3.Distance();
-            ////Debug.Log(NumberArea[i].name + "        " + NumberArea.Count);
-            //Debug.Log(flov_1);
-            
-            if (Vector3.Distance(gameObject.GetComponent<RectTransform>().rect.position, NumberArea[i].GetComponent<RectTransform>().rect.position) <= 36)
+            //if (Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().rect.position, NumberArea[i].transform.GetComponent<RectTransform>().rect.position) <=35)
+            //{
+            //    gameObject.transform.position = NumberArea[i].transform.position;
+            //    break;
+            //}
+            if (Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().anchoredPosition, NumberArea[i].transform.GetComponent<RectTransform>().anchoredPosition) <= 35)
             {
-                Debug.Log(1);
-                transform.position = NumberArea[i].transform.position;
+                gameObject.GetComponent<RectTransform>().anchoredPosition = NumberArea[i].GetComponent<RectTransform>().anchoredPosition;
                 break;
             }
+            Debug.Log(Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().anchoredPosition, NumberArea[i].transform.GetComponent<RectTransform>().anchoredPosition));
         }
-     
-    }  
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+
     }
 }
