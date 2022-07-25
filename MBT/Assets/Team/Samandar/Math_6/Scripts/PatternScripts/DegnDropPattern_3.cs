@@ -26,7 +26,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(pos.x, pos.y);
+        transform.position = new Vector3(pos.x, pos.y, 0);
 
     }
 

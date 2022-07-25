@@ -10,11 +10,20 @@ public class Pattern_4 : MonoBehaviour
 {
     public TextAsset jsonText;
     public TEXDraw Questions;
-    public List<TEXDraw> Numbers;
-    public TEXDraw PictureName_1;
-    public TEXDraw PictureName_2;
-
+    public TEXDraw PictureText_1;
+    public TEXDraw PictureText_2;
+    public GameObject PicturePrefab;
+    public GameObject PictureName_1;
+    public GameObject PictureName_2;
+    public GameObject SignsPrefab;
+    public List<GameObject> Signs;
     void Start()
+    {
+       
+        CreatePrefabs();
+        JsonData();
+    }
+    void JsonData()
     {
         var jsonObj = JObject.Parse(jsonText.text);
 
@@ -24,16 +33,23 @@ public class Pattern_4 : MonoBehaviour
         var question = jsonObj["chapters"][1]["questions"][30]["question"]["title"].Value<string>();
         var picturesName_1 = jsonObj["chapters"][1]["questions"][30]["statements"][0]["statement"].Value<string>();
         var picturesName_2 = jsonObj["chapters"][1]["questions"][30]["statements"][0]["statement"].Value<string>();
-        for (int i = 0; i < Numbers.Count; i++)
-        {
-            //Numbers[i].transform.GetComponent<TEXDraw>().text = jo[i].ToString();
-        }
-        PictureName_1.GetComponent<TEXDraw>().text = picturesName_1;
-        PictureName_2.GetComponent<TEXDraw>().text = picturesName_2;
-        Questions.GetComponent<TEXDraw>().text = question;
-    }
 
-    // Update is called once per frame
+        PictureText_1.GetComponent<TEXDraw>().text = picturesName_1;
+        PictureText_2.GetComponent<TEXDraw>().text = picturesName_2;
+        Questions.GetComponent<TEXDraw>().text = question;
+        PictureName_1.transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = picturesName_1;
+    }
+    public void CreatePrefabs() 
+    {
+        GameObject objName_1 = Instantiate(PicturePrefab, PictureName_1.transform);
+        GameObject objName_2 = Instantiate(PicturePrefab, PictureName_2.transform);
+
+        for (int i = 0; i < Signs.Count; i++)
+        {
+            GameObject objSigns = Instantiate(SignsPrefab, Signs[i].transform);
+
+        }
+    }
     void Update()
     {
 
