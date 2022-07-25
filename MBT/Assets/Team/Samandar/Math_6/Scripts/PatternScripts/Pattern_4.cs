@@ -17,6 +17,8 @@ public class Pattern_4 : MonoBehaviour
     public GameObject PictureName_2;
     public GameObject SignsPrefab;
     public List<GameObject> Signs;
+    public GameObject ChoosePrefab;
+    public List<GameObject> Choose;
     void Start()
     {
        
@@ -30,24 +32,45 @@ public class Pattern_4 : MonoBehaviour
         JArray jo = (JArray)jsonObj["chapters"][1]["questions"][30]["problem"];
 
 
-        var question = jsonObj["chapters"][1]["questions"][30]["question"]["title"].Value<string>();
-        var picturesName_1 = jsonObj["chapters"][1]["questions"][30]["statements"][0]["statement"].Value<string>();
-        var picturesName_2 = jsonObj["chapters"][1]["questions"][30]["statements"][0]["statement"].Value<string>();
-
+        var question = jsonObj["chapters"][0]["questions"][30]["question"]["title"].Value<string>();
+        var picturesName_1 = jsonObj["chapters"][0]["questions"][30]["statements"][0]["statement"].Value<string>();
+        var picturesName_2 = jsonObj["chapters"][0]["questions"][30]["statements"][0]["statement"].Value<string>();
+        var Signs_1 = jsonObj["chapters"][0]["questions"][30]["options"][0]["left"].Value<string>();
+        var Signs_2 = jsonObj["chapters"][0]["questions"][30]["options"][1]["left"].Value<string>();
+        var Signs_3 = jsonObj["chapters"][0]["questions"][30]["options"][2]["left"].Value<string>();
         PictureText_1.GetComponent<TEXDraw>().text = picturesName_1;
         PictureText_2.GetComponent<TEXDraw>().text = picturesName_2;
         Questions.GetComponent<TEXDraw>().text = question;
         PictureName_1.transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = picturesName_1;
+        PictureName_2.transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = picturesName_2;
+
+        for (int i = 0; i < 2; i++)
+        {
+            Signs[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Signs_1;
+        }
+        for (int i = 2; i < 4; i++)
+        {
+            Signs[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Signs_2;
+        }
+        for (int i = 4; i < 6; i++)
+        {
+            Signs[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Signs_3;
+        }
+
     }
     public void CreatePrefabs() 
     {
         GameObject objName_1 = Instantiate(PicturePrefab, PictureName_1.transform);
         GameObject objName_2 = Instantiate(PicturePrefab, PictureName_2.transform);
-
+       
         for (int i = 0; i < Signs.Count; i++)
         {
             GameObject objSigns = Instantiate(SignsPrefab, Signs[i].transform);
 
+        }
+        for (int i = 0; i < Choose.Count; i++)
+        {
+            GameObject objChoose = Instantiate(ChoosePrefab, Choose[i].transform);
         }
     }
     void Update()
@@ -62,3 +85,5 @@ public class Pattern4Data
     public string title;
     public string[] options;
 }
+
+
