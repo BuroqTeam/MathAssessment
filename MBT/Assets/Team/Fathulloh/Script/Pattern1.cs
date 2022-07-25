@@ -34,7 +34,7 @@ public class Pattern1 : MonoBehaviour
         int ranNum = Random.Range(0, 10);       
 
         // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
-        var Pattern1Obj = jsonObj["chapters"][9]["questions"][ranNum]["question"].ToObject<Pattern1Data>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.  
+        var Pattern1Obj = jsonObj["chapters"][0]["questions"][ranNum]["question"].ToObject<Pattern1Data>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.  
         Debug.Log("Current Question Number = " + ranNum + " " + " Type of variable : " + Pattern1Obj.options.GetType());
 
         QuestionObject.GetComponent<TEXDraw>().text = Pattern1Obj.title;
