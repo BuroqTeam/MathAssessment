@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using DG.Tweening;
 
 public class Pattern5 : MonoBehaviour
 {
@@ -15,15 +14,18 @@ public class Pattern5 : MonoBehaviour
 
 
     public List<GameObject> positionObjs;
-    public GameObject NumPosPrefab;
-    public GameObject Number;
+    public GameObject NumPrefab;
+    //public GameObject Number;
     public GameObject ParentForPos;
-
+    public Pattern5Data Pattern5Obj = new Pattern5Data();
 
     void Start()
     {
+        //QuestionObject = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+        //QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+        QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
+        
 
         ReadFromJson();
 
@@ -31,46 +33,56 @@ public class Pattern5 : MonoBehaviour
     }
 
 
+    public void DisplayQuestion()
+    {
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title[0];
+    }
+
+
     public void ReadFromJson()
     {
-        BobID = Random.Range(0, 10);
         QuestionID = Random.Range(40, 50);
-        Debug.Log("BobID = " + BobID + " QuestionID = " + QuestionID);
+        Debug.Log(" QuestionID = " + QuestionID);
         var jsonObj = JObject.Parse(JsonText.text);
 
-        //var likeName = jsonObj["chapters"][0]["questions"][0]["question"]["options"][1].Value<string>();
-        //Debug.Log(likeName);
-        var test1 = jsonObj["chapters"][0]["questions"][40]["id"].Value<string>();
-        Debug.Log(test1);
+        //var likeName = jsonObj["chapters"][0]["questions"][0]["question"]["options"][1].Value<string>();        
+        //var test1 = jsonObj["chapters"][0]["questions"][40]["id"].Value<string>();
+        //Debug.Log("likeName = " + likeName + " test1 = " + test1);
 
         //var Pattern5Obj = jsonObj["chapters"][0]["questions"][40].ToObject<Pattern5Data>();
-        var Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID].ToObject<Pattern5Data>();
-        Debug.Log("ID = "+ Pattern5Obj.Id + " Problems count = " + Pattern5Obj.problem.Count);
-        //for (int i = 0; i < Pattern5Obj.problem.Count; i++)        {
-        //    Debug.Log("    " + Pattern5Obj.problem[i]);
-        //}
+        Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID].ToObject<Pattern5Data>();
+        //Debug.Log("ID = "+ Pattern5Obj.id + " Problems count = " + Pattern5Obj.problem.Count);
 
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title;
+        for (int i = 0; i < Pattern5Obj.solution.Count; i++)        {
+            List<string> NewList = Pattern5Obj.solution[i];
+            Debug.Log(NewList[0] + " " + NewList[1] + " " + NewList[2] + " " + NewList[3] + " " + NewList[4]);
+            
+        }
+
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
+
+
+        if (Pattern5Obj.question == null)
+        {
+            Debug.Log("Title is null." + Pattern5Obj.id + "   "+ Pattern5Obj.pattern+ " " + Pattern5Obj.problem[1] + "  " + Pattern5Obj.solution[1]);
+        }
+        else        {
+            Debug.Log("Title is full." + Pattern5Obj.question.title);
+        }
     }
 
 
     public void CreatePrefabs()
     {
-        for (int i = 0; i < positionObjs.Count; i++)
+        for (int i = 0; i < Pattern5Obj.problem.Count; i++)
         {
             Vector3 locPos = positionObjs[i].GetComponent<RectTransform>().localPosition;
-            Debug.Log(positionObjs[i].GetComponent<RectTransform>().position + " " + positionObjs[i].GetComponent<RectTransform>().localPosition);
-            //GameObject obj = Instantiate(NumPosPrefab, locPos/*new Vector3(locPos.x, locPos.y, locPos.z)*/, Quaternion.identity);
-            GameObject obj = Instantiate(NumPosPrefab, ParentForPos.transform);
+            
+            GameObject obj = Instantiate(NumPrefab, ParentForPos.transform);
             obj.transform.localPosition = locPos;
-            ////obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;
-            ////obj.GetComponent<RectTransform>().transform.DOScale(1, 1);
-            ////obj.transform.SetParent(ParentForPos.transform);
-            //obj.transform.SetParent(GameObject.FindGameObjectWithTag("ParentPattern5").transform, false);
 
-            //Debug.Log(positionObjs[i].GetComponent<RectTransform>().localPosition);
-            //Debug.Log(positionObjs[i].GetComponent<RectTransform>().rect.position);
-            //Debug.Log(positionObjs[i].GetComponent<RectTransform>().position);
+            //obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
+            //obj.transform.SetParent(ParentForPos.transform);            
         }
     }
 
@@ -80,9 +92,16 @@ public class Pattern5 : MonoBehaviour
 [SerializeField]
 public class Pattern5Data
 {
-    public string Id;
-    public int PatternID;
-    public string title;    
+    public string id;
+    public string pattern;
+    public Pattern5Title question;    
     public List<string> problem;
     public List<List<string>> solution;
 }
+
+[SerializeField]
+public class Pattern5Title
+{
+    public string title;
+}
+
