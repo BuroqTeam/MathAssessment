@@ -20,7 +20,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
+        Check();
     }
 
     void IDragHandler.OnDrag(PointerEventData eventData)
