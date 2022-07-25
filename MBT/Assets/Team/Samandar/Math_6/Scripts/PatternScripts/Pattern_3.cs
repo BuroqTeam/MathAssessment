@@ -6,14 +6,18 @@ using System.IO;
 using UnityEngine;
 using TexDrawLib;
 
+
 public class Pattern_3 : MonoBehaviour 
 {
     public TextAsset jsonText;
     public TEXDraw Questions;
     public List<TEXDraw> Numbers;
 
+    Pattern3Data objaa;
+
     void Start()
     {
+       
         var jsonObj = JObject.Parse(jsonText.text);
 
         JArray jo = (JArray)jsonObj["chapters"][1]["questions"][20]["problem"];
@@ -27,18 +31,41 @@ public class Pattern_3 : MonoBehaviour
         }
 
         Questions.GetComponent<TEXDraw>().text = likeName;
+        objaa = new Pattern3Data();
+
+        //List<string> solution1 = objaa.solution[0];
+
+        //for (int i = 0; i < solution1.Count - 1; i++)
+        //{
+            
+        //}
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void DisplayQuestion()
     {
-        
+        Questions.text = objaa.title;
+
+
+
     }
+   
+
 }
 
 [SerializeField]
 public class Pattern3Data
 {
-    public string title;
-    public string[] options;
+    public string title;    
+    public List<string> probem = new List<string>();
+
+    public Dictionary<int, List<string>> solution = new Dictionary<int, List<string>>();
+
+    public List<List<string>> sdasdsa = new List<List<string>>();
+    
+    
+
+
 }
+

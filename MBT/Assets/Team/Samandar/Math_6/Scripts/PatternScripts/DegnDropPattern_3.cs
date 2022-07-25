@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
 
-    public List<GameObject> NumberArea;
-    private RectTransform rectTransform;
+    public List<RectTransform> NumberAreas;
+    private RectTransform _rectTransform;
+    private Vector3 _initialPosition;
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
+        _initialPosition = transform.position;
+        _rectTransform = GetComponent<RectTransform>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -23,36 +26,43 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         Check();
     }
 
-    void IDragHandler.OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
+        _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);       
 
     }
+
 
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     void Check()
     {
-        for (int i = 0; i < NumberArea.Count; i++)
+        int k = 0;
+        for (int i = 0; i < NumberAreas.Count; i++)
         {
-            //if (Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().rect.position, NumberArea[i].transform.GetComponent<RectTransform>().rect.position) <=35)
-            //{
-            //    gameObject.transform.position = NumberArea[i].transform.position;
-            //    break;
-            //}
-            if (Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().anchoredPosition, NumberArea[i].transform.GetComponent<RectTransform>().anchoredPosition) <= 35)
+            if (Vector3.Distance(transform.position, NumberAreas[i].transform.position) <= 1)
             {
-                gameObject.GetComponent<RectTransform>().anchoredPosition = NumberArea[i].GetComponent<RectTransform>().anchoredPosition;
+                transform.position = new Vector3(NumberAreas[i].transform.position.x, NumberAreas[i].transform.position.y, 0);
+                _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
+                _rectTransform.DOScale(1.2f, 0.2f).OnComplete(Minimize);
                 break;
             }
-            Debug.Log(Vector3.Distance(gameObject.transform.GetComponent<RectTransform>().anchoredPosition, NumberArea[i].transform.GetComponent<RectTransform>().anchoredPosition));
+            else
+            {
+                k++;
+            }
         }
-
-
+        if (k.Equals(NumberAreas.Count))
+        {
+            //transform.position = _initialPosition;
+            _rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
+        }
     }
+
+    void Minimize()
+    {
+        _rectTransform.DOScale(1, 0.2f);
+    }
+
 }
