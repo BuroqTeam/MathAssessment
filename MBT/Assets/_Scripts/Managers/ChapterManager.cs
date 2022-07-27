@@ -11,7 +11,6 @@ public class ChapterManager : MonoBehaviour
     public AssetReference ChapterPrefab;
     public AssetReference[] JsonDataGroup;
     public GridLayoutGroup GridLayout;
-    public int NumberOfChapter;
     public ScrollRect ScrollRectObj;
     public GameEvent UpdateEventSO;
     public TextAsset LocalJson;
@@ -21,17 +20,13 @@ public class ChapterManager : MonoBehaviour
 
     private GameObject _chapterPrefabObj;
     private TextAsset _localJson;
-
+    private int _numberOfChapter;
 
 
     private void Awake()
     {
-        ChapterPrefab.LoadAssetAsync<GameObject>().Completed += OnAssetLoaded;
-        JsonDataGroup[PlayerPrefs.GetInt("LanguageID")].LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
-
-        SetScrollRect();
-
-        // Read and DisplayChapters
+        ChapterPrefab.LoadAssetAsync<GameObject>().Completed += OnChapterPrefabLoaded;
+        JsonDataGroup[PlayerPrefs.GetInt("LanguageID")].LoadAssetAsync<TextAsset>().Completed += JsonLoaded;               
     }
 
     void JsonLoaded(AsyncOperationHandle<TextAsset> obj)
@@ -41,23 +36,24 @@ public class ChapterManager : MonoBehaviour
         ReadJSON();
     }
 
-    void OnAssetLoaded(AsyncOperationHandle<GameObject> objAdd)
+    void OnChapterPrefabLoaded(AsyncOperationHandle<GameObject> objAdd)
     {
-        _chapterPrefabObj = objAdd.Result;
-        
-        for (int i = 0; i < NumberOfChapter; i++)
-        {
-            GameObject obj = Instantiate(_chapterPrefabObj, _chapterPrefabObj.transform.position, Quaternion.identity);
-            obj.transform.SetParent(GridLayout.transform);
-            obj.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-            obj.GetComponent<RectTransform>().localPosition = new Vector3(obj.GetComponent<RectTransform>().localPosition.x, obj.GetComponent<RectTransform>().localPosition.y, 0);
-        }
-
+        _chapterPrefabObj = objAdd.Result;        
     }
+
+    void ReadJSON()
+    {
+        var jo = JObject.Parse(LocalJson.text);
+        JArray chapters = (JArray)jo["chapters"];
+        _numberOfChapter = chapters.Count;
+        CreateChapters();
+        SetScrollRect();
+    }
+
 
     void SetScrollRect()
     {
-        if (NumberOfChapter > 10)
+        if (_numberOfChapter > 10)
         {
             ScrollRectObj.enabled = true;
             Color col = Color.gray;
@@ -73,14 +69,25 @@ public class ChapterManager : MonoBehaviour
         }
     }
 
-    void ReadJSON()
+   
+
+    void CreateChapters()
     {
-        var jo = JObject.Parse(LocalJson.text);
+        Debug.Log(_numberOfChapter);
+        Debug.Log(_chapterPrefabObj.name);
+        //if (_numberOfChapter > 0)
+        //{
+            
+        //    for (int i = 0; i < _numberOfChapter; i++)
+        //    {
+        //        GameObject obj = Instantiate(_chapterPrefabObj, _chapterPrefabObj.transform.position, Quaternion.identity);
+        //        obj.transform.SetParent(GridLayout.transform);
+        //        obj.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        //        obj.GetComponent<RectTransform>().localPosition = new Vector3(obj.GetComponent<RectTransform>().localPosition.x, obj.GetComponent<RectTransform>().localPosition.y, 0);
+        //    }
 
-        JArray chapters = (JArray)jo["chapters"];
-
-        Debug.Log(chapters.Count);
-
+        //}
+        
     }
 
 
