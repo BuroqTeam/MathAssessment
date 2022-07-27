@@ -10,15 +10,17 @@ using TexDrawLib;
 public class Pattern_3 : MonoBehaviour 
 {
     public TextAsset jsonText;
-    public TEXDraw Questions;
+    //public TEXDraw Questions;
     public List<TEXDraw> Numbers;
     public GameObject NumberAreaPrefabs;
     public List<GameObject> NumberArea;
-    Pattern3Data objaa;
-
+    private GameObject MainParent;
+    public GameObject QuestionObj;
+    Data_5 objaa;
     void Start()
     {
-        
+        MainParent = gameObject.transform.parent.transform.parent.gameObject;
+        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         var jsonObj = JObject.Parse(jsonText.text);
 
         JArray jo = (JArray)jsonObj["chapters"][1]["questions"][20]["problem"];
@@ -57,7 +59,7 @@ public class Pattern_3 : MonoBehaviour
     }
     public void DisplayQuestion()
     {
-        Questions.text = objaa.title;
+        //Questions.text = objaa.title;
 
 
 
@@ -67,7 +69,7 @@ public class Pattern_3 : MonoBehaviour
 }
 
 [SerializeField]
-public class Pattern3Data
+public class Data_5
 {
     public string title;    
     public List<string> probem = new List<string>();

@@ -9,7 +9,7 @@ using TexDrawLib;
 public class Pattern_4 : MonoBehaviour
 {
     public TextAsset jsonText;
-    public TEXDraw Questions;
+    //public TEXDraw Questions;
     public TEXDraw PictureText_1;
     public TEXDraw PictureText_2;
     public GameObject PicturePrefab;
@@ -19,6 +19,8 @@ public class Pattern_4 : MonoBehaviour
     public List<GameObject> Signs;
     public GameObject ChoosePrefab;
     public List<GameObject> Choose;
+    private GameObject MainParent;
+    public GameObject QuestionObj;
     void Start()
     {
        
@@ -27,6 +29,8 @@ public class Pattern_4 : MonoBehaviour
     }
     void JsonData()
     {
+        MainParent = gameObject.transform.parent.transform.parent.gameObject;
+        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         var jsonObj = JObject.Parse(jsonText.text);
 
         JArray jo = (JArray)jsonObj["chapters"][1]["questions"][30]["problem"];
@@ -40,7 +44,7 @@ public class Pattern_4 : MonoBehaviour
         var Signs_3 = jsonObj["chapters"][0]["questions"][30]["options"][2]["left"].Value<string>();
         PictureText_1.GetComponent<TEXDraw>().text = picturesName_1;
         PictureText_2.GetComponent<TEXDraw>().text = picturesName_2;
-        Questions.GetComponent<TEXDraw>().text = question;
+        QuestionObj.GetComponent<TEXDraw>().text = question;
         PictureName_1.transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = picturesName_1;
         PictureName_2.transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = picturesName_2;
 
@@ -70,7 +74,7 @@ public class Pattern_4 : MonoBehaviour
         }
         for (int i = 0; i < Choose.Count; i++)
         {
-            GameObject objChoose = Instantiate(ChoosePrefab, Choose[i].transform);
+            //GameObject objChoose = Instantiate(ChoosePrefab, Choose[i].transform);
         }
     }
     void Update()

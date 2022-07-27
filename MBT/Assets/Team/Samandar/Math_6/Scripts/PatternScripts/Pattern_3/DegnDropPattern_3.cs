@@ -45,7 +45,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
             {
                 transform.position = new Vector3(NumberAreas[i].transform.position.x, NumberAreas[i].transform.position.y, 0);
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
-                _rectTransform.DOScale(1.23f, 0.2f);/*.OnComplete(Minimize);*/
+                _rectTransform.DOScale(1.23f, 0.2f);
                 break;
             }
             else
@@ -61,9 +61,9 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         }
     }
 
-    void Minimize()
-    {
-        _rectTransform.DOScale(1, 0.2f);
-    }
+    //void Minimize()
+    //{
+    //    _rectTransform.DOScale(1, 0.2f);
+    //}
 
 }
