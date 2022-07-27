@@ -220,7 +220,6 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   GridLayout: {fileID: 4819203435645070525}
-  NumberOfChapter: 10
   ScrollRectObj: {fileID: 1659680619}
   UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}
   LocalJson: {fileID: 4900000, guid: f06d1b5386779594ebf914e3d8c3cd76, type: 3}
@@ -429,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &566884819
 RectTransform:
   m_ObjectHideFlags: 0
