@@ -58,9 +58,9 @@ public class PlayerStats
 }
 
 
-[SerializeField]
-public class Pattern2Data
-{
-    public string title;
-    public string[] options;
-}
+//[SerializeField]
+//public class Pattern2Data
+//{
+//    public string title;
+//    public string[] options;
+//}
