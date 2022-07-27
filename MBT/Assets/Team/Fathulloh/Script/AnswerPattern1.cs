@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AnswerPattern1 : MonoBehaviour
 {
-    public Pattern1 PatternOne;
+    public Pattern_1 PatternOne;
     public bool _IsTrue;
     public string CurrentAnswer;
     public List<GameObject> ABCD;

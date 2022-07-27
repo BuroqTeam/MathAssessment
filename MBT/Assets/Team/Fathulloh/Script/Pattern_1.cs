@@ -5,26 +5,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern1 : MonoBehaviour
+public class Pattern_1 : MonoBehaviour
 {           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
     public List<GameObject> ABCD;
-    public GameObject QuestionObject;
+    public GameObject QuestionObj;
     public TextAsset JsonText;
 
     public GameObject MainParent;
 
     public GameObject CurrentClickedObj;
-    
+
+
+    public Data_1 Pattern1Obj = new Data_1();
+
 
     void Start()
     {
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
 
-        QuestionObject = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
+        QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
         Debug.Log(gameObject.transform.parent.transform.parent.GetChild(8).gameObject.name);
         //Debug.Log(MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject.name);
 
         WriteTest();
+    }
+
+
+    public void DisplayQuestion()
+    {
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern1Obj.title;
     }
 
 
@@ -34,10 +43,10 @@ public class Pattern1 : MonoBehaviour
         int ranNum = Random.Range(0, 10);       
 
         // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
-        var Pattern1Obj = jsonObj["chapters"][0]["questions"][ranNum]["question"].ToObject<Pattern1Data>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.  
+        /*var */Pattern1Obj = jsonObj["chapters"][0]["questions"][ranNum]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.  
         Debug.Log("Current Question Number = " + ranNum + " " + " Type of variable : " + Pattern1Obj.options.GetType());
 
-        QuestionObject.GetComponent<TEXDraw>().text = Pattern1Obj.title;
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern1Obj.title;
 
         List<string> str = Pattern1Obj.options;
         str = str.ShuffleList();
@@ -97,7 +106,7 @@ public class Pattern1 : MonoBehaviour
 }
 
 [SerializeField]
-public class Pattern1Data
+public class Data_1
 {
     public string title;
     //public string[] options;
