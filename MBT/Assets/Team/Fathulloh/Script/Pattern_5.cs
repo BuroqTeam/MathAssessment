@@ -4,18 +4,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_5 : MonoBehaviour
+public class Pattern_5 : TestManager
 {
     public TextAsset JsonText;
     private GameObject MainParent;
     public GameObject QuestionObj;
 
-    public int BobID, QuestionID;
+    public int QuestionID;
 
-
+    public List<GameObject> Numbers;
+    public List<GameObject> Boxs;
+    public List<GameObject> EmptyPositions;
     public List<GameObject> positionObjs;
     public GameObject NumPrefab;
-    //public GameObject Number;
+    public GameObject NumberBoxPrefab;
+    
     public GameObject ParentForPos;
     public Data_5 Pattern5Obj = new Data_5();
 
@@ -25,70 +28,126 @@ public class Pattern_5 : MonoBehaviour
         QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         //QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
         
-
         ReadFromJson();
+        CreatePrefabs();
+    }
+
+
+    //private void OnEnable()
+    //{
+    //    DisplayQuestion(Pattern5Obj.question.title);
+    //}
+
+
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
 
         CreatePrefabs();
     }
 
 
-    public void DisplayQuestion()
-    {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
-    }
-
-
-    public void ReadFromJson()
+    public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
     {
         QuestionID = Random.Range(40, 50);
         Debug.Log(" QuestionID = " + QuestionID);
-        var jsonObj = JObject.Parse(JsonText.text);
-
-        //var likeName = jsonObj["chapters"][0]["questions"][0]["question"]["options"][1].Value<string>();        
-        //var test1 = jsonObj["chapters"][0]["questions"][40]["id"].Value<string>();
-        //Debug.Log("likeName = " + likeName + " test1 = " + test1);
+        var jsonObj = JObject.Parse(JsonText.text);        
 
         //var Pattern5Obj = jsonObj["chapters"][0]["questions"][40].ToObject<Pattern5Data>();
-        Pattern5Obj = jsonObj["chapters"][1]["questions"][QuestionID].ToObject<Data_5>();
+        Pattern5Obj = jsonObj["chapters"][4]["questions"][QuestionID]["question"].ToObject<Data_5>();
 
-        //for (int i = 0; i < Pattern5Obj.solution.Count; i++)
-        //{
-        //    List<string> NewList = Pattern5Obj.solution[i];
-        //    //Debug.Log(NewList[0] + "   " + NewList[1] + " " + NewList[2] + " " + NewList[3] + " " + NewList[4]);
-
-        //}
-
-        //if (Pattern5Obj.question == null)
-        //{
-        //    Debug.Log("Title is null." + Pattern5Obj.id + "   "+ Pattern5Obj.pattern+ " " + Pattern5Obj.problem[1] + "  " + Pattern5Obj.solution[1]);
+        //if (Pattern5Obj.title == null)        {
+        //    Debug.Log("Title is null.");
         //}
         //else        {
-        //    Debug.Log("Title is full." + Pattern5Obj.question.title);
+        //    Debug.Log("Title is full." + Pattern5Obj.title);
         //}
     }
 
 
     public void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title;      // Keyinroq bu o'chiriladi.
+
+
+        for (int i = 0; i < Pattern5Obj.solution.Count; i++)
+        {
+            List<string> newList = Pattern5Obj.solution[i];
+
+            GameObject obj = Instantiate(NumberBoxPrefab, this.transform.GetChild(0));
+            if (Pattern5Obj.solution.Count == 2)            {
+                Vector3 oldPos = obj.transform.localPosition;
+                obj.transform.localPosition = new Vector3(((float)System.Math.Pow(-1, i)) * 275, oldPos.y, 0);
+            }
+            else if (Pattern5Obj.solution.Count == 3)            {
+                Vector3 oldPos = obj.transform.localPosition;
+                obj.transform.localPosition = new Vector3((i - 1) * 550, oldPos.y, 0);
+            }
+
+            obj.transform.GetChild(0).GetComponent<TEXDraw>().text = newList[0];
+            Boxs.Add(obj);
+            for (int j = 1; j < obj.transform.childCount; j++)            {
+                EmptyPositions.Add(obj.transform.GetChild(j).gameObject);
+                obj.transform.GetChild(j).GetComponent<NumBoxP_5>().CurrentSolution = newList;
+            }
+        }
+
 
         for (int i = 0; i < Pattern5Obj.problem.Count; i++)
         {
+            positionObjs[i].SetActive(true);
             Vector3 locPos = positionObjs[i].GetComponent<RectTransform>().localPosition;
             
             GameObject obj = Instantiate(NumPrefab, ParentForPos.transform);
             obj.transform.localPosition = locPos;
             obj.GetComponent<DragAndDropPattern5>().WriteCurrentAns(Pattern5Obj.problem[i]);
+            obj.GetComponent<DragAndDropPattern5>().EmptyPositions = EmptyPositions;
+            obj.GetComponent<DragAndDropPattern5>().Pattern5 = this;
 
+            Numbers.Add(obj);
             //obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
             //obj.transform.SetParent(ParentForPos.transform);            
         }
 
-        //for (int i = 0; i < Pattern5Obj.solution.Count; i++)        {
-        //    List<string> newList = Pattern5Obj.solution[i];
-        //    Debug.Log(newList[0]);
-        //}
+        
+    }
 
+
+    public void CheckIsFinishing()
+    {
+        int numbers = Numbers.Count;
+        int k = 0;
+        for (int i = 0; i < numbers; i++)
+        {
+            bool _isTrue = Numbers[i].GetComponent<DragAndDropPattern5>()._NumIsCorrectPosition;
+            if (_isTrue)
+            {
+                k++;
+            }
+        }
+
+
+        int fullPositions = 0;
+        for (int i = 0; i < EmptyPositions.Count; i++)
+        {
+            if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)
+            {
+                fullPositions++;
+            }
+        }
+        Debug.Log(fullPositions);
+
+        if (fullPositions == EmptyPositions.Count)
+        {
+            if (k == numbers)
+                Debug.Log(k + " You are right.");
+            else
+                Debug.Log(k + " You are fall. ");
+        }
+        
 
     }
 
@@ -97,18 +156,16 @@ public class Pattern_5 : MonoBehaviour
 
 [SerializeField]
 public class Data_5
-{
-    public string id;
-    public string pattern;
-    public Pattern5Title question;    
+{        
+    public string title;
     public List<string> problem;
     public List<List<string>> solution;
     //public Dictionary<int, List<string>> solution /*= new Dictionary<int, List<string>>()*/;
 }
 
-[SerializeField]
-public class Pattern5Title
-{
-    public string title;
-}
+//[SerializeField]
+//public class Pattern5Title
+//{
+//    public string title;
+//}
 
