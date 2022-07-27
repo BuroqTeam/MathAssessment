@@ -16,7 +16,7 @@ public class Pattern_3 : MonoBehaviour
     public List<GameObject> NumberArea;
     private GameObject MainParent;
     public GameObject QuestionObj;
-    Data_5 objaa;
+    Data_3 objaa;
     void Start()
     {
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
@@ -69,7 +69,7 @@ public class Pattern_3 : MonoBehaviour
 }
 
 [SerializeField]
-public class Data_5
+public class Data_3
 {
     public string title;    
     public List<string> probem = new List<string>();
