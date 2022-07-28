@@ -12,11 +12,12 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
 
     private RectTransform _rectTransform;
     private Vector3 InitialPos;
-    private GameObject LastPos;
+    private int siblingIndexObj;
+    public GameObject LastPos;
+
 
     void Start()
     {
-        //Debug.Log(gameObject.GetComponent<RectTransform>().position.GetType() + " InitialPos = " + InitialPos);
         InitialPos = transform.position;
         
         _rectTransform = GetComponent<RectTransform>();
@@ -33,11 +34,14 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (LastPos != null)        {
-            //LastPos.GetComponent<NumBoxP_5>()._IsEmpty = true;
-            _NumIsCorrectPosition = LastPos.GetComponent<NumBoxP_5>().CheckAns(false, CurrentAns);
+            //LastPos.GetComponent<NumBoxP_5>()._IsEmpty = true;            
+            _NumIsCorrectPosition = LastPos.GetComponent<NumBoxP_5>().CheckAns(false, CurrentAns);            
+            LastPos = null;
+            //Debug.Log("Ishladi." + _NumIsCorrectPosition);
         }
-        
-        
+        siblingIndexObj = transform.GetSiblingIndex();
+        //Debug.Log("indexObject = " + siblingIndexObj);
+        transform.SetSiblingIndex(Pattern5.Numbers.Count - 1);
     }
 
 
@@ -46,12 +50,12 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
         _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
-
     }
 
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        transform.SetSiblingIndex(siblingIndexObj);
         Check();
     }
 
@@ -70,8 +74,6 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
                 transform.position = new Vector3(EmptyPositions[i].transform.position.x, EmptyPositions[i].transform.position.y, 0);
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
 
-
-                //Debug.Log("transform.position = " + transform.position);
                 break;
             }
             else
@@ -81,8 +83,7 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
 
         if (k.Equals(EmptyPositions.Count))
         {
-            transform.position = InitialPos;
-            //_rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
+            transform.position = InitialPos;            
         }
 
         Pattern5.GetComponent<Pattern_5>().CheckIsFinishing();

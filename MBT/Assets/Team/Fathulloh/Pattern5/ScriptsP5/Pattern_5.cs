@@ -30,12 +30,13 @@ public class Pattern_5 : TestManager
         
         ReadFromJson();
         CreatePrefabs();
+        //transform.SetSiblingIndex()
     }
 
 
     //private void OnEnable()
     //{
-    //    DisplayQuestion(Pattern5Obj.question.title);
+    //    DisplayQuestion(Pattern5Obj.title);
     //}
 
 
@@ -55,9 +56,8 @@ public class Pattern_5 : TestManager
         QuestionID = Random.Range(40, 50);
         Debug.Log(" QuestionID = " + QuestionID);
         var jsonObj = JObject.Parse(JsonText.text);        
-
-        //var Pattern5Obj = jsonObj["chapters"][0]["questions"][40].ToObject<Pattern5Data>();
-        Pattern5Obj = jsonObj["chapters"][4]["questions"][QuestionID]["question"].ToObject<Data_5>();
+                
+        Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();
 
         //if (Pattern5Obj.title == null)        {
         //    Debug.Log("Title is null.");
@@ -71,7 +71,6 @@ public class Pattern_5 : TestManager
     public void CreatePrefabs()
     {
         QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title;      // Keyinroq bu o'chiriladi.
-
 
         for (int i = 0; i < Pattern5Obj.solution.Count; i++)
         {
@@ -116,36 +115,37 @@ public class Pattern_5 : TestManager
     }
 
 
+    public int TotalCorrectAns;
+    public int FullPositions;
+
     public void CheckIsFinishing()
     {
         int numbers = Numbers.Count;
-        int k = 0;
+        TotalCorrectAns = 0;
         for (int i = 0; i < numbers; i++)
         {
             bool _isTrue = Numbers[i].GetComponent<DragAndDropPattern5>()._NumIsCorrectPosition;
-            if (_isTrue)
-            {
-                k++;
-            }
+            if (_isTrue)            
+                TotalCorrectAns++;
+            
         }
 
+        FullPositions = 0;
 
-        int fullPositions = 0;
         for (int i = 0; i < EmptyPositions.Count; i++)
         {
             if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)
             {
-                fullPositions++;
+                FullPositions++;
             }
         }
-        Debug.Log(fullPositions);
-
-        if (fullPositions == EmptyPositions.Count)
+        //Debug.Log(fullPositions);
+        if (FullPositions == EmptyPositions.Count)
         {
-            if (k == numbers)
-                Debug.Log(k + " You are right.");
+            if (TotalCorrectAns == numbers)
+                Debug.Log(TotalCorrectAns + " You are win.");
             else
-                Debug.Log(k + " You are fall. ");
+                Debug.Log(TotalCorrectAns + " You are fall. ");
         }
         
 
@@ -168,4 +168,8 @@ public class Data_5
 //{
 //    public string title;
 //}
+
+
+
+
 
