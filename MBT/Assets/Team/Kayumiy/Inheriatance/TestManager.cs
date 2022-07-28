@@ -32,7 +32,7 @@ public class TestManager : MonoBehaviour
 
     public virtual void DisplayQuestion(string questionStr)
     {
-        QuestionText.text = questionStr;
+        //QuestionText.text = questionStr;
 
        
     }

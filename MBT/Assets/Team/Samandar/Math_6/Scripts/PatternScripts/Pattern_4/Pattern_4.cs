@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine;
 using TexDrawLib;
 
-public class Pattern_4 : MonoBehaviour
+public class Pattern_4 : TestManager
 {
     public TextAsset jsonText;
     //public TEXDraw Questions;
