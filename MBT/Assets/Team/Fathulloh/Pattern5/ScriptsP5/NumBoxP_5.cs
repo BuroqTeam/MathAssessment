@@ -5,7 +5,7 @@ using UnityEngine;
 public class NumBoxP_5 : MonoBehaviour
 {
     public bool _OnCorrectPos;
-    public GameObject NumberType;
+    //public GameObject NumberType;
     public string CurrentNum;
     public List<string> CurrentSolution;
 
@@ -22,7 +22,6 @@ public class NumBoxP_5 : MonoBehaviour
 
     public bool CheckAns(bool _isT, string str)
     {
-        //bool _TF;
         if (_isT)
         {
             _IsEmpty = false;
@@ -32,7 +31,7 @@ public class NumBoxP_5 : MonoBehaviour
             {
                 if (CurrentSolution[i] == str)
                 {
-                    Debug.Log("CorrectWay.");
+                    //Debug.Log("CorrectWay.");
                     _OnCorrectPos = true;
                 } 
             }            
