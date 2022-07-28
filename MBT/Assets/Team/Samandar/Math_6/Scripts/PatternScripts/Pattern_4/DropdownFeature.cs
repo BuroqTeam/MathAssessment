@@ -8,11 +8,11 @@ using UnityEngine.UIElements;
 public class DropdownFeature : MonoBehaviour
 {
     public int Numbers;
-    public TMP_Dropdown NewDD;
+    
     public Sprite P4;
     void Start()
     {
-        OptionData NNNN;
+       
         //transform.GetComponent<TMP_Dropdown>().options.Count = Numbers;
         //Debug.Log(transform.GetComponent<TMP_Dropdown>().options.GetType());
         //Debug.Log(transform.GetComponent<TMP_Dropdown>().options.Count);

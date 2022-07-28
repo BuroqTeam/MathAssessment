@@ -11,34 +11,28 @@ public class Pattern_3 : TestManager
 {
     public TextAsset jsonText;
     public string sampleQuestion;
-    public List<TEXDraw> Numbers;
+    public List<TEXDraw> NumbersText;
+    public List<GameObject> Numbers;
     public GameObject NumberAreaPrefabs;
     public List<GameObject> NumberArea;
     private GameObject MainParent;
     public GameObject QuestionObj;
     public Data_3 objaa;
     public TEXDraw NumberActions;
+    public List<GameObject> NumberInstantiate;
     void Start()
     {
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
         QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         var jsonObj = JObject.Parse(jsonText.text);
-
-        //JArray Num = (JArray)jsonObj["chapters"][0]["questions"][21]["problem"];
-        //JArray Mum_1 = (JArray)jsonObj["chapters"][0]["questions"][29]["solution"];
-        var likeName = jsonObj["chapters"][2]["questions"][27]["question"]["title"].Value<string>();
-
-        sampleQuestion = likeName;
-        Debug.Log(sampleQuestion);
-        //var Action_1 = jsonObj["chapters"][0]["questions"][20]["solution"][1].Value<string>();
-        //Debug.Log(LName);
-
-        objaa = jsonObj["chapters"][2]["questions"][27]["question"].ToObject<Data_3>();
+               
+        var likeName = jsonObj["chapters"][1]["questions"][27]["question"]["title"].Value<string>();
+        objaa = jsonObj["chapters"][1]["questions"][27]["question"].ToObject<Data_3>();
         List<string> problem1 = objaa.problem;
         
-        for (int i = 0; i < Numbers.Count; i++)
+        for (int i = 0; i < NumbersText.Count; i++)
         {
-            Numbers[i].transform.GetComponent<TEXDraw>().text = problem1[i].ToString();
+            NumbersText[i].transform.GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
         ////objaa = new Pattern3Data();
         //objPrefab();
@@ -61,9 +55,12 @@ public class Pattern_3 : TestManager
             {
                 NumberActions.transform.GetComponent<TEXDraw>().text = solution1[2].ToString();
             }
-
+            NumberInstantiate.Add(obj);
         }
-
+        for (int i = 0; i < Numbers.Count; i++)
+        {
+            Numbers[i].GetComponent<DegnDropPattern_3>().Positions = NumberInstantiate;
+        }
     }
 
     private void OnEnable()

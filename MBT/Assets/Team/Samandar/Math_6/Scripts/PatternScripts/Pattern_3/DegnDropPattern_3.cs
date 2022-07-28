@@ -8,9 +8,10 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 {
 
     public List<RectTransform> NumberAreas;
+    public List<GameObject> Positions;
     private RectTransform _rectTransform;
     private Vector3 _initialPosition;
-
+    private GameObject LastPos;
     private void Awake()
     {
         _initialPosition = transform.position;
@@ -18,7 +19,11 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        if (LastPos != null)
+        {
+            LastPos.GetComponent<NumBoxP_3>()._IsEmpty = true;
+            LastPos = null;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -39,12 +44,15 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     void Check()
     {
         int k = 0;
-        for (int i = 0; i < NumberAreas.Count; i++)
+        for (int i = 0; i < Positions.Count; i++)
         {
-            if (Vector3.Distance(transform.position, NumberAreas[i].transform.position) <= 1)
+            bool _isEmpty = Positions[i].GetComponent<NumBoxP_3>()._IsEmpty;
+            if (Vector3.Distance(transform.position, Positions[i].transform.position) <= 1 && (_isEmpty))
             {
-                transform.position = new Vector3(NumberAreas[i].transform.position.x, NumberAreas[i].transform.position.y, 0);
+                LastPos = Positions[i];
+                transform.position = new Vector3(Positions[i].transform.position.x, Positions[i].transform.position.y, 0);
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
+                Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
                 _rectTransform.DOScale(1.25f, 0.2f);
                 break;
             }
@@ -53,7 +61,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
                 k++;
             }
         }
-        if (k.Equals(NumberAreas.Count))
+        if (k.Equals(Positions.Count))
         {
             //transform.position = _initialPosition;
             _rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
