@@ -7,10 +7,10 @@ using UnityEngine;
 using TexDrawLib;
 
 
-public class Pattern_3 : MonoBehaviour 
+public class Pattern_3 : TestManager
 {
     public TextAsset jsonText;
-    //public TEXDraw Questions;
+    public string sampleQuestion;
     public List<TEXDraw> Numbers;
     public GameObject NumberAreaPrefabs;
     public List<GameObject> NumberArea;
@@ -24,21 +24,22 @@ public class Pattern_3 : MonoBehaviour
         QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         var jsonObj = JObject.Parse(jsonText.text);
 
-        JArray Num = (JArray)jsonObj["chapters"][0]["questions"][29]["problem"];
+        //JArray Num = (JArray)jsonObj["chapters"][0]["questions"][21]["problem"];
         //JArray Mum_1 = (JArray)jsonObj["chapters"][0]["questions"][29]["solution"];
-        var likeName = jsonObj["chapters"][0]["questions"][29]["question"]["title"].Value<string>();
+        var likeName = jsonObj["chapters"][2]["questions"][27]["question"]["title"].Value<string>();
 
-        
+        sampleQuestion = likeName;
+        Debug.Log(sampleQuestion);
         //var Action_1 = jsonObj["chapters"][0]["questions"][20]["solution"][1].Value<string>();
         //Debug.Log(LName);
 
+        objaa = jsonObj["chapters"][2]["questions"][27]["question"].ToObject<Data_3>();
+        List<string> problem1 = objaa.problem;
+        
         for (int i = 0; i < Numbers.Count; i++)
         {
-            Numbers[i].transform.GetComponent<TEXDraw>().text = Num[i].ToString();
+            Numbers[i].transform.GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
-        objaa = jsonObj["chapters"][0]["questions"][29].ToObject<Data_3>();
-        Debug.Log(objaa.id);
-        //Questions.GetComponent<TEXDraw>().text = likeName;
         ////objaa = new Pattern3Data();
         //objPrefab();
         //List<string> solution1 = objaa.solution[0];
@@ -65,6 +66,17 @@ public class Pattern_3 : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        DisplayQuestion(sampleQuestion);
+    }
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);  
+
+    }
+
     void objPrefab()
     {
         for (int i = 0; i < NumberArea.Count; i++)
@@ -87,19 +99,14 @@ public class Pattern_3 : MonoBehaviour
 [SerializeField]
 public class Data_3
 {
-    public string id;
-    public int pattern;
     public string title;    
-    public List<string> probem = new List<string>();
+    public List<string> problem = new List<string>();
 
     //public Dictionary<int, List<string>> solution = new Dictionary<int, List<string>>();
 
     public List<List<string>> solution = new List<List<string>>();
 
-    //public string id;
-    //public string pattern;
-    //public List<string> question;
-    ////public List<string> problem;
+    
 
 
 
