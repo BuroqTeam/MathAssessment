@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SomePattern : TestManager
+public class SomePattern : TestManagerSample
 {
 
     public string sampleQuestion;

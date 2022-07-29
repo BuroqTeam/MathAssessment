@@ -546,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.37, y: 39.56}
-  m_SizeDelta: {x: 239.33, y: 66.39}
+  m_AnchoredPosition: {x: 0.0000027418137, y: 41.772522}
+  m_SizeDelta: {x: 239.33, y: 59.235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8267410294682784006
 CanvasRenderer:
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1209,14 +1209,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2248578362195717944}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: LoadAddressableScene
-        m_Mode: 1
+        m_MethodName: LoadLocalScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TestGroup
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &8267410294984318492
@@ -1235,8 +1235,6 @@ MonoBehaviour:
   SliderFill: {fileID: 8267410294764248708}
   ChapterNumberTxt: {fileID: 8267410295622969514}
   ChapterNameTxt: {fileID: 8267410294682784005}
-  ChapterName: 
-  ChapterProgress: 0
 --- !u!114 &2248578362195717944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,11 +1247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be623b1fa7707040badd7b2ff7f4178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad:
-    m_AssetGUID: 2cda990e2423bbf4892e6590ba056729
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
 --- !u!1 &8267410295622969512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1283,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -0.55, y: -58.28}
-  m_SizeDelta: {x: 52.02, y: 56.91}
+  m_SizeDelta: {x: 50, y: 56.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8267410295622969515
 CanvasRenderer:
@@ -1347,8 +1340,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
