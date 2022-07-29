@@ -9,7 +9,7 @@ public class JSONRead : MonoBehaviour
 {
     public TextAsset jsonText;
     public GameObject Buttons;
-    Pattern2Data obj = new Pattern2Data();
+    Data_2 obj = new Data_2();
 
 
 
@@ -58,9 +58,9 @@ public class PlayerStats
 }
 
 
-[SerializeField]
-public class Pattern2Data
-{
-    public string title;
-    public string[] options;
-}
+//[SerializeField]
+//public class Pattern2Data
+//{
+//    public string title;
+//    public string[] options;
+//}

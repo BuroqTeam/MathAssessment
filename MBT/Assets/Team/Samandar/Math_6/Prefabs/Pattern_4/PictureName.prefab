@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 318, y: 100}
+  m_AnchoredPosition: {x: 0.2031, y: 0}
+  m_SizeDelta: {x: 309.4629, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1656440011236100992
 CanvasRenderer:
@@ -67,8 +67,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Alignment: {x: 0.5, y: 0.5}
-  m_Text: 1
-  m_Size: 36
+  m_Text: $$TEXDraw$$
+  m_Size: 31
   m_ScrollArea:
     serializedVersion: 2
     x: 0
