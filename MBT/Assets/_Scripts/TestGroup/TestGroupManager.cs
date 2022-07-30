@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -8,7 +9,9 @@ using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
-  
+
+    public TMP_Text ChapterName;
+    public TMP_Text ChapterDescription;
     public AssetReference[] JsonDataGroup;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
@@ -19,22 +22,27 @@ public class TestGroupManager : MonoBehaviour
     public List<TestGroup> TestGroupPrefabGorup = new List<TestGroup>();
 
     public GameObject TestGroupObj;
+    public TestGroupSO TestGroupSO;
+
+
     private TextAsset _localJson;
-    private int _numberOfTestGroup;
-    IList<TestGroupRaw> _testGroup;
+    
+   
 
 
     private void Awake()
     {
+        ChapterName.text = TestGroupSO.Name;
+        ChapterDescription.text = TestGroupSO.Description;
         JsonDataGroup[ES3.Load<int>("LanguageID")].LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
         DisableLoadingBar();
     }
 
     void DisableLoadingBar()
     {
-        if (ES3.KeyExists("IsInitialLoad"))
+        if (ES3.KeyExists("IsInitialLoadTestGroup"))
         {
-            if (ES3.Load<bool>("IsInitialLoad"))
+            if (ES3.Load<bool>("IsInitialLoadTestGroup"))
             {
                 UpdatePanel.SetActive(false);
             }
@@ -60,8 +68,8 @@ public class TestGroupManager : MonoBehaviour
     {
         var jo = JObject.Parse(_localJson.text);
         JArray testGroup = (JArray)jo["chapters"];
-        _numberOfTestGroup = testGroup.Count;
-        _testGroup = testGroup.ToObject<IList<TestGroupRaw>>();
+        //_numberOfTestGroup = testGroup.Count;
+        //_testGroup = testGroup.ToObject<IList<TestGroupRaw>>();
         CreateChapters();
         SetScrollRect();
     }
@@ -69,7 +77,7 @@ public class TestGroupManager : MonoBehaviour
 
     void SetScrollRect()
     {
-        if (_numberOfTestGroup > 10)
+        if (TestGroupSO.NumberOfTestGroup > 10)
         {
             ScrollRectObj.enabled = true;
             Color col = Color.gray;
@@ -89,9 +97,9 @@ public class TestGroupManager : MonoBehaviour
 
     void CreateChapters()
     {
-        if (_numberOfTestGroup > 0)
+        if (TestGroupSO.NumberOfTestGroup > 0)
         {
-            for (int i = 0; i < _numberOfTestGroup; i++)
+            for (int i = 0; i < TestGroupSO.NumberOfTestGroup; i++)
             {
                 GameObject obj = Instantiate(TestGroupObj);
                 obj.transform.SetParent(GridLayout.transform);
@@ -106,13 +114,13 @@ public class TestGroupManager : MonoBehaviour
 
     IEnumerator DisplayTestGroup()
     {
-        ES3.Save("IsInitialLoad", true);
+        ES3.Save("IsInitialLoadTestGroup", true);
         yield return new WaitForSeconds(0.1f);
         GridLayout.gameObject.SetActive(true);
-        int k = 0;
-        foreach (TestGroupRaw item in _testGroup)
+        int k = 1;
+        foreach (TestGroup item in TestGroupPrefabGorup)
         {
-            TestGroupPrefabGorup[k].RawTestGroup.number = item.number;           
+            item.RawTestGroup.number = k.ToString();           
             k++;
         }
         foreach (TestGroup item in TestGroupPrefabGorup)

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
 
 public class ChapterManager : MonoBehaviour
 {   
@@ -120,7 +119,7 @@ public class ChapterManager : MonoBehaviour
         }
         foreach (Chapter item in ChapterPrefabGorup)
         { 
-            item.UpdateInfo();            
+            item.UpdateInfo(JObject.Parse(_localJson.text));            
         }
         UpdateEventSO.Raise();
     }
