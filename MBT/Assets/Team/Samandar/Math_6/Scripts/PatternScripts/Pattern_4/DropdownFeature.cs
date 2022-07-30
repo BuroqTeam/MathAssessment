@@ -23,7 +23,7 @@ public class DropdownFeature : MonoBehaviour
     {
         Label.GetComponent<TMP_Text>().enabled = true;
         Label.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
-        //Arrow.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
+        Arrow.GetComponent<Image>().tintColor = new Color(1, 1, 1, 1);
         //Debug.Log(Label.GetComponent<TMP_Text>().color);
         Debug.Log("DropDown");
     }
@@ -31,23 +31,5 @@ public class DropdownFeature : MonoBehaviour
     {
         
     }
-
-
-    public void CheckIsWorking()
-    {
-        Debug.Log("Item");
-        //Label.GetComponent<TMP_Text>().enabled = true;
-    }
-
-    public void CheckOnScrollBar()
-    {
-        Debug.Log("Scrollbar");
-    }
-
-    public void CheckTemplate()
-    {
-        Debug.Log("Tamplate");
-    }
-
 
 }
