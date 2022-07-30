@@ -7,7 +7,7 @@ using UnityEngine;
 using TexDrawLib;
 
 
-public class Pattern_3 : TestManagerSample
+public class Pattern_3 : TestManager
 {
     public TextAsset jsonText;
     public string sampleQuestion;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -12,6 +13,8 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     private RectTransform _rectTransform;
     private Vector3 _initialPosition;
     private GameObject LastPos;
+    public Pattern_3 Pattern3;
+    public int siblingIndexObj;
     private void Awake()
     {
         _initialPosition = transform.position;
@@ -19,15 +22,23 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        LayoutOf();
+        Order();
         if (LastPos != null)
         {
             LastPos.GetComponent<NumBoxP_3>()._IsEmpty = true;
             LastPos = null;
         }
+        
     }
-
+    public void LayoutOf()
+    {
+        gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.GetComponent<HorizontalLayoutGroup>().enabled = false;
+    }
     public void OnEndDrag(PointerEventData eventData)
     {
+        GameObject parentObj = gameObject.transform.parent.gameObject;
+        parentObj.transform.SetSiblingIndex(siblingIndexObj);
         Check();
     }
 
@@ -39,6 +50,17 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
     }
 
+    public void Order()
+    {
+        //siblingIndexObj = transform.GetSiblingIndex();
+        
+        //gameObject.transform.parent
+        Debug.Log(gameObject.transform.parent.name);
+        //transform.parent.gameObject.transform.SetSiblingIndex(2);
+        GameObject parentObj = gameObject.transform.parent.gameObject;
+        siblingIndexObj = parentObj.transform.GetSiblingIndex();
+        //parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+    }
 
     // Start is called before the first frame update
     void Check()
