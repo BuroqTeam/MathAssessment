@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine;
 using DG.Tweening;
 
-public class Pattern_2 : TestManagerSample
+public class Pattern_2 : TestManager
 {
     public string SampleQuestion;
     public TextAsset jsonText;

@@ -18,6 +18,15 @@ public class Pattern_6 : TestManager
         QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         ReadFromJson();
     }
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
+
+        ReadFromJson();
+    }
+
     public void ReadFromJson()
     {
         int QuestionID = 50;
