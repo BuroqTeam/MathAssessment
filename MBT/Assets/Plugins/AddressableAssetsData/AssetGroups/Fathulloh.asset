@@ -10,20 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: SO
+  m_Name: Fathulloh
   m_EditorClassIdentifier: 
-  m_GroupName: SO
+  m_GroupName: Packed Assets
   m_Data:
     m_SerializedData: []
-  m_GUID: 367a99efa3a259d45be6b4539afda915
-  m_SerializeEntries:
-  - m_GUID: a910386fdd2bc514b86f0685f889595f
-    m_Address: DataBase
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_GUID: 8cb2ed4f3a66ff34292f2638113c1b41
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 441048aec8bdbca4abc9126138ac637e, type: 2}
-    - {fileID: 11400000, guid: 0031fda2aa948f44eacb4a449436dbf3, type: 2}
+    - {fileID: 11400000, guid: e5c3faed8a0bd8c4db0e7c8fe5e3dfa8, type: 2}
+    - {fileID: 11400000, guid: 15965c5b230fa6e4d88ed15f64436557, type: 2}

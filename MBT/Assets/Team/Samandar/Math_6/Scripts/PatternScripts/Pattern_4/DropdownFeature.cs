@@ -21,13 +21,15 @@ public class DropdownFeature : MonoBehaviour
     }
     public void TurnOn()
     {
-        //Label.GetComponent<TMP_Text>().enabled = true;
+        Label.GetComponent<TMP_Text>().enabled = true;
         Label.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
-        Arrow.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
-        Debug.Log(Label.GetComponent<TMP_Text>().color);
+        Arrow.GetComponent<Image>().tintColor = new Color(1, 1, 1, 1);
+        //Debug.Log(Label.GetComponent<TMP_Text>().color);
+        Debug.Log("DropDown");
     }
     public void ColorUpdate()
     {
         
     }
+
 }

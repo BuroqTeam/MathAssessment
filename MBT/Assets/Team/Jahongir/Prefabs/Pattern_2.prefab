@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6931012827513416665
+--- !u!1 &8185050519078503260
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6931012827513416666}
-  - component: {fileID: 6931012827513416667}
+  - component: {fileID: 8185050519078503261}
+  - component: {fileID: 8185050519078503262}
   m_Layer: 5
-  m_Name: PrefabPattern1
+  m_Name: Pattern_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6931012827513416666
+--- !u!224 &8185050519078503261
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6931012827513416665}
+  m_GameObject: {fileID: 8185050519078503260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,27 +32,26 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -1.0786133, y: 0.0001812}
+  m_SizeDelta: {x: -361.84262, y: 670}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6931012827513416667
+--- !u!114 &8185050519078503262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6931012827513416665}
+  m_GameObject: {fileID: 8185050519078503260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
+  m_Script: {fileID: 11500000, guid: 876d9c402ac3d3841a1662cd4c27e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuestionObj: {fileID: 0}
-  JsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
-  ABCD: []
-  PrefabA: {fileID: 56981999180755985, guid: 3e1a32a27a25a8149adabdeeb788ba86, type: 3}
-  AlphabetList: 
-  MainParent: {fileID: 0}
-  CurrentClickedObj: {fileID: 0}
+  jsonText: {fileID: 4900000, guid: cd5432687a8efcb4493f938a70555926, type: 3}
+  ButtonAddressable:
+    m_AssetGUID: d1d51453d100bd14fa33fdbf0b75e051
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

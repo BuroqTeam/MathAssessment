@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: SO
+  m_Name: Jahongir
   m_EditorClassIdentifier: 
-  m_GroupName: SO
+  m_GroupName: Jahongir
   m_Data:
     m_SerializedData: []
-  m_GUID: 367a99efa3a259d45be6b4539afda915
+  m_GUID: 33fb3347f446f674e9a8c25af7d0c49f
   m_SerializeEntries:
-  - m_GUID: a910386fdd2bc514b86f0685f889595f
-    m_Address: DataBase
+  - m_GUID: d1d51453d100bd14fa33fdbf0b75e051
+    m_Address: Button
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 441048aec8bdbca4abc9126138ac637e, type: 2}
-    - {fileID: 11400000, guid: 0031fda2aa948f44eacb4a449436dbf3, type: 2}
+    - {fileID: 11400000, guid: 37560af74ab27374cbb69a1af67fec83, type: 2}
+    - {fileID: 11400000, guid: 31cb7b842899cea409d03f67b45ac27e, type: 2}
