@@ -3,23 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using Extensions = Extension.Extensions;
+using MBT.Extension;
+using System;
 
 public class Pattern_2 : TestManager
 {    
     
     public AssetReference ButtonAddressable;
-    
+    public DataBaseSO dataBase;
+
+    private AssetReference _jsonData;
     private GameObject _button;
     private TextAsset _currentJsonText;
     Data_2 Pattern_2Obj = new Data_2();
 
+    private void Awake()
+    {
+        _jsonData = Mbt.GetDesiredJSON(dataBase);
+        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+    }
+
+    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
+    {
+        _currentJsonText = obj.Result;
+    }
 
     private void Start()
     {
 
         ButtonAddressable.LoadAssetAsync<GameObject>().Completed += ButtonAddressableObjLoaded;
-        //ReadFromJson();
+        
     }
 
     private void ButtonAddressableObjLoaded(AsyncOperationHandle<GameObject> obj)
@@ -43,7 +56,7 @@ public class Pattern_2 : TestManager
     public void ReadFromJson()
     {     
         var jsonObj = JObject.Parse(_currentJsonText.text);
-        JObject jo = Extensions.LoadJsonPath(jsonObj); 
+        JObject jo = Mbt.LoadJsonPath(jsonObj); 
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
     }
