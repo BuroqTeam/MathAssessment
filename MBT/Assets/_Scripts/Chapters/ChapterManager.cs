@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 public class ChapterManager : MonoBehaviour
 {   
-    public AssetReference ChapterPrefab;
+    
     public AssetReference[] JsonDataGroup;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
@@ -19,7 +19,7 @@ public class ChapterManager : MonoBehaviour
     //[HideInInspector]
     public List<Chapter> ChapterPrefabGorup = new List<Chapter>();
 
-    private GameObject _chapterPrefabObj;
+    public  GameObject ChapterPrefabObj;
     private TextAsset _localJson;
     private int _numberOfChapter;
     IList<ChapterRaw> _chapterGorup;
@@ -50,22 +50,13 @@ public class ChapterManager : MonoBehaviour
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
             _localJson = obj.Result;
-            ChapterPrefab.LoadAssetAsync<GameObject>().Completed += OnChapterPrefabLoaded;
-            
+            ReadJSON();
+
         }
         
     }
 
-    void OnChapterPrefabLoaded(AsyncOperationHandle<GameObject> objAdd)
-    {
-        if (objAdd.Status == AsyncOperationStatus.Succeeded)
-        {
-            _chapterPrefabObj = objAdd.Result;
-            ReadJSON();
-           
-        }
-            
-    }
+ 
 
     void ReadJSON()
     {
@@ -104,7 +95,7 @@ public class ChapterManager : MonoBehaviour
         {
             for (int i = 0; i < _numberOfChapter; i++)
             {
-                GameObject obj = Instantiate(_chapterPrefabObj);
+                GameObject obj = Instantiate(ChapterPrefabObj);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
                 ChapterPrefabGorup.Add(obj.GetComponent<Chapter>());

@@ -257,11 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5620f04d7fefd3445a88f5b533228a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChapterPrefab:
-    m_AssetGUID: 5e6b95eae22598b4b9616fa660f3071d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   JsonDataGroup:
   - m_AssetGUID: 37a6776bf46905a478660bfa338f7d5a
     m_SubObjectName: 
@@ -296,6 +291,7 @@ MonoBehaviour:
   UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}
   UpdatePanel: {fileID: 63503055}
   ChapterPrefabGorup: []
+  ChapterPrefabObj: {fileID: 8267410294984318487, guid: 5e6b95eae22598b4b9616fa660f3071d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

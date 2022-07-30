@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
-    public AssetReference TestGroupPrefab;
+  
     public AssetReference[] JsonDataGroup;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
@@ -16,12 +16,12 @@ public class TestGroupManager : MonoBehaviour
     public GameObject UpdatePanel;
 
     //[HideInInspector]
-    public List<Chapter> ChapterPrefabGorup = new List<Chapter>();
+    public List<TestGroup> TestGroupPrefabGorup = new List<TestGroup>();
 
-    private GameObject _testGroupObj;
+    public GameObject TestGroupObj;
     private TextAsset _localJson;
-    private int _numberOfChapter;
-    IList<ChapterRaw> _chapterGorup;
+    private int _numberOfTestGroup;
+    IList<TestGroupRaw> _testGroup;
 
 
     private void Awake()
@@ -49,29 +49,19 @@ public class TestGroupManager : MonoBehaviour
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
             _localJson = obj.Result;
-            TestGroupPrefab.LoadAssetAsync<GameObject>().Completed += OnChapterPrefabLoaded;
-
-        }
-
-    }
-
-    void OnChapterPrefabLoaded(AsyncOperationHandle<GameObject> objAdd)
-    {
-        if (objAdd.Status == AsyncOperationStatus.Succeeded)
-        {
-            _testGroupObj = objAdd.Result;
             ReadJSON();
-
         }
 
     }
+
+   
 
     void ReadJSON()
     {
         var jo = JObject.Parse(_localJson.text);
-        JArray chapters = (JArray)jo["chapters"];
-        _numberOfChapter = chapters.Count;
-        _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();
+        JArray testGroup = (JArray)jo["chapters"];
+        _numberOfTestGroup = testGroup.Count;
+        _testGroup = testGroup.ToObject<IList<TestGroupRaw>>();
         CreateChapters();
         SetScrollRect();
     }
@@ -79,7 +69,7 @@ public class TestGroupManager : MonoBehaviour
 
     void SetScrollRect()
     {
-        if (_numberOfChapter > 10)
+        if (_numberOfTestGroup > 10)
         {
             ScrollRectObj.enabled = true;
             Color col = Color.gray;
@@ -99,34 +89,33 @@ public class TestGroupManager : MonoBehaviour
 
     void CreateChapters()
     {
-        if (_numberOfChapter > 0)
+        if (_numberOfTestGroup > 0)
         {
-            for (int i = 0; i < _numberOfChapter; i++)
+            for (int i = 0; i < _numberOfTestGroup; i++)
             {
-                GameObject obj = Instantiate(_testGroupObj);
+                GameObject obj = Instantiate(TestGroupObj);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
-                ChapterPrefabGorup.Add(obj.GetComponent<Chapter>());
+                TestGroupPrefabGorup.Add(obj.GetComponent<TestGroup>());
             }
             GridLayout.gameObject.SetActive(false);
-            StartCoroutine(DisplayChapters());
+            StartCoroutine(DisplayTestGroup());
         }
 
     }
 
-    IEnumerator DisplayChapters()
+    IEnumerator DisplayTestGroup()
     {
         ES3.Save("IsInitialLoad", true);
         yield return new WaitForSeconds(0.1f);
         GridLayout.gameObject.SetActive(true);
         int k = 0;
-        foreach (ChapterRaw item in _chapterGorup)
+        foreach (TestGroupRaw item in _testGroup)
         {
-            ChapterPrefabGorup[k].chapterRaw.name = item.name;
-            ChapterPrefabGorup[k].chapterRaw.number = item.number;
+            TestGroupPrefabGorup[k].RawTestGroup.number = item.number;           
             k++;
         }
-        foreach (Chapter item in ChapterPrefabGorup)
+        foreach (TestGroup item in TestGroupPrefabGorup)
         {
             item.UpdateInfo();
         }
