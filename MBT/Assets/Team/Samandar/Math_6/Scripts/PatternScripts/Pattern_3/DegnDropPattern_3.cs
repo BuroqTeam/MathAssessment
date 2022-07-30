@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
 
-    public List<RectTransform> NumberAreas;
+    //public List<RectTransform> NumberAreas;
     public List<GameObject> Positions;
     private RectTransform _rectTransform;
     private Vector3 _initialPosition;
@@ -21,7 +21,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         _rectTransform = GetComponent<RectTransform>();
     }
     public void OnBeginDrag(PointerEventData eventData)
-    {
+    {        
         LayoutOf();
         Order();
         if (LastPos != null)
@@ -37,8 +37,8 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        GameObject parentObj = gameObject.transform.parent.gameObject;
-        parentObj.transform.SetSiblingIndex(siblingIndexObj);
+        //GameObject parentObj = gameObject.transform.parent.gameObject;
+        //parentObj.transform.SetSiblingIndex(siblingIndexObj);
         Check();
     }
 
@@ -52,14 +52,12 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
     public void Order()
     {
-        //siblingIndexObj = transform.GetSiblingIndex();
-        
-        //gameObject.transform.parent
-        Debug.Log(gameObject.transform.parent.name);
-        //transform.parent.gameObject.transform.SetSiblingIndex(2);
+        siblingIndexObj = transform.GetSiblingIndex();
         GameObject parentObj = gameObject.transform.parent.gameObject;
         siblingIndexObj = parentObj.transform.GetSiblingIndex();
-        //parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+        parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+       
+
     }
 
     // Start is called before the first frame update
