@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_5 : TestManager
+public class Pattern_5 : TestManagerSample
 {
     public TextAsset JsonText;
     private GameObject MainParent;

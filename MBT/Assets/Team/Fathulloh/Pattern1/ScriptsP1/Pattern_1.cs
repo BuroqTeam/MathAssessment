@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_1 : TestManager
+public class Pattern_1 : TestManagerSample
 {           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
     public GameObject QuestionObj;
     public TextAsset JsonText;
