@@ -88,17 +88,17 @@ public class Pattern_1 : TestManagerSample
         //Debug.Log(Rsharp.chapters[0].number);
 
         // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
-        Pattern1Obj = jsonObj["chapters"][2]["questions"][0]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.         
+        Pattern1Obj = jsonObj["chapters"][7]["questions"][5]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.         
         Debug.Log(" Count of characters = " + Pattern1Obj.title.Length);
 
-        if (Pattern1Obj.title.Length > 150)
-        {
-            QuestionObj.GetComponent<TEXDraw>().size = 38;
-        }
-        else
-        {
-            QuestionObj.GetComponent<TEXDraw>().size = 50;
-        }
+        //if (Pattern1Obj.title.Length > 150)
+        //{
+        //    QuestionObj.GetComponent<TEXDraw>().size = 38;
+        //}
+        //else
+        //{
+        //    QuestionObj.GetComponent<TEXDraw>().size = 50;
+        //}
 
         QuestionObj.GetComponent<TEXDraw>().text = Pattern1Obj.title;
 
