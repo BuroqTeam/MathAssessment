@@ -7,6 +7,8 @@ using UnityEngine;
 using TexDrawLib;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_3 : TestManager
 {
@@ -23,8 +25,15 @@ public class Pattern_3 : TestManager
     public Data_3 objaa;
     public TEXDraw NumberActions;
     public List<GameObject> NumberInstantiate;
+    public AssetReference PrefabPattern;
+    public AssetReference PrefabPattern1;
     void Start()
     {
+
+        PrefabPattern.LoadAssetAsync<GameObject>().Completed += PrefabPatternObjLoaded;
+        PrefabPattern1.LoadAssetAsync<GameObject>().Completed += PrefabPattern1ObjLoaded;
+              
+
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
         QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
         var jsonObj = JObject.Parse(jsonText.text);
@@ -79,6 +88,16 @@ public class Pattern_3 : TestManager
         //    GameObject obj = Instantiate(NumberAreaPrefabs, NumberArea[i].transform);
         //}
 
+    }
+
+    void PrefabPatternObjLoaded(AsyncOperationHandle<GameObject> obj)
+    {
+        NumberPrefabs = obj.Result;        
+    }
+
+    void PrefabPattern1ObjLoaded(AsyncOperationHandle<GameObject> obj)
+    {
+        NumberAreaPrefabs = obj.Result;
     }
 
     private void OnEnable()
