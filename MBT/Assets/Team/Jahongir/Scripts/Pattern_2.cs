@@ -5,37 +5,59 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
 
 public class Pattern_2 : TestManager
-{
-    public string SampleQuestion;
+{    
     public TextAsset jsonText;
-    public GameObject Buttons;
+    public AssetReference ButtonAddressable;
+    
+    private GameObject _button;
     //public GameObject QuestionObj;
     private GameObject MainParent;
     Data_2 Pattern_2Obj = new Data_2();
-    void Start()
+
+
+    private void Start()
     {
-        //MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        //QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+
+        ButtonAddressable.LoadAssetAsync<GameObject>().Completed += ButtonAddressableObjLoaded;
+        //ReadFromJson();
     }
-    private void OnEnable()
+
+    private void ButtonAddressableObjLoaded(AsyncOperationHandle<GameObject> obj)
     {
-        DisplayQuestion(SampleQuestion);
-    }
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
+        _button = obj.Result;
         ReadFromJson();
     }
+
+   
+    private void OnEnable()
+    {
+        DisplayQuestion(Pattern_2Obj.title);
+    }
+
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr); // null        
+    }
+
     public void ReadFromJson()
     {
         int QuestionID = 10;
         var jsonObj = JObject.Parse(jsonText.text);
         Pattern_2Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_2>();
-        SampleQuestion = Pattern_2Obj.title;
+
+        //ES3.Save<JObject>("Pattern_1", jsonObj);
         CreatePrefabs();
+        //JObject json = ES3.Load<JObject>("Pattern_1");
+
+        //Debug.Log(json);
     }
+
     public void CreatePrefabs()
     {
         if (Pattern_2Obj.options.Count % 4 == 0)
@@ -45,13 +67,13 @@ public class Pattern_2 : TestManager
             {
                 if (i< Pattern_2Obj.options.Count/2)
                 {
-                    GameObject button = Instantiate(Buttons, transform);
+                    GameObject button = Instantiate(_button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1)-i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                 }
                 else
                 {
-                    GameObject button = Instantiate(Buttons, transform);
+                    GameObject button = Instantiate(_button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - w) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     w++;
@@ -65,19 +87,20 @@ public class Pattern_2 : TestManager
             {
                 if (i < Pattern_2Obj.options.Count / 2)
                 {
-                    GameObject button = Instantiate(Buttons, transform);
+                    GameObject button = Instantiate(_button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                 }
                 else
                 {
-                    GameObject button = Instantiate(Buttons, transform);
+                    GameObject button = Instantiate(_button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + q) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     q++;
                 }
             }
         }
+        // gameObject.SetActive(false);
     }
 }
 
