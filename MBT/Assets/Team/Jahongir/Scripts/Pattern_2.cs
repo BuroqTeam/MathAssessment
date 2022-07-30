@@ -1,22 +1,17 @@
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
+using Extensions = Extension.Extensions;
 
 public class Pattern_2 : TestManager
 {    
-    public TextAsset jsonText;
+    
     public AssetReference ButtonAddressable;
     
     private GameObject _button;
-    //public GameObject QuestionObj;
-    private GameObject MainParent;
+    private TextAsset _currentJsonText;
     Data_2 Pattern_2Obj = new Data_2();
 
 
@@ -46,16 +41,11 @@ public class Pattern_2 : TestManager
     }
 
     public void ReadFromJson()
-    {
-        int QuestionID = 10;
-        var jsonObj = JObject.Parse(jsonText.text);
-        Pattern_2Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_2>();
-
-        //ES3.Save<JObject>("Pattern_1", jsonObj);
+    {     
+        var jsonObj = JObject.Parse(_currentJsonText.text);
+        JObject jo = Extensions.LoadJsonPath(jsonObj); 
+        Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
-        //JObject json = ES3.Load<JObject>("Pattern_1");
-
-        //Debug.Log(json);
     }
 
     public void CreatePrefabs()

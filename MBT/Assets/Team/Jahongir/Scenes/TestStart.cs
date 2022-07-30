@@ -15,10 +15,6 @@ public class TestStart : MonoBehaviour
     void Awake()
     {
         dataBase.CreateDict();
-
-        
-
-
         ES3.Save<string>("LanguageKey", "Class_6_Kaz");
         ES3.Save<int>("ClassKey", 6);
 
@@ -40,6 +36,7 @@ public class TestStart : MonoBehaviour
             {
                 if (txtAsset.editorAsset.name.Equals(currentLanguage))
                 {
+                     
                     Debug.Log(txtAsset.editorAsset.name);
                 }
             }
