@@ -1207,6 +1207,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 8267410294984318492}
+        m_TargetAssemblyTypeName: Chapter, Assembly-CSharp
+        m_MethodName: SetPath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2248578362195717944}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: LoadLocalScene
@@ -1235,6 +1247,7 @@ MonoBehaviour:
   SliderFill: {fileID: 8267410294764248708}
   ChapterNumberTxt: {fileID: 8267410295622969514}
   ChapterNameTxt: {fileID: 8267410294682784005}
+  TestGroup: {fileID: 11400000, guid: c5a8c1bd3f3470b40865e0dfc8d5e763, type: 2}
 --- !u!114 &2248578362195717944
 MonoBehaviour:
   m_ObjectHideFlags: 0

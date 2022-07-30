@@ -143,7 +143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
   m_sharedMaterial: {fileID: 3648660828451113216, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
@@ -664,3 +664,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberTxt: {fileID: 1568044705313005610}
   RadilaSlider: {fileID: 987064294711842326}
+  TestGroupSO: {fileID: 11400000, guid: c5a8c1bd3f3470b40865e0dfc8d5e763, type: 2}
