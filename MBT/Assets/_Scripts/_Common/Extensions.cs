@@ -3,13 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Newtonsoft.Json.Linq;
 
 
 namespace Extension
 {
     public static class Extensions 
-    {       //Extension Methodlar Method boshidagi parametrlar oldiga "this" qo'yish orqali yasaladi.
+    {       
+        
+        //Extension Methodlar Method boshidagi parametrlar oldiga "this" qo'yish orqali yasaladi.
 
+
+        public static void SaveJsonPath(int chapterID, int questionsId)
+        {
+            int[] array = new int [2]{ chapterID, questionsId };
+            ES3.Save<int[]>("SaveJsonPath", array);
+        }
+
+        public static JObject LoadJsonPath( JObject jsonObj)
+        {            
+            JObject json = new JObject();
+            int[] array = ES3.Load<int[]>("SaveJsonPath");
+            json = (JObject)jsonObj["chapters"][array[0]]["questions"][array[1]]["question"];
+            return json;            
+        }
 
 
         /// <summary>
