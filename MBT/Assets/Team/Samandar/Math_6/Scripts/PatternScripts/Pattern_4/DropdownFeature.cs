@@ -8,22 +8,25 @@ using UnityEngine.UIElements;
 public class DropdownFeature : MonoBehaviour
 {
     public int Numbers;
-    
-    public Sprite P4;
+    public GameObject Label;
+    public GameObject Arrow;
+
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
        
-        //transform.GetComponent<TMP_Dropdown>().options.Count = Numbers;
-        //Debug.Log(transform.GetComponent<TMP_Dropdown>().options.GetType());
-        //Debug.Log(transform.GetComponent<TMP_Dropdown>().options.Count);
-        //transform.GetComponent<TMP_Dropdown>().options.AddRange(NewDD, NNNN);
     }
-    public void ImageUpdate()
+    public void TurnOn()
     {
-        //gameObject.GetComponent<Image>().sprite = P4;
-        //gameObject.GetComponent<Image>().tintColor = Color.blue;
+        //Label.GetComponent<TMP_Text>().enabled = true;
+        Label.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
+        Arrow.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
+        Debug.Log(Label.GetComponent<TMP_Text>().color);
     }
-    void Update()
+    public void ColorUpdate()
     {
         
     }
