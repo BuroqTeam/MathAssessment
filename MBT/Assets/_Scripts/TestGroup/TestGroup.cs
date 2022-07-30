@@ -8,6 +8,7 @@ public class TestGroup : MonoBehaviour
 {
     public TMP_Text NumberTxt;
     public Image RadilaSlider;
+    public TestGroupSO TestGroupSO;
 
     public TestGroupRaw RawTestGroup = new TestGroupRaw();
 
