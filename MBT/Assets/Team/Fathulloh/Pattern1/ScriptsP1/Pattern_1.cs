@@ -59,7 +59,7 @@ public class Pattern_1 : TestManagerSample
     public void CreatePrefabs()
     {
         int n = Pattern1Obj.options.Count;
-        //float yPos, yLength;
+        
 
         if (n == 4) 
         {
