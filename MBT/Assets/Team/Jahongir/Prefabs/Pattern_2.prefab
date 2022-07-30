@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876d9c402ac3d3841a1662cd4c27e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SampleQuestion: Savol
   jsonText: {fileID: 4900000, guid: cd5432687a8efcb4493f938a70555926, type: 3}
-  Buttons: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
+  ButtonAddressable:
+    m_AssetGUID: d1d51453d100bd14fa33fdbf0b75e051
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
