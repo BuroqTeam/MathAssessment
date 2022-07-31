@@ -34,9 +34,6 @@ public class Pattern_5 : TestManagerSample
 
 
 
-
-
-
     void Start()
     {
         MainParent = gameObject.transform.parent.transform.parent.gameObject;
