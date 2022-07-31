@@ -5,9 +5,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using TexDrawLib;
+using UnityEngine.UI;
+using TMPro;
 
 public class Pattern_4 : TestManager
 {
+    public TMP_Dropdown dropdownPrefab;
     public TextAsset jsonText;
     //public TEXDraw Questions;
     public TEXDraw PictureText_1;
@@ -24,9 +27,21 @@ public class Pattern_4 : TestManager
     public Data_4 Data4;
     void Start()
     {
+        PopulateList();
         JsonData();
         CreatePrefabs();
-       
+        
+    }
+
+    public void Populate()
+    {
+        dropdownPrefab.transform.GetComponent<Image>().color = new Color(0, 0.5803922f, 1, 1);
+    }
+    void PopulateList()
+    {
+        List<string> names = new List<string>() { "Tanlang", ">", "<", "=" };
+        dropdownPrefab.AddOptions(names);
+        Debug.Log("PopulateList");
     }
     void JsonData()
     {
@@ -41,9 +56,11 @@ public class Pattern_4 : TestManager
     public void CreatePrefabs() 
     {
         int Number = Data4.options.Count;
+        Debug.Log(Number);
         for (int i = 0; i < Number; i++)
         {
-            //GameObject objChoose = Instantiate(ChoosePrefab, Choose[i].transform);
+            GameObject objChoose = Instantiate(ChoosePrefab, Choose[i].transform);
+            objChoose.transform.GetComponent<DropdownFeature>().P4 = this;
         }
         for (int i = 0; i < 2 * Number; i++)
         {
