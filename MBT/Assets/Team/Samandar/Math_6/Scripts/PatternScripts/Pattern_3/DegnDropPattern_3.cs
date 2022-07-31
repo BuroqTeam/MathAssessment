@@ -15,6 +15,9 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     private GameObject LastPos;
     public Pattern_3 Pattern3;
     public int siblingIndexObj;
+
+    
+
     private void Awake()
     {
         _initialPosition = transform.position;
@@ -26,8 +29,9 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         Order();
         if (LastPos != null)
         {
+            LastPos.GetComponent<NumBoxP_3>().CurrentNumber = null;
             LastPos.GetComponent<NumBoxP_3>()._IsEmpty = true;
-            LastPos = null;
+            LastPos = null;            
         }
         
     }
@@ -52,10 +56,11 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
 
     public void Order()
     {
-        siblingIndexObj = transform.GetSiblingIndex();
-        GameObject parentObj = gameObject.transform.parent.gameObject;
-        siblingIndexObj = parentObj.transform.GetSiblingIndex();
-        parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+        //siblingIndexObj = transform.GetSiblingIndex();
+        //GameObject parentObj = gameObject.transform.parent.gameObject;
+        //siblingIndexObj = parentObj.transform.GetSiblingIndex();
+        //parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+
        
 
     }
@@ -73,7 +78,12 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
                 transform.position = new Vector3(Positions[i].transform.position.x, Positions[i].transform.position.y, 0);
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
                 Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
+                Positions[i].GetComponent<NumBoxP_3>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
+                //LastObject = Positions[i];
                 _rectTransform.DOScale(1.25f, 0.2f);
+                GameObject parentObj = gameObject.transform.parent.gameObject;
+                parentObj.transform.SetSiblingIndex(siblingIndexObj);
+                Pattern3.CheckingAnswer();
                 break;
             }
             else

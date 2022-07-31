@@ -5,6 +5,9 @@ using UnityEngine;
 public class NumBoxP_3 : MonoBehaviour
 {
     public bool _IsEmpty = true;
+    public string CurrentNumber;
+
+
     void Start()
     {
         
