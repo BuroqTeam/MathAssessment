@@ -49,6 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonA:
+    m_AssetGUID: 3e1a32a27a25a8149adabdeeb788ba86
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  dataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   QuestionObj: {fileID: 0}
   JsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   ABCD: []

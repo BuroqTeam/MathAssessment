@@ -15,12 +15,6 @@ public class AnswerPattern1 : MonoBehaviour
     public Sprite WrongCircle, WrongRectangle;
 
 
-    void Start()
-    {
-        
-    }
-
-
     /// <summary>
     /// A B C D larga yozishni taminlovchi method.
     /// </summary>
