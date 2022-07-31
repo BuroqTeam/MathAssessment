@@ -21,7 +21,7 @@ public class Pattern_1 : TestManagerSample
 
 
     public Data_1 Pattern1Obj = new Data_1();
-    //public RawCsharp Rsharp = new RawCsharp();
+    
 
     void Start()
     {
@@ -58,8 +58,7 @@ public class Pattern_1 : TestManagerSample
 
     public void CreatePrefabs()
     {
-        int n = Pattern1Obj.options.Count;
-        
+        int n = Pattern1Obj.options.Count;        
 
         if (n == 4) 
         {
@@ -83,10 +82,7 @@ public class Pattern_1 : TestManagerSample
         var jsonObj = JObject.Parse(JsonText.text);
         int ranNum = Random.Range(0, 10);
 
-        //JArray jsonObj2 = (JArray)jsonObj["chapters"];
-        //Rsharp = jsonObj2.ToObject<RawCsharp>();
-        //Debug.Log(Rsharp.chapters[0].number);
-
+        
         // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
         Pattern1Obj = jsonObj["chapters"][7]["questions"][5]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.         
         Debug.Log(" Count of characters = " + Pattern1Obj.title.Length);

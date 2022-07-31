@@ -3,9 +3,13 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class Pattern_5 : TestManagerSample
 {
+    public AssetReference BBB;
+    public DataBaseSO datBase;
+
     public TextAsset JsonText;
     private GameObject MainParent;
     public GameObject QuestionObj;
@@ -21,6 +25,17 @@ public class Pattern_5 : TestManagerSample
     
     public GameObject ParentForPos;
     public Data_5 Pattern5Obj = new Data_5();
+
+
+    private void Awake()
+    {
+        
+    }
+
+
+
+
+
 
     void Start()
     {
