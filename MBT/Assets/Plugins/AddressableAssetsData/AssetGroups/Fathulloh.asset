@@ -12,14 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Fathulloh
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Fathulloh
   m_Data:
     m_SerializedData: []
-  m_GUID: cc396f9e9a695f147af68690ad0401e0
-  m_SerializeEntries: []
+  m_GUID: edf111a4b4845bd438938309da599a34
+  m_SerializeEntries:
+  - m_GUID: 302391a5fac406243a035b6c4b2f0708
+    m_Address: NumberBoxPattern5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49a558fd401b5c84686a184fed1ad15e
+    m_Address: NumberPattern5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d8231e45e2796c24d940182f9cc72be2
+    m_Address: NumLocPattern5
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e1a32a27a25a8149adabdeeb788ba86
+    m_Address: Button_A
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 19d3294a11daefc4d8dd914d48a20094, type: 2}
-    - {fileID: 11400000, guid: a04c7ae2dc99f414db80d2df7054fd8b, type: 2}
+    - {fileID: 11400000, guid: cf898efd11913884aa0f6f58455b5015, type: 2}
+    - {fileID: 11400000, guid: 3ebd25f7028b9f74088e852fc7b15611, type: 2}
