@@ -10,36 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Samandar
+  m_Name: Fathulloh
   m_EditorClassIdentifier: 
-  m_GroupName: Samandar
+  m_GroupName: Fathulloh
   m_Data:
     m_SerializedData: []
-  m_GUID: fab0eea74264a1a4c9547eda6ef43416
+  m_GUID: edf111a4b4845bd438938309da599a34
   m_SerializeEntries:
-  - m_GUID: f845c2528fa3fed44af5aee47aa476b1
-    m_Address: Number
+  - m_GUID: 302391a5fac406243a035b6c4b2f0708
+    m_Address: NumberBoxPattern5
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 481fd51bc4f0bb745a064ab00f1f6396
-    m_Address: NumberArea
+  - m_GUID: 49a558fd401b5c84686a184fed1ad15e
+    m_Address: NumberPattern5
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: f34dc1fe8d4d49e4a860bed9e30848b5
-    m_Address: Dropdown
+  - m_GUID: d8231e45e2796c24d940182f9cc72be2
+    m_Address: NumLocPattern5
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 4502b4358ad89b04c842d667ab155a80
-    m_Address: PictureName
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 58fcc8f0e32c4b64891d3c8bff530dda
-    m_Address: Signs
+  - m_GUID: 3e1a32a27a25a8149adabdeeb788ba86
+    m_Address: Button_A
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d635b5275f1243e448481aa84bce9ffb, type: 2}
-    - {fileID: 11400000, guid: d4a96b60ae080274fb19f3ffa44c5db8, type: 2}
+    - {fileID: 11400000, guid: cf898efd11913884aa0f6f58455b5015, type: 2}
+    - {fileID: 11400000, guid: 3ebd25f7028b9f74088e852fc7b15611, type: 2}
