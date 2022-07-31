@@ -19,6 +19,8 @@ public class Pattern_2 : TestManager
 
     private void Awake()
     {
+        ES3.Save<string>("LanguageKey", "Class_6_Kaz");
+        ES3.Save<int>("ClassKey", 6);
         _jsonData = Mbt.GetDesiredJSON(dataBase);
         _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
     }
