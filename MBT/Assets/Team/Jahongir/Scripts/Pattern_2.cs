@@ -13,29 +13,28 @@ public class Pattern_2 : TestManager
     public DataBaseSO dataBase;
 
     private AssetReference _jsonData;
-    private GameObject _button;
-    private TextAsset _currentJsonText;
+    public  GameObject _button;
+    public TextAsset _currentJsonText;
     Data_2 Pattern_2Obj = new Data_2();
 
     private void Awake()
     {
-        ES3.Save<string>("LanguageKey", "Class_6_Kaz");
+        Mbt.SaveJsonPath(0, 10);
+        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
         ES3.Save<int>("ClassKey", 6);
-        _jsonData = Mbt.GetDesiredJSON(dataBase);
+        _jsonData = Mbt.GetDesiredJSON(dataBase);      
         _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
     }
+
+   
 
     private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
     {
         _currentJsonText = obj.Result;
-    }
-
-    private void Start()
-    {
-
         ButtonAddressable.LoadAssetAsync<GameObject>().Completed += ButtonAddressableObjLoaded;
-        
     }
+
+   
 
     private void ButtonAddressableObjLoaded(AsyncOperationHandle<GameObject> obj)
     {
@@ -56,9 +55,9 @@ public class Pattern_2 : TestManager
     }
 
     public void ReadFromJson()
-    {     
+    {
         var jsonObj = JObject.Parse(_currentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj); 
+        JObject jo = Mbt.LoadJsonPath(jsonObj);
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
     }
