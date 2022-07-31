@@ -26,8 +26,6 @@ public class DataBaseSO : ScriptableObject
         DataBase.Add(9, Class9);
         DataBase.Add(10, Class10);
         DataBase.Add(11, Class11);
-
-
     }
 
 }
