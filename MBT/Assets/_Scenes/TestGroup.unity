@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 1121223875}
   - component: {fileID: 1121223877}
   - component: {fileID: 1121223876}
+  - component: {fileID: 1121223878}
   m_Layer: 5
   m_Name: SliderRate
   m_TagString: Untagged
@@ -894,8 +895,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278239487
-  m_fontColor: {r: 1, g: 0.75294125, b: 0, a: 1}
+    rgba: 4290756545
+  m_fontColor: {r: 0.75686276, g: 0.7490196, b: 0.7490196, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -962,6 +963,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121223874}
   m_CullTransparentMesh: 1
+--- !u!114 &1121223878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121223874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fbfe31b9147a24b8550c9c4b6abe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue: {r: 1, g: 0.75294125, b: 0, a: 1}
+  grey: {r: 0.7568628, g: 0.7490196, b: 0.7490196, a: 1}
 --- !u!1 &1173087631
 GameObject:
   m_ObjectHideFlags: 0

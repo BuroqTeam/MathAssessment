@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Newtonsoft.Json.Linq;
+using MBT.Extension;
 
 public class ChapterManager : MonoBehaviour
-{   
-    
-    public AssetReference[] JsonDataGroup;
+{
+
+    public DataBaseSO DataBase;    
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
     public GameEvent UpdateEventSO;
@@ -21,12 +22,14 @@ public class ChapterManager : MonoBehaviour
     public  GameObject ChapterPrefabObj;
     private TextAsset _localJson;
     private int _numberOfChapter;
+    private AssetReference _jsonDataGroup;
     IList<ChapterRaw> _chapterGorup;
 
 
     private void Awake()
     {
-        JsonDataGroup[ES3.Load<int>("LanguageID")].LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
+        _jsonDataGroup = Mbt.GetDesiredJSON(DataBase);
+        _jsonDataGroup.LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
         DisableLoadingBar();
     }
 
