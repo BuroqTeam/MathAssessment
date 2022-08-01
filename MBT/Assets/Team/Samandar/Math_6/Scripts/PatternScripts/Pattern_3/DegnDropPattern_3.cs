@@ -15,6 +15,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     private GameObject LastPos;
     public Pattern_3 Pattern3;
     public int siblingIndexObj;
+    public List<string> Answer;
 
     
 
@@ -50,19 +51,15 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
-        _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);       
-
+        _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
     }
 
     public void Order()
     {
-        //siblingIndexObj = transform.GetSiblingIndex();
-        //GameObject parentObj = gameObject.transform.parent.gameObject;
-        //siblingIndexObj = parentObj.transform.GetSiblingIndex();
-        //parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
-
-       
-
+        siblingIndexObj = transform.GetSiblingIndex();
+        GameObject parentObj = gameObject.transform.parent.gameObject;
+        siblingIndexObj = parentObj.transform.GetSiblingIndex();
+        parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
     }
 
     // Start is called before the first frame update
@@ -79,11 +76,13 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
                 Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
                 Positions[i].GetComponent<NumBoxP_3>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
+                //string Current = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
+                //Answer.Add(Current);
+                //Debug.Log("List" + Answer);
                 //LastObject = Positions[i];
-                _rectTransform.DOScale(1.25f, 0.2f);
-                GameObject parentObj = gameObject.transform.parent.gameObject;
-                parentObj.transform.SetSiblingIndex(siblingIndexObj);
+                _rectTransform.DOScale(1.25f, 0.2f);                
                 Pattern3.CheckingAnswer();
+                //Pattern3.RemakeJsonSolution();
                 break;
             }
             else

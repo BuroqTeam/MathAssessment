@@ -30,9 +30,7 @@ public class Pattern_3 : TestManager
     void Start()
     {
 
-        PrefabPattern.LoadAssetAsync<GameObject>().Completed += PrefabPatternObjLoaded;
-        PrefabPattern1.LoadAssetAsync<GameObject>().Completed += PrefabPattern1ObjLoaded;
-              
+       
 
         //MainParent = gameObject.transform.parent.transform.parent.gameObject;
         //QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
@@ -88,8 +86,8 @@ public class Pattern_3 : TestManager
             NumbersParent[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
 
-        CheckingAnswer();
-        RemakeJsonSolution();
+        //CheckingAnswer();
+        //RemakeJsonSolution();
         
     }
 
@@ -98,10 +96,7 @@ public class Pattern_3 : TestManager
         NumberPrefabs = obj.Result;        
     }
 
-    void PrefabPattern1ObjLoaded(AsyncOperationHandle<GameObject> obj)
-    {
-        NumberAreaPrefabs = obj.Result;
-    }
+    
 
     private void OnEnable()
     {
@@ -113,15 +108,7 @@ public class Pattern_3 : TestManager
         base.DisplayQuestion(questionStr);  
 
     }
-
-    void objPrefab()
-    {
-        for (int i = 0; i < NumberArea.Count; i++)
-        {
-            GameObject obj = Instantiate(NumberAreaPrefabs, NumberArea[i].transform);
-        }
         
-    }
     public void DisplayQuestion()
     {
         //Questions.text = objaa.title;
@@ -131,66 +118,61 @@ public class Pattern_3 : TestManager
 
     public List<GameObject> MainList = new List<GameObject>();
     public int CorrectAnsNumbers;
-
+    public List<string> Ansver;
 
     public void CheckingAnswer()
     {
-        List<string> solution1 = DataObj.solution[0];
-        int javoblarSoni = solution1.Count;
-        if (javoblarSoni == 2)
+        CorrectAnsNumbers = 0;
+        List<string> solution1 = /*newSolution[0]*/ DataObj.solution[0];
+        int javoblarSoni = solution1.Count-1;
+        Debug.Log("javoblarSoni  = " + javoblarSoni + " " + newSolution.Count);
+        Ansver.Clear();
+        for (int i = 0; i < javoblarSoni; i++)
         {
-            MainList = CheckList2;
-            Debug.Log(2);
-        }
-        else if (javoblarSoni == 4)
-        {
-            MainList = CheckList4;
-            Debug.Log(4);
-        }
-        else if (javoblarSoni == 6)
-        {
-            MainList = CheckList6;
-            Debug.Log(6);
-        }
-
-        for (int i = 0; i < DataObj.solution.Count; i++)
-        {
-            CorrectAnsNumbers = 0;
-            List<string> newList = DataObj.solution[i];
-            for (int j = 0; j < newList.Count; j++)
+            //Debug.Log("For");
+            if (javoblarSoni == 2)
             {
-                if (newList.Count == 3)
+                //MainList = CheckList2;
+                string mainString2 = CheckList2[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                Ansver.Add(mainString2);
+                for (int j = 0; j < Ansver.Count; j++)
                 {
-
+                    Debug.Log(Ansver[j]);
                 }
-                else if (newList.Count == 5)
-                {
-
-                }
-                else if (newList.Count == 7)
-                {
-
-                }
-                string mainString = MainList[j].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
-                string jsonString = newList[j];
-
-                //if (mainString == jsonString)
-                //{
-                //    CorrectAnsNumbers++;
-                //}
             }
-            if (CorrectAnsNumbers == javoblarSoni)
+            else if (javoblarSoni == 4)
             {
-                Debug.Log("Hammasi to'g'ri.");
-                break;
+                //MainList = CheckList4;
+                string mainString4 = CheckList4[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                Ansver.Add(mainString4);                
+                for (int j = 0; j < Ansver.Count; j++)
+                {
+                    Debug.Log(Ansver[j]);
+                }
             }
+            else if (javoblarSoni == 6)
+            {
+                //MainList = CheckList6;                
+                string mainString6 = CheckList6[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                Ansver.Add(mainString6);
+                for (int j = 0; j < Ansver.Count; j++)
+                {
+                    Debug.Log(Ansver[j]);
+                }
+            }
+            //if (CorrectAnsNumbers == javoblarSoni)
+            //{
+            //    break;
+            //}
         }
+        
 
+        
     }
 
     public List<List<string>> newSolution = new List<List<string>>();
     public List<string> SmallList;
-    void RemakeJsonSolution()
+    public void RemakeJsonSolution()
     {
         newSolution = new List<List<string>>(DataObj.solution);       
 
@@ -199,16 +181,13 @@ public class Pattern_3 : TestManager
             var middleValue = list[list.Count / 2];
             list.Remove(middleValue);
         }
-
-        SmallList.Add("3");
-        SmallList.Add("8");
-        SmallList.Add("4");
-        SmallList.Add("9");
+        SmallList.Add("3");  
 
         int k = 0;
         foreach (List<string> list in newSolution)
+        
         {
-            if (list.SequenceEqual(SmallList))
+            if (list.SequenceEqual(Ansver))
             {
                 Debug.Log("Correct");
             }
@@ -223,40 +202,8 @@ public class Pattern_3 : TestManager
             Debug.Log("Wrong");
         }
 
-
-        //List<string> newList;
-        //for (int i = 0; i < DataObj.solution.Count; i++)
-        //{
-        //    SmallList = new List<string>();
-        //    List<string> jsonList = DataObj.solution[i];
-        //    for (int j = 0; j < jsonList.Count; j++)
-        //    {
-        //        string str = jsonList[j];
-        //        string str2 = DataObj.solution[i][j];
-        //        if (jsonList.Count / 2 == j)
-        //        {
-        //            //Debug.Log("amal");
-        //        }
-        //        else
-        //        {
-        //            SmallList.Add(str);
-        //            Debug.Log(str);
-        //            //newSolution[i][j] = objaa.solution[i][j];
-        //        }
-
-        //    }
-
-        //    newSolution.Add(SmallList);
-        //    //SmallList.Clear();
-        //}
-        //Debug.Log(newSolution.Count + "  " + newSolution[0].Count);
-    }
-
-    
-
-
-
-
+        
+    }    
 }
 
 [SerializeField]

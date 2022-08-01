@@ -80,7 +80,7 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5
 --- !u!1 &4986404047044520494
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,11 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196b823d76e740a48ae9da6297f5a0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberAreas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   Positions: []
   Pattern3: {fileID: 0}
   siblingIndexObj: 0
+  Answer: []
