@@ -9,8 +9,7 @@ public class MainManager : MonoBehaviour
 {
     public Main MainObj;
     public AssetReference AddressableMainData;
-    public GameObject UpdatePanel;
-    public GameEvent UpdateEventSO;
+   
     
     private SinfList _mySinfList = new SinfList();    
     private TextAsset _localMainData;  
@@ -34,24 +33,37 @@ public class MainManager : MonoBehaviour
     public void SetClassKey(int index)
     {
         ES3.Save<int>("ClassKey", index);
+        GetComponent<SceneManager>().LoadLocalScene("Chapters");
     }
 
     void EnableButtons()
     {
         for (int i = 0; i < _mySinfList.sinf.Length; i++)
-        {
+        {           
             if (_mySinfList.sinf[i].Status.Equals("Yes"))
             {
-                MainObj.SinfButtonGroup[i].interactable = true;               
-                ES3.Save(MainObj.SinfButtonGroup[i].name, 1);
+                MainObj.SinfButtonGroup[i].interactable = true;                    
+                ES3.Save<int>(MainObj.SinfButtonGroup[i].name, 1);
             }
             else
             {
                 MainObj.SinfButtonGroup[i].interactable = false;
-                ES3.Save(MainObj.SinfButtonGroup[i].name, 0);
+                ES3.Save<int>(MainObj.SinfButtonGroup[i].name, 0);
             }
+
+            if (_mySinfList.sinf[i].Visibility.Equals("Yes"))
+            {
+                MainObj.SinfButtonGroup[i].gameObject.SetActive(true);
+                ES3.Save<bool>(MainObj.SinfButtonGroup[i].name + "Visibility", true);
+            }
+            else
+            {
+                MainObj.SinfButtonGroup[i].gameObject.SetActive(false);
+                ES3.Save<bool>(MainObj.SinfButtonGroup[i].name + "Visibility", false);
+            }
+            ES3.Save<bool>("InitialSceneLoad1", true);
         }
-        UpdateEventSO.Raise();
+       
     }
 
     
@@ -63,7 +75,9 @@ public class Sinf
 {
     public string Class;
     public string Status;
-    
+    public string Visibility;
+
+
 }
 
 [Serializable]
