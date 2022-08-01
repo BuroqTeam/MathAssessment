@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DropDownP4 : MonoBehaviour
@@ -13,7 +14,7 @@ public class DropDownP4 : MonoBehaviour
     public Sprite DropDownBlueSprite;
 
     public string currentText;
-
+    public UnityEvent ClickEvent;
 
 
     void Start()
@@ -37,8 +38,10 @@ public class DropDownP4 : MonoBehaviour
         currentText = StrList[index];
         Debug.Log("  " + StrList[index]);
         DropDownGameObject.GetComponent<Image>().sprite = DropDownBlueSprite;
-        if (_IsFirstTime)
-        {
+        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
+
+        if (_IsFirstTime)        {
             _IsFirstTime = false;
             DropDownObj.ClearOptions();
             StrList = new List<string>() {">", "<", "=" };
@@ -50,7 +53,24 @@ public class DropDownP4 : MonoBehaviour
     public void DDOnValueChange()
     {
         Debug.Log("Drop Down On Value Change! ");
+
+        //DropDownObj.OnPointerClick();
     }
+
+
+    void DropDownIsClicked()
+    {
+        Debug.Log("Drop down is clicked.");
+    }
+
+
+    public void OnPointerClick()
+    {
+
+    }
+
+
+
 
 
 
