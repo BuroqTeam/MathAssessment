@@ -26,7 +26,7 @@ public class Pattern_10 : TestManager
         ES3.Save<int>("ClassKey", 6);
 
 
-        _jsonData = Mbt.GetDesiredJSON(DataBase);
+        //_jsonData = Mbt.GetDesiredJSON(DataBase);
         _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
     }
 
