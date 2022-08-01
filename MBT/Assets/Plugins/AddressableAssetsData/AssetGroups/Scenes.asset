@@ -10,20 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Jahongir
+  m_Name: Scenes
   m_EditorClassIdentifier: 
-  m_GroupName: Jahongir
+  m_GroupName: Scenes
   m_Data:
     m_SerializedData: []
-  m_GUID: 33fb3347f446f674e9a8c25af7d0c49f
-  m_SerializeEntries:
-  - m_GUID: d1d51453d100bd14fa33fdbf0b75e051
-    m_Address: Button
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_GUID: e46e8350fea2d0f42a7f20fcd81736a6
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 37560af74ab27374cbb69a1af67fec83, type: 2}
-    - {fileID: 11400000, guid: 31cb7b842899cea409d03f67b45ac27e, type: 2}
+    - {fileID: 11400000, guid: d813598bbdef1224babcf1d1da6157f1, type: 2}
+    - {fileID: 11400000, guid: d9a2bb20d62d27a41a3d575de003a624, type: 2}
