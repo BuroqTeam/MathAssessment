@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pattern_4F : TestManagerSample
 {
-
     public TextAsset JsonText;
     private GameObject MainParent;
     public GameObject QuestionObj;
@@ -13,6 +12,7 @@ public class Pattern_4F : TestManagerSample
     public GameObject prefDropDown;
 
 
+    //public Data_4F
 
     void Start()
     {
