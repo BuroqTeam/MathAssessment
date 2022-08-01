@@ -5,12 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Newtonsoft.Json.Linq;
+using System;
 using MBT.Extension;
 
 public class ChapterManager : MonoBehaviour
 {
 
-    public DataBaseSO DataBase;    
+    public AssetReference DataBase;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
     public GameEvent UpdateEventSO;
@@ -21,17 +22,50 @@ public class ChapterManager : MonoBehaviour
 
     public  GameObject ChapterPrefabObj;
     private TextAsset _localJson;
-    private int _numberOfChapter;
-    private AssetReference _jsonDataGroup;
+    private int _numberOfChapter;   
+    private DataBaseSO _dataBase;
     IList<ChapterRaw> _chapterGorup;
 
 
     private void Awake()
     {
-        _jsonDataGroup = Mbt.GetDesiredJSON(DataBase);
-        _jsonDataGroup.LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
-        DisableLoadingBar();
+        DataBase.LoadAssetAsync<DataBaseSO>().Completed += DataBaseLoaded;
+        
+        
     }
+
+    private void DataBaseLoaded(AsyncOperationHandle<DataBaseSO> obj)
+    {
+        _dataBase = obj.Result;
+        if (ES3.KeyExists("InitialTime"))
+        {
+            if (ES3.Load<bool>("InitialTime"))
+            {
+                _localJson = Mbt.GetDesiredJSONData(_dataBase);
+            }            
+        }
+        else
+        {
+            ES3.Save<bool>("InitialTime", true);
+            _localJson = Mbt.GetDesiredJSON(_dataBase);
+        }
+        
+        //_jsonDataGroup.LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
+        DisableLoadingBar();
+        ReadJSON();
+    }
+
+    void JsonLoaded(AsyncOperationHandle<TextAsset> obj)
+    {
+        if (obj.Status == AsyncOperationStatus.Succeeded)
+        {
+            _localJson = obj.Result;
+            ReadJSON();
+        }
+
+    }
+
+
 
     void DisableLoadingBar()
     {
@@ -45,18 +79,11 @@ public class ChapterManager : MonoBehaviour
             
     }
 
+   
+
+
+
   
-
-    void JsonLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        if (obj.Status == AsyncOperationStatus.Succeeded)
-        {
-            _localJson = obj.Result;
-            ReadJSON();
-
-        }
-        
-    }
 
  
 

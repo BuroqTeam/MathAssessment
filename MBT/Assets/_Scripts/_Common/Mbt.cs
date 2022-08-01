@@ -1,5 +1,4 @@
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -9,20 +8,21 @@ namespace MBT.Extension
     public static class Mbt
     {
 
-        public static AssetReference GetDesiredJSON(DataBaseSO dataBase)
+
+        public static TextAsset GetDesiredJSON(DataBaseSO dataBase)
         {
-            AssetReference textAsset = new AssetReference();
+            TextAsset textAsset = new TextAsset();
             dataBase.CreateDict();
             string currentLanguage = ES3.Load<string>("LanguageKey");
             int currentClass = ES3.Load<int>("ClassKey");
-            Dictionary<int, List<AssetReference>> JsonDictionary = new Dictionary<int, List<AssetReference>>();
+            Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
             JsonDictionary = dataBase.DataBase;
-            List<AssetReference> list = new List<AssetReference>();
+            List<TextAsset> list = new List<TextAsset>();
             if (JsonDictionary.TryGetValue(currentClass, out list))
             {
-                foreach (AssetReference txtAsset in list)
+                foreach (TextAsset txtAsset in list)
                 {
-                    if (txtAsset.editorAsset.name.Equals(currentLanguage))
+                    if (txtAsset.name.Equals(currentLanguage))
                     {
                         textAsset = txtAsset;
                     }
@@ -31,6 +31,26 @@ namespace MBT.Extension
             return textAsset;
         }
 
+        public static TextAsset GetDesiredJSONData(DataBaseSO dataBase)
+        {
+            TextAsset textAsset = new TextAsset();            
+            string currentLanguage = ES3.Load<string>("LanguageKey");
+            int currentClass = ES3.Load<int>("ClassKey");
+            Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
+            JsonDictionary = dataBase.DataBase;
+            List<TextAsset> list = new List<TextAsset>();
+            if (JsonDictionary.TryGetValue(currentClass, out list))
+            {
+                foreach (TextAsset txtAsset in list)
+                {
+                    if (txtAsset.name.Equals(currentLanguage))
+                    {
+                        textAsset = txtAsset;
+                    }
+                }
+            }
+            return textAsset;
+        }
 
 
 

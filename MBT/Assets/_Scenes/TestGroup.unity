@@ -578,37 +578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abf59c2733e7b94992152b0c3c673e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataBase:
+    m_AssetGUID: a910386fdd2bc514b86f0685f889595f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   ChapterName: {fileID: 71918641}
   ChapterDescription: {fileID: 1050400417}
-  JsonDataGroup:
-  - m_AssetGUID: 37a6776bf46905a478660bfa338f7d5a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 69b8456f5882c9642b754008144e1454
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 1ec811430a204ab438d234bf4740c87d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: f3f9961903c8b7e45b88291d3814a239
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: a67a93bcdbae0bf419a9494da2a6d99e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 3075d89d8e6057844a65a992ae6a78bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: c760bf24a1a08bf4a8806e47c826f77e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   GridLayout: {fileID: 6712500090136338409}
   ScrollRectObj: {fileID: 2289702973896475711}
   UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}

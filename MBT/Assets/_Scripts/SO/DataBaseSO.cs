@@ -6,16 +6,16 @@ using UnityEngine.AddressableAssets;
 [CreateAssetMenu(fileName = "DataBase", menuName = "ScriptableObjects/DataBase", order = 4)]
 public class DataBaseSO : ScriptableObject
 {
-    public List<AssetReference> Class5 = new List<AssetReference>();
-    public List<AssetReference> Class6 = new List<AssetReference>();
-    public List<AssetReference> Class7 = new List<AssetReference>();
-    public List<AssetReference> Class8 = new List<AssetReference>();
-    public List<AssetReference> Class9 = new List<AssetReference>();
-    public List<AssetReference> Class10 = new List<AssetReference>();
-    public List<AssetReference> Class11 = new List<AssetReference>();
+    public List<TextAsset> Class5 = new List<TextAsset>();
+    public List<TextAsset> Class6 = new List<TextAsset>();
+    public List<TextAsset> Class7 = new List<TextAsset>();
+    public List<TextAsset> Class8 = new List<TextAsset>();
+    public List<TextAsset> Class9 = new List<TextAsset>();
+    public List<TextAsset> Class10 = new List<TextAsset>();
+    public List<TextAsset> Class11 = new List<TextAsset>();
     
 
-    public Dictionary<int, List<AssetReference>> DataBase = new Dictionary<int, List<AssetReference>>();
+    public Dictionary<int, List<TextAsset>> DataBase = new Dictionary<int, List<TextAsset>>();
 
     public void CreateDict()
     {
