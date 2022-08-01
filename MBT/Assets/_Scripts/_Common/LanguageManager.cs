@@ -6,9 +6,23 @@ using I2.Loc;
 
 public class LanguageManager : MonoBehaviour
 {
-	void OnEnable()
-	{
-		
+
+    private void Awake()
+    {
+        string str = LocalizationManager.CurrentLanguage;
+        str = str.ToLower();
+        if (str.Length == 0)
+            Debug.Log("Empty String");
+        else if (str.Length == 1)
+            ES3.Save<string>("LanguageKey", char.ToUpper(str[0]).ToString());            
+        else
+            ES3.Save<string>("LanguageKey", char.ToUpper(str[0]) + str.Substring(1));
+       
+        
+    }
+
+    void OnEnable()
+	{		
 		var dropdown = GetComponent<TMP_Dropdown>();
 		if (dropdown == null)
 			return;
@@ -16,11 +30,6 @@ public class LanguageManager : MonoBehaviour
 		var currentLanguage = LocalizationManager.CurrentLanguage;
 		if (LocalizationManager.Sources.Count == 0) LocalizationManager.UpdateSources();
         var languages = LocalizationManager.GetAllLanguages();
-
-        //Fill the dropdown elements
-		
-        //dropdown.ClearOptions();
-        //dropdown.AddOptions(languages);
 
         dropdown.value = languages.IndexOf(currentLanguage);
         dropdown.onValueChanged.RemoveListener(OnValueChanged);
@@ -59,11 +68,8 @@ public class LanguageManager : MonoBehaviour
 		{
 			index = 0;
 			dropdown.value = index;
-		}
-	
-
-		LocalizationManager.CurrentLanguage = dropdown.options[index].text;
-		
+		}	
+		LocalizationManager.CurrentLanguage = dropdown.options[index].text;		
 	}
 
 
