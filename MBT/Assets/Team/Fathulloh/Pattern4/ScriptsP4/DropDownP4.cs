@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropDownP4 : MonoBehaviour
+public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 {
     public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/; 
 
     public TMP_Dropdown DropDownObj;
     public GameObject DropDownGameObject;
     public Sprite DropDownBlueSprite;
+    public Sprite SpriteCornerUp, SpriteCornerDown;
 
     public string currentText;
-    public UnityEvent ClickEvent;
+    //public UnityEvent ClickEvent;
 
 
     void Start()
     {
-        //DropDownObj.GetComponent<Dropdown>()
         PopulateList();
     }
         
@@ -27,9 +28,7 @@ public class DropDownP4 : MonoBehaviour
     void PopulateList()
     {
         StrList = new List<string>() { "Tanlang", ">", "<", "=" };
-        DropDownObj.AddOptions(StrList);
-        //DropDown.itemImage.sprite = DropDownSprite;
-        Debug.Log("------------");
+        DropDownObj.AddOptions(StrList);        
     }
 
     bool _IsFirstTime = true;
@@ -40,6 +39,8 @@ public class DropDownP4 : MonoBehaviour
         DropDownGameObject.GetComponent<Image>().sprite = DropDownBlueSprite;
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
+
+        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
 
         if (_IsFirstTime)        {
             _IsFirstTime = false;
@@ -53,25 +54,14 @@ public class DropDownP4 : MonoBehaviour
     public void DDOnValueChange()
     {
         Debug.Log("Drop Down On Value Change! ");
-
-        //DropDownObj.OnPointerClick();
+        
     }
 
 
-    void DropDownIsClicked()
+
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Drop down is clicked.");
+        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
+        //Debug.Log(888);
     }
-
-
-    public void OnPointerClick()
-    {
-
-    }
-
-
-
-
-
-
 }
