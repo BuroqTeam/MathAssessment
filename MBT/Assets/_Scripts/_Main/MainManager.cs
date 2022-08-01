@@ -1,10 +1,9 @@
 using Newtonsoft.Json;
 using System;
-using System.Reflection;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
+using MBT.Extension;
 
 public class MainManager : MonoBehaviour
 {
@@ -30,9 +29,11 @@ public class MainManager : MonoBehaviour
         EnableButtons();
     }
 
-    public void SetLanguageID(int index)
-    {        
-        ES3.Save("LanguageID", index);
+   
+
+    public void SetClassKey(int index)
+    {
+        ES3.Save<int>("ClassKey", index);
     }
 
     void EnableButtons()

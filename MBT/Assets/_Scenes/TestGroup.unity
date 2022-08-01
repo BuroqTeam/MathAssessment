@@ -578,37 +578,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abf59c2733e7b94992152b0c3c673e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DataBase:
+    m_AssetGUID: a910386fdd2bc514b86f0685f889595f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
   ChapterName: {fileID: 71918641}
   ChapterDescription: {fileID: 1050400417}
-  JsonDataGroup:
-  - m_AssetGUID: 37a6776bf46905a478660bfa338f7d5a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 69b8456f5882c9642b754008144e1454
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 1ec811430a204ab438d234bf4740c87d
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: f3f9961903c8b7e45b88291d3814a239
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: a67a93bcdbae0bf419a9494da2a6d99e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 3075d89d8e6057844a65a992ae6a78bc
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: c760bf24a1a08bf4a8806e47c826f77e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
   GridLayout: {fileID: 6712500090136338409}
   ScrollRectObj: {fileID: 2289702973896475711}
   UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}
@@ -838,6 +814,7 @@ GameObject:
   - component: {fileID: 1121223875}
   - component: {fileID: 1121223877}
   - component: {fileID: 1121223876}
+  - component: {fileID: 1121223878}
   m_Layer: 5
   m_Name: SliderRate
   m_TagString: Untagged
@@ -894,8 +871,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278239487
-  m_fontColor: {r: 1, g: 0.75294125, b: 0, a: 1}
+    rgba: 4290756545
+  m_fontColor: {r: 0.75686276, g: 0.7490196, b: 0.7490196, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -962,6 +939,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121223874}
   m_CullTransparentMesh: 1
+--- !u!114 &1121223878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121223874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fbfe31b9147a24b8550c9c4b6abe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue: {r: 1, g: 0.75294125, b: 0, a: 1}
+  grey: {r: 0.7568628, g: 0.7490196, b: 0.7490196, a: 1}
 --- !u!1 &1173087631
 GameObject:
   m_ObjectHideFlags: 0

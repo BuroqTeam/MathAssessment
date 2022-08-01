@@ -10,7 +10,7 @@ public class DropdownFeature : MonoBehaviour
     public int Numbers;
     public GameObject Label;
     public GameObject Arrow;
-
+    public Pattern_4 P4;
     private void Awake()
     {
         
@@ -23,9 +23,7 @@ public class DropdownFeature : MonoBehaviour
     {
         Label.GetComponent<TMP_Text>().enabled = true;
         Label.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
-        Arrow.GetComponent<Image>().tintColor = new Color(1, 1, 1, 1);
-        //Debug.Log(Label.GetComponent<TMP_Text>().color);
-        Debug.Log("DropDown");
+        P4.Populate();
     }
     public void ColorUpdate()
     {

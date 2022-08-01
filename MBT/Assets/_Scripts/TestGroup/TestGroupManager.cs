@@ -1,4 +1,6 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,10 +11,9 @@ using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
-
+    public AssetReference DataBase;
     public TMP_Text ChapterName;
-    public TMP_Text ChapterDescription;
-    public AssetReference[] JsonDataGroup;
+    public TMP_Text ChapterDescription;   
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
     public GameEvent UpdateEventSO;
@@ -24,17 +25,24 @@ public class TestGroupManager : MonoBehaviour
     public GameObject TestGroupObj;
     public TestGroupSO TestGroupSO;
 
-
+    private DataBaseSO _dataBase;
     private TextAsset _localJson;
     
    
-
 
     private void Awake()
     {
         ChapterName.text = TestGroupSO.Name;
         ChapterDescription.text = TestGroupSO.Description;
-        JsonDataGroup[ES3.Load<int>("LanguageID")].LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
+        DataBase.LoadAssetAsync<DataBaseSO>().Completed += DataBaseLoaded;
+        
+    }
+
+    private void DataBaseLoaded(AsyncOperationHandle<DataBaseSO> obj)
+    {
+        _dataBase = obj.Result;
+        _localJson = Mbt.GetDesiredJSONData(_dataBase);
+        ReadJSON();
         DisableLoadingBar();
     }
 
