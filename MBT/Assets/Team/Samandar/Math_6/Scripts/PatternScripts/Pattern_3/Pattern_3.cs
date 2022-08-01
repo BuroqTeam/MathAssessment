@@ -171,7 +171,7 @@ public class Pattern_3 : TestManager
                 {
 
                 }
-                //string mainString = MainList[j].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                string mainString = MainList[j].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
                 string jsonString = newList[j];
 
                 //if (mainString == jsonString)
