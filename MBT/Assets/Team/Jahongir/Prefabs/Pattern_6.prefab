@@ -135,6 +135,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683841632806278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +286,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683841663027605}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: InputAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -431,6 +455,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683841727641168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2407683841824365296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -585,8 +621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacb6a3de932d064daeb77425f3830f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonText: {fileID: 4900000, guid: cd5432687a8efcb4493f938a70555926, type: 3}
-  QuestionObj: {fileID: 0}
+  dataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  _currentJsonText: {fileID: 0}
 --- !u!1 &2407683841879518827
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +839,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683841890934424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,8 +975,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 596, y: 209}
-  m_SizeDelta: {x: 1217.16, y: 144.73}
+  m_AnchoredPosition: {x: 596, y: 215}
+  m_SizeDelta: {x: 1217.16, y: 88.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2407683842193275599
 CanvasRenderer:
@@ -959,8 +1007,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Alignment: {x: 0, y: 0.5}
-  m_Text: "2 \xD7 (13 \xD7 14 + 14 \xD7 26 + 13 \xD7 26) = "
-  m_Size: 50
+  m_Text: 
+  m_Size: 70
   m_ScrollArea:
     serializedVersion: 2
     x: 0
@@ -972,7 +1020,7 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5
 --- !u!1 &2407683842223629635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1147,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683842223629637}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: InputAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1337,6 +1397,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683842330748319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,6 +1557,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683842515876297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,6 +1708,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683842602545375}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: InputAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1862,6 +1958,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683842785544073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,6 +2190,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683842829003815}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: DeleteAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2320,6 +2440,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2407683842922858586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,6 +2591,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683842933346917}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: InputAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2769,6 +2913,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2407683843139145819}
         m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
         m_MethodName: InputAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2407683841824365297}
+        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
+        m_MethodName: Result
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
