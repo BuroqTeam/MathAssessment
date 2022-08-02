@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ChapterManager : MonoBehaviour
 {
 
-    public DataBaseSO JsonCollection;
+    public DataBaseSO JsonCollectionSO;
 
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
@@ -28,8 +28,8 @@ public class ChapterManager : MonoBehaviour
 
     private void Awake()
     {
-        _curentJson = GetDesiredJSONData(JsonCollection);
-        JsonCollection.DataBase.Clear();
+        _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        JsonCollectionSO.DataBase.Clear();
         ReadJSON();
     }
 
@@ -63,26 +63,7 @@ public class ChapterManager : MonoBehaviour
         }
     }
 
-    TextAsset GetDesiredJSONData(DataBaseSO dataBase)
-    {
-        TextAsset textAsset = new TextAsset();
-        dataBase.CreateDict();
-        string currentLanguage = ES3.Load<string>("LanguageKey");
-        int currentClass = ES3.Load<int>("ClassKey");        
-        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>(dataBase.DataBase);        
-        List<TextAsset> list = new List<TextAsset>();
-        if (JsonDictionary.TryGetValue(currentClass, out list))
-        {
-            foreach (TextAsset txtAsset in list)
-            {
-                if (txtAsset.name.Equals(currentLanguage))
-                {
-                    textAsset = txtAsset;
-                }
-            }
-        }
-        return textAsset;
-    }
+   
 
 
     void CreateChapters()

@@ -18,6 +18,11 @@ public class SceneManager : MonoBehaviour
         Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
     }
 
+
+    public void LoadMainScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+    }
     private void SceneLoaded(AsyncOperationHandle<SceneInstance> obj)
     {
 
