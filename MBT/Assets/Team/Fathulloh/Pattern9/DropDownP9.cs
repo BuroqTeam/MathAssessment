@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropDownP4 : MonoBehaviour, IPointerClickHandler
+public class DropDownP9 : MonoBehaviour, IPointerClickHandler
 {
-    public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/; 
+    public string strLoc;
+
+    public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/;
 
     public TMP_Dropdown DropDownObj;
     public GameObject DropDownGameObject;
@@ -18,17 +19,15 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
     public string CorrectAnswer;        // boshqa skriptdan buyerga to'g'ri javobni berib olamiz.
     public string CurrentAnswer;
 
-
     void Start()
     {
         PopulateList();
     }
-        
 
     void PopulateList()
     {
-        StrList = new List<string>() { "Tanlang", ">", "<", "=" };
-        DropDownObj.AddOptions(StrList);        
+        StrList = new List<string>() { strLoc, "Tanlang1", ">", "<", "=" };
+        DropDownObj.AddOptions(StrList);
     }
 
     bool _IsFirstTime = true;
@@ -42,10 +41,11 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
 
-        if (_IsFirstTime)        {
+        if (_IsFirstTime)
+        {
             _IsFirstTime = false;
             DropDownObj.ClearOptions();
-            StrList = new List<string>() {">", "<", "=" };
+            StrList = new List<string>() { ">", "<", "=" };
             DropDownObj.AddOptions(StrList);
         }
 
@@ -55,19 +55,15 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 
     void CheckingAnswer()
     {
-        if (CurrentAnswer == CorrectAnswer)        {
+        if (CurrentAnswer == CorrectAnswer)
+        {
             Debug.Log("To'g'ri javob tanlandi.");
         }
-        else if (CurrentAnswer != CorrectAnswer)       {
+        else if (CurrentAnswer != CorrectAnswer)
+        {
             Debug.Log("Noto'g'ri javob tanlandi.");
         }
     }
-
-
-    //public void DDOnValueChange()
-    //{
-    //    Debug.Log("Drop Down On Value Change! ");        
-    //}
 
 
     public void OnPointerClick(PointerEventData eventData)
@@ -75,4 +71,5 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
         //Debug.Log(888);
     }
+
 }
