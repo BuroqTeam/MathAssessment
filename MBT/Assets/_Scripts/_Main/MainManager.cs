@@ -33,7 +33,7 @@ public class MainManager : MonoBehaviour
     public void SetClassKey(int index)
     {
         ES3.Save<int>("ClassKey", index);
-        GetComponent<SceneManager>().LoadLocalScene("Chapters");
+        GetComponent<SceneManager>().LoadLocalScene();
     }
 
     void EnableButtons()
