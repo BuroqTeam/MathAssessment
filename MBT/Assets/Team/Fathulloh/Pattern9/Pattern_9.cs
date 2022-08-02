@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Pattern_9 : MonoBehaviour
@@ -13,6 +14,11 @@ public class Pattern_9 : MonoBehaviour
 
     Data_9 Pattern_9Obj = new Data_9();
 
+
+    public List<GameObject> ComparisonObjects;
+
+    public TMP_Text TextForTranslating;
+    
 
 
     private void Awake()
@@ -40,11 +46,20 @@ public class Pattern_9 : MonoBehaviour
 
     void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //
+        //int statementCount = Pattern_9Obj.options.Count;
 
-        int statementCount = Pattern_9Obj.options.Count;
+        for (int i = 0; i < Pattern_9Obj.options.Count; i++)
+        {
+            GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
+            Vector3 oldPos = obj.transform.localPosition;
+            obj.transform.GetChild(1).GetComponent<DropDownP9>().TextForTranslating = TextForTranslating.text;
+            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y * (i + 1) - 30 * i, oldPos.z) ;
+            Debug.Log(new Vector3(oldPos.x, oldPos.y * (-i - 1) - 30 * i, oldPos.z));
+            ComparisonObjects.Add(obj);
+        }
 
-
+        Debug.Log(" TextForTranslating = " + TextForTranslating.text);
     }
 
 
