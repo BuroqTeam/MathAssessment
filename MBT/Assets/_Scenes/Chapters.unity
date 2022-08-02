@@ -185,10 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5620f04d7fefd3445a88f5b533228a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  JsonCollectionSO: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   GridLayout: {fileID: 4819203435645070525}
   ScrollRectObj: {fileID: 1659680619}
-  UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}
   ChapterGorup: []
   ChapterPrefab: {fileID: 8267410294984318487, guid: 5e6b95eae22598b4b9616fa660f3071d, type: 3}
 --- !u!1 &519420028
@@ -578,10 +577,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 354233175}
-    - target: {fileID: 2226981231323403883, guid: e27889518a45a684280d007b548d262d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLocalScene
-      objectReference: {fileID: 0}
     - target: {fileID: 2289702973918360824, guid: e27889518a45a684280d007b548d262d, type: 3}
       propertyPath: m_Name
       value: ChaptersPanel
