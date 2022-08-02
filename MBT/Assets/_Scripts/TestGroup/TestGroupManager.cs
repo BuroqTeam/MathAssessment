@@ -1,84 +1,49 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
-    public AssetReference DataBase;
-    public TMP_Text ChapterName;
-    public TMP_Text ChapterDescription;   
+    public DataBaseSO JsonCollectionSO;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
-    public GameEvent UpdateEventSO;
-    public GameObject UpdatePanel;
+
+    public TMP_Text ChapterName;
+    public TMP_Text ChapterDescription;   
+    
+  
 
     //[HideInInspector]
     public List<TestGroup> TestGroupPrefabGorup = new List<TestGroup>();
 
     public GameObject TestGroupObj;
     public TestGroupSO TestGroupSO;
-
-    private DataBaseSO _dataBase;
-    private TextAsset _localJson;
+    private TextAsset _curentJson;
     
-   
+
 
     private void Awake()
     {
         ChapterName.text = TestGroupSO.Name;
         ChapterDescription.text = TestGroupSO.Description;
-        DataBase.LoadAssetAsync<DataBaseSO>().Completed += DataBaseLoaded;
-        
-    }
-
-    private void DataBaseLoaded(AsyncOperationHandle<DataBaseSO> obj)
-    {
-        _dataBase = obj.Result;
-        _localJson = Mbt.GetDesiredJSONData(_dataBase);
+        Debug.Log(TestGroupSO.Description);
+        _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        JsonCollectionSO.DataBase.Clear();
         ReadJSON();
-        DisableLoadingBar();
+      
     }
 
-    void DisableLoadingBar()
-    {
-        if (ES3.KeyExists("IsInitialLoadTestGroup"))
-        {
-            if (ES3.Load<bool>("IsInitialLoadTestGroup"))
-            {
-                UpdatePanel.SetActive(false);
-            }
-        }
-
-    }
-
-
-
-    void JsonLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        if (obj.Status == AsyncOperationStatus.Succeeded)
-        {
-            _localJson = obj.Result;
-            ReadJSON();
-        }
-
-    }
 
    
-
     void ReadJSON()
     {
-        var jo = JObject.Parse(_localJson.text);
-        JArray testGroup = (JArray)jo["chapters"];
-        //_numberOfTestGroup = testGroup.Count;
-        //_testGroup = testGroup.ToObject<IList<TestGroupRaw>>();
-        CreateChapters();
+        var jo = JObject.Parse(_curentJson.text);
+        JArray testGroup = (JArray)jo["chapters"];       
+        CreateTestGroup();
         SetScrollRect();
     }
 
@@ -103,7 +68,7 @@ public class TestGroupManager : MonoBehaviour
 
 
 
-    void CreateChapters()
+    void CreateTestGroup()
     {
         if (TestGroupSO.NumberOfTestGroup > 0)
         {
@@ -121,9 +86,7 @@ public class TestGroupManager : MonoBehaviour
     }
 
     IEnumerator DisplayTestGroup()
-    {
-        ES3.Save("IsInitialLoadTestGroup", true);
-        yield return new WaitForSeconds(0.1f);
+    {        
         GridLayout.gameObject.SetActive(true);
         int k = 1;
         foreach (TestGroup item in TestGroupPrefabGorup)
@@ -135,6 +98,7 @@ public class TestGroupManager : MonoBehaviour
         {
             item.UpdateInfo();
         }
-        UpdateEventSO.Raise();
+        yield return new WaitForSeconds(0.1f);
+
     }
 }
