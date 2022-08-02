@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DropDownP9 : MonoBehaviour, IPointerClickHandler
 {
-    public string strLoc;
+    public string TextForTranslating;
 
     public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/;
 
@@ -19,6 +19,7 @@ public class DropDownP9 : MonoBehaviour, IPointerClickHandler
     public string CorrectAnswer;        // boshqa skriptdan buyerga to'g'ri javobni berib olamiz.
     public string CurrentAnswer;
 
+
     void Start()
     {
         PopulateList();
@@ -26,7 +27,7 @@ public class DropDownP9 : MonoBehaviour, IPointerClickHandler
 
     void PopulateList()
     {
-        StrList = new List<string>() { strLoc, "Tanlang1", ">", "<", "=" };
+        StrList = new List<string>() { TextForTranslating, ">", "<", "=" };
         DropDownObj.AddOptions(StrList);
     }
 
