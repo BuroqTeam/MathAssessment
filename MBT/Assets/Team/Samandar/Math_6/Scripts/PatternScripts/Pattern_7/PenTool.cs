@@ -27,7 +27,7 @@ public class PenTool : MonoBehaviour
             managerPattern7.False();
         }
         GameObject dot = Instantiate(Point, GetMousePosition(), Quaternion.identity, dotParent);
-        dot.transform.localPosition = new Vector3(dot.transform.localPosition.x, dot.transform.localPosition.y, dot.transform.localPosition.z);  
+        dot.transform.localPosition = new Vector3(dot.transform.localPosition.x, dot.transform.localPosition.y, 0);  
         pointsPattern7.Check();
         currentLine.AddPoint(dot.transform);
     }

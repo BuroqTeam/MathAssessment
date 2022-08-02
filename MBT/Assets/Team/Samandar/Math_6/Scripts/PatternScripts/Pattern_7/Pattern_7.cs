@@ -14,6 +14,7 @@ public class Pattern_7 : MonoBehaviour
     public GameObject LineParent;
     public GameObject DotParent;
     public GameObject Cell;
+    public GameObject CellParent;
     public Transform Camera;
     float percentage;
     public List<CellPattern_7> CellGroup = new List<CellPattern_7>();
@@ -78,6 +79,8 @@ public class Pattern_7 : MonoBehaviour
             {
                 var SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
                 CellGroup.Add(SpawnedCell.GetComponent<CellPattern_7>());
+                //GameObject CellList = Instantiate(Cell, CellParent.transform);
+                //var SpawnedCell = Instantiate(CellList, new Vector3(i, j), Quaternion.identity);
             }
         }
         Camera.transform.localPosition = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, transform.localPosition.z);
