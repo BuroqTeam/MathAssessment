@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2022-07-28 15:37:39",
+    "date": "2022-08-02 10:41:17",
     "grade": 6,
     "subject": "math",
     "language": "uz"
@@ -9,7 +9,7 @@
     {
       "number": 0,
       "name": "Takrorlash",
-      "title":  "5-sinfda o'tilganlarni takrorlash",
+      "description": "5-SINFDA O\u02bbTILGANLARNI TAKRORLASH",
       "questions": [
         {
           "id": "math-uz-6-0-1-1",
@@ -2108,6 +2108,146 @@
           }
         },
         {
+          "id": "math-uz-6-0-1-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "9 ga bo\u2018linadigan sonlar 3 ga ham bo\u2018linadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-2-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "3 ga bo\u2018linadigan sonlar 2 ga ham bo\u2018linadi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-3-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Parallelpipedning hajmi : V = abc"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-4-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kubning hajmi : V = a^2"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-5-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "To\u2018g\u2018ri to\u2018rtburchak yuzi : S = (a \u00d7 b)/2"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-6-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kubning yuzi : S = 6a^2"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-7-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kvadrat perimetr: P = 4 \u00d7 a \u00d7 b"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-8-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kubning hajmi : V = a^3"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-9-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "To\u2018g\u2018ri to\u2018rtburchak yuzi : S = a \u00d7 b"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-0-10-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ikki toq sonning ko\u2018paytmasi \u2013 toq"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-0-1-16",
           "pattern": 16,
           "question": {
@@ -2262,18 +2402,14 @@
     {
       "number": 1,
       "name": "1-bob",
+      "description": "KASRLARNI QO\u02bbSHISH VA AYIRISH",
       "questions": [
         {
           "id": "math-uz-6-1-11-1",
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{1}{2} ga teng.",
-            "options": [
-              "[*]\\frac{2}{4}",
-              "\\frac{3}{5}",
-              "\\frac{1}{3}",
-              "\\frac{4}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -2281,12 +2417,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{2}{3} ga teng.",
-            "options": [
-              "[*]\\frac{6}{9}",
-              "\\frac{6}{7}",
-              "\\frac{4}{5}",
-              "\\frac{1}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -2294,12 +2425,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{3}{4} ga teng.",
-            "options": [
-              "[*]\\frac{12}{20}",
-              "\\frac{3}{8}",
-              "\\frac{1}{3}",
-              "\\frac{2}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -2307,12 +2433,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{2}{5} ga teng.",
-            "options": [
-              "[*]\\frac{4}{10}",
-              "\\frac{6}{7}",
-              "\\frac{1}{3}",
-              "\\frac{4}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -2320,12 +2441,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{3}{5} ga teng.",
-            "options": [
-              "[*]\\frac{15}{25}",
-              "\\frac{1}{2}",
-              "\\frac{1}{3}",
-              "\\frac{4}{8}"
-            ]
+            "options": []
           }
         },
         {
@@ -2333,12 +2449,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{1}{11} ga teng.",
-            "options": [
-              "[*]\\frac{2}{22}",
-              "\\frac{6}{15}",
-              "\\frac{1}{2}",
-              "\\frac{1}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -2346,12 +2457,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{3}{10} ga teng.",
-            "options": [
-              "[*]\\frac{15}{50}",
-              "\\frac{3}{7}",
-              "\\frac{4}{15}",
-              "\\frac{1}{2}"
-            ]
+            "options": []
           }
         },
         {
@@ -2359,12 +2465,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati 5:7\\frac{5}{7} ga teng.",
-            "options": [
-              "[*]\\frac{10}{14}",
-              "\\frac{6}{7}",
-              "\\frac{1}{3}",
-              "\\frac{4}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -2372,12 +2473,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{6}{7} ga teng.",
-            "options": [
-              "[*]\\frac{18}{21}",
-              "\\frac{4}{6}",
-              "\\frac{12}{15}",
-              "\\frac{18}{23}"
-            ]
+            "options": []
           }
         },
         {
@@ -2385,12 +2481,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi kasr nisbati \\frac{5}{9} ga teng.",
-            "options": [
-              "[*]\\frac{15}{27}",
-              "\\frac{15}{30}",
-              "\\frac{4}{5}",
-              "\\frac{10}{20}"
-            ]
+            "options": []
           }
         },
         {
@@ -3914,6 +4005,148 @@
           }
         },
         {
+          "id": "math-uz-6-1-11-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Berilgan kasrning surati va maxraji ayni bir natural songa ko\u02bbpaytirilsa",
+              "berilgan kasrning qiymati o\u02bbzgarmaydi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-12-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrning surat va maxrajini 1 dan farqli umumiy bo\u02bbluvchiga bo\u02bblish kasrni qisqartirish deyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-13-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ikkita o\u02bbzaro tub sonning eng kichik umumiy karralisi shu sonlarning ko\u02bbpaytmasiga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-14-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrlarning maxrajlari o\u02bbzaro tub sonlar bo\u02bblsa",
+              "ularning ko\u02bbpaytmasi umumiy maxraj bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-15-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Agar kasrlarning surati teng bo\u02bblsa maxraji katta kasr katta bo\u02bbladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-16-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Agar kasrlarning maxraji teng bo\u02bblsa surati katta bo\u02bblgan kasr katta bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-17-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Har xil maxrajli kasrlarni qo\u02bbshish uchun ularni avval umumiy maxrajga keltirish kerak"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-18-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrning surati maxrajidan katta bo\u02bblsa bunday kasr noto\u02bbg\u02bbri kasr bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-19-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasr songa butun son qo\u02bbshilsa noto\u02bbg\u02bbri kasr hosil bo\u02bbladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-1-20-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasr songa butun sonni qo\u02bbshsa aralash son hosil bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-1-11-16",
           "pattern": 16,
           "question": {
@@ -4068,18 +4301,14 @@
     {
       "number": 2,
       "name": "2-bob",
+      "description": "KASRLARNI KO\u02bbPAYTIRISH VA BO\u02bbLISH",
       "questions": [
         {
           "id": "math-uz-6-2-21-1",
           "pattern": 1,
           "question": {
             "title": "Qaysi son \\frac{3}{8} ga teskari son?",
-            "options": [
-              "[*]\\frac{8}{3}",
-              "\\frac{1}{8}",
-              "8",
-              "\\frac{-3}{8}"
-            ]
+            "options": []
           }
         },
         {
@@ -4087,12 +4316,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son \\frac{4}{15} ga teskari son?",
-            "options": [
-              "[*]\\frac{15}{4}",
-              "15",
-              "-\\frac{15}{4}",
-              "-\\frac{4}{15}"
-            ]
+            "options": []
           }
         },
         {
@@ -4100,12 +4324,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 1\\frac{2}{3} ga teskari son?",
-            "options": [
-              "[*]\\frac{3}{5}",
-              "\\frac{5}{3}",
-              "1\\frac{3}{2}",
-              "-\\frac{3}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -4113,12 +4332,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 2\\frac{5}{6} ga teskari son?",
-            "options": [
-              "[*]frac{6}{17}",
-              "2\\frac{6}{5}",
-              "\\frac{6}{5}",
-              "\\frac{17}{6}"
-            ]
+            "options": []
           }
         },
         {
@@ -4126,12 +4340,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 7 ga teskari son?",
-            "options": [
-              "[*]\\frac{1}{7}",
-              "-7",
-              "-\\frac{1}{7}",
-              "7\\frac{1}{1}"
-            ]
+            "options": []
           }
         },
         {
@@ -4139,12 +4348,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son \\frac{1}{50} ga teskari son?",
-            "options": [
-              "[*]50",
-              "-50",
-              "-\\frac{1}{50}",
-              "\\frac{1}{50}"
-            ]
+            "options": []
           }
         },
         {
@@ -4152,12 +4356,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 2\\frag{3}{5}+3\\frac{4}{5} ga teskari son?",
-            "options": [
-              "[*]\\frac{5}{32}",
-              "5",
-              "\\frac{32}{5}",
-              "{5}{7}"
-            ]
+            "options": []
           }
         },
         {
@@ -4165,11 +4364,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 8\\frac{7}{10}-5\\frac{5}{10} ga teskari son?",
-            "options": [
-              "[*]\\frac{5}{16}",
-              "3\\frac{10}{2}",
-              "5\\frac{16}{5}\""
-            ]
+            "options": []
           }
         },
         {
@@ -4177,11 +4372,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son 2\\frac{1}{4}*3\\frac{1}{90}ga teskari son?",
-            "options": [
-              "[*]\\frac{1}{7}",
-              "36",
-              "7\\frac{1}{36}\""
-            ]
+            "options": []
           }
         },
         {
@@ -4189,12 +4380,7 @@
           "pattern": 1,
           "question": {
             "title": "Qaysi son \\frac{11}{34}+\\frac{15}{17} ga teskari son?",
-            "options": [
-              "[*]\\frac{34}{41}",
-              "\\frac{41}{34}",
-              "\\frac{34}{11}",
-              "\\frac{17}{15}"
-            ]
+            "options": []
           }
         },
         {
@@ -4378,7 +4564,7 @@
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
             "problem": [
-              "1\\frac{1}{2}",
+              "1\\frac{1}{2}\"",
               "2\\frac{1}{3}",
               "2\\frac{2}{5}",
               "2\\frac{2}{9}"
@@ -4402,12 +4588,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "3\\frac{3}{4}",
-              "3\\frac{1}{8}",
-              "3\\frac{15}{40}",
-              "3\\frac{3}{20}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "3\\frac{1}{8}",
@@ -4427,12 +4608,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "4\\frac{3}{25}",
-              "4\\frac{17}{50}",
-              "4\\frac{1}{20}",
-              "4\\frac{23}{100}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "4\\frac{3}{25}",
@@ -4453,7 +4629,7 @@
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
             "problem": [
-              "1\\frac{3}{4}",
+              "1\\frac{3}{4}\"",
               "1\\frac{1}{3}",
               "1\\frac{2}{6}",
               "\\frac{24}{12}"
@@ -4477,12 +4653,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "2\\frac{3}{4}",
-              "3\\frac{1}{3}",
-              "3\\frac{1}{6}",
-              "\\frac{24}{12}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "2\\frac{3}{4}",
@@ -4497,12 +4668,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "7\\frac{9}{4}",
-              "8\\frac{5}{3}",
-              "9\\frac{1}{2}",
-              "6\\frac{2}{1}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "6\\frac{2}{1}",
@@ -4517,12 +4683,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "\\frac{4}{7}",
-              "\\frac{7}{4}",
-              "\\frac{9}{13}",
-              "\\frac{13}{9}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "\\frac{4}{7}",
@@ -4537,12 +4698,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "4",
-              "\\frac{17}{4}",
-              "\\frac{29}{7}",
-              "\\frac{33}{8}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "4",
@@ -4557,12 +4713,7 @@
           "pattern": 3,
           "question": {
             "title": "\nEng kichik kasrni hosil qilish uchun har bir bo\u2019sh katakka bittadan kasr joylashtiring",
-            "problem": [
-              "0\\frac{44}{7}",
-              "1\\frac{17}{5}",
-              "2\\frac{11}{3}",
-              "3\\frac{33}{9}"
-            ],
+            "problem": [],
             "solution": [
               [
                 "1\\frac{17}{5}",
@@ -5613,6 +5764,146 @@
           }
         },
         {
+          "id": "math-uz-6-2-21-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrlarni ko\u02bbpaytirish uchun ularning suratini maxrajga, maxrajini suratga ko\u02bbpaytiriladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-22-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Sonni kasrga ko\u2019paytirishda bu sonni kasrning maxrajiga ko\u2019paytiriladi, surat o\u2019zgarmay qoladi."
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-23-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Aralash sonlarni ko\u2019paytirish uchun ular noto\u2019g\u2019ri kasrga aylantiriladi va kasrlar ko\u2019paytiriladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-24-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Sonning berilgan qismini topish uchun shu sonni uning qismini ifodalovchi kasrga ko\u2019paytirish kerak"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-25-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "O\u02bbzaro teskari sonlarning ko\u02bbpaytmasi -1 ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-26-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrlarni bo\u2019lish uchun ikkinchi kasrni (bo\u2019luvchi) teskari kasrga aylantirib, kasrlar ko\u2019paytiriladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-27-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Qismiga ko\u2019ra sonni topish uchun, berilgan sonni qismni ifodalovchi kasrga bo\u2019linadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-28-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Aralash sonni kasrga bo\u2019lish uchun aralash son noto\u2019g\u2019ri kasrga keltirilib, ikkinchi kasrni (bo\u2019luvchi) teskari kasrga aylantirib, kasrlar ko\u2019paytiriladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-29-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Quyidagi xossa taqsimot xossasi deyiladi. (a \u00d7 b) \u00d7 c = a \u00d7 (b \u00d7 c)"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-2-30-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Quyidagi xossa o\u2019rin almashtirish xossasi deyiladi. (a + b) \u00d7 c = a \u00d7 c + b \u00d7 c"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-2-21-16",
           "pattern": 16,
           "question": {
@@ -5767,6 +6058,7 @@
     {
       "number": 3,
       "name": "3-bob",
+      "description": "O\u02bbNLI KASRLARNI KO\u02bbPAYTIRISH VA BO\u02bbLISH",
       "questions": [
         {
           "id": "math-uz-6-3-31-1",
@@ -7797,24 +8089,170 @@
               "[d]700,002 kg"
             ]
           }
+        },
+        {
+          "id": "math-uz-6-3-31-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "8",
+              "525 ni eng yaqin butun songacha yaxlitlaganda 9 ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-32-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "8",
+              "525 ni eng yaqin o\u02bbndan bir qismiga yaxlitlaganda 8.5 ga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-33-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "5",
+              "385 o\u02bbndan biriga yaxlitlanganda 5.3 ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-34-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "17",
+              "783 ni yuzdan birga yaxlitlaganda 17.78  ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-35-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "6",
+              "658 o\u02bbndan bir qismiga yaxlitlanganda 6.7 ga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-36-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "4",
+              "106 yuzdan birgacha yaxlitlanganda 4.10 ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-37-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "73",
+              "237 ni eng yaqin butun songacha yaxlitlaganda 73 ga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-38-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "7",
+              "475 o\u02bbndan biriga yaxlitlanganda 7.5 ga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-39-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "96",
+              "873 o\u02bbndan bir qismiga yaxlitlanganda 96.8 ga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-3-40-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "745",
+              "86 o\u02bbndan bir qismiga yaxlitlanganda 745.9 ga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
         }
       ]
     },
     {
       "number": 4,
       "name": "4-bob",
+      "description": "BUTUN SONLAR",
       "questions": [
         {
           "id": "math-uz-6-4-41-1",
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-8, 8",
-              "7, 17",
-              "4, -14",
-              "6, 65"
-            ]
+            "options": []
           }
         },
         {
@@ -7822,12 +8260,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]12, -12",
-              "-28, -18",
-              "4, -14",
-              "27, 43"
-            ]
+            "options": []
           }
         },
         {
@@ -7835,12 +8268,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-31, 31",
-              "46, 57",
-              "-25, 98",
-              "-57, -58"
-            ]
+            "options": []
           }
         },
         {
@@ -7848,12 +8276,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]65, -65",
-              "12, -13",
-              "14, 15",
-              "-57, -74"
-            ]
+            "options": []
           }
         },
         {
@@ -7861,12 +8284,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]57, -57",
-              "45, 46",
-              "-63, 64",
-              "-27, -59"
-            ]
+            "options": []
           }
         },
         {
@@ -7874,12 +8292,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-67, 67",
-              "45, 89",
-              "8, -17",
-              "-5, -7"
-            ]
+            "options": []
           }
         },
         {
@@ -7887,12 +8300,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-35, 35",
-              "17, 107",
-              "-25, -58",
-              "12, 49"
-            ]
+            "options": []
           }
         },
         {
@@ -7900,12 +8308,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-80, 80",
-              "-34, -35",
-              "45, 90",
-              "10, 20"
-            ]
+            "options": []
           }
         },
         {
@@ -7913,12 +8316,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]-9, 9",
-              "-11, 12",
-              "14, 16",
-              "-49, -59"
-            ]
+            "options": []
           }
         },
         {
@@ -7926,12 +8324,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbzaro qarama qarshi sonlar yozilgan javobni toping?",
-            "options": [
-              "[*]21, -21",
-              "18, -19",
-              "36, -75",
-              "-74, 92"
-            ]
+            "options": []
           }
         },
         {
@@ -9473,12 +9866,155 @@
               "[d]123"
             ]
           }
+        },
+        {
+          "id": "math-uz-6-4-41-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Qarama qarshi sonlarning modullari o\u02bbzaro teng bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-42-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "0 musbat ham manfiy ham emas"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-43-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Musbat sonlar",
+              "manfiy sonlar va nol birgalikda butun sonlarni tashkil etadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-44-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Butun sonlarni taqqoslashda kordinata o\u02bbqida o\u02bbngda joylashgan son chapda joylashgan sondan katta bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-45-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Manfiy sonni manfiy songa ko\u02bbpaytirsak javob manfiy son bo\u02bbladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-46-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Bir xil ishorali sonlarni qo\u02bbshishda ularning modullari qo\u02bbshiladi va yig\u02bbindining oldiga  sonlar manfiy bo\u2019lsa \u201c-\u201d",
+              "musbat bo\u02bblsa \u201c+\u201d ishorasi qo\u02bbyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-47-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Musbat sonni musbat songa ko\u02bbpaytirsak natija ham musbat son chiqadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-48-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Manfiy va musbat sonlarni  ko\u02bbpaytirsak natija manfiy son chiqadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-49-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Manfiy sonni manfiy songa bo\u02bblsak javob musbat son bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-50-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Manfiy sonni musbat songa bo\u02bblsak javob manfiy son bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
         }
       ]
     },
     {
       "number": 5,
       "name": "5-bob",
+      "description": "RATSIONAL SONLAR",
       "questions": [
         {
           "id": "math-uz-6-5-51-1",
@@ -9486,7 +10022,7 @@
           "question": {
             "title": "Ratsional sonni toping?",
             "options": [
-              "[*]0",
+              "[*]0\"",
               "\\frac{2}{4}",
               "\\frac{2}{12}",
               "\\frac{3}{6}"
@@ -9498,12 +10034,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]-1",
-              "\\frac{6}{8}",
-              "\\frac{5}{20}",
-              "2\\frac{7}{14}"
-            ]
+            "options": []
           }
         },
         {
@@ -9511,12 +10042,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[]\\frac{1}{2}",
-              "1\\frac{6}{8}",
-              "\\frac{6}{3}",
-              "\\frac{6}{2"
-            ]
+            "options": []
           }
         },
         {
@@ -9524,12 +10050,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]1",
-              "\\frac{26}{18}",
-              "\\frac{8}{2}",
-              "\\frac{6}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -9537,12 +10058,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]-\\frac{1}{2}",
-              "\\frac{26}{13}",
-              "\\frac{36}{12}",
-              "\\frac{2}{2}"
-            ]
+            "options": []
           }
         },
         {
@@ -9551,7 +10067,7 @@
           "question": {
             "title": "Ratsional sonni toping?",
             "options": [
-              "[*]2",
+              "[*]2\"",
               "\\frac{18}{12}",
               "\\frac{27}{18}",
               "\\frac{9}{6}"
@@ -9563,12 +10079,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]-2",
-              "\\frac{8}{12}",
-              "\\frac{7}{21}",
-              "\\frac{11}{33}"
-            ]
+            "options": []
           }
         },
         {
@@ -9576,12 +10087,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]-7",
-              "\\frac{13}{26}",
-              "\\frac{12}{48}",
-              "\\frac{14}{28}"
-            ]
+            "options": []
           }
         },
         {
@@ -9589,12 +10095,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]\\frac{5}{1}",
-              "\\frac{3}{9}",
-              "\\frac{14}{2}",
-              "\\frac{15}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -9602,12 +10103,7 @@
           "pattern": 1,
           "question": {
             "title": "Ratsional sonni toping?",
-            "options": [
-              "[*]\\frac{5}{3}",
-              "\\frac{5}{15}",
-              "\\frac{2}{6}",
-              "\\frac{4}{2}"
-            ]
+            "options": []
           }
         },
         {
@@ -9765,12 +10261,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "1",
-              "2",
-              "3",
-              "-1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "-1",
@@ -9790,12 +10281,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "2",
-              "4",
-              "-2",
-              "-1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "-2",
@@ -9815,12 +10301,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "-1",
-              "-2",
-              "-4",
-              "-6"
-            ],
+            "problem": [],
             "solution": [
               [
                 "-1",
@@ -9840,12 +10321,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "-2",
-              "-4",
-              "-5",
-              "3"
-            ],
+            "problem": [],
             "solution": [
               [
                 "-5",
@@ -9865,12 +10341,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "-3",
-              "3",
-              "5",
-              "-2"
-            ],
+            "problem": [],
             "solution": [
               [
                 "5",
@@ -9890,12 +10361,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "2",
-              "4",
-              "7",
-              "-1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "7",
@@ -9910,12 +10376,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "-3",
-              "-2",
-              "5",
-              "3"
-            ],
+            "problem": [],
             "solution": [
               [
                 "5",
@@ -9930,12 +10391,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "-3",
-              "-8",
-              "7",
-              "6"
-            ],
+            "problem": [],
             "solution": [
               [
                 "7",
@@ -9950,12 +10406,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "4",
-              "-9",
-              "-2",
-              "-1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "4",
@@ -9970,12 +10421,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik ratsional sonni hosil qilish uchun har bir bo\u2018sh \nkatakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "0",
-              "-1",
-              "-2",
-              "1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "-2",
@@ -10450,12 +10896,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]\\frac{7}{8}",
-              "[b]1",
-              "[c]\\frac{15}{8}",
-              "[d]\\frac{17}{8}"
-            ]
+            "options": []
           }
         },
         {
@@ -10463,7 +10904,12 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": []
+            "options": [
+              "[d]\\frac{17}{2}\"",
+              "[c]8",
+              "[b]\\frac{63}{8}",
+              "[a]\\frac{8}{3}\""
+            ]
           }
         },
         {
@@ -10471,12 +10917,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]\\frac{27}{5}",
-              "[b]5",
-              "[d]\\frac{25}{3}",
-              "[a]\\frac{17}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -10484,12 +10925,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]\\frac{1}{5}",
-              "[a]0",
-              "[c]\\frac{1}{3}",
-              "[d]\\frac{2}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -10497,12 +10933,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[d]-\\frac{1}{7}",
-              "[a]-1",
-              "[c]-\\frac{1}{2}",
-              "[b]-\\frac{3}{5}"
-            ]
+            "options": []
           }
         },
         {
@@ -10510,12 +10941,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[b]-\\frac{5}{4}",
-              "[c]0",
-              "[d]\\frac{1}{2}",
-              "[a]-1\\frac{1}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -10523,12 +10949,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]-6",
-              "[b]3",
-              "[c]8",
-              "[d]13"
-            ]
+            "options": []
           }
         },
         {
@@ -10536,12 +10957,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]-\\frac{45}{4}",
-              "[b]1",
-              "[d]\\frac{25}{2}",
-              "[c]\\frac{31}{3}"
-            ]
+            "options": []
           }
         },
         {
@@ -10557,12 +10973,7 @@
           "pattern": 11,
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
-            "options": [
-              "[a]-34",
-              "[b]-25",
-              "[c]-17",
-              "[d]-6"
-            ]
+            "options": []
           }
         },
         {
@@ -10886,6 +11297,146 @@
           }
         },
         {
+          "id": "math-uz-6-5-51-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "\\frac{p}{q} ko\u2019rinishdagi qisqarmas kasrlar ratsional sonlardir"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-52-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Barcha butun sonlar ratsional sonlar hisoblanmaydi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-53-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Istalgan p butun sonni quyidagicha yozish mumkin p = \\frac{p}{1}"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-54-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Bir xil ishorali ratsional sonlar ko\u2018paytmasi musbat"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-55-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Har xil ishorali ratsional sonlar ko\u2018paytmasi musbat son bo\u2018ladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-56-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Bir xil ishorali ratsional sonlar bo\u2018linmasi musbat"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-57-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Har xil ishorali ratsional sonlar bo\u2018linmasi manfiy son bo\u2018ladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-58-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ratsional sonning qarama-qarshi soni bilan yig\u02bbindisi birga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-59-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ratsional songa o\u2019zaro teskari ratsional sonning ko\u02bbpaytmasi nolga teng"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-5-60-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ratsional songa nol qo\u2019shilishi bu sonni o\u2019zgartiradi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-5-31-16",
           "pattern": 16,
           "question": {
@@ -11040,6 +11591,7 @@
     {
       "number": 6,
       "name": "6-bob",
+      "description": "GEOMETRIYA VA O\u02bbLCHASHLAR",
       "questions": [
         {
           "id": "math-uz-6-6-61-1",
@@ -12001,19 +12553,6 @@
           }
         },
         {
-          "id": "math-uz-6-6-1-7",
-          "pattern": 7,
-          "question": {
-            "title": "Koordinatalar sistemasida (-3 ; 2) , ( 2 ; 1) , (2 , -3 ) va (-4 ; -4) nuqtalarni belgilab \nto\u2018rtburchak yasang",
-            "options": [
-              "-3,2",
-              "2,1",
-              "2,-3",
-              "-4,-4"
-            ]
-          }
-        },
-        {
           "id": "math-uz-6-6-2-7",
           "pattern": 7,
           "question": {
@@ -12200,12 +12739,7 @@
           "pattern": 11,
           "question": {
             "title": "Ketma ketlikni to\u2018g\u2018irlang",
-            "options": [
-              "[d]470 mm",
-              "[c]0,3 m",
-              "[a]5 cm",
-              "[b]0,06 m"
-            ]
+            "options": []
           }
         },
         {
@@ -12644,24 +13178,164 @@
               "[d]73^\\circ"
             ]
           }
+        },
+        {
+          "id": "math-uz-6-6-61-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Koordinatalar sistemasi tekislikni to\u02bbrtta qismga ajratadi va ular choraklar deyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-62-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "x va y o\u02bbqlar kesishgan nuqta koordinata boshi deyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-63-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "y \u2013 gorizontal sonlar o\u02bbqi. x \u2013 vertikal sonlar o\u02bbqi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-64-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Bir to\u02bbg\u02bbri chiziqda yotmagan ixtiyoriy A",
+              "B va C uchta nuqtani tutashtirishdan hosil qilingan yopiq shakl aylanadir"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-65-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Uchburchakning ixtiyoriy bir tomoni qolgan ikki tomoni yig\u02bbindisidan kichik"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-66-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Uchburchakda eng katta tomon qarshisida eng kichik burchak",
+              "eng kichik tomon qarshisida eng katta burchak joylashadi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-67-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Uchburchakning teng tomonlari qarshisidagi burchaklari teng bo\u02bbladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-68-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Uchburchak tomonlari uzunliklarining yig\u02bbindisi uning yuzi deyiladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-69-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Agar uchburchakning uchala tomoni o\u2018zaro teng bo\u2018lsa",
+              "bunday uchuburchaklar teng tomonli uchuburchak deyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-6-70-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Agar uchburchakning ikkita tomoni o\u2018zaro teng bo\u2018lsa",
+              "bunday uchuburchaklar muntazam uchuburchak deyiladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
         }
       ]
     },
     {
       "number": 7,
       "name": "7-bob",
+      "description": "NISBAT, PROPORSIYA VA FOIZ",
       "questions": [
         {
           "id": "math-uz-6-7-71-1",
           "pattern": 1,
           "question": {
             "title": "Maktabda har 5 o\u02bbg\u02bbil bolaga 4 qiz to\u02bbg\u02bbri keladi. Maktabda 560 nafar qiz bo\u02bblsa, o\u02bbg\u02bbil bolalar nechta?",
-            "options": [
-              "[*]700",
-              "448",
-              "440",
-              "600"
-            ]
+            "options": []
           }
         },
         {
@@ -12669,12 +13343,7 @@
           "pattern": 1,
           "question": {
             "title": "Beton quyish uchun 1 qop sementga 4 qop qum aralashtirishdi. Necha qop sement 100 qop qum bilan aralashtirilishi kerak?",
-            "options": [
-              "[*]25",
-              "24",
-              "75",
-              "26"
-            ]
+            "options": []
           }
         },
         {
@@ -12682,12 +13351,7 @@
           "pattern": 1,
           "question": {
             "title": "Sherning vazni 120 funt. Agar bir funt taxminan 0.45 kg bo\u02bblsa, Sherning vazni necha kilogram?",
-            "options": [
-              "[*]54",
-              "100",
-              "60",
-              "56"
-            ]
+            "options": []
           }
         },
         {
@@ -12695,12 +13359,7 @@
           "pattern": 1,
           "question": {
             "title": "Uchta mushuk 16 minutda 6 ta sichqon tutsa, 4 ta mushuk 20 minutda qancha sichqon tutadi?",
-            "options": [
-              "[*]10",
-              "12",
-              "8",
-              "14"
-            ]
+            "options": []
           }
         },
         {
@@ -12708,12 +13367,7 @@
           "pattern": 1,
           "question": {
             "title": "5 ta otga 30 kunda  900 kg yem beriladi. Shu meyorda yem berilsa, 12 ta otga 18 kunda qancha yem berish kerak?",
-            "options": [
-              "[*]1296",
-              "1250",
-              "1200",
-              "1300"
-            ]
+            "options": []
           }
         },
         {
@@ -12721,12 +13375,7 @@
           "pattern": 1,
           "question": {
             "title": "Kitob 320 betli. Har bir betda 40 ta qator, har bir qatorda 27ta harf bor, deylik. Agar har bir betda 54 ta qator va bir qatorda 32 ta harf bo\u02bblsa, bu kitob necha betli bo\u02bblar edi?",
-            "options": [
-              "[*]200",
-              "210",
-              "220",
-              "230"
-            ]
+            "options": []
           }
         },
         {
@@ -12734,12 +13383,7 @@
           "pattern": 1,
           "question": {
             "title": "Ishchi 2 soatda 100 ta detal tayyorladi. Shunday mehnat unumdorligi bilan 4 soatda nechta detal tayyorlaydi?",
-            "options": [
-              "[*]200",
-              "220",
-              "160",
-              "150"
-            ]
+            "options": []
           }
         },
         {
@@ -12747,12 +13391,7 @@
           "pattern": 1,
           "question": {
             "title": "8 dona olma solingan xalta 16 000 so\u02bbm turadi. Xuddi shu 18 ta olma qancha turadi? 64 000 so\u02bbmga qancha olma sotib olishinggiz mumkin?",
-            "options": [
-              "[*]36 000, 32 ta",
-              "36 000, 34 ta",
-              "42 000, 21 ta",
-              "40 000, 32 ta"
-            ]
+            "options": []
           }
         },
         {
@@ -12760,12 +13399,7 @@
           "pattern": 1,
           "question": {
             "title": "100 ta qush 100 kunda 100 kg don yeydi. 10 ta qush 10 kunda nech kg don yeydi?",
-            "options": [
-              "[*]1",
-              "5",
-              "10",
-              "2"
-            ]
+            "options": []
           }
         },
         {
@@ -12773,13 +13407,7 @@
           "pattern": 1,
           "question": {
             "title": "Uzunligi 35 m va massasi 840 g bo\u02bblgan mis simdan 24,5 m sim qirqib olindi. Qolgan sim bo\u02bblagining massasi qancha?",
-            "options": [
-              "[*]252",
-              "400",
-              "300",
-              "252",
-              "405"
-            ]
+            "options": []
           }
         },
         {
@@ -13529,19 +14157,6 @@
                 "sign": "<",
                 "right": "Olma"
               }
-            ]
-          }
-        },
-        {
-          "id": "math-uz-6-7-61-6",
-          "pattern": 6,
-          "question": {
-            "title": "Hisoblang",
-            "problem": [
-              "30\u00f7150\u00d7100"
-            ],
-            "solution": [
-              "20"
             ]
           }
         },
@@ -14331,24 +14946,161 @@
               "[c]28:49"
             ]
           }
+        },
+        {
+          "id": "math-uz-6-7-71-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Masshtab chizmadagi o\u2019lchamning haqiqiy o\u2019lchamga nisbati"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-72-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Masshtab chizmadagi o\u2019lcham haqiqiy o\u2019lchamdan necha marta kichikligini ko\u2019rsatuvchi son"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-73-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ikki nisbatning tengligi proportsiya deyiladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-74-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Proportsiyada ishtirok etuvchi sonlar hadlar deyiladi. Barcha hadlar nolga teng emas deb hisoblanadi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-75-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Teng kasrlar juftligi ham proporsiyani tashkil qiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-76-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Teskari kasrlar juftligi proportsiyani tashkil qiladi"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-77-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Proporsiyaning chetki hadlari ko\u2019paytmasi uning o\u2019rta hadlari ko\u2019paytmasiga teng"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-78-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrni foiz ko\u02bbrinishida ifodalash uchun uni 100 ga bo\u2019lish kerak"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-79-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Kasrni foiz ko\u02bbrinishida ifodalash uchun uni 100 ga ko\u2019paytirish va natijaga % belgisini qo\u2019yish kerak"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-80-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ikki miqdordan biri bir necha marta ko\u2019paysa (kamaysa)",
+              "ikkinchisi shuncha marta bir xil ko\u2019paysa (kamaysa) ular to\u02bbg\u02bbri proporsional deyiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
         }
       ]
     },
     {
       "number": 8,
       "name": "8-bob",
+      "description": "IFODA VA TENGLAMALAR",
       "questions": [
         {
           "id": "math-uz-6-8-81-1",
           "pattern": 1,
           "question": {
             "title": "Narxi 35 000 so\u02bbm bo\u02bblgan shirinliklar uchun 140 000 so\u02bbm to\u02bblandi. Necha kilogramm\nshirinlikka pul to\u02bblangan?",
-            "options": [
-              "[*]4 kg",
-              "3 kg",
-              "5 kg",
-              "2 kg"
-            ]
+            "options": []
           }
         },
         {
@@ -14356,12 +15108,7 @@
           "pattern": 1,
           "question": {
             "title": "70 kg o\u02bbrik uchun jami 28 000 so\u02bbm to\u02bblandi. 1 kg o\u02bbrik narxini toping?",
-            "options": [
-              "[*]400 so\u02bbm",
-              "500 so\u02bbm",
-              "700 so\u02bbm",
-              "200 so\u02bbm"
-            ]
+            "options": []
           }
         },
         {
@@ -14369,12 +15116,7 @@
           "pattern": 1,
           "question": {
             "title": "Kamol 2 kunda bir kosa qovurilgan no\u02bbxat yeydi. 5 kosa no\u02bbxat 1 kg bo\u02bblsa, Kamol\n2 oyda necha kg no\u02bbxat yeydi?",
-            "options": [
-              "[*]3 kg",
-              "2 kg",
-              "4 kg",
-              "5 kg"
-            ]
+            "options": []
           }
         },
         {
@@ -14382,12 +15124,7 @@
           "pattern": 1,
           "question": {
             "title": "900 betlik matnni Mubina 20 kunda, Maryam esa 30 kunda kompyuterda teradi.\nOpa-singillar birgalikda ishlasa, bu matnni necha kunda teradi?",
-            "options": [
-              "[*]12 kunda",
-              "10 kunda",
-              "18 kunda",
-              "50 kunda"
-            ]
+            "options": []
           }
         },
         {
@@ -14395,12 +15132,7 @@
           "pattern": 1,
           "question": {
             "title": "Traktorchi 4 soatda 12 ga yerni haydadi. U shunday mehnat unumdorligi bilan\nishlasa, 6 soatda qancha yerni haydaydi?",
-            "options": [
-              "1\"[*]8 ga\"",
-              "24 ga",
-              "12 ga",
-              "8 ga"
-            ]
+            "options": []
           }
         },
         {
@@ -14408,12 +15140,7 @@
           "pattern": 1,
           "question": {
             "title": "Ishchi 8 soatda 168 dona detalga ishlov berdi. Ishchi 1 saotda qancha detalga ishlov beradi?",
-            "options": [
-              "[*]21 ta",
-              "22 ta",
-              "32 ta",
-              "11 ta"
-            ]
+            "options": []
           }
         },
         {
@@ -14421,12 +15148,7 @@
           "pattern": 1,
           "question": {
             "title": "Komiljon ota nabiralari uchun bozordan har bir savatda 1,5 kg dan bo\u02bblgan 4 savat\nqulupnay sotib oldi. Mevalar uchun 120 000 so\u02bbm to\u02bbladi. Bir kilogramm qulupnay\nnarxi qancha?",
-            "options": [
-              "[*]20 000 so\u02bbm",
-              "30 000 so\u02bbm",
-              "15 000 so\u02bbm",
-              "25 000 so\u02bbm"
-            ]
+            "options": []
           }
         },
         {
@@ -14434,12 +15156,7 @@
           "pattern": 1,
           "question": {
             "title": "1 kilogrammi 12 500 so\u02bbm bo\u02bblgan konfetdan bir nechta quti xarid qilindi. Har bir\nqutiga 3 kg dan konfet joylangan. Xarid uchun 300 000 so\u02bbm to\u02bblangan bo\u02bblsa, necha\nquti konfet sotib olingan?",
-            "options": [
-              "[*]8 quti",
-              "10 quti",
-              "24 quti",
-              "16 quti"
-            ]
+            "options": []
           }
         },
         {
@@ -14447,12 +15164,7 @@
           "pattern": 1,
           "question": {
             "title": "Sevara va uning oilasi har kuni ertalab nonushta uchun to\u02bbrt stakan choy ichishadi\nva bir stakan choyga ikkita oqqand qo\u02bbshadilar. Shunga ko\u02bbra, Sevaraning to\u02bbrt\nkishilik oilasi 360 dona oqqandni necha kunda tugatadi?",
-            "options": [
-              "[*]45 kunda",
-              "90 kunda",
-              "30 kunda",
-              "40 kunda"
-            ]
+            "options": []
           }
         },
         {
@@ -14460,12 +15172,7 @@
           "pattern": 1,
           "question": {
             "title": "Korxona bankdan 40 million so\u02bbmni bir yil muddatga 20% yillik foiz stavkasi bilan\nolgan bo\u02bblsa, bir yildan so\u02bbng korxona jami qancha miqdorda bankka pul qaytaradi?",
-            "options": [
-              "[*]48 million so\u02bbm",
-              "8 million so\u02bbm",
-              "40 million so\u02bbm",
-              "44 million so\u02bbm"
-            ]
+            "options": []
           }
         },
         {
@@ -14623,12 +15330,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "4-3",
-              "5-1",
-              "6\u20133",
-              "4+2"
-            ],
+            "problem": [],
             "solution": [
               [
                 "4-3",
@@ -14648,12 +15350,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "4+3",
-              "9-7",
-              "5+3",
-              "1+4"
-            ],
+            "problem": [],
             "solution": [
               [
                 "9-7",
@@ -14673,12 +15370,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "2+5",
-              "5+4",
-              "7\u20133",
-              "4\u20132"
-            ],
+            "problem": [],
             "solution": [
               [
                 "7\u20133",
@@ -14698,12 +15390,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "4-1",
-              "7-1",
-              "9\u20133",
-              "4+1"
-            ],
+            "problem": [],
             "solution": [
               [
                 "4-1",
@@ -14723,12 +15410,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "5-2",
-              "5+2",
-              "6\u20134",
-              "4\u20132"
-            ],
+            "problem": [],
             "solution": [
               [
                 "6\u20134",
@@ -14748,12 +15430,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "9\u20137",
-              "8\u20135",
-              "7+1",
-              "5\u20134"
-            ],
+            "problem": [],
             "solution": [
               [
                 "9\u20137",
@@ -14773,12 +15450,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "8\u20135",
-              "5+3",
-              "6+1",
-              "2+3"
-            ],
+            "problem": [],
             "solution": [
               [
                 "8\u20135",
@@ -14798,12 +15470,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "9-3",
-              "4+3",
-              "3+5",
-              "9\u20138"
-            ],
+            "problem": [],
             "solution": [
               [
                 "9-3",
@@ -14823,12 +15490,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "6+1",
-              "7-1",
-              "8\u20133",
-              "9-5"
-            ],
+            "problem": [],
             "solution": [
               [
                 "8\u20133",
@@ -14848,12 +15510,7 @@
           "pattern": 3,
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
-            "problem": [
-              "9\u20131",
-              "8\u20132",
-              "7\u20133",
-              "6-4"
-            ],
+            "problem": [],
             "solution": [
               [
                 "7\u20133",
@@ -15573,12 +16230,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
-            "options": [
-              "[b]15 + m",
-              "[c]21 + m",
-              "[a]2m \u2013 10",
-              "[d]3m + 5"
-            ]
+            "options": []
           }
         },
         {
@@ -15587,7 +16239,7 @@
           "question": {
             "title": "Harfiy ifodada m = 15 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
             "options": [
-              "[d]m + 53",
+              "[d]m + 53\"",
               "[c]2m + 21",
               "[b]3m \u2013 19",
               "[a]2m \u2013 15"
@@ -15599,12 +16251,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 31 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
-            "options": [
-              "[b]m \u2013 24",
-              "[c]3m \u2013 73",
-              "[a]m - 29",
-              "m - 1"
-            ]
+            "options": []
           }
         },
         {
@@ -15612,12 +16259,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 45 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
-            "options": [
-              "[a]m \u2013 15 * 3",
-              "[c]2m +  1",
-              "[d]m + 55",
-              "[b]m(1+1)"
-            ]
+            "options": []
           }
         },
         {
@@ -15625,12 +16267,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 1 va n = 3 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
-            "options": [
-              "[c]14 - mn",
-              "[b]4n \u2013 2m",
-              "[a]3n - m",
-              "[d]5(n+m)"
-            ]
+            "options": []
           }
         },
         {
@@ -15638,12 +16275,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 10 va n = 13 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
-            "options": [
-              "[c]5m \u2013 3n",
-              "[a]3m - 3n",
-              "[b]n \u2013 m",
-              "[b]m(n-m)"
-            ]
+            "options": []
           }
         },
         {
@@ -15651,12 +16283,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 7 va n = 8 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
-            "options": [
-              "[a]mn \u2013 46",
-              "[b]125 \u2013 2mn",
-              "[d]8m + 7n",
-              "[c]3m + 2n"
-            ]
+            "options": []
           }
         },
         {
@@ -15664,12 +16291,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 9 va n = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
-            "options": [
-              "[d]mn",
-              "[c]mn \u2013 2(m+n)",
-              "[b]m \u2013 0",
-              "[a]n \u2013 2"
-            ]
+            "options": []
           }
         },
         {
@@ -15677,12 +16299,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 1 va n = 0 ga teng bolsa ifodani \nqiymatini o\u2019sish tartibida joylashtiring\n",
-            "options": [
-              "[b]1 + mn",
-              "[a]mn",
-              "[c]10 \u2013 7(m+n)",
-              "[d]10(m-n)"
-            ]
+            "options": []
           }
         },
         {
@@ -15690,12 +16307,7 @@
           "pattern": 11,
           "question": {
             "title": "Harfiy ifodada m = 11 va n = 20 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
-            "options": [
-              "[a]1 + n \u2013 m",
-              "[b]m + n",
-              "[c]100 \u2013 7(n - m)",
-              "[d]2(m +n)"
-            ]
+            "options": []
           }
         },
         {
@@ -16017,24 +16629,160 @@
               "[d]x=5"
             ]
           }
+        },
+        {
+          "id": "math-uz-6-8-81-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n3 \u00d7 11 = 33"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-82-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n48 \u00f7 6 = \u20138 \u00f7 (\u20131)"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-83-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n91 \u00d7 2,08 + 9 \u00d7 2,08 = 2,08 \u00d7 (91 + 9)"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-84-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n6 + 3 = 1,8 \u00d7 4"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-85-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n2,8 \u2013 9 = 3,4 \u00d7 2"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-86-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n1,6 \u2013 4 = 0,8 \u00d7 2 + 4"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-87-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n0,9 \u00d7 6 = 10 \u2013 4,6"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-88-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n\u20135 \u00d7 (\u2013 4,2) = 21"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-89-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n1,6 \u2013 4 = 0,8 \u00d7 2 + 4"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-90-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Tenglik to\u2019g\u2019rimi:\n56 \u00f7 7 + (\u201312) \u00d7 (\u20135) = \u20138 + 60"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
         }
       ]
     },
     {
       "number": 9,
       "name": "9-bob",
+      "description": "MA\u02bcLUMOTLAR BILAN ISHLASH",
       "questions": [
         {
           "id": "math-uz-6-9-91-1",
           "pattern": 1,
           "question": {
             "title": "O\u2019yin kubigini 20 marta tashlanganda quyidagi natijalar qayd etildi:\n4, 2, 3, 1, 3, 4, 6, 1, 5, 3, 4, 6, 6, 3, 4, 2, 1, 1, 4, 5.  Qaysi natija eng katta songa ega?\n",
-            "options": [
-              "[*]6",
-              "4",
-              "5",
-              "1"
-            ]
+            "options": []
           }
         },
         {
@@ -16042,12 +16790,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u2019qituvchi o\u2019z sinfiga matematikadan 10 ta savoldan iborat testni berdi. Quyidagi\nnatijalar qayd etildi: 9, 7, 8, 6, 4, 7, 10, 9, 8, 7, 6, 7, 5, 5, 10, 9, 8, 8, 7, 9.  Eng yuqori natija necha ball?\n",
-            "options": [
-              "[*]10",
-              "9",
-              "8",
-              "5"
-            ]
+            "options": []
           }
         },
         {
@@ -16055,12 +16798,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n76%, 65%, 88%, 95%, 77%, 92%, 69%, 85%, 94%, 72%. Eng yuqori o\u2019zlashtirish necha foiz?\n",
-            "options": [
-              "[*]99%",
-              "95%",
-              "94%",
-              "92%"
-            ]
+            "options": []
           }
         },
         {
@@ -16068,12 +16806,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbyin kubigini 20 marta tashlanganda quyidagi natijalar qayd etildi:\n4, 2, 3, 1, 3, 4, 6, 1, 5, 3, 4, 6, 6, 3, 4, 2, 1, 1, 4, 5. Qaysi natija eng kichik songa ega?\n",
-            "options": [
-              "[*]1",
-              "2",
-              "3",
-              "4"
-            ]
+            "options": []
           }
         },
         {
@@ -16081,12 +16814,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbqituvchi o\u2019z sinfiga matematikadan 10 ta savoldan iborat testni berdi. Quyidagi\nnatijalar qayd etildi: 9, 7, 8, 6, 4, 7, 10, 9, 8, 7, 6, 7, 5, 5, 10, 9, 8, 8, 7, 9.  Eng past natija necha ball?\n",
-            "options": [
-              "[*]4",
-              "6",
-              "5",
-              "3"
-            ]
+            "options": []
           }
         },
         {
@@ -16094,12 +16822,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88%, 65%, 88%, 95%, 77%, 88%, 69%, 77%, 94%, 72%. Eng past o\u2019zlashtirish necha foiz?\n",
-            "options": [
-              "[*]65%",
-              "60%",
-              "69%",
-              "72%"
-            ]
+            "options": []
           }
         },
         {
@@ -16107,12 +16830,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbqituvchi o\u2019z sinfiga matematikadan 10 ta savoldan iborat testni berdi. Quyidagi\nnatijalar qayd etildi: 9, 7, 8, 6, 4, 7, 10, 9, 8, 7, 6, 7, 5, 5, 10, 9, 8, 8, 7, 9. Eng ko\u02bbp tarqalgan natija necha ball?\n",
-            "options": [
-              "[*]7",
-              "8",
-              "5",
-              "9"
-            ]
+            "options": []
           }
         },
         {
@@ -16120,12 +16838,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbyin kubigini 20 marta tashlanganda quyidagi natijalar qayd etildi:\n4, 2, 3, 1, 3, 4, 6, 1, 5, 3, 4, 6, 6, 3, 4, 2, 1, 1, 4, 5. Qaysi natija eng ko\u02bbp qayt etildi?\n",
-            "options": [
-              "[*]4",
-              "5",
-              "1",
-              "3"
-            ]
+            "options": []
           }
         },
         {
@@ -16133,12 +16846,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88%, 65%, 88%, 95%, 77%, 88%, 69%, 77%, 94%, 72%, 65%. Nechta o\u02bbquvchi 79% dan kam o\u2019zlashtirish qayt etgan?\n",
-            "options": [
-              "[*]6",
-              "5",
-              "7",
-              "4"
-            ]
+            "options": []
           }
         },
         {
@@ -16146,12 +16854,7 @@
           "pattern": 1,
           "question": {
             "title": "O\u02bbqituvchi o\u02bbz sinfiga matematikadan 10 ta savoldan iborat testni berdi. Quyidagi\nnatijalar qayd etildi: 9, 7, 8, 6, 4, 7, 10, 9, 8, 7, 6, 7, 5, 5, 10, 9, 8, 8, 7, 9. Nechta o\u2019quvchi atigi 2 yoki undan kam xatoga yo\u02bbl qo\u2019ygan?\n",
-            "options": [
-              "[*]6",
-              "5",
-              "7",
-              "4"
-            ]
+            "options": []
           }
         },
         {
@@ -17069,12 +17772,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[c]34, 24",
-              "[a]8, 42, 4",
-              "[b]23, 34",
-              "[d]33, 47"
-            ]
+            "options": []
           }
         },
         {
@@ -17082,12 +17780,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[d]34, 22",
-              "[c]45, 4, 8",
-              "[a]3, 6, 7, 8",
-              "[b]32, 5"
-            ]
+            "options": []
           }
         },
         {
@@ -17095,12 +17788,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[d]56, 33",
-              "[c]23, 23, 23",
-              "[b]21, 42, 5",
-              "[a]17, 19, 21"
-            ]
+            "options": []
           }
         },
         {
@@ -17108,12 +17796,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[b]32, 34",
-              "[a]15, 17, 19",
-              "[d]76, 13",
-              "[c]61, 17"
-            ]
+            "options": []
           }
         },
         {
@@ -17121,12 +17804,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[d]53, 31",
-              "[c]23, 47",
-              "[b]13, 15, 17, 19",
-              "[a]12, 14, 16, 18"
-            ]
+            "options": []
           }
         },
         {
@@ -17135,7 +17813,9 @@
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
             "options": [
-              "[b]21, 23, 25",
+              "[b]21",
+              "23",
+              "25\"",
               "[c]22, 24, 26",
               "[a]21, 22, 20",
               "[d]54, 45"
@@ -17147,12 +17827,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[a]23, 17, 4",
-              "[c]44, 1",
-              "[d]22, 24",
-              "[b]11, 22, 15"
-            ]
+            "options": []
           }
         },
         {
@@ -17160,12 +17835,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[a]40, 20",
-              "[b]30, 31",
-              "[c]50, 12",
-              "[d]60, 3"
-            ]
+            "options": []
           }
         },
         {
@@ -17173,12 +17843,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[a]10, 11, 12",
-              "[b]20, 7, 7",
-              "[c]15, 15, 5",
-              "[d]25 , 7, 4"
-            ]
+            "options": []
           }
         },
         {
@@ -17186,12 +17851,7 @@
           "pattern": 11,
           "question": {
             "title": "Berilgan sonlarni o\u02bbrta arifmetigini o\u02bbsish tartibida joylashtiring",
-            "options": [
-              "[c]54, 15",
-              "[b]42, 25",
-              "[d]60, 11",
-              "[a]15, 25, 35"
-            ]
+            "options": []
           }
         },
         {
@@ -17515,6 +18175,174 @@
           }
         },
         {
+          "id": "math-uz-6-9-91-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "O\u02bbzgarish kengligi deb",
+              "berilgan ma\u02bclumotlar qatoridagi eng katta had bilan eng kichik had ayirmasiga aytiladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-92-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ma\u2019lumotlar qatorida o\u2019rta arifmetik\nqiymatni topish uchun barcha hadlarning\nyig\u2019indisini hadlar soniga bo\u2019lish kifoya"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-93-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ma\u2019lumotlar qatoridagi hadlar soni toq bo\u2019lsa",
+              "mediana eng o\u2019rtada turgan son bo\u2019ladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-94-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ma\u2019lumotlar qatoridagi hadlar soni juft bo\u2019lsa, mediana o\u2019rtada turgan ikkita son\no\u2019rta arifmetigi bo\u2019ladi"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-95-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "Ma\u2019lumotlar qatoridagi eng ko\u2019p takrorlanadigan had modadir"
+            ],
+            "solution": [
+              "[*]To'g'ri",
+              "Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-96-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "44",
+              "42",
+              "37",
+              "35",
+              "29",
+              "29 \u2192 bu yerda moda 44"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-97-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "17",
+              "28",
+              "29",
+              "41",
+              "37",
+              "18 \u2192 bu yerda moda 41"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-98-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "28",
+              "34",
+              "41",
+              "44",
+              "28",
+              "41",
+              "18",
+              "39 \u2192 bu yerda moda 28"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-99-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "44",
+              "42",
+              "37",
+              "35",
+              "29",
+              "29\u2192bu yerda medianasi 35"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-100-14",
+          "pattern": 14,
+          "question": {
+            "title": "Mulohazalarning to'g'ri yoki noto'g'riligini belgilang",
+            "problem": [
+              "3",
+              "5",
+              "8",
+              "4",
+              "5\u2192 bu yerda medianasi 5"
+            ],
+            "solution": [
+              "To'g'ri",
+              "[*]Noto'g'ri"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-9-1-15",
           "pattern": 15,
           "question": {
@@ -17610,7 +18438,9 @@
           "pattern": 15,
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
-            "problem": [],
+            "problem": [
+              "Kvadratning bo\u2019yi 12 cm va eni 5 cm bo\u2019lsa,\nuning yuzi 60 cm^2 bo\u2018ladi"
+            ],
             "solution": [
               "Har doim",
               "Ba'zan",
@@ -17654,8 +18484,7 @@
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
             "problem": [
-              "Har xil maxrajli kasrlarni qo\u2019shishda suratlari suratiga",
-              "maxraji maxrajiga qo\u2019shiladi"
+              "Har xil maxrajli kasrlarni qo\u2019shishda suratlari suratiga, \nmaxraji maxrajiga \nqo\u2019shiladi"
             ],
             "solution": [
               "Har doim",

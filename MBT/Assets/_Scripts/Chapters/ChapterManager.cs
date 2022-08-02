@@ -1,95 +1,42 @@
+using MBT.Extension;
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using Newtonsoft.Json.Linq;
-using System;
-using MBT.Extension;
+using UnityEngine.UI;
 
 public class ChapterManager : MonoBehaviour
 {
 
-    public AssetReference DataBase;
+    public DataBaseSO JsonCollection;
+
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
-    public GameEvent UpdateEventSO;
-    public GameObject UpdatePanel;
+    
+   
 
     //[HideInInspector]
-    public List<Chapter> ChapterPrefabGorup = new List<Chapter>();
+    public List<Chapter> ChapterGorup = new List<Chapter>();
 
-    public  GameObject ChapterPrefabObj;
-    private TextAsset _localJson;
+    public  GameObject ChapterPrefab;
+    private  TextAsset _curentJson;
     private int _numberOfChapter;   
-    private DataBaseSO _dataBase;
+   
     IList<ChapterRaw> _chapterGorup;
 
 
     private void Awake()
     {
-        DataBase.LoadAssetAsync<DataBaseSO>().Completed += DataBaseLoaded;
-        
-        
-    }
-
-    private void DataBaseLoaded(AsyncOperationHandle<DataBaseSO> obj)
-    {
-        _dataBase = obj.Result;
-        if (ES3.KeyExists("InitialTime"))
-        {
-            if (ES3.Load<bool>("InitialTime"))
-            {
-                _localJson = Mbt.GetDesiredJSONData(_dataBase);
-            }            
-        }
-        else
-        {
-            ES3.Save<bool>("InitialTime", true);
-            _localJson = Mbt.GetDesiredJSON(_dataBase);
-        }
-        
-        //_jsonDataGroup.LoadAssetAsync<TextAsset>().Completed += JsonLoaded;
-        DisableLoadingBar();
+        _curentJson = GetDesiredJSONData(JsonCollection);
+        JsonCollection.DataBase.Clear();
         ReadJSON();
     }
 
-    void JsonLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        if (obj.Status == AsyncOperationStatus.Succeeded)
-        {
-            _localJson = obj.Result;
-            ReadJSON();
-        }
-
-    }
-
-
-
-    void DisableLoadingBar()
-    {
-        if (ES3.KeyExists("IsInitialLoad"))
-        {
-            if (ES3.Load<bool>("IsInitialLoad"))
-            {
-                UpdatePanel.SetActive(false);
-            }
-        }
-            
-    }
-
-   
-
-
-
   
-
- 
-
     void ReadJSON()
     {
-        var jo = JObject.Parse(_localJson.text);
+        var jo = JObject.Parse(_curentJson.text);
         JArray chapters = (JArray)jo["chapters"];
         _numberOfChapter = chapters.Count;
         _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();
@@ -116,7 +63,27 @@ public class ChapterManager : MonoBehaviour
         }
     }
 
-   
+    TextAsset GetDesiredJSONData(DataBaseSO dataBase)
+    {
+        TextAsset textAsset = new TextAsset();
+        dataBase.CreateDict();
+        string currentLanguage = ES3.Load<string>("LanguageKey");
+        int currentClass = ES3.Load<int>("ClassKey");        
+        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>(dataBase.DataBase);        
+        List<TextAsset> list = new List<TextAsset>();
+        if (JsonDictionary.TryGetValue(currentClass, out list))
+        {
+            foreach (TextAsset txtAsset in list)
+            {
+                if (txtAsset.name.Equals(currentLanguage))
+                {
+                    textAsset = txtAsset;
+                }
+            }
+        }
+        return textAsset;
+    }
+
 
     void CreateChapters()
     {       
@@ -124,10 +91,10 @@ public class ChapterManager : MonoBehaviour
         {
             for (int i = 0; i < _numberOfChapter; i++)
             {
-                GameObject obj = Instantiate(ChapterPrefabObj);
+                GameObject obj = Instantiate(ChapterPrefab);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
-                ChapterPrefabGorup.Add(obj.GetComponent<Chapter>());
+                ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
             GridLayout.gameObject.SetActive(false);
             StartCoroutine(DisplayChapters());
@@ -136,22 +103,21 @@ public class ChapterManager : MonoBehaviour
     }
 
     IEnumerator DisplayChapters()
-    {
-        ES3.Save("IsInitialLoad", true);
+    {   
         yield return new WaitForSeconds(0.1f);
         GridLayout.gameObject.SetActive(true);
         int k = 0;
         foreach (ChapterRaw item in _chapterGorup)
         {
-            ChapterPrefabGorup[k].chapterRaw.name = item.name;
-            ChapterPrefabGorup[k].chapterRaw.number = item.number;           
+            ChapterGorup[k].chapterRaw.name = item.name;
+            ChapterGorup[k].chapterRaw.number = item.number;           
             k++;
         }
-        foreach (Chapter item in ChapterPrefabGorup)
+        foreach (Chapter item in ChapterGorup)
         { 
-            item.UpdateInfo(JObject.Parse(_localJson.text));            
+            item.UpdateInfo(JObject.Parse(_curentJson.text));            
         }
-        UpdateEventSO.Raise();
+        
     }
 
 }
