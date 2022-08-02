@@ -29,6 +29,7 @@ public class ChapterManager : MonoBehaviour
     private void Awake()
     {
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
+       
         JsonCollectionSO.DataBase.Clear();
         ReadJSON();
     }
@@ -40,6 +41,7 @@ public class ChapterManager : MonoBehaviour
         JArray chapters = (JArray)jo["chapters"];
         _numberOfChapter = chapters.Count;
         _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();
+        
         CreateChapters();
         SetScrollRect();
     }
@@ -85,20 +87,21 @@ public class ChapterManager : MonoBehaviour
 
     IEnumerator DisplayChapters()
     {   
-        yield return new WaitForSeconds(0.1f);
+        
         GridLayout.gameObject.SetActive(true);
         int k = 0;
         foreach (ChapterRaw item in _chapterGorup)
         {
             ChapterGorup[k].chapterRaw.name = item.name;
-            ChapterGorup[k].chapterRaw.number = item.number;           
+            ChapterGorup[k].chapterRaw.number = item.number;
+            ChapterGorup[k].chapterRaw.description = item.description;
             k++;
         }
         foreach (Chapter item in ChapterGorup)
         { 
             item.UpdateInfo(JObject.Parse(_curentJson.text));            
         }
-        
+        yield return new WaitForSeconds(0.1f);
     }
 
 }

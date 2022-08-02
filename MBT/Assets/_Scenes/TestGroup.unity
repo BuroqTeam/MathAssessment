@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scene:
-    m_AssetGUID: fe567f20d8095864dbade8c135e8f73d
+    m_AssetGUID: bdd1c450abd4ec34997f5f58b9e272c4
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -506,17 +506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abf59c2733e7b94992152b0c3c673e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataBase:
-    m_AssetGUID: a910386fdd2bc514b86f0685f889595f
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  ChapterName: {fileID: 71918641}
-  ChapterDescription: {fileID: 1050400417}
+  JsonCollectionSO: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   GridLayout: {fileID: 6712500090136338409}
   ScrollRectObj: {fileID: 2289702973896475711}
-  UpdateEventSO: {fileID: 11400000, guid: 97d7cf6d75e099c469a4ba34886950a5, type: 2}
-  UpdatePanel: {fileID: 0}
+  ChapterName: {fileID: 71918641}
+  ChapterDescription: {fileID: 1050400417}
   TestGroupPrefabGorup: []
   TestGroupObj: {fileID: 1568044705980880535, guid: 939402b5f77fb3b47aa2e083bdf3c988, type: 3}
   TestGroupSO: {fileID: 11400000, guid: c5a8c1bd3f3470b40865e0dfc8d5e763, type: 2}
@@ -1644,7 +1638,7 @@ MonoBehaviour:
       - m_Target: {fileID: 745727885}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: LoadLocalScene
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
