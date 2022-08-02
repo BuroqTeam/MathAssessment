@@ -8,34 +8,25 @@ using System;
 
 public class Pattern_2 : TestManager
 {  
-    public DataBaseSO dataBase;
+    public DataBaseSO DataBase;
     public GameObject Button;
 
-    private AssetReference _jsonData;
-    public TextAsset _currentJsonText;
+    public TextAsset CurrentJsonText;
+    public TextAsset TextAsset;
     Data_2 Pattern_2Obj = new Data_2();
 
     private void Awake()
     {
         Mbt.SaveJsonPath(0, 10);
 
-
-        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
-
+        ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-        //_jsonData = Mbt.GetDesiredJSON(dataBase);      
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        Tekshir();
     }
 
-   
-
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        _currentJsonText = obj.Result;
-        ReadFromJson();
-    }
+    
     private void OnEnable()
     {
         DisplayQuestion(Pattern_2Obj.title);
@@ -49,10 +40,39 @@ public class Pattern_2 : TestManager
 
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(_currentJsonText.text);
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj);
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
+    }
+    private void  Tekshir() 
+    {
+        DataBase.CreateDict();
+        TextAsset = new TextAsset();
+        string currentLanguage = ES3.Load<string>("LanguageKey");
+        int currentClass = ES3.Load<int>("ClassKey");
+        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
+        JsonDictionary = DataBase.DataBase;
+        List<TextAsset> list = new List<TextAsset>();
+        if (JsonDictionary.TryGetValue(currentClass, out list))
+        {
+            foreach (TextAsset txtAsset in list)
+            {
+                if (txtAsset.name.Equals(currentLanguage))
+                {
+                    TextAsset = txtAsset;
+                }
+            }
+        }
+        CurrentJsonText = TextAsset;
+        if (CurrentJsonText == null)
+        {
+            Debug.Log("Wrong");
+        }
+        else
+        {
+            ReadFromJson();
+        }
     }
 
     public void CreatePrefabs()

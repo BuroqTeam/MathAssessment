@@ -4,29 +4,19 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int _width, _height;
+    [SerializeField] private int _width;
 
-    [SerializeField] private Tile _tilePrefab;
-
-    [SerializeField] private Transform _cam;
-
-    float percentage;
+    [SerializeField] private GameObject tilePrefab;
 
     private void Start()
     {
         GenerateGrid();
-        percentage = _tilePrefab.transform.localScale.x;
     }
     void GenerateGrid()
     {
-        for (float i = 0; i < _width; i++)
+        for (int i = 0; i < 2*_width; i++)
         {
-            for (float j = 0; j < _height; j++)
-            {
-                var spawnedTile = Instantiate(_tilePrefab, new Vector3(i, j), Quaternion.identity);
-                spawnedTile.name = $"Tile {i} {j}";
-            }
-        }
-        _cam.transform.position = new Vector3((float)_width / 2, (float)_height / 2 - 0.5f, -50);
+            Instantiate(tilePrefab, transform);
+        }   
     }
 }

@@ -9,32 +9,41 @@ using System;
 public class Pattern_10 : TestManager
 {
     public DataBaseSO DataBase;
-    public TextAsset CurrentJsonData;
-
-    private AssetReference _jsonData;
-
+    public TextAsset CurrentJsonText;
     Data_10 Pattern_10Obj = new Data_10();
 
     private void Awake()
     {
-        Mbt.SaveJsonPath(0, 100  );
+        Mbt.SaveJsonPath(0, 72);
 
-
-        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
-
+        ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-
-        //_jsonData = Mbt.GetDesiredJSON(DataBase);
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        Tekshir();
     }
 
-
-
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
+    private void Tekshir()
     {
-        CurrentJsonData = obj.Result;
+        DataBase.CreateDict();
+        TextAsset TextAsset = new TextAsset();
+        string currentLanguage = ES3.Load<string>("LanguageKey");
+        int currentClass = ES3.Load<int>("ClassKey");
+        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
+        JsonDictionary = DataBase.DataBase;
+        List<TextAsset> list = new List<TextAsset>();
+        if (JsonDictionary.TryGetValue(currentClass, out list))
+        {
+            foreach (TextAsset txtAsset in list)
+            {
+                if (txtAsset.name.Equals(currentLanguage))
+                {
+                    TextAsset = txtAsset;
+                }
+            }
+        }
+        CurrentJsonText = TextAsset;
+        ReadJson();
     }
 
     private void OnEnable()
@@ -42,17 +51,27 @@ public class Pattern_10 : TestManager
         DisplayQuestion(Pattern_10Obj.title);
     }
 
-    public void ReadFromJson()
+    public override void DisplayQuestion(string questionStr)
     {
-        var jsonObj = JObject.Parse(CurrentJsonData.text);
+        base.DisplayQuestion(questionStr); // null        
+    }
+
+    public void ReadJson()
+    {
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj);
         Pattern_10Obj = jo.ToObject<Data_10>();
+        CreatePrefabs();
     }
 
-    public void CreatePrefab()
+    public void CreatePrefabs()
     {
-
+        
     }
+
+
+
+
 }
 
 [SerializeField]
