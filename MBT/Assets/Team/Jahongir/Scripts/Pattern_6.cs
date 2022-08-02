@@ -22,7 +22,7 @@ public class Pattern_6 : TestManager
         //ES3.Save<string>("LanguageKey", "Class_6_Uzb");
         //ES3.Save<int>("ClassKey", 6);
         //_jsonData = Mbt.GetDesiredJSON(DataBase);
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        //_jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
     }
 
     private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
