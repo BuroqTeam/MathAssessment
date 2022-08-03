@@ -31,7 +31,7 @@ public class Pattern_3 : TestManager
 
     private void Awake()
     {
-        Mbt.SaveJsonPath(0, 26);
+        Mbt.SaveJsonPath("key", 0, 26);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -46,7 +46,7 @@ public class Pattern_3 : TestManager
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         DataObj = jo.ToObject<Data_3>();
     }
 
