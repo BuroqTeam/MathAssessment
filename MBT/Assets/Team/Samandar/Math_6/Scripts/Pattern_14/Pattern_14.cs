@@ -51,11 +51,6 @@ public class Pattern_14 : MonoBehaviour
     void PrefabsInstantiate()
     {
         List<string> solution1 = DataObj.solution;
-        //for (int i = 0; i < solution1.Count; i++)
-        //{
-            
-        //}
-
         for (int i = 0; i < solution1.Count; i++)
         {
             GameObject obj = Instantiate(ConsiderationsPrefabs, Solution.transform);
@@ -65,7 +60,7 @@ public class Pattern_14 : MonoBehaviour
 
             if (likeName.Contains('*'))
             {
-                Solution.transform.GetChild(i).transform.GetComponent<AnswerPattern_14>().PattenBool = true;
+                Solution.transform.GetChild(i).transform.GetComponent<AnswerPattern_14>()._PattenBool = true;
                 likeName = likeName.Replace("[*]", "");
             }
             DataObj.solution[i] = likeName;

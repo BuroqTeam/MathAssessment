@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class AnswerPattern_14 : MonoBehaviour
 {
     public Pattern_14 Pattern14;
-    public bool PattenBool;
-    public Color blueColor;
-
+    public bool _PattenBool;
+    public Color color;
+    public ColorCollection colorCollection;
     Button button;
     
 
@@ -16,17 +16,26 @@ public class AnswerPattern_14 : MonoBehaviour
         button.onClick.AddListener(TaskOnClick);
     }
 
-    void TaskOnClick()
+    public void TaskOnClick()
     {
         foreach (Button btn in Pattern14.buttonGroup)
         {
+            //if (button.Equals(btn))
+            //{
+            //    btn.GetComponent<Image>().color = color;
+            //}
+            //else
+            //{
+            //    btn.GetComponent<Image>().color = Color.white;
+            //}
             if (button.Equals(btn))
             {
-                btn.GetComponent<Image>().color = blueColor;
+                btn.GetComponent<Image>().color = colorCollection.Blue;
+                Debug.Log("ko'k");
             }
             else
             {
-                btn.GetComponent<Image>().color = Color.white;
+                btn.GetComponent<Image>().color = colorCollection.White;
             }
         }       
     }
@@ -35,8 +44,15 @@ public class AnswerPattern_14 : MonoBehaviour
 
     public void Check()
     {
-        //GetComponent<Image>().color = new Color(0, 0.5803922f, 1, 1);
-        //gameObject.GetComponent<Image>().color
+        if (_PattenBool)
+        {
+            Debug.Log("Corrent");
+        }
+        else
+        {
+            Debug.Log("Wrong");
+        }
+        
     }
 
     
