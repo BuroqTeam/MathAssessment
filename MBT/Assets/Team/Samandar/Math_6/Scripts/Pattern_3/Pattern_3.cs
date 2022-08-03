@@ -21,6 +21,14 @@ public class Pattern_3 : TestManager
     public List<GameObject> CheckList2;
     public List<GameObject> CheckList4;
     public List<GameObject> CheckList6;
+    public List<GameObject> MainList = new List<GameObject>();
+    public int CorrectAnsNumbers;
+    public List<string> Ansver;
+    public List<List<string>> newSolution = new List<List<string>>();
+    public List<string> SmallList;
+
+   
+
 
     void Start()
     {
@@ -34,10 +42,6 @@ public class Pattern_3 : TestManager
         
 
         List<string> solution1 = DataObj.solution[0];
-        for (int i = 0; i < DataObj.solution.Count; i++)
-        {
-
-        }
         for (int i = 0; i < problem1.Count; i++)
         {
             NumbersParent[i].transform.parent.gameObject.transform.GetComponent<HorizontalLayoutGroup>().enabled = false;
@@ -91,11 +95,7 @@ public class Pattern_3 : TestManager
         //Questions.text = objaa.title;
 
     }
-
-
-    public List<GameObject> MainList = new List<GameObject>();
-    public int CorrectAnsNumbers;
-    public List<string> Ansver;
+       
 
     public void CheckingAnswer()
     {
@@ -140,8 +140,6 @@ public class Pattern_3 : TestManager
         
     }
 
-    public List<List<string>> newSolution = new List<List<string>>();
-    public List<string> SmallList;
     public void RemakeJsonSolution()
     {
         newSolution = new List<List<string>>(DataObj.solution);       
