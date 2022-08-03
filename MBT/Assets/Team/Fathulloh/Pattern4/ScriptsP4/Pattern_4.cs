@@ -8,10 +8,9 @@ public class Pattern_4 : TestManagerSample
 {
     public DataBaseSO DataBase;
     public TextAsset CurrentJsonText;
-
-    //public TextAsset JsonText;
-    //private GameObject MainParent;
-    //public GameObject QuestionObj;
+    public SpriteCollectionSO spriteCOllectionSO;
+    public GameObject PicturePrefab;
+    
 
     public List<GameObject> MainObjs;
     public GameObject ParentComparisonPrefab;
@@ -24,7 +23,7 @@ public class Pattern_4 : TestManagerSample
     public Sprite Sprite_Left, Sprite_Right;        //
 
     int totalFullAns, totalCorrectAns;
-
+    Sprite spriteOfImage;
 
     private void Awake()
     {
@@ -52,33 +51,34 @@ public class Pattern_4 : TestManagerSample
     }
 
 
-    //void Start()
-    //{
-    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
-    //    ReadFromJson();
-    //}
-
 
     void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj);
         Pattern_4Obj = jo.ToObject<Data_4>();
-        //Pattern_4Obj = jsonObj["chapters"][2]["questions"][39]["question"].ToObject<Data_4>();
+        
         CreatePrefabs();
     }
 
     void CreatePrefabs()
     {
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_4Obj.title;
-                
+        //for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
+        //{
+        //    string str = Pattern_4Obj.statements[i];
+        //    _spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
+        //    GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
+        //    obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
+        //    obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] + " " + Pattern_10Obj.options[i][2];
+        //}
+
         for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
         {
             if (i == 0)            {
                 MainObjs[0].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
                 Statement1 = Pattern_4Obj.statements[i].statement;//
                 ImagePath1 = Pattern_4Obj.statements[i].image;//
+
             }
             else if (i == 1)    {
                 MainObjs[2].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
