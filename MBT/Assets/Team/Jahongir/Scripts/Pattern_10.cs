@@ -51,6 +51,7 @@ public class Pattern_10 : TestManager
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_10");
         Pattern_10Obj = jo.ToObject<Data_10>();
+        Debug.Log(Pattern_10Obj);
         CreatePrefabs();
     }
 

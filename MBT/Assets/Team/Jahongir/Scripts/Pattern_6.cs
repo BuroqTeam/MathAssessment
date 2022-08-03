@@ -18,7 +18,8 @@ public class Pattern_6 : TestManager
     private void Awake()
     {
         Mbt.SaveJsonPath("Pattern_6", 0, 50);
-        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
+
+        ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
