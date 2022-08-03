@@ -61,7 +61,7 @@ public class Pattern_10 : TestManager
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
             string str = Pattern_10Obj.options[i][0];
-            _spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
+            //_spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
             GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
             obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
             obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] +" " + Pattern_10Obj.options[i][2];
