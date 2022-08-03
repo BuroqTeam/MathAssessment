@@ -26,7 +26,7 @@ public class Pattern_9 : TestManager
 
     private void Awake()
     {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
-        Mbt.SaveJsonPath(8, 55);
+        Mbt.SaveJsonPath("key",8, 55);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -60,7 +60,7 @@ public class Pattern_9 : TestManager
     void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         Pattern_9Obj = jo.ToObject<Data_9>();
         //Pattern_9Obj = jsonObj["chapters"][1]["questions"][59]["question"].ToObject<Data_9>();
         CreatePrefabs();
