@@ -1,3 +1,4 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class Pattern_3 : TestManager
 {
+    public DataBaseSO DataBase;
     public TextAsset jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
@@ -15,7 +17,6 @@ public class Pattern_3 : TestManager
     public GameObject NumberAreaPrefabs;
     public List<GameObject> NumberArea;
     private GameObject MainParent;
-    public Data_3 DataObj;
     public TEXDraw NumberActions;
     public List<GameObject> NumberInstantiate;
     public List<GameObject> CheckList2;
@@ -26,17 +27,37 @@ public class Pattern_3 : TestManager
     public List<string> Ansver;
     public List<List<string>> newSolution = new List<List<string>>();
     public List<string> SmallList;
+    Data_3 DataObj = new Data_3();
 
-   
+    private void Awake()
+    {
+        Mbt.SaveJsonPath(0, 26);
+
+        ES3.Save<string>("LanguageKey", "Uzb");
+
+        ES3.Save<int>("ClassKey", 6);
+
+        jsonText = Mbt.GetDesiredJSONData(DataBase);
+
+        ReadFromJson();
+    }
+
+
+    public void ReadFromJson()
+    {
+        var jsonObj = JObject.Parse(jsonText.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        DataObj = jo.ToObject<Data_3>();
+    }
 
 
     void Start()
     {
 
-        var jsonObj = JObject.Parse(jsonText.text);
+        //var jsonObj = JObject.Parse(jsonText.text);
                
        
-        DataObj = jsonObj["chapters"][2]["questions"][26]["question"].ToObject<Data_3>();
+        //DataObj = jsonObj["chapters"][2]["questions"][26]["question"].ToObject<Data_3>();
         List<string> problem1 = DataObj.problem;
 
         
