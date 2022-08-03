@@ -54,7 +54,7 @@ public class Pattern_10 : TestManager
 
     public void CreatePrefabs()
     {
-        transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
@@ -78,7 +78,7 @@ public class Pattern_10 : TestManager
             }
         }
         //This is for Grid2
-        transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
         {
             GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(2).transform);
@@ -89,7 +89,7 @@ public class Pattern_10 : TestManager
             }
         }
         //This is for Grid3
-        transform.GetChild(3).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //transform.GetChild(3).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
         {
             GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(3).transform);
