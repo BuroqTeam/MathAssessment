@@ -37,7 +37,7 @@ public class Pattern_1 : TestManagerSample
             AlphabetList.Add(c);
         }
 
-        Mbt.SaveJsonPath(1, 8);
+        Mbt.SaveJsonPath("key", 1, 8);
         ES3.Save<string>("LanguageKey", "Class_6_Uzb");
         ES3.Save<int>("ClassKey", 6);
         //_jsonData = Mbt.GetDesiredJSON(dataBase);
@@ -61,7 +61,7 @@ public class Pattern_1 : TestManagerSample
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(JsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         Pattern_1Obj = jo.ToObject<Data_1>();
         CreatePrefabs2();
     }

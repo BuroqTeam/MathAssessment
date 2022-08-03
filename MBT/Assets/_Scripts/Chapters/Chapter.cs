@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Newtonsoft.Json.Linq;
-using Unity.VisualScripting;
-using System.Linq;
 
 public class Chapter : MonoBehaviour
 {
@@ -18,7 +14,7 @@ public class Chapter : MonoBehaviour
 
     public ChapterRaw chapterRaw = new ChapterRaw();
     JObject jo;
-    public TestGroupSO TestGroup;
+  
 
 
 
@@ -29,25 +25,27 @@ public class Chapter : MonoBehaviour
         ChapterNameTxt.text = chapterRaw.name;
         jo = jsonObj;
         JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
-        questionGroup = questions.ToObject<IList<Question>>();
-        TestGroup.questions = questions;
-        
+        questionGroup = questions.ToObject<IList<Question>>();        
+       
+        // questionGroup.Count  100
+        // TestGroup.questions o'ziga tegishli savollar ni oladi       
     }
 
     public void SetPath()
     {
-        string sample = questionGroup[0].pattern;
+        string sample = questionGroup[0].pattern;       
         int k = 0;
         for (int i = 0; i < questionGroup.Count; i++)
         {
             if (sample.Equals(questionGroup[i].pattern))
             {
                 k++;
-            }            
+            }
         }
-        TestGroup.NumberOfTestGroup = k;
-        TestGroup.Name = chapterRaw.name;
-        TestGroup.Description = chapterRaw.description;
+        ES3.Save<int>("NumberOfTestGroup", k);
+        ES3.Save<string>("ChapterName", chapterRaw.name);
+        ES3.Save<string>("ChapterDescription", chapterRaw.description);        
+        GetComponent<SceneManager>().LoadLocalScene();
     }
 
 }

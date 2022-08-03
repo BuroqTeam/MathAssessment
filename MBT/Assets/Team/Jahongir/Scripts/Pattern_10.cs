@@ -22,8 +22,10 @@ public class Pattern_10 : TestManager
 
     private void Awake()
     {
-        //sp = Mbt.GetDesiredSprite("ss", spriteCOllectionSO);
-        Mbt.SaveJsonPath(0, 62);
+        Mbt.SaveJsonPath("key", 0, 100);
+
+
+        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -46,8 +48,8 @@ public class Pattern_10 : TestManager
 
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        var jsonObj = JObject.Parse(CurrentJsonData.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         Pattern_10Obj = jo.ToObject<Data_10>();
         CreatePrefabs();
     }

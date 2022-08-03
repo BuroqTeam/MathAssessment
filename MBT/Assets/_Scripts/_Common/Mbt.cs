@@ -29,16 +29,16 @@ namespace MBT.Extension
         }
 
 
-        public static void SaveJsonPath(int chapterID, int questionsId)
+        public static void SaveJsonPath(string key, int chapterID, int questionsId)
         {
             int[] array = new int[2] { chapterID, questionsId };
-            ES3.Save<int[]>("SaveJsonPath", array);
+            ES3.Save<int[]>(key, array);
         }
 
-        public static JObject LoadJsonPath(JObject jsonObj)
+        public static JObject LoadJsonPath(JObject jsonObj, string key)
         {
             JObject json = new JObject();
-            int[] array = ES3.Load<int[]>("SaveJsonPath");
+            int[] array = ES3.Load<int[]>(key);
             json = (JObject)jsonObj["chapters"][array[0]]["questions"][array[1]]["question"];
             return json;
         }
