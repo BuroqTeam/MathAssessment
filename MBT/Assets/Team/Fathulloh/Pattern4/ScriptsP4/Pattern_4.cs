@@ -1,3 +1,4 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,9 +6,12 @@ using UnityEngine;
 
 public class Pattern_4 : TestManagerSample
 {
-    public TextAsset JsonText;
-    private GameObject MainParent;
-    public GameObject QuestionObj;
+    public DataBaseSO DataBase;
+    public TextAsset CurrentJsonText;
+
+    //public TextAsset JsonText;
+    //private GameObject MainParent;
+    //public GameObject QuestionObj;
 
     public List<GameObject> MainObjs;
     public GameObject ParentComparisonPrefab;
@@ -24,28 +28,50 @@ public class Pattern_4 : TestManagerSample
 
     private void Awake()
     {
-        
-    }
+        Mbt.SaveJsonPath(7, 30);
 
+        ES3.Save<string>("LanguageKey", "Uzb");
 
-    void Start()
-    {
-        MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+        ES3.Save<int>("ClassKey", 6);
+
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
         ReadFromJson();
     }
 
+
+
+    private void OnEnable()
+    {
+        DisplayQuestion(Pattern_4Obj.title);
+    }
+
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr); // null        
+    }
+
+
+    //void Start()
+    //{
+    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
+    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+    //    ReadFromJson();
+    //}
+
+
     void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(JsonText.text);
-
-        Pattern_4Obj = jsonObj["chapters"][2]["questions"][39]["question"].ToObject<Data_4>();
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        Pattern_4Obj = jo.ToObject<Data_4>();
+        //Pattern_4Obj = jsonObj["chapters"][2]["questions"][39]["question"].ToObject<Data_4>();
         CreatePrefabs();
     }
 
     void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern_4Obj.title;
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_4Obj.title;
                 
         for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
         {
@@ -66,7 +92,7 @@ public class Pattern_4 : TestManagerSample
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
         float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
         
-        Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
+        //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
 
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
         {            
