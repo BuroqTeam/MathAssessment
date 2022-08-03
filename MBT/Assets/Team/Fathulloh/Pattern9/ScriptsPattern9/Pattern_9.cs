@@ -101,7 +101,6 @@ public class Pattern_9 : TestManager
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CorrectAnswer = Pattern_9Obj.options[i].sign.ToString();
             ComparisonObjects[i].transform.GetChild(2).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_9Obj.options[i].right;
         }
-
     }
 
     
