@@ -43,13 +43,12 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
 
-        if (_IsFirstTime)        {
-            _IsFirstTime = false;
-            DropDownObj.ClearOptions();
-            StrList = new List<string>() {">", "<", "=" };
-            DropDownObj.AddOptions(StrList);
-        }
-
+        //if (_IsFirstTime)        {
+        //    _IsFirstTime = false;
+        //    DropDownObj.ClearOptions();
+        //    StrList = new List<string>() {">", "<", "=" };
+        //    DropDownObj.AddOptions(StrList);
+        //}
         CheckingAnswer();
     }
 
@@ -65,15 +64,10 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
     }
 
 
-    //public void DDOnValueChange()
-    //{
-    //    Debug.Log("Drop Down On Value Change! ");        
-    //}
-
-
+    
     public void OnPointerClick(PointerEventData eventData)
     {
-        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
+        //DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
         //Debug.Log(888);
     }
 }

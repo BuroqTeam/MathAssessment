@@ -37,7 +37,7 @@ public class Pattern_1 : TestManagerSample
             AlphabetList.Add(c);
         }
 
-        Mbt.SaveJsonPath("key", 1, 8);
+        Mbt.SaveJsonPath("Pattern_1", 1, 8);
         ES3.Save<string>("LanguageKey", "Class_6_Uzb");
         ES3.Save<int>("ClassKey", 6);
         //_jsonData = Mbt.GetDesiredJSON(dataBase);
@@ -61,7 +61,7 @@ public class Pattern_1 : TestManagerSample
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(JsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
         Pattern_1Obj = jo.ToObject<Data_1>();
         CreatePrefabs2();
     }
@@ -120,15 +120,12 @@ public class Pattern_1 : TestManagerSample
 
 
 
-
     //void Start()
     //{
     //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
 
     //    QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
-    //    Debug.Log(gameObject.transform.parent.transform.parent.GetChild(8).gameObject.name);
-    //    //Debug.Log(MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject.name);
-        
+    //    Debug.Log(gameObject.transform.parent.transform.parent.GetChild(8).gameObject.name);    
     //    WriteTest();
     //}
 
