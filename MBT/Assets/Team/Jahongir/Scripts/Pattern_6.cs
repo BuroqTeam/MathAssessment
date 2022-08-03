@@ -12,29 +12,26 @@ using System;
 public class Pattern_6 : TestManager
 {
     public DataBaseSO DataBase;
-    private AssetReference _jsonData;
     public TextAsset CurrentJsonText;
     Data_6 Pattern_6Obj = new Data_6();
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("key", 0, 50);
+        Mbt.SaveJsonPath("Pattern_6", 0, 50);
         ES3.Save<string>("LanguageKey", "Class_6_Uzb");
-        ES3.Save<int>("ClassKey", 6);
-        //_jsonData = Mbt.GetDesiredJSON(DataBase);
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
-    }
 
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        CurrentJsonText = obj.Result;
+        ES3.Save<int>("ClassKey", 6);
+
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+
         ReadFromJson();
     }
 
-    private void Start()
-    { 
-        
+    private void OnEnable()
+    {
+        DisplayQuestion(Pattern_6Obj.title);
     }
+
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
@@ -45,7 +42,7 @@ public class Pattern_6 : TestManager
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_6");
         Pattern_6Obj = jo.ToObject<Data_6>();
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_6Obj.problem[0];
     }

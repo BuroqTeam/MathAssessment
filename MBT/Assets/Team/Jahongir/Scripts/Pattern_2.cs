@@ -7,47 +7,27 @@ using MBT.Extension;
 using System;
 
 public class Pattern_2 : TestManager
-{    
-    
-    public AssetReference ButtonAddressable;
-    public DataBaseSO dataBase;
+{  
+    public DataBaseSO DataBase;
+    public GameObject Button;
+    public TextAsset CurrentJsonText;
 
-    private AssetReference _jsonData;
-    public  GameObject _button;
-    public TextAsset _currentJsonText;
     Data_2 Pattern_2Obj = new Data_2();
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("key", 0, 10);
+        Mbt.SaveJsonPath("Pattern_2", 0, 10);
 
-
-        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
-
+        ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-        //_jsonData = Mbt.GetDesiredJSON(dataBase);      
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
-    }
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
 
-   
-
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        _currentJsonText = obj.Result;
-        ButtonAddressable.LoadAssetAsync<GameObject>().Completed += ButtonAddressableObjLoaded;
-    }
-
-   
-
-    private void ButtonAddressableObjLoaded(AsyncOperationHandle<GameObject> obj)
-    {
-        _button = obj.Result;
         ReadFromJson();
     }
 
-   
+    
     private void OnEnable()
     {
         DisplayQuestion(Pattern_2Obj.title);
@@ -61,8 +41,8 @@ public class Pattern_2 : TestManager
 
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(_currentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_2");
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
     }
@@ -76,13 +56,13 @@ public class Pattern_2 : TestManager
             {
                 if (i< Pattern_2Obj.options.Count/2)
                 {
-                    GameObject button = Instantiate(_button, transform);
+                    GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1)-i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                 }
                 else
                 {
-                    GameObject button = Instantiate(_button, transform);
+                    GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - w) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     w++;
@@ -96,13 +76,13 @@ public class Pattern_2 : TestManager
             {
                 if (i < Pattern_2Obj.options.Count / 2)
                 {
-                    GameObject button = Instantiate(_button, transform);
+                    GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                 }
                 else
                 {
-                    GameObject button = Instantiate(_button, transform);
+                    GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + q) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     q++;
