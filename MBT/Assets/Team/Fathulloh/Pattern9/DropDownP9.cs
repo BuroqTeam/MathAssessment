@@ -20,22 +20,33 @@ public class DropDownP9 : MonoBehaviour, IPointerClickHandler
     public string CurrentAnswer;
 
 
+    bool _IsFirstTime = true;
+
+
     void Start()
     {
         PopulateList();
     }
 
+
+    /// <summary>
+    /// DropDownning optionniga elementlarni qo'shib beruvchi kod.
+    /// </summary>
     void PopulateList()
     {
         StrList = new List<string>() { TextForTranslating, ">", "<", "=" };
         DropDownObj.AddOptions(StrList);
     }
 
-    bool _IsFirstTime = true;
+    
+    /// <summary>
+    /// Qiymat o'zgarganda ishlovchi metod. Bu metod ishlaganda tanlangan qiymat currentAnswerga yoziladi.
+    /// </summary>
+    /// <param name="index"></param>
     public void DropDown_IndexChangedd(int index)
     {
         CurrentAnswer = StrList[index];
-        Debug.Log("  " + StrList[index]);
+        //Debug.Log("  " + StrList[index]);
         DropDownGameObject.GetComponent<Image>().sprite = DropDownBlueSprite;
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
@@ -49,7 +60,6 @@ public class DropDownP9 : MonoBehaviour, IPointerClickHandler
             StrList = new List<string>() { ">", "<", "=" };
             DropDownObj.AddOptions(StrList);
         }
-
         CheckingAnswer();
     }
 
@@ -67,10 +77,13 @@ public class DropDownP9 : MonoBehaviour, IPointerClickHandler
     }
 
 
+    /// <summary>
+    /// Click bo'lganda ishlovchi method.
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnPointerClick(PointerEventData eventData)
     {
-        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
-        //Debug.Log(888);
+        DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;        
     }
 
 }
