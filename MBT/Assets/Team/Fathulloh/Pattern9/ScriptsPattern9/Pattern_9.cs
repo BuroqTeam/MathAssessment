@@ -1,65 +1,87 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Pattern_9 : MonoBehaviour
+public class Pattern_9 : TestManager
 {
-    public TextAsset JsonText;
-    private GameObject MainParent;
-    public GameObject QuestionObj;
+    public DataBaseSO DataBase;
+    public TextAsset CurrentJsonText;
 
+    //public TextAsset JsonText;      //-
+    //private GameObject MainParent;  //-
+    //public GameObject QuestionObj;  //-
+        
     public GameObject ParentComparisonPrefab;
-
-    Data_9 Pattern_9Obj = new Data_9();
-
-
     public List<GameObject> ComparisonObjects;
 
-    public TMP_Text TextForTranslating;
+    Data_9 Pattern_9Obj = new Data_9();    
 
-    float yPos, xPos, yDistance, xDistance;
+    public TMP_Text TextForTranslating;
+    float /*yPos,*/ xPos, yDistance, xDistance;
     int totalFullAns, totalCorrectAns;
 
+
     private void Awake()
-    {
+    {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
+        Mbt.SaveJsonPath(8, 55);
 
-    }
+        ES3.Save<string>("LanguageKey", "Uzb");
 
+        ES3.Save<int>("ClassKey", 6);
 
-    void Start()
-    {
-        MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
         ReadFromJson();
     }
 
 
+    private void OnEnable()
+    {
+        DisplayQuestion(Pattern_9Obj.title);
+    }
+
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr); // null        
+    }
+
+
+    //void Start()
+    //{
+    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
+    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+    //    ReadFromJson();
+    //}
+
+
     void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(JsonText.text);
-
-        Pattern_9Obj = jsonObj["chapters"][1]["questions"][59]["question"].ToObject<Data_9>();
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj);
+        Pattern_9Obj = jo.ToObject<Data_9>();
+        //Pattern_9Obj = jsonObj["chapters"][1]["questions"][59]["question"].ToObject<Data_9>();
         CreatePrefabs();
     }
 
 
     void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //-
         int optionsCount = Pattern_9Obj.options.Count;
 
         xDistance = ParentComparisonPrefab.transform.GetChild(1).position.x - ParentComparisonPrefab.transform.GetChild(0).position.x ;
         xPos = xDistance - ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.width;
         yDistance = xPos + ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.height;
-        Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
+        //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
 
         for (int i = 0; i < optionsCount; i++)
         {
             GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
-            obj.transform.GetChild(1).GetComponent<DropDownP9>().TextForTranslating = TextForTranslating.text;
+            //obj.transform.GetChild(1).GetComponent<DropDownP9>().TextForTranslating = TextForTranslating.text;
 
             if (i != 0)             {
                 obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
@@ -77,7 +99,6 @@ public class Pattern_9 : MonoBehaviour
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_9Obj.options[i].left;
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CorrectAnswer = Pattern_9Obj.options[i].sign.ToString();
-            //ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CorrectAnswer = Pattern_9Obj.options[i].sign.ToString();
             ComparisonObjects[i].transform.GetChild(2).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_9Obj.options[i].right;
         }
 

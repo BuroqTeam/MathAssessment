@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 {
+    public string AddressToTerm;
     public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/; 
 
     public TMP_Dropdown DropDownObj;
@@ -27,7 +28,7 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
 
     void PopulateList()
     {
-        StrList = new List<string>() { "Tanlang", ">", "<", "=" };
+        StrList = new List<string>() { I2.Loc.LocalizationManager.GetTranslation(AddressToTerm), ">", "<", "=" };
         DropDownObj.AddOptions(StrList);        
     }
 
