@@ -94,6 +94,7 @@ public class Pattern_1 : TestManagerSample
             GameObject obj = Instantiate(PrefabA, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
             obj.transform.localPosition = new Vector3(oldPos.x, yPos - yLength * i, 0);
+            Debug.Log( yPos - yLength * i);
             obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
             ABCD.Add(obj);
         }
