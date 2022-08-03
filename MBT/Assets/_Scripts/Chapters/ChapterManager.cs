@@ -95,6 +95,7 @@ public class ChapterManager : MonoBehaviour
             ChapterGorup[k].chapterRaw.name = item.name;
             ChapterGorup[k].chapterRaw.number = item.number;
             ChapterGorup[k].chapterRaw.description = item.description;
+           
             k++;
         }
         foreach (Chapter item in ChapterGorup)

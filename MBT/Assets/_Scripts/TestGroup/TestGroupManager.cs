@@ -21,16 +21,16 @@ public class TestGroupManager : MonoBehaviour
     public List<TestGroup> TestGroupPrefabGorup = new List<TestGroup>();
 
     public GameObject TestGroupObj;
-    public TestGroupSO TestGroupSO;
+   
     private TextAsset _curentJson;
     
 
 
     private void Awake()
     {
-        ChapterName.text = TestGroupSO.Name;
-        ChapterDescription.text = TestGroupSO.Description;
-        Debug.Log(TestGroupSO.Description);
+        ChapterName.text = ES3.Load<string>("ChapterName");
+        ChapterDescription.text = ES3.Load<string>("ChapterDescription");
+
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
         JsonCollectionSO.DataBase.Clear();
         ReadJSON();
@@ -50,7 +50,7 @@ public class TestGroupManager : MonoBehaviour
 
     void SetScrollRect()
     {
-        if (TestGroupSO.NumberOfTestGroup > 10)
+        if (ES3.Load<int>("NumberOfTestGroup") > 10)
         {
             ScrollRectObj.enabled = true;
             Color col = Color.gray;
@@ -70,9 +70,9 @@ public class TestGroupManager : MonoBehaviour
 
     void CreateTestGroup()
     {
-        if (TestGroupSO.NumberOfTestGroup > 0)
+        if (ES3.Load<int>("NumberOfTestGroup") > 0)
         {
-            for (int i = 0; i < TestGroupSO.NumberOfTestGroup; i++)
+            for (int i = 0; i < ES3.Load<int>("NumberOfTestGroup"); i++)
             {
                 GameObject obj = Instantiate(TestGroupObj);
                 obj.transform.SetParent(GridLayout.transform);
