@@ -13,7 +13,9 @@ public class Pattern_10 : TestManager
     public DataBaseSO DataBase;
     public TextAsset CurrentJsonText;
     public GameObject OptionPrefab;
-    public Sprite SpriteName;
+    public GameObject Tile1Prefab;
+    public GameObject Tile2Prefab;
+    public Sprite SpriteImage;
     Data_10 Pattern_10Obj = new Data_10();
     
 
@@ -52,22 +54,52 @@ public class Pattern_10 : TestManager
 
     public void CreatePrefabs()
     {
-        string str = Pattern_10Obj.options[0][0];
-        SpriteName = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
-        Debug.Log(SpriteName.name);
+        transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
-            Instantiate(OptionPrefab, transform.GetChild(0).transform);
-            //OptionPrefab.transform.GetChild(0).GetComponent<Image>()
-            OptionPrefab.transform.GetChild(1).GetComponent<TEXDraw>().text = Pattern_10Obj.options[i][2];
-            OptionPrefab.transform.GetChild(1).GetComponent<TEXDraw>().text = " " + Pattern_10Obj.options[i][1];
+            string str = Pattern_10Obj.options[i][0];
+            SpriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
+            GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
+            obj.transform.GetChild(1).GetComponent<Image>().sprite = SpriteImage;
+            obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] +" " + Pattern_10Obj.options[i][2];
         }
-        //Debug.Log(Pattern_10Obj.statements[0].Count);
+        //This is for Grid1
+        for (int i = 0; i < Pattern_10Obj.statements.Count ; i++)
+        {
+            for (int j = 0; j < Pattern_10Obj.statements[i].Count; j++)
+            {
+                GameObject obj1 = Instantiate(Tile1Prefab, transform.GetChild(1).transform);
+                obj1.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[i][j];
+                if (j == 0)
+                {
+                    obj1.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                }
+            }
+        }
+        //This is for Grid2
+        transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
+        {
+            GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(2).transform);
+            obj2.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
+            if (i == 0)
+            {
+                obj2.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+            }
+        }
+        transform.GetChild(3).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
+        {
+            GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(3).transform);
+            if (i == 0)
+            {
+                obj3.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
+                obj3.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+            }
+        }
+        transform.GetChild(3).transform.SetParent(transform.GetChild(2).transform);
     }
-
-
-
-
 }
 
 [SerializeField]
