@@ -12,29 +12,27 @@ using System;
 public class Pattern_6 : TestManager
 {
     public DataBaseSO DataBase;
-    private AssetReference _jsonData;
     public TextAsset CurrentJsonText;
     Data_6 Pattern_6Obj = new Data_6();
 
     private void Awake()
     {
-        //Mbt.SaveJsonPath(0, 50);
-        //ES3.Save<string>("LanguageKey", "Class_6_Uzb");
-        //ES3.Save<int>("ClassKey", 6);
-        //_jsonData = Mbt.GetDesiredJSON(DataBase);
-        //_jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
-    }
+        Mbt.SaveJsonPath(0, 50);
 
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        CurrentJsonText = obj.Result;
+        ES3.Save<string>("LanguageKey", "Uzb");
+
+        ES3.Save<int>("ClassKey", 6);
+
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+
         ReadFromJson();
     }
 
-    private void Start()
-    { 
-        
+    private void OnEnable()
+    {
+        DisplayQuestion(Pattern_6Obj.title);
     }
+
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);

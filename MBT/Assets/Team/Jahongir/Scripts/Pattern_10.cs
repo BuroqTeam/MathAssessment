@@ -5,45 +5,31 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
 using System;
+using UnityEngine.UI;
 
 public class Pattern_10 : TestManager
 {
+    public SpriteCollectionSO spriteCOllectionSO;
     public DataBaseSO DataBase;
     public TextAsset CurrentJsonText;
+    public GameObject OptionPrefab;
+    public Sprite SpriteName;
     Data_10 Pattern_10Obj = new Data_10();
+    
+
 
     private void Awake()
     {
-        Mbt.SaveJsonPath(0, 72);
+        //sp = Mbt.GetDesiredSprite("ss", spriteCOllectionSO);
+        Mbt.SaveJsonPath(0, 62);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-        Tekshir();
-    }
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
 
-    private void Tekshir()
-    {
-        DataBase.CreateDict();
-        TextAsset TextAsset = new TextAsset();
-        string currentLanguage = ES3.Load<string>("LanguageKey");
-        int currentClass = ES3.Load<int>("ClassKey");
-        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
-        JsonDictionary = DataBase.DataBase;
-        List<TextAsset> list = new List<TextAsset>();
-        if (JsonDictionary.TryGetValue(currentClass, out list))
-        {
-            foreach (TextAsset txtAsset in list)
-            {
-                if (txtAsset.name.Equals(currentLanguage))
-                {
-                    TextAsset = txtAsset;
-                }
-            }
-        }
-        CurrentJsonText = TextAsset;
-        ReadJson();
+        ReadFromJson();
     }
 
     private void OnEnable()
@@ -56,7 +42,7 @@ public class Pattern_10 : TestManager
         base.DisplayQuestion(questionStr); // null        
     }
 
-    public void ReadJson()
+    public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj);
@@ -66,7 +52,17 @@ public class Pattern_10 : TestManager
 
     public void CreatePrefabs()
     {
-        
+        string str = Pattern_10Obj.options[0][0];
+        SpriteName = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
+        Debug.Log(SpriteName.name);
+        for (int i = 0; i < Pattern_10Obj.options.Count; i++)
+        {
+            Instantiate(OptionPrefab, transform.GetChild(0).transform);
+            //OptionPrefab.transform.GetChild(0).GetComponent<Image>()
+            OptionPrefab.transform.GetChild(1).GetComponent<TEXDraw>().text = Pattern_10Obj.options[i][2];
+            OptionPrefab.transform.GetChild(1).GetComponent<TEXDraw>().text = " " + Pattern_10Obj.options[i][1];
+        }
+        //Debug.Log(Pattern_10Obj.statements[0].Count);
     }
 
 
