@@ -15,7 +15,7 @@ public class Pattern_10 : TestManager
     public GameObject OptionPrefab;
     public GameObject Tile1Prefab;
     public GameObject Tile2Prefab;
-    public Sprite SpriteImage;
+    private Sprite _spriteImage;
     Data_10 Pattern_10Obj = new Data_10();
     
 
@@ -59,9 +59,9 @@ public class Pattern_10 : TestManager
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
             string str = Pattern_10Obj.options[i][0];
-            SpriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
+            _spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
             GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
-            obj.transform.GetChild(1).GetComponent<Image>().sprite = SpriteImage;
+            obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
             obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] +" " + Pattern_10Obj.options[i][2];
         }
         //This is for Grid1
@@ -88,6 +88,7 @@ public class Pattern_10 : TestManager
                 obj2.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
             }
         }
+        //This is for Grid3
         transform.GetChild(3).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
         {
