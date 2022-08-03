@@ -10,9 +10,8 @@ public class Pattern_2 : TestManager
 {  
     public DataBaseSO DataBase;
     public GameObject Button;
-
     public TextAsset CurrentJsonText;
-    public TextAsset TextAsset;
+
     Data_2 Pattern_2Obj = new Data_2();
 
     private void Awake()
@@ -23,7 +22,9 @@ public class Pattern_2 : TestManager
 
         ES3.Save<int>("ClassKey", 6);
 
-        Tekshir();
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+
+        ReadFromJson();
     }
 
     
@@ -44,35 +45,6 @@ public class Pattern_2 : TestManager
         JObject jo = Mbt.LoadJsonPath(jsonObj);
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
-    }
-    private void  Tekshir() 
-    {
-        DataBase.CreateDict();
-        TextAsset = new TextAsset();
-        string currentLanguage = ES3.Load<string>("LanguageKey");
-        int currentClass = ES3.Load<int>("ClassKey");
-        Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>();
-        JsonDictionary = DataBase.DataBase;
-        List<TextAsset> list = new List<TextAsset>();
-        if (JsonDictionary.TryGetValue(currentClass, out list))
-        {
-            foreach (TextAsset txtAsset in list)
-            {
-                if (txtAsset.name.Equals(currentLanguage))
-                {
-                    TextAsset = txtAsset;
-                }
-            }
-        }
-        CurrentJsonText = TextAsset;
-        if (CurrentJsonText == null)
-        {
-            Debug.Log("Wrong");
-        }
-        else
-        {
-            ReadFromJson();
-        }
     }
 
     public void CreatePrefabs()

@@ -1,7 +1,6 @@
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace MBT.Extension
 {
@@ -45,6 +44,16 @@ namespace MBT.Extension
         }
 
 
+        public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
+        {           
+            string[] splitedGroup = spriteAddress.Split("\\");
+            string spriteName = splitedGroup[splitedGroup.Length - 1];
+            splitedGroup = spriteName.Split(".");
+            spriteName = splitedGroup[0];
+            Debug.Log(spriteName);
+            var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);            
+            return desiredSprite;            
+        }
     }
 
 }
