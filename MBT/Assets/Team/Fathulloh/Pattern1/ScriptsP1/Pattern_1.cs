@@ -12,8 +12,9 @@ public class Pattern_1 : TestManagerSample
 {           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
     public AssetReference ButtonA;
     public DataBaseSO dataBase;
-    private AssetReference _jsonData;
-
+    //private AssetReference _jsonData;
+    public DataBaseSO DataBase;
+    public TextAsset CurrentJsonText;
 
     public GameObject QuestionObj;      //---
     public TextAsset JsonText;          
@@ -41,7 +42,9 @@ public class Pattern_1 : TestManagerSample
         ES3.Save<string>("LanguageKey", "Class_6_Uzb");
         ES3.Save<int>("ClassKey", 6);
         //_jsonData = Mbt.GetDesiredJSON(dataBase);
-        _jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        //_jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        ReadFromJson();
     }
 
     private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)

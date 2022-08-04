@@ -2,7 +2,9 @@ using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pattern_4 : TestManagerSample
 {
@@ -63,14 +65,20 @@ public class Pattern_4 : TestManagerSample
 
     void CreatePrefabs()
     {
-        //for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
-        //{
-        //    string str = Pattern_4Obj.statements[i];
-        //    _spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
-        //    GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
-        //    obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
-        //    obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] + " " + Pattern_10Obj.options[i][2];
-        //}
+        Debug.Log(Pattern_4Obj.statements.Count);
+        for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
+        {
+            string str = Pattern_4Obj.statements[i].image;
+            spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
+            GameObject obj = Instantiate(PicturePrefab, transform);
+            Debug.Log(spriteOfImage.texture.height + " " + spriteOfImage.texture.width);
+            obj.transform.GetChild(1).GetComponent<Image>().sprite = spriteOfImage;
+
+            obj.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = new Vector2(spriteOfImage.texture.width / 5 * 4, spriteOfImage.texture.height / 5 * 4);
+            
+
+            obj.transform.GetChild(0).GetComponent<TMP_Text>().text = Pattern_4Obj.statements[i].statement;
+        }
 
         for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
         {
@@ -78,7 +86,6 @@ public class Pattern_4 : TestManagerSample
                 MainObjs[0].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
                 Statement1 = Pattern_4Obj.statements[i].statement;//
                 ImagePath1 = Pattern_4Obj.statements[i].image;//
-
             }
             else if (i == 1)    {
                 MainObjs[2].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
@@ -112,22 +119,22 @@ public class Pattern_4 : TestManagerSample
     }
 
 
-    ///// <summary>
-    ///// Sprite nomiga qarab sprite tanlab beruvchi method.
-    ///// </summary>
-    ///// <param name="spriteAddress">SpriteAdresi</param>
-    ///// <param name="spriteCollectionSO">Spritelar yig'ilgan Skriptbl Object</param>
-    ///// <returns></returns>
-    //public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
-    //{
-    //    string[] splitedGroup = spriteAddress.Split("\\");
-    //    string spriteName = splitedGroup[splitedGroup.Length - 1];
-    //    splitedGroup = spriteName.Split(".");
-    //    spriteName = splitedGroup[0];
-    //    Debug.Log(spriteName);
-    //    var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);
-    //    return desiredSprite;
-    //}
+    /// <summary>
+    /// Sprite nomiga qarab sprite tanlab beruvchi method.
+    /// </summary>
+    /// <param name="spriteAddress">SpriteAdresi</param>
+    /// <param name="spriteCollectionSO">Spritelar yig'ilgan Skriptbl Object</param>
+    /// <returns></returns>
+    public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
+    {
+        string[] splitedGroup = spriteAddress.Split("\\");
+        string spriteName = splitedGroup[splitedGroup.Length - 1];
+        splitedGroup = spriteName.Split(".");
+        spriteName = splitedGroup[0];
+        Debug.Log(spriteName);
+        var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);
+        return desiredSprite;
+    }
 
 
     public void CheckAllAnswers()
