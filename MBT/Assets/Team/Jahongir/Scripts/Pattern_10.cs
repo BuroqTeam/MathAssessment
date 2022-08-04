@@ -15,7 +15,9 @@ public class Pattern_10 : TestManager
     public GameObject OptionPrefab;
     public GameObject Tile1Prefab;
     public GameObject Tile2Prefab;
+    public List<GameObject> Tile1;
     private Sprite _spriteImage;
+    
     Data_10 Pattern_10Obj = new Data_10();
     
 
@@ -23,6 +25,8 @@ public class Pattern_10 : TestManager
     private void Awake()
     {
         Mbt.SaveJsonPath("Pattern_10", 0, 62);
+
+        ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
@@ -52,13 +56,13 @@ public class Pattern_10 : TestManager
 
     public void CreatePrefabs()
     {
-        //transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        transform.GetChild(0).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
             string str = Pattern_10Obj.options[i][0];
-            //_spriteImage = Mbt.GetDesiredSprite(str, spriteCOllectionSO);
-            GameObject obj = Instantiate(OptionPrefab, transform.GetChild(0).transform);
+            _spriteImage = GetDesiredSprite(str, spriteCOllectionSO);
+            GameObject obj = Instantiate(OptionPrefab, transform.GetChild(3).transform);
             obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
             obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] +" " + Pattern_10Obj.options[i][2];
         }
@@ -67,7 +71,7 @@ public class Pattern_10 : TestManager
         {
             for (int j = 0; j < Pattern_10Obj.statements[i].Count; j++)
             {
-                GameObject obj1 = Instantiate(Tile1Prefab, transform.GetChild(1).transform);
+                GameObject obj1 = Instantiate(Tile1Prefab, transform.GetChild(0).transform);
                 obj1.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[i][j];
                 if (j == 0)
                 {
@@ -76,10 +80,10 @@ public class Pattern_10 : TestManager
             }
         }
         //This is for Grid2
-        //transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
         {
-            GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(2).transform);
+            GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(1).transform);
             obj2.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
             if (i == 0)
             {
@@ -87,17 +91,33 @@ public class Pattern_10 : TestManager
             }
         }
         //This is for Grid3
-        //transform.GetChild(3).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
         {
-            GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(3).transform);
+            GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(2).transform);
             if (i == 0)
             {
                 obj3.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
                 obj3.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
             }
+            else
+            {
+                Tile1.Add(obj3);
+            }
         }
-        transform.GetChild(3).transform.SetParent(transform.GetChild(2).transform);
+        Debug.Log(Tile1.Count);
+        transform.GetChild(2).transform.SetParent(transform.GetChild(1).transform);
+    }
+
+    public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
+    {
+        string[] splitedGroup = spriteAddress.Split("\\");
+        string spriteName = splitedGroup[splitedGroup.Length - 1];
+        splitedGroup = spriteName.Split(".");
+        spriteName = splitedGroup[0];
+        Debug.Log(spriteName);
+        var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);
+        return desiredSprite;
     }
 }
 
