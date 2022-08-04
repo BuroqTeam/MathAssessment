@@ -13,15 +13,11 @@ public class TestGroupManager : MonoBehaviour
     public ScrollRect ScrollRectObj;
 
     public TMP_Text ChapterName;
-    public TMP_Text ChapterDescription;   
-    
-  
+    public TMP_Text ChapterDescription;       
 
     //[HideInInspector]
     public List<TestGroup> TestGroupButtons = new List<TestGroup>();
-
-    public GameObject TestGroupObj;
-   
+    public GameObject TestGroupObj;   
     private TextAsset _curentJson;
     
 
@@ -30,11 +26,9 @@ public class TestGroupManager : MonoBehaviour
     {
         ChapterName.text = ES3.Load<string>("ChapterName");
         ChapterDescription.text = ES3.Load<string>("ChapterDescription");
-
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
         JsonCollectionSO.DataBase.Clear();
-        ReadJSON();
-      
+        ReadJSON();      
     }
 
 
@@ -82,7 +76,6 @@ public class TestGroupManager : MonoBehaviour
             GridLayout.gameObject.SetActive(false);
             StartCoroutine(DisplayTestGroup());
         }
-
     }
 
     IEnumerator DisplayTestGroup()

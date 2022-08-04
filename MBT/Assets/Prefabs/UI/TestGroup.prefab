@@ -225,8 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fbfe31b9147a24b8550c9c4b6abe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blue: {r: 0, g: 0.5764706, b: 0.9921569, a: 1}
-  grey: {r: 0.7568628, g: 0.7490196, b: 0.7490196, a: 1}
+  colorSO: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
 --- !u!1 &987064295651954972
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,3 +671,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberTxt: {fileID: 1568044705313005610}
   RadilaSlider: {fileID: 987064294711842326}
+  RadialSliderValue: 0
+  colorSO: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
