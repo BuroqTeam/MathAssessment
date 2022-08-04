@@ -63,7 +63,6 @@ public class DropDownP9 : MonoBehaviour/*, IPointerClickHandler*/
         //    //DropDownObj.OnSelect(DropDownObj.options[1]);   
         //}
         
-        //Debug.Log(DropDownObj.options.Count);
         CheckingAnswer();
     }
 

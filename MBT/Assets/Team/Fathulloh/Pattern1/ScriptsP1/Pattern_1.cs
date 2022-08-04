@@ -39,32 +39,16 @@ public class Pattern_1 : TestManagerSample
 
         Mbt.SaveJsonPath("Pattern_1", 0, 6);
         ES3.Save<string>("LanguageKey", "Uzb");
+
         ES3.Save<int>("ClassKey", 6);
-        //_jsonData = Mbt.GetDesiredJSON(dataBase);
-        //_jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
+        
         CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
         ReadFromJson();
     }
-
-    //private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    //{
-    //    JsonText = obj.Result;
-    //    ButtonA.LoadAssetAsync<GameObject>().Completed += LoadButtonA;
-    //}
-
-
-    //private void LoadButtonA(AsyncOperationHandle<GameObject> obj)
-    //{
-    //    PrefabA = obj.Result;
-    //    ReadFromJson();
-    //}
-
+        
 
     public void ReadFromJson()
-    {
-        //var jsonObj = JObject.Parse(CurrentJsonText.text);
-        //JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
-        //Pattern_1Obj = jo.ToObject<Data_1>();
+    {        
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
         Pattern_1Obj = jo.ToObject<Data_1>();
@@ -99,7 +83,7 @@ public class Pattern_1 : TestManagerSample
             GameObject obj = Instantiate(PrefabA, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
             obj.transform.localPosition = new Vector3(oldPos.x, yPos - yLength * i, 0);
-            Debug.Log( yPos - yLength * i);
+            //Debug.Log( yPos - yLength * i);
             obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
             ABCD.Add(obj);
         }
@@ -123,69 +107,6 @@ public class Pattern_1 : TestManagerSample
 
     }
 
-
-
-    //void Start()
-    //{
-    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-    //    QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
-    //    Debug.Log(gameObject.transform.parent.transform.parent.GetChild(8).gameObject.name);    
-    //    WriteTest();
-    //}
-
-
-    public void CreatePrefabs()
-    {
-        int n = Pattern_1Obj.options.Count;        
-
-        if (n == 4) 
-        {
-            yPos = 250;
-            yLength = 125;
-        }
-
-        for (int i = 0; i < n; i++)
-        {
-            GameObject obj = Instantiate(PrefabA, this.transform);
-            Vector3 oldPos = obj.transform.localPosition;
-            obj.transform.localPosition = new Vector3(oldPos.x, yPos - yLength * i, 0);
-            obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
-            ABCD.Add(obj);
-        }
-    }
-
-
-    public void WriteTest()
-    {
-        var jsonObj = JObject.Parse(CurrentJsonText.text/*JsonText.text*/);
-        int ranNum = Random.Range(0, 10);
-
-        
-        // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]
-        Pattern_1Obj = jsonObj["chapters"][7]["questions"][5]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.         
-        Debug.Log(" Count of characters = " + Pattern_1Obj.title.Length);
-
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_1Obj.title;
-
-        CreatePrefabs();
-
-        List<string> str = Pattern_1Obj.options;
-        str = str.ShuffleList();
-        Pattern_1Obj.options = str;
-
-        for (int i = 0; i < ABCD.Count; i++)
-        {
-            var likeName = Pattern_1Obj.options[i];
-            ABCD[i].GetComponent<AnswerPattern1>().PatternOne = this;
-
-            if (likeName.Contains('*'))
-            {
-                ABCD[i].GetComponent<AnswerPattern1>()._IsTrue = true;
-                likeName = likeName.Replace("[*]", "");
-            }
-            ABCD[i].GetComponent<AnswerPattern1>().WriteCurrentAnswer(likeName);
-        }        
-    }
 
 
     public void UnClickedButtons()
@@ -215,9 +136,12 @@ public class Pattern_1 : TestManagerSample
     {
         bool isTrue = CurrentClickedObj.GetComponent<AnswerPattern1>()._IsTrue;
         if (!isTrue)
+        {
             CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
+            Debug.Log("Answer is Wrong");
+        }
         else
-            Debug.Log("The best Answer :) ");           
+            Debug.Log("Answer is Correct. The best Answer :) ");           
     }
 
 
