@@ -22,7 +22,7 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
     {
 
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(0, pos.y, 0);
+        transform.position = new Vector3(pos.x, pos.y, 0);
         _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
     
     }
