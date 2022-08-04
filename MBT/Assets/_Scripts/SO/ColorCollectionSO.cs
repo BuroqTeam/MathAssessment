@@ -10,4 +10,8 @@ public class ColorCollectionSO : ScriptableObject
     public Color Blue;
     public Color DarkBlue;
     public Color Green;
+    public Color Grey;
+    public Color DarkGrey;
+    public Color Yellow;
+
 }
