@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class TextColorable : MonoBehaviour
 {
-    public Color blue;
-    public Color grey;
+    public ColorCollectionSO colorSO;
     TMP_Text percentageTxt;
 
     private void Awake()
@@ -14,23 +11,12 @@ public class TextColorable : MonoBehaviour
         percentageTxt = GetComponent<TMP_Text>();
         if (percentageTxt.text != "0%")
         {
-            percentageTxt.color = blue;
+            percentageTxt.color = colorSO.Blue;
         }
         else
         {
-            percentageTxt.color = grey;
+            percentageTxt.color = colorSO.DarkBlue;
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-    }
 }

@@ -9,13 +9,14 @@ public class TestGroup : MonoBehaviour
     public TMP_Text NumberTxt;
     public Image RadilaSlider;
     public float RadialSliderValue;
-    
+    public ColorCollectionSO colorSO;
 
     public TestGroupRaw RawTestGroup = new TestGroupRaw();
     Button button;
 
     void Start()
     {
+        RadilaSlider.color = colorSO.Blue;
         button = GetComponent<Button>();
         button.onClick.AddListener(TaskOnClick);
     }
