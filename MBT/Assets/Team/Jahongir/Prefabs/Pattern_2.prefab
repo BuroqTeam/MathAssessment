@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876d9c402ac3d3841a1662cd4c27e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataBase: {fileID: 0}
-  Button: {fileID: 0}
+  DataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  Button: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
   CurrentJsonText: {fileID: 0}
 --- !u!114 &6920839453911784879
 MonoBehaviour:
