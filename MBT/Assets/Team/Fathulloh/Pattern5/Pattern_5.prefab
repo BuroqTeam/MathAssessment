@@ -702,8 +702,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1054830850402449382}
   - component: {fileID: 3733999160369522968}
+  - component: {fileID: 4533874504173643612}
   m_Layer: 5
-  m_Name: PrefabPattern5
+  m_Name: Pattern_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,6 +745,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dcda7e87e5b6c9469d4300e1fd1ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BBB:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  datBase: {fileID: 0}
   JsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   QuestionObj: {fileID: 0}
   QuestionID: 0
@@ -768,6 +775,19 @@ MonoBehaviour:
   ParentForPos: {fileID: 5513294462543908350}
   TotalCorrectAns: 0
   FullPositions: 0
+--- !u!114 &4533874504173643612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590337405834323471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PatternID: 5
 --- !u!1 &6614386767732934808
 GameObject:
   m_ObjectHideFlags: 0

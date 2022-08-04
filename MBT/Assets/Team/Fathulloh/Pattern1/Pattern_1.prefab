@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6931012827513416666}
   - component: {fileID: 6931012827513416667}
+  - component: {fileID: 3460772117772722969}
   m_Layer: 5
-  m_Name: PrefabPattern1
+  m_Name: Pattern_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,6 +56,8 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   dataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  DataBase: {fileID: 0}
+  CurrentJsonText: {fileID: 0}
   QuestionObj: {fileID: 0}
   JsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   ABCD: []
@@ -62,3 +65,16 @@ MonoBehaviour:
   AlphabetList: 
   MainParent: {fileID: 0}
   CurrentClickedObj: {fileID: 0}
+--- !u!114 &3460772117772722969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931012827513416665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PatternID: 1
