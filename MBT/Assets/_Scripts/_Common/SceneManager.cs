@@ -23,8 +23,21 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
     }
+
+    public void LoadSubjectScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Subject");
+    }
+
     private void SceneLoaded(AsyncOperationHandle<SceneInstance> obj)
     {
 
+    }
+
+
+    public void SelectSubject(string name)
+    {
+        ES3.Save<string>("Subject", name);
+        
     }
 }

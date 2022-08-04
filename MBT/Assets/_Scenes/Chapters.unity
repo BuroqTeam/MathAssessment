@@ -185,7 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5620f04d7fefd3445a88f5b533228a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JsonCollectionSO: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  group:
+  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
   GridLayout: {fileID: 4819203435645070525}
   ScrollRectObj: {fileID: 1659680619}
   ChapterGorup: []

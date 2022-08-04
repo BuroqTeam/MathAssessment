@@ -3,34 +3,36 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class ChapterManager : MonoBehaviour
 {
-
-    public DataBaseSO JsonCollectionSO;
-
+    public DataBaseSO [] group;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
-    
-   
-
     //[HideInInspector]
     public List<Chapter> ChapterGorup = new List<Chapter>();
-
     public  GameObject ChapterPrefab;
+
     private  TextAsset _curentJson;
-    private int _numberOfChapter;   
-   
+    private int _numberOfChapter;
+    private DataBaseSO _jsonCollectionSO;
+
     IList<ChapterRaw> _chapterGorup;
 
 
     private void Awake()
     {
-        _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
-       
-        JsonCollectionSO.DataBase.Clear();
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            _jsonCollectionSO = group[0];
+        }
+        else
+        {
+            _jsonCollectionSO = group[1];
+        }       
+        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);       
+        _jsonCollectionSO.DataBase.Clear();
         ReadJSON();
     }
 
@@ -40,8 +42,7 @@ public class ChapterManager : MonoBehaviour
         var jo = JObject.Parse(_curentJson.text);
         JArray chapters = (JArray)jo["chapters"];
         _numberOfChapter = chapters.Count;
-        _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();
-        
+        _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();        
         CreateChapters();
         SetScrollRect();
     }
@@ -64,10 +65,6 @@ public class ChapterManager : MonoBehaviour
             ScrollRectObj.GetComponent<Image>().color = col;
         }
     }
-
-   
-
-
     void CreateChapters()
     {       
         if(_numberOfChapter > 0) 
@@ -84,7 +81,6 @@ public class ChapterManager : MonoBehaviour
         }
        
     }
-
     IEnumerator DisplayChapters()
     {   
         
