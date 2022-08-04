@@ -14,12 +14,12 @@ public class Pattern_14 : MonoBehaviour
     public GameObject Solution;
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new List<Button>();
-
+    public ColorCollection colorCollection;
 
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("key", 9, 96);
+        Mbt.SaveJsonPath("key", 0, 86);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -69,14 +69,14 @@ public class Pattern_14 : MonoBehaviour
             Solution.transform.GetChild(i).transform.GetChild(0).transform.GetComponent<TEXDraw>().text = solution1[i];
             if (Solution.transform.childCount == 2)
             {
-                Solution.transform.GetChild(0).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = new Color(0, 0.6941177f, 0.07058824f, 1);
-                Solution.transform.GetChild(1).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = new Color(1, 0, 0, 1);
+                Solution.transform.GetChild(0).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = colorCollection.Green;
+                Solution.transform.GetChild(1).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = colorCollection.Red;
             }
             else if (Solution.transform.childCount == 3)
             {
-                Solution.transform.GetChild(0).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = new Color(0, 0.6941177f, 0.07058824f, 1);
-                Solution.transform.GetChild(1).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = new Color(0, 0.6941177f, 0.07058824f, 1);
-                Solution.transform.GetChild(2).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = new Color(0, 0.6941177f, 0.07058824f, 1);
+                Solution.transform.GetChild(0).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = colorCollection.Green;
+                Solution.transform.GetChild(1).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = colorCollection.Green;
+                Solution.transform.GetChild(2).transform.GetChild(0).transform.GetComponent<TEXDraw>().color = colorCollection.Green;
             }
         }
     }
