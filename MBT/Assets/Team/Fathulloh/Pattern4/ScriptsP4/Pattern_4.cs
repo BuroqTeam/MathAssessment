@@ -25,7 +25,8 @@ public class Pattern_4 : TestManagerSample
     
     Sprite spriteOfImage;
     int totalFullAns, totalCorrectAns;
-    
+
+    public List<Vector3> PosLongPhone, PosPhone, PosTablet;
 
     private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 30-39, VI-bob 20-29, VII-bob 30-39
     {
@@ -36,8 +37,9 @@ public class Pattern_4 : TestManagerSample
         //else if (str0 == "Geometriya")        {
         //    Debug.Log("Geometriya");
         //}
-
-        Mbt.SaveJsonPath("Pattern_4", 2, 36);
+        int ranNum = Random.Range(30, 39);
+        Debug.Log("ranNum = " + ranNum);
+        Mbt.SaveJsonPath("Pattern_4", 2, ranNum /*39*/);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
