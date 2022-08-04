@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_Alignment: {x: 0.5, y: 0.5}
   m_Text: 
-  m_Size: 36
+  m_Size: 60
   m_ScrollArea:
     serializedVersion: 2
     x: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5
 --- !u!1 &7884895334267356496
 GameObject:
   m_ObjectHideFlags: 0
