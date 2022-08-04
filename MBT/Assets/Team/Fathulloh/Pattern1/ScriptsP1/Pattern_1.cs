@@ -10,25 +10,24 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_1 : TestManagerSample
 {           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
-    public AssetReference ButtonA;
-    public DataBaseSO dataBase;
+    //public AssetReference ButtonA;
+    //public DataBaseSO dataBase;
     //private AssetReference _jsonData;
+    //public GameObject QuestionObj;      //---
+    //public TextAsset JsonText;
+
     public DataBaseSO DataBase;
-    public TextAsset CurrentJsonText;
-
-    public GameObject QuestionObj;      //---
-    public TextAsset JsonText;          
-
-    public List<GameObject> ABCD;
-    public GameObject PrefabA;          
-
+    public TextAsset CurrentJsonText;    
+    
     public List<char> AlphabetList = new List<char>();
-    float yPos, yLength;
-
+    public List<GameObject> ABCD;
+    public GameObject PrefabA;   
+        
     public GameObject MainParent;
     public GameObject CurrentClickedObj;
 
-    public Data_1 Pattern_1Obj = new Data_1();
+    Data_1 Pattern_1Obj = new Data_1();
+    float yPos, yLength;
 
 
     private void Awake()
@@ -38,8 +37,8 @@ public class Pattern_1 : TestManagerSample
             AlphabetList.Add(c);
         }
 
-        Mbt.SaveJsonPath("Pattern_1", 1, 8);
-        ES3.Save<string>("LanguageKey", "Class_6_Uzb");
+        Mbt.SaveJsonPath("Pattern_1", 0, 6);
+        ES3.Save<string>("LanguageKey", "Uzb");
         ES3.Save<int>("ClassKey", 6);
         //_jsonData = Mbt.GetDesiredJSON(dataBase);
         //_jsonData.LoadAssetAsync<TextAsset>().Completed += DataBaseLoaded;
@@ -47,23 +46,26 @@ public class Pattern_1 : TestManagerSample
         ReadFromJson();
     }
 
-    private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
-    {
-        JsonText = obj.Result;
-        ButtonA.LoadAssetAsync<GameObject>().Completed += LoadButtonA;
-    }
+    //private void DataBaseLoaded(AsyncOperationHandle<TextAsset> obj)
+    //{
+    //    JsonText = obj.Result;
+    //    ButtonA.LoadAssetAsync<GameObject>().Completed += LoadButtonA;
+    //}
 
 
-    private void LoadButtonA(AsyncOperationHandle<GameObject> obj)
-    {
-        PrefabA = obj.Result;
-        ReadFromJson();
-    }
+    //private void LoadButtonA(AsyncOperationHandle<GameObject> obj)
+    //{
+    //    PrefabA = obj.Result;
+    //    ReadFromJson();
+    //}
 
 
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(JsonText.text);
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
+        //JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
+        //Pattern_1Obj = jo.ToObject<Data_1>();
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
         Pattern_1Obj = jo.ToObject<Data_1>();
         CreatePrefabs2();
@@ -126,7 +128,6 @@ public class Pattern_1 : TestManagerSample
     //void Start()
     //{
     //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-
     //    QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
     //    Debug.Log(gameObject.transform.parent.transform.parent.GetChild(8).gameObject.name);    
     //    WriteTest();
@@ -156,7 +157,7 @@ public class Pattern_1 : TestManagerSample
 
     public void WriteTest()
     {
-        var jsonObj = JObject.Parse(JsonText.text);
+        var jsonObj = JObject.Parse(CurrentJsonText.text/*JsonText.text*/);
         int ranNum = Random.Range(0, 10);
 
         
@@ -164,8 +165,7 @@ public class Pattern_1 : TestManagerSample
         Pattern_1Obj = jsonObj["chapters"][7]["questions"][5]["question"].ToObject<Data_1>();     // Jsondan o'qilgan malumotni Classga kirituvchi kod.         
         Debug.Log(" Count of characters = " + Pattern_1Obj.title.Length);
 
-
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern_1Obj.title;
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_1Obj.title;
 
         CreatePrefabs();
 
