@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
-    public DataBaseSO JsonCollectionSO;
+    public DataBaseSO[] group;
+   
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
 
@@ -19,15 +20,23 @@ public class TestGroupManager : MonoBehaviour
     public List<TestGroup> TestGroupButtons = new List<TestGroup>();
     public GameObject TestGroupObj;   
     private TextAsset _curentJson;
-    
+    private DataBaseSO _jsonCollectionSO;
 
 
     private void Awake()
     {
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            _jsonCollectionSO = group[0];
+        }
+        else
+        {
+            _jsonCollectionSO = group[1];
+        }
         ChapterName.text = ES3.Load<string>("ChapterName");
         ChapterDescription.text = ES3.Load<string>("ChapterDescription");
-        _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
-        JsonCollectionSO.DataBase.Clear();
+        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
+        _jsonCollectionSO.DataBase.Clear();
         ReadJSON();      
     }
 

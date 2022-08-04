@@ -18,7 +18,7 @@ public class Translator : MonoBehaviour
     }
 
 
-    void SetText()
+    public void SetText()
     {
         if (GetComponent<TMP_Text>() != null)
         {           

@@ -17,7 +17,8 @@ public class MainManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake()
-    {        
+    {
+        
         AddressableMainData.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;                
     }
 
