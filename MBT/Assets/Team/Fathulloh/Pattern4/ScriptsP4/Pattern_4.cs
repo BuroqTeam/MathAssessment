@@ -8,28 +8,36 @@ using UnityEngine.UI;
 
 public class Pattern_4 : TestManagerSample
 {
+    public DataBaseSO[] DataBases;
     public DataBaseSO DataBase;
     public TextAsset CurrentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
-    public GameObject PicturePrefab;
-    
+    public GameObject PicturePrefab;    
 
     public List<GameObject> MainObjs;
     public GameObject ParentComparisonPrefab;
 
     public List<GameObject> ComparisonObjects;
     Data_4 Pattern_4Obj = new Data_4();
-    float yPos, xPos, yDistance, xDistance;
+    float yDistance, xDistance;
 
     public string Statement1, Statement2, ImagePath1, ImagePath2;       //
-    public Sprite Sprite_Left, Sprite_Right;        //
-
-    int totalFullAns, totalCorrectAns;
+    
     Sprite spriteOfImage;
+    int totalFullAns, totalCorrectAns;
+    
 
-    private void Awake()
+    private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 30-39, VI-bob 20-29, VII-bob 30-39
     {
-        Mbt.SaveJsonPath("Pattern_4",7, 30);
+        //string str0 = ES3.Load<string>("Subject");//+
+        //if (str0 == "Algebra")        {
+        //    Debug.Log("Algebra");
+        //}
+        //else if (str0 == "Geometriya")        {
+        //    Debug.Log("Geometriya");
+        //}
+
+        Mbt.SaveJsonPath("Pattern_4", 2, 36);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -63,23 +71,55 @@ public class Pattern_4 : TestManagerSample
         CreatePrefabs();
     }
 
+
     void CreatePrefabs()
     {
-        Debug.Log(Pattern_4Obj.statements.Count);
+        
         for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
         {
             string str = Pattern_4Obj.statements[i].image;
             spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
             GameObject obj = Instantiate(PicturePrefab, transform);
-            Debug.Log(spriteOfImage.texture.height + " " + spriteOfImage.texture.width);
+            //Debug.Log(spriteOfImage.texture.height + " " + spriteOfImage.texture.width);
+
             obj.transform.GetChild(1).GetComponent<Image>().sprite = spriteOfImage;
-
-            obj.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = new Vector2(spriteOfImage.texture.width / 5 * 4, spriteOfImage.texture.height / 5 * 4);
+            Vector2 newSize = new Vector2(spriteOfImage.texture.width / 5 * 3, spriteOfImage.texture.height / 5 * 3);   // spritening 80% ga moslab oladi.  
+            obj.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = newSize; 
             
-
             obj.transform.GetChild(0).GetComponent<TMP_Text>().text = Pattern_4Obj.statements[i].statement;
+            Vector2 newSizeText = obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
+            obj.transform.GetChild(0).transform.localPosition = new Vector3(0, newSize.y/2 + newSizeText.y/2, 0);
+            //obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(newSize.x, newSizeText.y);//+
+
+            Vector3 oldPos = obj.transform.localPosition;
+            //obj.transform.localPosition = new Vector3(oldPos.x + newSize.x * (i - 1.2f), oldPos.y, oldPos.z);
+            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);
+            //Debug.Log(obj.transform.localPosition);
         }
 
+                        
+        xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
+        yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
+        float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
+
+        Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
+        
+        for (int i = 0; i < Pattern_4Obj.options.Count; i++)
+        {            
+            GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
+            Vector3 oldPos = obj.transform.localPosition;
+            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
+            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y -yDistance * (i), oldPos.z);
+            Debug.Log(obj.transform.localPosition + " yDistance * ( i + 1 ) = " + (yDistance * (i+1)) );
+            ComparisonObjects.Add(obj);
+        }
+
+        WriteToPrefab();
+    }
+
+
+    void WriteToPrefab()        //Data_4 dagi malumotlarni yozib beruvchi metod.
+    {
         for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
         {
             if (i == 0)            {
@@ -87,36 +127,22 @@ public class Pattern_4 : TestManagerSample
                 Statement1 = Pattern_4Obj.statements[i].statement;//
                 ImagePath1 = Pattern_4Obj.statements[i].image;//
             }
-            else if (i == 1)    {
+            else if (i == 1)            {
                 MainObjs[2].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
                 Statement2 = Pattern_4Obj.statements[i].statement;//
                 ImagePath2 = Pattern_4Obj.statements[i].image;//
             }
         }
-                
-        xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
-        yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
-        float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
-        
-        //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
 
-        for (int i = 0; i < Pattern_4Obj.options.Count; i++)
-        {            
-            GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
-            Vector3 oldPos = obj.transform.localPosition;
-            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
-            ComparisonObjects.Add(obj);
-        }
 
-        for (int i = 0; i < Pattern_4Obj.options.Count; i++)        
+        for (int i = 0; i<Pattern_4Obj.options.Count; i++)        
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].left;
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CorrectAnswer = Pattern_4Obj.options[i].sign.ToString();
             ComparisonObjects[i].transform.GetChild(2).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].right;
         }
-
-        Debug.Log("SpriteLeft width = " + Sprite_Left.texture.width + " SpriteLeft height = " + Sprite_Left.texture.height);
     }
+
 
 
     /// <summary>
@@ -131,7 +157,7 @@ public class Pattern_4 : TestManagerSample
         string spriteName = splitedGroup[splitedGroup.Length - 1];
         splitedGroup = spriteName.Split(".");
         spriteName = splitedGroup[0];
-        Debug.Log(spriteName);
+        //Debug.Log(spriteName);
         var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);
         return desiredSprite;
     }
@@ -153,16 +179,13 @@ public class Pattern_4 : TestManagerSample
                 totalCorrectAns++;            
         }
 
-        if (totalCorrectAns == n)
-        {
+        if (totalCorrectAns == n)        {
             Debug.Log("Everything is true.");
         }
-        else if (totalFullAns == n)
-        {
+        else if (totalFullAns == n)        {
             Debug.Log("Some thing is wrong.");
         }
     }
-
 
 }
 
@@ -187,5 +210,4 @@ public class Option_4
     public string left;
     public char sign;
     public string right;
-
 }
