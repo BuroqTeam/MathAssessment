@@ -1,12 +1,12 @@
-
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_14 : MonoBehaviour
+public class Pattern_14 : TestManager
 {
+    public string PattenID;
     public DataBaseSO DataBase;
     public TextAsset jsonText;
     public GameObject Problem;
@@ -14,8 +14,7 @@ public class Pattern_14 : MonoBehaviour
     public GameObject Solution;
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new List<Button>();
-    public ColorCollection colorCollection;
-
+    public ColorCollectionSO colorCollection;
 
     private void Awake()
     {

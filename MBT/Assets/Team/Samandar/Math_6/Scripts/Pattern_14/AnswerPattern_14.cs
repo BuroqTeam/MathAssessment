@@ -6,7 +6,7 @@ public class AnswerPattern_14 : MonoBehaviour
     public Pattern_14 Pattern14;
     public bool _PattenBool;
     Button button;
-    
+    public ColorCollectionSO colorCollection;
 
     void Start()
     {
