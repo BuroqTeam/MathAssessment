@@ -1707,6 +1707,15 @@ MonoBehaviour:
   Statement2: 
   ImagePath1: 
   ImagePath2: 
+  PosLongPhone:
+  - {x: -750, y: -340, z: 0}
+  - {x: -340, y: -340, z: 0}
+  PosPhone:
+  - {x: -370, y: -230, z: 0}
+  - {x: -370, y: -590, z: 0}
+  PosTablet:
+  - {x: -320, y: -250, z: 0}
+  - {x: -320, y: -650, z: 0}
 --- !u!224 &1146837355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1054830850402449382, guid: e03d920056804f24a83e39ca2ad8d38e, type: 3}
