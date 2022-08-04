@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-
-    //public List<RectTransform> NumberAreas;
     public List<GameObject> Positions;
     private RectTransform _rectTransform;
     private Vector3 _initialPosition;
@@ -41,9 +39,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.GetComponent<HorizontalLayoutGroup>().enabled = false;
     }
     public void OnEndDrag(PointerEventData eventData)
-    {
-        //GameObject parentObj = gameObject.transform.parent.gameObject;
-        //parentObj.transform.SetSiblingIndex(siblingIndexObj);
+    {        
         Check();
     }
 
@@ -61,8 +57,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         siblingIndexObj = parentObj.transform.GetSiblingIndex();
         parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
     }
-
-    // Start is called before the first frame update
+       
     void Check()
     {
         int k = 0;
@@ -76,13 +71,8 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
                 Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
                 Positions[i].GetComponent<NumBoxP_3>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
-                //string Current = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
-                //Answer.Add(Current);
-                //Debug.Log("List" + Answer);
-                //LastObject = Positions[i];
                 _rectTransform.DOScale(1.25f, 0.2f);                
                 Pattern3.CheckingAnswer();
-                //Pattern3.RemakeJsonSolution();
                 break;
             }
             else
@@ -92,15 +82,8 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         }
         if (k.Equals(Positions.Count))
         {
-            //transform.position = _initialPosition;
             _rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
             _rectTransform.DOScale(1, 0.2f);
         }
-    }
-
-    //void Minimize()
-    //{
-    //    _rectTransform.DOScale(1, 0.2f);
-    //}
-
+    }        
 }
