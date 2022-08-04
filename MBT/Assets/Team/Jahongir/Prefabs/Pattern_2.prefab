@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8185050519078503261}
   - component: {fileID: 8185050519078503262}
+  - component: {fileID: 6920839453911784879}
   m_Layer: 5
   m_Name: Pattern_2
   m_TagString: Untagged
@@ -49,9 +50,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876d9c402ac3d3841a1662cd4c27e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonAddressable:
-    m_AssetGUID: d1d51453d100bd14fa33fdbf0b75e051
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  dataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  DataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  Button: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
+  CurrentJsonText: {fileID: 0}
+--- !u!114 &6920839453911784879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8185050519078503260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PatternID: 2

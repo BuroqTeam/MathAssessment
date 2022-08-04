@@ -32,7 +32,7 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
         DropDownObj.AddOptions(StrList);        
     }
 
-    bool _IsFirstTime = true;
+    //bool _IsFirstTime = true;
     public void DropDown_IndexChangedd(int index)
     {
         CurrentAnswer = StrList[index];
