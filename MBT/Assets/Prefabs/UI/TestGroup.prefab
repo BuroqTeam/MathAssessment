@@ -640,19 +640,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1568044705980880530}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8668835121732822968}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: LoadLocalScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Test
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8668835121732822968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,4 +672,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberTxt: {fileID: 1568044705313005610}
   RadilaSlider: {fileID: 987064294711842326}
-  TestGroupSO: {fileID: 11400000, guid: c5a8c1bd3f3470b40865e0dfc8d5e763, type: 2}
