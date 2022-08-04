@@ -18,7 +18,7 @@ public class TestGroupManager : MonoBehaviour
   
 
     //[HideInInspector]
-    public List<TestGroup> TestGroupPrefabGorup = new List<TestGroup>();
+    public List<TestGroup> TestGroupButtons = new List<TestGroup>();
 
     public GameObject TestGroupObj;
    
@@ -77,7 +77,7 @@ public class TestGroupManager : MonoBehaviour
                 GameObject obj = Instantiate(TestGroupObj);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
-                TestGroupPrefabGorup.Add(obj.GetComponent<TestGroup>());
+                TestGroupButtons.Add(obj.GetComponent<TestGroup>());
             }
             GridLayout.gameObject.SetActive(false);
             StartCoroutine(DisplayTestGroup());
@@ -89,12 +89,12 @@ public class TestGroupManager : MonoBehaviour
     {        
         GridLayout.gameObject.SetActive(true);
         int k = 1;
-        foreach (TestGroup item in TestGroupPrefabGorup)
+        foreach (TestGroup item in TestGroupButtons)
         {
             item.RawTestGroup.number = k.ToString();           
             k++;
         }
-        foreach (TestGroup item in TestGroupPrefabGorup)
+        foreach (TestGroup item in TestGroupButtons)
         {
             item.UpdateInfo();
         }
