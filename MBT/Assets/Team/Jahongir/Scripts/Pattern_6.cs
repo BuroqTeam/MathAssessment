@@ -9,11 +9,12 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
 using System;
 
-public class Pattern_6 : TestManager
+public class Pattern_6 : MonoBehaviour
 {
     public TextAsset CurrentJsonText;
-    public PatternSO[] PaGroup;
-    public DataBaseSO[] Groups;
+    public PatternSO[] PatternGroup;
+    public DataBaseSO[] Group;
+    public PatternSO PatternSO;
     private DataBaseSO _jsCollectionSO;
     Data_6 Pattern_6Obj = new Data_6();
 
@@ -36,15 +37,15 @@ public class Pattern_6 : TestManager
         }
         CurrentJsonText = Mbt.GetDesiredData(_jsCollectionSO);
         ReadFromJson();
-        DisplayQuestion(Pattern_6Obj.title);
+        //DisplayQuestion(Pattern_6Obj.title);
     }
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr);
 
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
-    }
+    //    //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
+    //}
 
     public void ReadFromJson()
     {

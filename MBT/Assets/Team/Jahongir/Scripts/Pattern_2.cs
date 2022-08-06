@@ -3,12 +3,16 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_2 : TestManager
+public class Pattern_2 : MonoBehaviour
 {  
     
     public GameObject Button;
     public TextAsset CurrentJsonText;
-    private DataBaseSO JsCollectionSO;
+    public PatternSO[] PatternGroup;
+    public DataBaseSO[] Group;
+    public PatternSO PatternSO;
+
+    private DataBaseSO _jsCollectionSO;
 
     Data_2 Pattern_2Obj = new Data_2();
 
@@ -23,24 +27,24 @@ public class Pattern_2 : TestManager
         if (ES3.Load<string>("Subject").Equals("Algebra"))
         {
             PatternSO = PatternGroup[0];
-            JsCollectionSO = Group[0];
+            _jsCollectionSO = Group[0];
         }
         else
         {
             PatternSO = PatternGroup[1];
-            JsCollectionSO = Group[1];
+            _jsCollectionSO = Group[1];
         }
       
-        CurrentJsonText = Mbt.GetDesiredData(JsCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(_jsCollectionSO);
         ReadFromJson();
-        DisplayQuestion(Pattern_2Obj.title);
+        //DisplayQuestion(Pattern_2Obj.title);
     }
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr); // null        
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr); // null        
+    //}
 
     public void ReadFromJson()
     {
