@@ -9,7 +9,8 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_1 : TestManager
-{           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
+{          
+    // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
     //public AssetReference ButtonA;
     //public DataBaseSO dataBase;
     //private AssetReference _jsonData;

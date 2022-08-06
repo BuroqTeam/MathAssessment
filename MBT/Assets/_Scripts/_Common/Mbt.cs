@@ -28,6 +28,26 @@ namespace MBT.Extension
             return textAsset;
         }
 
+        public static TextAsset GetDesiredData(DataBaseSO dataBase)
+        {
+            TextAsset textAsset = new TextAsset();           
+            string currentLanguage = ES3.Load<string>("LanguageKey");
+            int currentClass = ES3.Load<int>("ClassKey");
+            Dictionary<int, List<TextAsset>> JsonDictionary = new Dictionary<int, List<TextAsset>>(dataBase.DataBase);
+            List<TextAsset> list = new List<TextAsset>();
+            if (JsonDictionary.TryGetValue(currentClass, out list))
+            {
+                foreach (TextAsset txtAsset in list)
+                {
+                    if (txtAsset.name.Equals(currentLanguage))
+                    {
+                        textAsset = txtAsset;
+                    }
+                }
+            }
+            return textAsset;
+        }
+
 
         public static void SaveJsonPath(string key, int chapterID, int questionsId)
         {

@@ -45,6 +45,7 @@ public class TestManager : MonoBehaviour
     void CountNumberOfQuestions()
     {
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        JsonCollectionSO.DataBase.Clear();
         _jo = JObject.Parse(_curentJson.text);
         JArray questions = (JArray)_jo["chapters"][ES3.Load<int>("Chapter")]["questions"];
         IList<Question> questionGroup = questions.ToObject<IList<Question>>();
@@ -64,7 +65,7 @@ public class TestManager : MonoBehaviour
 
     public virtual void DisplayQuestion(string questionStr)
     {
-        QuestionText.text = questionStr;
+        //QuestionText.text = questionStr;
     }
 
     void CreateExistedPatterns()
@@ -80,6 +81,7 @@ public class TestManager : MonoBehaviour
             k += _numberOfQuestions;           
         }
 
+        Debug.Log(jsonList.Count);
       
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
@@ -87,6 +89,7 @@ public class TestManager : MonoBehaviour
             {
                 if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
                 {
+                    Debug.Log("Salam");
                     Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
                         ES3.Load<int>("Chapter"),
                         ES3.Load<int>("TestGroup"));
