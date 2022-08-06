@@ -56,57 +56,88 @@ public class Pattern_10 : TestManager
 
     public void CreatePrefabs()
     {
-        transform.GetChild(0).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
             string str = Pattern_10Obj.options[i][0];
             _spriteImage = GetDesiredSprite(str, spriteCOllectionSO);
-            GameObject obj = Instantiate(OptionPrefab, transform.GetChild(3).transform);
+            GameObject obj = Instantiate(OptionPrefab, transform.GetChild(5).transform);
             obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
-            obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] +" " + Pattern_10Obj.options[i][2];
+            obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] + " " + Pattern_10Obj.options[i][2];
+            obj.transform.GetChild(1).GetComponent<P10_ButtonControl>().Pattern10 = this;
+            obj.transform.GetChild(1).GetComponent<P10_ButtonControl>().Value = Int32.Parse(Pattern_10Obj.options[i][1]);
         }
-        //This is for Grid1
-        for (int i = 0; i < Pattern_10Obj.statements.Count ; i++)
-        {
-            for (int j = 0; j < Pattern_10Obj.statements[i].Count; j++)
+        //This is for Table1
+        for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
             {
                 GameObject obj1 = Instantiate(Tile1Prefab, transform.GetChild(0).transform);
-                obj1.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[i][j];
-                if (j == 0)
+                obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
+                obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
+                if (i == 0)
                 {
-                    obj1.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                    obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                    obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
                 }
             }
-        }
-        //This is for Grid2
-        transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+
+        //This is for Table2
         for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
-        {
-            GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(1).transform);
-            obj2.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
-            if (i == 0)
             {
-                obj2.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                GameObject obj1 = Instantiate(Tile2Prefab, transform.GetChild(1).transform);
+                obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
+                if (i == 0)
+                {
+                    obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
+                    obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                    obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                }
+                else
+                {
+                    Tile1.Add(obj1.transform.GetChild(1).gameObject);
+                }
             }
-        }
-        //This is for Grid3
-        transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
-        for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
-        {
-            GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(2).transform);
-            if (i == 0)
-            {
-                obj3.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
-                obj3.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
-            }
-            else
-            {
-                Tile1.Add(obj3);
-            }
-        }
-        Debug.Log(Tile1.Count);
-        transform.GetChild(2).transform.SetParent(transform.GetChild(1).transform);
+
+        ////This is for Grid1
+        //for (int i = 0; i < Pattern_10Obj.statements.Count; i++)
+        //{
+        //    for (int j = 0; j < Pattern_10Obj.statements[i].Count; j++)
+        //    {
+        //        GameObject obj1 = Instantiate(Tile1Prefab, transform.GetChild(0).transform);
+        //        obj1.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[i][j];
+        //        if (j == 0)
+        //        {
+        //            obj1.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+        //        }
+        //    }
+        //}
+        ////This is for Grid2
+        //transform.GetChild(1).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
+        //{
+        //    GameObject obj2 = Instantiate(Tile1Prefab, transform.GetChild(1).transform);
+        //    obj2.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
+        //    if (i == 0)
+        //    {
+        //        obj2.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+        //    }
+        //}
+        ////This is for Grid3
+        //transform.GetChild(2).GetComponent<GridLayoutGroup>().constraintCount = Pattern_10Obj.statements[0].Count;
+        //for (int i = 0; i < Pattern_10Obj.statements[1].Count; i++)
+        //{
+        //    GameObject obj3 = Instantiate(Tile2Prefab, transform.GetChild(2).transform);
+        //    if (i == 0)
+        //    {
+        //        obj3.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
+        //        obj3.transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+        //    }
+        //    else
+        //    {
+        //        Tile1.Add(obj3);
+        //    }
+        //}
+        //Debug.Log(Tile1.Count);
+        //transform.GetChild(2).transform.SetParent(transform.GetChild(1).transform);
     }
 
     public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
