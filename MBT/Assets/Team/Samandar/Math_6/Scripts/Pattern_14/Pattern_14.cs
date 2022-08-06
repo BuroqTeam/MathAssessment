@@ -14,19 +14,27 @@ public class Pattern_14 : TestManager
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new List<Button>();
     public ColorCollectionSO colorCollection;
+    private DataBaseSO _jsCollection;
 
     private void Awake()
     {
         
     }
 
+      
     private void OnEnable()
     {
-        GetData();
-
-        JsonCollectionSO.DataBase.Clear();
-
-        jsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            _jsCollection = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            _jsCollection = Group[1];
+        }
+        jsonText = Mbt.GetDesiredData(_jsCollection);
 
         ReadFromJson();
 

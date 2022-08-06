@@ -490,7 +490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &443034830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &445849406
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2334,6 +2334,8 @@ MonoBehaviour:
   QuestionText: {fileID: 0}
   PatternGroup: []
   Group: []
+  PatternJsonGroup: []
+  GroupJson: []
   jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
   Problem: {fileID: 239849733}
   Solution: {fileID: 1702550683}
@@ -2709,7 +2711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 143.57143, y: -150}
+  m_AnchoredPosition: {x: 143.57141, y: -150}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140471871

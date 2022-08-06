@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Pattern_3 : TestManager
 {
-   
+    
     public TextAsset jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
@@ -28,15 +28,21 @@ public class Pattern_3 : TestManager
     public List<List<string>> newSolution = new List<List<string>>();
     public List<string> SmallList;
     Data_3 DataObj = new Data_3();
-
+    private DataBaseSO _jsCollection;
     
     private void OnEnable()
     {
-        GetData();
-
-        JsonCollectionSO.DataBase.Clear();
-
-        jsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            _jsCollection = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            _jsCollection = Group[1];
+        }
+        jsonText = Mbt.GetDesiredData(_jsCollection);
 
         ReadFromJson();
 
