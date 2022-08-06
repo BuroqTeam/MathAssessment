@@ -52,7 +52,6 @@ public class DropDownP9 : MonoBehaviour/*, IPointerClickHandler*/
         DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
 
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
-
         //if (_IsFirstTime)        {
         //    _IsFirstTime = false;
         //    DropDownObj.ClearOptions();
