@@ -18,6 +18,8 @@ public class Pattern_1 : TestManager
     //public TextAsset JsonText;
 
     //public DataBaseSO CurrentDataBase;
+
+
     public TextAsset CurrentJsonText;    
     
     public List<char> AlphabetList = new List<char>();
@@ -30,6 +32,10 @@ public class Pattern_1 : TestManager
     Data_1 Pattern_1Obj = new Data_1();
     float yPos, yLength;
 
+
+    private DataBaseSO JsonCollectionSONew;
+    //public DataBaseSO[] GroupNew;
+    //public PatternSO[] PatternGroupPatternNew;
     
     private void FirstMethod()
     {
@@ -38,11 +44,23 @@ public class Pattern_1 : TestManager
             AlphabetList.Add(c);
         }
 
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            JsonCollectionSONew = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            JsonCollectionSONew = Group[1];
+        }
+
+
         //Mbt.SaveJsonPath("Pattern_1", 0, 6);
         //ES3.Save<string>("LanguageKey", "Uzb");
         //ES3.Save<int>("ClassKey", 6);
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        //JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
     }
         
@@ -58,7 +76,7 @@ public class Pattern_1 : TestManager
 
     private void OnEnable()
     {
-        GetData();
+        //GetData();
         FirstMethod();
 
         DisplayQuestion(Pattern_1Obj.title);
