@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class Pattern_4 : TestManagerSample
 {
     public DataBaseSO[] DataBases;
-    public DataBaseSO DataBase;
+    public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
     public GameObject PicturePrefab;    
@@ -28,7 +28,7 @@ public class Pattern_4 : TestManagerSample
 
     public List<Vector3> PosLongPhone, PosPhone, PosTablet;
 
-    private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 30-39, VI-bob 20-29, VII-bob 30-39
+    private void FirstMethod()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     {
         //string str0 = ES3.Load<string>("Subject");//+
         //if (ES3.Load<string>("Subject") == "Algebra")
@@ -42,15 +42,16 @@ public class Pattern_4 : TestManagerSample
         //    DataBase = DataBases[1];
         //}
 
-        int ranNum = Random.Range(30, 39);
+        int ranNum = Random.Range(20, 29);
         Debug.Log("ranNum = " + ranNum);
-        Mbt.SaveJsonPath("Pattern_4", 2, ranNum /*39*/);
+        Mbt.SaveJsonPath("Pattern_4", 3, ranNum /*39*/);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CurrentDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
         ReadFromJson();
     }
 
@@ -58,6 +59,8 @@ public class Pattern_4 : TestManagerSample
 
     private void OnEnable()
     {
+        FirstMethod();
+
         DisplayQuestion(Pattern_4Obj.title);
     }
 
@@ -99,7 +102,7 @@ public class Pattern_4 : TestManagerSample
 
             Vector3 oldPos = obj.transform.localPosition;
             DeviceDetector(Screen.width, Screen.height, obj, i);
-            ////obj.transform.localPosition = new Vector3(oldPos.x + newSize.x * (i - 1.2f), oldPos.y, oldPos.z);
+            
             //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);
             //Debug.Log("obj.transform.localPosition = " + obj.transform.localPosition + " transfor.position = " + obj.transform.position);
         }
@@ -108,15 +111,14 @@ public class Pattern_4 : TestManagerSample
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
         float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
-        Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
+        //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
         
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
         {            
             GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
-            Vector3 oldPos = obj.transform.localPosition;
-            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
+            Vector3 oldPos = obj.transform.localPosition;            
             obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y -yDistance * (i), oldPos.z);
-            //Debug.Log(obj.transform.localPosition + " yDistance * ( i + 1 ) = " + (yDistance * (i+1)) );
+            
             ComparisonObjects.Add(obj);
         }
 

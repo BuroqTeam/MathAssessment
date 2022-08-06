@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Pattern_9 : TestManager
 {
-    public DataBaseSO DataBase;
+    public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
     //public TextAsset JsonText;      //-
@@ -24,21 +24,24 @@ public class Pattern_9 : TestManager
     int totalFullAns, totalCorrectAns;
 
 
-    private void Awake()
+    private void FirstMethod()
     {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
-        Mbt.SaveJsonPath("Pattern_9",8, 55);
+        //Mbt.SaveJsonPath("Pattern_9",8, 55);
 
-        ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        ES3.Save<int>("ClassKey", 6);
+        //ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CurrentDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
         ReadFromJson();
     }
 
 
     private void OnEnable()
     {
+        FirstMethod();
+
         DisplayQuestion(Pattern_9Obj.title);
     }
 
