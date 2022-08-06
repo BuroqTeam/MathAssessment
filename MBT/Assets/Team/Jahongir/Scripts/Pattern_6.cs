@@ -23,7 +23,7 @@ public class Pattern_6 : TestManager
     {
         GetData();
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_6Obj.title);
     }
