@@ -21,7 +21,7 @@ public class Pattern_2 : TestManager
     {
         GetData();
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_2Obj.title);
     }
