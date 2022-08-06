@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_14 : TestManager
+public class Pattern_14 : MonoBehaviour
 {
-    
+    private DataBaseSO _jsCollection;
+    private PatternSO PatternSO;
+    public DataBaseSO[] Group;
+    public PatternSO[] PatternGroup;
     public TextAsset jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
@@ -14,7 +17,7 @@ public class Pattern_14 : TestManager
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new List<Button>();
     public ColorCollectionSO colorCollection;
-    private DataBaseSO _jsCollection;
+    
 
     private void Awake()
     {
@@ -38,7 +41,7 @@ public class Pattern_14 : TestManager
 
         ReadFromJson();
 
-        DisplayQuestion(DataObj.title);
+        //DisplayQuestion(DataObj.title);
 
         StartMetod();
     }

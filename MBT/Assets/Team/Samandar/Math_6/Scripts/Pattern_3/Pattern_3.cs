@@ -5,9 +5,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_3 : TestManager
+public class Pattern_3 : MonoBehaviour
 {
-    
+    private DataBaseSO _jsCollection;
+    private PatternSO PatternSO;
+    public DataBaseSO[] Group;
+    public PatternSO[] PatternGroup;
     public TextAsset jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
@@ -28,7 +31,6 @@ public class Pattern_3 : TestManager
     public List<List<string>> newSolution = new List<List<string>>();
     public List<string> SmallList;
     Data_3 DataObj = new Data_3();
-    private DataBaseSO _jsCollection;
     
     private void OnEnable()
     {
@@ -46,7 +48,7 @@ public class Pattern_3 : TestManager
 
         ReadFromJson();
 
-        DisplayQuestion(DataObj.title);
+        //DisplayQuestion(DataObj.title);
         StartMetod();
     }
     public void ReadFromJson()
@@ -104,11 +106,11 @@ public class Pattern_3 : TestManager
     }
     
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);  
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr);  
 
-    }
+    //}
         
     public void DisplayQuestion()
     {
