@@ -1,14 +1,11 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using MBT.Extension;
-using System;
 
 public class Pattern_2 : TestManager
 {  
-    public DataBaseSO CorrectDataBase;
+    
     public GameObject Button;
     public TextAsset CurrentJsonText;
 
@@ -22,8 +19,9 @@ public class Pattern_2 : TestManager
     
     private void OnEnable()
     {
-        CorrectDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
+        GetData();
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_2Obj.title);
     }

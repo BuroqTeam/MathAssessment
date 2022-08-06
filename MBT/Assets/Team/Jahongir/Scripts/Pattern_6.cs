@@ -11,7 +11,6 @@ using System;
 
 public class Pattern_6 : TestManager
 {
-    public DataBaseSO CorrectDataBase;
     public TextAsset CurrentJsonText;
     Data_6 Pattern_6Obj = new Data_6();
 
@@ -22,8 +21,9 @@ public class Pattern_6 : TestManager
 
     private void OnEnable()
     {
-        CorrectDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
+        GetData();
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_6Obj.title);
     }

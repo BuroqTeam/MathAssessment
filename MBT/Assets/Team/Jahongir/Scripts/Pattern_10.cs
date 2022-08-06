@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class Pattern_10 : TestManager
 {
     public SpriteCollectionSO spriteCOllectionSO;
-    public DataBaseSO CorrectDataBase;
     public TextAsset CurrentJsonText;
     public GameObject OptionPrefab;
     public GameObject Tile1Prefab;
@@ -29,8 +28,9 @@ public class Pattern_10 : TestManager
 
     private void OnEnable()
     {
-        CorrectDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
+        GetData();
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_10Obj.title);
     }
