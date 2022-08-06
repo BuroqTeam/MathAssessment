@@ -419,10 +419,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8185050519078503262, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
 --- !u!224 &1104734202 stripped
@@ -584,7 +580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1603051759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -627,8 +623,7 @@ MonoBehaviour:
   QuestionText: {fileID: 0}
   PatternGroup: []
   Group: []
-  spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
-  CorrectDataBase: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  SpriteCollectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   CurrentJsonText: {fileID: 0}
   OptionPrefab: {fileID: 4621097452131093444, guid: 8c30a3ac27d9efa419e0f3c6df53a731, type: 3}
   Tile1Prefab: {fileID: 4712184987817004093, guid: 952547496acd906498cf7bcefa70e940, type: 3}
@@ -1821,7 +1816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824364815, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824365296, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_Pivot.x
