@@ -42,7 +42,7 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        
+        Check();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -51,6 +51,33 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
         transform.position = new Vector3(pos.x, pos.y, 0);
         _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
     }
-       
-    
+
+    void Check()
+    {
+        int k = 0;
+        for (int i = 0; i < Positions.Count; i++)
+        {
+            bool _isEmpty = Positions[i].GetComponent<NumBoxP_3>()._IsEmpty;
+            if (Vector3.Distance(transform.position, Positions[i].transform.position) <= 1 && (_isEmpty))
+            {
+                LastPos = Positions[i];
+                transform.position = new Vector3(Positions[i].transform.position.x, Positions[i].transform.position.y, 0);
+                _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
+                Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
+                Positions[i].GetComponent<NumBoxP_3>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
+                _rectTransform.DOScale(1.25f, 0.2f);
+                //Pattern11.CheckingAnswer();
+                break;
+            }
+            else
+            {
+                k++;
+            }
+        }
+        if (k.Equals(Positions.Count))
+        {
+            _rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
+            _rectTransform.DOScale(1, 0.2f);
+        }
+    }
 }

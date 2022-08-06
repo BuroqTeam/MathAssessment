@@ -24,7 +24,6 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnBeginDrag(PointerEventData eventData)
     {        
-        LayoutOf();
         Order();
         if (LastPos != null)
         {
@@ -34,10 +33,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
         }
         
     }
-    public void LayoutOf()
-    {
-        gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.GetComponent<HorizontalLayoutGroup>().enabled = false;
-    }
+    
     public void OnEndDrag(PointerEventData eventData)
     {        
         Check();
