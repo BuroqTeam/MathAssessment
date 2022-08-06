@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Pattern_14 : TestManager
 {
-    private DataBaseSO _dataBase;
+    
     public TextAsset jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
@@ -22,11 +22,11 @@ public class Pattern_14 : TestManager
 
     private void OnEnable()
     {
-       
+        GetData();
 
-        _dataBase.DataBase.Clear();
+        JsonCollectionSO.DataBase.Clear();
 
-        jsonText = Mbt.GetDesiredJSONData(_dataBase);
+        jsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
 
         ReadFromJson();
 
