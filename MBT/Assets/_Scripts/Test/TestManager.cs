@@ -76,28 +76,30 @@ public class TestManager : MonoBehaviour
         List<JObject> jsonList = new List<JObject>();
         int k = ES3.Load<int>("TestGroup");
         k--;
+        List<int> questionIndexList = new List<int>();
         for (int i = 0; i < _numberOfQuestions; i++)
         {            
             singleQuestion = (JObject)_jo["chapters"][ES3.Load<int>("Chapter")]["questions"][k];
+            questionIndexList.Add(k);
             jsonList.Add(singleQuestion);
-            k += _numberOfQuestions;           
+            k += _numberOfQuestions;            
         }
 
-       
-      
+
+        int m = 0;
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
             foreach (JObject jObj in jsonList)
             {
                 if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
-                {                                       
+                {
+                    Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
+                    ES3.Load<int>("Chapter"), questionIndexList[m]);
+                    m++;
                     GameObject obj = Instantiate(pattern);
                     obj.transform.SetParent(PatternParent.transform);
                     obj.transform.localScale = Vector3.one;
-                    obj.SetActive(false);
-                    Mbt.SaveJsonPath("Pattern_" + obj.GetComponent<Pattern>().PatternID,
-                        ES3.Load<int>("Chapter"),
-                        ES3.Load<int>("TestGroup"));
+                    obj.SetActive(false);                  
                     _activePatterns.Add(obj);
                 }
             }
