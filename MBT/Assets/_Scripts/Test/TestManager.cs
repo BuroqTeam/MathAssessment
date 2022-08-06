@@ -13,8 +13,8 @@ public class TestManager : MonoBehaviour
     public PatternSO[] PatternGroup;
     public DataBaseSO[] Group;
 
-    private PatternSO _patternSO;
-    private DataBaseSO _jsonCollectionSO;
+    protected PatternSO PatternSO;
+    protected DataBaseSO JsonCollectionSO;
     private List<GameObject> _activePatterns = new List<GameObject>();
     private TextAsset _curentJson;
     private int _numberOfQuestions;
@@ -23,23 +23,28 @@ public class TestManager : MonoBehaviour
 
     private void Awake()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-        {
-            _patternSO = PatternGroup[0];
-            _jsonCollectionSO = Group[0];
-        }
-        else
-        {
-            _patternSO = PatternGroup[1];
-            _jsonCollectionSO = Group[1];
-        }
+        GetData();
         CountNumberOfQuestions();
     }
 
+    public void GetData()
+    {
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            JsonCollectionSO = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            JsonCollectionSO = Group[1];
+        }
+
+    }
 
     void CountNumberOfQuestions()
     {
-        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
+        _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
         _jo = JObject.Parse(_curentJson.text);
         JArray questions = (JArray)_jo["chapters"][ES3.Load<int>("Chapter")]["questions"];
         IList<Question> questionGroup = questions.ToObject<IList<Question>>();
@@ -76,7 +81,7 @@ public class TestManager : MonoBehaviour
         }
 
       
-        foreach (GameObject pattern in _patternSO.PatternPrefabs)
+        foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
             foreach (JObject jObj in jsonList)
             {
