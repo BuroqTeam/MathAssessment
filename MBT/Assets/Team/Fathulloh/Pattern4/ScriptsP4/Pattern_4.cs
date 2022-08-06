@@ -6,9 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_4 : TestManagerSample
-{
-    public DataBaseSO[] DataBases;
+public class Pattern_4 : TestManager
+{    
     public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
@@ -59,6 +58,7 @@ public class Pattern_4 : TestManagerSample
 
     private void OnEnable()
     {
+        GetData();
         FirstMethod();
 
         DisplayQuestion(Pattern_4Obj.title);

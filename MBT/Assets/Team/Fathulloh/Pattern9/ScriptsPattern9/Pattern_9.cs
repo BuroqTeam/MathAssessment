@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Pattern_9 : TestManager
 {
-    public DataBaseSO CurrentDataBase;
+    //public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
     //public TextAsset JsonText;      //-
@@ -32,14 +32,15 @@ public class Pattern_9 : TestManager
 
         //ES3.Save<int>("ClassKey", 6);
 
-        CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
     }
 
 
     private void OnEnable()
     {
+        GetData();
         FirstMethod();
 
         DisplayQuestion(Pattern_9Obj.title);
