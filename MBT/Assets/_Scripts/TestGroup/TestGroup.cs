@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +21,7 @@ public class TestGroup : MonoBehaviour
 
     void TaskOnClick()
     {
-
+        ES3.Save<int>("TestGroup", int.Parse(RawTestGroup.number));       
         GetComponent<SceneManager>().LoadLocalScene();
     }
 

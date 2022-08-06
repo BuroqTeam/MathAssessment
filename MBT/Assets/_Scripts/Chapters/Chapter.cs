@@ -38,13 +38,14 @@ public class Chapter : MonoBehaviour
         int k = 0;
         for (int i = 0; i < questionGroup.Count; i++)
         {
+            
             if (sample.Equals(questionGroup[i].pattern))
             {
                 k++;
             }
         }
         JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
-        //Mbt.SaveJsonPath("aa", int.Parse(chapterRaw.number), ) SHu yerga keldim
+        ES3.Save<int>("Chapter", int.Parse(chapterRaw.number));        
         ES3.Save<int>("NumberOfTestGroup", k);
         ES3.Save<string>("ChapterName", chapterRaw.name);
         ES3.Save<string>("ChapterDescription", chapterRaw.description);        
