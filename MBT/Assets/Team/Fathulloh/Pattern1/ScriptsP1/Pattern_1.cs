@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Pattern_1 : TestManagerSample
+public class Pattern_1 : TestManager
 {           // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
     //public AssetReference ButtonA;
     //public DataBaseSO dataBase;
@@ -16,7 +16,7 @@ public class Pattern_1 : TestManagerSample
     //public GameObject QuestionObj;      //---
     //public TextAsset JsonText;
 
-    public DataBaseSO CurrentDataBase;
+    //public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;    
     
     public List<char> AlphabetList = new List<char>();
@@ -39,12 +39,10 @@ public class Pattern_1 : TestManagerSample
 
         //Mbt.SaveJsonPath("Pattern_1", 0, 6);
         //ES3.Save<string>("LanguageKey", "Uzb");
-
         //ES3.Save<int>("ClassKey", 6);
 
-
-        CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
     }
         
@@ -60,6 +58,7 @@ public class Pattern_1 : TestManagerSample
 
     private void OnEnable()
     {
+        GetData();
         FirstMethod();
 
         DisplayQuestion(Pattern_1Obj.title);

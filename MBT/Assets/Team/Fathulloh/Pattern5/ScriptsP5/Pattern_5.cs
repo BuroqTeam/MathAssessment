@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class Pattern_5 : TestManagerSample
+public class Pattern_5 : TestManager
 {
     //public AssetReference BBB;
     //public DataBaseSO datBase;
 
-    public DataBaseSO[] DataBases;
-    DataBaseSO CurrentDataBase;
+    //public DataBaseSO[] DataBases;
+    //DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
     public TextAsset JsonText;
@@ -33,33 +33,33 @@ public class Pattern_5 : TestManagerSample
 
     private void FirstMethod()
     {
+        //Mbt.SaveJsonPath("Pattern_5", 1, 6);
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        Mbt.SaveJsonPath("Pattern_5", 1, 6);
-        ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<int>("ClassKey", 6);
 
-        ES3.Save<int>("ClassKey", 6);
-
-        CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
+        JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
         ReadFromJson();
     }
 
 
 
-    void Start()
-    {
-        MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
-        //QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
+    //void Start()
+    //{
+    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
+    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
+    //    //QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
         
-        ReadFromJson();
-        CreatePrefabs();
-        //transform.SetSiblingIndex()
-    }
+    //    ReadFromJson();
+    //    CreatePrefabs();
+    //    //transform.SetSiblingIndex()
+    //}
 
 
     private void OnEnable()
     {
+        GetData();
         FirstMethod();
 
         DisplayQuestion(Pattern5Obj.title);
