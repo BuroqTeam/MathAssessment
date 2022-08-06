@@ -1,13 +1,14 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class TestManager : MonoBehaviour
 {
+    [HideInInspector]
     public GameObject PatternParent;
+    [HideInInspector]
     public TMP_Text QuestionText;
     public PatternSO[] PatternGroup;
     public DataBaseSO[] Group;
@@ -87,15 +88,14 @@ public class TestManager : MonoBehaviour
                     GameObject obj = Instantiate(pattern);
                     obj.transform.SetParent(PatternParent.transform);
                     obj.transform.localScale = Vector3.one;
+                    obj.SetActive(false);
                     _activePatterns.Add(obj);
-
                 }
             }
-
         }
-
+        _activePatterns[0].SetActive(true);
     }
 
-
+    
 
 }
