@@ -8,7 +8,7 @@ using System;
 
 public class Pattern_2 : TestManager
 {  
-    public DataBaseSO DataBase;
+    public DataBaseSO CorrectDataBase;
     public GameObject Button;
     public TextAsset CurrentJsonText;
 
@@ -22,7 +22,8 @@ public class Pattern_2 : TestManager
 
         ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CorrectDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
 
         ReadFromJson();
     }

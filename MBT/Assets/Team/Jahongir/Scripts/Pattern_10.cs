@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Pattern_10 : TestManager
 {
     public SpriteCollectionSO spriteCOllectionSO;
-    public DataBaseSO DataBase;
+    public DataBaseSO CorrectDataBase;
     public TextAsset CurrentJsonText;
     public GameObject OptionPrefab;
     public GameObject Tile1Prefab;
@@ -30,7 +30,8 @@ public class Pattern_10 : TestManager
 
         ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CorrectDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
 
         ReadFromJson();
     }
@@ -82,20 +83,25 @@ public class Pattern_10 : TestManager
 
         //This is for Table2
         for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
+        {
+            GameObject obj1 = Instantiate(Tile2Prefab, transform.GetChild(1).transform);
+            obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
+            if (i == 0)
             {
-                GameObject obj1 = Instantiate(Tile2Prefab, transform.GetChild(1).transform);
-                obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[0][i];
-                if (i == 0)
-                {
-                    obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
-                    obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
-                    obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
-                }
-                else
-                {
-                    Tile1.Add(obj1.transform.GetChild(1).gameObject);
-                }
+                obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
+                obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
+                obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
             }
+            else
+            {
+                Tile1.Add(obj1.transform.GetChild(1).gameObject);
+            }
+        }
+        for (int i = 0; i < Tile1.Count; i++)
+        {
+            Destroy(Tile1[i].transform.GetChild(0));
+        }
+        
 
         ////This is for Grid1
         //for (int i = 0; i < Pattern_10Obj.statements.Count; i++)
