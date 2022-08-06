@@ -44,6 +44,7 @@ public class TestManager : MonoBehaviour
 
     void CountNumberOfQuestions()
     {
+        Debug.Log("CountNumberOfQuestions");
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
         JsonCollectionSO.DataBase.Clear();
         _jo = JObject.Parse(_curentJson.text);
@@ -70,6 +71,7 @@ public class TestManager : MonoBehaviour
 
     void CreateExistedPatterns()
     {
+        Debug.Log("CreateExistedPatterns");
         JObject singleQuestion = new JObject();
         List<JObject> jsonList = new List<JObject>();
         int k = ES3.Load<int>("TestGroup");
@@ -81,26 +83,26 @@ public class TestManager : MonoBehaviour
             k += _numberOfQuestions;           
         }
 
-        Debug.Log(jsonList.Count);
+       
       
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
             foreach (JObject jObj in jsonList)
             {
                 if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
-                {
-                    Debug.Log("Salam");
-                    Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
-                        ES3.Load<int>("Chapter"),
-                        ES3.Load<int>("TestGroup"));
+                {                                       
                     GameObject obj = Instantiate(pattern);
                     obj.transform.SetParent(PatternParent.transform);
                     obj.transform.localScale = Vector3.one;
                     obj.SetActive(false);
+                    Mbt.SaveJsonPath("Pattern_" + obj.GetComponent<Pattern>().PatternID,
+                        ES3.Load<int>("Chapter"),
+                        ES3.Load<int>("TestGroup"));
                     _activePatterns.Add(obj);
                 }
             }
         }
+        Debug.Log(_activePatterns.Count);
         _activePatterns[0].SetActive(true);
     }
 
