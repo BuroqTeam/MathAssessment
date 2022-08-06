@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class Pattern_9 : TestManager
 {
+
+    private DataBaseSO JsonCollectionSONew;
+    //public DataBaseSO[] GroupNew;
+    //public PatternSO[] PatternGroupNew;
+
     //public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
@@ -32,8 +37,19 @@ public class Pattern_9 : TestManager
 
         //ES3.Save<int>("ClassKey", 6);
 
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            JsonCollectionSONew = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            JsonCollectionSONew = Group[1];
+        }
+
+        //JsonCollectionSO.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
     }
 
