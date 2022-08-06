@@ -15,7 +15,7 @@ public class Pattern_11 : TestManager
     public DataBaseSO[] DataBases;
     public TextAsset jsonText;
     public Data_11 DataObj;
-
+    public List<GameObject> NumberInstantiate;
     private void Awake()
     {
         Mbt.SaveJsonPath("key", 1, 66);
@@ -51,7 +51,13 @@ public class Pattern_11 : TestManager
             RightList.Add(Right);
             PanelRight.transform.GetChild(i).transform.GetChild(0).GetComponent<TEXDraw>().text = options1[i].ToString();
             GameObject Left = Instantiate(PushableShadow, PanelLeft.transform);
-            LeftList.Add(Right);
+            LeftList.Add(Left);
+           
+        }
+        for (int i = 0; i < RightList.Count; i++)
+        {
+            RightList[i].GetComponent<DegnDropPattern_11>().Pattern11 = this;
+            RightList[i].GetComponent<DegnDropPattern_11>().Positions = LeftList;
         }
     }
 }
