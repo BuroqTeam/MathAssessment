@@ -16,7 +16,7 @@ public class Pattern_1 : TestManagerSample
     //public GameObject QuestionObj;      //---
     //public TextAsset JsonText;
 
-    public DataBaseSO DataBase;
+    public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;    
     
     public List<char> AlphabetList = new List<char>();
@@ -29,20 +29,22 @@ public class Pattern_1 : TestManagerSample
     Data_1 Pattern_1Obj = new Data_1();
     float yPos, yLength;
 
-
-    private void Awake()
+    
+    private void FirstMethod()
     {
         for (char c = 'A'; c <= 'Z'; ++c)
         {
             AlphabetList.Add(c);
         }
 
-        Mbt.SaveJsonPath("Pattern_1", 0, 6);
-        ES3.Save<string>("LanguageKey", "Uzb");
+        //Mbt.SaveJsonPath("Pattern_1", 0, 6);
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        ES3.Save<int>("ClassKey", 6);
-        
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        //ES3.Save<int>("ClassKey", 6);
+
+
+        CurrentDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
         ReadFromJson();
     }
         
@@ -58,6 +60,8 @@ public class Pattern_1 : TestManagerSample
 
     private void OnEnable()
     {
+        FirstMethod();
+
         DisplayQuestion(Pattern_1Obj.title);
     }
 

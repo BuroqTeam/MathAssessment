@@ -1,5 +1,5 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
-//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +7,12 @@ using UnityEngine.AddressableAssets;
 
 public class Pattern_5 : TestManagerSample
 {
-    public AssetReference BBB;
-    public DataBaseSO datBase;
+    //public AssetReference BBB;
+    //public DataBaseSO datBase;
+
+    public DataBaseSO[] DataBases;
+    DataBaseSO CurrentDataBase;
+    public TextAsset CurrentJsonText;
 
     public TextAsset JsonText;
     private GameObject MainParent;
@@ -27,9 +31,17 @@ public class Pattern_5 : TestManagerSample
     public Data_5 Pattern5Obj = new Data_5();
 
 
-    private void Awake()
+    private void FirstMethod()
     {
-        
+
+        Mbt.SaveJsonPath("Pattern_5", 1, 6);
+        ES3.Save<string>("LanguageKey", "Uzb");
+
+        ES3.Save<int>("ClassKey", 6);
+
+        CurrentDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
+        ReadFromJson();
     }
 
 
@@ -46,10 +58,12 @@ public class Pattern_5 : TestManagerSample
     }
 
 
-    //private void OnEnable()
-    //{
-    //    DisplayQuestion(Pattern5Obj.title);
-    //}
+    private void OnEnable()
+    {
+        FirstMethod();
+
+        DisplayQuestion(Pattern5Obj.title);
+    }
 
 
 
