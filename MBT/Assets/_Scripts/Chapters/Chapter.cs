@@ -1,3 +1,4 @@
+using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using TMPro;
@@ -42,7 +43,8 @@ public class Chapter : MonoBehaviour
                 k++;
             }
         }
-        
+        JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
+        //Mbt.SaveJsonPath("aa", int.Parse(chapterRaw.number), ) SHu yerga keldim
         ES3.Save<int>("NumberOfTestGroup", k);
         ES3.Save<string>("ChapterName", chapterRaw.name);
         ES3.Save<string>("ChapterDescription", chapterRaw.description);        
