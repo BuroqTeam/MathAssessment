@@ -6,12 +6,8 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 
 public class Pattern_5 : TestManager
-{
-    //public AssetReference BBB;
-    //public DataBaseSO datBase;
-
-    //public DataBaseSO[] DataBases;
-    //DataBaseSO CurrentDataBase;
+{       
+    public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
     public TextAsset JsonText;
@@ -48,8 +44,7 @@ public class Pattern_5 : TestManager
     //void Start()
     //{
     //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
-    //    //QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
+    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;    
         
     //    ReadFromJson();
     //    CreatePrefabs();
@@ -84,7 +79,6 @@ public class Pattern_5 : TestManager
         var jsonObj = JObject.Parse(JsonText.text);        
                 
         Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();
-
         //if (Pattern5Obj.title == null)        {
         //    Debug.Log("Title is null.");
         //}
@@ -152,8 +146,7 @@ public class Pattern_5 : TestManager
         {
             bool _isTrue = Numbers[i].GetComponent<DragAndDropPattern5>()._NumIsCorrectPosition;
             if (_isTrue)            
-                TotalCorrectAns++;
-            
+                TotalCorrectAns++;            
         }
 
         FullPositions = 0;
@@ -185,17 +178,8 @@ public class Data_5
 {        
     public string title;
     public List<string> problem;
-    public List<List<string>> solution;
-    //public Dictionary<int, List<string>> solution /*= new Dictionary<int, List<string>>()*/;
+    public List<List<string>> solution;    
 }
-
-//[SerializeField]
-//public class Pattern5Title
-//{
-//    public string title;
-//}
-
-
 
 
 

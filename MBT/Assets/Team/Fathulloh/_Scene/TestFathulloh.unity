@@ -1047,7 +1047,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f253d5a1fdb67d4c8a0442c8a0ceb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataBases:
+  PatternParent: {fileID: 0}
+  QuestionText: {fileID: 0}
+  PatternGroup:
+  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
+  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
+  Group:
   - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
   CurrentDataBase: {fileID: 0}
@@ -3732,7 +3737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentDataBase: {fileID: 0}
+  PatternParent: {fileID: 0}
+  QuestionText: {fileID: 0}
+  PatternGroup: []
+  Group: []
   CurrentJsonText: {fileID: 0}
   AlphabetList: 
   ABCD: []
