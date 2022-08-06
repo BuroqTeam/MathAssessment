@@ -10,9 +10,11 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public int Value;
     float _min;
     int _minValue;
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.DOScale(1.2f, 0);
+        Vector3 pos = transform.position;
     }
     public void OnDrag(PointerEventData eventData)
     {
