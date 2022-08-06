@@ -24,7 +24,7 @@ public class TestManager : MonoBehaviour
     private void Awake()
     {
         GetData();
-        CountNumberOfQuestions();
+       
     }
 
     public void GetData()
@@ -39,7 +39,7 @@ public class TestManager : MonoBehaviour
             PatternSO = PatternGroup[1];
             JsonCollectionSO = Group[1];
         }
-
+        CountNumberOfQuestions();
     }
 
     void CountNumberOfQuestions()
