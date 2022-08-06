@@ -22,11 +22,7 @@ public class Pattern_14 : TestManager
 
     private void OnEnable()
     {
-        //Mbt.SaveJsonPath("key", 0, 86);
-
-        //ES3.Save<string>("LanguageKey", "Uzb");
-
-        //ES3.Save<int>("ClassKey", 6);
+       
 
         _dataBase.DataBase.Clear();
 
