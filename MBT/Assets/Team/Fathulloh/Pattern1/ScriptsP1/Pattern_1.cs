@@ -41,9 +41,8 @@ public class Pattern_1 : TestManager
         //Mbt.SaveJsonPath("Pattern_1", 0, 6);
         //ES3.Save<string>("LanguageKey", "Uzb");
         //ES3.Save<int>("ClassKey", 6);
-
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
         ReadFromJson();
     }
         

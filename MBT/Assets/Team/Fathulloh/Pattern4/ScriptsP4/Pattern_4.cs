@@ -28,19 +28,7 @@ public class Pattern_4 : TestManager
     public List<Vector3> PosLongPhone, PosPhone, PosTablet;
 
     private void FirstMethod()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
-    {
-        //string str0 = ES3.Load<string>("Subject");//+
-        //if (ES3.Load<string>("Subject") == "Algebra")
-        //{
-        //    Debug.Log("Algebra");
-        //    DataBase = DataBases[0];
-        //}
-        //else if (str0 == "Geometriya")
-        //{
-        //    Debug.Log("Geometriya");
-        //    DataBase = DataBases[1];
-        //}
-
+    {        
         int ranNum = Random.Range(20, 29);
         Debug.Log("ranNum = " + ranNum);
         Mbt.SaveJsonPath("Pattern_4", 3, ranNum /*39*/);
@@ -50,7 +38,7 @@ public class Pattern_4 : TestManager
         ES3.Save<int>("ClassKey", 6);
 
         CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(CurrentDataBase);
+        CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
         ReadFromJson();
     }
 
