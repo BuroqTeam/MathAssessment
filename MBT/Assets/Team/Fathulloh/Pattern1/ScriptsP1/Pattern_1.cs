@@ -8,17 +8,12 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Pattern_1 : TestManager
-{          
-    // var PatternObj = jsonObj["chapters"][bob raqami]["questions"][savol raqami]["question"]    
-    //public AssetReference ButtonA;
-    //public DataBaseSO dataBase;
-    //private AssetReference _jsonData;
+public class Pattern_1 : MonoBehaviour
+{       
+    //public DataBaseSO dataBase;    
     //public GameObject QuestionObj;      //---
-    //public TextAsset JsonText;
 
     //public DataBaseSO CurrentDataBase;
-
 
     public TextAsset CurrentJsonText;    
     
@@ -30,12 +25,15 @@ public class Pattern_1 : TestManager
     public GameObject CurrentClickedObj;
 
     Data_1 Pattern_1Obj = new Data_1();
-    float yPos, yLength;
-
 
     private DataBaseSO JsonCollectionSONew;
-    //public DataBaseSO[] GroupNew;
-    //public PatternSO[] PatternGroupPatternNew;
+    private PatternSO PatternSONew;
+    public DataBaseSO[] GroupNew;
+    public PatternSO[] PatternGroupNew;
+
+    float yPos, yLength;
+
+    
     
     private void FirstMethod()
     {
@@ -46,15 +44,14 @@ public class Pattern_1 : TestManager
 
         if (ES3.Load<string>("Subject").Equals("Algebra"))
         {
-            PatternSO = PatternGroup[0];
-            JsonCollectionSONew = Group[0];
+            PatternSONew = PatternGroupNew[0];
+            JsonCollectionSONew = GroupNew[0];
         }
         else
         {
-            PatternSO = PatternGroup[1];
-            JsonCollectionSONew = Group[1];
+            PatternSONew = PatternGroupNew[1];
+            JsonCollectionSONew = GroupNew[1];
         }
-
 
         //Mbt.SaveJsonPath("Pattern_1", 0, 6);
         //ES3.Save<string>("LanguageKey", "Uzb");
@@ -79,14 +76,14 @@ public class Pattern_1 : TestManager
         //GetData();
         FirstMethod();
 
-        DisplayQuestion(Pattern_1Obj.title);
+        //DisplayQuestion(Pattern_1Obj.title);
     }
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr);
+    //}
 
 
     public void CreatePrefabs2()

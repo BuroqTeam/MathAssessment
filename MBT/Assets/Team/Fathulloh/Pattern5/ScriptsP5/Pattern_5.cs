@@ -24,7 +24,9 @@ public class Pattern_5 : TestManager
     public GameObject NumberBoxPrefab;
     
     public GameObject ParentForPos;
-    public Data_5 Pattern5Obj = new Data_5();
+
+    Data_5 Pattern_5Obj = new Data_5();
+    private DataBaseSO JsonCollectionSONew;
 
 
     private void FirstMethod()
@@ -34,8 +36,19 @@ public class Pattern_5 : TestManager
 
         //ES3.Save<int>("ClassKey", 6);
 
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            JsonCollectionSONew = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            JsonCollectionSONew = Group[1];
+        }
+
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
     }
 
@@ -48,16 +61,15 @@ public class Pattern_5 : TestManager
         
     //    ReadFromJson();
     //    CreatePrefabs();
-    //    //transform.SetSiblingIndex()
     //}
 
 
     private void OnEnable()
     {
-        GetData();
+        //GetData();
         FirstMethod();
 
-        DisplayQuestion(Pattern5Obj.title);
+        DisplayQuestion(Pattern_5Obj.title);
     }
 
 
@@ -68,40 +80,36 @@ public class Pattern_5 : TestManager
 
         //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
 
-        CreatePrefabs();
+        //CreatePrefabs(); ++
     }
 
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
-    {
-        QuestionID = Random.Range(40, 50);
-        Debug.Log(" QuestionID = " + QuestionID);
-        var jsonObj = JObject.Parse(JsonText.text);        
-                
-        Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();
-        //if (Pattern5Obj.title == null)        {
-        //    Debug.Log("Title is null.");
-        //}
-        //else        {
-        //    Debug.Log("Title is full." + Pattern5Obj.title);
-        //}
+    {        
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_5");
+        Pattern_5Obj = jo.ToObject<Data_5>();
+        CreatePrefabs();
+
+        //QuestionID = Random.Range(40, 50);
+        //Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();        
     }
 
 
-    public void CreatePrefabs()
+    void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title;      // Keyinroq bu o'chiriladi.
+        QuestionObj.GetComponent<TEXDraw>().text = Pattern_5Obj.title;      // Keyinroq bu o'chiriladi.
 
-        for (int i = 0; i < Pattern5Obj.solution.Count; i++)
+        for (int i = 0; i < Pattern_5Obj.solution.Count; i++)
         {
-            List<string> newList = Pattern5Obj.solution[i];
+            List<string> newList = Pattern_5Obj.solution[i];
 
             GameObject obj = Instantiate(NumberBoxPrefab, this.transform.GetChild(0));
-            if (Pattern5Obj.solution.Count == 2)            {
+            if (Pattern_5Obj.solution.Count == 2)            {
                 Vector3 oldPos = obj.transform.localPosition;
                 obj.transform.localPosition = new Vector3(((float)System.Math.Pow(-1, i)) * 275, oldPos.y, 0);
             }
-            else if (Pattern5Obj.solution.Count == 3)            {
+            else if (Pattern_5Obj.solution.Count == 3)            {
                 Vector3 oldPos = obj.transform.localPosition;
                 obj.transform.localPosition = new Vector3((i - 1) * 550, oldPos.y, 0);
             }
@@ -115,14 +123,14 @@ public class Pattern_5 : TestManager
         }
 
 
-        for (int i = 0; i < Pattern5Obj.problem.Count; i++)
+        for (int i = 0; i < Pattern_5Obj.problem.Count; i++)
         {
             positionObjs[i].SetActive(true);
             Vector3 locPos = positionObjs[i].GetComponent<RectTransform>().localPosition;
             
             GameObject obj = Instantiate(NumPrefab, ParentForPos.transform);
             obj.transform.localPosition = locPos;
-            obj.GetComponent<DragAndDropPattern5>().WriteCurrentAns(Pattern5Obj.problem[i]);
+            obj.GetComponent<DragAndDropPattern5>().WriteCurrentAns(Pattern_5Obj.problem[i]);
             obj.GetComponent<DragAndDropPattern5>().EmptyPositions = EmptyPositions;
             obj.GetComponent<DragAndDropPattern5>().Pattern5 = this;
 
