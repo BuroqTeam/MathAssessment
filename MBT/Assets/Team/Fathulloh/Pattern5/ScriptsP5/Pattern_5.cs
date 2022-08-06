@@ -35,7 +35,7 @@ public class Pattern_5 : TestManager
         //ES3.Save<int>("ClassKey", 6);
 
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
         ReadFromJson();
     }
 

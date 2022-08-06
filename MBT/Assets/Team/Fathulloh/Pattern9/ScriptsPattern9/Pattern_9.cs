@@ -33,7 +33,7 @@ public class Pattern_9 : TestManager
         //ES3.Save<int>("ClassKey", 6);
 
         JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
         ReadFromJson();
     }
 
