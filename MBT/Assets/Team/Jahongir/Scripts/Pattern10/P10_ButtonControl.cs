@@ -43,6 +43,7 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
         else
         {
             Debug.Log("Tushmadi");
+            
         }
     }
 }
