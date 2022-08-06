@@ -9,20 +9,18 @@ using UnityEngine.UI;
 
 public class Pattern_10 : TestManager
 {
-    public SpriteCollectionSO spriteCOllectionSO;
+    public SpriteCollectionSO SpriteCollectionSO;
     public TextAsset CurrentJsonText;
     public GameObject OptionPrefab;
     public GameObject Tile1Prefab;
     public GameObject Tile2Prefab;
     public List<GameObject> Tile1;
     private Sprite _spriteImage;
-    
     Data_10 Pattern_10Obj = new Data_10();
-    
-
 
     private void Awake()
     {
+
 
     }
 
@@ -55,7 +53,7 @@ public class Pattern_10 : TestManager
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
             string str = Pattern_10Obj.options[i][0];
-            _spriteImage = GetDesiredSprite(str, spriteCOllectionSO);
+            _spriteImage = GetDesiredSprite(str, SpriteCollectionSO);
             GameObject obj = Instantiate(OptionPrefab, transform.GetChild(5).transform);
             obj.transform.GetChild(1).GetComponent<Image>().sprite = _spriteImage;
             obj.transform.GetChild(2).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] + " " + Pattern_10Obj.options[i][2];
