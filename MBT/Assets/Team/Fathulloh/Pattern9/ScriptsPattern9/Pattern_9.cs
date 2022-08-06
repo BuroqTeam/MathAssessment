@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Pattern_9 : TestManager
+public class Pattern_9 : MonoBehaviour
 {
 
     private DataBaseSO JsonCollectionSONew;
-    //public DataBaseSO[] GroupNew;
-    //public PatternSO[] PatternGroupNew;
+    private PatternSO PatternSONew;
+    public DataBaseSO[] GroupNew;
+    public PatternSO[] PatternGroupNew;
 
     //public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
@@ -39,13 +40,13 @@ public class Pattern_9 : TestManager
 
         if (ES3.Load<string>("Subject").Equals("Algebra"))
         {
-            PatternSO = PatternGroup[0];
-            JsonCollectionSONew = Group[0];
+            PatternSONew = PatternGroupNew[0];
+            JsonCollectionSONew = GroupNew[0];
         }
         else
         {
-            PatternSO = PatternGroup[1];
-            JsonCollectionSONew = Group[1];
+            PatternSONew = PatternGroupNew[1];
+            JsonCollectionSONew = GroupNew[1];
         }
 
         //JsonCollectionSO.DataBase.Clear();
@@ -56,17 +57,17 @@ public class Pattern_9 : TestManager
 
     private void OnEnable()
     {
-        GetData();
+        //GetData();
         FirstMethod();
 
-        DisplayQuestion(Pattern_9Obj.title);
+        //DisplayQuestion(Pattern_9Obj.title);
     }
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr); // null        
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr); // null        
+    //}
 
 
     //void Start()
