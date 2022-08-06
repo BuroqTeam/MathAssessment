@@ -36,7 +36,7 @@ public class Pattern_3 : TestManager
 
         JsonCollectionSO.DataBase.Clear();
 
-        jsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        jsonText = Mbt.GetDesiredData(JsonCollectionSO);
 
         ReadFromJson();
 
