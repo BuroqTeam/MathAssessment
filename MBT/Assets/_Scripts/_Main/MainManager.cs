@@ -3,7 +3,6 @@ using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using MBT.Extension;
 
 public class MainManager : MonoBehaviour
 {
