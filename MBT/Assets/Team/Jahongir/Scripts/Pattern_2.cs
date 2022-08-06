@@ -8,7 +8,7 @@ using System;
 
 public class Pattern_2 : TestManager
 {  
-    public DataBaseSO DataBase;
+    public DataBaseSO CorrectDataBase;
     public GameObject Button;
     public TextAsset CurrentJsonText;
 
@@ -16,20 +16,23 @@ public class Pattern_2 : TestManager
 
     private void Awake()
     {
+       
+    }
+
+    
+    private void OnEnable()
+    {
+
         Mbt.SaveJsonPath("Pattern_2", 0, 10);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
         ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CorrectDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
 
         ReadFromJson();
-    }
-
-    
-    private void OnEnable()
-    {
         DisplayQuestion(Pattern_2Obj.title);
     }
 

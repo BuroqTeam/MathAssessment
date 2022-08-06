@@ -11,11 +11,16 @@ using System;
 
 public class Pattern_6 : TestManager
 {
-    public DataBaseSO DataBase;
+    public DataBaseSO CorrectDataBase;
     public TextAsset CurrentJsonText;
     Data_6 Pattern_6Obj = new Data_6();
 
     private void Awake()
+    {
+       
+    }
+
+    private void OnEnable()
     {
         Mbt.SaveJsonPath("Pattern_6", 0, 50);
 
@@ -23,13 +28,10 @@ public class Pattern_6 : TestManager
 
         ES3.Save<int>("ClassKey", 6);
 
-        CurrentJsonText = Mbt.GetDesiredJSONData(DataBase);
+        CorrectDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
 
         ReadFromJson();
-    }
-
-    private void OnEnable()
-    {
         DisplayQuestion(Pattern_6Obj.title);
     }
 
