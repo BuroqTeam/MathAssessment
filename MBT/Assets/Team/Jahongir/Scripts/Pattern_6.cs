@@ -12,6 +12,9 @@ using System;
 public class Pattern_6 : TestManager
 {
     public TextAsset CurrentJsonText;
+    public PatternSO[] PaGroup;
+    public DataBaseSO[] Groups;
+    private DataBaseSO _jsCollectionSO;
     Data_6 Pattern_6Obj = new Data_6();
 
     private void Awake()
@@ -21,9 +24,17 @@ public class Pattern_6 : TestManager
 
     private void OnEnable()
     {
-        GetData();
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            _jsCollectionSO = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            _jsCollectionSO = Group[1];
+        }
+        CurrentJsonText = Mbt.GetDesiredData(_jsCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_6Obj.title);
     }

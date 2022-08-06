@@ -8,6 +8,7 @@ public class Pattern_2 : TestManager
     
     public GameObject Button;
     public TextAsset CurrentJsonText;
+    private DataBaseSO JsCollectionSO;
 
     Data_2 Pattern_2Obj = new Data_2();
 
@@ -19,9 +20,18 @@ public class Pattern_2 : TestManager
     
     private void OnEnable()
     {
-        GetData();
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSO);
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        {
+            PatternSO = PatternGroup[0];
+            JsCollectionSO = Group[0];
+        }
+        else
+        {
+            PatternSO = PatternGroup[1];
+            JsCollectionSO = Group[1];
+        }
+      
+        CurrentJsonText = Mbt.GetDesiredData(JsCollectionSO);
         ReadFromJson();
         DisplayQuestion(Pattern_2Obj.title);
     }
@@ -35,6 +45,7 @@ public class Pattern_2 : TestManager
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
+        Debug.Log(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_2");
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();

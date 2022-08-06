@@ -60,6 +60,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
   Button: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
   CurrentJsonText: {fileID: 0}
+  PaGroup:
+  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
+  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
+  Groups:
+  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
 --- !u!114 &6920839453911784879
 MonoBehaviour:
   m_ObjectHideFlags: 0
