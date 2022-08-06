@@ -17,6 +17,11 @@ public class Pattern_6 : TestManager
 
     private void Awake()
     {
+       
+    }
+
+    private void OnEnable()
+    {
         Mbt.SaveJsonPath("Pattern_6", 0, 50);
 
         ES3.Save<string>("LanguageKey", "Uzb");
@@ -27,10 +32,6 @@ public class Pattern_6 : TestManager
         CurrentJsonText = Mbt.GetDesiredJSONData(CorrectDataBase);
 
         ReadFromJson();
-    }
-
-    private void OnEnable()
-    {
         DisplayQuestion(Pattern_6Obj.title);
     }
 
