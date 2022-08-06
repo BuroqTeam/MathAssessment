@@ -26,7 +26,7 @@ public class Pattern_14 : TestManager
 
         JsonCollectionSO.DataBase.Clear();
 
-        jsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        jsonText = Mbt.GetDesiredData(JsonCollectionSO);
 
         ReadFromJson();
 
