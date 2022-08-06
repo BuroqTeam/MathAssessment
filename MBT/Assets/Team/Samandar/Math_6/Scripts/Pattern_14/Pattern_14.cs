@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class Pattern_14 : TestManager
 {
-    public DataBaseSO DataBase;
-    //public DataBaseSO[] DataBase;
+    private DataBaseSO _dataBase;
     public TextAsset jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
@@ -23,15 +22,11 @@ public class Pattern_14 : TestManager
 
     private void OnEnable()
     {
-        //Mbt.SaveJsonPath("key", 0, 86);
+       
 
-        //ES3.Save<string>("LanguageKey", "Uzb");
+        _dataBase.DataBase.Clear();
 
-        //ES3.Save<int>("ClassKey", 6);
-
-        DataBase.DataBase.Clear();
-
-        jsonText = Mbt.GetDesiredJSONData(DataBase);
+        jsonText = Mbt.GetDesiredJSONData(_dataBase);
 
         ReadFromJson();
 
