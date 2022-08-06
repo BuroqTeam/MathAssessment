@@ -51,8 +51,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatternParent: {fileID: 0}
   QuestionText: {fileID: 0}
-  PatternGroup: []
-  Group: []
+  PatternGroup:
+  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
+  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
+  Group:
+  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
   jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
   Problem: {fileID: 1026507422694556708}
   Solution: {fileID: 1026507421238151610}
