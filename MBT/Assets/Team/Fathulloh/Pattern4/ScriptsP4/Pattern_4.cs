@@ -31,12 +31,17 @@ public class Pattern_4 : TestManagerSample
     private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 30-39, VI-bob 20-29, VII-bob 30-39
     {
         //string str0 = ES3.Load<string>("Subject");//+
-        //if (str0 == "Algebra")        {
+        //if (ES3.Load<string>("Subject") == "Algebra")
+        //{
         //    Debug.Log("Algebra");
+        //    DataBase = DataBases[0];
         //}
-        //else if (str0 == "Geometriya")        {
+        //else if (str0 == "Geometriya")
+        //{
         //    Debug.Log("Geometriya");
+        //    DataBase = DataBases[1];
         //}
+
         int ranNum = Random.Range(30, 39);
         Debug.Log("ranNum = " + ranNum);
         Mbt.SaveJsonPath("Pattern_4", 2, ranNum /*39*/);
@@ -59,7 +64,7 @@ public class Pattern_4 : TestManagerSample
 
     public override void DisplayQuestion(string questionStr)
     {
-        base.DisplayQuestion(questionStr); // null        
+        base.DisplayQuestion(questionStr);        
     }
 
 
@@ -82,7 +87,6 @@ public class Pattern_4 : TestManagerSample
             string str = Pattern_4Obj.statements[i].image;
             spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
             GameObject obj = Instantiate(PicturePrefab, transform);
-            //Debug.Log(spriteOfImage.texture.height + " " + spriteOfImage.texture.width);
 
             obj.transform.GetChild(1).GetComponent<Image>().sprite = spriteOfImage;
             Vector2 newSize = new Vector2(spriteOfImage.texture.width / 5 * 3, spriteOfImage.texture.height / 5 * 3);   // spritening 80% ga moslab oladi.  
@@ -94,16 +98,16 @@ public class Pattern_4 : TestManagerSample
             //obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(newSize.x, newSizeText.y);//+
 
             Vector3 oldPos = obj.transform.localPosition;
-            //obj.transform.localPosition = new Vector3(oldPos.x + newSize.x * (i - 1.2f), oldPos.y, oldPos.z);
-            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);
-            //Debug.Log(obj.transform.localPosition);
+            DeviceDetector(Screen.width, Screen.height, obj, i);
+            ////obj.transform.localPosition = new Vector3(oldPos.x + newSize.x * (i - 1.2f), oldPos.y, oldPos.z);
+            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);
+            //Debug.Log("obj.transform.localPosition = " + obj.transform.localPosition + " transfor.position = " + obj.transform.position);
         }
 
                         
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
         float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
-
         Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
         
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
@@ -112,17 +116,35 @@ public class Pattern_4 : TestManagerSample
             Vector3 oldPos = obj.transform.localPosition;
             //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
             obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y -yDistance * (i), oldPos.z);
-            Debug.Log(obj.transform.localPosition + " yDistance * ( i + 1 ) = " + (yDistance * (i+1)) );
+            //Debug.Log(obj.transform.localPosition + " yDistance * ( i + 1 ) = " + (yDistance * (i+1)) );
             ComparisonObjects.Add(obj);
         }
 
         WriteToPrefab();
     }
 
+    
+   
+    public void DeviceDetector(float width, float height, GameObject obj, int i)
+    {            // ushbu kod deviceni ni tekshirib beradi. Bazi o'yin obyektlari devicega qarab o'z pozitsiyasini o'zgartiradi.
+        if (width / height >= 2)        {
+            //Debug.Log("Long phone.");
+            obj.GetComponent<RectTransform>().anchoredPosition = PosLongPhone[i];
+        }
+        else if (width / height > 1.5f)        {
+            //Debug.Log("Phone");
+            obj.GetComponent<RectTransform>().anchoredPosition = PosPhone[i];
+        }
+        else if (width / height < 1.5f)        {
+            //Debug.Log("Tablet");
+            obj.GetComponent<RectTransform>().anchoredPosition = PosTablet[i];
+        }
+    }
+
 
     void WriteToPrefab()        //Data_4 dagi malumotlarni yozib beruvchi metod.
     {
-        for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
+        for (int i = 0; i < Pattern_4Obj.statements.Count; i++) // Ushbu for Kok rectanglelarni ichiga yozishga yordam beradi.
         {
             if (i == 0)            {
                 MainObjs[0].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
@@ -137,7 +159,7 @@ public class Pattern_4 : TestManagerSample
         }
 
 
-        for (int i = 0; i<Pattern_4Obj.options.Count; i++)        
+        for (int i = 0; i<Pattern_4Obj.options.Count; i++) //Taqqoslanishi kerak bo'lgan obyektlarni ichiga yozadi.       
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].left;
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CorrectAnswer = Pattern_4Obj.options[i].sign.ToString();
