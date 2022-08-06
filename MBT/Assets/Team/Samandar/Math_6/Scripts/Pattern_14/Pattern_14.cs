@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Pattern_14 : TestManager
 {
     public DataBaseSO DataBase;
+    //public DataBaseSO[] DataBase;
     public TextAsset jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
@@ -17,18 +18,27 @@ public class Pattern_14 : TestManager
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("key", 0, 86);
+        
+    }
 
-        ES3.Save<string>("LanguageKey", "Uzb");
+    private void OnEnable()
+    {
+        //Mbt.SaveJsonPath("key", 0, 86);
 
-        ES3.Save<int>("ClassKey", 6);
+        //ES3.Save<string>("LanguageKey", "Uzb");
+
+        //ES3.Save<int>("ClassKey", 6);
+
+        DataBase.DataBase.Clear();
 
         jsonText = Mbt.GetDesiredJSONData(DataBase);
 
         ReadFromJson();
+
+        DisplayQuestion(DataObj.title);
+
+        StartMetod();
     }
-
-
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(jsonText.text);
@@ -36,7 +46,7 @@ public class Pattern_14 : TestManager
         DataObj = jo.ToObject<Data_14>();
     }
 
-    void Start()
+    void StartMetod()
     {
         List<string> problem1 = DataObj.problem;
         Problem.transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[0];

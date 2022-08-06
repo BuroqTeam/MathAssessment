@@ -20,7 +20,7 @@ public class DegnDropPattern_3 : MonoBehaviour, IDragHandler, IBeginDragHandler,
     private void Awake()
     {
         _initialPosition = transform.position;
-        _rectTransform = GetComponent<RectTransform>();
+        _rectTransform = GetComponent<RectTransform>();        
     }
     public void OnBeginDrag(PointerEventData eventData)
     {        

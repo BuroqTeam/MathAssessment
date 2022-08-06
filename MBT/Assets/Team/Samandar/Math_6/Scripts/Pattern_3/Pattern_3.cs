@@ -29,20 +29,24 @@ public class Pattern_3 : TestManager
     public List<string> SmallList;
     Data_3 DataObj = new Data_3();
 
-    private void Awake()
+    
+    private void OnEnable()
     {
-        Mbt.SaveJsonPath("key", 0, 26);
+        //Mbt.SaveJsonPath("key", 0, 26);
 
-        ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        ES3.Save<int>("ClassKey", 6);
+        //ES3.Save<int>("ClassKey", 6);
+
+        DataBase.DataBase.Clear();
 
         jsonText = Mbt.GetDesiredJSONData(DataBase);
 
         ReadFromJson();
+
+        DisplayQuestion(DataObj.title);
+        StartMetod();
     }
-
-
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(jsonText.text);
@@ -51,13 +55,9 @@ public class Pattern_3 : TestManager
     }
 
 
-    void Start()
+    void StartMetod()
     {
 
-        //var jsonObj = JObject.Parse(jsonText.text);
-               
-       
-        //DataObj = jsonObj["chapters"][2]["questions"][26]["question"].ToObject<Data_3>();
         List<string> problem1 = DataObj.problem;
 
         
@@ -100,10 +100,7 @@ public class Pattern_3 : TestManager
             NumbersParent[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
     }
-    private void OnEnable()
-    {
-        DisplayQuestion(sampleQuestion);
-    }
+    
 
     public override void DisplayQuestion(string questionStr)
     {
@@ -200,8 +197,6 @@ public class Data_3
 {
     public string title;    
     public List<string> problem = new List<string>();
-
-    //public Dictionary<int, List<string>> solution = new Dictionary<int, List<string>>();
 
     public List<List<string>> solution = new List<List<string>>();
      

@@ -12,9 +12,10 @@ public class Pattern_11 : TestManager
     public GameObject PanelRight;
     public List<GameObject> LeftList;
     public List<GameObject> RightList;
-    public DataBaseSO DataBase;
+    public DataBaseSO[] DataBases;
     public TextAsset jsonText;
     public Data_11 DataObj;
+
     private void Awake()
     {
         Mbt.SaveJsonPath("key", 1, 66);
@@ -23,7 +24,7 @@ public class Pattern_11 : TestManager
 
         ES3.Save<int>("ClassKey", 6);
 
-        jsonText = Mbt.GetDesiredJSONData(DataBase);
+        jsonText = Mbt.GetDesiredJSONData(DataBases[0]);
 
         ReadFromJson();
     }
@@ -44,7 +45,6 @@ public class Pattern_11 : TestManager
     void ObjInstantiate()
     {
         List<string> options1 = DataObj.options;
-        Debug.Log(options1.Count);
         for (int i = 0; i < options1.Count; i++)
         {
             GameObject Right = Instantiate(PushableRectangle, PanelRight.transform);
