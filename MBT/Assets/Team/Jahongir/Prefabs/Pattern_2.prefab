@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8185050519078503261}
-  - component: {fileID: 8185050519078503262}
   - component: {fileID: 6920839453911784879}
+  - component: {fileID: 4448156473769659195}
   m_Layer: 5
   m_Name: Pattern_2
   m_TagString: Untagged
@@ -38,34 +38,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.0786133, y: 0.0001812}
   m_SizeDelta: {x: -361.84262, y: 670}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8185050519078503262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8185050519078503260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876d9c402ac3d3841a1662cd4c27e57d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PatternParent: {fileID: 0}
-  QuestionText: {fileID: 0}
-  PatternGroup:
-  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
-  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
-  Group:
-  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
-  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
-  Button: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
-  CurrentJsonText: {fileID: 0}
-  PaGroup:
-  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
-  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
-  Groups:
-  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
-  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
 --- !u!114 &6920839453911784879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,3 +51,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 2
+  QuestionNumber: 0
+  Json: {fileID: 0}
+--- !u!114 &4448156473769659195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8185050519078503260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcb6587feb878047b5cf192d96c2e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 1203395149595312256, guid: d1d51453d100bd14fa33fdbf0b75e051, type: 3}
+  Buttons: []

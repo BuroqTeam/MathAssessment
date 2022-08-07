@@ -17,7 +17,6 @@ public class Pattern_6 : MonoBehaviour
     {
        
     }
-
     private void OnEnable()
     {
         _currentJsonText = GetComponent<Pattern>().Json;
