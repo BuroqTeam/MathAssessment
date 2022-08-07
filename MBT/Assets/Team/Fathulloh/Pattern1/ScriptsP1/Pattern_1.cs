@@ -127,6 +127,29 @@ public class Pattern_1 : MonoBehaviour
 
 
 
+    //void Check()
+    //{
+    //    List<bool> myList = new List<bool>();
+
+    //    ES3.Save("ResultList", myList);
+    //    bool ca = true;
+
+    //    List<bool> currentList = new List<bool>();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
+
+    //    if (ca)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
+    //    }
+    //    ES3.Save("myList", currentList);
+    //}
+
+
+
     public void UnClickedButtons()
     {
         for (int i = 0; i < ABCD.Count; i++)

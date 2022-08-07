@@ -10,9 +10,9 @@ public class Pattern_5 : TestManager
     public DataBaseSO CurrentDataBase;
     public TextAsset CurrentJsonText;
 
-    public TextAsset JsonText;
-    private GameObject MainParent;
-    public GameObject QuestionObj;
+    //public TextAsset JsonText;
+    //private GameObject MainParent;
+    //public GameObject QuestionObj;
 
     public int QuestionID;
 
@@ -26,32 +26,24 @@ public class Pattern_5 : TestManager
     public GameObject ParentForPos;
 
     Data_5 Pattern_5Obj = new Data_5();
-    private DataBaseSO JsonCollectionSONew;
+    //private DataBaseSO JsonCollectionSONew;
 
 
-    private void FirstMethod()
+    private void Awake()
     {
-        //Mbt.SaveJsonPath("Pattern_5", 1, 6);
-        //ES3.Save<string>("LanguageKey", "Uzb");
+        Mbt.SaveJsonPath("Pattern_5", 2, 45);
+        ES3.Save<string>("LanguageKey", "Uzb");
 
-        //ES3.Save<int>("ClassKey", 6);
+        ES3.Save<int>("ClassKey", 6);
 
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-        {
-            PatternSO = PatternGroup[0];
-            JsonCollectionSONew = Group[0];
-        }
-        else
-        {
-            PatternSO = PatternGroup[1];
-            JsonCollectionSONew = Group[1];
-        }
 
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+        //CurrentDataBase.DataBase.Clear();
+        CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
+
+        //JsonCollectionSO.DataBase.Clear();
+        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
     }
-
 
 
     //void Start()
@@ -64,28 +56,30 @@ public class Pattern_5 : TestManager
     //}
 
 
-    private void OnEnable()
-    {
-        //GetData();
-        FirstMethod();
+    //private void OnEnable()       // +++
+    //{
+    //    //FirstMethod();
 
-        DisplayQuestion(Pattern_5Obj.title);
-    }
+    //    DisplayQuestion(Pattern_5Obj.title);
+    //}
 
 
 
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
-
         //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
-
         //CreatePrefabs(); ++
     }
 
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
-    {        
+    {
+        if (CurrentJsonText == null)
+            Debug.Log("null");
+        else if (CurrentJsonText != null)
+            Debug.Log("full  = " + CurrentJsonText.name);        
+        
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_5");
         Pattern_5Obj = jo.ToObject<Data_5>();
@@ -98,7 +92,7 @@ public class Pattern_5 : TestManager
 
     void CreatePrefabs()
     {
-        QuestionObj.GetComponent<TEXDraw>().text = Pattern_5Obj.title;      // Keyinroq bu o'chiriladi.
+        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_5Obj.title;      // Keyinroq bu o'chiriladi.
 
         for (int i = 0; i < Pattern_5Obj.solution.Count; i++)
         {
@@ -138,7 +132,6 @@ public class Pattern_5 : TestManager
             //obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
             //obj.transform.SetParent(ParentForPos.transform);            
         }
-
         
     }
 

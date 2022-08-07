@@ -1091,6 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 4
+  QuestionNumber: 0
 --- !u!224 &1146837355 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1054830850402449382, guid: e03d920056804f24a83e39ca2ad8d38e, type: 3}
@@ -1187,6 +1188,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3733999160369522968, guid: e03d920056804f24a83e39ca2ad8d38e, type: 3}
+      propertyPath: CurrentDataBase
+      value: 
+      objectReference: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
     - target: {fileID: 5590337405834323471, guid: e03d920056804f24a83e39ca2ad8d38e, type: 3}
       propertyPath: m_Name
       value: PrefabPattern5
