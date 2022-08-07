@@ -584,13 +584,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3274087440497948986}
     m_Modifications:
+    - target: {fileID: 5033707993952980451, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8185050519078503260, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
       propertyPath: m_Name
       value: Pattern_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8185050519078503260, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185050519078503261, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
       propertyPath: m_Pivot.x
@@ -676,14 +676,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8185050519078503262, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
-      propertyPath: pattern3
-      value: 
-      objectReference: {fileID: 2178193364303121615, guid: c473a6af95594444485bb53dcee27675, type: 3}
-    - target: {fileID: 8185050519078503262, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
-      propertyPath: CurrentJsonText
-      value: 
-      objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
 --- !u!224 &1104734202 stripped
