@@ -123,8 +123,6 @@ public class Pattern_9 : MonoBehaviour
     //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
     //    }
     //    ES3.Save("myList", currentList);
-
-
     //}
 
 

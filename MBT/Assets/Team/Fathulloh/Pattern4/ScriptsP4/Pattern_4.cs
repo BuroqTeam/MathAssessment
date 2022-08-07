@@ -6,10 +6,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_4 : TestManager
+public class Pattern_4 : MonoBehaviour
 {    
-    public DataBaseSO CurrentDataBase;
-    public TextAsset CurrentJsonText;
+    //public DataBaseSO CurrentDataBase;
+    //public TextAsset CurrentJsonText;   //-
+    private TextAsset _currentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
     public GameObject PicturePrefab;    
 
@@ -23,46 +24,56 @@ public class Pattern_4 : TestManager
     public string Statement1, Statement2, ImagePath1, ImagePath2;       //
     
     Sprite spriteOfImage;
-    int totalFullAns, totalCorrectAns;
+    public int totalFullAns, totalCorrectAns;
 
     public List<Vector3> PosLongPhone, PosPhone, PosTablet;
-
-    private void FirstMethod()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
-    {        
-        int ranNum = Random.Range(20, 29);
-        Debug.Log("ranNum = " + ranNum);
-        Mbt.SaveJsonPath("Pattern_4", 3, ranNum /*39*/);
-
-        ES3.Save<string>("LanguageKey", "Uzb");
-
-        ES3.Save<int>("ClassKey", 6);
-
-        CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
-        ReadFromJson();
-    }
-
 
 
     private void OnEnable()
     {
-        GetData();
-        FirstMethod();
+        _currentJsonText = GetComponent<Pattern>().Json;
+        if (_currentJsonText != null)
+        {
+            Debug.Log(_currentJsonText.text);
+        }
+        else
+        {
+            Debug.Log("Not Found Data");
+        }
 
-        DisplayQuestion(Pattern_4Obj.title);
+        ReadFromJson();
+        ////DisplayQuestion(Pattern_4Obj.title);
     }
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);        
-    }
 
+    //private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
+    //{        
+    //    //int ranNum = Random.Range(20, 29);
+    //    //Debug.Log("ranNum = " + ranNum);
+    //    //Mbt.SaveJsonPath("Pattern_4", 6, ranNum /*39*/);
+
+    //    //ES3.Save<string>("LanguageKey", "Uzb");
+
+    //    //ES3.Save<int>("ClassKey", 6);
+
+    //    //CurrentDataBase.DataBase.Clear();
+    //    //CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
+    //    ReadFromJson();
+    //}
+
+
+        
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr);        
+    //}
 
 
     void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_4");
         Pattern_4Obj = jo.ToObject<Data_4>();
         
@@ -73,7 +84,7 @@ public class Pattern_4 : TestManager
     void CreatePrefabs()
     {
         
-        for (int i = 0; i < Pattern_4Obj.statements.Count; i++)
+        for (int i = 0; i < Pattern_4Obj.statements.Count; i++) // o'ng tomondagi 2 ta rasmni prefabini yasab beradigan kod.
         {
             string str = Pattern_4Obj.statements[i].image;
             spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
@@ -89,12 +100,9 @@ public class Pattern_4 : TestManager
             //obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(newSize.x, newSizeText.y);//+
 
             Vector3 oldPos = obj.transform.localPosition;
-            DeviceDetector(Screen.width, Screen.height, obj, i);
-            
-            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);
-            //Debug.Log("obj.transform.localPosition = " + obj.transform.localPosition + " transfor.position = " + obj.transform.position);
+            DeviceDetector(Screen.width, Screen.height, obj, i);            
+            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);            
         }
-
                         
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
@@ -114,7 +122,7 @@ public class Pattern_4 : TestManager
     }
 
     
-   
+    
     public void DeviceDetector(float width, float height, GameObject obj, int i)
     {            // ushbu kod deviceni ni tekshirib beradi. Bazi o'yin obyektlari devicega qarab o'z pozitsiyasini o'zgartiradi.
         if (width / height >= 2)        {
@@ -153,6 +161,7 @@ public class Pattern_4 : TestManager
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].left;
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CorrectAnswer = Pattern_4Obj.options[i].sign.ToString();
+            ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().Pattern4 = this;
             ComparisonObjects[i].transform.GetChild(2).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].right;
         }
     }
@@ -177,14 +186,36 @@ public class Pattern_4 : TestManager
     }
 
 
+    //void Check()
+    //{
+    //    List<bool> myList = new List<bool>();
+
+    //    ES3.Save("ResultList", myList);
+    //    bool ca = true;
+
+    //    List<bool> currentList = new List<bool>();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
+
+    //    if (ca)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
+    //    }
+    //    ES3.Save("myList", currentList);
+    //}
+
+
     public void CheckAllAnswers()
     {
+        totalFullAns = 0;
+        totalCorrectAns = 0;
         int n = Pattern_4Obj.options.Count;
         
         for (int i = 0; i < n; i++)
         {
-            totalFullAns = 0;
-            totalCorrectAns = 0;
             string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CurrentAnswer;
             string correctAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CorrectAnswer;
             if (currentAnswer != null)            
@@ -193,12 +224,13 @@ public class Pattern_4 : TestManager
                 totalCorrectAns++;            
         }
 
-        if (totalCorrectAns == n)        {
-            Debug.Log("Everything is true.");
-        }
-        else if (totalFullAns == n)        {
+        if ((totalCorrectAns == n) && (totalFullAns == n))        
+            Debug.Log("Everything is true.");        
+        else if (totalFullAns == n)        
             Debug.Log("Some thing is wrong.");
-        }
+        //else if ((totalWrongAns == n))
+        //    Debug.Log("Some thing is wrong.");
+
     }
 
 }

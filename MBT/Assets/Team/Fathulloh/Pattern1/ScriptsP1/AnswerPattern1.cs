@@ -43,10 +43,10 @@ public class AnswerPattern1 : MonoBehaviour
         gameObject.transform.GetChild(childsCount - 1).gameObject.SetActive(true);
 
         if (_IsTrue)        {
-            //Debug.Log("Correct Answer.");
+            Debug.Log("Correct Answer.");
         }
         else        {
-            //Debug.Log("Wrong Answer.");
+            Debug.Log("Wrong Answer.");
         }
     }
 
@@ -72,7 +72,6 @@ public class AnswerPattern1 : MonoBehaviour
         gameObject.transform.GetChild(childsCount - 1).gameObject.GetComponent<Image>().sprite = WrongCircle;
         gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = WrongRectangle;
     }
-
 
 
 }
