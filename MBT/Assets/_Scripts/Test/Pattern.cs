@@ -6,7 +6,9 @@ public class Pattern : MonoBehaviour
 {
     public string PatternID;
     public int QuestionNumber;
+
     public TextAsset Json;
+
 
 
    
