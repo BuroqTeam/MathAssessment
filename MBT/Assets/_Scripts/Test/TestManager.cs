@@ -5,11 +5,9 @@ using TMPro;
 using UnityEngine;
 
 public class TestManager : MonoBehaviour
-{
-    [HideInInspector]
-    public GameObject PatternParent;
-    [HideInInspector]
-    public TMP_Text QuestionText;
+{    
+    public GameObject PatternParent;    
+    public TEXDraw QuestionText;
     public PatternSO[] PatternGroup;
     public DataBaseSO[] Group;
 
@@ -92,11 +90,14 @@ public class TestManager : MonoBehaviour
        
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
+            //Debug.Log(pattern.GetComponent<Pattern>().PatternID);
             pattern.GetComponent<Pattern>().Json = _curentJson;
             foreach (JObject jObj in jsonList)
             {
+                Debug.Log(jObj["pattern"].ToString());
                 if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
-                {                   
+                {
+                    
                     Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
                     ES3.Load<int>("Chapter"), questionIndexList[int.Parse(pattern.GetComponent<Pattern>().PatternID)-1]);                   
                     GameObject obj = Instantiate(pattern);
