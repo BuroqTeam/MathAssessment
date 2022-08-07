@@ -80,7 +80,10 @@ public class Pattern_5 : MonoBehaviour
 
     void CreatePrefabs()
     {
-        Pattern_5Obj.problem = Pattern_5Obj.problem.ShuffleList();
+        List<string> str = Pattern_5Obj.problem; 
+        str = str.ShuffleList();
+        Pattern_5Obj.problem = str;
+        //Pattern_5Obj.problem = Pattern_5Obj.problem.ShuffleList();
 
         for (int i = 0; i < Pattern_5Obj.solution.Count; i++)
         {
