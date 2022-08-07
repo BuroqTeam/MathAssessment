@@ -11,7 +11,7 @@ using System;
 
 public class Pattern_6 : MonoBehaviour
 {
-    public TextAsset _currentJsonText;
+    private TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new Data_6();
     private void Awake()
