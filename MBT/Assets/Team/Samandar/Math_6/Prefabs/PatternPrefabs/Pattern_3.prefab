@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2178193364303121612}
+  - component: {fileID: 2054088636355671107}
   - component: {fileID: 2178193364303121613}
   m_Layer: 5
   m_Name: Pattern_3
@@ -31,7 +32,6 @@ RectTransform:
   m_Children:
   - {fileID: 2178193364758430023}
   - {fileID: 2178193365647182655}
-  - {fileID: 2178193366033612065}
   - {fileID: 2178193364483601433}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,6 +41,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2054088636355671107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178193364303121615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a62493bf6b231549a5698e0d4e508ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleQuestion: 
+  NumbersText: []
+  Numbers: []
+  NumbersParent:
+  - {fileID: 2178193365137384445}
+  - {fileID: 2178193366306635307}
+  - {fileID: 2178193364500361350}
+  - {fileID: 2178193366242776726}
+  - {fileID: 2178193365594342439}
+  - {fileID: 2178193365265233339}
+  NumberPrefabs: {fileID: 4986404047044520494, guid: f845c2528fa3fed44af5aee47aa476b1, type: 3}
+  NumberAreaPrefabs: {fileID: 560998413663911999, guid: 481fd51bc4f0bb745a064ab00f1f6396, type: 3}
+  NumberArea:
+  - {fileID: 2178193365444177856}
+  - {fileID: 2178193365599796650}
+  - {fileID: 2178193364320720816}
+  - {fileID: 2178193365402120570}
+  - {fileID: 2178193365455744195}
+  - {fileID: 2178193366379521155}
+  NumberActions: {fileID: 2178193365436148639}
+  NumberInstantiate: []
+  CheckList2:
+  - {fileID: 2178193365444177856}
+  - {fileID: 2178193365599796650}
+  CheckList4:
+  - {fileID: 2178193365444177856}
+  - {fileID: 2178193365599796650}
+  - {fileID: 2178193364320720816}
+  - {fileID: 2178193365402120570}
+  CheckList6:
+  - {fileID: 2178193365444177856}
+  - {fileID: 2178193365599796650}
+  - {fileID: 2178193364320720816}
+  - {fileID: 2178193365402120570}
+  - {fileID: 2178193365455744195}
+  - {fileID: 2178193366379521155}
+  MainList: []
+  CorrectAnsNumbers: 0
+  Ansver: []
+  SmallList: []
 --- !u!114 &2178193364303121613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +216,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2178193364303121612}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -253,9 +305,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2178193365134380310}
+      - m_Target: {fileID: 2054088636355671107}
         m_TargetAssemblyTypeName: Pattern_3, Assembly-CSharp
-        m_MethodName: RemakeJsonSolution
+        m_MethodName: CheckingAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -411,102 +463,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &2178193365134380312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2178193365134380313}
-  - component: {fileID: 2178193365134380310}
-  m_Layer: 5
-  m_Name: PatternManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2178193365134380313
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178193365134380312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2178193366033612065}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2178193365134380310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178193365134380312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a62493bf6b231549a5698e0d4e508ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Group:
-  - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
-  - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
-  PatternGroup:
-  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
-  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
-  _jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
-  sampleQuestion: 
-  NumbersText: []
-  Numbers: []
-  NumbersParent:
-  - {fileID: 2178193365137384445}
-  - {fileID: 2178193366306635307}
-  - {fileID: 2178193364500361350}
-  - {fileID: 2178193366242776726}
-  - {fileID: 2178193365594342439}
-  - {fileID: 2178193365265233339}
-  NumberPrefabs: {fileID: 4986404047044520494, guid: f845c2528fa3fed44af5aee47aa476b1, type: 3}
-  NumberAreaPrefabs: {fileID: 560998413663911999, guid: 481fd51bc4f0bb745a064ab00f1f6396, type: 3}
-  NumberArea:
-  - {fileID: 2178193365444177856}
-  - {fileID: 2178193365599796650}
-  - {fileID: 2178193364320720816}
-  - {fileID: 2178193365402120570}
-  - {fileID: 2178193365455744195}
-  - {fileID: 2178193366379521155}
-  NumberActions: {fileID: 2178193365436148639}
-  NumberInstantiate: []
-  CheckList2:
-  - {fileID: 2178193365444177856}
-  - {fileID: 2178193365599796650}
-  CheckList4:
-  - {fileID: 2178193364320720816}
-  - {fileID: 2178193365444177856}
-  - {fileID: 2178193365599796650}
-  - {fileID: 2178193365402120570}
-  CheckList6:
-  - {fileID: 2178193365455744195}
-  - {fileID: 2178193364320720816}
-  - {fileID: 2178193365444177856}
-  - {fileID: 2178193365599796650}
-  - {fileID: 2178193365402120570}
-  - {fileID: 2178193366379521155}
-  MainList: []
-  CorrectAnsNumbers: 0
-  Ansver: []
-  SmallList: []
 --- !u!1 &2178193365137384445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,43 +1145,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &2178193366033612064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2178193366033612065}
-  m_Layer: 5
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2178193366033612065
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178193366033612064}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2178193365134380313}
-  m_Father: {fileID: 2178193364303121612}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2178193366242776726
 GameObject:
   m_ObjectHideFlags: 0
