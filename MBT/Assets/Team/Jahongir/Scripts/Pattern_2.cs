@@ -9,7 +9,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
 using System;
 
-public class Pattern_2 : MonoBehaviour
+public class Pattern_2 : TestManager
 {
     public GameObject Button;
     private TextAsset _currentJsonText;
@@ -26,6 +26,7 @@ public class Pattern_2 : MonoBehaviour
     }
     private void OnEnable()
     {
+        DisplayQuestion(Pattern_2Obj.title);
         if (_isTrue)
         {
             _isTrue = false;
@@ -40,6 +41,11 @@ public class Pattern_2 : MonoBehaviour
             }
             ReadFromJson();
         }
+    }
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);       
     }
     public void ReadFromJson()
     {

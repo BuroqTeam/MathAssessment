@@ -42,6 +42,11 @@ public class Pattern_13 : MonoBehaviour
         Pattern_13Obj = jo.ToObject<Data_13>();
     }
 
+    public void CreatePrefab()
+    {
+
+    }
+
 }
 [SerializeField]
 public class Data_13
