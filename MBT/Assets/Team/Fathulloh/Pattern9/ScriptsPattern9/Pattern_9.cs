@@ -7,27 +7,34 @@ using UnityEngine;
 
 public class Pattern_9 : MonoBehaviour
 {
+    private TextAsset _currentJsonText;
 
-    private DataBaseSO JsonCollectionSONew;
-    private PatternSO PatternSONew;
-    public DataBaseSO[] GroupNew;
-    public PatternSO[] PatternGroupNew;
-
-    //public DataBaseSO CurrentDataBase;
-    public TextAsset CurrentJsonText;
-
-    //public TextAsset JsonText;      //-
-    //private GameObject MainParent;  //-
-    //public GameObject QuestionObj;  //-
-        
     public GameObject ParentComparisonPrefab;
     public List<GameObject> ComparisonObjects;
 
     Data_9 Pattern_9Obj = new Data_9();    
 
     public TMP_Text TextForTranslating;
-    float /*yPos,*/ xPos, yDistance, xDistance;
+    float xPos, yDistance, xDistance;
     int totalFullAns, totalCorrectAns;
+
+
+    private void OnEnable()
+    {
+        _currentJsonText = GetComponent<Pattern>().Json;
+        if (_currentJsonText != null)
+        {
+            Debug.Log(_currentJsonText.text);
+        }
+        else
+        {
+            Debug.Log("Not Found Data");
+        }
+
+        FirstMethod();
+
+        //DisplayQuestion(Pattern_9Obj.title);
+    }
 
 
     private void FirstMethod()
@@ -38,30 +45,11 @@ public class Pattern_9 : MonoBehaviour
 
         //ES3.Save<int>("ClassKey", 6);
 
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-        {
-            PatternSONew = PatternGroupNew[0];
-            JsonCollectionSONew = GroupNew[0];
-        }
-        else
-        {
-            PatternSONew = PatternGroupNew[1];
-            JsonCollectionSONew = GroupNew[1];
-        }
-
         //JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
     }
 
-
-    private void OnEnable()
-    {
-        //GetData();
-        FirstMethod();
-
-        //DisplayQuestion(Pattern_9Obj.title);
-    }
 
 
     //public override void DisplayQuestion(string questionStr)
@@ -70,17 +58,9 @@ public class Pattern_9 : MonoBehaviour
     //}
 
 
-    //void Start()
-    //{
-    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
-    //    ReadFromJson();
-    //}
-
-
     void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_9");
         Pattern_9Obj = jo.ToObject<Data_9>();
         CreatePrefabs();
@@ -123,7 +103,32 @@ public class Pattern_9 : MonoBehaviour
         }
     }
 
-    
+
+    //void Check()
+    //{
+    //    List<bool> myList = new List<bool>();
+
+    //    ES3.Save("ResultList", myList);
+    //    bool ca = true;
+
+    //    List<bool> currentList = new List<bool>();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
+
+    //    if (ca)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
+    //    }
+    //    ES3.Save("myList", currentList);
+
+
+    //}
+
+
+
     public void CheckAllAnswers()
     {
         int n = Pattern_9Obj.options.Count;

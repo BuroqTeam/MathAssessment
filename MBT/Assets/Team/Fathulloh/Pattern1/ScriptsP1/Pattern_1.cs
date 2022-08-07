@@ -10,12 +10,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_1 : MonoBehaviour
 {       
-    //public DataBaseSO dataBase;    
-    //public GameObject QuestionObj;      //---
-
-    //public DataBaseSO CurrentDataBase;
-
-    public TextAsset CurrentJsonText;    
+    
+    private TextAsset _currentJsonText;    
     
     public List<char> AlphabetList = new List<char>();
     public List<GameObject> ABCD;
@@ -26,15 +22,32 @@ public class Pattern_1 : MonoBehaviour
 
     Data_1 Pattern_1Obj = new Data_1();
 
-    private DataBaseSO JsonCollectionSONew;
-    private PatternSO PatternSONew;
-    public DataBaseSO[] GroupNew;
-    public PatternSO[] PatternGroupNew;
+    //private DataBaseSO JsonCollectionSONew;
+    //private PatternSO PatternSONew;
+    //public DataBaseSO[] GroupNew;
+    //public PatternSO[] PatternGroupNew;
 
     float yPos, yLength;
 
-    
-    
+
+    private void OnEnable()
+    {
+        _currentJsonText = GetComponent<Pattern>().Json;
+        if (_currentJsonText != null)
+        {
+            Debug.Log(_currentJsonText.text);
+        }
+        else
+        {
+            Debug.Log("Not Found Data");
+        }
+
+        FirstMethod();
+
+        //DisplayQuestion(Pattern_1Obj.title);
+    }
+
+
     private void FirstMethod()
     {
         for (char c = 'A'; c <= 'Z'; ++c)
@@ -42,41 +55,22 @@ public class Pattern_1 : MonoBehaviour
             AlphabetList.Add(c);
         }
 
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-        {
-            PatternSONew = PatternGroupNew[0];
-            JsonCollectionSONew = GroupNew[0];
-        }
-        else
-        {
-            PatternSONew = PatternGroupNew[1];
-            JsonCollectionSONew = GroupNew[1];
-        }
-
         //Mbt.SaveJsonPath("Pattern_1", 0, 6);
         //ES3.Save<string>("LanguageKey", "Uzb");
         //ES3.Save<int>("ClassKey", 6);
         //JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+
         ReadFromJson();
     }
         
 
     public void ReadFromJson()
     {        
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
         Pattern_1Obj = jo.ToObject<Data_1>();
         CreatePrefabs2();
-    }
-
-
-    private void OnEnable()
-    {
-        //GetData();
-        FirstMethod();
-
-        //DisplayQuestion(Pattern_1Obj.title);
     }
 
 
