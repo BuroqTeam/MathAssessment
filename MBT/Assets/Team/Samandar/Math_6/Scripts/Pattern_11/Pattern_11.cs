@@ -1,3 +1,4 @@
+using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -19,7 +20,7 @@ public class Pattern_11 : TestManager
     private List<string> AlphabetList;
     private void Awake()
     {
-        Mbt.SaveJsonPath("key", 1, 66);
+        Mbt.SaveJsonPath("Pattern_11", 1, 60);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -32,7 +33,7 @@ public class Pattern_11 : TestManager
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_11");
         DataObj = jo.ToObject<Data_11>();
         
     }
@@ -43,12 +44,16 @@ public class Pattern_11 : TestManager
     }
     void ObjInstantiate()
     {
-        List<string> options1 = DataObj.options;
-        for (int i = 0; i < options1.Count; i++)
+        List<string> str = DataObj.options;
+        str = str.ShuffleList();
+        DataObj.options = str;
+        
+        for (int i = 0; i < str.Count; i++)
         {
+            
             var likeName = DataObj.options[i];
 
-            string mainString2 = LeftList[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+            //string mainString2 = LeftList[i].transform.GetChild(0).GetComponent<NumBoxP_11>().CurrentNumber;
             //Ansver.Add(mainString2);
 
             if (likeName.Contains('['))
@@ -65,7 +70,7 @@ public class Pattern_11 : TestManager
 
             GameObject Right = Instantiate(PushableRectangle, PanelRight.transform);
             RightList.Add(Right);
-            PanelRight.transform.GetChild(i).transform.GetChild(0).GetComponent<TEXDraw>().text = options1[i].ToString();
+            PanelRight.transform.GetChild(i).transform.GetChild(0).GetComponent<TEXDraw>().text = str[i].ToString();
             GameObject Left = Instantiate(PushableShadow, PanelLeft.transform);
             LeftList.Add(Left);
         }

@@ -1,3 +1,4 @@
+using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
@@ -50,7 +51,6 @@ public class Pattern_3 : MonoBehaviour
        
         //Mbt.SaveJsonPath("Pattern_3", 0, 25);
         //ES3.Save<string>("LanguageKey", "Uzb");
-
         //ES3.Save<int>("ClassKey", 6);
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
@@ -69,6 +69,9 @@ public class Pattern_3 : MonoBehaviour
 
     void StartMetod()
     {
+        List<string> str = DataObj.problem;
+        str = str.ShuffleList();
+        DataObj.problem = str;
 
         List<string> problem1 = DataObj.problem;
 
