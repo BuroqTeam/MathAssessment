@@ -16,6 +16,7 @@ public class Pattern_2 : MonoBehaviour
     private int CorrectAnswerNumber = 0;
     private int SelectAnswerNumber = 0;
     private int ResultNumber = 0;
+    public bool _isTrue = true;
     public List<GameObject> Buttons = new List<GameObject>();
     Data_2 Pattern_2Obj = new Data_2();
 
@@ -25,21 +26,24 @@ public class Pattern_2 : MonoBehaviour
     }
     private void OnEnable()
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
         }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
-        ReadFromJson();
     }
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_currentJsonText.text);
-        Debug.Log(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_2");
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
@@ -89,7 +93,7 @@ public class Pattern_2 : MonoBehaviour
                     q++;
                     Buttons.Add(button);
                 }
-            }
+            }   
         }
     }
     public void Result()
@@ -123,6 +127,25 @@ public class Pattern_2 : MonoBehaviour
             SelectAnswerNumber = 0;
             ResultNumber = 0;
         }
+    }
+    void Check()
+    {
+        List<bool> myList = new List<bool>();
+
+        ES3.Save("ResultList", myList);
+
+        List<bool> currentList = new List<bool>();
+        currentList = ES3.Load<List<bool>>("ResultList");
+
+        if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
     }
 
 }
