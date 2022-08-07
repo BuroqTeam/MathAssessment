@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_3 : MonoBehaviour
+public class Pattern_3 : TestManager
 {
     private TextAsset _jsonText;
     public string sampleQuestion;
@@ -48,7 +48,7 @@ public class Pattern_3 : MonoBehaviour
             ReadFromJson();
             StartMetod();
         }
-       
+
         //Mbt.SaveJsonPath("Pattern_3", 0, 25);
         //ES3.Save<string>("LanguageKey", "Uzb");
         //ES3.Save<int>("ClassKey", 6);
@@ -56,7 +56,7 @@ public class Pattern_3 : MonoBehaviour
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
 
-        //DisplayQuestion(DataObj.title);
+        DisplayQuestion(DataObj.title);
 
     }
     public void ReadFromJson()
@@ -123,13 +123,11 @@ public class Pattern_3 : MonoBehaviour
 
     //}
         
-    public void DisplayQuestion()
+   
+    public override void DisplayQuestion(string questionStr)
     {
-        //Questions.text = objaa.title;
-
+        base.DisplayQuestion(questionStr);        
     }
-
-
 
     void Check()
     {

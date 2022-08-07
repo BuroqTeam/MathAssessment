@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_15 : MonoBehaviour
+public class Pattern_15 : TestManager
 {
     private TextAsset _jsonText;
     public GameObject Problem;
@@ -45,7 +45,7 @@ public class Pattern_15 : MonoBehaviour
 
 
 
-        //DisplayQuestion(DataObj.title);
+        DisplayQuestion(DataObj.title);
 
         StartMetod();
     }
@@ -63,7 +63,10 @@ public class Pattern_15 : MonoBehaviour
         PrefabsInstantiate();
 
     }
-
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     void PrefabsInstantiate()
