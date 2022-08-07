@@ -7,15 +7,9 @@ public class Pattern : MonoBehaviour
     public string PatternID;
     public int QuestionNumber;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TextAsset Json;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+   
 }

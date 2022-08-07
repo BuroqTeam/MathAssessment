@@ -34,16 +34,21 @@ public class Pattern_3 : MonoBehaviour
     
     private void OnEnable()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-        {
-            PatternSO = PatternGroup[0];
-            _jsCollection = Group[0];
-        }
-        else
-        {
-            PatternSO = PatternGroup[1];
-            _jsCollection = Group[1];
-        }
+        //if (ES3.Load<string>("Subject").Equals("Algebra"))
+        //{
+        //    PatternSO = PatternGroup[0];
+        //    _jsCollection = Group[0];
+        //}
+        //else
+        //{
+        //    PatternSO = PatternGroup[1];
+        //    _jsCollection = Group[1];
+        //}
+        Mbt.SaveJsonPath("Pattern_3", 0, 25);
+        ES3.Save<string>("LanguageKey", "Uzb");
+
+        ES3.Save<int>("ClassKey", 6);
+
         jsonText = Mbt.GetDesiredData(_jsCollection);
 
         ReadFromJson();
