@@ -7,7 +7,7 @@ using MBT.Extension;
 using System;
 using UnityEngine.UI;
 
-public class Pattern_10 : TestManager
+public class Pattern_10 : MonoBehaviour
 {
     public SpriteCollectionSO SpriteCollectionSO;
     public TextAsset CurrentJsonText;
@@ -26,17 +26,17 @@ public class Pattern_10 : TestManager
 
     private void OnEnable()
     {
-        GetData();
-        JsonCollectionSO.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
-        ReadFromJson();
-        DisplayQuestion(Pattern_10Obj.title);
+        //GetData();
+        //JsonCollectionSO.DataBase.Clear();
+        //CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
+        //ReadFromJson();
+        //DisplayQuestion(Pattern_10Obj.title);
     }
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr); // null        
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr); // null        
+    //}
 
     public void ReadFromJson()
     {

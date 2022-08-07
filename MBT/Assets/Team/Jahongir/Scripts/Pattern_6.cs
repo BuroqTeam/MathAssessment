@@ -9,7 +9,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
 using System;
 
-public class Pattern_6 : TestManager
+public class Pattern_6 : MonoBehaviour
 {
     private TextAsset _currentJsonText;
     bool _isTrue = true;
@@ -20,7 +20,6 @@ public class Pattern_6 : TestManager
     }
     private void OnEnable()
     {
-        DisplayQuestion(Pattern_6Obj.title);
         if (_isTrue)
         {
             _isTrue = false;
@@ -35,11 +34,6 @@ public class Pattern_6 : TestManager
             }
             ReadFromJson();
         }
-    }
-
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
     }
 
     public void ReadFromJson()
