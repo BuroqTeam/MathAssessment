@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1026507422495226351}
-  - component: {fileID: 3394841197386634225}
+  - component: {fileID: 2315255451161050350}
   - component: {fileID: 1026507422495226350}
   m_Layer: 5
   m_Name: Pattern_15
@@ -184,7 +184,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3394841197386634225
+--- !u!114 &2315255451161050350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1026507422495226348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0cbf63b982e44243abc8c9179349c7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b85bd9196cb6214daf9744d96e383db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Problem: {fileID: 1026507422694556708}
