@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class Pattern_1 : MonoBehaviour
+public class Pattern_1 : TestManager
 {   
     private TextAsset _currentJsonText;    
     
@@ -41,7 +41,7 @@ public class Pattern_1 : MonoBehaviour
             FirstMethod();
         }        
 
-        //DisplayQuestion(Pattern_1Obj.title);
+        DisplayQuestion(Pattern_1Obj.title);
     }
 
 
@@ -71,10 +71,10 @@ public class Pattern_1 : MonoBehaviour
     }
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     public void CreatePrefabs2()

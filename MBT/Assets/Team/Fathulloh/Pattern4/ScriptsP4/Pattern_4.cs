@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_4 : MonoBehaviour
+public class Pattern_4 : TestManager
 {    
     //public DataBaseSO CurrentDataBase;
     //public TextAsset CurrentJsonText;   //-
@@ -46,9 +46,8 @@ public class Pattern_4 : MonoBehaviour
             }
             ReadFromJson();
         }   
-
-        
-        ////DisplayQuestion(Pattern_4Obj.title);
+                
+        DisplayQuestion(Pattern_4Obj.title);
     }
 
 
@@ -69,11 +68,11 @@ public class Pattern_4 : MonoBehaviour
     //}
 
 
-        
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);        
-    //}
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     void ReadFromJson()
