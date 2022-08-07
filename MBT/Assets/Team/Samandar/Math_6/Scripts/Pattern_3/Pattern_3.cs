@@ -11,7 +11,7 @@ public class Pattern_3 : MonoBehaviour
     private PatternSO PatternSO;
     public DataBaseSO[] Group;
     public PatternSO[] PatternGroup;
-    public TextAsset jsonText;
+    public TextAsset _jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
     public List<GameObject> Numbers;
@@ -34,22 +34,22 @@ public class Pattern_3 : MonoBehaviour
     
     private void OnEnable()
     {
-        //if (ES3.Load<string>("Subject").Equals("Algebra"))
-        //{
-        //    PatternSO = PatternGroup[0];
-        //    _jsCollection = Group[0];
-        //}
-        //else
-        //{
-        //    PatternSO = PatternGroup[1];
-        //    _jsCollection = Group[1];
-        //}
-        Mbt.SaveJsonPath("Pattern_3", 0, 25);
-        ES3.Save<string>("LanguageKey", "Uzb");
+        _jsonText = GetComponent<Pattern>().Json;
+        if (_jsonText != null)
+        {
+            Debug.Log(_jsonText.text);
+        }
+        else
+        {
+            Debug.Log("Not Found Data");
+        }
 
-        ES3.Save<int>("ClassKey", 6);
+        //Mbt.SaveJsonPath("Pattern_3", 0, 25);
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        jsonText = Mbt.GetDesiredData(_jsCollection);
+        //ES3.Save<int>("ClassKey", 6);
+
+        //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
         ReadFromJson();
 
@@ -58,7 +58,7 @@ public class Pattern_3 : MonoBehaviour
     }
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(jsonText.text);
+        var jsonObj = JObject.Parse(_jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         DataObj = jo.ToObject<Data_3>();
     }

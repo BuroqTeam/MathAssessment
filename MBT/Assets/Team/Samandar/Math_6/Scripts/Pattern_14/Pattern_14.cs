@@ -10,7 +10,7 @@ public class Pattern_14 : MonoBehaviour
     private PatternSO PatternSO;
     public DataBaseSO[] Group;
     public PatternSO[] PatternGroup;
-    public TextAsset jsonText;
+    public TextAsset _jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
     public GameObject Solution;
@@ -27,17 +27,18 @@ public class Pattern_14 : MonoBehaviour
       
     private void OnEnable()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        _jsonText = GetComponent<Pattern>().Json;
+
+        if (_jsonText != null)
         {
-            PatternSO = PatternGroup[0];
-            _jsCollection = Group[0];
+            Debug.Log(_jsonText.text);
         }
         else
         {
-            PatternSO = PatternGroup[1];
-            _jsCollection = Group[1];
+            Debug.Log("Not Found Data");
         }
-        jsonText = Mbt.GetDesiredData(_jsCollection);
+
+        //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
         ReadFromJson();
 
@@ -47,7 +48,7 @@ public class Pattern_14 : MonoBehaviour
     }
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(jsonText.text);
+        var jsonObj = JObject.Parse(_jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
         DataObj = jo.ToObject<Data_14>();
     }
