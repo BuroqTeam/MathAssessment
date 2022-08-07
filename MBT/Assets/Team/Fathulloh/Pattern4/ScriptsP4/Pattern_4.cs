@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_4 : TestManager
+public class Pattern_4 : MonoBehaviour
 {    
     //public DataBaseSO CurrentDataBase;
     //public TextAsset CurrentJsonText;   //-
@@ -47,7 +47,7 @@ public class Pattern_4 : TestManager
             ReadFromJson();
         }   
                 
-        DisplayQuestion(Pattern_4Obj.title);
+        //DisplayQuestion(Pattern_4Obj.title);
     }
 
 
@@ -57,9 +57,7 @@ public class Pattern_4 : TestManager
     //    //int ranNum = Random.Range(20, 29);
     //    //Debug.Log("ranNum = " + ranNum);
     //    //Mbt.SaveJsonPath("Pattern_4", 6, ranNum /*39*/);
-
     //    //ES3.Save<string>("LanguageKey", "Uzb");
-
     //    //ES3.Save<int>("ClassKey", 6);
 
     //    //CurrentDataBase.DataBase.Clear();
@@ -69,10 +67,10 @@ public class Pattern_4 : TestManager
 
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr);
+    //}
 
 
     void ReadFromJson()
