@@ -1,3 +1,4 @@
+using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -23,20 +24,26 @@ public class Pattern_5 : MonoBehaviour
     int TotalCorrectAns;    // to'g'ri joylashtirilgan javoblar soni.
     int FullPositions;      // to'ldirilgan o'rinlar soni.
 
+    bool _isTrue = true;
 
     private void OnEnable()       // +++
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
-        }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
 
-        ReadFromJson();
+            ReadFromJson();
+        }
+        
         //DisplayQuestion(Pattern_5Obj.title);
     }
 
@@ -45,8 +52,7 @@ public class Pattern_5 : MonoBehaviour
     //{
     //    //Mbt.SaveJsonPath("Pattern_5", 2, 40);
     //    //ES3.Save<string>("LanguageKey", "Uzb");
-    //    //ES3.Save<int>("ClassKey", 6);
-                
+    //    //ES3.Save<int>("ClassKey", 6);                
     //    ReadFromJson();
     //}
 
@@ -74,7 +80,8 @@ public class Pattern_5 : MonoBehaviour
 
     void CreatePrefabs()
     {
-        
+        Pattern_5Obj.problem = Pattern_5Obj.problem.ShuffleList();
+
         for (int i = 0; i < Pattern_5Obj.solution.Count; i++)
         {
             List<string> newList = Pattern_5Obj.solution[i];

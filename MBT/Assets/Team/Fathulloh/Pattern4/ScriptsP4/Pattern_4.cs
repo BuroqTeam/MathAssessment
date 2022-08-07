@@ -28,20 +28,26 @@ public class Pattern_4 : MonoBehaviour
 
     public List<Vector3> PosLongPhone, PosPhone, PosTablet;
 
+    bool _isTrue = true;
 
     private void OnEnable()
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
-        }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
+        }   
 
-        ReadFromJson();
+        
         ////DisplayQuestion(Pattern_4Obj.title);
     }
 

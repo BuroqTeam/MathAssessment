@@ -1,3 +1,4 @@
+using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -18,20 +19,26 @@ public class Pattern_9 : MonoBehaviour
     float xPos, yDistance, xDistance;
     int totalFullAns, totalCorrectAns;
 
+    bool _isTrue = true;
 
     private void OnEnable()
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
-        }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
 
-        FirstMethod();
+            FirstMethod();
+        }
+        
 
         //DisplayQuestion(Pattern_9Obj.title);
     }
@@ -72,6 +79,8 @@ public class Pattern_9 : MonoBehaviour
         //QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //-
         int optionsCount = Pattern_9Obj.options.Count;
 
+        /*Pattern_9Obj.options = */Pattern_9Obj.options.ShuffleList();
+
         xDistance = ParentComparisonPrefab.transform.GetChild(1).position.x - ParentComparisonPrefab.transform.GetChild(0).position.x ;
         xPos = xDistance - ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.width;
         yDistance = xPos + ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.height;
@@ -82,7 +91,6 @@ public class Pattern_9 : MonoBehaviour
             GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
             //obj.transform.GetChild(1).GetComponent<DropDownP9>().TextForTranslating = TextForTranslating.text;
-
             if (i != 0)             {
                 obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
             }              
