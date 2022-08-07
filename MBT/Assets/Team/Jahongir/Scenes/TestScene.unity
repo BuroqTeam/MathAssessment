@@ -2971,55 +2971,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 110954515543754511, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
+    - target: {fileID: 2659695383878265739, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1300
+      value: -1085.13
       objectReference: {fileID: 0}
-    - target: {fileID: 110954515543754511, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 640
-      objectReference: {fileID: 0}
-    - target: {fileID: 110954515543754511, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
+    - target: {fileID: 2659695383878265739, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -650
+      value: 542.57
       objectReference: {fileID: 0}
-    - target: {fileID: 110954515543754511, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
+    - target: {fileID: 2659695383878265739, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770483516291616746, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
+      propertyPath: _currentJsonText
+      value: 
+      objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
---- !u!1 &8121261713681737852 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3381601196591594202, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
-  m_PrefabInstance: {fileID: 8121261713681737851}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8121261713681737853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8121261713681737852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!224 &8194377455857229649 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 75649017508017962, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}

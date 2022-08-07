@@ -17,6 +17,15 @@ public class Pattern_13 : MonoBehaviour
     private bool _isTrue = true;
     Data_13 Pattern_13Obj = new Data_13();
 
+    private void Awake()
+    {
+        Mbt.SaveJsonPath("Pattern_9", 8, 55);
+
+        ES3.Save<string>("LanguageKey", "Uzb");
+
+        ES3.Save<int>("ClassKey", 6);
+    }
+
     private void OnEnable()
     {
         if (_isTrue)
