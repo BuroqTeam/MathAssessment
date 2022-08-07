@@ -4,38 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pattern_2 : MonoBehaviour
-{  
-    
+{
     public GameObject Button;
-    public TextAsset CurrentJsonText;
-    public PatternSO[] PatternGroup;
-    public DataBaseSO[] Group;
-    public PatternSO PatternSO;
-
-    private DataBaseSO _jsCollectionSO;
-
+    private TextAsset _currentJsonText;
     Data_2 Pattern_2Obj = new Data_2();
 
     private void Awake()
     {
        
     }
-
-    
     private void OnEnable()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        _currentJsonText = GetComponent<Pattern>().Json;
+        if (_currentJsonText != null)
         {
-            PatternSO = PatternGroup[0];
-            _jsCollectionSO = Group[0];
+            Debug.Log(_currentJsonText.text);
         }
         else
         {
-            PatternSO = PatternGroup[1];
-            _jsCollectionSO = Group[1];
+            Debug.Log("Not Found Data");
         }
-      
-        CurrentJsonText = Mbt.GetDesiredData(_jsCollectionSO);
         ReadFromJson();
         //DisplayQuestion(Pattern_2Obj.title);
     }
@@ -48,8 +36,8 @@ public class Pattern_2 : MonoBehaviour
 
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
-        Debug.Log(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
+        Debug.Log(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_2");
         Pattern_2Obj = jo.ToObject<Data_2>();
         CreatePrefabs();
