@@ -78,7 +78,7 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
         if (k.Equals(Positions.Count))
         {
-            _rectTransform.anchoredPosition3D = InitialList[0].transform.position;
+            _rectTransform.anchoredPosition3D = _initialPosition;
             _rectTransform.DOScale(1, 0.2f);
         }
     }
