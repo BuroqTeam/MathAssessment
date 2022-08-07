@@ -71,8 +71,7 @@ public class TestManager : MonoBehaviour
    
 
     void CreateExistedPatterns()
-    {
-       
+    {       
         JObject singleQuestion = new JObject();
         List<JObject> jsonList = new List<JObject>();
         int k = ES3.Load<int>("TestGroup");
@@ -86,29 +85,28 @@ public class TestManager : MonoBehaviour
             k += _numberOfQuestions;            
         }
 
-
-       
+        List<GameObject> availablePrefabs = new List<GameObject>();
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
-            //Debug.Log(pattern.GetComponent<Pattern>().PatternID);
-            pattern.GetComponent<Pattern>().Json = _curentJson;
-            foreach (JObject jObj in jsonList)
-            {
-                Debug.Log(jObj["pattern"].ToString());
-                if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
+            if (pattern != null)
+            {                
+                pattern.GetComponent<Pattern>().Json = _curentJson;
+                foreach (JObject jObj in jsonList)
                 {
-                    
-                    Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
-                    ES3.Load<int>("Chapter"), questionIndexList[int.Parse(pattern.GetComponent<Pattern>().PatternID)-1]);                   
-                    GameObject obj = Instantiate(pattern);
-                    obj.transform.SetParent(PatternParent.transform);
-                    obj.transform.localScale = Vector3.one;
-                    obj.SetActive(false);                  
-                    _activePatterns.Add(obj);
+                    if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
+                    {
+                        availablePrefabs.Add(pattern);
+                        Mbt.SaveJsonPath("Pattern_" + pattern.GetComponent<Pattern>().PatternID,
+                        ES3.Load<int>("Chapter"), questionIndexList[int.Parse(pattern.GetComponent<Pattern>().PatternID) - 1]);
+                        GameObject obj = Instantiate(pattern);
+                        obj.transform.SetParent(PatternParent.transform);
+                        obj.transform.localScale = Vector3.one;
+                        obj.SetActive(false);
+                        _activePatterns.Add(obj);
+                    }
                 }
-            }
-        }
-        
+            }            
+        }        
         _activePatterns[0].SetActive(true);
     }
 
