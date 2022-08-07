@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropDownP9 : MonoBehaviour/*, IPointerClickHandler*/
+public class DropDownP9 : MonoBehaviour
 {
     public string AddressToTerm;
 
@@ -18,9 +18,7 @@ public class DropDownP9 : MonoBehaviour/*, IPointerClickHandler*/
 
     public string CorrectAnswer;        // boshqa skriptdan buyerga to'g'ri javobni berib olamiz.
     public string CurrentAnswer;
-
-
-    bool _IsFirstTime = true;
+    //bool _IsFirstTime = true;
 
 
     void Start()
@@ -66,29 +64,16 @@ public class DropDownP9 : MonoBehaviour/*, IPointerClickHandler*/
     }
 
 
-    
-
 
     void CheckingAnswer()
     {
-        if (CurrentAnswer == CorrectAnswer)
-        {
+        if (CurrentAnswer == CorrectAnswer)        {
             Debug.Log("To'g'ri javob tanlandi.");
         }
-        else if (CurrentAnswer != CorrectAnswer)
-        {
+        else if (CurrentAnswer != CorrectAnswer)        {
             Debug.Log("Noto'g'ri javob tanlandi.");
         }
     }
 
-
-    ///// <summary>
-    ///// Click bo'lganda ishlovchi method.
-    ///// </summary>
-    ///// <param name="eventData"></param>
-    //public void OnPointerClick(PointerEventData eventData)
-    //{
-    //    //DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;        
-    //}
-
+        
 }

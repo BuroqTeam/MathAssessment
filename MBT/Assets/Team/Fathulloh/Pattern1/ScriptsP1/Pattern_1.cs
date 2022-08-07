@@ -9,8 +9,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_1 : MonoBehaviour
-{       
-    
+{   
     private TextAsset _currentJsonText;    
     
     public List<char> AlphabetList = new List<char>();
@@ -21,12 +20,6 @@ public class Pattern_1 : MonoBehaviour
     public GameObject CurrentClickedObj;
 
     Data_1 Pattern_1Obj = new Data_1();
-
-    //private DataBaseSO JsonCollectionSONew;
-    //private PatternSO PatternSONew;
-    //public DataBaseSO[] GroupNew;
-    //public PatternSO[] PatternGroupNew;
-
     float yPos, yLength;
 
 

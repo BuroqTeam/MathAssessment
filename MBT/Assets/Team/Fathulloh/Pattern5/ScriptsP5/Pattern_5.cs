@@ -5,16 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class Pattern_5 : TestManager
-{       
-    public DataBaseSO CurrentDataBase;
-    public TextAsset CurrentJsonText;
-
-    //public TextAsset JsonText;
-    //private GameObject MainParent;
-    //public GameObject QuestionObj;
-
-    public int QuestionID;
+public class Pattern_5 : MonoBehaviour
+{      
+    //public TextAsset CurrentJsonText;
+    private TextAsset _currentJsonText;    
 
     public List<GameObject> Numbers;
     public List<GameObject> Boxs;
@@ -26,74 +20,61 @@ public class Pattern_5 : TestManager
     public GameObject ParentForPos;
 
     Data_5 Pattern_5Obj = new Data_5();
-    //private DataBaseSO JsonCollectionSONew;
+    int TotalCorrectAns;    // to'g'ri joylashtirilgan javoblar soni.
+    int FullPositions;      // to'ldirilgan o'rinlar soni.
 
 
-    private void Awake()
+    private void OnEnable()       // +++
     {
-        Mbt.SaveJsonPath("Pattern_5", 2, 45);
-        ES3.Save<string>("LanguageKey", "Uzb");
+        _currentJsonText = GetComponent<Pattern>().Json;
+        if (_currentJsonText != null)
+        {
+            Debug.Log(_currentJsonText.text);
+        }
+        else
+        {
+            Debug.Log("Not Found Data");
+        }
 
-        ES3.Save<int>("ClassKey", 6);
-
-
-        //CurrentDataBase.DataBase.Clear();
-        CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
-
-        //JsonCollectionSO.DataBase.Clear();
-        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
         ReadFromJson();
+        //DisplayQuestion(Pattern_5Obj.title);
     }
 
 
-    //void Start()
+    //private void Awake()
     //{
-    //    MainParent = gameObject.transform.parent.transform.parent.gameObject;
-    //    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;    
-        
+    //    //Mbt.SaveJsonPath("Pattern_5", 2, 40);
+    //    //ES3.Save<string>("LanguageKey", "Uzb");
+    //    //ES3.Save<int>("ClassKey", 6);
+                
     //    ReadFromJson();
-    //    CreatePrefabs();
     //}
 
 
-    //private void OnEnable()       // +++
+    //public override void DisplayQuestion(string questionStr)
     //{
-    //    //FirstMethod();
-
-    //    DisplayQuestion(Pattern_5Obj.title);
+    //    base.DisplayQuestion(questionStr);    
     //}
-
-
-
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.question.title;
-        //CreatePrefabs(); ++
-    }
 
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
     {
-        if (CurrentJsonText == null)
-            Debug.Log("null");
-        else if (CurrentJsonText != null)
-            Debug.Log("full  = " + CurrentJsonText.name);        
-        
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        //if (CurrentJsonText == null)
+        //    Debug.Log("null");
+        //else if (CurrentJsonText != null)
+        //    Debug.Log("full  = " + CurrentJsonText.name);        
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
+
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_5");
         Pattern_5Obj = jo.ToObject<Data_5>();
-        CreatePrefabs();
-
-        //QuestionID = Random.Range(40, 50);
-        //Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();        
+        CreatePrefabs();                
     }
 
 
     void CreatePrefabs()
     {
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_5Obj.title;      // Keyinroq bu o'chiriladi.
-
+        
         for (int i = 0; i < Pattern_5Obj.solution.Count; i++)
         {
             List<string> newList = Pattern_5Obj.solution[i];
@@ -128,16 +109,33 @@ public class Pattern_5 : TestManager
             obj.GetComponent<DragAndDropPattern5>().EmptyPositions = EmptyPositions;
             obj.GetComponent<DragAndDropPattern5>().Pattern5 = this;
 
-            Numbers.Add(obj);
-            //obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
-            //obj.transform.SetParent(ParentForPos.transform);            
+            Numbers.Add(obj);                       
         }
         
     }
 
 
-    public int TotalCorrectAns;
-    public int FullPositions;
+    //void Check()
+    //{
+    //    List<bool> myList = new List<bool>();
+
+    //    ES3.Save("ResultList", myList);
+    //    bool ca = true;
+
+    //    List<bool> currentList = new List<bool>();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
+
+    //    if (ca)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
+    //    }
+    //    ES3.Save("myList", currentList);
+    //}
+
 
     public void CheckIsFinishing()
     {
@@ -154,11 +152,10 @@ public class Pattern_5 : TestManager
 
         for (int i = 0; i < EmptyPositions.Count; i++)
         {
-            if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)
-            {
-                FullPositions++;
-            }
+            if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)            
+                FullPositions++;            
         }
+
         //Debug.Log(fullPositions);
         if (FullPositions == EmptyPositions.Count)
         {
@@ -167,8 +164,6 @@ public class Pattern_5 : TestManager
             else
                 Debug.Log(TotalCorrectAns + " You are fall. ");
         }
-        
-
     }
 
 
@@ -183,4 +178,16 @@ public class Data_5
 }
 
 
+//void Start()
+//{
+//    MainParent = gameObject.transform.parent.transform.parent.gameObject;
+//    QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;    
+//    ReadFromJson();
+//    CreatePrefabs();
+//}
 
+//QuestionID = Random.Range(40, 50);
+//Pattern_5Obj = jsonObj["chapters"][0]["questions"][QuestionID]["question"].ToObject<Data_5>();
+
+//obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
+//obj.transform.SetParent(ParentForPos.transform); 

@@ -6,8 +6,9 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropDownP4 : MonoBehaviour, IPointerClickHandler
+public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
 {
+    public Pattern_4 Pattern4;
     public string AddressToTerm;
     public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/; 
 
@@ -60,13 +61,14 @@ public class DropDownP4 : MonoBehaviour, IPointerClickHandler
         else if (CurrentAnswer != CorrectAnswer)       {
             Debug.Log("Noto'g'ri javob tanlandi.");
         }
+        Pattern4.CheckAllAnswers();
     }
 
 
     
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        //DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
-        //Debug.Log(888);
-    }
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    //DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
+    //    //Debug.Log(888);
+    //}
 }
