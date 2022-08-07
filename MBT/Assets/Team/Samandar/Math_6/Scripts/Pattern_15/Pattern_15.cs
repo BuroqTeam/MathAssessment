@@ -13,6 +13,7 @@ public class Pattern_15 : MonoBehaviour
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new List<Button>();
     public ColorCollectionSO colorCollection;
+    public bool _istrue = true;
 
 
     private void Awake()
@@ -23,20 +24,26 @@ public class Pattern_15 : MonoBehaviour
 
     private void OnEnable()
     {
-        _jsonText = GetComponent<Pattern>().Json;
-
-        if (_jsonText != null)
+        if (_istrue)
         {
-            Debug.Log(_jsonText.text);
-        }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+            _istrue = false;
+            _jsonText = GetComponent<Pattern>().Json;
 
+            if (_jsonText != null)
+            {
+                Debug.Log(_jsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
+            StartMetod();
+        }
+        
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
-        ReadFromJson();
+
 
         //DisplayQuestion(DataObj.title);
 
@@ -45,7 +52,7 @@ public class Pattern_15 : MonoBehaviour
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_15");
         DataObj = jo.ToObject<Data_15>();
     }
 

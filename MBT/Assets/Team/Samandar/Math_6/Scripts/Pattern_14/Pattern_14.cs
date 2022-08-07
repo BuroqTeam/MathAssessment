@@ -20,32 +20,39 @@ public class Pattern_14 : MonoBehaviour
         
     }
 
+    public bool _istrue = true;
       
     private void OnEnable()
     {
-        _jsonText = GetComponent<Pattern>().Json;
+        if (_istrue)
+        {
+            _istrue = false;
+            _jsonText = GetComponent<Pattern>().Json;
 
-        if (_jsonText != null)
-        {
-            Debug.Log(_jsonText.text);
+            if (_jsonText != null)
+            {
+                Debug.Log(_jsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
+            StartMetod();
         }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+        
+       
+
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
-
-        ReadFromJson();
-
         //DisplayQuestion(DataObj.title);
 
-        StartMetod();
     }
     public void ReadFromJson()
     {
+        
         var jsonObj = JObject.Parse(_jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_14");
         DataObj = jo.ToObject<Data_14>();
     }
 

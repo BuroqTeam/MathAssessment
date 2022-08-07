@@ -20,7 +20,7 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     private void Awake()
     {
-        _initialPosition = GetComponent<RectTransform>().position;
+        _initialPosition = transform.localPosition;
         _rectTransform = GetComponent<RectTransform>();
     }
 
@@ -68,7 +68,6 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
                 Positions[i].GetComponent<NumBoxP_11>()._IsEmpty = false;
                 Positions[i].GetComponent<NumBoxP_11>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
                 _rectTransform.DOScale(1, 0.2f);
-                //Pattern11.CheckingAnswer();
                 break;
             }
             else

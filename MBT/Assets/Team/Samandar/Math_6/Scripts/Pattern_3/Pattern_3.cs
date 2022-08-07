@@ -27,35 +27,42 @@ public class Pattern_3 : MonoBehaviour
     public List<List<string>> newSolution = new List<List<string>>();
     public List<string> SmallList;
     Data_3 DataObj = new Data_3();
-    
+
+    public bool _istrue = true;
+
     private void OnEnable()
     {
-        _jsonText = GetComponent<Pattern>().Json;
-        if (_jsonText != null)
+        if (_istrue)
         {
-            Debug.Log(_jsonText.text);
+            _istrue = false;
+            _jsonText = GetComponent<Pattern>().Json;
+            if (_jsonText != null)
+            {
+                Debug.Log(_jsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
+            StartMetod();
         }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
-
-        //Mbt.SaveJsonPath("Pattern_3",1, 25);
+       
+        //Mbt.SaveJsonPath("Pattern_3", 0, 25);
         //ES3.Save<string>("LanguageKey", "Uzb");
 
         //ES3.Save<int>("ClassKey", 6);
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
-        ReadFromJson();
 
         //DisplayQuestion(DataObj.title);
-        StartMetod();
+
     }
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "key");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_3");
         DataObj = jo.ToObject<Data_3>();
     }
 
@@ -118,14 +125,38 @@ public class Pattern_3 : MonoBehaviour
         //Questions.text = objaa.title;
 
     }
-       
+
+
+
+    void Check()
+    {
+        List<bool> myList = new List<bool>();
+
+        ES3.Save("ResultList", myList);
+        bool ca = true;
+
+        List<bool> currentList = new List<bool>();
+        currentList = ES3.Load<List<bool>>("ResultList");
+
+        if (ca)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
+
+
+    }
+
 
     public void CheckingAnswer()
     {
         CorrectAnsNumbers = 0;
         List<string> solution1 = DataObj.solution[0];
         int javoblarSoni = solution1.Count-1;
-        Debug.Log("javoblarSoni  = " + javoblarSoni + " " + newSolution.Count);
         Ansver.Clear();
         for (int i = 0; i < javoblarSoni; i++)
         {
