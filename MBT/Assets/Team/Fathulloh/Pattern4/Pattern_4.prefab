@@ -373,7 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f253d5a1fdb67d4c8a0442c8a0ceb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentJsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   PicturePrefab: {fileID: 6769031063644269278, guid: 1bbec0ca5e8926a46acaff2102b63427, type: 3}
   MainObjs:
@@ -386,6 +385,8 @@ MonoBehaviour:
   Statement2: 
   ImagePath1: 
   ImagePath2: 
+  totalFullAns: 0
+  totalCorrectAns: 0
   PosLongPhone:
   - {x: -750, y: -340, z: 0}
   - {x: -340, y: -340, z: 0}
@@ -408,6 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 4
+  IsAvailable: 1
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1001 &2155308188425113859

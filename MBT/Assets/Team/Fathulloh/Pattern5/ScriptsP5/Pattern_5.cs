@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class Pattern_5 : MonoBehaviour
+public class Pattern_5 : TestManager
 {      
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;    
@@ -44,7 +44,7 @@ public class Pattern_5 : MonoBehaviour
             ReadFromJson();
         }
         
-        //DisplayQuestion(Pattern_5Obj.title);
+        DisplayQuestion(Pattern_5Obj.title);
     }
 
 
@@ -57,10 +57,10 @@ public class Pattern_5 : MonoBehaviour
     //}
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);    
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
