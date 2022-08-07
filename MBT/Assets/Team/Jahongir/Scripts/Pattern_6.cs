@@ -12,6 +12,7 @@ using System;
 public class Pattern_6 : MonoBehaviour
 {
     private TextAsset _currentJsonText;
+    bool _isTrue = true;
     Data_6 Pattern_6Obj = new Data_6();
     private void Awake()
     {
@@ -19,16 +20,20 @@ public class Pattern_6 : MonoBehaviour
     }
     private void OnEnable()
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
         }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
-        ReadFromJson();
     }
 
     public void ReadFromJson()
