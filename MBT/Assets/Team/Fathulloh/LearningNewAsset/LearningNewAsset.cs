@@ -16,7 +16,6 @@ public class LearningNewAsset : MonoBehaviour
 
     void SaveSomething()
     {
-
         int nulValue = 0;
         //ES3.Save("myIntF", 8000);
         int myInt = ES3.Load("myIntF", nulValue);
@@ -26,15 +25,14 @@ public class LearningNewAsset : MonoBehaviour
 
         Debug.Log("Yangi " + ES3.Load("myIntF"));
 
-
-        //if (ES3.KeyExists("ProgrammingLanguages", ))
-        //{
-        //    Debug.Log("Data bor.");
-        //}
-        //else
-        //{
-        //    Debug.Log("Data yo'q.");
-        //}
+        if (ES3.KeyExists("ProgrammingLanguages"))
+        {
+            Debug.Log("Data bor.");
+        }
+        else
+        {
+            Debug.Log("Data yo'q.");
+        }
 
 
     }

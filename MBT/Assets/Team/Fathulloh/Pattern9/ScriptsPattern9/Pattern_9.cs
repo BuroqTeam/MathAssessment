@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Pattern_9 : TestManager
+public class Pattern_9 : MonoBehaviour
 {
     private TextAsset _currentJsonText;
 
@@ -38,7 +38,7 @@ public class Pattern_9 : TestManager
             FirstMethod();
         }        
 
-        DisplayQuestion(Pattern_9Obj.title);
+        //DisplayQuestion(Pattern_9Obj.title);
     }
 
 
@@ -57,10 +57,10 @@ public class Pattern_9 : TestManager
 
 
 
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr); // null        
-    }
+    //public override void DisplayQuestion(string questionStr)
+    //{
+    //    base.DisplayQuestion(questionStr); // null        
+    //}
 
 
     void ReadFromJson()
