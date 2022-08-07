@@ -54,6 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 3
+  QuestionNumber: 0
+  Json: {fileID: 0}
 --- !u!1 &2178193364320720816
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,15 +460,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a62493bf6b231549a5698e0d4e508ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatternParent: {fileID: 0}
-  QuestionText: {fileID: 0}
-  PatternGroup:
-  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
-  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
   Group:
   - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
-  jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
+  PatternGroup:
+  - {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
+  - {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
+  _jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
   sampleQuestion: 
   NumbersText: []
   Numbers: []
