@@ -16,7 +16,7 @@ public class Pattern_2 : MonoBehaviour
     private int CorrectAnswerNumber = 0;
     private int SelectAnswerNumber = 0;
     private int ResultNumber = 0;
-    public bool _isTrue = true;
+    bool _isTrue = true;
     public List<GameObject> Buttons = new List<GameObject>();
     Data_2 Pattern_2Obj = new Data_2();
 
@@ -130,13 +130,11 @@ public class Pattern_2 : MonoBehaviour
     }
     void Check()
     {
+        Result();
         List<bool> myList = new List<bool>();
-
         ES3.Save("ResultList", myList);
-
         List<bool> currentList = new List<bool>();
         currentList = ES3.Load<List<bool>>("ResultList");
-
         if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
@@ -147,7 +145,6 @@ public class Pattern_2 : MonoBehaviour
         }
         ES3.Save("myList", currentList);
     }
-
 }
 [SerializeField]
 public class Data_2
