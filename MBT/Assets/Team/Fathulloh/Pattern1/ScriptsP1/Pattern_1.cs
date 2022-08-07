@@ -21,21 +21,25 @@ public class Pattern_1 : MonoBehaviour
 
     Data_1 Pattern_1Obj = new Data_1();
     float yPos, yLength;
-
+    bool _isTrue = true;
 
     private void OnEnable()
     {
-        _currentJsonText = GetComponent<Pattern>().Json;
-        if (_currentJsonText != null)
+        if (_isTrue)
         {
-            Debug.Log(_currentJsonText.text);
-        }
-        else
-        {
-            Debug.Log("Not Found Data");
-        }
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
 
-        FirstMethod();
+            FirstMethod();
+        }        
 
         //DisplayQuestion(Pattern_1Obj.title);
     }
