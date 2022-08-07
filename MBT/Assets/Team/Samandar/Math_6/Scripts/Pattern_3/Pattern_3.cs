@@ -40,10 +40,10 @@ public class Pattern_3 : MonoBehaviour
             Debug.Log("Not Found Data");
         }
 
-        //Mbt.SaveJsonPath("Pattern_3", 0, 25);
-        //ES3.Save<string>("LanguageKey", "Uzb");
+        Mbt.SaveJsonPath("Pattern_3",1, 25);
+        ES3.Save<string>("LanguageKey", "Uzb");
 
-        //ES3.Save<int>("ClassKey", 6);
+        ES3.Save<int>("ClassKey", 6);
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
