@@ -7,11 +7,7 @@ using UnityEngine.UI;
 
 public class Pattern_3 : MonoBehaviour
 {
-    private DataBaseSO _jsCollection;
-    private PatternSO PatternSO;
-    public DataBaseSO[] Group;
-    public PatternSO[] PatternGroup;
-    public TextAsset _jsonText;
+    private TextAsset _jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
     public List<GameObject> Numbers;

@@ -6,11 +6,7 @@ using UnityEngine.UI;
 
 public class Pattern_14 : MonoBehaviour
 {
-    private DataBaseSO _jsCollection;
-    private PatternSO PatternSO;
-    public DataBaseSO[] Group;
-    public PatternSO[] PatternGroup;
-    public TextAsset _jsonText;
+    private TextAsset _jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
     public GameObject Solution;
