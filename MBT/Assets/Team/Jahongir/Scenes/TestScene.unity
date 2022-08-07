@@ -1816,7 +1816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824364815, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824365296, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_Pivot.x
@@ -1902,6 +1902,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2407683841824365297, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
+      propertyPath: Groups.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407683841824365297, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
+      propertyPath: PaGroup.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407683841824365297, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
+      propertyPath: Groups.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
+    - target: {fileID: 2407683841824365297, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
+      propertyPath: PaGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c6c7189641d76c428707cf1d2e6cce7, type: 2}
+    - target: {fileID: 2407683841824365297, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
+      propertyPath: PaGroup.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d6db94aaed7fb62408050566d2111342, type: 2}
     - target: {fileID: 2407683843337617212, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_Color.b
       value: 0.07058824
