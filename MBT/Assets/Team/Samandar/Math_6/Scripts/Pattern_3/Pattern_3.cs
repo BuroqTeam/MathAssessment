@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_3 : TestManager
+public class Pattern_3 : MonoBehaviour
 {
     private TextAsset _jsonText;
     public string sampleQuestion;
@@ -56,7 +56,7 @@ public class Pattern_3 : TestManager
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
 
-        DisplayQuestion(DataObj.title);
+        //DisplayQuestion(DataObj.title);
 
     }
     public void ReadFromJson()
@@ -115,19 +115,12 @@ public class Pattern_3 : TestManager
             NumbersParent[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
     }
-    
-
+         
+   
     //public override void DisplayQuestion(string questionStr)
     //{
-    //    base.DisplayQuestion(questionStr);  
-
+    //    base.DisplayQuestion(questionStr);        
     //}
-        
-   
-    public override void DisplayQuestion(string questionStr)
-    {
-        base.DisplayQuestion(questionStr);        
-    }
 
     void Check()
     {
