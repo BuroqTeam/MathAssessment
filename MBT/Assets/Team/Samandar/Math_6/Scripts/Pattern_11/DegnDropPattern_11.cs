@@ -8,8 +8,9 @@ using UnityEngine.UI;
 public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public List<GameObject> Positions;
+    public List<GameObject> InitialList;
     private RectTransform _rectTransform;
-    private Vector3 _initialPosition;
+    public Vector3 _initialPosition;
     private GameObject LastPos;
     public Pattern_11 Pattern11;
     public int siblingIndexObj;
@@ -19,18 +20,19 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     private void Awake()
     {
-        _initialPosition = transform.position;
+        _initialPosition = GetComponent<RectTransform>().position;
         _rectTransform = GetComponent<RectTransform>();
     }
 
     private void Start()
     {
         Positions = Pattern11.LeftList;
+        InitialList = Pattern11.RightList;
         Debug.Log(Positions[0].name);
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        _rectTransform.DOScale(1.2f, 0.1f);
         if (LastPos != null)
         {
             LastPos.GetComponent<NumBoxP_11>().CurrentNumber = null;
@@ -57,15 +59,15 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
         int k = 0;
         for (int i = 0; i < Positions.Count; i++)
         {
-            bool _isEmpty = Positions[i].GetComponent<NumBoxP_3>()._IsEmpty;
+            bool _isEmpty = Positions[i].GetComponent<NumBoxP_11>()._IsEmpty;
             if (Vector3.Distance(transform.position, Positions[i].transform.position) <= 1 && (_isEmpty))
             {
                 LastPos = Positions[i];
                 transform.position = new Vector3(Positions[i].transform.position.x, Positions[i].transform.position.y, 0);
                 _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
-                Positions[i].GetComponent<NumBoxP_3>()._IsEmpty = false;
-                Positions[i].GetComponent<NumBoxP_3>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
-                _rectTransform.DOScale(1.25f, 0.2f);
+                Positions[i].GetComponent<NumBoxP_11>()._IsEmpty = false;
+                Positions[i].GetComponent<NumBoxP_11>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
+                _rectTransform.DOScale(1, 0.2f);
                 //Pattern11.CheckingAnswer();
                 break;
             }
@@ -76,7 +78,7 @@ public class DegnDropPattern_11 : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
         if (k.Equals(Positions.Count))
         {
-            _rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
+            _rectTransform.anchoredPosition3D = InitialList[0].transform.position;
             _rectTransform.DOScale(1, 0.2f);
         }
     }
