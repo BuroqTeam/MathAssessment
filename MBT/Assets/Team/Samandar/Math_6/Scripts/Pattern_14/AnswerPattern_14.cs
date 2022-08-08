@@ -62,9 +62,6 @@ public class AnswerPattern_14 : MonoBehaviour
             }
         }       
     }
-
-
-
     public void Check()
     {
         if (_PattenBool)
@@ -75,9 +72,6 @@ public class AnswerPattern_14 : MonoBehaviour
         {
             Debug.Log("Wrong");
         }
-        
-    }
 
-    
-    
+    }
 }

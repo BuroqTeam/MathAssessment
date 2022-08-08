@@ -6,7 +6,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_3 : MonoBehaviour
+public class Pattern_3 : GeneralTest
 {
     private TextAsset _jsonText;
     public string sampleQuestion;
@@ -32,7 +32,17 @@ public class Pattern_3 : MonoBehaviour
 
     private void Awake()
     {
-        
+        SetCanvasStretch();
+        TestManager.Instance.PassToNextClicked += Check;
+    }
+
+    void SetCanvasStretch()
+    {
+        GetComponent<RectTransform>().anchorMin = new(0, 0);
+        GetComponent<RectTransform>().anchorMax = new(1, 1);
+
+        GetComponent<RectTransform>().offsetMin = new(0, 0);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
     private void OnEnable()
     {
@@ -59,7 +69,7 @@ public class Pattern_3 : MonoBehaviour
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
 
-        //DisplayQuestion(DataObj.title);
+        DisplayQuestion(DataObj.title);
 
     }
     public void ReadFromJson()
@@ -72,7 +82,7 @@ public class Pattern_3 : MonoBehaviour
 
     void StartMetod()
     {
-        //gameObject.transform.GetComponent<RectTransform>().
+        
         List<string> str = DataObj.problem;
         str = str.ShuffleList();
         DataObj.problem = str;
@@ -121,12 +131,12 @@ public class Pattern_3 : MonoBehaviour
     }
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
-   
+
 
     public void CheckingAnswer()
     {
@@ -166,7 +176,7 @@ public class Pattern_3 : MonoBehaviour
         }         
     }
 
-    public void RemakeJsonSolution()
+    public void Check()
     {
         List<bool> myList = new();
 
