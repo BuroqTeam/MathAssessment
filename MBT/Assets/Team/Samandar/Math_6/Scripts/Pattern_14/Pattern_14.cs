@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_14 : MonoBehaviour
+public class Pattern_14 : GeneralTest
 {
     private TextAsset _jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
     public GameObject Solution;
     public GameObject ConsiderationsPrefabs;
-    public List<Button> buttonGroup = new List<Button>();
+    public List<Button> buttonGroup = new();
     public ColorCollectionSO colorCollection;
-    
-
+    //public AnswerPattern_14 AnswerPattern_14;
+   
     private void Awake()
     {
-        
+        ////TestManager.Instance.PassToNextClicked += Check;
     }
 
     public bool _istrue = true;
@@ -45,7 +45,7 @@ public class Pattern_14 : MonoBehaviour
 
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
-        //DisplayQuestion(DataObj.title);
+        DisplayQuestion(DataObj.title);
 
     }
     public void ReadFromJson()
@@ -63,11 +63,11 @@ public class Pattern_14 : MonoBehaviour
         PrefabsInstantiate();
 
     }
-
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+   
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
     void PrefabsInstantiate()
     {
@@ -107,7 +107,7 @@ public class Pattern_14 : MonoBehaviour
 public class Data_14
 {
     public string title;
-    public List<string> problem = new List<string>();
-    public List<string> solution = new List<string>();
+    public List<string> problem = new();
+    public List<string> solution = new();
 
 }
