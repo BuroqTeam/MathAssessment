@@ -18,7 +18,7 @@ public class Pattern_11 : MonoBehaviour
     public Data_11 DataObj;
     public List<GameObject> NumberInstantiate;
     public List<string> Answer;
-
+    public List<char> AlphabetList = new();
     private void Awake()
     {
         Mbt.SaveJsonPath("Pattern_11", 1, 60);
@@ -44,7 +44,28 @@ public class Pattern_11 : MonoBehaviour
     }
     void ObjInstantiate()
     {
+        for (char ci = 'a'; ci <= 'z'; ++ci)
+        {
+            AlphabetList.Add(ci);
+        }
+
         List<string> str = DataObj.options;
+        for (int i = 0; i < str.Count; i++)
+        {
+            string strAlphabet = "[" + AlphabetList[i] + "]";
+            for (int j = 0; j < str.Count; j++)
+            {
+                var likeName = DataObj.options[j];
+                if (likeName.Contains(strAlphabet))
+                {
+                    Correct.Add(DataObj.options[j]);
+                    Debug.Log(AlphabetList[i] + " " + DataObj.options[j]);
+                    break;
+                }
+            }
+
+        }
+
         str = str.ShuffleList();
         DataObj.options = str;
         
@@ -78,6 +99,7 @@ public class Pattern_11 : MonoBehaviour
             RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Pattern11 = this;
             RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Positions = LeftList;
         }
+        Check();
     }
     public void Checking()
     {
@@ -89,9 +111,12 @@ public class Pattern_11 : MonoBehaviour
             Answer.Add(mainString);
         }
     }
+    public List<string> Correct;
     public void Check()
     {
+      
 
+        
     }
 }
 

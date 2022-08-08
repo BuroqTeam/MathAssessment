@@ -115,11 +115,11 @@ public class Pattern_3 : MonoBehaviour
             NumbersParent[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[i].ToString();
         }
     }
-         
-   
+
+
     //public override void DisplayQuestion(string questionStr)
     //{
-    //    base.DisplayQuestion(questionStr);        
+    //    base.DisplayQuestion(questionStr);
     //}
 
     //void Check()
@@ -141,8 +141,6 @@ public class Pattern_3 : MonoBehaviour
     //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
     //    }
     //    ES3.Save("myList", currentList);
-
-
     //}
 
 
@@ -190,6 +188,14 @@ public class Pattern_3 : MonoBehaviour
 
     public void RemakeJsonSolution()
     {
+        List<bool> myList = new();
+
+        ES3.Save("ResultList", myList);
+        
+
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+
         newSolution = new List<List<string>>(DataObj.solution);       
 
         foreach (List<string> list in newSolution)
@@ -206,6 +212,7 @@ public class Pattern_3 : MonoBehaviour
             if (list.SequenceEqual(Ansver))
             {
                 Debug.Log("Correct");
+                currentList[GetComponent<Pattern>().QuestionNumber] = true;
             }
             else
             {
@@ -216,9 +223,10 @@ public class Pattern_3 : MonoBehaviour
         if (k.Equals(newSolution.Count))
         {
             Debug.Log("Wrong");
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
+        ES3.Save("myList", currentList);
 
-        
     }    
 }
 
