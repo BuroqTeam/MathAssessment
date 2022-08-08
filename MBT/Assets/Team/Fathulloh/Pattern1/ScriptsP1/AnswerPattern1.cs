@@ -44,9 +44,11 @@ public class AnswerPattern1 : MonoBehaviour
 
         if (_IsTrue)        {
             Debug.Log("Correct Answer.");
+            PatternOne.CurrentAnswerStatus = true;
         }
         else        {
             Debug.Log("Wrong Answer.");
+            PatternOne.CurrentAnswerStatus = false;
         }
     }
 
