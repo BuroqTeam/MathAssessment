@@ -1,6 +1,5 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,7 +17,7 @@ public class Pattern_4 : MonoBehaviour
     public GameObject ParentComparisonPrefab;
 
     public List<GameObject> ComparisonObjects;
-    Data_4 Pattern_4Obj = new Data_4();
+    Data_4 Pattern_4Obj = new();
     float yDistance, xDistance;
 
     public string Statement1, Statement2, ImagePath1, ImagePath2;       //
@@ -66,7 +65,6 @@ public class Pattern_4 : MonoBehaviour
     //}
 
 
-
     //public override void DisplayQuestion(string questionStr)
     //{
     //    base.DisplayQuestion(questionStr);
@@ -94,7 +92,7 @@ public class Pattern_4 : MonoBehaviour
             GameObject obj = Instantiate(PicturePrefab, transform);
 
             obj.transform.GetChild(1).GetComponent<Image>().sprite = spriteOfImage;
-            Vector2 newSize = new Vector2(spriteOfImage.texture.width / 5 * 3, spriteOfImage.texture.height / 5 * 3);   // spritening 80% ga moslab oladi.  
+            Vector2 newSize = new(spriteOfImage.texture.width / 5 * 3, spriteOfImage.texture.height / 5 * 3);   // spritening 80% ga moslab oladi.  
             obj.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = newSize; 
             
             obj.transform.GetChild(0).GetComponent<TMP_Text>().text = Pattern_4Obj.statements[i].statement;
@@ -102,14 +100,14 @@ public class Pattern_4 : MonoBehaviour
             obj.transform.GetChild(0).transform.localPosition = new Vector3(0, newSize.y/2 + newSizeText.y/2, 0);
             //obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(newSize.x, newSizeText.y);//+
 
-            Vector3 oldPos = obj.transform.localPosition;
+            //Vector3 oldPos = obj.transform.localPosition;
             DeviceDetector(Screen.width, Screen.height, obj, i);            
             //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);            
         }
                         
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
-        float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
+        //float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
         //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
         
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
@@ -242,8 +240,8 @@ public class Pattern_4 : MonoBehaviour
 public class Data_4
 {
     public string title;
-    public List<Statement_4> statements = new List<Statement_4>();
-    public List<Option_4> options = new List<Option_4>();
+    public List<Statement_4> statements = new();
+    public List<Option_4> options = new();
 }
 
 [SerializeField]

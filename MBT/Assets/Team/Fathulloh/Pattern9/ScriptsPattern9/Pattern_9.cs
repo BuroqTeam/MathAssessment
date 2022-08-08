@@ -1,7 +1,6 @@
 using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,7 +12,7 @@ public class Pattern_9 : MonoBehaviour
     public GameObject ParentComparisonPrefab;
     public List<GameObject> ComparisonObjects;
 
-    Data_9 Pattern_9Obj = new Data_9();    
+    Data_9 Pattern_9Obj = new();    
 
     public TMP_Text TextForTranslating;
     float xPos, yDistance, xDistance;
@@ -166,7 +165,7 @@ public class Pattern_9 : MonoBehaviour
 public class Data_9
 {
     public string title;
-    public List<Options_9> options = new List<Options_9>();
+    public List<Options_9> options = new();
 }
 
 [SerializeField]

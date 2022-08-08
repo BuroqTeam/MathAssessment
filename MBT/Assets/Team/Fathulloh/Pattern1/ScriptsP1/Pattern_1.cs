@@ -1,25 +1,23 @@
 using Extension;
 using MBT.Extension;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Pattern_1 : MonoBehaviour
-{   
-    private TextAsset _currentJsonText;    
-    
-    public List<char> AlphabetList = new List<char>();
+{
+    //public TextAsset CurrentJsonText;
+    private TextAsset _currentJsonText;
+
+    public List<char> AlphabetList = new();
     public List<GameObject> ABCD;
-    public GameObject PrefabA;   
-        
+    public GameObject PrefabA;
+
     public GameObject MainParent;
     public GameObject CurrentClickedObj;
 
-    Data_1 Pattern_1Obj = new Data_1();
+    Data_1 Pattern_1Obj = new();
     float yPos, yLength;
     bool _isTrue = true;
 
@@ -29,6 +27,7 @@ public class Pattern_1 : MonoBehaviour
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
+
             if (_currentJsonText != null)
             {
                 Debug.Log(_currentJsonText.text);
@@ -37,33 +36,33 @@ public class Pattern_1 : MonoBehaviour
             {
                 Debug.Log("Not Found Data");
             }
-
-            FirstMethod();
-        }        
-
+            ReadFromJson();
+        }
         //DisplayQuestion(Pattern_1Obj.title);
     }
 
 
-    private void FirstMethod()
+    //private void Awake()
+    //{
+    //    Mbt.SaveJsonPath("Pattern_1", 1, 7);
+    //    ES3.Save<string>("LanguageKey", "Uzb");
+    //    ES3.Save<int>("ClassKey", 6);
+    //    //JsonCollectionSO.DataBase.Clear();
+    //    //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+
+    //    ReadFromJson();
+    //}
+
+
+    public void ReadFromJson()
     {
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
         for (char c = 'A'; c <= 'Z'; ++c)
         {
             AlphabetList.Add(c);
         }
+        SetCanvasStretch();
 
-        //Mbt.SaveJsonPath("Pattern_1", 0, 6);
-        //ES3.Save<string>("LanguageKey", "Uzb");
-        //ES3.Save<int>("ClassKey", 6);
-        //JsonCollectionSO.DataBase.Clear();
-        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
-
-        ReadFromJson();
-    }
-        
-
-    public void ReadFromJson()
-    {        
         var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
         Pattern_1Obj = jo.ToObject<Data_1>();
@@ -75,6 +74,20 @@ public class Pattern_1 : MonoBehaviour
     //{
     //    base.DisplayQuestion(questionStr);
     //}
+
+
+    void SetCanvasStretch()
+    {        
+        //Debug.Log("I set new Canvas scretch.");
+        //Debug.Log(GetComponent<RectTransform>().sizeDelta);        
+
+        GetComponent<RectTransform>().anchorMin = new(0, 0);
+        GetComponent<RectTransform>().anchorMax = new(1, 1);        
+
+        GetComponent<RectTransform>().offsetMin = new(0, 0);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);
+        Debug.Log(GetComponent<RectTransform>().sizeDelta);
+    }
 
 
     public void CreatePrefabs2()
@@ -145,7 +158,7 @@ public class Pattern_1 : MonoBehaviour
     {
         for (int i = 0; i < ABCD.Count; i++)
         {
-            ABCD[i].GetComponent<AnswerPattern1>().DisableObject();                        
+            ABCD[i].GetComponent<AnswerPattern1>().DisableObject();
         }
 
         StartCoroutine(Waiting());
@@ -173,7 +186,7 @@ public class Pattern_1 : MonoBehaviour
             Debug.Log("Answer is Wrong");
         }
         else
-            Debug.Log("Answer is Correct. The best Answer :) ");           
+            Debug.Log("Answer is Correct. The best Answer :) ");
     }
 
 
@@ -182,7 +195,7 @@ public class Pattern_1 : MonoBehaviour
 [SerializeField]
 public class Data_1
 {
-    public string title;    
+    public string title;
     public List<string> options;
 }
 
