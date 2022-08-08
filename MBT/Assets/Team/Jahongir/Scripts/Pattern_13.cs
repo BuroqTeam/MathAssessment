@@ -71,6 +71,7 @@ public class Pattern_13 : MonoBehaviour
             GameObject puzzle = Instantiate(PuzzleQuestion, transform.GetChild(1));
             puzzle.GetComponent<P13_Puzzle1>().QuestionId = _question[i].Remove(3, _question[i].Length - 3);
             puzzle.transform.GetChild(0).GetComponent<TEXDraw>().text = _question[i].Remove(0, 3);
+            puzzle.GetComponent<P13_Puzzle1>().Pattern13 = this;
             QuestionPuzles.Add(puzzle);
             GameObject puzzle1 = Instantiate(PuzzleAnswer, transform.GetChild(0));
             puzzle1.GetComponent<P13_Puzzle2>().AnswerId = _answer[i].Remove(3, _answer[i].Length - 3);

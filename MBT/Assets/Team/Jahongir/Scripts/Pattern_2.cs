@@ -18,10 +18,6 @@ public class Pattern_2 : GeneralTest
     private void Awake()
     {
         TestManager.Instance.PassToNextClicked += Check;
-        GetComponent<RectTransform>().anchorMin = new(0, 0);
-        GetComponent<RectTransform>().anchorMax = new(1, 1);
-        GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
     private void OnEnable()
     {
@@ -29,16 +25,9 @@ public class Pattern_2 : GeneralTest
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
             ReadFromJson();
         }
+        DisplayQuestion(Pattern_2Obj.title);
     }
     public override void DisplayQuestion(string questionStr)
     {
@@ -135,8 +124,6 @@ public class Pattern_2 : GeneralTest
     void Check()
     {
         Result();
-        List<bool> myList = new();
-        ES3.Save("ResultList", myList);
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
