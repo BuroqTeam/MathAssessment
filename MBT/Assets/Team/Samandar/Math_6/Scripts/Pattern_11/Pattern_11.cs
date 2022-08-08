@@ -120,6 +120,11 @@ public class Pattern_11 : MonoBehaviour
     //Correct = Rever
     public void Check()
     {
+        
+        if (Correct.Contains("["))
+        {
+
+        }
         ReverseCorrect = new List<string>(Correct);
         ReverseCorrect.Reverse();
 
