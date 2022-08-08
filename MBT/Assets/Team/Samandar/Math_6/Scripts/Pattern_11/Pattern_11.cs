@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_11 : TestManager
+public class Pattern_11 : MonoBehaviour
 {
     public GameObject PushableShadow;
     public GameObject PushableRectangle;
@@ -17,7 +17,8 @@ public class Pattern_11 : TestManager
     public TextAsset jsonText;
     public Data_11 DataObj;
     public List<GameObject> NumberInstantiate;
-    private List<string> AlphabetList;
+    public List<string> Answer;
+
     private void Awake()
     {
         Mbt.SaveJsonPath("Pattern_11", 1, 60);
@@ -34,8 +35,7 @@ public class Pattern_11 : TestManager
     {
         var jsonObj = JObject.Parse(jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_11");
-        DataObj = jo.ToObject<Data_11>();
-        
+        DataObj = jo.ToObject<Data_11>();        
     }
 
     void Start()
@@ -52,9 +52,7 @@ public class Pattern_11 : TestManager
         {
             
             var likeName = DataObj.options[i];
-
-            //string mainString2 = LeftList[i].transform.GetChild(0).GetComponent<NumBoxP_11>().CurrentNumber;
-            //Ansver.Add(mainString2);
+                 
 
             if (likeName.Contains('['))
             {
@@ -68,19 +66,29 @@ public class Pattern_11 : TestManager
             DataObj.options[i] = likeName;
 
 
-            GameObject Right = Instantiate(PushableRectangle, PanelRight.transform);
-            RightList.Add(Right);
-            PanelRight.transform.GetChild(i).transform.GetChild(0).GetComponent<TEXDraw>().text = str[i].ToString();
-            GameObject Left = Instantiate(PushableShadow, PanelLeft.transform);
-            LeftList.Add(Left);
+            GameObject right = Instantiate(PushableRectangle, PanelRight.transform);
+            RightList.Add(right);
+            PanelRight.transform.GetChild(i).transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = str[i].ToString();
+            GameObject left = Instantiate(PushableShadow, PanelLeft.transform);           
+            LeftList.Add(left);
+           
         }
         for (int i = 0; i < RightList.Count; i++)
         {
-            RightList[i].GetComponent<DegnDropPattern_11>().Pattern11 = this;
-            RightList[i].GetComponent<DegnDropPattern_11>().Positions = LeftList;
+            RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Pattern11 = this;
+            RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Positions = LeftList;
         }
     }
-
+    public void Checking()
+    {
+        List<string> str = DataObj.options;
+        Answer.Clear();
+        for (int i = 0; i < str.Count; i++)
+        {
+            string mainString = LeftList[i].GetComponent<PushableShadow>().CurrentNumber;
+            Answer.Add(mainString);
+        }
+    }
     public void Check()
     {
 
@@ -91,5 +99,5 @@ public class Pattern_11 : TestManager
 public class Data_11
 {
     public string title;
-    public List<string> options = new List<string>();
+    public List<string> options = new();
 }

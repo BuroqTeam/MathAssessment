@@ -16,18 +16,17 @@ public class Pattern_3 : MonoBehaviour
     public GameObject NumberPrefabs;
     public GameObject NumberAreaPrefabs;
     public List<GameObject> NumberArea;
-    private GameObject MainParent;
     public TEXDraw NumberActions;
     public List<GameObject> NumberInstantiate;
     public List<GameObject> CheckList2;
     public List<GameObject> CheckList4;
     public List<GameObject> CheckList6;
-    public List<GameObject> MainList = new List<GameObject>();
+    public List<GameObject> MainList = new();
     public int CorrectAnsNumbers;
     public List<string> Ansver;
-    public List<List<string>> newSolution = new List<List<string>>();
+    public List<List<string>> newSolution = new();
     public List<string> SmallList;
-    Data_3 DataObj = new Data_3();
+    Data_3 DataObj = new();
 
     public bool _istrue = true;
 
@@ -69,6 +68,7 @@ public class Pattern_3 : MonoBehaviour
 
     void StartMetod()
     {
+        //gameObject.transform.GetComponent<RectTransform>().
         List<string> str = DataObj.problem;
         str = str.ShuffleList();
         DataObj.problem = str;
@@ -106,8 +106,8 @@ public class Pattern_3 : MonoBehaviour
         }
         for (int i = 0; i < Numbers.Count; i++)
         {
-            Numbers[i].GetComponent<DegnDropPattern_3>().Pattern3 = this;
-            Numbers[i].GetComponent<DegnDropPattern_3>().Positions = NumberInstantiate;
+            Numbers[i].GetComponent< Number>().Pattern3 = this;
+            Numbers[i].GetComponent< Number>().Positions = NumberInstantiate;
         }
 
         for (int i = 0; i < problem1.Count; i++)
@@ -122,28 +122,28 @@ public class Pattern_3 : MonoBehaviour
     //    base.DisplayQuestion(questionStr);        
     //}
 
-    void Check()
-    {
-        List<bool> myList = new List<bool>();
+    //void Check()
+    //{
+    //    List<bool> myList = new();
 
-        ES3.Save("ResultList", myList);
-        bool ca = true;
+    //    ES3.Save("ResultList", myList);
+    //    bool ca = true;
 
-        List<bool> currentList = new List<bool>();
-        currentList = ES3.Load<List<bool>>("ResultList");
+    //    List<bool> currentList = new();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
 
-        if (ca)
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = true;
-        }
-        else
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
-        }
-        ES3.Save("myList", currentList);
+    //    if (ca)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
+    //    }
+    //    ES3.Save("myList", currentList);
 
 
-    }
+    //}
 
 
     public void CheckingAnswer()
@@ -156,7 +156,7 @@ public class Pattern_3 : MonoBehaviour
         {
             if (javoblarSoni == 2)
             {
-                string mainString2 = CheckList2[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                string mainString2 = CheckList2[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
                 Ansver.Add(mainString2);
                 for (int j = 0; j < Ansver.Count; j++)
                 {
@@ -165,7 +165,7 @@ public class Pattern_3 : MonoBehaviour
             }
             else if (javoblarSoni == 4)
             {
-                string mainString4 = CheckList4[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                string mainString4 = CheckList4[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
                 Ansver.Add(mainString4);                
                 for (int j = 0; j < Ansver.Count; j++)
                 {
@@ -174,7 +174,7 @@ public class Pattern_3 : MonoBehaviour
             }
             else if (javoblarSoni == 6)
             {                            
-                string mainString6 = CheckList6[i].transform.GetChild(0).GetComponent<NumBoxP_3>().CurrentNumber;
+                string mainString6 = CheckList6[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
                 Ansver.Add(mainString6);
                 for (int j = 0; j < Ansver.Count; j++)
                 {
@@ -226,9 +226,9 @@ public class Pattern_3 : MonoBehaviour
 public class Data_3
 {
     public string title;    
-    public List<string> problem = new List<string>();
+    public List<string> problem = new();
 
-    public List<List<string>> solution = new List<List<string>>();
+    public List<List<string>> solution = new();
      
 }
 
