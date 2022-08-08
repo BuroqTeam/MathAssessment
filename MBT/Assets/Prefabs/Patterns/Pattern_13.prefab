@@ -30,8 +30,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 110954515543754511}
   - {fileID: 2659695383878265739}
+  - {fileID: 110954515543754511}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PuzzleQuestion: {fileID: 4552796022935038163, guid: 96c41a887af60814f807c522c6124a76, type: 3}
   PuzzleAnswer: {fileID: 8914217102000956962, guid: 64bac95566933a9458756adb3d771299, type: 3}
-  _currentJsonText: {fileID: 0}
+  _currentJsonText: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
 --- !u!1 &3381601196591594202
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,11 +101,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 75649017508017962}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: -4}
+  m_AnchoredPosition: {x: -649.99994, y: -4}
   m_SizeDelta: {x: -1300, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8121261713681737853
@@ -164,12 +164,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 75649017508017962}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -650, y: -4}
-  m_SizeDelta: {x: -1300, y: 640}
+  m_AnchoredPosition: {x: 542.57, y: 0}
+  m_SizeDelta: {x: -1085.13, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5580537767923767247
 MonoBehaviour:
