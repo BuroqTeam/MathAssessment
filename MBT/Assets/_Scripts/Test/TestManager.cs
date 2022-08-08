@@ -116,22 +116,41 @@ public class TestManager : MonoBehaviour
                         obj.transform.SetParent(PatternParent.transform);
                         obj.transform.localScale = Vector3.one;
                         obj.SetActive(false);
+                        StreatchObj(obj);
                         _activePatterns.Add(obj);
 
-                        GameObject circleButton = Instantiate(CirclePrefab);
+                        GameObject circleButton = Instantiate(CirclePrefab, CircleParent.transform);
                         circleButton.transform.SetParent(CircleParent.transform);
                         circleButton.transform.localScale = Vector3.one;
-                        circleButton.GetComponent<CircleButton>().InitialCondition(questionNum);
+                        circleButton.GetComponent<CircleButton>().InitialCondition(questionNum, CircleParent);
                         CircleButtons.Add(circleButton.GetComponent<Button>());                        
-
-                        questionNum++;
-                        
+                        questionNum++;                        
                     }                    
                     index++;
                 }
             }
         }        
         _activePatterns[0].SetActive(true);
+        SetCircles();
+    }
+
+    void StreatchObj(GameObject obj)
+    {
+        obj.GetComponent<RectTransform>().anchorMin = new(0, 0);
+        obj.GetComponent<RectTransform>().anchorMax = new(1, 1);
+
+        obj.GetComponent<RectTransform>().offsetMin = new(0, 0);
+        obj.GetComponent<RectTransform>().offsetMax = new(0, 0);
+    }
+
+    void SetCircles()
+    {
+        foreach (Button btn in CircleButtons)
+        {
+            btn.GetComponent<CircleButton>().CollectCircles();
+        }
+
+
     }
 
     void TaskOnClick()

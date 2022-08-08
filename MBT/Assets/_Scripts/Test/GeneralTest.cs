@@ -11,7 +11,9 @@ public class GeneralTest : MonoBehaviour
 
     public virtual void DisplayQuestion(string questionStr)
     {
-        QuestionText.text = questionStr;
+
+        TestManager.Instance.QuestionText.text = questionStr;
+        
     }
 
 
