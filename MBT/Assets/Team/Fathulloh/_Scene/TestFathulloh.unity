@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dcda7e87e5b6c9469d4300e1fd1ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
   CurrentJsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   Numbers: []
   Boxs: []
@@ -1826,6 +1827,7 @@ MonoBehaviour:
   NumPrefab: {fileID: 7165401411475678602, guid: 49a558fd401b5c84686a184fed1ad15e, type: 3}
   NumberBoxPrefab: {fileID: 2774379303303097442, guid: 302391a5fac406243a035b6c4b2f0708, type: 3}
   ParentForPos: {fileID: 7513049809603210290}
+  CurrentAnswerStatus: 0
 --- !u!224 &1670034422749690787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2638,12 +2640,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentJsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
+  QuestionText: {fileID: 0}
   AlphabetList: 
   ABCD: []
   PrefabA: {fileID: 56981999180755985, guid: 7a9e26b76f86d7d459e21a9f13345125, type: 3}
   MainParent: {fileID: 0}
   CurrentClickedObj: {fileID: 0}
+  CurrentAnswerStatus: 0
 --- !u!224 &4670055778069339553
 RectTransform:
   m_ObjectHideFlags: 0

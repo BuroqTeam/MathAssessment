@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0586d91c97bf8441a1ca39c8bd55d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberType: {fileID: 0}
-  Numbers: {fileID: 0}
+  _OnCorrectPos: 0
+  CurrentNum: 
   CurrentSolution: []
   CurrentObj: {fileID: 0}
   _IsEmpty: 1
@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0586d91c97bf8441a1ca39c8bd55d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberType: {fileID: 0}
-  Numbers: {fileID: 0}
+  _OnCorrectPos: 0
+  CurrentNum: 
   CurrentSolution: []
   CurrentObj: {fileID: 0}
   _IsEmpty: 1
@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0586d91c97bf8441a1ca39c8bd55d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberType: {fileID: 0}
-  Numbers: {fileID: 0}
+  _OnCorrectPos: 0
+  CurrentNum: 
   CurrentSolution: []
   CurrentObj: {fileID: 0}
   _IsEmpty: 1
@@ -317,8 +317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0.354599, y: -53.9008}
+  m_SizeDelta: {x: -24.8226, y: 92.1985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2774379302935870449
 CanvasRenderer:
@@ -362,7 +362,7 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5
 --- !u!1 &2774379303303097442
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,8 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0586d91c97bf8441a1ca39c8bd55d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberType: {fileID: 0}
-  Numbers: {fileID: 0}
+  _OnCorrectPos: 0
+  CurrentNum: 
   CurrentSolution: []
   CurrentObj: {fileID: 0}
   _IsEmpty: 1
