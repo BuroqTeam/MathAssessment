@@ -21,14 +21,39 @@ public class CircleButton : MonoBehaviour
 
     void TaskOnClick()
     {
+        Active();
         foreach (Button item in buttonList)
         {
-            if (item.Equals(btn))
+            if (item != btn)
             {
-                
+                DeActive();                
             }
         }
     }
 
+
+    public void InitialCondition(int index)
+    {
+        if (index.Equals(0))
+        {
+            Active();
+        }
+        else
+        {
+            DeActive();
+        }
+    }
+
+    void Active()
+    {
+        GetComponent<Image>().sprite = sprites[0];
+        transform.GetChild(0).GetComponent<Image>().sprite = sprites[2];
+    }
+
+    void DeActive()
+    {
+        GetComponent<Image>().sprite = null;
+        transform.GetChild(0).GetComponent<Image>().sprite = sprites[3];
+    }
 
 }

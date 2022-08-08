@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 public class TestManager : MonoBehaviour
 {
-    public TMP_Text QuestionNumTxt;
+    public GameObject CircleParent;
+    public GameObject CirclePrefab;
     public Button NextButton;
     public TEXDraw QuestionText;
     public GameObject PatternParent;       
@@ -110,13 +111,21 @@ public class TestManager : MonoBehaviour
 
                     if (pattern.GetComponent<Pattern>().IsAvailable)
                     {
-                        GameObject obj = Instantiate(pattern);
+                        GameObject obj = Instantiate(pattern);                        
                         obj.GetComponent<Pattern>().QuestionNumber = questionNum;
                         obj.transform.SetParent(PatternParent.transform);
                         obj.transform.localScale = Vector3.one;
                         obj.SetActive(false);
                         _activePatterns.Add(obj);
+
+                        GameObject circleButton = Instantiate(CirclePrefab);
+                        circleButton.transform.SetParent(CircleParent.transform);
+                        circleButton.transform.localScale = Vector3.one;
+                        circleButton.GetComponent<CircleButton>().InitialCondition(questionNum);
+                        CircleButtons.Add(circleButton.GetComponent<Button>());                        
+
                         questionNum++;
+                        
                     }                    
                     index++;
                 }
