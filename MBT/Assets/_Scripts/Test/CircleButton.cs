@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class CircleButton : MonoBehaviour
 {
-    GameObject _parent;
+    [HideInInspector]
+    public GameObject _parent;
     Button btn;
     public Sprite[] sprites;
     List<Button> buttonList = new();
@@ -13,10 +14,9 @@ public class CircleButton : MonoBehaviour
 
     private void Awake()
     {
-        btn = GetComponent<Button>();
-        _parent = transform.parent.gameObject;
+        btn = GetComponent<Button>();       
         btn.onClick.AddListener(TaskOnClick);
-        buttonList = _parent.transform.GetComponentsInChildren<Button>().ToList();
+      
     }
 
     void TaskOnClick()
@@ -31,9 +31,15 @@ public class CircleButton : MonoBehaviour
         }
     }
 
-
-    public void InitialCondition(int index)
+    public void CollectCircles()
     {
+        buttonList = _parent.transform.GetComponentsInChildren<Button>().ToList();
+    }
+
+
+    public void InitialCondition(int index, GameObject parent)
+    {
+        _parent = parent;
         if (index.Equals(0))
         {
             Active();
