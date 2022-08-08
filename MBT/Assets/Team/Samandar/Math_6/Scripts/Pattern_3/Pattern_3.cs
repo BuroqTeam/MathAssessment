@@ -32,18 +32,11 @@ public class Pattern_3 : GeneralTest
 
     private void Awake()
     {
-        SetCanvasStretch();
+        
         TestManager.Instance.PassToNextClicked += Check;
     }
 
-    void SetCanvasStretch()
-    {
-        GetComponent<RectTransform>().anchorMin = new(0, 0);
-        GetComponent<RectTransform>().anchorMax = new(1, 1);
-
-        GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);
-    }
+   
     private void OnEnable()
     {
         if (_istrue)
@@ -60,13 +53,7 @@ public class Pattern_3 : GeneralTest
             }
             ReadFromJson();
             StartMetod();
-        }
-
-        //Mbt.SaveJsonPath("Pattern_3", 0, 25);
-        //ES3.Save<string>("LanguageKey", "Uzb");
-        //ES3.Save<int>("ClassKey", 6);
-
-        //_jsonText = Mbt.GetDesiredData(_jsCollection);
+        }          
 
 
         DisplayQuestion(DataObj.title);
@@ -178,10 +165,7 @@ public class Pattern_3 : GeneralTest
 
     public void Check()
     {
-        List<bool> myList = new();
-
-        ES3.Save("ResultList", myList);        
-
+        
         List<bool> currentList = new();
 
         currentList = ES3.Load<List<bool>>("ResultList");
