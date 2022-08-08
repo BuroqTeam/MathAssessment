@@ -3,6 +3,7 @@ using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Pattern_11 : MonoBehaviour
@@ -19,6 +20,8 @@ public class Pattern_11 : MonoBehaviour
     public List<GameObject> NumberInstantiate;
     public List<string> Answer;
     public List<char> AlphabetList = new();
+    public List<string> Correct;
+    public List<string> ReverseCorrect;
     private void Awake()
     {
         Mbt.SaveJsonPath("Pattern_11", 1, 60);
@@ -111,12 +114,26 @@ public class Pattern_11 : MonoBehaviour
             Answer.Add(mainString);
         }
     }
-    public List<string> Correct;
+
+
+    //Correct = Rever
     public void Check()
     {
-      
+        ReverseCorrect = new List<string>(Correct);
+        ReverseCorrect.Reverse();
 
-        
+        if (Correct.SequenceEqual(Answer))
+        {
+            Debug.Log("togri");
+        }
+        else if (ReverseCorrect.SequenceEqual(Answer))
+        {
+            Debug.Log("togri");
+        }
+        else
+        {
+            Debug.Log("natogri");
+        }
     }
 }
 

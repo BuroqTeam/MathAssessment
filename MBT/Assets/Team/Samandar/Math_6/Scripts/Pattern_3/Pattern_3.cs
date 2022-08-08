@@ -30,6 +30,10 @@ public class Pattern_3 : MonoBehaviour
 
     public bool _istrue = true;
 
+    private void Awake()
+    {
+        
+    }
     private void OnEnable()
     {
         if (_istrue)
@@ -122,27 +126,7 @@ public class Pattern_3 : MonoBehaviour
     //    base.DisplayQuestion(questionStr);
     //}
 
-    //void Check()
-    //{
-    //    List<bool> myList = new();
-
-    //    ES3.Save("ResultList", myList);
-    //    bool ca = true;
-
-    //    List<bool> currentList = new();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-
-    //    if (ca)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-    //    }
-    //    ES3.Save("myList", currentList);
-    //}
-
+   
 
     public void CheckingAnswer()
     {
@@ -178,22 +162,18 @@ public class Pattern_3 : MonoBehaviour
                 {
                     Debug.Log(Ansver[j]);
                 }
-            }
-           
-        }
-        
-
-        
+            }           
+        }         
     }
 
     public void RemakeJsonSolution()
     {
         List<bool> myList = new();
 
-        ES3.Save("ResultList", myList);
-        
+        ES3.Save("ResultList", myList);        
 
         List<bool> currentList = new();
+
         currentList = ES3.Load<List<bool>>("ResultList");
 
         newSolution = new List<List<string>>(DataObj.solution);       
