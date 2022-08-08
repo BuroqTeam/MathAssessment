@@ -7,14 +7,10 @@ public class Pattern_6 : GeneralTest
 {
     private TextAsset _currentJsonText;
     bool _isTrue = true;
-    Data_6 Pattern_6Obj = new Data_6();
+    Data_6 Pattern_6Obj = new();
     private void Awake()
     {
         TestManager.Instance.PassToNextClicked += Check;
-        GetComponent<RectTransform>().anchorMin = new(0, 0);
-        GetComponent<RectTransform>().anchorMax = new(1, 1);
-        GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
     private void OnEnable()
     {
@@ -22,16 +18,9 @@ public class Pattern_6 : GeneralTest
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
             ReadFromJson();
         }
+        DisplayQuestion(Pattern_6Obj.title);
     }
     public override void DisplayQuestion(string questionStr)
     {
@@ -55,9 +44,7 @@ public class Pattern_6 : GeneralTest
     void Check()
     {
         Result();
-        List<bool> myList = new List<bool>();
-        ES3.Save("ResultList", myList);
-        List<bool> currentList = new List<bool>();
+        List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text == Pattern_6Obj.solution[0])
         {

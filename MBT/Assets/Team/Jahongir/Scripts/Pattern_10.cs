@@ -16,13 +16,7 @@ public class Pattern_10 : MonoBehaviour
     public GameObject Tile2Prefab;
     public List<GameObject> Tile1;
     private Sprite _spriteImage;
-    Data_10 Pattern_10Obj = new Data_10();
-
-    private void Awake()
-    {
-
-
-    }
+    Data_10 Pattern_10Obj = new();
 
     private void OnEnable()
     {
@@ -141,7 +135,7 @@ public class Pattern_10 : MonoBehaviour
     public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
     {
         string[] splitedGroup = spriteAddress.Split("\\");
-        string spriteName = splitedGroup[splitedGroup.Length - 1];
+        string spriteName = splitedGroup[^1];
         splitedGroup = spriteName.Split(".");
         spriteName = splitedGroup[0];
         Debug.Log(spriteName);
