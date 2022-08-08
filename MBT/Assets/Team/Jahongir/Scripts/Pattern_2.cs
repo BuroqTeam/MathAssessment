@@ -1,15 +1,9 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
-using System;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Pattern_2 : MonoBehaviour
+public class Pattern_2 : GeneralTest
 {
     public GameObject Button;
     private TextAsset _currentJsonText;
@@ -23,6 +17,7 @@ public class Pattern_2 : MonoBehaviour
 
     private void Awake()
     {
+        TestManager.Instance.PassToNextClicked += Check;
         GetComponent<RectTransform>().anchorMin = new(0, 0);
         GetComponent<RectTransform>().anchorMax = new(1, 1);
         GetComponent<RectTransform>().offsetMin = new(0, 0);
@@ -45,8 +40,11 @@ public class Pattern_2 : MonoBehaviour
             ReadFromJson();
         }
     }
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);      
+    }
 
-    
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_currentJsonText.text);
