@@ -172,7 +172,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2538808996248418514}
-  - {fileID: 2538808997427987378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,10 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a56fff94dabc4546b8fa7f21d10abdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatternParent: {fileID: 0}
-  QuestionText: {fileID: 0}
-  PatternGroup: []
-  Group: []
   PushableShadow: {fileID: 5744802171599968904, guid: 40cdd1848defa094eafa90b0531daf13, type: 3}
   PushableRectangle: {fileID: 7040173650010854673, guid: c84be67282ad3c94e8a7ab7b44c17629, type: 3}
   PanelLeft: {fileID: 2538808995516594823}
@@ -218,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatternID: 
-  IsAvailable: 1
+  PatternID: 11
+  IsAvailable: 0
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1 &2538808997050538949
@@ -325,65 +320,3 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &2538808997427987381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2538808997427987378}
-  - component: {fileID: 2538808997427987379}
-  m_Layer: 5
-  m_Name: PatternManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2538808997427987378
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2538808997427987381}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2538808996664714536}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2538808997427987379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2538808997427987381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a56fff94dabc4546b8fa7f21d10abdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PatternParent: {fileID: 0}
-  QuestionText: {fileID: 0}
-  PatternGroup: []
-  Group: []
-  PushableShadow: {fileID: 5744802171599968904, guid: 40cdd1848defa094eafa90b0531daf13, type: 3}
-  PushableRectangle: {fileID: 7040173650010854673, guid: c84be67282ad3c94e8a7ab7b44c17629, type: 3}
-  PanelLeft: {fileID: 2538808995516594823}
-  PanelRight: {fileID: 2538808997050538949}
-  LeftList: []
-  RightList: []
-  DataBases: {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
-  jsonText: {fileID: 4900000, guid: f432667220a92f441a1ede57104f5370, type: 3}
-  NumberInstantiate: []
