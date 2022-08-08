@@ -4,9 +4,9 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_5 : MonoBehaviour
+public class Pattern_5 : GeneralTest
 {      
-    public TextAsset CurrentJsonText;
+    //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;    
 
     public List<GameObject> Numbers;
@@ -24,68 +24,47 @@ public class Pattern_5 : MonoBehaviour
 
     bool _isTrue = true;
 
-    //private void OnEnable()       // +++
-    //{
-    //    if (_isTrue)
-    //    {
-    //        _isTrue = false;
-    //        _currentJsonText = GetComponent<Pattern>().Json;
-    //        if (_currentJsonText != null)
-    //        {
-    //            Debug.Log(_currentJsonText.text);
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("Not Found Data");
-    //        }
-    //        ReadFromJson();
-    //    }
+    private void OnEnable()       // +++
+    {
+        if (_isTrue)
+        {
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            
+            ReadFromJson();
+        }
 
-    //    //DisplayQuestion(Pattern_5Obj.title);
-    //}
+        DisplayQuestion(Pattern_5Obj.title);
+    }
 
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_5", 0, 40);
-        ES3.Save<string>("LanguageKey", "Uzb");
-        ES3.Save<int>("ClassKey", 6);
+        TestManager.Instance.PassToNextClicked += Check;
 
-        ReadFromJson();
+        //Mbt.SaveJsonPath("Pattern_5", 0, 40);
+        //ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<int>("ClassKey", 6);
+        //ReadFromJson();
     }
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
-    {
-        SetCanvasStretch();
+    {                
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
 
-        //if (CurrentJsonText == null)
-        //    Debug.Log("null");
-        //else if (CurrentJsonText != null)
-        //    Debug.Log("full  = " + CurrentJsonText.name);        
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
-
-        //var jsonObj = JObject.Parse(_currentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_5");
         Pattern_5Obj = jo.ToObject<Data_5>();
         CreatePrefabs();                
     }
 
-
-    void SetCanvasStretch()
-    {
-        GetComponent<RectTransform>().anchorMin = new(0, 0);
-        GetComponent<RectTransform>().anchorMax = new(1, 1);
-
-        GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);
-    }
 
 
     void CreatePrefabs()
@@ -117,7 +96,6 @@ public class Pattern_5 : MonoBehaviour
             }
         }
 
-
         for (int i = 0; i < Pattern_5Obj.problem.Count; i++)
         {
             positionObjs[i].SetActive(true);
@@ -130,32 +108,27 @@ public class Pattern_5 : MonoBehaviour
             obj.GetComponent<DragAndDropPattern5>().Pattern5 = this;
 
             Numbers.Add(obj);                       
-        }
-        
+        }        
     }
 
 
-    //void Check()
-    //{
-    //    List<bool> myList = new List<bool>();
+    void Check()
+    {   
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
 
-    //    ES3.Save("ResultList", myList);
-    //    bool ca = true;
+        if (CurrentAnswerStatus)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
+    }
 
-    //    List<bool> currentList = new List<bool>();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-
-    //    if (ca)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-    //    }
-    //    ES3.Save("myList", currentList);
-    //}
-
+    public bool CurrentAnswerStatus;
 
     public void CheckIsFinishing()
     {
@@ -180,10 +153,16 @@ public class Pattern_5 : MonoBehaviour
         if (FullPositions == EmptyPositions.Count)
         {
             if (TotalCorrectAns == numbers)
+            {
+                CurrentAnswerStatus = true;
                 Debug.Log(TotalCorrectAns + " You are win.");
+            }
             else
                 Debug.Log(TotalCorrectAns + " You are fall. ");
         }
+        else
+            CurrentAnswerStatus = false;
+
     }
 
 
@@ -197,6 +176,15 @@ public class Data_5
     public List<List<string>> solution;    
 }
 
+
+
+//void SetCanvasStretch()
+//{
+//    GetComponent<RectTransform>().anchorMin = new(0, 0);
+//    GetComponent<RectTransform>().anchorMax = new(1, 1);
+//    GetComponent<RectTransform>().offsetMin = new(0, 0);
+//    GetComponent<RectTransform>().offsetMax = new(0, 0);
+//}
 
 //void Start()
 //{

@@ -17,12 +17,14 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
 
 
     public Vector3 InitialPos1;
+    public Vector3 InitialPos2;
+    public Vector3 InitialPos3;
 
     void Start()
     {
         InitialPos = transform.position;
         InitialPos1 = transform.localPosition;
-
+        InitialPos2 = GetComponent<RectTransform>().rect.position;
         _rectTransform = GetComponent<RectTransform>();
     }
 
@@ -59,11 +61,11 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.SetSiblingIndex(siblingIndexObj);
-        Check();
+        CheckingAnswer();
     }
 
 
-    void Check()
+    void CheckingAnswer()
     {
         int k = 0;
         for (int i = 0; i < EmptyPositions.Count; i++)

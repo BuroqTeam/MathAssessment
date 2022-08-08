@@ -27,15 +27,7 @@ public class Pattern_1 : GeneralTest
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
+                        
             ReadFromJson();
         }
         DisplayQuestion(Pattern_1Obj.title);
@@ -63,7 +55,6 @@ public class Pattern_1 : GeneralTest
         {
             AlphabetList.Add(c);
         }
-        SetCanvasStretch();
 
         var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_1");
@@ -75,19 +66,6 @@ public class Pattern_1 : GeneralTest
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
-    }
-
-
-    void SetCanvasStretch()
-    {        
-        //Debug.Log("I set new Canvas scretch.");
-        //Debug.Log(GetComponent<RectTransform>().sizeDelta);        
-
-        GetComponent<RectTransform>().anchorMin = new(0, 0);
-        GetComponent<RectTransform>().anchorMax = new(1, 1);        
-
-        GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);        
     }
 
 
@@ -133,11 +111,8 @@ public class Pattern_1 : GeneralTest
     public bool CurrentAnswerStatus;
 
     void Check()
-    {
-        List<bool> myList = new List<bool>();
-        ES3.Save("ResultList", myList);
-        
-        List<bool> currentList = new List<bool>();
+    {        
+        List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
 
         if (CurrentAnswerStatus)
