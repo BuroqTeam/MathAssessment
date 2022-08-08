@@ -17,12 +17,16 @@ public class Pattern_2 : MonoBehaviour
     private int SelectAnswerNumber = 0;
     private int ResultNumber = 0;
     bool _isTrue = true;
-    public List<GameObject> Buttons = new List<GameObject>();
-    Data_2 Pattern_2Obj = new Data_2();
+    public List<GameObject> Buttons = new();
+    Data_2 Pattern_2Obj = new();
+
 
     private void Awake()
     {
-
+        GetComponent<RectTransform>().anchorMin = new(0, 0);
+        GetComponent<RectTransform>().anchorMax = new(1, 1);
+        GetComponent<RectTransform>().offsetMin = new(0, 0);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
     private void OnEnable()
     {
@@ -77,7 +81,7 @@ public class Pattern_2 : MonoBehaviour
         }
         else
         {
-            int x = 0, y = 100, q = 0;
+            int y = 100, q = 0;
             for (int i = 0; i < Pattern_2Obj.options.Count; i++)
             {
                 if (i < Pattern_2Obj.options.Count / 2)
@@ -133,9 +137,9 @@ public class Pattern_2 : MonoBehaviour
     void Check()
     {
         Result();
-        List<bool> myList = new List<bool>();
+        List<bool> myList = new();
         ES3.Save("ResultList", myList);
-        List<bool> currentList = new List<bool>();
+        List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
         {

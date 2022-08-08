@@ -1,13 +1,8 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using MBT.Extension;
-using System;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Pattern_6 : MonoBehaviour
 {
@@ -16,7 +11,10 @@ public class Pattern_6 : MonoBehaviour
     Data_6 Pattern_6Obj = new Data_6();
     private void Awake()
     {
-       
+        GetComponent<RectTransform>().anchorMin = new(0, 0);
+        GetComponent<RectTransform>().anchorMax = new(1, 1);
+        GetComponent<RectTransform>().offsetMin = new(0, 0);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
     private void OnEnable()
     {
