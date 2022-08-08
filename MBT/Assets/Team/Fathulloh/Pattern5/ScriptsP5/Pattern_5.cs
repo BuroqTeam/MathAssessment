@@ -1,10 +1,8 @@
 using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class Pattern_5 : MonoBehaviour
 {      
@@ -20,7 +18,7 @@ public class Pattern_5 : MonoBehaviour
     
     public GameObject ParentForPos;
 
-    Data_5 Pattern_5Obj = new Data_5();
+    Data_5 Pattern_5Obj = new();
     int TotalCorrectAns;    // to'g'ri joylashtirilgan javoblar soni.
     int FullPositions;      // to'ldirilgan o'rinlar soni.
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LearningNewAsset : MonoBehaviour
 {
-    public List<string> ProgramLanguages = new List<string>() { "Php", "C#", "C++" };
+    public List<string> ProgramLanguages = new() { "Php", "C#", "C++" };
 
 
 
