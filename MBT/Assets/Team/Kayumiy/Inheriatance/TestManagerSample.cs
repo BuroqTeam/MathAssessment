@@ -12,6 +12,7 @@ public class TestManagerSample : MonoBehaviour
 
     void Awake()
     {
+        Display();
         //Find the object you're looking for
         GameObject tempObject = GameObject.FindGameObjectWithTag("Canvas");
         if (tempObject != null)
@@ -27,6 +28,11 @@ public class TestManagerSample : MonoBehaviour
                 QuestionText = canvas.transform.GetChild(0).GetComponent<TMP_Text>();
             }
         }
+    }
+
+    public void Display()
+    {
+        Debug.Log("Salam");
     }
 
 
