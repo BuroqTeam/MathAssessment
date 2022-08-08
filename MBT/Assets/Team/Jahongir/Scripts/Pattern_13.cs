@@ -15,11 +15,11 @@ public class Pattern_13 : MonoBehaviour
     public GameObject PuzzleAnswer;
     public TextAsset _currentJsonText;
     private bool _isTrue = true;
-    Data_13 Pattern_13Obj = new Data_13();
+    Data_13 Pattern_13Obj = new();
 
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_9", 8, 55);
+        Mbt.SaveJsonPath("Pattern_13", 0, 72);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -31,7 +31,7 @@ public class Pattern_13 : MonoBehaviour
         if (_isTrue)
         {
             _isTrue = false;
-            _currentJsonText = GetComponent<Pattern>().Json;
+            //_currentJsonText = GetComponent<Pattern>().Json;
             if (_currentJsonText != null)
             {
                 Debug.Log(_currentJsonText.text);
