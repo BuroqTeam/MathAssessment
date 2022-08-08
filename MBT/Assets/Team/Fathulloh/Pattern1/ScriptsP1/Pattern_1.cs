@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Pattern_1 : MonoBehaviour
 {
-    //public TextAsset CurrentJsonText;
+    public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
 
     public List<char> AlphabetList = new();
@@ -44,7 +44,7 @@ public class Pattern_1 : MonoBehaviour
 
     //private void Awake()
     //{
-    //    Mbt.SaveJsonPath("Pattern_1", 1, 7);
+    //    Mbt.SaveJsonPath("Pattern_1", 7, 7);
     //    ES3.Save<string>("LanguageKey", "Uzb");
     //    ES3.Save<int>("ClassKey", 6);
     //    //JsonCollectionSO.DataBase.Clear();
@@ -85,8 +85,7 @@ public class Pattern_1 : MonoBehaviour
         GetComponent<RectTransform>().anchorMax = new(1, 1);        
 
         GetComponent<RectTransform>().offsetMin = new(0, 0);
-        GetComponent<RectTransform>().offsetMax = new(0, 0);
-        Debug.Log(GetComponent<RectTransform>().sizeDelta);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);        
     }
 
 

@@ -745,6 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dcda7e87e5b6c9469d4300e1fd1ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentJsonText: {fileID: 0}
   Numbers: []
   Boxs: []
   EmptyPositions: []
@@ -777,7 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 5
-  IsAvailable: 1
+  IsAvailable: 0
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1 &6614386767732934808

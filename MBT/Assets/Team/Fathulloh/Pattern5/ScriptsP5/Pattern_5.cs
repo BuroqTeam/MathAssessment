@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Pattern_5 : MonoBehaviour
 {      
-    //public TextAsset CurrentJsonText;
+    public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;    
 
     public List<GameObject> Numbers;
@@ -24,35 +24,35 @@ public class Pattern_5 : MonoBehaviour
 
     bool _isTrue = true;
 
-    private void OnEnable()       // +++
-    {
-        if (_isTrue)
-        {
-            _isTrue = false;
-            _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
-
-            ReadFromJson();
-        }
-        
-        //DisplayQuestion(Pattern_5Obj.title);
-    }
-
-
-    //private void Awake()
+    //private void OnEnable()       // +++
     //{
-    //    //Mbt.SaveJsonPath("Pattern_5", 2, 40);
-    //    //ES3.Save<string>("LanguageKey", "Uzb");
-    //    //ES3.Save<int>("ClassKey", 6);                
-    //    ReadFromJson();
+    //    if (_isTrue)
+    //    {
+    //        _isTrue = false;
+    //        _currentJsonText = GetComponent<Pattern>().Json;
+    //        if (_currentJsonText != null)
+    //        {
+    //            Debug.Log(_currentJsonText.text);
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("Not Found Data");
+    //        }
+    //        ReadFromJson();
+    //    }
+
+    //    //DisplayQuestion(Pattern_5Obj.title);
     //}
+
+
+    private void Awake()
+    {
+        Mbt.SaveJsonPath("Pattern_5", 0, 40);
+        ES3.Save<string>("LanguageKey", "Uzb");
+        ES3.Save<int>("ClassKey", 6);
+
+        ReadFromJson();
+    }
 
 
     //public override void DisplayQuestion(string questionStr)
@@ -63,16 +63,28 @@ public class Pattern_5 : MonoBehaviour
 
     public void ReadFromJson()  // Bu method orginal prefabda ishlamaydigan qilinadi. Chunki data boshqa joydan beriladi.
     {
+        SetCanvasStretch();
+
         //if (CurrentJsonText == null)
         //    Debug.Log("null");
         //else if (CurrentJsonText != null)
         //    Debug.Log("full  = " + CurrentJsonText.name);        
-        //var jsonObj = JObject.Parse(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
 
-        var jsonObj = JObject.Parse(_currentJsonText.text);
+        //var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_5");
         Pattern_5Obj = jo.ToObject<Data_5>();
         CreatePrefabs();                
+    }
+
+
+    void SetCanvasStretch()
+    {
+        GetComponent<RectTransform>().anchorMin = new(0, 0);
+        GetComponent<RectTransform>().anchorMax = new(1, 1);
+
+        GetComponent<RectTransform>().offsetMin = new(0, 0);
+        GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
 
 
