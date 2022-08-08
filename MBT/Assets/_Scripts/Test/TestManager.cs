@@ -1,33 +1,50 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestManager : MonoBehaviour
-{    
-    public GameObject PatternParent;    
+{
+    public TMP_Text QuestionNumTxt;
+    public Button NextButton;
     public TEXDraw QuestionText;
+    public GameObject PatternParent;       
     public PatternSO[] PatternGroup;
     public DataBaseSO[] Group;
+    public event Action PassToNextClicked;
+
+    [HideInInspector]
+    public List<Button> CircleButtons = new();
 
     protected PatternSO PatternSO;
     protected DataBaseSO JsonCollectionSO;
-    private List<GameObject> _activePatterns = new List<GameObject>();
+
+    private readonly List<GameObject> _activePatterns = new();
     private TextAsset _curentJson;
     private int _numberOfQuestions;
     private JObject _jo;
 
+    private const string subjectKey = "Subject", testGroupKey = "TestGroup", 
+        subject = "Algebra", chapterKey = "Chapter", jQuestionsPath = "questions", jPatternPath = "pattern", jChaptersPath = "chapters";
+
+
+    public static TestManager Instance;
+    
 
     private void Awake()
     {
-        GetData();
-       
+        Instance = this;
+        NextButton.onClick.AddListener(TaskOnClick);
+        GetComponent<GeneralTest>().QuestionText = QuestionText;
+        GetData();       
     }
 
-    public void GetData()
+    void GetData()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
+        if (ES3.Load<string>(subjectKey).Equals(subject))
         {
             PatternSO = PatternGroup[0];
             JsonCollectionSO = Group[0];
@@ -41,12 +58,11 @@ public class TestManager : MonoBehaviour
     }
 
     void CountNumberOfQuestions()
-    {
-      
+    {      
         _curentJson = Mbt.GetDesiredJSONData(JsonCollectionSO);
         JsonCollectionSO.DataBase.Clear();
         _jo = JObject.Parse(_curentJson.text);
-        JArray questions = (JArray)_jo["chapters"][ES3.Load<int>("Chapter")]["questions"];
+        JArray questions = (JArray)_jo[jChaptersPath][ES3.Load<int>(chapterKey)][jQuestionsPath];
         IList<Question> questionGroup = questions.ToObject<IList<Question>>();
 
         string sample = questionGroup[0].pattern;
@@ -58,60 +74,63 @@ public class TestManager : MonoBehaviour
                 _numberOfQuestions++;
             }
         }
-
-        CreateExistedPatterns();
+        GenerateQuestionIndexList();        
     }
 
-    public virtual void DisplayQuestion(string questionStr)
-    {
-        QuestionText.text = questionStr;
-    }
-
-
-   
-
-    void CreateExistedPatterns()
-    {       
-        JObject singleQuestion = new JObject();
-        List<JObject> jsonList = new List<JObject>();
-        int k = ES3.Load<int>("TestGroup");
+    void GenerateQuestionIndexList()
+    {        
+        List<JObject> jsonList = new();
+        int k = ES3.Load<int>(testGroupKey);
         k--;
-        List<int> questionIndexList = new List<int>();
+        List<int> questionIndexList = new ();
         for (int i = 0; i < _numberOfQuestions; i++)
-        {            
-            singleQuestion = (JObject)_jo["chapters"][ES3.Load<int>("Chapter")]["questions"][k];
+        {
+            JObject singleQuestion = (JObject)_jo[jChaptersPath][ES3.Load<int>(chapterKey)][jQuestionsPath][k];
             questionIndexList.Add(k);
             jsonList.Add(singleQuestion);
-            k += _numberOfQuestions;            
+            k += _numberOfQuestions;
         }
-
-        int index = 0;
+        CreateExistedPatterns(jsonList, questionIndexList);
+    }
+   
+    void CreateExistedPatterns(List<JObject> jsonList, List<int> questionIndexList)
+    {       
+        int index = 0, questionNum = 0;
         foreach (GameObject pattern in PatternSO.PatternPrefabs)
         {
             pattern.GetComponent<Pattern>().Json = _curentJson;
             foreach (JObject jObj in jsonList)
             {
-                if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj["pattern"].ToString()))
+                if (pattern.GetComponent<Pattern>().PatternID.Equals(jObj[jPatternPath].ToString()))
                 {                    
                     Mbt.SaveJsonPath(
                         "Pattern_" + pattern.GetComponent<Pattern>().PatternID,
-                        ES3.Load<int>("Chapter"), 
+                        ES3.Load<int>(chapterKey), 
                         questionIndexList[index]);
 
                     if (pattern.GetComponent<Pattern>().IsAvailable)
                     {
                         GameObject obj = Instantiate(pattern);
+                        obj.GetComponent<Pattern>().QuestionNumber = questionNum;
                         obj.transform.SetParent(PatternParent.transform);
                         obj.transform.localScale = Vector3.one;
                         obj.SetActive(false);
                         _activePatterns.Add(obj);
+                        questionNum++;
                     }                    
+                    index++;
                 }
             }
         }        
         _activePatterns[0].SetActive(true);
     }
 
+    void TaskOnClick()
+    {
+        PassToNextClicked?.Invoke();
+    }
+
     
+
 
 }
