@@ -49,14 +49,26 @@ public class Pattern_13 : MonoBehaviour
         var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_13");
         Pattern_13Obj = jo.ToObject<Data_13>();
+        CreatePrefab();
     }
 
     public void CreatePrefab()
     {
+        for (int i = 0; i < Pattern_13Obj.options.Count; i++)
+        {
+            if (i%2==0)
+            {
+                GameObject puzzle = Instantiate(PuzzleQuestion, transform.GetChild(0));
+                puzzle.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_13Obj.options[i];
+            }
+            else
+            {
+                GameObject puzzle = Instantiate(PuzzleQuestion, transform.GetChild(1));
+                puzzle.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_13Obj.options[i];
+            }
 
-
+        }
     }
-
 }
 [SerializeField]
 public class Data_13
