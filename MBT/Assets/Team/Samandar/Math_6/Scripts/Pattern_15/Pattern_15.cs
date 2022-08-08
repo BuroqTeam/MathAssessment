@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_15 : MonoBehaviour
+public class Pattern_15 : GeneralTest
 {
     private TextAsset _jsonText;
     public GameObject Problem;
     public Data_15 DataObj;
     public GameObject Solution;
     public GameObject ConsiderationsPrefabs;
-    public List<Button> buttonGroup = new List<Button>();
+    public List<Button> buttonGroup = new();
     public ColorCollectionSO colorCollection;
     public bool _istrue = true;
-
-
+    public AnswerPattern_15 AnswerPattern_15;
+    public bool _pattenBool;
     private void Awake()
     {
-
+        TestManager.Instance.PassToNextClicked += Check;
     }
 
 
@@ -43,11 +43,26 @@ public class Pattern_15 : MonoBehaviour
         
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
-
-
-        //DisplayQuestion(DataObj.title);
+        DisplayQuestion(DataObj.title);
 
         StartMetod();
+    }
+    public void Check()
+    {
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        AnswerPattern_15._PattenBool = _pattenBool;
+        if (_pattenBool)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Corrent");
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
+        }
+
     }
     public void ReadFromJson()
     {
@@ -107,7 +122,7 @@ public class Pattern_15 : MonoBehaviour
 public class Data_15
 {
     public string title;
-    public List<string> problem = new List<string>();
-    public List<string> solution = new List<string>();
+    public List<string> problem = new();
+    public List<string> solution = new();
 
 }

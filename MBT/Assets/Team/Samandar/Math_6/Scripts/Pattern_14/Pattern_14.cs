@@ -13,15 +13,32 @@ public class Pattern_14 : GeneralTest
     public GameObject ConsiderationsPrefabs;
     public List<Button> buttonGroup = new();
     public ColorCollectionSO colorCollection;
-    //public AnswerPattern_14 AnswerPattern_14;
-   
+    public AnswerPattern_14 AnswerPattern_14;
+    
     private void Awake()
     {
-        ////TestManager.Instance.PassToNextClicked += Check;
+       TestManager.Instance.PassToNextClicked += Check;
     }
-
+    public bool _pattenBool;
     public bool _istrue = true;
-      
+    
+    public void Check()
+    {
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        AnswerPattern_14._PattenBool = _pattenBool;
+        if (_pattenBool)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Corrent");
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
+        }
+        
+    }
     private void OnEnable()
     {
         if (_istrue)
@@ -31,26 +48,22 @@ public class Pattern_14 : GeneralTest
 
             if (_jsonText != null)
             {
-                Debug.Log(_jsonText.text);
+                
             }
             else
             {
-                Debug.Log("Not Found Data");
+                
             }
             ReadFromJson();
             StartMetod();
         }
         
-       
-
-
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
         DisplayQuestion(DataObj.title);
 
     }
     public void ReadFromJson()
     {
-        
         var jsonObj = JObject.Parse(_jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_14");
         DataObj = jo.ToObject<Data_14>();
@@ -63,7 +76,7 @@ public class Pattern_14 : GeneralTest
         PrefabsInstantiate();
 
     }
-   
+
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
@@ -109,5 +122,4 @@ public class Data_14
     public string title;
     public List<string> problem = new();
     public List<string> solution = new();
-
 }

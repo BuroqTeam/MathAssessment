@@ -62,7 +62,7 @@ public class Pattern_11 : MonoBehaviour
                 if (likeName.Contains(strAlphabet))
                 {
                     Correct.Add(DataObj.options[j]);
-                    Debug.Log(AlphabetList[i] + " " + DataObj.options[j]);
+                    //Debug.Log(AlphabetList[i] + " " + DataObj.options[j]);
                     break;
                 }
             }
@@ -112,6 +112,7 @@ public class Pattern_11 : MonoBehaviour
         {
             string mainString = LeftList[i].GetComponent<PushableShadow>().CurrentNumber;
             Answer.Add(mainString);
+            Debug.Log(Answer[i]);
         }
     }
 
