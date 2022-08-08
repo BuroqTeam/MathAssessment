@@ -7,9 +7,15 @@ public class LearningNewAsset : MonoBehaviour
     public List<string> ProgramLanguages = new() { "Php", "C#", "C++" };
 
 
+    public List<char> AlphabetList = new();
 
     void Start()
     {
+        for (char ci = 'a'; ci <= 'z'; ++ci)
+        {
+            AlphabetList.Add(ci);
+        }
+
         SaveSomething();
     }
 

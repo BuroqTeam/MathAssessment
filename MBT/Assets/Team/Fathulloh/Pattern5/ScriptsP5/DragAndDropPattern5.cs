@@ -11,15 +11,18 @@ public class DragAndDropPattern5 : MonoBehaviour, IDragHandler, IBeginDragHandle
     public string CurrentAns;
 
     private RectTransform _rectTransform;
-    private Vector3 InitialPos;
+    public Vector3 InitialPos;
     private int siblingIndexObj;
     public GameObject LastPos;
 
 
+    public Vector3 InitialPos1;
+
     void Start()
     {
         InitialPos = transform.position;
-        
+        InitialPos1 = transform.localPosition;
+
         _rectTransform = GetComponent<RectTransform>();
     }
 
