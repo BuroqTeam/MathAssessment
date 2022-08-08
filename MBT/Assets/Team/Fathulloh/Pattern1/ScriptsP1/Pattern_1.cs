@@ -5,9 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_1 : MonoBehaviour
+public class Pattern_1 : GeneralTest
 {
-    public TextAsset CurrentJsonText;
+    //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
 
     public List<char> AlphabetList = new();
@@ -38,20 +38,22 @@ public class Pattern_1 : MonoBehaviour
             }
             ReadFromJson();
         }
-        //DisplayQuestion(Pattern_1Obj.title);
+        DisplayQuestion(Pattern_1Obj.title);
     }
 
 
-    //private void Awake()
-    //{
-    //    Mbt.SaveJsonPath("Pattern_1", 7, 7);
-    //    ES3.Save<string>("LanguageKey", "Uzb");
-    //    ES3.Save<int>("ClassKey", 6);
-    //    //JsonCollectionSO.DataBase.Clear();
-    //    //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+    private void Awake()
+    {
+        TestManager.Instance.PassToNextClicked += Check;
 
-    //    ReadFromJson();
-    //}
+        //Mbt.SaveJsonPath("Pattern_1", 7, 7);
+        //ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<int>("ClassKey", 6);
+        ////JsonCollectionSO.DataBase.Clear();
+        ////CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+
+        //ReadFromJson();
+    }
 
 
     public void ReadFromJson()
@@ -70,10 +72,10 @@ public class Pattern_1 : MonoBehaviour
     }
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     void SetCanvasStretch()
@@ -128,28 +130,26 @@ public class Pattern_1 : MonoBehaviour
 
     }
 
+    public bool CurrentAnswerStatus;
 
+    void Check()
+    {
+        List<bool> myList = new List<bool>();
+        ES3.Save("ResultList", myList);
+        
+        List<bool> currentList = new List<bool>();
+        currentList = ES3.Load<List<bool>>("ResultList");
 
-    //void Check()
-    //{
-    //    List<bool> myList = new List<bool>();
-
-    //    ES3.Save("ResultList", myList);
-    //    bool ca = true;
-
-    //    List<bool> currentList = new List<bool>();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-
-    //    if (ca)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-    //    }
-    //    ES3.Save("myList", currentList);
-    //}
+        if (CurrentAnswerStatus)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
+    }
 
 
 
@@ -160,24 +160,14 @@ public class Pattern_1 : MonoBehaviour
             ABCD[i].GetComponent<AnswerPattern1>().DisableObject();
         }
 
-        StartCoroutine(Waiting());
+        StartCoroutine(ShowWrongClick());
     }
 
 
-    public IEnumerator Waiting()
+    public IEnumerator ShowWrongClick()
     {
         yield return new WaitForSeconds(2);
-        ShowWrongClick();
-    }
-
-
-    /// <summary>
-    /// Xato javob belgilangan bo'lsa qizilga bo'yab beruvchi method. 
-    /// Ushbu methodni Tugatish tugmasi bosilgandan keyin chaqirishimiz zarur.
-    /// Buyerda tekshirish uchun Waiting methodini ichida chaqirilgan.
-    /// </summary>
-    public void ShowWrongClick()
-    {
+        //ShowWrongClick();
         bool isTrue = CurrentClickedObj.GetComponent<AnswerPattern1>()._IsTrue;
         if (!isTrue)
         {
@@ -187,6 +177,24 @@ public class Pattern_1 : MonoBehaviour
         else
             Debug.Log("Answer is Correct. The best Answer :) ");
     }
+
+
+    /// <summary>
+    /// Xato javob belgilangan bo'lsa qizilga bo'yab beruvchi method. 
+    /// Ushbu methodni Tugatish tugmasi bosilgandan keyin chaqirishimiz zarur.
+    /// Buyerda tekshirish uchun Waiting methodini ichida chaqirilgan.
+    /// </summary>
+    //public void ShowWrongClick()
+    //{
+    //    bool isTrue = CurrentClickedObj.GetComponent<AnswerPattern1>()._IsTrue;
+    //    if (!isTrue)
+    //    {
+    //        CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
+    //        Debug.Log("Answer is Wrong");
+    //    }
+    //    else
+    //        Debug.Log("Answer is Correct. The best Answer :) ");
+    //}
 
 
 }
