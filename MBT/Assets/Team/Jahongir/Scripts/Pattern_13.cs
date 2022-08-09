@@ -17,10 +17,7 @@ public class Pattern_13 : GeneralTest
     private int ResultNumber = 0;
     Data_13 Pattern_13Obj = new();
 
-    private void Awake()
-    {
-        TestManager.Instance.PassToNextClicked += Check;
-    }
+   
     private void OnEnable()
     {
         if (_isTrue)

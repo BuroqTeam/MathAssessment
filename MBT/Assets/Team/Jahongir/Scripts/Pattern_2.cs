@@ -14,11 +14,6 @@ public class Pattern_2 : GeneralTest
     public List<GameObject> Buttons = new();
     Data_2 Pattern_2Obj = new();
 
-
-    private void Awake()
-    {
-        TestManager.Instance.PassToNextClicked += Check;
-    }
     private void OnEnable()
     {
         if (_isTrue)
