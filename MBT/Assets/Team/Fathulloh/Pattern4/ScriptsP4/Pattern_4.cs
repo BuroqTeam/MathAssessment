@@ -5,10 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pattern_4 : MonoBehaviour
-{    
-    //public DataBaseSO CurrentDataBase;
-    //public TextAsset CurrentJsonText;   //-
+public class Pattern_4 : GeneralTest
+{        
+    public TextAsset CurrentJsonText;   //-
     private TextAsset _currentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
     public GameObject PicturePrefab;    
@@ -20,61 +19,58 @@ public class Pattern_4 : MonoBehaviour
     Data_4 Pattern_4Obj = new();
     float yDistance, xDistance;
 
-    public string Statement1, Statement2, ImagePath1, ImagePath2;       //
-    
+    public string Statement1, Statement2, ImagePath1, ImagePath2;       //    
     Sprite spriteOfImage;
     public int totalFullAns, totalCorrectAns;
 
     public List<Vector3> PosLongPhone, PosPhone, PosTablet;
 
+    public bool CurrentAnswerStatus;
     bool _isTrue = true;
 
-    private void OnEnable()
+    //private void OnEnable()
+    //{
+    //    if (_isTrue)
+    //    {
+    //        _isTrue = false;
+    //        _currentJsonText = GetComponent<Pattern>().Json;
+    //        if (_currentJsonText != null)
+    //        {
+    //            Debug.Log(_currentJsonText.text);
+    //        }
+    //        else
+    //        {
+    //            Debug.Log("Not Found Data");
+    //        }
+    //        ReadFromJson();
+    //    }                 
+    //    DisplayQuestion(Pattern_4Obj.title);
+    //}
+
+
+
+    private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     {
-        if (_isTrue)
-        {
-            _isTrue = false;
-            _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
-            ReadFromJson();
-        }   
-                
-        //DisplayQuestion(Pattern_4Obj.title);
+        //TestManager.Instance.PassToNextClicked += Check;//+
+        int ranNum = Random.Range(30, 39);
+        Debug.Log("ranNum = " + ranNum);
+        Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
+        ES3.Save<string>("LanguageKey", "Uzb");
+        ES3.Save<int>("ClassKey", 6);
+        ReadFromJson();
     }
 
 
-
-    //private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
-    //{        
-    //    //int ranNum = Random.Range(20, 29);
-    //    //Debug.Log("ranNum = " + ranNum);
-    //    //Mbt.SaveJsonPath("Pattern_4", 6, ranNum /*39*/);
-    //    //ES3.Save<string>("LanguageKey", "Uzb");
-    //    //ES3.Save<int>("ClassKey", 6);
-
-    //    //CurrentDataBase.DataBase.Clear();
-    //    //CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
-    //    ReadFromJson();
-    //}
-
-
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     void ReadFromJson()
     {
-        //var jsonObj = JObject.Parse(CurrentJsonText.text);
-        var jsonObj = JObject.Parse(_currentJsonText.text);
+        var jsonObj = JObject.Parse(CurrentJsonText.text);
+        //var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_4");
         Pattern_4Obj = jo.ToObject<Data_4>();
         
@@ -83,9 +79,8 @@ public class Pattern_4 : MonoBehaviour
 
 
     void CreatePrefabs()
-    {
-        
-        for (int i = 0; i < Pattern_4Obj.statements.Count; i++) // o'ng tomondagi 2 ta rasmni prefabini yasab beradigan kod.
+    {        
+        for (int i = 0; i < Pattern_4Obj.statements.Count; i++) // o'ng tomondagi 2 ta rasmli prefabni yasab beradigan kod.
         {
             string str = Pattern_4Obj.statements[i].image;
             spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
@@ -107,9 +102,7 @@ public class Pattern_4 : MonoBehaviour
                         
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
         yDistance = xDistance - MainObjs[0].GetComponent<RectTransform>().rect.width + MainObjs[0].GetComponent<RectTransform>().rect.height;
-        //float widthObj = MainObjs[2].transform.GetComponent<RectTransform>().rect.width;
-        //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
-        
+                
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
         {            
             GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
@@ -157,7 +150,6 @@ public class Pattern_4 : MonoBehaviour
             }
         }
 
-
         for (int i = 0; i<Pattern_4Obj.options.Count; i++) //Taqqoslanishi kerak bo'lgan obyektlarni ichiga yozadi.       
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.options[i].left;
@@ -187,27 +179,23 @@ public class Pattern_4 : MonoBehaviour
     }
 
 
-    //void Check()
-    //{
-    //    List<bool> myList = new List<bool>();
+    void Check()
+    {        
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
 
-    //    ES3.Save("ResultList", myList);
-    //    bool ca = true;
+        if (CurrentAnswerStatus)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
+    }
 
-    //    List<bool> currentList = new List<bool>();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-
-    //    if (ca)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-    //    }
-    //    ES3.Save("myList", currentList);
-    //}
-
+    
 
     public void CheckAllAnswers()
     {
@@ -225,13 +213,18 @@ public class Pattern_4 : MonoBehaviour
                 totalCorrectAns++;            
         }
 
-        if ((totalCorrectAns == n) && (totalFullAns == n))        
-            Debug.Log("Everything is true.");        
-        else if (totalFullAns == n)        
-            Debug.Log("Some thing is wrong.");
+        if ((totalCorrectAns == n) && (totalFullAns == n))
+        {
+            CurrentAnswerStatus = true;
+            //Debug.Log("Everything is true.");
+        }                    
+        else if (totalFullAns == n)
+        {
+            CurrentAnswerStatus = false;
+            //Debug.Log("Some thing is wrong.");
+        }            
         //else if ((totalWrongAns == n))
         //    Debug.Log("Some thing is wrong.");
-
     }
 
 }
@@ -258,3 +251,15 @@ public class Option_4
     public char sign;
     public string right;
 }
+
+
+/*
+  //int ranNum = Random.Range(20, 29);
+  //Debug.Log("ranNum = " + ranNum);
+  //Mbt.SaveJsonPath("Pattern_4", 6, ranNum );
+//ES3.Save<string>("LanguageKey", "Uzb");
+//ES3.Save<int>("ClassKey", 6);
+
+//CurrentDataBase.DataBase.Clear();
+//CurrentJsonText = Mbt.GetDesiredData(CurrentDataBase);
+*/

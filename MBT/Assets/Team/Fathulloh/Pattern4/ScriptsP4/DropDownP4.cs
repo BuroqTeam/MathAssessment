@@ -56,10 +56,10 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
     void CheckingAnswer()
     {
         if (CurrentAnswer == CorrectAnswer)        {
-            Debug.Log("To'g'ri javob tanlandi.");
+            //Debug.Log("To'g'ri javob tanlandi.");
         }
         else if (CurrentAnswer != CorrectAnswer)       {
-            Debug.Log("Noto'g'ri javob tanlandi.");
+            //Debug.Log("Noto'g'ri javob tanlandi.");
         }
         Pattern4.CheckAllAnswers();
     }
