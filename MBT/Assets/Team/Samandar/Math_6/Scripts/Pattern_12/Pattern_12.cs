@@ -10,7 +10,7 @@ public class Pattern_12 : MonoBehaviour
     public Data_12 DataObj;
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_11", 1, 60);
+        Mbt.SaveJsonPath("Pattern_12", 1, 60);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -24,7 +24,7 @@ public class Pattern_12 : MonoBehaviour
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_11");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_12");
         DataObj = jo.ToObject<Data_12>();
     }
 
