@@ -52,6 +52,7 @@ public class Pattern_4 : GeneralTest
     private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     {
         //TestManager.Instance.PassToNextClicked += Check;//+
+
         //int ranNum = Random.Range(30, 39);
         //Debug.Log("ranNum = " + ranNum);
         //Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
@@ -179,7 +180,7 @@ public class Pattern_4 : GeneralTest
     }
 
 
-    void Check()
+    public void Check()
     {        
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
@@ -193,9 +194,20 @@ public class Pattern_4 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+
+        ActivateNext();
     }
 
-    
+
+    void ActivateNext()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+
 
     public void CheckAllAnswers()
     {
