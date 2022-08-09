@@ -175,6 +175,14 @@ public class Pattern_11 : GeneralTest
         {
             Debug.Log("natogri");
         }
+        ActivateNextQestion();
+    }
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
 }
 

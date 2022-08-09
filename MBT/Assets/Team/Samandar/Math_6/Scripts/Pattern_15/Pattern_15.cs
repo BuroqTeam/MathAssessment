@@ -58,7 +58,15 @@ public class Pattern_15 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
+        ActivateNextQestion();
+    }
 
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
     public void ReadFromJson()
     {
