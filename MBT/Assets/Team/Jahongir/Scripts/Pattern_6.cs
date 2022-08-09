@@ -8,10 +8,7 @@ public class Pattern_6 : GeneralTest
     private TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new();
-    private void Awake()
-    {
-        TestManager.Instance.PassToNextClicked += Check;
-    }
+   
     private void OnEnable()
     {
         if (_isTrue)
