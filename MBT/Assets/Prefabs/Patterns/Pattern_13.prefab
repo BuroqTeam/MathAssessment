@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 75649017508017962}
   - component: {fileID: 5197302995127808997}
   - component: {fileID: 3770483516291616746}
+  - component: {fileID: 5215082886741890758}
   m_Layer: 5
   m_Name: Pattern_13
   m_TagString: Untagged
@@ -68,10 +69,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0fba2e804929494aa8d95c85fb44477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
   PuzzleQuestion: {fileID: 3694412447752163868, guid: bb77289bcb92ebc499d1a5fef2cc3076, type: 3}
   PuzzleAnswer: {fileID: 8914217102000956962, guid: 64bac95566933a9458756adb3d771299, type: 3}
   QuestionPuzles: []
   AnswerPuzles: []
+--- !u!114 &5215082886741890758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75649017508017365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 0}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 75649017508017365}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3381601196591594202
 GameObject:
   m_ObjectHideFlags: 0
