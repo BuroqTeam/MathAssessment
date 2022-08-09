@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Pattern_9 : MonoBehaviour
+public class Pattern_9 : GeneralTest
 {
     private TextAsset _currentJsonText;
 
@@ -26,40 +26,33 @@ public class Pattern_9 : MonoBehaviour
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
-            FirstMethod();
+            
+            ReadFromJson();
         }        
 
-        //DisplayQuestion(Pattern_9Obj.title);
+        DisplayQuestion(Pattern_9Obj.title);
     }
 
 
-    private void FirstMethod()
+    private void Awake()
     {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
+        TestManager.Instance.PassToNextClicked += Check;
+
         //Mbt.SaveJsonPath("Pattern_9",8, 55);
-
         //ES3.Save<string>("LanguageKey", "Uzb");
-
         //ES3.Save<int>("ClassKey", 6);
 
         //JsonCollectionSO.DataBase.Clear();
         //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
-        ReadFromJson();
+        //ReadFromJson();
     }
 
 
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr); // null        
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr); // null        
+    }
 
 
     void ReadFromJson()
@@ -109,28 +102,24 @@ public class Pattern_9 : MonoBehaviour
     }
 
 
-    //void Check()
-    //{
-    //    List<bool> myList = new List<bool>();
+    void Check()
+    {   
+        List<bool> currentList = new List<bool>();
+        currentList = ES3.Load<List<bool>>("ResultList");
 
-    //    ES3.Save("ResultList", myList);
-    //    bool ca = true;
-
-    //    List<bool> currentList = new List<bool>();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-
-    //    if (ca)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-    //    }
-    //    ES3.Save("myList", currentList);
-    //}
+        if (CurrentAnswerStatus)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
+    }
 
 
+    public bool CurrentAnswerStatus;
 
     public void CheckAllAnswers()
     {
@@ -150,9 +139,15 @@ public class Pattern_9 : MonoBehaviour
 
         if (totalCorrectAns == n)        {
             Debug.Log("Everything is true.");
+            CurrentAnswerStatus = true;
         }
         else if (totalFullAns == n)        {
             Debug.Log("Some thing is wrong.");
+            CurrentAnswerStatus = false;
+        }
+        else
+        {
+            CurrentAnswerStatus = false;
         }
 
     }

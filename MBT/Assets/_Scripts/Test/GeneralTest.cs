@@ -20,7 +20,7 @@ public class GeneralTest : MonoBehaviour
 
     public void TurnOn()
     {
-        TestManager testManager = GetComponent<TestManager>();
+        //TestManager testManager = GetComponent<TestManager>();
         
         
     }
