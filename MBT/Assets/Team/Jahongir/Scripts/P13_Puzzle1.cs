@@ -8,33 +8,44 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 {
     public string QuestionId;
     public Pattern_13 Pattern13;
+    public GameObject AttechedPuzzle;
+    private int _selectedAnswerId = -1;
+    private Vector3 _lastPos;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.DOScale(1.2f, 0);
+        transform.GetChild(1).transform.DOScale(1.2f, 0);
+        _lastPos = transform.GetChild(1).transform.position;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(pos.x, pos.y, 0);
+        transform.GetChild(1).transform.position = new Vector3(pos.x, pos.y, 0);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         for ( int i = 0; i < Pattern13.AnswerPuzles.Count; i++)
         {
-            Debug.Log(Vector2.Distance(transform.position, Pattern13.AnswerPuzles[i].transform.GetChild(1).transform.position));
-            if (Vector2.Distance(transform.position, Pattern13.AnswerPuzles[i].transform.GetChild(1).transform.position) < 0.7f)
+            if (Vector2.Distance(transform.GetChild(1).transform.position, Pattern13.AnswerPuzles[i].transform.GetChild(1).transform.position) < 0.7f)
             {
-                transform.DOScale(1, 0);
-                Debug.Log("Tushdi");
-            }
-            else
-            {
-                transform.DOScale(0.8f, 0);
-                Debug.Log("Tushmadi");
+                _selectedAnswerId = i;
             }
         }
+        Debug.Log(_selectedAnswerId);
+        if (_selectedAnswerId != -1)
+        {
+            transform.GetChild(1).transform.position = Pattern13.AnswerPuzles[_selectedAnswerId].transform.GetChild(1).transform.position;
+            AttechedPuzzle = Pattern13.AnswerPuzles[_selectedAnswerId];
+            transform.GetChild(1).transform.DOScale(1, 0);
+        }
+        else
+        {
+            transform.GetChild(1).transform.position = transform.GetChild(0).transform.position;
+            Debug.Log("Tushmadi");
+            transform.GetChild(1).transform.DOScale(1, 0);
+        }
+        _selectedAnswerId = -1;
     }
 }
