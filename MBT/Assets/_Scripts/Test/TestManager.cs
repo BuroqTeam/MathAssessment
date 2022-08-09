@@ -37,6 +37,7 @@ public class TestManager : MonoBehaviour
 
     private void Awake()
     {
+        SetSaveManagerValues();
         Instance = this;
         NextButton.onClick.AddListener(TaskOnClick);
         GetComponent<GeneralTest>().QuestionText = QuestionText;
@@ -158,6 +159,15 @@ public class TestManager : MonoBehaviour
         PassToNextClicked?.Invoke();
     }
 
+    void SetSaveManagerValues()
+    {
+        List<bool> resultList = new();
+        for (int i = 0; i < 10; i++)
+        {
+            resultList.Add(false);
+        }
+        ES3.Save<List<bool>>("ResultList", resultList);
+    }
     
 
 
