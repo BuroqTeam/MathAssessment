@@ -112,7 +112,7 @@ public class Pattern_5 : GeneralTest
     }
 
 
-    void Check()
+    public void Check()
     {   
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
@@ -126,7 +126,20 @@ public class Pattern_5 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+
+        ActivateNext();
     }
+
+
+    void ActivateNext()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+
 
     public bool CurrentAnswerStatus;
 
