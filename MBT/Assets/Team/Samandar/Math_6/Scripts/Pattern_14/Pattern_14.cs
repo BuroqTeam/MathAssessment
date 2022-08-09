@@ -15,10 +15,7 @@ public class Pattern_14 : GeneralTest
     public ColorCollectionSO colorCollection;
     public AnswerPattern_14 AnswerPattern_14;
     
-    private void Awake()
-    {
-       TestManager.Instance.PassToNextClicked += Check;
-    }
+   
     public bool _pattenBool;
     public bool _istrue = true;
     

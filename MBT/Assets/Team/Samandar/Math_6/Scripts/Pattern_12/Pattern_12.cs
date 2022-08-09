@@ -18,11 +18,7 @@ public class Pattern_12 : GeneralTest
     public bool _istrue = true;
     public int WrongAns;
 
-    private void Awake()
-    {
-        TestManager.Instance.PassToNextClicked += Check;        
-    }
-
+    
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);

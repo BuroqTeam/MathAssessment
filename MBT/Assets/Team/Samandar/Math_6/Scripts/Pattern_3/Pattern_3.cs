@@ -30,11 +30,11 @@ public class Pattern_3 : GeneralTest
 
     public bool _istrue = true;
 
-    private void Awake()
-    {
+    //private void Awake()
+    //{
         
-        TestManager.Instance.PassToNextClicked += Check;
-    }
+        
+    //}
 
    
     private void OnEnable()

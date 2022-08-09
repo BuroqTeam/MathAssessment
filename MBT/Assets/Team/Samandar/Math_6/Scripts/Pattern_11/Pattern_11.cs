@@ -23,7 +23,7 @@ public class Pattern_11 : GeneralTest
     public bool _istrue = true;
     private void Awake()
     {
-        TestManager.Instance.PassToNextClicked += Check;
+       
 
         //Mbt.SaveJsonPath("Pattern_11", 1, 60);
 
