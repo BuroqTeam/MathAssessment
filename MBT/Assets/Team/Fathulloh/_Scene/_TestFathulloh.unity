@@ -904,7 +904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
-  CurrentJsonText: {fileID: 4900000, guid: faea5a0aeea51234280c4b9a51df1343, type: 3}
   spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   PicturePrefab: {fileID: 6769031063644269278, guid: 1bbec0ca5e8926a46acaff2102b63427, type: 3}
   MainObjs:
@@ -1281,7 +1280,7 @@ MonoBehaviour:
   - Php
   - C#
   - C++
-  AlphabetList: 
+  LoadedNumber: 0
 --- !u!1001 &1804926990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,6 +1291,10 @@ PrefabInstance:
     - target: {fileID: 8380820865305673159, guid: 68476e44a3ccccf4583d1b374c492eda, type: 3}
       propertyPath: m_Name
       value: Pattern_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380820865305673159, guid: 68476e44a3ccccf4583d1b374c492eda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8380820865305673208, guid: 68476e44a3ccccf4583d1b374c492eda, type: 3}
       propertyPath: m_Pivot.x
