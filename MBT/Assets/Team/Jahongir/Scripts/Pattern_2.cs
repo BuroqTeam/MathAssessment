@@ -116,7 +116,7 @@ public class Pattern_2 : GeneralTest
             ResultNumber = 0;
         }
     }
-    void Check()
+    public void Check()
     {
         Result();
         List<bool> currentList = new();
@@ -130,8 +130,21 @@ public class Pattern_2 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+        ActivateNext();
     }
+
+    void ActivateNext()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+
 }
+
+
 [SerializeField]
 public class Data_2
 {

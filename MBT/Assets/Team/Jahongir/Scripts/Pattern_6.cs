@@ -38,7 +38,7 @@ public class Pattern_6 : GeneralTest
             Debug.Log("Correct");
         }
     }
-    void Check()
+    public void Check()
     {
         Result();
         List<bool> currentList = new();
@@ -52,6 +52,14 @@ public class Pattern_6 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+        ActivateNext();
+    }
+    void ActivateNext()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
 }
 
