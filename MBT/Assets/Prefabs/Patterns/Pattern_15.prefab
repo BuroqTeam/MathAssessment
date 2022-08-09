@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 1026507422495226351}
   - component: {fileID: 2315255451161050350}
   - component: {fileID: 1026507422495226350}
+  - component: {fileID: 4145324122925581049}
   m_Layer: 5
   m_Name: Pattern_15
   m_TagString: Untagged
@@ -199,11 +200,11 @@ MonoBehaviour:
   QuestionText: {fileID: 0}
   Problem: {fileID: 1026507422694556708}
   Solution: {fileID: 1026507421238151610}
-  ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
+  ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: be8a93c84984fdf4094ce00a40fb0d55, type: 3}
   buttonGroup: []
   colorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
   _istrue: 1
-  AnswerPattern_15: {fileID: 0}
+  AnswerPattern_15: {fileID: 6760567874798640029, guid: be8a93c84984fdf4094ce00a40fb0d55, type: 3}
   _pattenBool: 0
 --- !u!114 &1026507422495226350
 MonoBehaviour:
@@ -219,8 +220,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatternID: 15
   IsAvailable: 1
+  Event: {fileID: 11400000, guid: efc2b1365971612448c8b5a81b2f0bed, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
+--- !u!114 &4145324122925581049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026507422495226348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: efc2b1365971612448c8b5a81b2f0bed, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2315255451161050350}
+        m_TargetAssemblyTypeName: Pattern_15, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1026507422694556708
 GameObject:
   m_ObjectHideFlags: 0
