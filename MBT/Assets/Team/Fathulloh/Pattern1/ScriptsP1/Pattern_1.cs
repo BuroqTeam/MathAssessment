@@ -17,6 +17,8 @@ public class Pattern_1 : GeneralTest
     public GameObject MainParent;
     public GameObject CurrentClickedObj;
 
+    public bool CurrentAnswerStatus;
+
     Data_1 Pattern_1Obj = new();
     float yPos, yLength;
     bool _isTrue = true;
@@ -108,7 +110,9 @@ public class Pattern_1 : GeneralTest
 
     }
 
-    public bool CurrentAnswerStatus;
+
+    
+
 
     void Check()
     {        
@@ -135,10 +139,14 @@ public class Pattern_1 : GeneralTest
             ABCD[i].GetComponent<AnswerPattern1>().DisableObject();
         }
 
-        StartCoroutine(ShowWrongClick());
+        //StartCoroutine(ShowWrongClick());
     }
 
 
+    /// <summary>
+    /// Xato javob belgilangan bo'lsa qizilga bo'yab beruvchi method. 
+    /// Ushbu methodni Tugatish tugmasi bosilgandan keyin chaqirishimiz zarur.
+    /// </summary>
     public IEnumerator ShowWrongClick()
     {
         yield return new WaitForSeconds(2);
@@ -146,7 +154,7 @@ public class Pattern_1 : GeneralTest
         bool isTrue = CurrentClickedObj.GetComponent<AnswerPattern1>()._IsTrue;
         if (!isTrue)
         {
-            CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
+            //CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
             Debug.Log("Answer is Wrong");
         }
         else
@@ -154,22 +162,7 @@ public class Pattern_1 : GeneralTest
     }
 
 
-    /// <summary>
-    /// Xato javob belgilangan bo'lsa qizilga bo'yab beruvchi method. 
-    /// Ushbu methodni Tugatish tugmasi bosilgandan keyin chaqirishimiz zarur.
-    /// Buyerda tekshirish uchun Waiting methodini ichida chaqirilgan.
-    /// </summary>
-    //public void ShowWrongClick()
-    //{
-    //    bool isTrue = CurrentClickedObj.GetComponent<AnswerPattern1>()._IsTrue;
-    //    if (!isTrue)
-    //    {
-    //        CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
-    //        Debug.Log("Answer is Wrong");
-    //    }
-    //    else
-    //        Debug.Log("Answer is Correct. The best Answer :) ");
-    //}
+    
 
 
 }

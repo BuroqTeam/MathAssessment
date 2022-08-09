@@ -104,7 +104,7 @@ public class Pattern_9 : GeneralTest
 
     void Check()
     {   
-        List<bool> currentList = new List<bool>();
+        List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
 
         if (CurrentAnswerStatus)
