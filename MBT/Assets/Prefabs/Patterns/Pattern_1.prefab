@@ -50,12 +50,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentJsonText: {fileID: 0}
+  QuestionText: {fileID: 0}
   AlphabetList: 
   ABCD: []
-  PrefabA: {fileID: 56981999180755985, guid: 7a9e26b76f86d7d459e21a9f13345125, type: 3}
+  PrefabA: {fileID: 56981999180755985, guid: b62f4130383f1eb4fbb1f5c4bbe3ee8b, type: 3}
   MainParent: {fileID: 0}
   CurrentClickedObj: {fileID: 0}
+  CurrentAnswerStatus: 0
 --- !u!114 &3460772117772722969
 MonoBehaviour:
   m_ObjectHideFlags: 0

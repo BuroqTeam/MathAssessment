@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Pattern_4 : GeneralTest
 {        
-    public TextAsset CurrentJsonText;   //-
+    //public TextAsset CurrentJsonText;   //-
     private TextAsset _currentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
     public GameObject PicturePrefab;    
@@ -28,36 +28,36 @@ public class Pattern_4 : GeneralTest
     public bool CurrentAnswerStatus;
     bool _isTrue = true;
 
-    //private void OnEnable()
-    //{
-    //    if (_isTrue)
-    //    {
-    //        _isTrue = false;
-    //        _currentJsonText = GetComponent<Pattern>().Json;
-    //        if (_currentJsonText != null)
-    //        {
-    //            Debug.Log(_currentJsonText.text);
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("Not Found Data");
-    //        }
-    //        ReadFromJson();
-    //    }                 
-    //    DisplayQuestion(Pattern_4Obj.title);
-    //}
+    private void OnEnable()
+    {
+        if (_isTrue)
+        {
+            _isTrue = false;
+            _currentJsonText = GetComponent<Pattern>().Json;
+            if (_currentJsonText != null)
+            {
+                Debug.Log(_currentJsonText.text);
+            }
+            else
+            {
+                Debug.Log("Not Found Data");
+            }
+            ReadFromJson();
+        }
+        DisplayQuestion(Pattern_4Obj.title);
+    }
 
 
 
     private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     {
-        //TestManager.Instance.PassToNextClicked += Check;//+
-        int ranNum = Random.Range(30, 39);
-        Debug.Log("ranNum = " + ranNum);
-        Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
-        ES3.Save<string>("LanguageKey", "Uzb");
-        ES3.Save<int>("ClassKey", 6);
-        ReadFromJson();
+        TestManager.Instance.PassToNextClicked += Check;//+
+        //int ranNum = Random.Range(30, 39);
+        //Debug.Log("ranNum = " + ranNum);
+        //Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
+        //ES3.Save<string>("LanguageKey", "Uzb");
+        //ES3.Save<int>("ClassKey", 6);
+        //ReadFromJson();
     }
 
 
@@ -69,8 +69,8 @@ public class Pattern_4 : GeneralTest
 
     void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(CurrentJsonText.text);
-        //var jsonObj = JObject.Parse(_currentJsonText.text);
+        //var jsonObj = JObject.Parse(CurrentJsonText.text);
+        var jsonObj = JObject.Parse(_currentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_4");
         Pattern_4Obj = jo.ToObject<Data_4>();
         
@@ -223,8 +223,7 @@ public class Pattern_4 : GeneralTest
             CurrentAnswerStatus = false;
             //Debug.Log("Some thing is wrong.");
         }            
-        //else if ((totalWrongAns == n))
-        //    Debug.Log("Some thing is wrong.");
+        
     }
 
 }
