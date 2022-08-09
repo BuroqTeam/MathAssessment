@@ -8,29 +8,21 @@ public class Pattern_13 : MonoBehaviour
 {
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
-    public TextAsset _currentJsonText;
+    private TextAsset _currentJsonText;
     public List<GameObject> QuestionPuzles = new();
     public List<GameObject> AnswerPuzles = new();
     private bool _isTrue = true;
     private List<string> _question = new();
     private List<string> _answer = new();
+    private int ResultNumber = 0;
     Data_13 Pattern_13Obj = new();
-
-    private void Awake()
-    {
-        Mbt.SaveJsonPath("Pattern_13", 0, 72);
-
-        ES3.Save<string>("LanguageKey", "Uzb");
-
-        ES3.Save<int>("ClassKey", 6);
-    }
 
     private void OnEnable()
     {
         if (_isTrue)
         {
             _isTrue = false;
-            //_currentJsonText = GetComponent<Pattern>().Json;
+            _currentJsonText = GetComponent<Pattern>().Json;
             if (_currentJsonText != null)
             {
                 Debug.Log(_currentJsonText.text);
@@ -70,7 +62,7 @@ public class Pattern_13 : MonoBehaviour
         {
             GameObject puzzle = Instantiate(PuzzleQuestion, transform.GetChild(1));
             puzzle.GetComponent<P13_Puzzle1>().QuestionId = _question[i].Remove(3, _question[i].Length - 3);
-            puzzle.transform.GetChild(0).GetComponent<TEXDraw>().text = _question[i].Remove(0, 3);
+            puzzle.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = _question[i].Remove(0, 3);
             puzzle.GetComponent<P13_Puzzle1>().Pattern13 = this;
             QuestionPuzles.Add(puzzle);
             GameObject puzzle1 = Instantiate(PuzzleAnswer, transform.GetChild(0));
@@ -78,6 +70,39 @@ public class Pattern_13 : MonoBehaviour
             puzzle1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().text = _answer[i].Remove(0, 3);
             AnswerPuzles.Add(puzzle1);
         }
+    }
+    public void Result()
+    {
+        for (int i = 0; i < QuestionPuzles.Count; i++)
+        {
+            if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
+            {
+                ResultNumber++;
+            }
+        }
+        if (ResultNumber == QuestionPuzles.Count)
+        {
+            Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Wrong");
+        }
+    }
+    void Check()
+    {
+        Result();
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        if (ResultNumber == QuestionPuzles.Count)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("myList", currentList);
     }
 }
 [SerializeField]

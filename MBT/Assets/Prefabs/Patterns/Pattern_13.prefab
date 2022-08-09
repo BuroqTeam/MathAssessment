@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 13
-  IsAvailable: 0
+  IsAvailable: 1
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!114 &3770483516291616746
@@ -68,9 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0fba2e804929494aa8d95c85fb44477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuzzleQuestion: {fileID: 4552796022935038163, guid: 96c41a887af60814f807c522c6124a76, type: 3}
+  PuzzleQuestion: {fileID: 3694412447752163868, guid: bb77289bcb92ebc499d1a5fef2cc3076, type: 3}
   PuzzleAnswer: {fileID: 8914217102000956962, guid: 64bac95566933a9458756adb3d771299, type: 3}
-  _currentJsonText: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
+  QuestionPuzles: []
+  AnswerPuzles: []
 --- !u!1 &3381601196591594202
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -649.99994, y: -4}
+  m_AnchoredPosition: {x: -650, y: -4}
   m_SizeDelta: {x: -1300, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8121261713681737853
