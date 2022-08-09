@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7884895334267356500}
   - component: {fileID: 7884895334267356501}
   - component: {fileID: 7884895334267356502}
-  - component: {fileID: 8913990965073167448}
+  - component: {fileID: 6760567874798640029}
   m_Layer: 5
   m_Name: Considerations_15
   m_TagString: Untagged
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8913990965073167448
+--- !u!114 &6760567874798640029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,9 +213,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7884895334267356496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d89a3947529154cb76247e782997a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cf527ab54d94244eabf419497d2f01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pattern14: {fileID: 0}
+  Pattern15: {fileID: 0}
   _PattenBool: 0
   colorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
