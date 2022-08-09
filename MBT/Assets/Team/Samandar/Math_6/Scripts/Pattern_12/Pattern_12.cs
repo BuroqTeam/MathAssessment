@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Pattern_12 : GeneralTest
 {
-    public TextAsset _jsonText;
+    private TextAsset _jsonText;
     public Data_12 DataObj;
     public GameObject Answers;
     public List<char> AlphabetList = new();
@@ -37,6 +37,7 @@ public class Pattern_12 : GeneralTest
 
     void OnEnable()
     {
+        Debug.Log("on");
         if (_istrue)
         {
             _istrue = false;
@@ -119,12 +120,7 @@ public class Pattern_12 : GeneralTest
             Debug.Log("Correct");
         }
     }
-
-    void Update()
-    {
-        
-    }
-  
+      
 }
 
 [SerializeField]
