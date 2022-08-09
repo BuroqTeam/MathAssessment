@@ -16,11 +16,7 @@ public class Pattern_15 : GeneralTest
     public bool _istrue = true;
     public AnswerPattern_15 AnswerPattern_15;
     public bool _pattenBool;
-    private void Awake()
-    {
-        TestManager.Instance.PassToNextClicked += Check;
-    }
-
+   
 
     private void OnEnable()
     {
