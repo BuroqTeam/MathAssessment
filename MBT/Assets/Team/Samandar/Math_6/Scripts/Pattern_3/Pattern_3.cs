@@ -45,11 +45,11 @@ public class Pattern_3 : GeneralTest
             _jsonText = GetComponent<Pattern>().Json;
             if (_jsonText != null)
             {
-                Debug.Log(_jsonText.text);
+               
             }
             else
             {
-                Debug.Log("Not Found Data");
+                
             }
             ReadFromJson();
             StartMetod();
