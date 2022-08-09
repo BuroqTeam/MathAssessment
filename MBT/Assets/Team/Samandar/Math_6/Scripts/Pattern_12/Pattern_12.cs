@@ -13,7 +13,7 @@ public class Pattern_12 : MonoBehaviour
     public GameObject ButtonPrefabs;
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_12", 3, 60);
+        Mbt.SaveJsonPath("Pattern_12", 3, 77);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -41,6 +41,8 @@ public class Pattern_12 : MonoBehaviour
         for (int i = 0; i < str.Count; i++)
         {
             GameObject obj = Instantiate(ButtonPrefabs, Answers.transform);
+            obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
+            //ABCD.Add(obj);
         }
     }
 
