@@ -40,7 +40,7 @@ public class Pattern_5 : GeneralTest
 
     private void Awake()
     {
-        TestManager.Instance.PassToNextClicked += Check;
+        //TestManager.Instance.PassToNextClicked += Check;
 
         //Mbt.SaveJsonPath("Pattern_5", 0, 40);
         //ES3.Save<string>("LanguageKey", "Uzb");

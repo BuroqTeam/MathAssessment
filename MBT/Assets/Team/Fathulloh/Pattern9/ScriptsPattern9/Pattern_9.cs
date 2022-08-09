@@ -36,7 +36,7 @@ public class Pattern_9 : GeneralTest
 
     private void Awake()
     {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
-        TestManager.Instance.PassToNextClicked += Check;
+        //TestManager.Instance.PassToNextClicked += Check;
 
         //Mbt.SaveJsonPath("Pattern_9",8, 55);
         //ES3.Save<string>("LanguageKey", "Uzb");

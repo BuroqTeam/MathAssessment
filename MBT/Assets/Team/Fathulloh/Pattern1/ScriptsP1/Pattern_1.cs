@@ -38,7 +38,7 @@ public class Pattern_1 : GeneralTest
 
     private void Awake()
     {
-        TestManager.Instance.PassToNextClicked += Check;
+        //TestManager.Instance.PassToNextClicked += Check;
 
         //Mbt.SaveJsonPath("Pattern_1", 7, 7);
         //ES3.Save<string>("LanguageKey", "Uzb");

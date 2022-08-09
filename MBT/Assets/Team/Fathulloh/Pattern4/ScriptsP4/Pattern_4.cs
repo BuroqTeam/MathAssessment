@@ -51,7 +51,7 @@ public class Pattern_4 : GeneralTest
 
     private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     {
-        TestManager.Instance.PassToNextClicked += Check;//+
+        //TestManager.Instance.PassToNextClicked += Check;//+
         //int ranNum = Random.Range(30, 39);
         //Debug.Log("ranNum = " + ranNum);
         //Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
