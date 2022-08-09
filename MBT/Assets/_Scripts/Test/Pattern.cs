@@ -8,7 +8,7 @@ public class Pattern : MonoBehaviour
     public string PatternID;
     public bool IsAvailable;
     public delegate void PassToNextQuestion();
-    
+    public GameEvent Event;
     
 
     
