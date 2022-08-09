@@ -8,9 +8,12 @@ public class Pattern_12 : MonoBehaviour
 {
     public TextAsset _jsonText;
     public Data_12 DataObj;
+    public GameObject Answers;
+    public List<char> AlphabetList = new();
+    public GameObject ButtonPrefabs;
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_12", 1, 60);
+        Mbt.SaveJsonPath("Pattern_12", 3, 60);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -30,7 +33,15 @@ public class Pattern_12 : MonoBehaviour
 
     void Start()
     {
-        
+        for (char ci = 'A'; ci <= 'Z'; ++ci)
+        {
+            AlphabetList.Add(ci);
+        }
+        List<string> str = DataObj.options;
+        for (int i = 0; i < str.Count; i++)
+        {
+            GameObject obj = Instantiate(ButtonPrefabs, Answers.transform);
+        }
     }
 
     // Update is called once per frame
