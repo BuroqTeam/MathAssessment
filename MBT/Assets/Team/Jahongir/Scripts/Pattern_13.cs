@@ -24,14 +24,6 @@ public class Pattern_13 : GeneralTest
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
             ReadFromJson();
         }
         DisplayQuestion(Pattern_13Obj.title);
