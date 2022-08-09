@@ -55,6 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatternID: 13
   IsAvailable: 1
+  Event: {fileID: 11400000, guid: f4c2d5e7372836745b1455797e1a0410, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!114 &3770483516291616746
@@ -86,17 +87,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 0}
+  Event: {fileID: 11400000, guid: f4c2d5e7372836745b1455797e1a0410, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 75649017508017365}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 3770483516291616746}
+        m_TargetAssemblyTypeName: Pattern_13, Assembly-CSharp
+        m_MethodName: Check
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
