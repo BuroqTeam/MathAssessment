@@ -1,12 +1,11 @@
 using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Pattern_11 : MonoBehaviour
+public class Pattern_11 : GeneralTest
 {
     public GameObject PushableShadow;
     public GameObject PushableRectangle;
@@ -14,38 +13,61 @@ public class Pattern_11 : MonoBehaviour
     public GameObject PanelRight;
     public List<GameObject> LeftList;
     public List<GameObject> RightList;
-    public DataBaseSO DataBases;
-    public TextAsset jsonText;
+    private TextAsset _jsonText;
     public Data_11 DataObj;
     public List<GameObject> NumberInstantiate;
     public List<string> Answer;
     public List<char> AlphabetList = new();
     public List<string> Correct;
     public List<string> ReverseCorrect;
+    public bool _istrue = true;
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_11", 1, 60);
+        TestManager.Instance.PassToNextClicked += Check;
 
-        ES3.Save<string>("LanguageKey", "Uzb");
+        //Mbt.SaveJsonPath("Pattern_11", 1, 60);
 
-        ES3.Save<int>("ClassKey", 6);
+        //ES3.Save<string>("LanguageKey", "Uzb");
 
-        jsonText = Mbt.GetDesiredJSONData(DataBases);
+        //ES3.Save<int>("ClassKey", 6);
 
-        ReadFromJson();
+        ////jsonText = Mbt.GetDesiredJSONData(DataBases);
+
+        //ReadFromJson();
+    }
+
+    private void OnEnable()
+    {
+        if (_istrue)
+        {
+            _istrue = false;
+            _jsonText = GetComponent<Pattern>().Json;
+            if (_jsonText != null)
+            {
+
+            }
+            else
+            {
+
+            }
+            ReadFromJson();
+            StartMetod();
+        }
+        DisplayQuestion(DataObj.title);
     }
     public void ReadFromJson()
     {
-        var jsonObj = JObject.Parse(jsonText.text);
+        var jsonObj = JObject.Parse(_jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_11");
         DataObj = jo.ToObject<Data_11>();        
     }
-
-    void Start()
+    public override void DisplayQuestion(string questionStr)
     {
-        ObjInstantiate();
+        base.DisplayQuestion(questionStr);
     }
-    void ObjInstantiate()
+
+
+    void StartMetod()
     {
         for (char ci = 'a'; ci <= 'z'; ++ci)
         {
@@ -102,7 +124,7 @@ public class Pattern_11 : MonoBehaviour
             RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Pattern11 = this;
             RightList[i].transform.GetChild(0).GetComponent<PushableRectangle>().Positions = LeftList;
         }
-        Check();
+        
     }
     public void Checking()
     {
@@ -120,11 +142,24 @@ public class Pattern_11 : MonoBehaviour
     //Correct = Rever
     public void Check()
     {
-        
-        if (Correct.Contains("["))
+        for (int i = 0; i < Correct.Count; i++)
         {
 
+            var likeName = Correct[i];
+
+
+            if (likeName.Contains('['))
+            {
+                likeName = likeName.Replace("[a]", "");
+                likeName = likeName.Replace("[b]", "");
+                likeName = likeName.Replace("[c]", "");
+                likeName = likeName.Replace("[d]", "");
+                likeName = likeName.Replace("[e]", "");
+                likeName = likeName.Replace("[f]", "");
+            }
+           Correct[i] = likeName;
         }
+       
         ReverseCorrect = new List<string>(Correct);
         ReverseCorrect.Reverse();
 
