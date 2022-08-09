@@ -23,7 +23,7 @@ public class Pattern_10 : MonoBehaviour
         //GetData();
         //JsonCollectionSO.DataBase.Clear();
         //CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
-        //ReadFromJson();
+        ReadFromJson();
         //DisplayQuestion(Pattern_10Obj.title);
     }
 

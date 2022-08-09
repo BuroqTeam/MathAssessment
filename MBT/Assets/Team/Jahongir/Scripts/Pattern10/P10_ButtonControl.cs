@@ -14,7 +14,6 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.DOScale(1.2f, 0);
-        Vector3 pos = transform.position;
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -32,18 +31,11 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
                 _minValue = i;
             }
         }
-        //Debug.Log(_min);
-        //Debug.Log(_minValue);
         if (true)
         {
             Debug.Log("Tushdi");
             Debug.Log(Pattern10.Tile1[_minValue].transform.position.x);
             Debug.Log(transform.position.x);
-        }
-        else
-        {
-            Debug.Log("Tushmadi");
-            
         }
     }
 }
