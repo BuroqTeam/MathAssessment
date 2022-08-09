@@ -1,11 +1,10 @@
 using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_12 : MonoBehaviour
+public class Pattern_12 : GeneralTest
 {
     public TextAsset _jsonText;
     public Data_12 DataObj;
@@ -13,17 +12,15 @@ public class Pattern_12 : MonoBehaviour
     public List<char> AlphabetList = new();
     public List<GameObject> ABCD;
     public GameObject ButtonPrefabs;
+    public bool _Pattern;
+    public bool _IsTrue;
+    public ButtonAnswer buttonAnswer;
+    public bool _istrue = true;
+    public int WrongAns;
+
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_12", 3, 70);
-
-        ES3.Save<string>("LanguageKey", "Uzb");
-
-        ES3.Save<int>("ClassKey", 6);
-
-        //jsonText = Mbt.GetDesiredJSONData(DataBases);
-
-        ReadFromJson();
+        TestManager.Instance.PassToNextClicked += Check;        
     }
 
     public void ReadFromJson()
@@ -33,8 +30,30 @@ public class Pattern_12 : MonoBehaviour
         DataObj = jo.ToObject<Data_12>();
     }
 
-    void Start()
+    public override void DisplayQuestion(string questionStr)
     {
+        base.DisplayQuestion(questionStr);
+    }
+
+    void OnEnable()
+    {
+        if (_istrue)
+        {
+            _istrue = false;
+            _jsonText = GetComponent<Pattern>().Json;
+            if (_jsonText != null)
+            {
+
+            }
+            else
+            {
+
+            }
+            ReadFromJson();
+            
+        }
+        DisplayQuestion(DataObj.title);
+       
         for (char ci = 'A'; ci <= 'Z'; ++ci)
         {
             AlphabetList.Add(ci);
@@ -44,11 +63,10 @@ public class Pattern_12 : MonoBehaviour
         {
             GameObject obj = Instantiate(ButtonPrefabs, Answers.transform);
             obj.transform.GetChild(0).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
-            //obj.transform.GetChild(1).GetComponent<TEXDraw>().text = str[i].ToString();
             ABCD.Add(obj);
         }
 
-        //List<string> str = DataObj.options;
+        
         str = str.ShuffleList();
         DataObj.options = str;
 
@@ -65,8 +83,43 @@ public class Pattern_12 : MonoBehaviour
             ABCD[i].GetComponent<ButtonAnswer>().WriteCurrentAnswer(likeName);
         }
     }
+    public void Check()
+    {
+        WrongAns = 0;
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        for (int i = 0; i <ABCD.Count ; i++)
+        {
+            _IsTrue = ABCD[i].transform.GetComponent<ButtonAnswer>()._isTrue;
+            _Pattern = ABCD[i].transform.GetComponent<ButtonAnswer>()._pattern;
+            if (_IsTrue == true && _Pattern == true)
+            {
 
-    
+            }
+            else if(_IsTrue == true && _Pattern == false)
+            {
+                WrongAns++;
+            }
+            else if (_IsTrue == false && _Pattern == true)
+            {
+                WrongAns++;
+            }
+            else
+            {
+                
+            }
+        }
+
+        if (WrongAns != 0)
+        {
+            Debug.Log("Wrong");
+        }
+        else
+        {
+            Debug.Log("Correct");
+        }
+    }
+
     void Update()
     {
         

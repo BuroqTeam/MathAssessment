@@ -11,33 +11,29 @@ public class ButtonAnswer : MonoBehaviour
     public bool _isTrue = false;
     public bool _pattern;
     public Pattern_12 Pattern12;
-    void Start()
-    {
-        
-    }
+    public ColorCollectionSO ColorCollectionSO;
+    
     public void ClickAnswer()
     {
         if (!_isTrue)
         {
             _isTrue = true;
             GetComponent<Image>().sprite = SelectedButton;
+            gameObject.transform.GetChild(1).GetComponent<TEXDraw>().color = ColorCollectionSO.White;
         }
         else
         {
             _isTrue = false;
             GetComponent<Image>().sprite = DefaultButton;
+            gameObject.transform.GetChild(1).GetComponent<TEXDraw>().color = ColorCollectionSO.DarkBlue;
         }
     }
 
     public void WriteCurrentAnswer(string str)
     {
-        //InitialTextColor = gameObject.transform.GetChild(1).GetComponent<TEXDraw>().color;
-
+        gameObject.transform.GetChild(1).GetComponent<TEXDraw>().color = ColorCollectionSO.DarkBlue;
         gameObject.transform.GetChild(1).GetComponent<TEXDraw>().text = str;
         CurrentAnswer = str;
     }
-    void Update()
-    {
-        
-    }
+    
 }
