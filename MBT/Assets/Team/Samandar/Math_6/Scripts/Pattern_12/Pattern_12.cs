@@ -1,3 +1,4 @@
+using Extension;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
@@ -10,10 +11,11 @@ public class Pattern_12 : MonoBehaviour
     public Data_12 DataObj;
     public GameObject Answers;
     public List<char> AlphabetList = new();
+    public List<GameObject> ABCD;
     public GameObject ButtonPrefabs;
     private void Awake()
     {
-        Mbt.SaveJsonPath("Pattern_12", 3, 77);
+        Mbt.SaveJsonPath("Pattern_12", 3, 70);
 
         ES3.Save<string>("LanguageKey", "Uzb");
 
@@ -41,12 +43,30 @@ public class Pattern_12 : MonoBehaviour
         for (int i = 0; i < str.Count; i++)
         {
             GameObject obj = Instantiate(ButtonPrefabs, Answers.transform);
-            obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
-            //ABCD.Add(obj);
+            obj.transform.GetChild(0).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
+            //obj.transform.GetChild(1).GetComponent<TEXDraw>().text = str[i].ToString();
+            ABCD.Add(obj);
+        }
+
+        //List<string> str = DataObj.options;
+        str = str.ShuffleList();
+        DataObj.options = str;
+
+        for (int i = 0; i < ABCD.Count; i++)
+        {
+            var likeName = DataObj.options[i];
+            ABCD[i].GetComponent<ButtonAnswer>().Pattern12 = this;
+
+            if (likeName.Contains('*'))
+            {
+                ABCD[i].GetComponent<ButtonAnswer>()._pattern = true;
+                likeName = likeName.Replace("[*]", "");
+            }
+            ABCD[i].GetComponent<ButtonAnswer>().WriteCurrentAnswer(likeName);
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
