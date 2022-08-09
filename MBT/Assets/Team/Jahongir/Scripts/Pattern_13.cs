@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pattern_13 : MonoBehaviour
+public class Pattern_13 : GeneralTest
 {
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
@@ -17,6 +17,10 @@ public class Pattern_13 : MonoBehaviour
     private int ResultNumber = 0;
     Data_13 Pattern_13Obj = new();
 
+    private void Awake()
+    {
+        TestManager.Instance.PassToNextClicked += Check;
+    }
     private void OnEnable()
     {
         if (_isTrue)
@@ -33,6 +37,12 @@ public class Pattern_13 : MonoBehaviour
             }
             ReadFromJson();
         }
+        DisplayQuestion(Pattern_13Obj.title);
+    }
+
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
     }
 
     public void ReadFromJson()
