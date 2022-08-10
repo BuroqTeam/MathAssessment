@@ -43,14 +43,6 @@ public class Pattern_3 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-            if (_jsonText != null)
-            {
-               
-            }
-            else
-            {
-                
-            }
             ReadFromJson();
             StartMetod();
         }          
