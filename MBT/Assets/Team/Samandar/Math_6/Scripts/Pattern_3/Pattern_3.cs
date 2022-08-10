@@ -43,14 +43,6 @@ public class Pattern_3 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-            if (_jsonText != null)
-            {
-               
-            }
-            else
-            {
-                
-            }
             ReadFromJson();
             StartMetod();
         }          
@@ -200,8 +192,19 @@ public class Pattern_3 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+        ActivateNextQestion();
+    }
 
-    }    
+
+
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
+    }
+
 }
 
 [SerializeField]

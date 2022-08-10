@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5085727252323486133}
   - component: {fileID: 5085727252323486132}
   - component: {fileID: 5085727252323486155}
+  - component: {fileID: 3381953311865981140}
   m_Layer: 5
   m_Name: Pattern_11
   m_TagString: Untagged
@@ -78,8 +79,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatternID: 11
   IsAvailable: 1
+  Event: {fileID: 11400000, guid: 1604a74512447ee4baddce6e6923b2d6, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
+--- !u!114 &3381953311865981140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085727252323486134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1604a74512447ee4baddce6e6923b2d6, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5085727252323486132}
+        m_TargetAssemblyTypeName: Pattern_11, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5085727252675868504
 GameObject:
   m_ObjectHideFlags: 0

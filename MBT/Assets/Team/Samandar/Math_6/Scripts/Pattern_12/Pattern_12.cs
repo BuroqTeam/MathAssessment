@@ -31,9 +31,9 @@ public class Pattern_12 : GeneralTest
         base.DisplayQuestion(questionStr);
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
-        Debug.Log("on");
+        
         if (_istrue)
         {
             _istrue = false;
@@ -47,10 +47,10 @@ public class Pattern_12 : GeneralTest
 
             }
             ReadFromJson();
-            
+
         }
         DisplayQuestion(DataObj.title);
-       
+
         for (char ci = 'A'; ci <= 'Z'; ++ci)
         {
             AlphabetList.Add(ci);
@@ -63,7 +63,7 @@ public class Pattern_12 : GeneralTest
             ABCD.Add(obj);
         }
 
-        
+
         str = str.ShuffleList();
         DataObj.options = str;
 
@@ -80,6 +80,8 @@ public class Pattern_12 : GeneralTest
             ABCD[i].GetComponent<ButtonAnswer>().WriteCurrentAnswer(likeName);
         }
     }
+
+    
     public void Check()
     {
         WrongAns = 0;

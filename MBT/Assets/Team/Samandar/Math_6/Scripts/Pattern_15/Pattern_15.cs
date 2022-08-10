@@ -16,7 +16,7 @@ public class Pattern_15 : GeneralTest
     public bool _istrue = true;
     public AnswerPattern_15 AnswerPattern_15;
     public bool _pattenBool;
-   
+    public bool _click;
 
     private void OnEnable()
     {
@@ -24,31 +24,22 @@ public class Pattern_15 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-
-            if (_jsonText != null)
-            {
-                Debug.Log(_jsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
             ReadFromJson();
             StartMetod();
+            PrefabsInstantiate();
         }
         
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
 
         DisplayQuestion(DataObj.title);
-
-        StartMetod();
+        
     }
     public void Check()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         AnswerPattern_15._PattenBool = _pattenBool;
-        if (_pattenBool)
+        if (_pattenBool == true && _click == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
             Debug.Log("Corrent");
@@ -58,7 +49,15 @@ public class Pattern_15 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
+        ActivateNextQestion();
+    }
 
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
     public void ReadFromJson()
     {
@@ -71,13 +70,12 @@ public class Pattern_15 : GeneralTest
     {
         List<string> problem1 = DataObj.problem;
         Problem.transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[0];
-        PrefabsInstantiate();
-
+        
     }
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr);
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
 
     void PrefabsInstantiate()
@@ -85,6 +83,7 @@ public class Pattern_15 : GeneralTest
         List<string> solution1 = DataObj.solution;
         for (int i = 0; i < solution1.Count; i++)
         {
+            
             GameObject obj = Instantiate(ConsiderationsPrefabs, Solution.transform);
             buttonGroup.Add(obj.GetComponent<Button>());
             var likeName = DataObj.solution[i];

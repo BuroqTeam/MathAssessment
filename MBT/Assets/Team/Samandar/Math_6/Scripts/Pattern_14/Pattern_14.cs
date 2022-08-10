@@ -14,7 +14,7 @@ public class Pattern_14 : GeneralTest
     public List<Button> buttonGroup = new();
     public ColorCollectionSO colorCollection;
     public AnswerPattern_14 AnswerPattern_14;
-    
+    public bool _click;
    
     public bool _pattenBool;
     public bool _istrue = true;
@@ -23,8 +23,8 @@ public class Pattern_14 : GeneralTest
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        AnswerPattern_14._PattenBool = _pattenBool;
-        if (_pattenBool)
+        //AnswerPattern_14._PattenBool = _pattenBool;
+        if (_pattenBool == true && _click == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
             Debug.Log("Corrent");
@@ -34,7 +34,14 @@ public class Pattern_14 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
-        
+        ActivateNextQestion();
+    }
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
     private void OnEnable()
     {
@@ -42,16 +49,8 @@ public class Pattern_14 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-
-            if (_jsonText != null)
-            {
-                
-            }
-            else
-            {
-                
-            }
             ReadFromJson();
+            PrefabsInstantiate();
             StartMetod();
         }
         
@@ -70,7 +69,7 @@ public class Pattern_14 : GeneralTest
     {
         List<string> problem1 = DataObj.problem;
         Problem.transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[0];
-        PrefabsInstantiate();
+        
 
     }
 

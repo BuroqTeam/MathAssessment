@@ -21,20 +21,7 @@ public class Pattern_11 : GeneralTest
     public List<string> Correct;
     public List<string> ReverseCorrect;
     public bool _istrue = true;
-    private void Awake()
-    {
-       
-
-        //Mbt.SaveJsonPath("Pattern_11", 1, 60);
-
-        //ES3.Save<string>("LanguageKey", "Uzb");
-
-        //ES3.Save<int>("ClassKey", 6);
-
-        ////jsonText = Mbt.GetDesiredJSONData(DataBases);
-
-        //ReadFromJson();
-    }
+   
 
     private void OnEnable()
     {
@@ -42,14 +29,6 @@ public class Pattern_11 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-            if (_jsonText != null)
-            {
-
-            }
-            else
-            {
-
-            }
             ReadFromJson();
             StartMetod();
         }
@@ -175,6 +154,14 @@ public class Pattern_11 : GeneralTest
         {
             Debug.Log("natogri");
         }
+        ActivateNextQestion();
+    }
+    void ActivateNextQestion()
+    {
+        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+        index++;
+        TestManager.Instance.ActivePatterns[index].SetActive(true);
+        gameObject.SetActive(false);
     }
 }
 

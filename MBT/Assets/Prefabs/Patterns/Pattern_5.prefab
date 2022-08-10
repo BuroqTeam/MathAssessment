@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 1054830850402449382}
   - component: {fileID: 3733999160369522968}
   - component: {fileID: 4533874504173643612}
+  - component: {fileID: -4705562963074542790}
   m_Layer: 5
   m_Name: Pattern_5
   m_TagString: Untagged
@@ -745,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dcda7e87e5b6c9469d4300e1fd1ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentJsonText: {fileID: 0}
+  QuestionText: {fileID: 0}
   Numbers: []
   Boxs: []
   EmptyPositions: []
@@ -765,6 +766,7 @@ MonoBehaviour:
   NumPrefab: {fileID: 7165401411475678602, guid: 49a558fd401b5c84686a184fed1ad15e, type: 3}
   NumberBoxPrefab: {fileID: 2774379303303097442, guid: 302391a5fac406243a035b6c4b2f0708, type: 3}
   ParentForPos: {fileID: 5513294462543908350}
+  CurrentAnswerStatus: 0
 --- !u!114 &4533874504173643612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,8 +781,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatternID: 5
   IsAvailable: 1
+  Event: {fileID: 11400000, guid: 41d1801e93049194d90914bc2a8ffa71, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
+--- !u!114 &-4705562963074542790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590337405834323471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 41d1801e93049194d90914bc2a8ffa71, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3733999160369522968}
+        m_TargetAssemblyTypeName: Pattern_5, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6614386767732934808
 GameObject:
   m_ObjectHideFlags: 0

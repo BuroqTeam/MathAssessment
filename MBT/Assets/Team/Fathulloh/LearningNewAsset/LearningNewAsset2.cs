@@ -5,7 +5,8 @@ using UnityEngine;
 public class LearningNewAsset2 : MonoBehaviour
 {
     public GameObject SpriteObj;
-    //public GameObject CanvasObj;
+    public GameObject CanvasObj;
+
     void Start()
     {
         
@@ -15,7 +16,7 @@ public class LearningNewAsset2 : MonoBehaviour
     public void LoadGameObject()
     {
         GameObject gameObje = ES3.Load("GameObjectSave_F", SpriteObj);
-        gameObje.transform.SetParent(this.transform);
+        gameObje.transform.SetParent(CanvasObj.transform);
         Debug.Log("GameObject is loaded.");
     }
 
