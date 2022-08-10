@@ -7,7 +7,7 @@ public class AnswerPattern_14 : MonoBehaviour
     public bool _PattenBool;
     Button button;
     public ColorCollectionSO colorCollection;
-
+    public bool _Click = false;
     void Start()
     {
         button = GetComponent<Button>();
@@ -60,18 +60,13 @@ public class AnswerPattern_14 : MonoBehaviour
                     btn.transform.GetChild(0).GetComponent<TEXDraw>().color = colorCollection.Green;
                 }
             }
+            
         }       
     }
     public void Check()
     {
-        if (_PattenBool)
-        {
-            Debug.Log("Corrent");
-        }
-        else
-        {
-            Debug.Log("Wrong");
-        }
-
+        _Click = true;
+        Pattern14._click = _Click;
+        Pattern14._pattenBool = _PattenBool;
     }
 }

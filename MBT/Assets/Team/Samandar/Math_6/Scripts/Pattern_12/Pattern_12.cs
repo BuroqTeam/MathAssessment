@@ -33,7 +33,7 @@ public class Pattern_12 : GeneralTest
 
     private void OnEnable()
     {
-        Debug.Log("on");
+        
         if (_istrue)
         {
             _istrue = false;
