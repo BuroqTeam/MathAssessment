@@ -24,6 +24,11 @@ public class SceneManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
     }
 
+    public void LoadCustonScene(string name)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(name);
+    }
+
     public void LoadSubjectScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Subject");

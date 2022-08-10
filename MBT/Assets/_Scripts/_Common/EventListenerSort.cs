@@ -32,10 +32,11 @@ public class EventListenerSort : MonoBehaviour
             if (obj.activeSelf)
             {
                 GameEvents[k].Raise();
+                break;
             }
             k++;
         }
-
+        
     }
 
 
