@@ -13,6 +13,7 @@ public class CircleButton : MonoBehaviour
     Button btn;
     public Sprite[] sprites;
     public List<Button> buttonList = new();
+    public bool isActive;
 
 
     private void Awake()
@@ -44,6 +45,7 @@ public class CircleButton : MonoBehaviour
     {
         buttonList = _parent.transform.GetComponentsInChildren<Button>().ToList();
         TestManager.Instance.ActiveNumber.text = "1/" + buttonList.Count.ToString();
+        _parent.GetComponent<QuestionOrderManager>().CircleButtons = new List<Button>(buttonList);
     }
 
 
@@ -71,10 +73,22 @@ public class CircleButton : MonoBehaviour
         
         GetComponent<Image>().sprite = sprites[0];
         transform.GetChild(0).GetComponent<Image>().sprite = sprites[2];
+        foreach (Button item in buttonList)
+        {
+            if (item == btn)
+            {
+                item.GetComponent<CircleButton>().isActive = true;
+            }
+            else
+            {
+                item.GetComponent<CircleButton>().isActive = false;
+            }            
+        }
     }
 
     public void DeActive()
     {
+        isActive = false;
         GetComponent<Image>().sprite = null;
         transform.GetChild(0).GetComponent<Image>().sprite = sprites[3];
     }
