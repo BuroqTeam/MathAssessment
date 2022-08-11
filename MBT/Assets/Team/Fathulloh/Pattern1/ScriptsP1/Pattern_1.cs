@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Pattern_1 : GeneralTest
 {
+    public GameEvent ActiveNext;    
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
 
@@ -36,18 +37,18 @@ public class Pattern_1 : GeneralTest
     }
 
 
-    private void Awake()
-    {
-        //TestManager.Instance.PassToNextClicked += Check;
+    //private void Awake()
+    //{
+    //    //TestManager.Instance.PassToNextClicked += Check;
 
-        //Mbt.SaveJsonPath("Pattern_1", 7, 7);
-        //ES3.Save<string>("LanguageKey", "Uzb");
-        //ES3.Save<int>("ClassKey", 6);
-        ////JsonCollectionSO.DataBase.Clear();
-        ////CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+    //    //Mbt.SaveJsonPath("Pattern_1", 7, 7);
+    //    //ES3.Save<string>("LanguageKey", "Uzb");
+    //    //ES3.Save<int>("ClassKey", 6);
+    //    ////JsonCollectionSO.DataBase.Clear();
+    //    ////CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
 
-        //ReadFromJson();
-    }
+    //    //ReadFromJson();
+    //}
 
 
     public void ReadFromJson()
@@ -171,7 +172,18 @@ public class Pattern_1 : GeneralTest
     }
 
 
+
+    bool _IsActiveButton = true;
     
+
+    public void ActeveteButton()
+    {
+        if (_IsActiveButton)
+        {
+            ActiveNext.Raise();
+            _IsActiveButton = false;
+        }
+    }
 
 
 }

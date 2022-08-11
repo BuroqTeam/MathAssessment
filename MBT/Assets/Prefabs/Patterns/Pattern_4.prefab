@@ -371,6 +371,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   PicturePrefab: {fileID: 6769031063644269278, guid: 1bbec0ca5e8926a46acaff2102b63427, type: 3}
   MainObjs:

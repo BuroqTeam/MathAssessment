@@ -5,7 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pattern_5 : GeneralTest
-{      
+{
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
+
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;    
 
@@ -38,15 +41,15 @@ public class Pattern_5 : GeneralTest
     }
 
 
-    private void Awake()
-    {
-        //TestManager.Instance.PassToNextClicked += Check;
+    //private void Awake()
+    //{
+    //    //TestManager.Instance.PassToNextClicked += Check;
 
-        //Mbt.SaveJsonPath("Pattern_5", 0, 40);
-        //ES3.Save<string>("LanguageKey", "Uzb");
-        //ES3.Save<int>("ClassKey", 6);
-        //ReadFromJson();
-    }
+    //    //Mbt.SaveJsonPath("Pattern_5", 0, 40);
+    //    //ES3.Save<string>("LanguageKey", "Uzb");
+    //    //ES3.Save<int>("ClassKey", 6);
+    //    //ReadFromJson();
+    //}
 
 
     public override void DisplayQuestion(string questionStr)
@@ -161,10 +164,10 @@ public class Pattern_5 : GeneralTest
             if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)            
                 FullPositions++;            
         }
-
         //Debug.Log(fullPositions);
         if (FullPositions == EmptyPositions.Count)
         {
+            ActiveNext.Raise();
             if (TotalCorrectAns == numbers)
             {
                 CurrentAnswerStatus = true;
@@ -174,8 +177,11 @@ public class Pattern_5 : GeneralTest
                 Debug.Log(TotalCorrectAns + " You are fall. ");
         }
         else
+        {
             CurrentAnswerStatus = false;
-
+            DeactiveNext.Raise();
+        }
+            
     }
 
 
