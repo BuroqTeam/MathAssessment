@@ -46,12 +46,14 @@ public class PushableRectangle : MonoBehaviour, IDragHandler, IBeginDragHandler,
             _lastPos.GetComponent<PushableShadow>()._IsEmpty = true;
             _lastPos = null;
         }
+       
 
     }
     
     public void OnEndDrag(PointerEventData eventData)
     {
         Check();
+        Pattern11.OnTrue();
     }
 
     public void OnDrag(PointerEventData eventData)

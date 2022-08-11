@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Pattern_3 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     private TextAsset _jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
@@ -29,14 +31,27 @@ public class Pattern_3 : GeneralTest
     Data_3 DataObj = new();
 
     public bool _istrue = true;
-
-    //private void Awake()
-    //{
-        
-        
-    //}
-
-   
+    int n;
+    public void OnTrue()
+    {
+        List<string> problem1 = DataObj.problem;
+        for (int i = 0; i < problem1.Count; i++)
+        {
+            bool _onTrue = NumberInstantiate[i].GetComponent<NumberArea>()._IsEmpty;
+            if (!_onTrue)
+            {
+                n++;
+            }
+            if (n == problem1.Count)
+            {
+                ActiveNext.Raise();
+            }
+            else
+            {
+                DeactiveNext.Raise();
+            }
+        }
+    }
     private void OnEnable()
     {
         if (_istrue)

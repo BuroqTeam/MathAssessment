@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Pattern_12 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     private TextAsset _jsonText;
     public Data_12 DataObj;
     public GameObject Answers;
@@ -17,7 +19,7 @@ public class Pattern_12 : GeneralTest
     public ButtonAnswer buttonAnswer;
     public bool _istrue = true;
     public int WrongAns;
-
+    int n;
     
     public void ReadFromJson()
     {
@@ -29,6 +31,27 @@ public class Pattern_12 : GeneralTest
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
+    }
+
+    public void OnTrue()
+    {
+        List<string> str = DataObj.options;
+        for (int i = 0; i < str.Count; i++)
+        {
+            bool _onTrue = ABCD[i].GetComponent<ButtonAnswer>()._isTrue;
+            if (_onTrue)
+            {
+                n++;
+            }
+        }
+        if (n > 0)
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
     }
 
     private void OnEnable()

@@ -35,6 +35,7 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
     public void OnEndDrag(PointerEventData eventData)
     {        
         Check();
+        Pattern3.OnTrue();
     }
 
     public void OnDrag(PointerEventData eventData)

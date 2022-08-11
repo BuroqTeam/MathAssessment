@@ -198,6 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   Problem: {fileID: 1026507422694556708}
   Solution: {fileID: 1026507421238151610}
   ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: be8a93c84984fdf4094ce00a40fb0d55, type: 3}
@@ -206,6 +208,7 @@ MonoBehaviour:
   _istrue: 1
   AnswerPattern_15: {fileID: 6760567874798640029, guid: be8a93c84984fdf4094ce00a40fb0d55, type: 3}
   _pattenBool: 0
+  _click: 0
 --- !u!114 &1026507422495226350
 MonoBehaviour:
   m_ObjectHideFlags: 0
