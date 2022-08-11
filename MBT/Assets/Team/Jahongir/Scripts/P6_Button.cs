@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class P6_Button : MonoBehaviour
 {
     public TEXDraw Answer;
+    public Pattern_6 Pattern6;
     public void InputAnswer()
     {
         if (Answer.text.Length <17)
@@ -13,9 +14,25 @@ public class P6_Button : MonoBehaviour
             Answer.text = Answer.text.Insert(Answer.text.Length, transform.GetChild(0).GetComponent<TEXDraw>().text);
             Debug.Log(Answer.text);
         }
+        if (Answer.text != null)
+        {
+            Pattern6.ActNext.Raise();
+        }
+        else
+        {
+            Pattern6.DeactNext.Raise();
+        }
     }
     public void DeleteAnswer()
     {
         Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
+        if (Answer.text != null)
+        {
+            Pattern6.ActNext.Raise();
+        }
+        else
+        {
+            Pattern6.DeactNext.Raise();
+        }
     }
 }

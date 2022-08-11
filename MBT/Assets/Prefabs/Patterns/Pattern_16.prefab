@@ -455,8 +455,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3882215253510736226}
-  - component: {fileID: 7096873827978170845}
   - component: {fileID: 7096873827978170844}
+  - component: {fileID: 7096873827978170845}
   - component: {fileID: 3156335056034666093}
   m_Layer: 5
   m_Name: Pattern_16
@@ -487,6 +487,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7096873827978170844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713893532001686252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaa56d70f2af884f875026799e9df62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
+  ActNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
+  ExistentPrefabs:
+  - {fileID: 1680043921934407501, guid: 6d633b04c8712104f88a2b8eff819619, type: 3}
+  - {fileID: 5814623974021809528, guid: 3a28823d7b1eec94a88a816f3653f5f1, type: 3}
+  - {fileID: 6196575999364750574, guid: c606f6078243ad8429d20f0b6cec3b7c, type: 3}
+  - {fileID: 4497186624016799658, guid: 5bd14b71b1279e74d9cc69fe5785a88d, type: 3}
+  - {fileID: 5085513404995058773, guid: bc200eaf6f0e4f249bad7df91e98e204, type: 3}
+  _prefabsIndex: 
 --- !u!114 &7096873827978170845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,27 +526,6 @@ MonoBehaviour:
   Event: {fileID: 11400000, guid: c52e4e2f794de304588b8c718e359780, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
---- !u!114 &7096873827978170844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3713893532001686252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aaa56d70f2af884f875026799e9df62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestionText: {fileID: 0}
-  ExistentPrefabs:
-  - {fileID: 1680043921934407501, guid: 6d633b04c8712104f88a2b8eff819619, type: 3}
-  - {fileID: 5814623974021809528, guid: 3a28823d7b1eec94a88a816f3653f5f1, type: 3}
-  - {fileID: 6196575999364750574, guid: c606f6078243ad8429d20f0b6cec3b7c, type: 3}
-  - {fileID: 4497186624016799658, guid: 5bd14b71b1279e74d9cc69fe5785a88d, type: 3}
-  - {fileID: 5085513404995058773, guid: bc200eaf6f0e4f249bad7df91e98e204, type: 3}
-  _currentJsonText: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
-  _prefabsIndex: 
 --- !u!114 &3156335056034666093
 MonoBehaviour:
   m_ObjectHideFlags: 0

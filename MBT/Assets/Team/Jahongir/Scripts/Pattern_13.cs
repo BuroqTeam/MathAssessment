@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Pattern_13 : GeneralTest
 {
+    public GameEvent ActNext;
+    public GameEvent DeactNext;
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
     private TextAsset _currentJsonText;
@@ -86,6 +88,18 @@ public class Pattern_13 : GeneralTest
         else
         {
             Debug.Log("Wrong");
+        }
+    }
+
+    public void CheckButton()
+    {
+        if (ResultNumber == QuestionPuzles.Count)
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
         }
     }
     public void Check()
