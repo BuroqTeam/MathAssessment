@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Pattern_14 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     private TextAsset _jsonText;
     public GameObject Problem;
     public Data_14 DataObj;
@@ -56,7 +58,15 @@ public class Pattern_14 : GeneralTest
         
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
         DisplayQuestion(DataObj.title);
+                
+    }
 
+    public void Active()
+    {
+        if (_istrue)
+        {
+            ActiveNext.Raise();
+        }
     }
     public void ReadFromJson()
     {

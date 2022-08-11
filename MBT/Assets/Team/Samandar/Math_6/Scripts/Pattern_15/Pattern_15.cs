@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Pattern_15 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     private TextAsset _jsonText;
     public GameObject Problem;
     public Data_15 DataObj;
@@ -51,7 +53,13 @@ public class Pattern_15 : GeneralTest
         }
         ActivateNextQestion();
     }
-
+    public void Active()
+    {
+        if (_istrue)
+        {
+            ActiveNext.Raise();
+        }
+    }
     void ActivateNextQestion()
     {
         int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);

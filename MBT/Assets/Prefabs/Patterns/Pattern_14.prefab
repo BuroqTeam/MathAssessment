@@ -198,12 +198,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   Problem: {fileID: 1026507422694556708}
   Solution: {fileID: 1026507421238151610}
   ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
   buttonGroup: []
   colorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
   AnswerPattern_14: {fileID: 8913990965073167448, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
+  _click: 0
   _pattenBool: 0
   _istrue: 1
 --- !u!114 &1026507422495226350

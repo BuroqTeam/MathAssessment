@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Pattern_11 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     public GameObject PushableShadow;
     public GameObject PushableRectangle;
     public GameObject PanelLeft;
@@ -21,7 +23,7 @@ public class Pattern_11 : GeneralTest
     public List<string> Correct;
     public List<string> ReverseCorrect;
     public bool _istrue = true;
-   
+    int n;
 
     private void OnEnable()
     {
@@ -44,7 +46,28 @@ public class Pattern_11 : GeneralTest
     {
         base.DisplayQuestion(questionStr);
     }
+    public void OnTrue()
+    {
+        n = 0;
+        List<string> str = DataObj.options;
+        for (int i = 0; i < str.Count; i++)
+        {
+            bool _onTrue = LeftList[i].GetComponent<PushableShadow>()._IsEmpty;
+            if (!_onTrue)
+            {
+                n++;
+            }
+        }
 
+        if (n == str.Count)
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
+    }
 
     void StartMetod()
     {
@@ -63,7 +86,6 @@ public class Pattern_11 : GeneralTest
                 if (likeName.Contains(strAlphabet))
                 {
                     Correct.Add(DataObj.options[j]);
-                    //Debug.Log(AlphabetList[i] + " " + DataObj.options[j]);
                     break;
                 }
             }
