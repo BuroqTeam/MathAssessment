@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class DropDownP9 : MonoBehaviour
 {
+    public Pattern_9 Pattern9;
     public string AddressToTerm;
 
     public List<string> StrList /*= new List<string>() { "Tanlang", ">", "<", "=" }*/;
@@ -73,6 +74,8 @@ public class DropDownP9 : MonoBehaviour
         else if (CurrentAnswer != CorrectAnswer)        {
             Debug.Log("Noto'g'ri javob tanlandi.");
         }
+
+        Pattern9.CheckAllAnswers();
     }
 
         

@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class Pattern_9 : GeneralTest
 {
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
+
     private TextAsset _currentJsonText;
 
     public GameObject ParentComparisonPrefab;
@@ -34,18 +37,18 @@ public class Pattern_9 : GeneralTest
     }
 
 
-    private void Awake()
-    {   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
-        //TestManager.Instance.PassToNextClicked += Check;
+    //private void Awake()
+    //{   // 4-bob 40-49    7-bob 50-59(49, 58),      8-bob 50-59
+    //    //TestManager.Instance.PassToNextClicked += Check;
 
-        //Mbt.SaveJsonPath("Pattern_9",8, 55);
-        //ES3.Save<string>("LanguageKey", "Uzb");
-        //ES3.Save<int>("ClassKey", 6);
+    //    //Mbt.SaveJsonPath("Pattern_9",8, 55);
+    //    //ES3.Save<string>("LanguageKey", "Uzb");
+    //    //ES3.Save<int>("ClassKey", 6);
 
-        //JsonCollectionSO.DataBase.Clear();
-        //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
-        //ReadFromJson();
-    }
+    //    //JsonCollectionSO.DataBase.Clear();
+    //    //CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
+    //    //ReadFromJson();
+    //}
 
 
 
@@ -68,7 +71,6 @@ public class Pattern_9 : GeneralTest
     {
         //QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //-
         int optionsCount = Pattern_9Obj.options.Count;
-
         /*Pattern_9Obj.options = */Pattern_9Obj.options.ShuffleList();
 
         xDistance = ParentComparisonPrefab.transform.GetChild(1).position.x - ParentComparisonPrefab.transform.GetChild(0).position.x ;
@@ -97,6 +99,7 @@ public class Pattern_9 : GeneralTest
         {
             ComparisonObjects[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_9Obj.options[i].left;
             ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CorrectAnswer = Pattern_9Obj.options[i].sign.ToString();
+            ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().Pattern9 = this;
             ComparisonObjects[i].transform.GetChild(2).transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_9Obj.options[i].right;
         }
     }
@@ -131,7 +134,7 @@ public class Pattern_9 : GeneralTest
 
 
     public bool CurrentAnswerStatus;
-
+    int correctCount;
     public void CheckAllAnswers()
     {
         int n = Pattern_9Obj.options.Count;
@@ -161,6 +164,26 @@ public class Pattern_9 : GeneralTest
             CurrentAnswerStatus = false;
         }
 
+        correctCount = 0;
+        for (int i = 0; i < Pattern_9Obj.options.Count; i++)
+        {
+            string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer;
+            if (currentAnswer.Length == 1)
+            {
+                correctCount++;
+            }
+        }
+
+        if (correctCount == Pattern_9Obj.options.Count)
+        {
+            ActiveNext.Raise();
+            Debug.Log("ActiveNext.Raise()");
+        }
+        else
+        {
+            DeactiveNext.Raise();
+            Debug.Log("DeactiveNext.Raise()");
+        }
     }
 
 
