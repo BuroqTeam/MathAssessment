@@ -7,6 +7,7 @@ public class P2_ButtonControl : MonoBehaviour
 {
     public bool CorrectAnswer;
     public bool Select;
+    public Pattern_2 Pattern2;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,6 @@ public class P2_ButtonControl : MonoBehaviour
             transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(255, 255, 255, 255);
             Select = true;
         }
+        Pattern2.CheckButton();
     }
 }

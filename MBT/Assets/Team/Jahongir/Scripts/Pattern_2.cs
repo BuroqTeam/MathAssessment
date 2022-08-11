@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Pattern_2 : GeneralTest
 {
+    public GameEvent ActNext;
+    public GameEvent DeactNext;
     public GameObject Button;
     private TextAsset _currentJsonText;
     private int CorrectAnswerNumber = 0;
@@ -49,6 +51,7 @@ public class Pattern_2 : GeneralTest
                     GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
+                    button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     Buttons.Add(button);
                 }
                 else
@@ -56,6 +59,7 @@ public class Pattern_2 : GeneralTest
                     GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - w) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
+                    button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     w++;
                     Buttons.Add(button);
                 }
@@ -71,6 +75,7 @@ public class Pattern_2 : GeneralTest
                     GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + i) * 200, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
+                    button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     Buttons.Add(button);
                 }
                 else
@@ -78,6 +83,7 @@ public class Pattern_2 : GeneralTest
                     GameObject button = Instantiate(Button, transform);
                     button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + q) * 200, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
+                    button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     q++;
                     Buttons.Add(button);
                 }
@@ -114,6 +120,25 @@ public class Pattern_2 : GeneralTest
             CorrectAnswerNumber = 0;
             SelectAnswerNumber = 0;
             ResultNumber = 0;
+        }
+    }
+    public void CheckButton()
+    {
+        int a = 0;
+        for (int i = 0; i < Buttons.Count; i++)
+        {
+            if (Buttons[i].GetComponent<P2_ButtonControl>().Select)
+            {
+                a++;
+            }
+        }
+        if (a>0)
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
         }
     }
     public void Check()

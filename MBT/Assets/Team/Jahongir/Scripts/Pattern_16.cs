@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Pattern_16 : GeneralTest
 {
+    public GameEvent ActNext;
+    public GameEvent DeactNext;
     public List<GameObject> ExistentPrefabs = new();
     public List<int> _prefabsIndex;
     private TextAsset _currentJsonText;
@@ -126,6 +128,27 @@ public class Pattern_16 : GeneralTest
         {
             Debug.Log("Wrong");
         }
+    }
+
+    public void CheckButton()
+    {
+        int b = 0;
+        for (int i = 0; i < transform.GetChild(1).GetChild(4).GetChild(0).childCount; i++)
+        {
+            if (transform.GetChild(1).GetChild(4).GetChild(0).GetChild(i).GetComponent<P16_ButtonController>().Select == true)
+            {
+                b++;
+            }
+        }
+        if (b>0)
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
+        }
+
     }
 
     public void Check()

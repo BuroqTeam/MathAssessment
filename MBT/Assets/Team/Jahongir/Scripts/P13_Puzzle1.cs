@@ -47,5 +47,6 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             transform.GetChild(1).transform.DOScale(1, 0);
         }
         _selectedAnswerId = -1;
+        Pattern13.CheckButton();
     }
 }

@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683841663027600
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683841727641195
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683841765778380
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
 --- !u!114 &7513563674467180095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842030346373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842315538329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842515876292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842602545370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842767628184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,6 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842793564101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,6 +2281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842846800516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,6 +2523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842933346915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683842981858105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,6 +3007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
+  Pattern6: {fileID: 2407683841824365297}
 --- !u!1 &2407683843165425119
 GameObject:
   m_ObjectHideFlags: 0
