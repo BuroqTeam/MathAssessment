@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class EventListenerSort : MonoBehaviour
 {
+    [HideInInspector]
     public List<GameEvent> GameEvents = new();
 
     public Button NextButton;

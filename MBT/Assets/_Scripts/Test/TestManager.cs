@@ -1,31 +1,23 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TestManager : MonoBehaviour
 {
     public TEXDraw ActiveNumber;
     public TEXDraw Number;
-    public GameObject CircleParent;
-    public GameObject CirclePrefab;
-    public Button NextButton;
     public TEXDraw QuestionText;
     public GameObject PatternParent;       
     public PatternSO[] PatternGroup;
     public DataBaseSO[] Group;
-   
-
-    [HideInInspector]
-    public List<Button> CircleButtons = new();
-
+  
     protected PatternSO PatternSO;
     protected DataBaseSO JsonCollectionSO;
 
-    [HideInInspector]
+
     public List<GameObject> ActivePatterns = new();
     private TextAsset _curentJson;
     private int _numberOfQuestions;
@@ -36,15 +28,22 @@ public class TestManager : MonoBehaviour
 
 
     public static TestManager Instance;
-    
+    public UnityEvent CircleEvent;
 
     private void Awake()
     {
-        SetSaveManagerValues();
         Instance = this;
-       
+    }
+
+
+    private void Start()
+    {
+        SetSaveManagerValues();
+        
+
         GetComponent<GeneralTest>().QuestionText = QuestionText;
-        GetData();       
+        GetData();
+
     }
 
     void GetData()
@@ -121,15 +120,7 @@ public class TestManager : MonoBehaviour
                         obj.transform.localScale = Vector3.one;
                         obj.SetActive(false);
                         StreatchObj(obj);
-                        ActivePatterns.Add(obj);
-
-                        GameObject circleButton = Instantiate(CirclePrefab, CircleParent.transform);
-                        circleButton.GetComponent<CircleButton>().NumberText = Number;
-                        circleButton.GetComponent<CircleButton>().Number = questionNum + 1;
-                        circleButton.transform.SetParent(CircleParent.transform);
-                        circleButton.transform.localScale = Vector3.one;
-                        circleButton.GetComponent<CircleButton>().InitialCondition(questionNum, CircleParent);
-                        CircleButtons.Add(circleButton.GetComponent<Button>());                        
+                        ActivePatterns.Add(obj);    
                         questionNum++;                        
                     }                    
                     index++;
@@ -137,7 +128,7 @@ public class TestManager : MonoBehaviour
             }
         }        
         ActivePatterns[0].SetActive(true);
-        SetCircles();
+        CircleEvent.Invoke();
     }
 
     void StreatchObj(GameObject obj)
@@ -149,15 +140,7 @@ public class TestManager : MonoBehaviour
         obj.GetComponent<RectTransform>().offsetMax = new(0, 0);
     }
 
-    void SetCircles()
-    {
-        foreach (Button btn in CircleButtons)
-        {
-            btn.GetComponent<CircleButton>().CollectCircles();
-        }
-    }
-
-   
+  
 
     void SetSaveManagerValues()
     {
@@ -169,21 +152,9 @@ public class TestManager : MonoBehaviour
         ES3.Save<List<bool>>("ResultList", resultList);
     }
 
-    public void ActiveDesiredPattern(int desiredIndex)
-    {
-        for (int i = 0; i < ActivePatterns.Count; i++)
-        {
-            if (i.Equals(desiredIndex))
-            {
-                ActivePatterns[i].SetActive(true);
-            }
-            else
-            {
-                ActivePatterns[i].SetActive(false);
-            }            
-        }
-    }
     
+
+
 
 
 }
