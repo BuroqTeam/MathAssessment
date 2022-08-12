@@ -19,7 +19,8 @@ public class CheckButton : MonoBehaviour
 	void TaskOnClick()
 	{
 		GameManager.Instance.CurrentCircleObj.IsDone = true;
-		GameManager.Instance.UpdateTestView(GameManager.Instance.CurrentQuestionNumber+1, true);
+		Debug.Log(GameManager.Instance.CurrentQuestionNumber);
+		GameManager.Instance.UpdateTestView(GameManager.Instance.CurrentQuestionNumber+1, false);
 		DeactiveCheckEvent.Raise();
 
 	}
