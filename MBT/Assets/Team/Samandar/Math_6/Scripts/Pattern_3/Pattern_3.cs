@@ -34,6 +34,7 @@ public class Pattern_3 : GeneralTest
     int n;
     public void OnTrue()
     {
+        n = 0;
         List<string> problem1 = DataObj.problem;
         for (int i = 0; i < problem1.Count; i++)
         {
@@ -42,14 +43,14 @@ public class Pattern_3 : GeneralTest
             {
                 n++;
             }
-            if (n == problem1.Count)
-            {
-                ActiveNext.Raise();
-            }
-            else
-            {
-                DeactiveNext.Raise();
-            }
+        }
+        if (n == problem1.Count)
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
         }
     }
     private void OnEnable()

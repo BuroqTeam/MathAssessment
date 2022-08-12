@@ -35,6 +35,7 @@ public class Pattern_12 : GeneralTest
 
     public void OnTrue()
     {
+        n = 0;
         List<string> str = DataObj.options;
         for (int i = 0; i < str.Count; i++)
         {
@@ -48,7 +49,7 @@ public class Pattern_12 : GeneralTest
         {
             ActiveNext.Raise();
         }
-        else
+        else if (n == 0)
         {
             DeactiveNext.Raise();
         }
