@@ -188,15 +188,9 @@ public class Pattern_11 : GeneralTest
         }
         ES3.Save("myList", currentList);
         ES3.Save<bool>("Pattern_11", true);
-        ActivateNextQestion();
+       
     }
-    void ActivateNextQestion()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
-    }
+    
 }
 
 [SerializeField]
