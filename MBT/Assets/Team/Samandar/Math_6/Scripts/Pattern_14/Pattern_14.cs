@@ -36,6 +36,8 @@ public class Pattern_14 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
+        ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_14", true);
         ActivateNextQestion();
     }
     void ActivateNextQestion()
@@ -47,6 +49,14 @@ public class Pattern_14 : GeneralTest
     }
     private void OnEnable()
     {
+        if (ES3.Load<bool>("Pattern_14"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
         if (_istrue)
         {
             _istrue = false;

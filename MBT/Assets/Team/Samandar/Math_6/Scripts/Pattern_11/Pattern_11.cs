@@ -27,6 +27,14 @@ public class Pattern_11 : GeneralTest
 
     private void OnEnable()
     {
+        if (ES3.Load<bool>("Pattern_11"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
         if (_istrue)
         {
             _istrue = false;
@@ -143,6 +151,8 @@ public class Pattern_11 : GeneralTest
     //Correct = Rever
     public void Check()
     {
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
         for (int i = 0; i < Correct.Count; i++)
         {
 
@@ -176,6 +186,8 @@ public class Pattern_11 : GeneralTest
         {
             Debug.Log("natogri");
         }
+        ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_11", true);
         ActivateNextQestion();
     }
     void ActivateNextQestion()
