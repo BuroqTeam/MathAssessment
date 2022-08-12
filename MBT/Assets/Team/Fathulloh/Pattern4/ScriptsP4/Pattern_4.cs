@@ -199,17 +199,17 @@ public class Pattern_4 : GeneralTest
 
         ES3.Save<bool>("Pattern_4", true);
 
-        ActivateNext();
+        //ActivateNext();
     }
 
 
-    void ActivateNext()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
-    }
+    //void ActivateNext()
+    //{
+    //    int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+    //    index++;
+    //    TestManager.Instance.ActivePatterns[index].SetActive(true);
+    //    gameObject.SetActive(false);
+    //}
 
 
     int correctCount;

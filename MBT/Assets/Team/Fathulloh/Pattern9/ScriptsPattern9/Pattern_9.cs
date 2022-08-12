@@ -129,17 +129,17 @@ public class Pattern_9 : GeneralTest
 
         ES3.Save<bool>("Pattern_9", true);
 
-        ActivateNext();
+        //ActivateNext();
     }
 
 
-    void ActivateNext()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
-    }
+    //void ActivateNext()
+    //{
+    //    int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
+    //    index++;
+    //    TestManager.Instance.ActivePatterns[index].SetActive(true);
+    //    gameObject.SetActive(false);
+    //}
 
 
     public bool CurrentAnswerStatus;
