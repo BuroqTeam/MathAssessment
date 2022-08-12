@@ -20,6 +20,14 @@ public class Pattern_6 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_6Obj.title);
+        if (ES3.Load<bool>("Pattern_6"))
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
+        }
     }
     public override void DisplayQuestion(string questionStr)
     {
@@ -54,6 +62,7 @@ public class Pattern_6 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_6", true);
         ActivateNext();
     }
     void ActivateNext()

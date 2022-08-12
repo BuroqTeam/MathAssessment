@@ -29,6 +29,14 @@ public class Pattern_13 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_13Obj.title);
+        if (ES3.Load<bool>("Pattern_13"))
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
+        }
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -116,6 +124,7 @@ public class Pattern_13 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_13", true);
         ActivateNext();
     }
     void ActivateNext()

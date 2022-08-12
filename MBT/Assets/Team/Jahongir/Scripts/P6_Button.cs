@@ -29,18 +29,15 @@ public class P6_Button : MonoBehaviour
         {
             Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
         }
-        else
+        if (Answer.text.Length == 0)
         {
             Pattern6.DeactNext.Raise();
+            Debug.Log("O‘chdi");
         }
-        
-        if (Answer.text != null)
+        else
         {
             Pattern6.ActNext.Raise();
-        }
-        else
-        {
-            Pattern6.DeactNext.Raise();
+            Debug.Log("O‘chmaadi");
         }
     }
 }
