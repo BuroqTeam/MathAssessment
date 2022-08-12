@@ -7,7 +7,7 @@ public class Pattern_6 : GeneralTest
 {
     public GameEvent ActNext;
     public GameEvent DeactNext;
-    public TextAsset _currentJsonText;
+    private  TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new();
    
@@ -16,7 +16,7 @@ public class Pattern_6 : GeneralTest
         if (_isTrue)
         {
             _isTrue = false;
-            //_currentJsonText = GetComponent<Pattern>().Json;
+            _currentJsonText = GetComponent<Pattern>().Json;
             ReadFromJson();
         }
         DisplayQuestion(Pattern_6Obj.title);
