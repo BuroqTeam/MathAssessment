@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5428392269490327294}
   - component: {fileID: 5428392269490327281}
   - component: {fileID: 5428392269490327280}
-  - component: {fileID: 5428392269490327283}
+  - component: {fileID: 2145753043787750484}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5428392269490327283
+--- !u!114 &2145753043787750484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,14 +132,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5428392269490327285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc429020e79b9df4c8fe216fa110660b, type: 3}
+  m_Script: {fileID: 11500000, guid: ea367bddc374f47469480c8f06b14ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
+  Sprites:
   - {fileID: 21300000, guid: f275684005483c04fbf3650dc0e90027, type: 3}
-  - {fileID: 21300000, guid: 4116e556eb093c8419be2cdf862acd28, type: 3}
   - {fileID: 21300000, guid: ed84d2a073238154494101a70f9809f9, type: 3}
   - {fileID: 21300000, guid: c4591b4066d7ca545b655a18de51f7e2, type: 3}
+  - {fileID: 21300000, guid: 4116e556eb093c8419be2cdf862acd28, type: 3}
 --- !u!1 &5428392270885846114
 GameObject:
   m_ObjectHideFlags: 0
