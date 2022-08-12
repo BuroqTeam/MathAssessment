@@ -36,7 +36,14 @@ public class Pattern_16 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_16Obj.title);
-        ES3.Load<bool>("Pattern_2");
+        if (ES3.Load<bool>("Pattern_16"))
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
+        }
     }
     public override void DisplayQuestion(string questionStr)
     {
