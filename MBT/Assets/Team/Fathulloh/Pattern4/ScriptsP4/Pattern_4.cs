@@ -32,20 +32,24 @@ public class Pattern_4 : GeneralTest
 
     private void OnEnable()
     {
+        if (ES3.Load<bool>("Pattern_4"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+            DeactiveNext.Raise();
+
         if (_isTrue)
         {
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
-            if (_currentJsonText != null)
-            {
-                Debug.Log(_currentJsonText.text);
-            }
-            else
-            {
-                Debug.Log("Not Found Data");
-            }
+            //if (_currentJsonText != null)            
+            //    Debug.Log(_currentJsonText.text);            
+            //else            
+            //    Debug.Log("Not Found Data");            
             ReadFromJson();
         }
+
         DisplayQuestion(Pattern_4Obj.title);
     }
 
@@ -54,7 +58,6 @@ public class Pattern_4 : GeneralTest
     //private void Awake()    // takrorlash 30-39, II-bob 30-39, III-bob 20-29, VI-bob 20-29, VII-bob 30-39
     //{
     //    //TestManager.Instance.PassToNextClicked += Check;//+
-
     //    //int ranNum = Random.Range(30, 39);
     //    //Debug.Log("ranNum = " + ranNum);
     //    //Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
@@ -97,10 +100,8 @@ public class Pattern_4 : GeneralTest
             Vector2 newSizeText = obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta;
             obj.transform.GetChild(0).transform.localPosition = new Vector3(0, newSize.y/2 + newSizeText.y/2, 0);
             //obj.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(newSize.x, newSizeText.y);//+
-
             //Vector3 oldPos = obj.transform.localPosition;
-            DeviceDetector(Screen.width, Screen.height, obj, i);            
-            //obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - newSize.y * i * 1.2f, oldPos.z);            
+            DeviceDetector(Screen.width, Screen.height, obj, i);           
         }
                         
         xDistance = MainObjs[1].transform.localPosition.x - MainObjs[0].transform.localPosition.x;
@@ -163,7 +164,6 @@ public class Pattern_4 : GeneralTest
     }
 
 
-
     /// <summary>
     /// Sprite nomiga qarab sprite tanlab beruvchi method.
     /// </summary>
@@ -176,7 +176,7 @@ public class Pattern_4 : GeneralTest
         string spriteName = splitedGroup[splitedGroup.Length - 1];
         splitedGroup = spriteName.Split(".");
         spriteName = splitedGroup[0];
-        //Debug.Log(spriteName);
+
         var desiredSprite = spriteCollectionSO.spriteGroup.Find(item => item.name == spriteName);
         return desiredSprite;
     }
@@ -197,6 +197,8 @@ public class Pattern_4 : GeneralTest
         }
         ES3.Save("myList", currentList);
 
+        ES3.Save<bool>("Pattern_4", true);
+
         ActivateNext();
     }
 
@@ -210,7 +212,7 @@ public class Pattern_4 : GeneralTest
     }
 
 
-
+    int correctCount;
     public void CheckAllAnswers()
     {
         totalFullAns = 0;
@@ -236,8 +238,32 @@ public class Pattern_4 : GeneralTest
         {
             CurrentAnswerStatus = false;
             //Debug.Log("Some thing is wrong.");
-        }            
-        
+        }
+
+
+        correctCount = 0;
+        for (int i = 0; i < Pattern_4Obj.options.Count; i++)
+        {
+            string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer;
+            if (currentAnswer.Length == 1)
+            {
+                correctCount++;
+            }
+        }
+
+        if (correctCount == Pattern_4Obj.options.Count)
+        {
+            ActiveNext.Raise();
+            Debug.Log("ActiveNext.Raise()");
+            //ES3.Save<bool>("Pattern_4", true);
+        }
+        else
+        {
+            DeactiveNext.Raise();
+            Debug.Log("DeactiveNext.Raise()");
+            //ES3.Save<bool>("Pattern_4", false);
+        }
+
     }
 
 }

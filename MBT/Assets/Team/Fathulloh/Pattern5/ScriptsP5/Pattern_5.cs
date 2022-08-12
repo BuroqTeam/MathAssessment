@@ -29,6 +29,13 @@ public class Pattern_5 : GeneralTest
 
     private void OnEnable()       // +++
     {
+        if (ES3.Load<bool>("Pattern_5"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+            DeactiveNext.Raise();
+
         if (_isTrue)
         {
             _isTrue = false;
@@ -44,7 +51,6 @@ public class Pattern_5 : GeneralTest
     //private void Awake()
     //{
     //    //TestManager.Instance.PassToNextClicked += Check;
-
     //    //Mbt.SaveJsonPath("Pattern_5", 0, 40);
     //    //ES3.Save<string>("LanguageKey", "Uzb");
     //    //ES3.Save<int>("ClassKey", 6);
@@ -130,6 +136,8 @@ public class Pattern_5 : GeneralTest
         }
         ES3.Save("myList", currentList);
 
+        ES3.Save<bool>("Pattern_5", true);
+
         ActivateNext();
     }
 
@@ -168,6 +176,7 @@ public class Pattern_5 : GeneralTest
         if (FullPositions == EmptyPositions.Count)
         {
             ActiveNext.Raise();
+            
             if (TotalCorrectAns == numbers)
             {
                 CurrentAnswerStatus = true;
@@ -175,11 +184,15 @@ public class Pattern_5 : GeneralTest
             }
             else
                 Debug.Log(TotalCorrectAns + " You are fall. ");
+
+            //ES3.Save<bool>("Pattern_5", true);
         }
         else
         {
             CurrentAnswerStatus = false;
             DeactiveNext.Raise();
+
+            //ES3.Save<bool>("Pattern_5", false);
         }
             
     }

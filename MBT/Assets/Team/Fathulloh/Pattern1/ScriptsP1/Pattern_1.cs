@@ -26,6 +26,11 @@ public class Pattern_1 : GeneralTest
 
     private void OnEnable()
     {
+        if (ES3.Load<bool>("Pattern_1"))
+        {
+            ActiveNext.Raise();
+        }
+
         if (_isTrue)
         {
             _isTrue = false;
@@ -128,6 +133,8 @@ public class Pattern_1 : GeneralTest
         }
         ES3.Save("myList", currentList);
 
+        ES3.Save<bool>("Pattern_1", true);
+
         ActivateNext();
     }
 
@@ -182,6 +189,7 @@ public class Pattern_1 : GeneralTest
         {
             ActiveNext.Raise();
             _IsActiveButton = false;
+            //ES3.Save<bool>("Pattern_1", true);
         }
     }
 
