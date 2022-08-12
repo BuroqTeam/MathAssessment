@@ -63,7 +63,7 @@ public class Pattern_14 : GeneralTest
 
     public void Active()
     {
-        if (_istrue)
+        if (_click)
         {
             ActiveNext.Raise();
         }
