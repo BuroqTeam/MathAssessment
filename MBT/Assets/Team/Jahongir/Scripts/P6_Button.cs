@@ -25,7 +25,15 @@ public class P6_Button : MonoBehaviour
     }
     public void DeleteAnswer()
     {
-        Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
+        if (Answer.text.Length>0)
+        {
+            Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
+        }
+        else
+        {
+            Pattern6.DeactNext.Raise();
+        }
+        
         if (Answer.text != null)
         {
             Pattern6.ActNext.Raise();
