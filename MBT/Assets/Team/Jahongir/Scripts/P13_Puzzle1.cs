@@ -43,7 +43,6 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         else
         {
             transform.GetChild(1).transform.position = transform.GetChild(0).transform.position;
-            Debug.Log("Tushmadi");
             transform.GetChild(1).transform.DOScale(1, 0);
         }
         _selectedAnswerId = -1;

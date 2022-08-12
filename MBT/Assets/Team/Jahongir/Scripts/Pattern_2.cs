@@ -164,7 +164,6 @@ public class Pattern_2 : GeneralTest
         }
         ES3.Save("myList", currentList);
         ES3.Save<bool>("Pattern_2", true);
-        ActivateNext();
     }
 
     void ActivateNext()
