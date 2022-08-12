@@ -59,7 +59,7 @@ public class Pattern_15 : GeneralTest
         }
         ES3.Save("myList", currentList);
         ES3.Save<bool>("Pattern_15", true);
-        ActivateNextQestion();
+        
     }
     public void Active()
     {
@@ -68,13 +68,7 @@ public class Pattern_15 : GeneralTest
             ActiveNext.Raise();
         }
     }
-    void ActivateNextQestion()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
-    }
+   
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
