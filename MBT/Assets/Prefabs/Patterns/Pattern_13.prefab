@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatternID: 13
-  IsAvailable: 1
+  IsAvailable: 0
   Event: {fileID: 11400000, guid: f4c2d5e7372836745b1455797e1a0410, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   PuzzleQuestion: {fileID: 3694412447752163868, guid: bb77289bcb92ebc499d1a5fef2cc3076, type: 3}
   PuzzleAnswer: {fileID: 8914217102000956962, guid: 64bac95566933a9458756adb3d771299, type: 3}
+  _currentJsonText: {fileID: 0}
   QuestionPuzles: []
   AnswerPuzles: []
 --- !u!114 &5215082886741890758

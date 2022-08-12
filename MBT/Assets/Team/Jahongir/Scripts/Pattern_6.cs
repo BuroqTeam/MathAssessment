@@ -63,14 +63,6 @@ public class Pattern_6 : GeneralTest
         }
         ES3.Save("myList", currentList);
         ES3.Save<bool>("Pattern_6", true);
-        ActivateNext();
-    }
-    void ActivateNext()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
     }
 }
 
