@@ -57,7 +57,14 @@ public class Pattern_12 : GeneralTest
 
     private void OnEnable()
     {
-        
+        if (ES3.Load<bool>("Pattern_12"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
         if (_istrue)
         {
             _istrue = false;
@@ -141,6 +148,8 @@ public class Pattern_12 : GeneralTest
         {
             Debug.Log("Correct");
         }
+        ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_12", true);
     }
       
 }

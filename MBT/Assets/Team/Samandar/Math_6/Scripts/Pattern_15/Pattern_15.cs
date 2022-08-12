@@ -22,6 +22,14 @@ public class Pattern_15 : GeneralTest
 
     private void OnEnable()
     {
+        if (ES3.Load<bool>("Pattern_15"))
+        {
+            ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
+        }
         if (_istrue)
         {
             _istrue = false;
@@ -29,9 +37,7 @@ public class Pattern_15 : GeneralTest
             ReadFromJson();
             StartMetod();
             PrefabsInstantiate();
-        }
-        
-        //_jsonText = Mbt.GetDesiredData(_jsCollection);
+        }         
 
         DisplayQuestion(DataObj.title);
         
@@ -51,6 +57,8 @@ public class Pattern_15 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
+        ES3.Save("myList", currentList);
+        ES3.Save<bool>("Pattern_15", true);
         ActivateNextQestion();
     }
     public void Active()
