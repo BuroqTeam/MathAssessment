@@ -4,10 +4,11 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-
+    public ResultSO ResultSO;
     public GameObject CirclePrefab;
     public GameObject CircleParent;
     public UnityEvent NewQuestionEvent;
+    public UnityEvent FinishEvent;
 
     [HideInInspector]
     public List<Circle> CircleGroup = new();
@@ -87,5 +88,24 @@ public class GameManager : MonoBehaviour
         }        
     }
 
+    public void CalculateResult()
+    {
+        int correctVal=0, wrongVal=0;
+        List<bool> resultList = new(ES3.Load<List<bool>>("ResultList"));
+        for (int i = 0; i < resultList.Count; i++)
+        {
+            if (resultList[i])
+            {
+                correctVal++;
+            }
+            else
+            {
+                wrongVal++;
+            }
+        }
+        ResultSO.Correct = correctVal;
+        ResultSO.Wrong = wrongVal;
+        ResultSO.Percentage = correctVal * 100 / resultList.Count;
+    }
 
 }
