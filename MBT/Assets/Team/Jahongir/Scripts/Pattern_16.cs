@@ -36,7 +36,7 @@ public class Pattern_16 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_16Obj.title);
-        if (ES3.Load<bool>("Pattern_16"))
+        if (ES3.Load<bool>("Pattern_16_Check"))
         {
             ActNext.Raise();
         }
@@ -173,7 +173,7 @@ public class Pattern_16 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_16", true);
+        ES3.Save<bool>("Pattern_16_Check", true);
     }
 }
 [SerializeField]
