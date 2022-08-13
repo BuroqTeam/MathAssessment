@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
   ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
   DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   PushableShadow: {fileID: 5744802171599968904, guid: 40cdd1848defa094eafa90b0531daf13, type: 3}
@@ -79,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 11
   IsAvailable: 1
   Event: {fileID: 11400000, guid: 1604a74512447ee4baddce6e6923b2d6, type: 2}
