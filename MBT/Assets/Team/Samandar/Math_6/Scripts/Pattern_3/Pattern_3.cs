@@ -54,6 +54,7 @@ public class Pattern_3 : GeneralTest
             DeactiveNext.Raise();
             ES3.Save<bool>("Pattern_3_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
+            GetComponent<Pattern>().IsStatus = false;
         }
     }
     private void OnEnable()
