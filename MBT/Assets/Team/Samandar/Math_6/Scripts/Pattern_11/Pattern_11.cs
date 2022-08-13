@@ -27,7 +27,7 @@ public class Pattern_11 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_11"))
+        if (ES3.Load<bool>("Pattern_11_Check"))
         {
             ActiveNext.Raise();
         }
@@ -187,7 +187,7 @@ public class Pattern_11 : GeneralTest
             Debug.Log("natogri");
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_11", true);
+        ES3.Save<bool>("Pattern_11_Check", true);
        
     }
     
