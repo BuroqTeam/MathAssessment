@@ -198,7 +198,7 @@ public class Pattern_11 : GeneralTest
         {
             Debug.Log("natogri");
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_11_Check", true);
        
     }

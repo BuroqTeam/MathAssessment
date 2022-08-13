@@ -160,7 +160,7 @@ public class Pattern_12 : GeneralTest
         {
             Debug.Log("Correct");
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_12_Check", true);
     }
       
