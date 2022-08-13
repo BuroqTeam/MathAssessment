@@ -62,7 +62,7 @@ public class Pattern_6 : GeneralTest
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_6_Check", true);
     }
 }
