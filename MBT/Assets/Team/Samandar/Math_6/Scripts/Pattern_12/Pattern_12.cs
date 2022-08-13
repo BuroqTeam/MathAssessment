@@ -48,10 +48,12 @@ public class Pattern_12 : GeneralTest
         if (n > 0)
         {
             ActiveNext.Raise();
+            ES3.Save<bool>("Pattern_12_Check", true);
         }
         else if (n == 0)
         {
             DeactiveNext.Raise();
+            ES3.Save<bool>("Pattern_12_Check", false);
         }
     }
 

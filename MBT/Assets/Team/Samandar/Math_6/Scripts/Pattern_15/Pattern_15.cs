@@ -66,6 +66,7 @@ public class Pattern_15 : GeneralTest
         if (_click)
         {
             ActiveNext.Raise();
+            ES3.Save<bool>("Pattern_15_Check", true);
         }
     }
    

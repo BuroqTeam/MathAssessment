@@ -70,6 +70,7 @@ public class Pattern_14 : GeneralTest
         if (_click)
         {
             ActiveNext.Raise();
+            ES3.Save<bool>("Pattern_14_Check", true);
         }
     }
     public void ReadFromJson()
