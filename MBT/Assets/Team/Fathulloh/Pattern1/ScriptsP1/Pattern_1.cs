@@ -9,6 +9,7 @@ public class Pattern_1 : GeneralTest
 {
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
+    public GameEvent FinishEvent;
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
 
@@ -192,7 +193,15 @@ public class Pattern_1 : GeneralTest
     {
         if (_IsActiveButton)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
+            
             //_IsActiveButton = false;
             ES3.Save<bool>("Pattern_1_Check", true);
         }
