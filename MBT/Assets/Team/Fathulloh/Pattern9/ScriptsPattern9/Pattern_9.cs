@@ -6,9 +6,10 @@ using TMPro;
 using UnityEngine;
 
 public class Pattern_9 : GeneralTest
-{
+{    
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
+    public GameEvent FinishEvent;
 
     private TextAsset _currentJsonText;
 
@@ -185,7 +186,14 @@ public class Pattern_9 : GeneralTest
 
         if (correctCount == Pattern_9Obj.options.Count)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_9_Check", true);
         }

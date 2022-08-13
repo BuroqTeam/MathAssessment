@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pattern_5 : GeneralTest
-{
+{    
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
+    public GameEvent FinishEvent;
 
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;    
@@ -175,7 +176,14 @@ public class Pattern_5 : GeneralTest
         //Debug.Log(fullPositions);
         if (FullPositions == EmptyPositions.Count)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
             
             if (TotalCorrectAns == numbers)
             {

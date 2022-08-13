@@ -6,9 +6,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Pattern_4 : GeneralTest
-{
+{    
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
+    public GameEvent FinishEvent;
     //public TextAsset CurrentJsonText;   //-
     private TextAsset _currentJsonText;
     public SpriteCollectionSO spriteCOllectionSO;
@@ -198,7 +199,6 @@ public class Pattern_4 : GeneralTest
         ES3.Save("myList", currentList);
 
         ES3.Save<bool>("Pattern_4_Check", true);
-
         //ActivateNext();
     }
 
@@ -253,7 +253,14 @@ public class Pattern_4 : GeneralTest
 
         if (correctCount == Pattern_4Obj.options.Count)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_4_Check", true);
         }
