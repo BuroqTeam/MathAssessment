@@ -781,11 +781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 5
   IsAvailable: 1
   Event: {fileID: 11400000, guid: 41d1801e93049194d90914bc2a8ffa71, type: 2}
   QuestionNumber: 0
-  Json: {fileID: 0}
+  Json: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
 --- !u!114 &-4705562963074542790
 MonoBehaviour:
   m_ObjectHideFlags: 0
