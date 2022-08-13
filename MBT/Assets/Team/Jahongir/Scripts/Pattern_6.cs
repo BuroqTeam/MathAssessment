@@ -46,7 +46,7 @@ public class Pattern_6 : GeneralTest
     {
         if (transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text == Pattern_6Obj.solution[0])
         {
-            Debug.Log("Correct");
+            
         }
     }
     public void Check()
