@@ -193,8 +193,15 @@ public class Pattern_1 : GeneralTest
         if (_IsActiveButton)
         {
             ActiveNext.Raise();
-            _IsActiveButton = false;
+            //_IsActiveButton = false;
             ES3.Save<bool>("Pattern_1_Check", true);
+        }
+        else
+        {
+            DeactiveNext.Raise();
+            ES3.Save<bool>("Pattern_1_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            GetComponent<Pattern>().IsStatus = false;
         }
        
     }
