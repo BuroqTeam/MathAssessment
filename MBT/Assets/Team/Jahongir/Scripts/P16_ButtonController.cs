@@ -37,6 +37,7 @@ public class P16_ButtonController : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Run");
         if (Select)
         {
             transform.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
