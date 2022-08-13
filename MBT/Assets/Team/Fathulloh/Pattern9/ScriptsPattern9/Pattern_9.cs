@@ -25,7 +25,7 @@ public class Pattern_9 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_9"))
+        if (ES3.Load<bool>("Pattern_9_Check"))
         {
             ActiveNext.Raise();
         }
@@ -127,7 +127,7 @@ public class Pattern_9 : GeneralTest
         }
         ES3.Save("myList", currentList);
 
-        ES3.Save<bool>("Pattern_9", true);
+        ES3.Save<bool>("Pattern_9_Check", true);
 
         //ActivateNext();
     }
