@@ -168,7 +168,7 @@ public class Pattern_3 : GeneralTest
                 Ansver.Add(mainString2);
                 for (int j = 0; j < Ansver.Count; j++)
                 {
-                    Debug.Log(Ansver[j]);
+                    
                 }
             }
             else if (javoblarSoni == 4)
@@ -177,7 +177,7 @@ public class Pattern_3 : GeneralTest
                 Ansver.Add(mainString4);                
                 for (int j = 0; j < Ansver.Count; j++)
                 {
-                    Debug.Log(Ansver[j]);
+                    
                 }
             }
             else if (javoblarSoni == 6)
@@ -186,7 +186,7 @@ public class Pattern_3 : GeneralTest
                 Ansver.Add(mainString6);
                 for (int j = 0; j < Ansver.Count; j++)
                 {
-                    Debug.Log(Ansver[j]);
+                    
                 }
             }           
         }         
@@ -214,8 +214,9 @@ public class Pattern_3 : GeneralTest
         {
             if (list.SequenceEqual(Ansver))
             {
-                Debug.Log("Correct");
+                
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                Debug.Log("Corrent");
             }
             else
             {
@@ -225,8 +226,9 @@ public class Pattern_3 : GeneralTest
 
         if (k.Equals(newSolution.Count))
         {
-            Debug.Log("Wrong");
+            
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_3_Check", true);
