@@ -143,10 +143,12 @@ public class Pattern_2 : GeneralTest
         if (a>0)
         {
             ActNext.Raise();
+            ES3.Save<bool>("Pattern_2_Check", true);
         }
         else
         {
             DeactNext.Raise();
+            ES3.Save<bool>("Pattern_2_Check", false);
         }
     }
     public void Check()

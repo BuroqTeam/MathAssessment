@@ -12,15 +12,16 @@ public class P6_Button : MonoBehaviour
         if (Answer.text.Length <17)
         {
             Answer.text = Answer.text.Insert(Answer.text.Length, transform.GetChild(0).GetComponent<TEXDraw>().text);
-            Debug.Log(Answer.text);
         }
         if (Answer.text != null)
         {
             Pattern6.ActNext.Raise();
+            ES3.Save<bool>("Pattern_6_Check", true);
         }
         else
         {
             Pattern6.DeactNext.Raise();
+            ES3.Save<bool>("Pattern_6_Check", false);
         }
     }
     public void DeleteAnswer()
@@ -32,12 +33,12 @@ public class P6_Button : MonoBehaviour
         if (Answer.text.Length == 0)
         {
             Pattern6.DeactNext.Raise();
-            Debug.Log("O‘chdi");
+            ES3.Save<bool>("Pattern_6_Check", false);
         }
         else
         {
             Pattern6.ActNext.Raise();
-            Debug.Log("O‘chmaadi");
+            ES3.Save<bool>("Pattern_6_Check", true);
         }
     }
 }
