@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Pattern_11 : GeneralTest
 {
+    public GameEvent FinishButton;
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
     public GameObject PushableShadow;
@@ -69,7 +70,14 @@ public class Pattern_11 : GeneralTest
 
         if (n == str.Count)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishButton.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
             ES3.Save<bool>("Pattern_11_Check", true);
         }
         else

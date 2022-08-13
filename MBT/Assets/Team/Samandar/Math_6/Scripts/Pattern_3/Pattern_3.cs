@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Pattern_3 : GeneralTest
 {
+    public GameEvent FinishButton;
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
     private TextAsset _jsonText;
@@ -46,8 +47,16 @@ public class Pattern_3 : GeneralTest
         }
         if (n == problem1.Count)
         {
-            ActiveNext.Raise();
-            ES3.Save<bool>("Pattern_3_Check", true);
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishButton.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
+            ES3.Save<bool>("Pattern_3_Check", true);           
+            
         }
         else
         {

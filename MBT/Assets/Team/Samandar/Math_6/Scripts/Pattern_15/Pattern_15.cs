@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Pattern_15 : GeneralTest
 {
+    public GameEvent FinishButton;
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
     private TextAsset _jsonText;
@@ -65,8 +66,15 @@ public class Pattern_15 : GeneralTest
     {
         if (_click)
         {
-            ActiveNext.Raise();
-            ES3.Save<bool>("Pattern_15_Check", true);            
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishButton.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }
+            ES3.Save<bool>("Pattern_15_Check", true);
         }
     }
    
