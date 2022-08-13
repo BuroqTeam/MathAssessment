@@ -76,6 +76,7 @@ public class Pattern_11 : GeneralTest
         {
             DeactiveNext.Raise();
             ES3.Save<bool>("Pattern_11_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
     }
 
