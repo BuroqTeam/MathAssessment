@@ -40,7 +40,14 @@ public class P6_Button : MonoBehaviour
         }
         else
         {
-            Pattern6.ActNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                Pattern6.FinishEvent.Raise();
+            }
+            else
+            {
+                Pattern6.ActNext.Raise();
+            }
             ES3.Save<bool>("Pattern_6_Check", true);
         }
     }

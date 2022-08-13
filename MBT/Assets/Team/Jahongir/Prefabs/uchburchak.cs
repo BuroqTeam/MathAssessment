@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class uchburchak : MonoBehaviour, IPointerClickHandler
 {
-    public bool Select;
+    public bool Select = false;
     public bool Selected;
     public void OnPointerClick(PointerEventData eventData)
     {
