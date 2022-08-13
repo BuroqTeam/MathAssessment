@@ -47,10 +47,13 @@ public class Pattern_3 : GeneralTest
         if (n == problem1.Count)
         {
             ActiveNext.Raise();
+            ES3.Save<bool>("Pattern_3_Check", true);
         }
         else
         {
             DeactiveNext.Raise();
+            ES3.Save<bool>("Pattern_3_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
     }
     private void OnEnable()

@@ -70,10 +70,13 @@ public class Pattern_11 : GeneralTest
         if (n == str.Count)
         {
             ActiveNext.Raise();
+            ES3.Save<bool>("Pattern_11_Check", true);
         }
         else
         {
             DeactiveNext.Raise();
+            ES3.Save<bool>("Pattern_11_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
     }
 
