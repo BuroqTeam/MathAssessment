@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Pattern : MonoBehaviour
 {
+    public bool IsStatus;
     public string PatternID;
-    public bool IsAvailable;
-    public delegate void PassToNextQuestion();
+    public bool IsAvailable;    
     public GameEvent Event;
     
 

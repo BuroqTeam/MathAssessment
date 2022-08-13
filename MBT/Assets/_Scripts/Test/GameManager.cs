@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,14 +16,22 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Circle CurrentCircleObj;
     public static GameManager Instance;
-
+    public int MaximumPatternNumber;
 
     private void Awake()
     {
+        CreateSaveVariablesForCheck();
         Instance = this;
        
     }
 
+    void CreateSaveVariablesForCheck()
+    {
+        for (int i = 1; i <= MaximumPatternNumber; i++)
+        {
+            ES3.Save<bool>("Pattern_" + i.ToString(), false);
+        }
+    }
 
     public void CreateCircles()
     {
