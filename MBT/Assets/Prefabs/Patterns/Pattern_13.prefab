@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 75649017508017962}
-  - component: {fileID: 5197302995127808997}
   - component: {fileID: 3770483516291616746}
+  - component: {fileID: 5197302995127808997}
   - component: {fileID: 5215082886741890758}
   m_Layer: 5
   m_Name: Pattern_13
@@ -41,24 +41,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.0786133, y: 0.0001812}
   m_SizeDelta: {x: -361.84262, y: 670}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5197302995127808997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75649017508017365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsStatus: 0
-  PatternID: 13
-  IsAvailable: 1
-  Event: {fileID: 11400000, guid: f4c2d5e7372836745b1455797e1a0410, type: 2}
-  QuestionNumber: 0
-  Json: {fileID: 0}
 --- !u!114 &3770483516291616746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +61,24 @@ MonoBehaviour:
   QuestionPuzles: []
   AnswerPuzles: []
   SelectedPuzles: []
+--- !u!114 &5197302995127808997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75649017508017365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsStatus: 0
+  PatternID: 13
+  IsAvailable: 1
+  Event: {fileID: 11400000, guid: f4c2d5e7372836745b1455797e1a0410, type: 2}
+  QuestionNumber: 0
+  Json: {fileID: 0}
 --- !u!114 &5215082886741890758
 MonoBehaviour:
   m_ObjectHideFlags: 0
