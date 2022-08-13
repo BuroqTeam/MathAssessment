@@ -37,13 +37,13 @@ public class Pattern_14 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_14", true);
+        ES3.Save<bool>("Pattern_14_Check", true);
         
     }
     
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_14"))
+        if (ES3.Load<bool>("Pattern_14_Check"))
         {
             ActiveNext.Raise();
         }

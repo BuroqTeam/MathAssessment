@@ -22,7 +22,7 @@ public class Pattern_15 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_15"))
+        if (ES3.Load<bool>("Pattern_15_Check"))
         {
             ActiveNext.Raise();
         }
@@ -58,7 +58,7 @@ public class Pattern_15 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_15", true);
+        ES3.Save<bool>("Pattern_15_Check", true);
         
     }
     public void Active()

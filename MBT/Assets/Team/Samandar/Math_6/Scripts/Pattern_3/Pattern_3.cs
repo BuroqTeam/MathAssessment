@@ -55,7 +55,7 @@ public class Pattern_3 : GeneralTest
     }
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_3"))
+        if (ES3.Load<bool>("Pattern_3_Check"))
         {
             ActiveNext.Raise();
         }
@@ -216,7 +216,7 @@ public class Pattern_3 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_3", true);
+        ES3.Save<bool>("Pattern_3_Check", true);
         
     }
 
