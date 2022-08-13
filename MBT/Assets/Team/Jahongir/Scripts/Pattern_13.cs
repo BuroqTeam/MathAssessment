@@ -87,10 +87,12 @@ public class Pattern_13 : GeneralTest
         if (SelectedPuzles.Count == QuestionPuzles.Count)
         {
             ActNext.Raise();
+            ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
         {
             DeactNext.Raise();
+            ES3.Save<bool>("Pattern_13_Check", false);
         }
     }
     public void Check()

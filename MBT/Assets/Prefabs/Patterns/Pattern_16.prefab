@@ -521,8 +521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 16
-  IsAvailable: 1
+  IsAvailable: 0
   Event: {fileID: 11400000, guid: c52e4e2f794de304588b8c718e359780, type: 2}
   QuestionNumber: 0
   Json: {fileID: 0}
