@@ -25,7 +25,7 @@ public class Pattern_2 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_2Obj.title);
-        if (ES3.Load<bool>("Pattern_2"))
+        if (ES3.Load<bool>("Pattern_2_Check"))
         {
             ActNext.Raise();
         }
@@ -163,7 +163,7 @@ public class Pattern_2 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_2", true);
+        ES3.Save<bool>("Pattern_2_Check", true);
     }
 
     void ActivateNext()

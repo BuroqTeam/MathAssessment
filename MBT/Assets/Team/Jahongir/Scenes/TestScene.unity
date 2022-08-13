@@ -1425,7 +1425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824364815, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2407683841824365296, guid: 0807451bec16cb54aad8c936d2b93245, type: 3}
       propertyPath: m_Pivot.x
@@ -3206,7 +3206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 75649017508017365, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 75649017508017962, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
       propertyPath: m_Pivot.x
@@ -3292,6 +3292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3770483516291616746, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
+      propertyPath: _currentJsonText
+      value: 
+      objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c746daad51f6f4f43ba63ad0be31d8a7, type: 3}
 --- !u!224 &8194377455857229649 stripped
