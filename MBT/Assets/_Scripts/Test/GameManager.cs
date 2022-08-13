@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 1; i <= MaximumPatternNumber; i++)
         {
-            ES3.Save<bool>("Pattern_" + i.ToString(), false);
+            ES3.Save<bool>("Pattern_" + i.ToString() + "_Check", false);
         }
     }
 
@@ -51,15 +51,21 @@ public class GameManager : MonoBehaviour
 
 
     public void UpdateTestView(int circleIdentity, bool IsNext)
-    {       
+    {
+        Debug.Log(circleIdentity);
         CircleGroup[CurrentQuestionNumber].MakeDone();
         CurrentQuestionNumber = circleIdentity;        
         CurrentCircleObj = CircleGroup[CurrentQuestionNumber];       
         CircleGroup[CurrentQuestionNumber].MakeActive();
         NewQuestionEvent.Invoke();
+
         if (IsNext)
         {
             SetActiveNextQuestion();
+        }
+        else
+        {
+            TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
         }
         
     }
@@ -69,9 +75,13 @@ public class GameManager : MonoBehaviour
         foreach (GameObject obj in TestManager.Instance.ActivePatterns)
         {
             if (obj.activeSelf)
-            {             
-                TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
-                obj.SetActive(false);
+            {
+                
+                if (!obj.Equals(TestManager.Instance.ActivePatterns[CurrentQuestionNumber]))
+                {
+                    TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
+                    obj.SetActive(false);
+                }                   
                 break;
             }           
         }        

@@ -27,8 +27,9 @@ public class CheckButton : MonoBehaviour
 			if (obj.activeSelf)
 			{
 				m = k;
-				Debug.Log(k); // Shu yerga keldim Test qil Play qilib keyin shu yerdan ishla
+				obj.SetActive(false);
 				obj.GetComponent<Pattern>().IsStatus = true;
+				break;
 			}
 			k++;
 		}
@@ -38,21 +39,23 @@ public class CheckButton : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Salam " + m);
+			
 			FindDesiredPattern(0);
 		}		
 	}
 
 	void FindDesiredPattern(int index)
-	{
+	{		
 		int k = 0;
 		for (int i = index; i < TestManager.Instance.ActivePatterns.Count; i++)
 		{
 			if (!TestManager.Instance.ActivePatterns[i].GetComponent<Pattern>().IsStatus)
 			{
 				k = i;
+				break;
 			}
 		}
+		Debug.Log(k);
 		GameManager.Instance.UpdateTestView(k, false);
 		DeactiveCheckEvent.Raise();
 	}
