@@ -149,6 +149,7 @@ public class Pattern_2 : GeneralTest
         {
             DeactNext.Raise();
             ES3.Save<bool>("Pattern_2_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
     }
     public void Check()

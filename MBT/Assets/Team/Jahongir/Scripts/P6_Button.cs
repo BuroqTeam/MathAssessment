@@ -22,6 +22,7 @@ public class P6_Button : MonoBehaviour
         {
             Pattern6.DeactNext.Raise();
             ES3.Save<bool>("Pattern_6_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
     }
     public void DeleteAnswer()
@@ -34,6 +35,7 @@ public class P6_Button : MonoBehaviour
         {
             Pattern6.DeactNext.Raise();
             ES3.Save<bool>("Pattern_6_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
         else
         {
