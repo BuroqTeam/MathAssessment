@@ -7,6 +7,7 @@ public class Pattern_6 : GeneralTest
 {
     public GameEvent ActNext;
     public GameEvent DeactNext;
+    public GameEvent FinishEvent;
     private  TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new();

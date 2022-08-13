@@ -8,6 +8,7 @@ public class Pattern_13 : GeneralTest
 {
     public GameEvent ActNext;
     public GameEvent DeactNext;
+    public GameEvent FinishEvent;
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
     private TextAsset _currentJsonText;
@@ -86,7 +87,14 @@ public class Pattern_13 : GeneralTest
     {
         if (SelectedPuzles.Count == QuestionPuzles.Count)
         {
-            ActNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActNext.Raise();
+            }
             ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
