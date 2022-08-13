@@ -12,7 +12,7 @@ public class Pattern_16 : GeneralTest
     public GameEvent DeactNext;
     public List<GameObject> ExistentPrefabs = new();
     public List<int> _prefabsIndex;
-    private TextAsset _currentJsonText;
+    public TextAsset _currentJsonText;
     private int _resultValue = 0;
     bool _isTrue = true;
     Data_16 Pattern_16Obj = new();
@@ -32,7 +32,7 @@ public class Pattern_16 : GeneralTest
         if (_isTrue)
         {
             _isTrue = false;
-            _currentJsonText = GetComponent<Pattern>().Json;
+            //_currentJsonText = GetComponent<Pattern>().Json;
             ReadFromJson();
         }
         DisplayQuestion(Pattern_16Obj.title);
