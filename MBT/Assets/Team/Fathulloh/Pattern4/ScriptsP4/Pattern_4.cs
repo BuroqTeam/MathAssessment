@@ -254,14 +254,15 @@ public class Pattern_4 : GeneralTest
         if (correctCount == Pattern_4Obj.options.Count)
         {
             ActiveNext.Raise();
-            Debug.Log("ActiveNext.Raise()");
-            //ES3.Save<bool>("Pattern_4", true);
+            //Debug.Log("ActiveNext.Raise()");
+            ES3.Save<bool>("Pattern_4_Check", true);
         }
         else
         {
             DeactiveNext.Raise();
-            Debug.Log("DeactiveNext.Raise()");
-            //ES3.Save<bool>("Pattern_4", false);
+            //Debug.Log("DeactiveNext.Raise()");
+            ES3.Save<bool>("Pattern_4_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
 
     }

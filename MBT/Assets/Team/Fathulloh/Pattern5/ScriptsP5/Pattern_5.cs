@@ -185,14 +185,15 @@ public class Pattern_5 : GeneralTest
             else
                 Debug.Log(TotalCorrectAns + " You are fall. ");
 
-            //ES3.Save<bool>("Pattern_5", true);
+            ES3.Save<bool>("Pattern_5_Check", true);
         }
         else
         {
             CurrentAnswerStatus = false;
             DeactiveNext.Raise();
 
-            //ES3.Save<bool>("Pattern_5", false);
+            ES3.Save<bool>("Pattern_5_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
             
     }

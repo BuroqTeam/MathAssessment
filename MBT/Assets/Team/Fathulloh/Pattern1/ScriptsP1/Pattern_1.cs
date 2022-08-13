@@ -194,8 +194,9 @@ public class Pattern_1 : GeneralTest
         {
             ActiveNext.Raise();
             _IsActiveButton = false;
-            //ES3.Save<bool>("Pattern_1", true);
+            ES3.Save<bool>("Pattern_1_Check", true);
         }
+       
     }
 
 
