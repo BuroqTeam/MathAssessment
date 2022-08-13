@@ -10,13 +10,13 @@ public class Pattern_13 : GeneralTest
     public GameEvent DeactNext;
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
-    public TextAsset _currentJsonText;
+    private TextAsset _currentJsonText;
     public List<GameObject> QuestionPuzles = new();
     public List<GameObject> AnswerPuzles = new();
+    public List<GameObject> SelectedPuzles = new();
     private bool _isTrue = true;
     private List<string> _question = new();
     private List<string> _answer = new();
-    private int _resultNumber;
     Data_13 Pattern_13Obj = new();
 
    
@@ -25,11 +25,11 @@ public class Pattern_13 : GeneralTest
         if (_isTrue)
         {
             _isTrue = false;
-            //_currentJsonText = GetComponent<Pattern>().Json;
+            _currentJsonText = GetComponent<Pattern>().Json;
             ReadFromJson();
         }
         DisplayQuestion(Pattern_13Obj.title);
-        if (ES3.Load<bool>("Pattern_13"))
+        if (ES3.Load<bool>("Pattern_13_Check"))
         {
             ActNext.Raise();
         }
@@ -84,36 +84,20 @@ public class Pattern_13 : GeneralTest
 
     public void CheckButton()
     {
-        for (int i = 0; i < QuestionPuzles.Count; i++)
-        {
-            if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
-            {
-                _resultNumber++;
-            }
-        }
-        if (_resultNumber == QuestionPuzles.Count)
+        if (SelectedPuzles.Count == QuestionPuzles.Count)
         {
             ActNext.Raise();
-            Debug.Log("Yondi");
         }
         else
         {
             DeactNext.Raise();
-            Debug.Log("Yonmadi");
         }
     }
     public void Check()
-    {
-        for (int i = 0; i < QuestionPuzles.Count; i++)
-        {
-            if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
-            {
-                _resultNumber++;
-            }
-        }
+    {  
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        if (_resultNumber == QuestionPuzles.Count)
+        if (SelectedPuzles.Count == QuestionPuzles.Count)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
         }
@@ -122,7 +106,7 @@ public class Pattern_13 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("myList", currentList);
-        ES3.Save<bool>("Pattern_13", true);
+        ES3.Save<bool>("Pattern_13_Check", true);
     }
 }
 [SerializeField]
