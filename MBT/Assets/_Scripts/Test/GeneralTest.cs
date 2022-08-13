@@ -17,6 +17,11 @@ public class GeneralTest : MonoBehaviour
     }
 
 
+    //public void UpdateTestView(string questionNumber, )
+    //{
+        
+    //}
+
 
     public void TurnOn()
     {
