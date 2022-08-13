@@ -7,6 +7,7 @@ public class Pattern_2 : GeneralTest
 {
     public GameEvent ActNext;
     public GameEvent DeactNext;
+    public GameEvent FinishEvent;
     public GameObject Button;
     private TextAsset _currentJsonText;
     private int CorrectAnswerNumber = 0;
@@ -142,7 +143,14 @@ public class Pattern_2 : GeneralTest
         }
         if (a>0)
         {
-            ActNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActNext.Raise();                
+            }
             ES3.Save<bool>("Pattern_2_Check", true);
         }
         else
