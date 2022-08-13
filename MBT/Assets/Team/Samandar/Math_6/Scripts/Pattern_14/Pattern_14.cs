@@ -37,7 +37,7 @@ public class Pattern_14 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_14_Check", true);
         
     }

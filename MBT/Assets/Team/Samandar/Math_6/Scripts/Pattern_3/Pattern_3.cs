@@ -197,7 +197,7 @@ public class Pattern_3 : GeneralTest
         
         List<bool> currentList = new();
 
-        currentList = ES3.Load<List<bool>>("ResultList");
+        currentList = ES3.Load<List<bool>>("ResultList"); 
 
         newSolution = new List<List<string>>(DataObj.solution);       
 
@@ -228,7 +228,7 @@ public class Pattern_3 : GeneralTest
             Debug.Log("Wrong");
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_3_Check", true);
         
     }
