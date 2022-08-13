@@ -33,17 +33,18 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
                 _selectedAnswerId = i;
             }
         }
-        Debug.Log(_selectedAnswerId);
         if (_selectedAnswerId != -1)
         {
             transform.GetChild(1).transform.position = Pattern13.AnswerPuzles[_selectedAnswerId].transform.GetChild(1).transform.position;
             AttechedPuzzle = Pattern13.AnswerPuzles[_selectedAnswerId];
             transform.GetChild(1).transform.DOScale(1, 0);
+            Pattern13.SelectedPuzles.Add(gameObject);
         }
         else
         {
             transform.GetChild(1).transform.position = transform.GetChild(0).transform.position;
             transform.GetChild(1).transform.DOScale(1, 0);
+            Pattern13.SelectedPuzles.Remove(gameObject);
         }
         _selectedAnswerId = -1;
         Pattern13.CheckButton();
