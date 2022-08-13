@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 137903702233981270}
   - component: {fileID: 1648855499698427626}
   - component: {fileID: 5140074598790756365}
+  - component: {fileID: 240566735441621907}
   m_Layer: 5
   m_Name: Square
   m_TagString: Untagged
@@ -137,3 +138,33 @@ MonoBehaviour:
   Pattern16: {fileID: 0}
   Select: 0
   Selected: 0
+--- !u!60 &240566735441621907
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6270526645458674085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 29.898926, y: 45.84839}
+      - {x: -45.087654, y: 44.80145}
+      - {x: -46.86, y: -45.30148}
+      - {x: 45.79213, y: -46.013393}
+      - {x: 45.79957, y: 45.513424}
