@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Pattern_12 : GeneralTest
 {
+    public GameEvent FinishButton;
     public GameEvent ActiveNext;
     public GameEvent DeactiveNext;
     private TextAsset _jsonText;
@@ -47,7 +48,14 @@ public class Pattern_12 : GeneralTest
         }
         if (n > 0)
         {
-            ActiveNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishButton.Raise();
+            }
+            else
+            {
+                ActiveNext.Raise();
+            }           
             ES3.Save<bool>("Pattern_12_Check", true);
         }
         else if (n == 0)
