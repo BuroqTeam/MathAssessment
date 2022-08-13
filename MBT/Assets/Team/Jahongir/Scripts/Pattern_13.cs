@@ -11,6 +11,7 @@ public class Pattern_13 : GeneralTest
     public GameEvent FinishEvent;
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
+    private int _resultNumber = 0;
     private TextAsset _currentJsonText;
     public List<GameObject> QuestionPuzles = new();
     public List<GameObject> AnswerPuzles = new();
@@ -106,10 +107,17 @@ public class Pattern_13 : GeneralTest
         }
     }
     public void Check()
-    {  
+    {
+        for (int i = 0; i < QuestionPuzles.Count; i++)
+        {
+            if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
+            {
+                _resultNumber++;
+            }
+        }
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        if (SelectedPuzles.Count == QuestionPuzles.Count)
+        if (_resultNumber == QuestionPuzles.Count)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
         }
