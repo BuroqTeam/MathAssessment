@@ -155,7 +155,7 @@ public class Pattern_11 : GeneralTest
         {
             string mainString = LeftList[i].GetComponent<PushableShadow>().CurrentNumber;
             Answer.Add(mainString);
-            Debug.Log(Answer[i]);
+            
         }
     }
 
@@ -188,15 +188,15 @@ public class Pattern_11 : GeneralTest
 
         if (Correct.SequenceEqual(Answer))
         {
-            Debug.Log("togri");
+            
         }
         else if (ReverseCorrect.SequenceEqual(Answer))
         {
-            Debug.Log("togri");
+            
         }
         else
         {
-            Debug.Log("natogri");
+           
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_11_Check", true);
