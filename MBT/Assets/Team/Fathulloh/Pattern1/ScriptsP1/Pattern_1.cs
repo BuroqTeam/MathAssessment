@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class Pattern_1 : GeneralTest
 {
-    public GameEvent ActiveNext;    
+    public GameEvent ActiveNext;
+    public GameEvent DeactiveNext;
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
 
@@ -26,9 +27,13 @@ public class Pattern_1 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_1"))
+        if (ES3.Load<bool>("Pattern_1_Check"))
         {
             ActiveNext.Raise();
+        }
+        else
+        {
+            DeactiveNext.Raise();
         }
 
         if (_isTrue)
@@ -133,7 +138,7 @@ public class Pattern_1 : GeneralTest
         }
         ES3.Save("myList", currentList);
 
-        ES3.Save<bool>("Pattern_1", true);
+        ES3.Save<bool>("Pattern_1_Check", true);
 
         //ActivateNext();
     }
