@@ -108,6 +108,8 @@ public class CheckButton : MonoBehaviour
 				break;
 			}			
 		}
+		GameManager.Instance.CalculateResult();
+		GameManager.Instance.FinishEvent.Invoke();
 	}
 
 }
