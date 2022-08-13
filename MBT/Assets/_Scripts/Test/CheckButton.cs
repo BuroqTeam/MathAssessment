@@ -1,9 +1,11 @@
+using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CheckButton : MonoBehaviour
 {
-
+	
 	public GameEvent DeactiveCheckEvent;
 
     void Awake()
@@ -15,8 +17,14 @@ public class CheckButton : MonoBehaviour
 	void TaskOnClick()
 	{
 		GameManager.Instance.CurrentCircleObj.IsDone = true;
-		FindNextQuestion();
-		
+		if (TestManager.Instance.CheckIsLast())
+		{
+			FinishTask();
+		}
+		else
+		{
+			FindNextQuestion();
+		}	
 	}
 
 	void FindNextQuestion()
@@ -75,8 +83,31 @@ public class CheckButton : MonoBehaviour
 	}
 
 
-	
+	public void AnimateIt()
+	{		
+		StartCoroutine(AnimCheckButton());
+	}
 
+	IEnumerator AnimCheckButton()
+	{
+		transform.DOScale(0.9f, 0.2f);
+		yield return new WaitForSeconds(0.2f);
+		transform.DOScale(1, 0.2f);
+		yield return new WaitForSeconds(0.2f);
+		StartCoroutine(AnimCheckButton());
+	}
 
+	void FinishTask()
+	{
+		foreach (GameObject obj in TestManager.Instance.ActivePatterns)
+		{
+			if (obj.activeSelf)
+			{				
+				obj.SetActive(false);
+				obj.GetComponent<Pattern>().IsStatus = true;
+				break;
+			}			
+		}
+	}
 
 }

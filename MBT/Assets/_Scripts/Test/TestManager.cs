@@ -29,6 +29,7 @@ public class TestManager : MonoBehaviour
 
     public static TestManager Instance;
     public UnityEvent CircleEvent;
+   
 
     private void Awake()
     {
@@ -152,7 +153,26 @@ public class TestManager : MonoBehaviour
         ES3.Save<List<bool>>("ResultList", resultList);
     }
 
-    
+
+    public bool CheckIsLast()
+    {
+        int n = 0;
+        foreach (GameObject obj in ActivePatterns)
+        {
+            if (obj.GetComponent<Pattern>().IsStatus)
+            {
+                n++;
+            }
+        }
+        if (n.Equals(ActivePatterns.Count - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 
 
