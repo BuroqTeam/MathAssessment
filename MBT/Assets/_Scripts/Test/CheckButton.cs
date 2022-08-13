@@ -33,20 +33,22 @@ public class CheckButton : MonoBehaviour
 			}
 			k++;
 		}
-		if (m < TestManager.Instance.ActivePatterns.Count)
+		if (m < TestManager.Instance.ActivePatterns.Count-1)
 		{
+			Debug.Log(m);
 			FindDesiredPattern(m);
 		}
 		else
 		{
-			
+			Debug.Log("Else: " + m);
 			FindDesiredPattern(0);
 		}		
 	}
 
 	void FindDesiredPattern(int index)
-	{		
-		int k = 0;
+	{
+		Debug.Log(index);
+		int k = 0, n = 0;
 		for (int i = index; i < TestManager.Instance.ActivePatterns.Count; i++)
 		{
 			if (!TestManager.Instance.ActivePatterns[i].GetComponent<Pattern>().IsStatus)
@@ -54,9 +56,21 @@ public class CheckButton : MonoBehaviour
 				k = i;
 				break;
 			}
+			else
+			{
+				n++;
+			}
+		}
+		if (n.Equals(TestManager.Instance.ActivePatterns.Count - index))
+		{
+			FindDesiredPattern(0);
+		}
+		else
+		{
+			GameManager.Instance.UpdateTestView(k, false);
 		}
 		Debug.Log(k);
-		GameManager.Instance.UpdateTestView(k, false);
+		
 		DeactiveCheckEvent.Raise();
 	}
 
