@@ -38,13 +38,9 @@ public class TestManager : MonoBehaviour
 
 
     private void Start()
-    {
-        SetSaveManagerValues();
-        
-
+    {        
         GetComponent<GeneralTest>().QuestionText = QuestionText;
         GetData();
-
     }
 
     void GetData()
@@ -130,6 +126,7 @@ public class TestManager : MonoBehaviour
         }        
         ActivePatterns[0].SetActive(true);
         CircleEvent.Invoke();
+        SetSaveManagerValues();
     }
 
     void StreatchObj(GameObject obj)
@@ -146,7 +143,7 @@ public class TestManager : MonoBehaviour
     void SetSaveManagerValues()
     {
         List<bool> resultList = new();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < ActivePatterns.Count; i++)
         {
             resultList.Add(false);
         }

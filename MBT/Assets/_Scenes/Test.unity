@@ -486,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e23dc3d272b06246b65dd5fd3f0d697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResultSO: {fileID: 11400000, guid: 71cd443cc2f0ba941824d4a8d16d6996, type: 2}
   CirclePrefab: {fileID: 5428392269490327285, guid: e6aa4920bb23e7947bc0426160848bf9, type: 3}
   CircleParent: {fileID: 5804458594460541093}
   NewQuestionEvent:
@@ -525,18 +526,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -585,7 +574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 135, y: 80.00002}
+  m_AnchoredPosition: {x: 135, y: 80.00003}
   m_SizeDelta: {x: 241, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780593596
@@ -1305,7 +1294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 45.7, y: 0.00000047683716}
+  m_AnchoredPosition: {x: 45.699997, y: 0.00000047683716}
   m_SizeDelta: {x: 42.06, y: 40.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209397532
@@ -2249,6 +2238,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579592173554746015}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &2005182050
 GameObject:

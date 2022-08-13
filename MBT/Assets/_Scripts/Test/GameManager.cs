@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
                 wrongVal++;
             }
         }
+        
         ResultSO.Correct = correctVal;
         ResultSO.Wrong = wrongVal;
         ResultSO.Percentage = correctVal * 100 / resultList.Count;
