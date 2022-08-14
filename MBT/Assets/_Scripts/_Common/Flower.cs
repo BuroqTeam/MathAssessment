@@ -11,6 +11,9 @@ public class Flower : MonoBehaviour
     [HideInInspector]
     public List<Image> LeafGroup;
 
+    [HideInInspector]
+    public Image Center;
+
     private void Awake()
     {
         SetInitial();       
@@ -22,6 +25,19 @@ public class Flower : MonoBehaviour
         foreach (GameObject obj in leafGroup)
         {
             LeafGroup.Add(obj.GetComponent<Image>());
+        }
+        Center = transform.GetChild(1).GetComponent<Image>();
+    }
+
+    public void UpdateFlower(int number)
+    {
+        if (number > 0)
+        {
+            Center.sprite = FlowerSo.CenterOn;
+            for (int i = 0; i < number; i++)
+            {
+                LeafGroup[i].sprite = FlowerSo.LeafOn;
+            }
         }
     }
 

@@ -13,7 +13,7 @@ public class Chapter : MonoBehaviour
     public TMP_Text ChapterNameTxt;
     public IList<Question> questionGroup;
 
-    public ChapterRaw chapterRaw = new ChapterRaw();
+    public ChapterRaw chapterRaw = new();
     JObject jo;
   
 

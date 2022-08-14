@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 354233176}
   - component: {fileID: 354233175}
   - component: {fileID: 354233177}
+  - component: {fileID: 354233178}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -190,8 +191,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
   GridLayout: {fileID: 4819203435645070525}
   ScrollRectObj: {fileID: 1659680619}
+  NumberOfChapter: 0
   ChapterGorup: []
   ChapterPrefab: {fileID: 8267410294984318487, guid: 5e6b95eae22598b4b9616fa660f3071d, type: 3}
+--- !u!114 &354233178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354233174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74edc19e27db7d42b5eaa5820e198d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

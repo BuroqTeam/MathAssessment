@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using I2.Loc;
+using UnityEngine.Events;
 
 public class LanguageManager : MonoBehaviour
 {
+
+    public UnityEvent LanguageSwitched;
 
     private void Awake()
     {
@@ -68,9 +71,11 @@ public class LanguageManager : MonoBehaviour
 		{
 			index = 0;
 			dropdown.value = index;
-		}	
-		LocalizationManager.CurrentLanguage = dropdown.options[index].text;		
-	}
+		}                
+		LocalizationManager.CurrentLanguage = dropdown.options[index].text;
+        LanguageSwitched.Invoke();
+
+    }
 
 
 

@@ -1332,6 +1332,7 @@ GameObject:
   - component: {fileID: 2006311469}
   - component: {fileID: 2006311471}
   - component: {fileID: 2006311470}
+  - component: {fileID: 2006311472}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1379,7 +1380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Baholash
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
   m_sharedMaterial: {fileID: 3648660828451113216, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
@@ -1406,7 +1407,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.05
+  m_fontSize: 34.9
   m_fontSizeBase: 34.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1456,6 +1457,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006311468}
   m_CullTransparentMesh: 1
+--- !u!114 &2006311472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006311468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/TestGroup/BaholashButton
 --- !u!1 &2012881513
 GameObject:
   m_ObjectHideFlags: 0

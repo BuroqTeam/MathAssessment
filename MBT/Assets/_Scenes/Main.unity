@@ -1037,6 +1037,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 622280185, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 622280185, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 800378013, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1152,6 +1160,14 @@ PrefabInstance:
     - target: {fileID: 800378015, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 866376732, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 866376732, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 989478908, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_IsActive
@@ -1389,6 +1405,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1089412841, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089412841, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 1636859898, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1504,6 +1528,38 @@ PrefabInstance:
     - target: {fileID: 1636859900, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712280736, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712280736, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798891594, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798891594, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031951338, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031951338, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636621468312927805, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636621468312927805, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
+      propertyPath: m_fontStyle
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4078852009672209779, guid: 32bb4028385bc2b4d93d0ccaaf0b1bda, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

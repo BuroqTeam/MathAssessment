@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 622280184}
   - component: {fileID: 622280186}
   - component: {fileID: 622280185}
+  - component: {fileID: 5279802980213555463}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -651,6 +652,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5279802980213555463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622280183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &800378013
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +799,7 @@ GameObject:
   - component: {fileID: 866376731}
   - component: {fileID: 866376733}
   - component: {fileID: 866376732}
+  - component: {fileID: 3085846495816754396}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -909,6 +924,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3085846495816754396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866376730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &888444640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1329,7 @@ GameObject:
   - component: {fileID: 1089412840}
   - component: {fileID: 1089412842}
   - component: {fileID: 1089412841}
+  - component: {fileID: 9196654388388338879}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1425,6 +1454,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9196654388388338879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089412839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &1178491426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +2006,7 @@ GameObject:
   - component: {fileID: 1712280735}
   - component: {fileID: 1712280737}
   - component: {fileID: 1712280736}
+  - component: {fileID: 3381428385736371192}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2088,6 +2131,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3381428385736371192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712280734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &1798891592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2155,7 @@ GameObject:
   - component: {fileID: 1798891593}
   - component: {fileID: 1798891595}
   - component: {fileID: 1798891594}
+  - component: {fileID: 6536604419981377013}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2223,6 +2280,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6536604419981377013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798891592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &2031951336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2304,7 @@ GameObject:
   - component: {fileID: 2031951337}
   - component: {fileID: 2031951339}
   - component: {fileID: 2031951338}
+  - component: {fileID: 5272497594000374502}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2358,6 +2429,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5272497594000374502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031951336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &591362616105496232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,7 +2653,6 @@ MonoBehaviour:
   - {fileID: 1068847839}
   - {fileID: 1636859900}
   - {fileID: 338300196}
-  UpdatePanel: {fileID: 0}
 --- !u!1 &5100982832154743481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,6 +2664,7 @@ GameObject:
   - component: {fileID: 5708239364160265314}
   - component: {fileID: 6725085078004296438}
   - component: {fileID: 2636621468312927805}
+  - component: {fileID: 6645745749153457417}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2705,6 +2789,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6645745749153457417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100982832154743481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58dc508e999d404fbbd2a453f039474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressToTerm: Math6/Main/ClassButton
 --- !u!1 &5193256009783960249
 GameObject:
   m_ObjectHideFlags: 0

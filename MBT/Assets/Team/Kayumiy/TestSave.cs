@@ -17,7 +17,10 @@ public class TestSave : MonoBehaviour
         
     }
 
-
+    void OnDisable()
+    {
+        Debug.Log("PrintOnDisable: script was disabled");
+    }
 
     public void LoadGO()
     {
