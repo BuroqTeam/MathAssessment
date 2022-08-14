@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrectAnswer: 0
   Select: 0
+  Pattern2: {fileID: 0}
 --- !u!1 &1203395149681104075
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,4 +230,4 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5

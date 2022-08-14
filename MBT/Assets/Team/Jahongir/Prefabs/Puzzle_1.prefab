@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestionId: 
   Pattern13: {fileID: 0}
+  AttechedPuzzle: {fileID: 0}
 --- !u!1 &4203156823039964664
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,4 +287,4 @@ MonoBehaviour:
     right: 2
     top: 2
     bottom: 2
-  m_Overflow: 0
+  m_Overflow: 5
