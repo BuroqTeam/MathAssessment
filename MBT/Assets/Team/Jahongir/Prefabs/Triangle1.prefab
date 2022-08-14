@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5186203990464494878}
   - component: {fileID: 5186203990464494849}
   - component: {fileID: 2234982982426343182}
-  - component: {fileID: 719415430898504164}
+  - component: {fileID: 2869436476855275702}
   m_Layer: 0
   m_Name: Triangle1
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5186203990464494879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 15}
-  m_LocalScale: {x: 0.506, y: 0.506, z: 0.506}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,33 +112,18 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.49, y: -1.105}
-      - {x: 1.41, y: -0.945}
-      - {x: 1.18, y: -0.545}
-      - {x: 0.79999995, y: 0.114999995}
-      - {x: 0.57, y: 0.515}
-      - {x: 0.42, y: 0.775}
-      - {x: 0.34, y: 0.91499996}
-      - {x: 0.22999999, y: 1.105}
-      - {x: 0.14999999, y: 1.245}
       - {x: 0.099999994, y: 1.295}
       - {x: 0.049999997, y: 1.3249999}
       - {x: -0.06, y: 1.3249999}
-      - {x: -0.13, y: 1.275}
-      - {x: -0.38, y: 0.84499997}
-      - {x: -0.48999998, y: 0.655}
-      - {x: -0.61, y: 0.445}
-      - {x: -1.06, y: -0.33499998}
-      - {x: -1.22, y: -0.615}
-      - {x: -1.3299999, y: -0.805}
+      - {x: -0.12513271, y: 1.2462925}
       - {x: -1.4499999, y: -1.015}
       - {x: -1.49, y: -1.105}
       - {x: -1.49, y: -1.2049999}
       - {x: -1.4699999, y: -1.265}
       - {x: -1.39, y: -1.3149999}
-      - {x: 1.4, y: -1.3149999}
-      - {x: 1.4699999, y: -1.255}
+      - {x: 1.3988906, y: -1.3057923}
       - {x: 1.49, y: -1.2049999}
---- !u!114 &719415430898504164
+--- !u!114 &2869436476855275702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
