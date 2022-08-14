@@ -26,5 +26,6 @@ public class Uchburchak : MonoBehaviour, IPointerClickHandler
             transform.GetComponent<SpriteRenderer>().color = new Color32(0, 148, 255, 255);
             Select = true;
         }
+        Pattern16.CheckButton();
     }
 }

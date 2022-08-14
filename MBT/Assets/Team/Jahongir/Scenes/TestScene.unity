@@ -1680,7 +1680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2972988742635207853, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 2972988743392170904, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1744,7 +1744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2972988744613088906, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 222
       objectReference: {fileID: 0}
     - target: {fileID: 3713893532001686252, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_Name
@@ -1858,6 +1858,14 @@ PrefabInstance:
       propertyPath: FinishEvent
       value: 
       objectReference: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
+    - target: {fileID: 7096873827978170844, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
+      propertyPath: _currentJsonText
+      value: 
+      objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
+    - target: {fileID: 7096873827978170845, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
+      propertyPath: IsAvailable
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
 --- !u!114 &3173335329377423460

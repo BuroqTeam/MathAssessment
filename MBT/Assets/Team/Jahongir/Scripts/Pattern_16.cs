@@ -19,16 +19,7 @@ public class Pattern_16 : GeneralTest
     private int _resultValue = 0;
     bool _isTrue = true;
     Data_16 Pattern_16Obj = new();
-    private void Start()
-    {
-        if (Screen.width / Screen.height < 1.5f)
-        {
-            //Debug.Log("Tablet");
-            transform.GetChild(1).GetComponent<RectTransform>().DOScale(0.8f, 0);
-            transform.GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(0, 0);
-            transform.GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-80, 0);
-        }
-    }
+    
 
     private void OnEnable()
     {
@@ -106,7 +97,7 @@ public class Pattern_16 : GeneralTest
     {
         int createPrefabIndex = -1;
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[0] + "  " + Pattern_16Obj.problem[1] + "  " + Pattern_16Obj.problem[2];
-        transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[1];
+        transform.GetChild(1).GetChild(1).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[1];
         ReadPrefabsIndex();
         for (int i = 1; i < _prefabsIndex.Count; i = i + 2)
         {
@@ -136,8 +127,8 @@ public class Pattern_16 : GeneralTest
                 prefab.GetComponent<Transform>().DOScale(0.7f, 0);
                 prefab.GetComponent<Transform>().DOMoveX(-4.5f + i / 2 * 4.5f, 0);
                 prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
-                transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().DOAnchorPosX(640, 0);
-                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(1340, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(640, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1340, 0);
             }
             for (int j = 0; j < prefab.transform.childCount-1; j++)
             {
