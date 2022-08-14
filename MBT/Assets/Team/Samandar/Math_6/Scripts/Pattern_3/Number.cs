@@ -50,7 +50,7 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
         siblingIndexObj = transform.GetSiblingIndex();
         GameObject parentObj = gameObject.transform.parent.gameObject;
         siblingIndexObj = parentObj.transform.GetSiblingIndex();
-        parentObj.transform.SetSiblingIndex(Pattern3.Numbers.Count - 1);
+        parentObj.transform.SetSiblingIndex(Pattern3.NumbersParent.Count - 1);
     }
        
     void Check()
