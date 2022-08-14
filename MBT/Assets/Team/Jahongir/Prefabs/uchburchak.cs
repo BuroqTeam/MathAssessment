@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class uchburchak : MonoBehaviour, IPointerClickHandler
+public class Uchburchak : MonoBehaviour, IPointerClickHandler
 {
     public bool Select = false;
     public bool Selected;
+    public Pattern_16 Pattern16;
+    private void Start()
+    {
+        if (Selected)
+        {
+            transform.GetComponent<SpriteRenderer>().color = new Color32(0, 148, 255, 255);
+        }
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Run");
         if (Select)
         {
-            transform.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            transform.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 250);
             Select = false;
         }
         else

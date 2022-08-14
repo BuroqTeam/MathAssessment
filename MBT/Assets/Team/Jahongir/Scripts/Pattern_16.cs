@@ -10,9 +10,12 @@ public class Pattern_16 : GeneralTest
 {
     public GameEvent ActNext;
     public GameEvent DeactNext;
+    public GameEvent FinishEvent;
     public List<GameObject> ExistentPrefabs = new();
+    public List<GameObject> ActivePrefabs = new();
+    public GameObject ResultPrefab;
     public List<int> _prefabsIndex;
-    public TextAsset _currentJsonText;
+    private TextAsset _currentJsonText;
     private int _resultValue = 0;
     bool _isTrue = true;
     Data_16 Pattern_16Obj = new();
@@ -32,8 +35,12 @@ public class Pattern_16 : GeneralTest
         if (_isTrue)
         {
             _isTrue = false;
-            //_currentJsonText = GetComponent<Pattern>().Json;
+            _currentJsonText = GetComponent<Pattern>().Json;
             ReadFromJson();
+        }
+        for (int i = 0; i < ActivePrefabs.Count; i++)
+        {
+            ActivePrefabs[i].SetActive(true);
         }
         DisplayQuestion(Pattern_16Obj.title);
         if (ES3.Load<bool>("Pattern_16_Check"))
@@ -43,6 +50,16 @@ public class Pattern_16 : GeneralTest
         else
         {
             DeactNext.Raise();
+        }
+    }
+    private void OnDisable()
+    {
+        if (ActivePrefabs.Count>0)
+        {
+            for (int i = 0; i < ActivePrefabs.Count; i++)
+            {
+                ActivePrefabs[i].SetActive(false);
+            }
         }
     }
     public override void DisplayQuestion(string questionStr)
@@ -89,28 +106,58 @@ public class Pattern_16 : GeneralTest
     {
         int createPrefabIndex = -1;
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[0] + "  " + Pattern_16Obj.problem[1] + "  " + Pattern_16Obj.problem[2];
-        transform.GetChild(1).GetChild(1).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[1];
+        transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[1];
         ReadPrefabsIndex();
         for (int i = 1; i < _prefabsIndex.Count; i = i + 2)
         {
             for (int j = 0; j < ExistentPrefabs.Count; j++)
             {
-                if (_prefabsIndex[i] == ExistentPrefabs[j].transform.childCount)
+                if (_prefabsIndex[i] == ExistentPrefabs[j].transform.childCount-1)
                 {
                     createPrefabIndex = j;
                 }
             }
-            GameObject prefab = Instantiate(ExistentPrefabs[createPrefabIndex], transform.GetChild(1).GetChild(i-1).transform);
+            GameObject prefab = Instantiate(ExistentPrefabs[createPrefabIndex]);
+            ActivePrefabs.Add(prefab);
+            if (Screen.width / Screen.height >= 2)
+            {
+                prefab.GetComponent<Transform>().DOScale(0.9f, 0);
+                prefab.GetComponent<Transform>().DOMoveX(-7 + i / 2 * 7, 0);
+                prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
+            }
+            else if (Screen.width / Screen.height > 1.5f)
+            {
+                prefab.GetComponent<Transform>().DOScale(0.8f, 0);
+                prefab.GetComponent<Transform>().DOMoveX(-6 + i / 2 * 6, 0);
+                prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
+            }
+            else if (Screen.width / Screen.height < 1.5f)
+            {
+                prefab.GetComponent<Transform>().DOScale(0.7f, 0);
+                prefab.GetComponent<Transform>().DOMoveX(-4.5f + i / 2 * 4.5f, 0);
+                prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
+                transform.GetChild(1).GetChild(0).GetComponent<RectTransform>().DOAnchorPosX(640, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(1340, 0);
+            }
+            for (int j = 0; j < prefab.transform.childCount-1; j++)
+            {
+                prefab.transform.GetChild(j).GetComponent<Uchburchak>().Pattern16 = this;
+            }
             if (i<5)
             {
                 for (int q = 0; q < _prefabsIndex[i-1]; q++)
                 {
-                    prefab.transform.GetChild(q).GetComponent<P16_ButtonController>().Selected = true;
+                    prefab.transform.GetChild(q).GetComponent<Uchburchak>().Selected = true;
                 }
-                for (int w = 0; w < prefab.transform.childCount; w++)
+                for (int h = 0; h < prefab.transform.childCount-1; h++)
                 {
-                    prefab.transform.GetChild(w).GetComponent<Button>().enabled = false;
+                    prefab.transform.GetChild(h).GetComponent<PolygonCollider2D>().enabled = false;
                 }
+            }
+            else
+            {
+                ResultPrefab = prefab;
+
             }
         }
         
@@ -119,9 +166,9 @@ public class Pattern_16 : GeneralTest
     public void Result()
     {
         _resultValue = 0;
-        for (int i = 0; i < transform.GetChild(1).GetChild(4).GetChild(0).childCount; i++)
+        for (int i = 0; i < ResultPrefab.transform.childCount-1; i++)
         {
-            if (transform.GetChild(1).GetChild(4).GetChild(0).GetChild(i).GetComponent<P16_ButtonController>().Select == true)
+            if (ResultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
             {
                 _resultValue++;
             }
@@ -141,20 +188,32 @@ public class Pattern_16 : GeneralTest
     public void CheckButton()
     {
         int b = 0;
-        for (int i = 0; i < transform.GetChild(1).GetChild(4).GetChild(0).childCount; i++)
+        for (int i = 0; i < ResultPrefab.transform.childCount-1; i++)
         {
-            if (transform.GetChild(1).GetChild(4).GetChild(0).GetChild(i).GetComponent<P16_ButtonController>().Select == true)
+            if (ResultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
             {
                 b++;
             }
         }
         if (b>0)
         {
-            ActNext.Raise();
+            if (TestManager.Instance.CheckIsLast())
+            {
+                FinishEvent.Raise();
+            }
+            else
+            {
+                ActNext.Raise();
+            }
+            ES3.Save<bool>("Pattern_16_Check", true);
         }
         else
         {
             DeactNext.Raise();
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            ES3.Save<bool>("Pattern_16_Check", false);
+            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            GetComponent<Pattern>().IsStatus = false;
         }
 
     }
@@ -172,7 +231,7 @@ public class Pattern_16 : GeneralTest
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
-        ES3.Save("myList", currentList);
+        ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_16_Check", true);
     }
 }
