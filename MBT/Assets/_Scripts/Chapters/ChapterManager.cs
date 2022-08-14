@@ -10,12 +10,12 @@ public class ChapterManager : MonoBehaviour
     public DataBaseSO [] group;
     public GridLayoutGroup GridLayout;
     public ScrollRect ScrollRectObj;
-    //[HideInInspector]
-    public List<Chapter> ChapterGorup = new List<Chapter>();
+    [HideInInspector]
+    public int NumberOfChapter;
+    public List<Chapter> ChapterGorup = new();
     public  GameObject ChapterPrefab;
 
-    private  TextAsset _curentJson;
-    private int _numberOfChapter;
+    private  TextAsset _curentJson;    
     private DataBaseSO _jsonCollectionSO;
 
     IList<ChapterRaw> _chapterGorup;
@@ -41,16 +41,18 @@ public class ChapterManager : MonoBehaviour
     {
         var jo = JObject.Parse(_curentJson.text);
         JArray chapters = (JArray)jo["chapters"];
-        _numberOfChapter = chapters.Count;
+        NumberOfChapter = chapters.Count;
         _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();        
         CreateChapters();
         SetScrollRect();
     }
 
+   
+
 
     void SetScrollRect()
     {
-        if (_numberOfChapter > 10)
+        if (NumberOfChapter > 10)
         {
             ScrollRectObj.enabled = true;
             Color col = Color.gray;
@@ -67,9 +69,10 @@ public class ChapterManager : MonoBehaviour
     }
     void CreateChapters()
     {       
-        if(_numberOfChapter > 0) 
+        
+        if(NumberOfChapter > 0) 
         {
-            for (int i = 0; i < _numberOfChapter; i++)
+            for (int i = 0; i < NumberOfChapter; i++)
             {
                 GameObject obj = Instantiate(ChapterPrefab);
                 obj.transform.SetParent(GridLayout.transform);

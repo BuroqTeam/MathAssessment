@@ -20,6 +20,7 @@ public class Translator : MonoBehaviour
 
     public void SetText()
     {
+        
         if (GetComponent<TMP_Text>() != null)
         {           
             GetComponent<TMP_Text>().text = I2.Loc.LocalizationManager.GetTranslation(AddressToTerm);
@@ -31,11 +32,7 @@ public class Translator : MonoBehaviour
 
     }
 
-    public void UpdateTextTerm(string newTerm)
-    {
-        AddressToTerm = newTerm;
-        SetText();
-    }
+    
 
 
 }

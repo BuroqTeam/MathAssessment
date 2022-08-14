@@ -16,6 +16,7 @@ public class ResultManager : MonoBehaviour
     private void Awake()
     {
         Panel.transform.DOScale(0, 0);
+       
     }
 
     private void OnEnable()
@@ -26,7 +27,7 @@ public class ResultManager : MonoBehaviour
 
     public void UpdateResultView()
     {
-        Percentage.text = ResultSO.Percentage.ToString();
+        Percentage.text = ResultSO.Percentage.ToString() + "%";
         Correct.text = ResultSO.Correct.ToString();
         Wrong.text = ResultSO.Wrong.ToString();
         Panel.transform.DOScale(1, 1);
