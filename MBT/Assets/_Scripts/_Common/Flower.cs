@@ -31,15 +31,12 @@ public class Flower : MonoBehaviour
 
     public void UpdateFlower(int number)
     {
-        if (number > 0)
-        {
-            Center.sprite = FlowerSo.CenterOn;
-            for (int i = 0; i < number; i++)
-            {
-                LeafGroup[i].sprite = FlowerSo.LeafOn;
-            }
-        }
+        Center.sprite = FlowerSo.CenterOn;
+        LeafGroup[number].sprite = FlowerSo.LeafOn;
+        
     }
+
+   
 
 
 
