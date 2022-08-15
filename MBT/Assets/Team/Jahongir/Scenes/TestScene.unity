@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185050519078503260, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185050519078503261, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
       propertyPath: m_Pivot.x
@@ -421,6 +421,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1980644872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4448156473769659195, guid: 42c56c9512a662b43977b345d611cd4a, type: 3}
+  m_PrefabInstance: {fileID: 1075109506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcb6587feb878047b5cf192d96c2e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011512559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1240,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6879579183142724264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1980644872}
+        m_TargetAssemblyTypeName: Pattern_2, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1597566278255956527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3713893532001686252, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3882215253510736226, guid: 8bffbfc49ce3a8c48a08f39d2e9d1c2d, type: 3}
       propertyPath: m_Pivot.x

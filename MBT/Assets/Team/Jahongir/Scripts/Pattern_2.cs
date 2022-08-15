@@ -10,9 +10,9 @@ public class Pattern_2 : GeneralTest
     public GameEvent FinishEvent;
     public GameObject Button;
     private TextAsset _currentJsonText;
-    private int CorrectAnswerNumber = 0;
-    private int SelectAnswerNumber = 0;
-    private int ResultNumber = 0;
+    public int CorrectAnswerNumber = 0;
+    public int SelectAnswerNumber = 0;
+    public int ResultNumber = 0;
     bool _isTrue = true;
     public List<GameObject> Buttons = new();
     Data_2 Pattern_2Obj = new();
@@ -99,38 +99,38 @@ public class Pattern_2 : GeneralTest
             }   
         }
     }
-    public void Result()
-    {
-        for (int i = 0; i < Buttons.Count; i++)
-        {
-            if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
-            {
-                CorrectAnswerNumber++;
-            }
-            if (Buttons[i].GetComponent<P2_ButtonControl>().Select)
-            {
-                SelectAnswerNumber++;
-            }
-            if (Buttons[i].GetComponent<P2_ButtonControl>().Select && Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
-            {
-                ResultNumber++;
-            }
-        }
-        if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
-        {
-            Debug.Log("Correct");
-            CorrectAnswerNumber = 0;
-            SelectAnswerNumber = 0;
-            ResultNumber = 0;
-        }
-        else
-        {
-            Debug.Log("Wrong");
-            CorrectAnswerNumber = 0;
-            SelectAnswerNumber = 0;
-            ResultNumber = 0;
-        }
-    }
+    //public void Result()
+    //{
+    //    for (int i = 0; i < Buttons.Count; i++)
+    //    {
+    //        if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
+    //        {
+    //            CorrectAnswerNumber++;
+    //        }
+    //        if (Buttons[i].GetComponent<P2_ButtonControl>().Select)
+    //        {
+    //            SelectAnswerNumber++;
+    //        }
+    //        if (Buttons[i].GetComponent<P2_ButtonControl>().Select && Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
+    //        {
+    //            ResultNumber++;
+    //        }
+    //    }
+    //    if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
+    //    {
+    //        Debug.Log("Correct");
+    //        CorrectAnswerNumber = 0;
+    //        SelectAnswerNumber = 0;
+    //        ResultNumber = 0;
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Wrong");
+    //        CorrectAnswerNumber = 0;
+    //        SelectAnswerNumber = 0;
+    //        ResultNumber = 0;
+    //    }
+    //}
     public void CheckButton()
     {
         int a = 0;
@@ -164,16 +164,40 @@ public class Pattern_2 : GeneralTest
     }
     public void Check()
     {
-        Result();
+        //Result();
+        for (int i = 0; i < Buttons.Count; i++)
+        {
+            if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
+            {
+                CorrectAnswerNumber++;
+            }
+            if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer && Buttons[i].GetComponent<P2_ButtonControl>().Select)
+            {
+                ResultNumber++;
+            }
+            if (Buttons[i].GetComponent<P2_ButtonControl>().Select)
+            {
+                SelectAnswerNumber++;
+            }
+
+        }
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
+        if (CorrectAnswerNumber == ResultNumber && ResultNumber== SelectAnswerNumber)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
+            CorrectAnswerNumber = 0;
+            ResultNumber = 0;
+            SelectAnswerNumber = 0;
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
+            CorrectAnswerNumber = 0;
+            ResultNumber = 0;
+            SelectAnswerNumber = 0;
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_2_Check", true);
