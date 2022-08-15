@@ -3,6 +3,7 @@ using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class Pattern_16 : GeneralTest
     public GameEvent FinishEvent;
     public List<GameObject> ExistentPrefabs = new();
     public List<GameObject> ActivePrefabs = new();
-    public GameObject ResultPrefab;
+    private GameObject _resultPrefab;
     public List<int> _prefabsIndex;
     private TextAsset _currentJsonText;
     private int _resultValue = 0;
@@ -109,57 +110,74 @@ public class Pattern_16 : GeneralTest
                 }
             }
             GameObject prefab = Instantiate(ExistentPrefabs[createPrefabIndex]);
-            ActivePrefabs.Add(prefab);
             if (Screen.width / Screen.height >= 2)
             {
                 prefab.GetComponent<Transform>().DOScale(0.9f, 0);
                 prefab.GetComponent<Transform>().DOMoveX(-7 + i / 2 * 7, 0);
                 prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(630, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1315, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-280, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosY(-280, 0);
             }
-            else if (Screen.width / Screen.height > 1.5f)
+            else if (Screen.width / Screen.height > 1.5f || Screen.width == 1280)
             {
                 prefab.GetComponent<Transform>().DOScale(0.8f, 0);
                 prefab.GetComponent<Transform>().DOMoveX(-6 + i / 2 * 6, 0);
                 prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(645, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1300, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-310, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosY(-310, 0);
             }
-            else if (Screen.width / Screen.height < 1.5f)
+            else if (Screen.width / Screen.height < 1.5f && Screen.width>1280)
             {
-                prefab.GetComponent<Transform>().DOScale(0.7f, 0);
-                prefab.GetComponent<Transform>().DOMoveX(-4.5f + i / 2 * 4.5f, 0);
-                prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
-                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(640, 0);
-                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1340, 0);
+                prefab.transform.DOScale(0.7f, 0);
+                prefab.transform.DOMoveX(-4.5f + i / 2 * 4.5f, 0);
+                prefab.transform.DOMoveY(-2.5f, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(692, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1260, 0);
             }
-            for (int j = 0; j < prefab.transform.childCount-1; j++)
+            for (int j = 0; j < prefab.transform.childCount - 1; j++)
             {
                 prefab.transform.GetChild(j).GetComponent<Uchburchak>().Pattern16 = this;
             }
-            if (i<5)
+            if (i < 5)
             {
-                for (int q = 0; q < _prefabsIndex[i-1]; q++)
+                for (int q = 0; q < _prefabsIndex[i - 1]; q++)
                 {
                     prefab.transform.GetChild(q).GetComponent<Uchburchak>().Selected = true;
                 }
-                for (int h = 0; h < prefab.transform.childCount-1; h++)
+                for (int h = 0; h < prefab.transform.childCount - 1; h++)
                 {
                     prefab.transform.GetChild(h).GetComponent<PolygonCollider2D>().enabled = false;
                 }
             }
             else
             {
-                ResultPrefab = prefab;
+                _resultPrefab = prefab;
 
             }
+            ActivePrefabs.Add(prefab);
         }
-        
+       
+        //GameObject operation1 = Instantiate(Operation1);
+        //GameObject operation2 = Instantiate(Operation2);
+        //operation1.transform.GetChild(0).GetComponent<TMP_Text>().text = Pattern_16Obj.problem[1];
+        //foreach (GameObject item in ActivePrefabs)
+        //{
+        //    Debug.Log(item.transform.position);
+        //}
+        //operation1.transform.position = Vector3.Lerp(ActivePrefabs[1].transform.position, ActivePrefabs[0].transform.position, 0.5f);
+        //operation2.transform.position = Vector3.Lerp(ActivePrefabs[2].transform.position, ActivePrefabs[1].transform.position, 0.5f); 
     }
 
     public void Result()
     {
         _resultValue = 0;
-        for (int i = 0; i < ResultPrefab.transform.childCount-1; i++)
+        for (int i = 0; i < _resultPrefab.transform.childCount-1; i++)
         {
-            if (ResultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
+            if (_resultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
             {
                 _resultValue++;
             }
@@ -179,9 +197,9 @@ public class Pattern_16 : GeneralTest
     public void CheckButton()
     {
         int b = 0;
-        for (int i = 0; i < ResultPrefab.transform.childCount-1; i++)
+        for (int i = 0; i < _resultPrefab.transform.childCount-1; i++)
         {
-            if (ResultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
+            if (_resultPrefab.transform.GetChild(i).GetComponent<Uchburchak>().Select == true)
             {
                 b++;
             }
@@ -201,9 +219,8 @@ public class Pattern_16 : GeneralTest
         else
         {
             DeactNext.Raise();
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
             ES3.Save<bool>("Pattern_16_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            GameManager.Instance.CurrentCircleObj.IsDone = false; 
             GetComponent<Pattern>().IsStatus = false;
         }
 

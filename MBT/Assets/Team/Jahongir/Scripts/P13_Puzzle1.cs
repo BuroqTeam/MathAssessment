@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
@@ -10,13 +11,21 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     public Pattern_13 Pattern13;
     public GameObject AttechedPuzzle;
     private int _selectedAnswerId = -1;
+    private int siblingIndexObj;
     private int a = 0;
     private Vector3 _lastPos;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (Pattern13.transform.GetChild(1).GetComponent<VerticalLayoutGroup>().enabled)
+        {
+            Pattern13.transform.GetChild(1).GetComponent<VerticalLayoutGroup>().enabled = false;
+        }
         transform.GetChild(1).transform.DOScale(1.2f, 0);
         _lastPos = transform.GetChild(1).transform.position;
+        siblingIndexObj = transform.GetSiblingIndex();
+        //Debug.Log("indexObject = " + siblingIndexObj);
+        transform.SetSiblingIndex(Pattern13.QuestionPuzles.Count - 1);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -66,5 +75,6 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         }
         _selectedAnswerId = -1;
         Pattern13.CheckButton();
+        transform.SetSiblingIndex(siblingIndexObj);
     }
 }
