@@ -36,7 +36,6 @@ public class ChapterManager : MonoBehaviour
         ReadJSON();
     }
 
-  
     void ReadJSON()
     {
         var jo = JObject.Parse(_curentJson.text);
@@ -46,10 +45,6 @@ public class ChapterManager : MonoBehaviour
         CreateChapters();
         SetScrollRect();
     }
-
-   
-
-
     void SetScrollRect()
     {
         if (NumberOfChapter > 10)
@@ -81,9 +76,9 @@ public class ChapterManager : MonoBehaviour
             }
             GridLayout.gameObject.SetActive(false);
             StartCoroutine(DisplayChapters());
-        }
-       
+        }       
     }
+
     IEnumerator DisplayChapters()
     {   
         
@@ -101,7 +96,23 @@ public class ChapterManager : MonoBehaviour
         { 
             item.UpdateInfo(JObject.Parse(_curentJson.text));            
         }
+        GetComponent<ProgressManager>().CheckSaveCondition();
         yield return new WaitForSeconds(0.1f);
+    }
+
+
+    public int SetProgressValues()
+    {
+        string sample = ChapterGorup[0].questionGroup[0].pattern;
+        int k = 0;
+        for (int i = 0; i < ChapterGorup[0].questionGroup.Count; i++)
+        {
+            if (sample.Equals(ChapterGorup[0].questionGroup[i].pattern))
+            {
+                k++;
+            }
+        }
+        return k;
     }
 
 }

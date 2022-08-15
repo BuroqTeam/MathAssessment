@@ -206,6 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74edc19e27db7d42b5eaa5820e198d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chapterManager: {fileID: 354233177}
+  ProgressSave: {fileID: 11400000, guid: bfe2b15e6e49054408508815a517112f, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

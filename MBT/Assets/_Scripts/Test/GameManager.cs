@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public ProgressKeySO ProgressSave;
     public ResultSO ResultSO;
     public GameObject CirclePrefab;
     public GameObject CircleParent;
@@ -107,6 +109,20 @@ public class GameManager : MonoBehaviour
         ResultSO.Correct = correctVal;
         ResultSO.Wrong = wrongVal;
         ResultSO.Percentage = correctVal * 100 / resultList.Count;
+    }
+
+    public void UpdateProgress()
+    {
+        if (ES3.KeyExists(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString()))
+        {
+            int selectedChapter = ES3.Load<int>("Chapter");
+            Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
+            List<float> list = dict.ElementAt(selectedChapter).Value;
+            int selectedTestGroup = ES3.Load<int>("TestGroup");
+            list[selectedTestGroup] = ResultSO.Percentage;
+            ES3.Save<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString(), dict);
+        }
+        
     }
 
 }

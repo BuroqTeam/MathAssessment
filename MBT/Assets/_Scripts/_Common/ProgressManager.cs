@@ -1,26 +1,22 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
 
-    ChapterManager chapterManager;
+    public ChapterManager chapterManager;
+    public ProgressKeySO ProgressSave;
 
-   
-    private void Start()
+    private void Awake()
     {
         chapterManager = GetComponent<ChapterManager>();
-        //CheckSaveCondition();
     }
 
-    void CheckSaveCondition()
-    {
-        Dictionary<int, List<float>> dict = new();
-        if (ES3.KeyExists("Save" + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString()))
+    public void CheckSaveCondition()
+    {        
+        if (ES3.KeyExists(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString()))
         {
-            UpdateProgressView();
+            UpdateChapterProgressView();
         }
         else
         {
@@ -32,26 +28,29 @@ public class ProgressManager : MonoBehaviour
     {
         Dictionary<int, List<float>> dict = new();
         List<float> list = new();
-
-        // List ni sonini bilish uchun avval JSON ni bittalab o'qib chiqish kerak ertaga shu yerdan davom ettiraman
+        for (int i = 0; i < chapterManager.SetProgressValues(); i++)
+        {
+            list.Add(0);
+        }        
         for (int i = 0; i < chapterManager.NumberOfChapter; i++)
         {
             dict.Add(i, list);
         }
-        ES3.Save<Dictionary<int, List<float>>>("Save" + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString(), dict);
-
+        ES3.Save<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString(), dict);
     }
 
-    void UpdateProgressView()
+    void UpdateChapterProgressView()
     {
         int indexOfChapter = 0; 
-        Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>("Save" + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
+        Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
         foreach (KeyValuePair<int, List<float>> item in dict)
         {
             int leafByPercentage = 0; int maximumTestGroup = 0; float overAllPercentage = 0;
             maximumTestGroup = item.Value.Count;
+            
             for (int i = 0; i < item.Value.Count; i++)
             {
+                Debug.Log(item.Value[i]);
                 if (item.Value[i] > 0)
                 {
                     overAllPercentage += item.Value[i];
@@ -60,21 +59,26 @@ public class ProgressManager : MonoBehaviour
             }
             // General Sliderni update qilish
             var sliderVal = overAllPercentage * 100 / (leafByPercentage * 100);
-            
 
-            // Gulni barglarini update qilish
+            // Gulni barglarini update qilish           
             Chapter chapter = chapterManager.ChapterGorup[indexOfChapter];
             chapter.SliderFill.fillAmount = sliderVal / 100;
-            int numberOfLeaf = leafByPercentage * 10 / maximumTestGroup; 
-            chapter.FlowerObj.UpdateFlower(numberOfLeaf);
+
+            if (leafByPercentage > 0)
+            {
+                leafByPercentage--;
+                int numberOfLeaf = leafByPercentage * 10 / maximumTestGroup;
+                for (int i = 0; i <= numberOfLeaf; i++)
+                {
+                    chapter.FlowerObj.UpdateFlower(i);
+                }
+                
+            }
+            
             indexOfChapter++;
             // do something with entry.Value or entry.Key
         }
     }
-
-
-   
-
 
 
 }

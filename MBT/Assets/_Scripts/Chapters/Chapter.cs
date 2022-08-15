@@ -37,8 +37,7 @@ public class Chapter : MonoBehaviour
         string sample = questionGroup[0].pattern;       
         int k = 0;
         for (int i = 0; i < questionGroup.Count; i++)
-        {
-            
+        {            
             if (sample.Equals(questionGroup[i].pattern))
             {
                 k++;
