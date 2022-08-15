@@ -2,12 +2,14 @@ using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TestGroupManager : MonoBehaviour
 {
+    public ProgressKeySO ProgressSave;
     public DataBaseSO[] group;
    
     public GridLayoutGroup GridLayout;
@@ -73,7 +75,7 @@ public class TestGroupManager : MonoBehaviour
 
 
     void CreateTestGroup()
-    {        
+    {
         if (ES3.Load<int>("NumberOfTestGroup") > 0)
         {
             for (int i = 0; i < ES3.Load<int>("NumberOfTestGroup"); i++)
@@ -83,9 +85,15 @@ public class TestGroupManager : MonoBehaviour
                 obj.transform.localScale = Vector3.one;
                 TestGroupButtons.Add(obj.GetComponent<TestGroup>());
             }
+            
             GridLayout.gameObject.SetActive(false);
             StartCoroutine(DisplayTestGroup());
-        }       
+            UpdateProgress();
+        }
+        else
+        {
+            Debug.Log("FUCK");
+        }
     }
 
 
@@ -105,5 +113,21 @@ public class TestGroupManager : MonoBehaviour
         }
         yield return new WaitForSeconds(0.1f);
 
+    }
+
+    void UpdateProgress()
+    {
+        if (ES3.KeyExists(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString()))
+        {
+            int selectedChapter = ES3.Load<int>("Chapter");
+            Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
+            List<float> list = dict.ElementAt(selectedChapter).Value;
+            int k = 0;
+            foreach (float testGroupProgress in list)
+            {
+                TestGroupButtons[k].RadialSliderValue = testGroupProgress;
+            }           
+        }
+        
     }
 }

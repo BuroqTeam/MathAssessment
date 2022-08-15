@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abf59c2733e7b94992152b0c3c673e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProgressSave: {fileID: 11400000, guid: bfe2b15e6e49054408508815a517112f, type: 2}
   group:
   - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
