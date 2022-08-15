@@ -60,7 +60,7 @@ public class Pattern_4 : GeneralTest
     //{
     //    //TestManager.Instance.PassToNextClicked += Check;//+
     //    //int ranNum = Random.Range(30, 39);
-    //    //Debug.Log("ranNum = " + ranNum);
+    //    
     //    //Mbt.SaveJsonPath("Pattern_4", 0, ranNum /*39*/);
     //    //ES3.Save<string>("LanguageKey", "Uzb");
     //    //ES3.Save<int>("ClassKey", 6);

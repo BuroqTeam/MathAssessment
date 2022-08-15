@@ -68,12 +68,12 @@ public class DropDownP9 : MonoBehaviour
 
     void CheckingAnswer()
     {
-        if (CurrentAnswer == CorrectAnswer)        {
-            Debug.Log("To'g'ri javob tanlandi.");
-        }
-        else if (CurrentAnswer != CorrectAnswer)        {
-            Debug.Log("Noto'g'ri javob tanlandi.");
-        }
+        //if (CurrentAnswer == CorrectAnswer)        {
+        //    Debug.Log("To'g'ri javob tanlandi.");
+        //}
+        //else if (CurrentAnswer != CorrectAnswer)        {
+        //    Debug.Log("Noto'g'ri javob tanlandi.");
+        //}
 
         Pattern9.CheckAllAnswers();
     }

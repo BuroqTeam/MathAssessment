@@ -43,11 +43,11 @@ public class AnswerPattern1 : MonoBehaviour
         gameObject.transform.GetChild(childsCount - 1).gameObject.SetActive(true);
 
         if (_IsTrue)        {
-            Debug.Log("Correct Answer.");
+            //Debug.Log("Correct Answer.");
             PatternOne.CurrentAnswerStatus = true;
         }
         else        {
-            Debug.Log("Wrong Answer.");
+            //Debug.Log("Wrong Answer.");
             PatternOne.CurrentAnswerStatus = false;
         }
         PatternOne.ActeveteButton();

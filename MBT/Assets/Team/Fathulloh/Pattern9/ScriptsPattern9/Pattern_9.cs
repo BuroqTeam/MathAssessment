@@ -162,11 +162,11 @@ public class Pattern_9 : GeneralTest
         }
 
         if (totalCorrectAns == n)        {
-            Debug.Log("Everything is true.");
+            //Debug.Log("Everything is true.");
             CurrentAnswerStatus = true;
         }
         else if (totalFullAns == n)        {
-            Debug.Log("Some thing is wrong.");
+            //Debug.Log("Some thing is wrong.");
             CurrentAnswerStatus = false;
         }
         else

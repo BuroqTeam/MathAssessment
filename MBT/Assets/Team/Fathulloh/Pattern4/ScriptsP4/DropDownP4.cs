@@ -33,7 +33,7 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
         DropDownObj.AddOptions(StrList);        
     }
 
-    //bool _IsFirstTime = true;
+    
     public void DropDown_IndexChangedd(int index)
     {
         CurrentAnswer = StrList[index];
@@ -43,12 +43,7 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
         DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
 
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
-        //if (_IsFirstTime)        {
-        //    _IsFirstTime = false;
-        //    DropDownObj.ClearOptions();
-        //    StrList = new List<string>() {">", "<", "=" };
-        //    DropDownObj.AddOptions(StrList);
-        //}
+        
         CheckingAnswer();
     }
 
@@ -65,10 +60,4 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
     }
 
 
-    
-    //public void OnPointerClick(PointerEventData eventData)
-    //{
-    //    //DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerUp;
-    //    //Debug.Log(888);
-    //}
 }

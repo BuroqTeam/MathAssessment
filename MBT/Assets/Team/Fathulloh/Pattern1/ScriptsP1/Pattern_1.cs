@@ -179,10 +179,10 @@ public class Pattern_1 : GeneralTest
         if (!isTrue)
         {
             //CurrentClickedObj.GetComponent<AnswerPattern1>().WrongClickAction();
-            Debug.Log("Answer is Wrong");
+            //Debug.Log("Answer is Wrong");
         }
-        else
-            Debug.Log("Answer is Correct. The best Answer :) ");
+        //else
+            //Debug.Log("Answer is Correct. The best Answer :) ");
     }
 
 
