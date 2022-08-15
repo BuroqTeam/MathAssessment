@@ -188,10 +188,10 @@ public class Pattern_5 : GeneralTest
             if (TotalCorrectAns == numbers)
             {
                 CurrentAnswerStatus = true;
-                Debug.Log(TotalCorrectAns + " You are win.");
+                //Debug.Log(TotalCorrectAns + " You are win.");
             }
-            else
-                Debug.Log(TotalCorrectAns + " You are fall. ");
+            //else
+                //Debug.Log(TotalCorrectAns + " You are fall. ");
 
             ES3.Save<bool>("Pattern_5_Check", true);
         }
