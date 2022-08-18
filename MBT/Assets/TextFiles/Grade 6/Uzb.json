@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2022-08-18 09:08:44",
+    "date": "2022-08-18 16:28:13",
     "grade": 6,
     "subject": "math",
     "language": "uz"
@@ -2567,7 +2567,7 @@
               "[*]\\frac{6}{8}",
               "\\frac{3}{5}",
               "\\frac{4}{5}",
-              "frac{1}{12}",
+              "\\frac{1}{12}",
               "\\frac{2}{12}",
               "[*]\\frac{9}{12}",
               "\\frac{5}{10}",
@@ -2609,7 +2609,7 @@
               "\\frac{2}{5}",
               "\\frac{3}{5}",
               "[*]\\frac{3}{6}",
-              "frac{5}{6}",
+              "\\frac{5}{6}",
               "\\frac{1}{7}",
               "[*]\\frac{4}{8}",
               "\\frac{8}{9}",
@@ -2819,7 +2819,7 @@
               "3",
               "4",
               "5",
-              "6\""
+              "6"
             ],
             "solution": [
               [
@@ -2841,7 +2841,7 @@
               "5",
               "6",
               "7",
-              "8\""
+              "8"
             ],
             "solution": [
               [
@@ -2862,7 +2862,7 @@
             "problem": [
               "6",
               "7",
-              "8\"",
+              "8",
               "9"
             ],
             "solution": [
@@ -3885,8 +3885,7 @@
             "title": "Kasrlarni o\u02bbsish tartibida joylashtiring",
             "options": [
               "[b]\\frac{7}{20}",
-              "[a]\\frac{1}{4}[d]",
-              "\\frac{7}{10}\"",
+              "[a]\\frac{1}{4}[d]\\frac{7}{10}\"",
               "[c]\\frac{1}{2}"
             ]
           }
@@ -4452,7 +4451,8 @@
             "options": [
               "[*]\\frac{5}{16}",
               "3\\frac{10}{2}",
-              "5\\frac{16}{5}\""
+              "5",
+              "\\frac{16}{5}"
             ]
           }
         },
@@ -4464,7 +4464,8 @@
             "options": [
               "[*]\\frac{1}{7}",
               "36",
-              "7\\frac{1}{36}\""
+              "7",
+              "\\frac{1}{36}"
             ]
           }
         },
@@ -9887,6 +9888,146 @@
           }
         },
         {
+          "id": "math-uz-6-4-61-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "[*]5 \u00d7 70",
+              "-54 \u00f7 9",
+              "[*]-8 \u2013 (-28)",
+              "(-3) + (-7)",
+              "[*]6 \u00d7 3 - 17"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-62-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
+            "options": [
+              "47 + 131",
+              "[*]-81 \u2013 (-18)",
+              "[*]18 \u00d7 (-6)",
+              "[*]-24 \u00f7 6",
+              "-6 + 7 \u00d7 3"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-63-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "[*](-2) \u00d7 (-9)",
+              "[*]0 + 9",
+              "[*]-13 \u2013 (-44)",
+              "-7 \u00f7 7",
+              "20 \u2013 6 \u00d7 5"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-64-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "(-4) + (-9)",
+              "[*]-16 \u2013 (-71)",
+              "-16 \u00d7 4",
+              "-54 \u00f7 9",
+              "[*]36 \u00d7 2 \u00f7 12"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-65-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
+            "options": [
+              "-5 \u00d7 (-7)",
+              "[*]-6 - 30",
+              "[*]-16 + (-14)",
+              "[*]-36 \u00f7 4",
+              "[*]108 \u00f7 18 - 10"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-66-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "[*]100 + 300",
+              "-24 - 22",
+              "8 \u00d7 (-50)",
+              "-88 \u00f7 11",
+              "[*]-12 \u00f7 (-3) + 5"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-67-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "[*]-29 - 24",
+              "46+17",
+              "-2 \u00d7 (-30)",
+              "-72 \u00f7 (-6)",
+              "[*]21 \u00d7 3 - 70"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-68-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
+            "options": [
+              "8 \u2013 (-18)",
+              "[*]\u20131 \u00d7 50",
+              "122 + (-4)",
+              "[*]-85 \u00f7 5",
+              "125 + 10 \u00d7 (-11)"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-69-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
+            "options": [
+              "12 \u2013 (-24)",
+              "[*]-79 + 19",
+              "[*]30 \u00d7 (-6)",
+              "-72 \u00f7 (-12)",
+              "-50 + 12 \u2013 (-45)"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-4-70-12",
+          "pattern": 12,
+          "question": {
+            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "options": [
+              "[*]125 + 100",
+              "-12 -7",
+              "[*]-9 \u00d7 (-8)",
+              "-48 \u00f7 6",
+              "[*]51 \u00d7 2 \u2013 97"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-4-41-13",
           "pattern": 13,
           "question": {
@@ -11963,7 +12104,7 @@
             "title": "1,85 cm = ... mm",
             "options": [
               "[*]18,5 mm",
-              "'185 mm\"",
+              "185 mm",
               "1,85 mm",
               "1 850 mm"
             ]
@@ -12990,6 +13131,19 @@
           }
         },
         {
+          "id": "math-uz-6-6-11-7",
+          "pattern": 7,
+          "question": {
+            "title": "Koordinatalar sistemasida (-3 ; 2) , ( 2 ; 1) , (2 , -3 ) va (-4 ; -4) nuqtalarni belgilab \nto\u2018rtburchak yasang\n",
+            "options": [
+              "-3,2",
+              "2,1",
+              "2,-3",
+              "-4,4"
+            ]
+          }
+        },
+        {
           "id": "math-uz-6-6-11-8",
           "pattern": 8,
           "question": {
@@ -13786,8 +13940,7 @@
               "[*]252",
               "400",
               "300",
-              "252",
-              "405"
+              "252"
             ]
           }
         },
@@ -14675,6 +14828,19 @@
             ],
             "solution": [
               "540"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-7-71-6",
+          "pattern": 6,
+          "question": {
+            "title": "Hisoblang",
+            "problem": [
+              "30\u00f7150\u00d7100"
+            ],
+            "solution": [
+              "33"
             ]
           }
         },
@@ -16357,19 +16523,6 @@
           }
         },
         {
-          "id": "math-uz-6-8-71-6",
-          "pattern": 6,
-          "question": {
-            "title": "Hisoblang",
-            "problem": [
-              "13\u00d7(-5)+98"
-            ],
-            "solution": [
-              "33"
-            ]
-          }
-        },
-        {
           "id": "math-uz-6-8-72-6",
           "pattern": 6,
           "question": {
@@ -16483,6 +16636,19 @@
             ],
             "solution": [
               "283"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-8-71-6",
+          "pattern": 6,
+          "question": {
+            "title": "Hisoblang",
+            "problem": [
+              "13\u00d7(-5)+98"
+            ],
+            "solution": [
+              "33"
             ]
           }
         },
@@ -17664,19 +17830,6 @@
           }
         },
         {
-          "id": "math-uz-6-9-81-6",
-          "pattern": 6,
-          "question": {
-            "title": "Hisoblang",
-            "problem": [
-              "14\u00d72+(\u20138)"
-            ],
-            "solution": [
-              "20"
-            ]
-          }
-        },
-        {
           "id": "math-uz-6-9-82-6",
           "pattern": 6,
           "question": {
@@ -17790,6 +17943,19 @@
             ],
             "solution": [
               "118"
+            ]
+          }
+        },
+        {
+          "id": "math-uz-6-9-81-6",
+          "pattern": 6,
+          "question": {
+            "title": "Hisoblang",
+            "problem": [
+              "14\u00d72+(\u20138)"
+            ],
+            "solution": [
+              "20"
             ]
           }
         },
