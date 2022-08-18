@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class TestGroup : MonoBehaviour
 {
     public TMP_Text NumberTxt;
+    public TMP_Text PercentageTxt;
     public Image RadilaSlider;
     public float RadialSliderValue;
     public ColorCollectionSO colorSO;
@@ -28,6 +29,7 @@ public class TestGroup : MonoBehaviour
     public void UpdateInfo()
     {      
         NumberTxt.text = RawTestGroup.number;
+        PercentageTxt.text = RadialSliderValue.ToString() + "%";
         RadilaSlider.fillAmount = RadialSliderValue / 100;
     }
 

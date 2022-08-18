@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         CreateSaveVariablesForCheck();
         Instance = this;
        
+
     }
 
     void CreateSaveVariablesForCheck()
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTestView(int circleIdentity, bool IsNext)
     {
-        Debug.Log(circleIdentity);
+        
         CircleGroup[CurrentQuestionNumber].MakeDone();
         CurrentQuestionNumber = circleIdentity;        
         CurrentCircleObj = CircleGroup[CurrentQuestionNumber];       
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
         List<bool> resultList = new(ES3.Load<List<bool>>("ResultList"));
         for (int i = 0; i < resultList.Count; i++)
         {
+            Debug.Log(resultList[i]);
             if (resultList[i])
             {
                 correctVal++;
@@ -118,9 +120,10 @@ public class GameManager : MonoBehaviour
             int selectedChapter = ES3.Load<int>("Chapter");
             Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
             List<float> list = dict.ElementAt(selectedChapter).Value;
-            int selectedTestGroup = ES3.Load<int>("TestGroup");
+            int selectedTestGroup = ES3.Load<int>("TestGroup") - 1;            
             list[selectedTestGroup] = ResultSO.Percentage;
             ES3.Save<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString(), dict);
+
         }
         
     }
