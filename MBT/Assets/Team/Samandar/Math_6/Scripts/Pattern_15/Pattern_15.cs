@@ -84,12 +84,23 @@ public class Pattern_15 : GeneralTest
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_15");
         DataObj = jo.ToObject<Data_15>();
     }
-
+    string str;
     void StartMetod()
     {
         List<string> problem1 = DataObj.problem;
-        Problem.transform.GetChild(0).GetComponent<TEXDraw>().text = problem1[0];
-        
+        for (int i = 0; i < problem1.Count; i++)
+        {
+            if (i == 0)
+            {
+                str += problem1[i];
+            }
+            else
+            {
+                str += "," + " " + problem1[i];
+            }
+            Problem.transform.GetChild(0).GetComponent<TEXDraw>().text = str;
+        }
+
     }
     public override void DisplayQuestion(string questionStr)
     {
