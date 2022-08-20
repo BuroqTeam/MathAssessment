@@ -89,7 +89,17 @@ public class Pattern_1 : GeneralTest
 
         if (n == 4)
         {
+            yPos = 187.5f;
+            yLength = 125;
+        }
+        else if (n == 5)
+        {
             yPos = 250;
+            yLength = 125;
+        }
+        else if (n == 6) 
+        {
+            yPos = 312.5f;
             yLength = 125;
         }
 
@@ -141,7 +151,6 @@ public class Pattern_1 : GeneralTest
         //ES3.Save("myList", currentList);
 
         ES3.Save<bool>("Pattern_1_Check", true);
-
         //ActivateNext();
     }
 
@@ -162,7 +171,6 @@ public class Pattern_1 : GeneralTest
         {
             ABCD[i].GetComponent<AnswerPattern1>().DisableObject();
         }
-
         //StartCoroutine(ShowWrongClick());
     }
 

@@ -227,7 +227,17 @@ public class Pattern_4 : GeneralTest
             if (currentAnswer != null)            
                 totalFullAns++;
             if (correctAnswer == currentAnswer)            
-                totalCorrectAns++;            
+                totalCorrectAns++;
+
+            //if (currentAnswer != null)
+            //{
+            //    Debug.Log("i = " + i + " currentAnswer = " + currentAnswer.Length);
+            //}
+            //else if (currentAnswer == null)
+            //{
+            //    Debug.Log("i = " + i + " currentAnswer  = null");
+            //}
+
         }
 
         if ((totalCorrectAns == n) && (totalFullAns == n))
@@ -245,7 +255,7 @@ public class Pattern_4 : GeneralTest
         correctCount = 0;
         for (int i = 0; i < Pattern_4Obj.options.Count; i++)
         {
-            string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer;
+            string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CurrentAnswer;
             if (currentAnswer.Length == 1)
             {
                 correctCount++;

@@ -412,10 +412,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsStatus: 0
   PatternID: 4
-  IsAvailable: 0
+  IsAvailable: 1
   Event: {fileID: 11400000, guid: 59456c10ba3b2334fb455fefabd02af1, type: 2}
   QuestionNumber: 0
-  Json: {fileID: 0}
+  Json: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
 --- !u!114 &8918953886314529732
 MonoBehaviour:
   m_ObjectHideFlags: 0
