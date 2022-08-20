@@ -20,7 +20,7 @@ public class Pattern_9 : GeneralTest
 
     public TMP_Text TextForTranslating;
     float xPos, yDistance, xDistance;
-    int totalFullAns, totalCorrectAns;
+    public int totalFullAns, totalCorrectAns;
 
     bool _isTrue = true;
 
@@ -76,8 +76,7 @@ public class Pattern_9 : GeneralTest
 
 
     void CreatePrefabs()
-    {
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern_9Obj.title;  //-
+    {        
         int optionsCount = Pattern_9Obj.options.Count;
         /*Pattern_9Obj.options = */Pattern_9Obj.options.ShuffleList();
 
@@ -85,15 +84,16 @@ public class Pattern_9 : GeneralTest
         xPos = xDistance - ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.width;
         yDistance = xPos + ParentComparisonPrefab.transform.GetChild(0).GetComponent<RectTransform>().rect.height;
         //Debug.Log("xDistance = " + xDistance + " yDistance = " + yDistance);
-
+        
         for (int i = 0; i < optionsCount; i++)
         {
             GameObject obj = Instantiate(ParentComparisonPrefab, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
-            //obj.transform.GetChild(1).GetComponent<DropDownP9>().TextForTranslating = TextForTranslating.text;
-            if (i != 0)             {
-                obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
-            }              
+            obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y + (float)(optionsCount - 1) / 2 * yDistance - yDistance * i, oldPos.z);
+            
+            //if (i != 0)             {
+            //    obj.transform.localPosition = new Vector3(oldPos.x, oldPos.y - yDistance * i, oldPos.z);
+            //}              
             ComparisonObjects.Add(obj);
         }
 
@@ -129,7 +129,6 @@ public class Pattern_9 : GeneralTest
         ES3.Save("ResultList", currentList);
 
         ES3.Save<bool>("Pattern_9_Check", true);
-
         //ActivateNext();
     }
 
@@ -144,15 +143,16 @@ public class Pattern_9 : GeneralTest
 
 
     public bool CurrentAnswerStatus;
-    int correctCount;
+    public int correctCount;
     public void CheckAllAnswers()
     {
         int n = Pattern_9Obj.options.Count;
 
+        totalFullAns = 0;
+        totalCorrectAns = 0;
+
         for (int i = 0; i < n; i++)
         {
-            totalFullAns = 0;
-            totalCorrectAns = 0;
             string currentAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer;
             string correctAnswer = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CorrectAnswer;
             if (currentAnswer != null)
@@ -186,14 +186,11 @@ public class Pattern_9 : GeneralTest
 
         if (correctCount == Pattern_9Obj.options.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
+            if (TestManager.Instance.CheckIsLast())            
+                FinishEvent.Raise();            
+            else            
                 ActiveNext.Raise();
-            }
+            
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_9_Check", true);
         }
