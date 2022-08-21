@@ -25,16 +25,18 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
         Order();
         if (LastPos != null)
         {
+            
             LastPos.GetComponent<NumberArea>().CurrentNumber = null;
             LastPos.GetComponent<NumberArea>()._IsEmpty = true;
             LastPos = null;            
         }
-        
+        //Pattern3.ClearData();
     }
     
     public void OnEndDrag(PointerEventData eventData)
     {        
         Check();
+        Pattern3.CheckingAnswer();
         Pattern3.OnTrue();
     }
 
@@ -67,7 +69,7 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
                 Positions[i].GetComponent<NumberArea>()._IsEmpty = false;
                 Positions[i].GetComponent<NumberArea>().CurrentNumber = gameObject.transform.GetChild(0).GetComponent<TEXDraw>().text;
                 _rectTransform.DOScale(1.25f, 0.2f);                
-                Pattern3.CheckingAnswer();
+               
                 break;
             }
             else
