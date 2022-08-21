@@ -392,9 +392,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3882215253510736226}
-  - component: {fileID: 7096873827978170844}
   - component: {fileID: 7096873827978170845}
   - component: {fileID: 3156335056034666093}
+  - component: {fileID: 7096873827978170844}
   m_Layer: 5
   m_Name: Pattern_16
   m_TagString: Untagged
@@ -424,31 +424,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7096873827978170844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3713893532001686252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aaa56d70f2af884f875026799e9df62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestionText: {fileID: 0}
-  ActNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
-  FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  ExistentPrefabs:
-  - {fileID: 2529904085024041315, guid: c22d5fb4b33281344945b35fe18873f5, type: 3}
-  - {fileID: 2529904085024041315, guid: ec6febd2219831646a3f542266803df2, type: 3}
-  - {fileID: 2529904085024041315, guid: 796160f9ba027f2469c2a6c020086413, type: 3}
-  - {fileID: 2529904085024041315, guid: a60ca552315626949bd3f1b81d52e950, type: 3}
-  - {fileID: 2529904085024041315, guid: 458abcfed71b9e24a888da70ed733796, type: 3}
-  ActivePrefabs: []
-  ResultPrefab: {fileID: 0}
-  _prefabsIndex: 
 --- !u!114 &7096873827978170845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +470,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7096873827978170844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713893532001686252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaa56d70f2af884f875026799e9df62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
+  ActNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
+  FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
+  ExistentPrefabs:
+  - {fileID: 2529904085024041315, guid: c22d5fb4b33281344945b35fe18873f5, type: 3}
+  - {fileID: 2529904085024041315, guid: ec6febd2219831646a3f542266803df2, type: 3}
+  - {fileID: 2529904085024041315, guid: 796160f9ba027f2469c2a6c020086413, type: 3}
+  - {fileID: 2529904085024041315, guid: a60ca552315626949bd3f1b81d52e950, type: 3}
+  - {fileID: 2529904085024041315, guid: 458abcfed71b9e24a888da70ed733796, type: 3}
+  ActivePrefabs: []
+  _prefabsIndex: 
 --- !u!1 &6723561937052488212
 GameObject:
   m_ObjectHideFlags: 0

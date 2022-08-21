@@ -72,9 +72,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2287606041957351314}
-  - component: {fileID: 2287606041957351315}
   - component: {fileID: 2287606041957351316}
   - component: {fileID: 6614019221387566156}
+  - component: {fileID: 2287606041957351315}
   m_Layer: 5
   m_Name: Pattern_12
   m_TagString: Untagged
@@ -103,31 +103,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2287606041957351315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2287606041957351313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8272ed7a08c31a4186689ba9ff6fa36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestionText: {fileID: 0}
-  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
-  Answers: {fileID: 2287606041207346128}
-  AlphabetList: 
-  ABCD: []
-  ButtonPrefabs: {fileID: 56981999180755985, guid: 0a264c60c819c0d4081a9d474dd708c4, type: 3}
-  _Pattern: 0
-  _IsTrue: 0
-  buttonAnswer: {fileID: 922828931630110769, guid: 0a264c60c819c0d4081a9d474dd708c4, type: 3}
-  _istrue: 1
-  WrongAns: 0
 --- !u!114 &2287606041957351316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,3 +149,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2287606041957351315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287606041957351313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8272ed7a08c31a4186689ba9ff6fa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
+  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
+  Answers: {fileID: 2287606041207346128}
+  AlphabetList: 
+  ABCD: []
+  ButtonPrefabs: {fileID: 56981999180755985, guid: 0a264c60c819c0d4081a9d474dd708c4, type: 3}
+  _Pattern: 0
+  _IsTrue: 0
+  buttonAnswer: {fileID: 922828931630110769, guid: 0a264c60c819c0d4081a9d474dd708c4, type: 3}
+  _istrue: 1
+  WrongAns: 0
