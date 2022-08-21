@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6931012827513416666}
-  - component: {fileID: 6931012827513416667}
   - component: {fileID: 3460772117772722969}
   - component: {fileID: -8704702543553699973}
+  - component: {fileID: 6931012827513416667}
   m_Layer: 5
   m_Name: Pattern_1
   m_TagString: Untagged
@@ -39,28 +39,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6931012827513416667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6931012827513416665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestionText: {fileID: 0}
-  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
-  FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  AlphabetList: 
-  ABCD: []
-  PrefabA: {fileID: 56981999180755985, guid: b62f4130383f1eb4fbb1f5c4bbe3ee8b, type: 3}
-  MainParent: {fileID: 0}
-  CurrentClickedObj: {fileID: 0}
-  CurrentAnswerStatus: 0
 --- !u!114 &3460772117772722969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +85,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6931012827513416667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931012827513416665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2afc18167e0cb45a4e0e59ef96d340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
+  FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
+  AlphabetList: 
+  ABCD: []
+  PrefabA: {fileID: 56981999180755985, guid: b62f4130383f1eb4fbb1f5c4bbe3ee8b, type: 3}
+  MainParent: {fileID: 0}
+  CurrentClickedObj: {fileID: 0}
+  CurrentAnswerStatus: 0

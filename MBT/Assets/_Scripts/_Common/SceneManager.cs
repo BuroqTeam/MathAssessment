@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class SceneManager : MonoBehaviour
 {
     public AssetReference Scene;
-
+    public AssetReference CurrentScene;
 
    
 
@@ -16,6 +16,11 @@ public class SceneManager : MonoBehaviour
     {
         
         Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
+    }
+
+    public void LoadCurrentScene()
+    {
+        Addressables.LoadSceneAsync(CurrentScene, LoadSceneMode.Single).Completed += SceneLoaded;
     }
 
 
