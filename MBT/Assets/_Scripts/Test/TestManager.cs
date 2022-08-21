@@ -83,13 +83,14 @@ public class TestManager : MonoBehaviour
         List<JObject> jsonList = new();
         int k = ES3.Load<int>(testGroupKey);
         k--;
-        List<int> questionIndexList = new ();
+        List<int> questionIndexList = new ();        
         for (int i = 0; i < _numberOfQuestions; i++)
-        {
+        {            
             JObject singleQuestion = (JObject)_jo[jChaptersPath][ES3.Load<int>(chapterKey)][jQuestionsPath][k];
             questionIndexList.Add(k);
             jsonList.Add(singleQuestion);
             k += _numberOfQuestions;
+
         }
         CreateExistedPatterns(jsonList, questionIndexList);
     }

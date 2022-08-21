@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+
     public ProgressKeySO ProgressSave;
     public ResultSO ResultSO;
     public GameObject CirclePrefab;
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
        
 
     }
+
+    
 
     void CreateSaveVariablesForCheck()
     {
