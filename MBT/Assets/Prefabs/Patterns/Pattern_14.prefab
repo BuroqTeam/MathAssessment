@@ -153,9 +153,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1026507422495226351}
-  - component: {fileID: 7194076158299952881}
   - component: {fileID: 1026507422495226350}
   - component: {fileID: 8962076291593808891}
+  - component: {fileID: 7194076158299952881}
   m_Layer: 5
   m_Name: Pattern_14
   m_TagString: Untagged
@@ -185,31 +185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7194076158299952881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026507422495226348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0cbf63b982e44243abc8c9179349c7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QuestionText: {fileID: 0}
-  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
-  Problem: {fileID: 1026507422694556708}
-  Solution: {fileID: 1026507421238151610}
-  ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
-  buttonGroup: []
-  colorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
-  AnswerPattern_14: {fileID: 8913990965073167448, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
-  _click: 0
-  _pattenBool: 0
-  _istrue: 1
 --- !u!114 &1026507422495226350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +231,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7194076158299952881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026507422495226348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cbf63b982e44243abc8c9179349c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
+  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
+  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
+  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
+  Problem: {fileID: 1026507422694556708}
+  Solution: {fileID: 1026507421238151610}
+  ConsiderationsPrefabs: {fileID: 7884895334267356496, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
+  buttonGroup: []
+  colorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
+  AnswerPattern_14: {fileID: 8913990965073167448, guid: e9d02d0a7893ced4681c42dbc501b624, type: 3}
+  _click: 0
+  _pattenBool: 0
+  _istrue: 1
 --- !u!1 &1026507422694556708
 GameObject:
   m_ObjectHideFlags: 0

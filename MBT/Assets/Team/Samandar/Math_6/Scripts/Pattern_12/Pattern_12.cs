@@ -81,19 +81,43 @@ public class Pattern_12 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-            if (_jsonText != null)
-            {
-
-            }
-            else
-            {
-
-            }
             ReadFromJson();
-
+            StartMetod();
         }
         DisplayQuestion(DataObj.title);
 
+        //for (char ci = 'A'; ci <= 'Z'; ++ci)
+        //{
+        //    AlphabetList.Add(ci);
+        //}
+        //List<string> str = DataObj.options;
+        //for (int i = 0; i < str.Count; i++)
+        //{
+        //    GameObject obj = Instantiate(ButtonPrefabs, Answers.transform);
+        //    obj.transform.GetChild(0).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
+        //    ABCD.Add(obj);
+        //}
+
+
+        //str = str.ShuffleList();
+        //DataObj.options = str;
+
+        //for (int i = 0; i < ABCD.Count; i++)
+        //{
+        //    var likeName = DataObj.options[i];
+        //    ABCD[i].GetComponent<ButtonAnswer>().Pattern12 = this;
+
+        //    if (likeName.Contains('*'))
+        //    {
+        //        ABCD[i].GetComponent<ButtonAnswer>()._pattern = true;
+        //        likeName = likeName.Replace("[*]", "");
+        //    }
+        //    ABCD[i].GetComponent<ButtonAnswer>().WriteCurrentAnswer(likeName);
+        //}
+    }
+    
+    void StartMetod()
+    {
         for (char ci = 'A'; ci <= 'Z'; ++ci)
         {
             AlphabetList.Add(ci);
@@ -123,7 +147,6 @@ public class Pattern_12 : GeneralTest
             ABCD[i].GetComponent<ButtonAnswer>().WriteCurrentAnswer(likeName);
         }
     }
-
     
     public void Check()
     {
