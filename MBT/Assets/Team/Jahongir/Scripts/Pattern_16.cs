@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Pattern_16 : GeneralTest
 {
@@ -14,6 +13,8 @@ public class Pattern_16 : GeneralTest
     public GameEvent FinishEvent;
     public List<GameObject> ExistentPrefabs = new();
     public List<GameObject> ActivePrefabs = new();
+    public List<GameObject> Operations = new();
+    public GameObject _operation1;
     private GameObject _resultPrefab;
     public List<int> _prefabsIndex;
     private TextAsset _currentJsonText;
@@ -34,6 +35,10 @@ public class Pattern_16 : GeneralTest
         {
             ActivePrefabs[i].SetActive(true);
         }
+        for (int i = 0; i < Operations.Count; i++)
+        {
+            Operations[i].SetActive(true);
+        }
         DisplayQuestion(Pattern_16Obj.title);
         if (ES3.Load<bool>("Pattern_16_Check"))
         {
@@ -52,6 +57,11 @@ public class Pattern_16 : GeneralTest
             {
                 ActivePrefabs[i].SetActive(false);
             }
+            for (int i = 0; i < Operations.Count; i++)
+            {
+                Operations[i].SetActive(false);
+            }
+
         }
     }
     public override void DisplayQuestion(string questionStr)
@@ -100,6 +110,13 @@ public class Pattern_16 : GeneralTest
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[0] + "  " + Pattern_16Obj.problem[1] + "  " + Pattern_16Obj.problem[2];
         transform.GetChild(1).GetChild(1).GetComponent<TEXDraw>().text = Pattern_16Obj.problem[1];
         ReadPrefabsIndex();
+        GameObject operation1 = Instantiate(_operation1);
+        GameObject operation2 = Instantiate(_operation1);
+        Operations.Add(operation1);
+        Operations.Add(operation2);
+        operation1.GetComponent<TMP_Text>().text = Pattern_16Obj.problem[1];
+        operation2.GetComponent<TMP_Text>().text = "=";
+
         for (int i = 1; i < _prefabsIndex.Count; i = i + 2)
         {
             for (int j = 0; j < ExistentPrefabs.Count; j++)
@@ -119,24 +136,24 @@ public class Pattern_16 : GeneralTest
                 transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1315, 0);
                 transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-280, 0);
                 transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosY(-280, 0);
+                operation1.GetComponent<RectTransform>().DOAnchorPosX(-3.5f, 0);
+                operation1.GetComponent<RectTransform>().DOAnchorPosY(-2.5f, 0);
+                operation2.GetComponent<RectTransform>().DOAnchorPosX(3.5f, 0);
+                operation2.GetComponent<RectTransform>().DOAnchorPosY(-2.5f, 0);
             }
-            else if (Screen.width / Screen.height > 1.5f || Screen.width == 1280)
+            else 
             {
-                prefab.GetComponent<Transform>().DOScale(0.8f, 0);
-                prefab.GetComponent<Transform>().DOMoveX(-6 + i / 2 * 6, 0);
-                prefab.GetComponent<Transform>().DOMoveY(-2.5f, 0);
-                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(645, 0);
-                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1300, 0);
-                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-310, 0);
-                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosY(-310, 0);
-            }
-            else if (Screen.width / Screen.height < 1.5f && Screen.width>1280)
-            {
-                prefab.transform.DOScale(0.7f, 0);
+                prefab.transform.DOScale(0.5f, 0);
                 prefab.transform.DOMoveX(-4.5f + i / 2 * 4.5f, 0);
                 prefab.transform.DOMoveY(-2.5f, 0);
-                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(692, 0);
-                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(1260, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosX(-255, 0);
+                transform.GetChild(1).GetChild(1).GetComponent<RectTransform>().DOAnchorPosY(-50, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosX(230, 0);
+                transform.GetChild(1).GetChild(3).GetComponent<RectTransform>().DOAnchorPosY(-50, 0);
+                operation1.GetComponent<RectTransform>().DOAnchorPosX(-2.2f, 0);
+                operation1.GetComponent<RectTransform>().DOAnchorPosY(-2.5f, 0);
+                operation2.GetComponent<RectTransform>().DOAnchorPosX(2.25f, 0);
+                operation2.GetComponent<RectTransform>().DOAnchorPosY(-2.5f, 0);
             }
             for (int j = 0; j < prefab.transform.childCount - 1; j++)
             {
@@ -160,16 +177,10 @@ public class Pattern_16 : GeneralTest
             }
             ActivePrefabs.Add(prefab);
         }
-       
-        //GameObject operation1 = Instantiate(Operation1);
-        //GameObject operation2 = Instantiate(Operation2);
-        //operation1.transform.GetChild(0).GetComponent<TMP_Text>().text = Pattern_16Obj.problem[1];
-        //foreach (GameObject item in ActivePrefabs)
-        //{
-        //    Debug.Log(item.transform.position);
-        //}
+
+        
         //operation1.transform.position = Vector3.Lerp(ActivePrefabs[1].transform.position, ActivePrefabs[0].transform.position, 0.5f);
-        //operation2.transform.position = Vector3.Lerp(ActivePrefabs[2].transform.position, ActivePrefabs[1].transform.position, 0.5f); 
+        //Operations.Add(operation1);//operation2.transform.position = Vector3.Lerp(ActivePrefabs[2].transform.position, ActivePrefabs[1].transform.position, 0.5f);
     }
 
     public void Result()
