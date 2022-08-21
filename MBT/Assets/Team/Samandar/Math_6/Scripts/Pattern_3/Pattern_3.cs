@@ -66,6 +66,11 @@ public class Pattern_3 : GeneralTest
             GetComponent<Pattern>().IsStatus = false;
         }
     }
+
+    private void Start()
+    {
+        JsonList();
+    }
     private void OnEnable()
     {
         if (ES3.Load<bool>("Pattern_3_Check"))
@@ -82,9 +87,9 @@ public class Pattern_3 : GeneralTest
             _jsonText = GetComponent<Pattern>().Json;
             ReadFromJson();
             StartMetod();
-        }          
+        }
 
-
+        
         DisplayQuestion(DataObj.title);
 
     }
@@ -151,90 +156,114 @@ public class Pattern_3 : GeneralTest
     {
         base.DisplayQuestion(questionStr);
     }
+    //public void ClearData()
+    //{
+    //    List<string> solution1 = DataObj.solution[0];
+    //    int javoblarSoni = solution1.Count - 1;
+    //    for (int i = 0; i < javoblarSoni; i++)
+    //    {
+    //        if (javoblarSoni == 4)
+    //        {
+    //            bool _istrue = CheckList4[i].transform.GetChild(0).GetComponent<NumberArea>()._IsEmpty;
+    //            if (!_istrue)
+    //            {
+    //                Ansver.Clear();
+    //            }
+    //        }
 
+    //    }
+    //}
 
-
+    public int totalBoxNumber;
+    public bool _isWorking = true;
     public void CheckingAnswer()
     {
         CorrectAnsNumbers = 0;
         List<string> solution1 = DataObj.solution[0];
-        int javoblarSoni = solution1.Count-1;
+        int javoblarSoni = solution1.Count;
         Ansver.Clear();
-        for (int i = 0; i < javoblarSoni; i++)
+
+        if (_isWorking)
         {
-            if (javoblarSoni == 2)
+            _isWorking = false;
+            totalBoxNumber = javoblarSoni;
+        }
+
+        for (int i = 0; i < totalBoxNumber; i++)
+        {
+            if (totalBoxNumber == 2)
             {
                 string mainString2 = CheckList2[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
-                Ansver.Add(mainString2);
-                for (int j = 0; j < Ansver.Count; j++)
-                {
-                    
-                }
+                Ansver.Add(mainString2);              
             }
-            else if (javoblarSoni == 4)
+            else if (totalBoxNumber == 4)
             {
                 string mainString4 = CheckList4[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
-                Ansver.Add(mainString4);                
-                for (int j = 0; j < Ansver.Count; j++)
-                {
-                    
-                }
+                Ansver.Add(mainString4);
+                Debug.Log(totalBoxNumber);
             }
-            else if (javoblarSoni == 6)
+            else if (totalBoxNumber == 6)
             {                            
                 string mainString6 = CheckList6[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
-                Ansver.Add(mainString6);
-                for (int j = 0; j < Ansver.Count; j++)
-                {
-                    
-                }
-            }           
-        }         
+                Ansver.Add(mainString6);              
+            }
+            
+        }
+        Debug.Log(1);
     }
 
     public void Check()
-    {
-        
+    {        
         List<bool> currentList = new();
-
         currentList = ES3.Load<List<bool>>("ResultList"); 
-
-        newSolution = new List<List<string>>(DataObj.solution);       
-
-        foreach (List<string> list in newSolution)
-        {
-            var middleValue = list[list.Count / 2];
-            list.Remove(middleValue);
-        }
-
-
-        int k = 0;
-        foreach (List<string> list in newSolution)
         
+        int k = 0;
+
+        PrintList(Ansver);
+        foreach (List<string> list in newSolution)        
         {
+            PrintList(list);
             if (list.SequenceEqual(Ansver))
-            {
-                
+            {                
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
                 Debug.Log("Corrent");
+                break;
             }
             else
             {
                 k++;
-            }            
+            }           
         }
 
         if (k.Equals(newSolution.Count))
         {
-            
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
+            
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_3_Check", true);
         
     }
 
+    void JsonList()
+    {
+        newSolution = new List<List<string>>(DataObj.solution);
+        foreach (List<string> list in newSolution)
+        {
+            var middleValue = list[list.Count / 2];
+            list.Remove(middleValue);
+        }
+    }
+
+    void PrintList(List<string> list)
+    {
+        foreach (string str in list)
+        {
+            Debug.Log(str);
+        }
+        Debug.Log("__________");
+    }
 }
 
 [SerializeField]
