@@ -26,7 +26,7 @@ public class Pattern_14 : GeneralTest
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        //AnswerPattern_14._PattenBool = _pattenBool;
+       
         if (_pattenBool == true && _click == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;

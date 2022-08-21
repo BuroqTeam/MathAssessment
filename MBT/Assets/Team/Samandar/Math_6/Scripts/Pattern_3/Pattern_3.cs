@@ -206,7 +206,7 @@ public class Pattern_3 : GeneralTest
             var middleValue = list[list.Count / 2];
             list.Remove(middleValue);
         }
-        SmallList.Add("3");  
+
 
         int k = 0;
         foreach (List<string> list in newSolution)
