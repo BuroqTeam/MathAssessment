@@ -150,12 +150,12 @@ public class Pattern_12 : GeneralTest
         if (WrongAns != 0)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Wrong");
+            Debug.Log("Correct"); 
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Correct");
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_12_Check", true);
