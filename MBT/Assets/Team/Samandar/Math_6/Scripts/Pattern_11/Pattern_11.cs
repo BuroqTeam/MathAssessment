@@ -188,15 +188,18 @@ public class Pattern_11 : GeneralTest
 
         if (Correct.SequenceEqual(Answer))
         {
-            
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else if (ReverseCorrect.SequenceEqual(Answer))
         {
-            
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else
         {
-           
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_11_Check", true);

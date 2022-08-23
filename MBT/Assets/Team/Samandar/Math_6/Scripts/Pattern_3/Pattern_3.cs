@@ -200,7 +200,7 @@ public class Pattern_3 : GeneralTest
             {
                 string mainString4 = CheckList4[i].transform.GetChild(0).GetComponent<NumberArea>().CurrentNumber;
                 Ansver.Add(mainString4);
-                Debug.Log(totalBoxNumber);
+                
             }
             else if (totalBoxNumber == 6)
             {                            
@@ -219,10 +219,10 @@ public class Pattern_3 : GeneralTest
         
         int k = 0;
 
-        PrintList(Ansver);
+        
         foreach (List<string> list in newSolution)        
         {
-            PrintList(list);
+            
             if (list.SequenceEqual(Ansver))
             {                
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
@@ -256,14 +256,7 @@ public class Pattern_3 : GeneralTest
         }
     }
 
-    void PrintList(List<string> list)
-    {
-        foreach (string str in list)
-        {
-            Debug.Log(str);
-        }
-        Debug.Log("__________");
-    }
+   
 }
 
 [SerializeField]
