@@ -191,10 +191,12 @@ public class Pattern_4 : GeneralTest
         if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         //ES3.Save("myList", currentList);
