@@ -36,7 +36,7 @@ public class Pattern_3 : GeneralTest
     public void OnTrue()
     {
         n = 0;
-        List<string> problem1 = DataObj.problem;
+        List<string> problem1 = DataObj.solution[0];
         for (int i = 0; i < problem1.Count; i++)
         {
             bool _onTrue = NumberInstantiate[i].GetComponent<NumberArea>()._IsEmpty;
