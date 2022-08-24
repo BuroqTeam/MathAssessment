@@ -57,10 +57,12 @@ public class Pattern_6 : GeneralTest
         if (transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text == Pattern_6Obj.solution[0])
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_6_Check", true);

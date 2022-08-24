@@ -120,10 +120,12 @@ public class Pattern_13 : GeneralTest
         if (_resultNumber == QuestionPuzles.Count)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_13_Check", true);

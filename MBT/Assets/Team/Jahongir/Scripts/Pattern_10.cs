@@ -7,8 +7,11 @@ using MBT.Extension;
 using System;
 using UnityEngine.UI;
 
-public class Pattern_10 : MonoBehaviour
+public class Pattern_10 : GeneralTest
 {
+    public GameEvent ActNext;
+    public GameEvent DeactNext;
+    public GameEvent FinishEvent;
     public SpriteCollectionSO SpriteCollectionSO;
     public TextAsset CurrentJsonText;
     public GameObject OptionPrefab;
@@ -16,28 +19,38 @@ public class Pattern_10 : MonoBehaviour
     public GameObject Tile2Prefab;
     public List<GameObject> Tile1;
     private Sprite _spriteImage;
+    bool _isTrue = true;
     Data_10 Pattern_10Obj = new();
 
     private void OnEnable()
     {
-        //GetData();
-        //JsonCollectionSO.DataBase.Clear();
-        //CurrentJsonText = Mbt.GetDesiredJSONData(JsonCollectionSO);
-        ReadFromJson();
-        //DisplayQuestion(Pattern_10Obj.title);
+        if (_isTrue)
+        {
+            _isTrue = false;
+            //CurrentJsonText = GetComponent<Pattern>().Json;
+            ReadFromJson();
+        }
+        DisplayQuestion(Pattern_10Obj.title);
+        if (ES3.Load<bool>("Pattern_6_Check"))
+        {
+            ActNext.Raise();
+        }
+        else
+        {
+            DeactNext.Raise();
+        }
     }
 
-    //public override void DisplayQuestion(string questionStr)
-    //{
-    //    base.DisplayQuestion(questionStr); // null        
-    //}
+    public override void DisplayQuestion(string questionStr)
+    {
+        base.DisplayQuestion(questionStr);
+    }
 
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(CurrentJsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_10");
         Pattern_10Obj = jo.ToObject<Data_10>();
-        Debug.Log(Pattern_10Obj);
         CreatePrefabs();
     }
 
