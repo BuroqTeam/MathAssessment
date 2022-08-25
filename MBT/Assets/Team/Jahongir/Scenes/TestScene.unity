@@ -3892,12 +3892,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9040421629640802117, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9040421629640802139, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9040421629640802139, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
+      propertyPath: CurrentJsonText
+      value: 
+      objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
     - target: {fileID: 9040421629741364668, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 242.445

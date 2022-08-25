@@ -31,7 +31,7 @@ public class Pattern_10 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_10Obj.title);
-        if (ES3.Load<bool>("Pattern_6_Check"))
+        if (ES3.Load<bool>("Pattern_10_Check"))
         {
             ActNext.Raise();
         }
@@ -96,12 +96,6 @@ public class Pattern_10 : GeneralTest
                 Tile1.Add(obj1.transform.GetChild(1).gameObject);
             }
         }
-        for (int i = 0; i < Tile1.Count; i++)
-        {
-            Destroy(Tile1[i].transform.GetChild(0));
-        }
-        
-
         ////This is for Grid1
         //for (int i = 0; i < Pattern_10Obj.statements.Count; i++)
         //{
