@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ChapterManager : MonoBehaviour
 {
@@ -72,6 +73,7 @@ public class ChapterManager : MonoBehaviour
                 GameObject obj = Instantiate(ChapterPrefab);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
+                obj.GetComponent<RectTransform>().DOAnchorPos3DZ(0, 0);
                 ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
             GridLayout.gameObject.SetActive(false);
