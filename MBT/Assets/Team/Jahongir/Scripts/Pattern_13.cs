@@ -129,7 +129,7 @@ public class Pattern_13 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_13_Check", true);
-    }
+    } 
 }
 [SerializeField]
 public class Data_13
