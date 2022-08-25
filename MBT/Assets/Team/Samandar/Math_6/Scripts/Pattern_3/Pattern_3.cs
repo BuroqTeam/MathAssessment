@@ -209,7 +209,7 @@ public class Pattern_3 : GeneralTest
             }
             
         }
-        Debug.Log(1);
+        
     }
 
     public void Check()
