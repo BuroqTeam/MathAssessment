@@ -904,6 +904,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 0}
+  DeactiveNext: {fileID: 0}
+  FinishEvent: {fileID: 0}
   spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   PicturePrefab: {fileID: 6769031063644269278, guid: 1bbec0ca5e8926a46acaff2102b63427, type: 3}
   MainObjs:
@@ -940,8 +943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 4
   IsAvailable: 0
+  Event: {fileID: 0}
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1001 &1218949899
@@ -1276,11 +1281,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5ae3e3fb071c6479e9d0fc10c5da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgramLanguages:
-  - Php
-  - C#
-  - C++
-  LoadedNumber: 0
+  PLanguages: []
+  TextObj: {fileID: 0}
+  SpriteObj: {fileID: 0}
+  TextObjects: []
 --- !u!1001 &1804926990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2304,8 +2308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 1
   IsAvailable: 1
+  Event: {fileID: 0}
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1 &1261531203623281992
@@ -2560,6 +2566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 0}
+  DeactiveNext: {fileID: 0}
+  FinishEvent: {fileID: 0}
   Numbers: []
   Boxs: []
   EmptyPositions: []
@@ -2656,8 +2665,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStatus: 0
   PatternID: 5
   IsAvailable: 1
+  Event: {fileID: 0}
   QuestionNumber: 0
   Json: {fileID: 0}
 --- !u!1 &1958709183056467310
@@ -3507,6 +3518,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  ActiveNext: {fileID: 0}
+  DeactiveNext: {fileID: 0}
+  FinishEvent: {fileID: 0}
   AlphabetList: 
   ABCD: []
   PrefabA: {fileID: 56981999180755985, guid: 7a9e26b76f86d7d459e21a9f13345125, type: 3}
@@ -3604,8 +3618,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Alignment: {x: 0.5, y: 0.5}
-  m_Text: "Koordinatalar sistemasida (4 ; 3) , (-3 ; 4) va (-4 ; -4) nuqtalarni belgilab
-    \nuchburchak yasang "
+  m_Text: "\\(Harfli ifoda: (36a + (18 \u2013 2k)) \\)  ($ 36a + (18 \u2013 2k) $)\\\\ 
+    \\(\\frac{2}{1315}\\)  \\(\\frac{2}{1315}\\) \\(14b-18\\)  \\[18-2k\\]"
   m_Size: 50
   m_ScrollArea:
     serializedVersion: 2
