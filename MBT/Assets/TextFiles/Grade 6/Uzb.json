@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2022-08-20 09:23:16",
+    "date": "2022-08-28 18:23:55",
     "grade": 6,
     "subject": "math",
     "language": "uz"
@@ -121,7 +121,7 @@
           "question": {
             "title": "Berilgan sonlarning qaysi biri tub ko\u2018paytuvchilarga to\u2018g\u2018ri ajratilgan?",
             "options": [
-              "[*]20 = 2 \u00d7 2 \u00d7 5",
+              "[*]140 = 2 \u00d7 2 \u00d7 5 \u00d7 7",
               "40 = 4 \u00d7 2 \u00d7 5",
               "58 = 4 \u00d7 2 \u00d7 5",
               "48 = 4 \u00d7 2 \u00d7 6"
@@ -134,7 +134,7 @@
           "question": {
             "title": "Berilgan sonlarning qaysi biri tub ko\u2018paytuvchilarga to\u2018g\u2018ri ajratilgan?",
             "options": [
-              "[*]20 = 2 \u00d7 2 \u00d7 5",
+              "[*]120 = 2 \u00d7 2 \u00d7 2 \u00d7 3 \u00d7 5",
               "36 = 2 \u00d7 18",
               "58 = 4 \u00d7 12",
               "68 = 4 \u00d7 2 \u00d7 6"
@@ -682,7 +682,7 @@
             "solution": [
               [
                 "2",
-                "4",
+                "6",
                 "\u00d7",
                 "3",
                 "7"
@@ -692,7 +692,7 @@
                 "7",
                 "\u00d7",
                 "2",
-                "4"
+                "6"
               ]
             ]
           }
@@ -754,7 +754,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -822,7 +822,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": "<",
+                "sign": ">",
                 "right": "Asosining yuzi"
               },
               {
@@ -856,7 +856,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": "=",
+                "sign": ">",
                 "right": "Asosining yuzi"
               },
               {
@@ -890,7 +890,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -963,7 +963,7 @@
               },
               {
                 "left": "Hajmi",
-                "sign": "=",
+                "sign": ">",
                 "right": "Hajmi"
               }
             ]
@@ -992,7 +992,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -1031,7 +1031,7 @@
               },
               {
                 "left": "Hajmi",
-                "sign": "=",
+                "sign": "<",
                 "right": "Hajmi"
               }
             ]
@@ -1381,8 +1381,8 @@
               ],
               [
                 "3ga bo'linadigan sonlar",
-                "60",
-                "30",
+                "63",
+                "33",
                 "45",
                 "18"
               ]
@@ -1483,7 +1483,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(65772+47994)\u201356741+(125\u00d743)"
+              "(65772 + 47994) \u2013 56741 + (125 \u00d7 43)"
             ],
             "solution": [
               "62400"
@@ -1496,7 +1496,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "132\u00d7(13\u00d714+14\u00d726-13\u00d726)"
+              "132 \u00d7 (13 \u00d7 14 + 14 \u00d7 26 \u2013 13 \u00d7 26)"
             ],
             "solution": [
               "27456"
@@ -1509,10 +1509,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "54\u00d7286\u2013589\u00f719+48+658\u201398"
+              "54 \u00d7 286 \u2013 589 \u00f7 19 + 48 + 658 \u2013 98"
             ],
             "solution": [
-              "14805\u202c"
+              "16021"
             ]
           }
         },
@@ -1522,10 +1522,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "69\u00f723+45\u00d7(896\u201315\u00d732)"
+              "69 \u00f7 23 + 45 \u00d7 (896 \u2013 15 \u00d7 32)"
             ],
             "solution": [
-              "18723\u202c"
+              "18723"
             ]
           }
         },
@@ -1535,7 +1535,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "788\u2013414\u00f718+768\u00f712\u00d74"
+              "788 \u2013 414 \u00f7 18 + 768 \u00f7 12 \u00d7 4"
             ],
             "solution": [
               "1021"
@@ -1548,7 +1548,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "96\u00d7(4508\u00f798+3534\u00f738)\u2013156"
+              "96 \u00d7 (4508 \u00f7 98 + 3534 \u00f7 38) \u2013 156"
             ],
             "solution": [
               "13188"
@@ -1561,7 +1561,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "106\u00d7(4508\u00f798+3534\u00f738)+504"
+              "106 \u00d7 (4508 \u00f7 98 + 3534 \u00f7 38) + 504"
             ],
             "solution": [
               "15238"
@@ -1574,7 +1574,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "18\u00d7526+589\u00f719\u2013109-428+362"
+              "18 \u00d7 526 + 589 \u00f7 19 \u2013 109 \u2013 428 + 362"
             ],
             "solution": [
               "9324"
@@ -1587,7 +1587,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "69\u00f723+62\u00d7(1105\u201318\u00d732)"
+              "69 \u00f7 23 + 62 \u00d7 (1105 \u2013 18 \u00d7 32)"
             ],
             "solution": [
               "9324"
@@ -1600,7 +1600,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "1912+414\u00f718-768\u00f712\u00d77"
+              "1912 + 414 \u00f7 18 \u2013 768 \u00f7 12 \u00d7 7"
             ],
             "solution": [
               "1487"
@@ -2197,7 +2197,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Kvadrat perimetr: P = 4 \u00d7 a \u00d7 b"
+              "Kvadrat perimetri: P = 4 \u00d7 a \u00d7 b"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -2436,7 +2436,7 @@
           "question": {
             "title": "Qaysi kasr nisbati \\frac{3}{4} ga teng.",
             "options": [
-              "[*]\\frac{12}{20}",
+              "[*]\\frac{12}{16}",
               "\\frac{3}{8}",
               "\\frac{1}{3}",
               "\\frac{2}{5}"
@@ -2499,7 +2499,7 @@
           "id": "math-uz-6-1-18-1",
           "pattern": 1,
           "question": {
-            "title": "Qaysi kasr nisbati 5:7\\frac{5}{7} ga teng.",
+            "title": "Qaysi kasr nisbati \\frac{5}{7} ga teng.",
             "options": [
               "[*]\\frac{10}{14}",
               "\\frac{6}{7}",
@@ -2572,7 +2572,7 @@
               "[*]\\frac{9}{12}",
               "\\frac{5}{10}",
               "\\frac{6}{7}",
-              "\\frac{12}{16}"
+              "[*]\\frac{12}{16}"
             ]
           }
         },
@@ -2675,7 +2675,7 @@
               "\\frac{2}{7}",
               "\\frac{7}{8}",
               "\\frac{1}{10}",
-              "[*]\\frac{10}{12}",
+              "[*]\\frac{2}{12}",
               "\\frac{7}{13}",
               "[*]\\frac{3}{18}"
             ]
@@ -2841,7 +2841,7 @@
               "5",
               "6",
               "7",
-              "8\""
+              "8"
             ],
             "solution": [
               [
@@ -3047,7 +3047,7 @@
                 "6",
                 "17",
                 "55",
-                "66"
+                "60"
               ]
             ]
           }
@@ -3410,7 +3410,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "7+\\frac{5}{25}+\\frac{4}{5}"
+              "7 + \\frac{5}{25} + \\frac{4}{5}"
             ],
             "solution": [
               "8"
@@ -3423,7 +3423,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "9\\frac{7}{9}-{4}{9}+\\frac{2}{3}"
+              "9\\frac{7}{9} - \\frac{4}{9} + \\frac{2}{3}"
             ],
             "solution": [
               "10"
@@ -3436,7 +3436,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "4\\frac{13}{14}-\\frac{5}{7}-\\frac{3}{14}"
+              "4\\frac{13}{14} - \\frac{5}{7} - \\frac{3}{14}"
             ],
             "solution": [
               "4"
@@ -3449,7 +3449,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "14+(-\\frac{9}{7})+\\frac{2}{7}"
+              "14 + ( -\\frac{9}{7}) + \\frac{2}{7}"
             ],
             "solution": [
               "13"
@@ -3462,7 +3462,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "25\\frac{6}{7}-5\\frac{6}{14}-\\frac{12}{28}"
+              "25\\frac{6}{7} - 5\\frac{6}{14} - \\frac{12}{28}"
             ],
             "solution": [
               "19"
@@ -3475,7 +3475,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "6-\\frac{4}{9}+\\frac{8}{18}"
+              "6 - \\frac{4}{9} + \\frac{8}{18}"
             ],
             "solution": [
               "6"
@@ -3488,7 +3488,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "2\\frac{5}{11}-\\frac{5}{11}+102"
+              "2\\frac{5}{11} - \\frac{5}{11} + 102"
             ],
             "solution": [
               "104"
@@ -3501,7 +3501,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "10\\frac{1}{2}+\\frac{1}{4}+\\frac{2}{5}"
+              "10\\frac{1}{2} + \\frac{1}{4} + \\frac{1}{4}"
             ],
             "solution": [
               "11"
@@ -3514,7 +3514,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "24+\\frac{4}{12}+\\frac{6}{9}"
+              "24 + \\frac{4}{12} + \\frac{6}{9}"
             ],
             "solution": [
               "25"
@@ -3527,7 +3527,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "10\\frac{5}{9}+\\frac{1}{6}+\\frac{5}{18}"
+              "10\\frac{5}{9} + \\frac{1}{6} + \\frac{5}{18}"
             ],
             "solution": [
               "11"
@@ -3874,7 +3874,7 @@
               "[b]\\frac{1}{6}",
               "[d]\\frac{1}{2}",
               "[c]\\frac{1}{3}",
-              "[a]{1}{12}"
+              "[a]\\frac{1}{12}"
             ]
           }
         },
@@ -3885,7 +3885,8 @@
             "title": "Kasrlarni o\u02bbsish tartibida joylashtiring",
             "options": [
               "[b]\\frac{7}{20}",
-              "[a]\\frac{1}{4}[d]\\frac{7}{10}\"",
+              "[a]\\frac{1}{4}",
+              "[d]\\frac{7}{10}",
               "[c]\\frac{1}{2}"
             ]
           }
@@ -3909,11 +3910,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]2\\frac{1}{4}+3\\frac{1}{4}",
+              "[a]2\\frac{1}{4} + 3\\frac{1}{4}",
               "[a]5\\frac{2}{4}",
-              "[b]6\\frac{1}{5}+3\\frac{2}{5}",
+              "[b]6\\frac{1}{5} + 3\\frac{2}{5}",
               "[b]9\\frac{3}{5}",
-              "[c]3\\frac{1}{2}+2\\frac{1}{2}",
+              "[c]3\\frac{1}{2} + 2\\frac{1}{2}",
               "[c]6"
             ]
           }
@@ -3924,11 +3925,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]7\\frac{3}{8}+5\\frac{5}{8}",
+              "[a]7\\frac{3}{8} + 5\\frac{5}{8}",
               "[a]12\\frac{8}{8}",
-              "[b]12\\frac{5}{7}-7\\frac{1}{2}",
+              "[b]12\\frac{5}{7} - 7\\frac{1}{2}",
               "[b]5\\frac{3}{14}",
-              "[c]11\\frac{4}{9}-5\\frac{7}{18}",
+              "[c]11\\frac{4}{9} - 5\\frac{7}{18}",
               "[c]6\\frac{1}{18}"
             ]
           }
@@ -3941,9 +3942,9 @@
             "options": [
               "[a]9\\frac{7}{12} - 5\\frac{2}{3}",
               "[a]3\\frac{11}{12}",
-              "[b]8\\frac{2}{5}-3\\frac{3}{4}",
+              "[b]8\\frac{2}{5} - 3\\frac{3}{4}",
               "[b]4\\frac{13}{20}",
-              "[c]8\\frac{1}{4}+3\\frac{5}{12}",
+              "[c]8\\frac{1}{4} + 3\\frac{5}{12}",
               "[c]11\\frac{8}{12}"
             ]
           }
@@ -3954,11 +3955,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]7\\frac{2}{5}+5\\frac{2}{15}",
+              "[a]7\\frac{2}{5} + 5\\frac{2}{15}",
               "[a]12\\frac{8}{15}",
-              "[b]3\\frac{1}{5}+5\\frac{1}{3}",
+              "[b]3\\frac{1}{5} + 5\\frac{1}{3}",
               "[b]8\\frac{8}{15}",
-              "[c]6\\frac{1}{7}+3\\frac{1}{2}",
+              "[c]6\\frac{1}{7} + 3\\frac{1}{2}",
               "[c]9\\frac{9}{14}"
             ]
           }
@@ -3969,11 +3970,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]10\\frac{1}{4}-8\\frac{1}{3}",
+              "[a]10\\frac{1}{4} - 8\\frac{1}{3}",
               "[a]1\\frac{11}{12}",
-              "[b]15\\frac{6}{7}-9\\frac{3}{4}",
+              "[b]15\\frac{6}{7} - 9\\frac{3}{4}",
               "[b]6\\frac{3}{28}",
-              "[c]4\\frac{7}{8}-3\\frac{3}{4}",
+              "[c]4\\frac{7}{8} - 3\\frac{3}{4}",
               "[c]1\\frac{1}{8}"
             ]
           }
@@ -3984,11 +3985,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]8\\frac{3}{8}-6\\frac{1}{12}",
-              "[a]2\\frac{7}{12}",
-              "[b]1\\frac{1}{4}+1\\frac{1}{2}",
+              "[a]8\\frac{3}{8} - 6\\frac{1}{12}",
+              "[a]2\\frac{7}{24}",
+              "[b]1\\frac{1}{4} + 1\\frac{1}{2}",
               "[b]2\\frac{3}{4}",
-              "[c]3\\frac{7}{8}-1\\frac{5}{8}",
+              "[c]3\\frac{7}{8} - 1\\frac{5}{8}",
               "[c]2\\frac{2}{8}"
             ]
           }
@@ -3999,11 +4000,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]2\\frac{3}{4}+1\\frac{1}{4}",
+              "[a]2\\frac{3}{4} + 1\\frac{1}{4}",
               "[a]3\\frac{4}{4}",
-              "[b]5\\frac{4}{5}+2\\frac{1}{3}",
+              "[b]5\\frac{4}{5} + 2\\frac{1}{3}",
               "[b]8\\frac{2}{15}",
-              "[c]7\\frac{5}{7}+5\\frac{1}{2}",
+              "[c]7\\frac{5}{7} + 5\\frac{1}{2}",
               "[c]13\\frac{3}{14}"
             ]
           }
@@ -4014,11 +4015,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]4+6\\frac{5}{6}",
+              "[a]4 + 6\\frac{5}{6}",
               "[a]10\\frac{5}{6}",
-              "[b]7+15\\frac{3}{7}",
+              "[b]7 + 15\\frac{3}{7}",
               "[b]22\\frac{3}{7}",
-              "[c]7\\frac{8}{15}",
+              "[c]7\\frac{8}{15} - 5\\frac{6}{15}",
               "[c]2\\frac{2}{15}"
             ]
           }
@@ -4029,11 +4030,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]11\\frac{7}{15}+4\\frac{1}{3}",
+              "[a]11\\frac{7}{15} + 4\\frac{1}{3}",
               "[a]15\\frac{12}{15}",
-              "[b]7\\frac{2}{5}+3\\frac{3}{10}",
+              "[b]7\\frac{2}{5} + 3\\frac{3}{10}",
               "[b]10\\frac{7}{10}",
-              "[c]10-5\\frac{1}{2}",
+              "[c]10 - 5\\frac{1}{2}",
               "[c]4\\frac{1}{2}"
             ]
           }
@@ -4044,11 +4045,11 @@
           "question": {
             "title": "Hisoblang",
             "options": [
-              "[a]5\\frac{5}{12}+2\\frac{1}{4}",
+              "[a]5\\frac{5}{12} + 2\\frac{1}{4}",
               "[a]7\\frac{8}{12}",
-              "[b]4\\frac{3}{8}+1\\frac{1}{4}",
+              "[b]4\\frac{3}{8} + 1\\frac{1}{4}",
               "[b]5\\frac{5}{8}",
-              "[c]2\\frac{1}{4}+3\\frac{1}{3}",
+              "[c]2\\frac{1}{4} + 3\\frac{1}{3}",
               "[c]5\\frac{7}{12}"
             ]
           }
@@ -4397,7 +4398,7 @@
           "question": {
             "title": "Qaysi son 2\\frac{5}{6} ga teskari son?",
             "options": [
-              "[*]frac{6}{17}",
+              "[*]\\frac{6}{17}",
               "2\\frac{6}{5}",
               "\\frac{6}{5}",
               "\\frac{17}{6}"
@@ -4412,7 +4413,7 @@
             "options": [
               "[*]\\frac{1}{7}",
               "-7",
-              "-\\frac{1}{7}",
+              "- \\frac{1}{7}",
               "7\\frac{1}{1}"
             ]
           }
@@ -4425,7 +4426,7 @@
             "options": [
               "[*]50",
               "-50",
-              "-\\frac{1}{50}",
+              "- \\frac{1}{50}",
               "\\frac{1}{50}"
             ]
           }
@@ -4434,7 +4435,7 @@
           "id": "math-uz-6-2-27-1",
           "pattern": 1,
           "question": {
-            "title": "Qaysi son 2\\frag{3}{5}+3\\frac{4}{5} ga teskari son?",
+            "title": "Qaysi son 2\\frag{3}{5} + 3\\frac{4}{5} ga teskari son?",
             "options": [
               "[*]\\frac{5}{32}",
               "5",
@@ -4447,7 +4448,7 @@
           "id": "math-uz-6-2-28-1",
           "pattern": 1,
           "question": {
-            "title": "Qaysi son 8\\frac{7}{10}-5\\frac{5}{10} ga teskari son?",
+            "title": "Qaysi son 8\\frac{7}{10} - 5\\frac{5}{10} ga teskari son?",
             "options": [
               "[*]\\frac{5}{16}",
               "3\\frac{10}{2}",
@@ -4460,7 +4461,7 @@
           "id": "math-uz-6-2-29-1",
           "pattern": 1,
           "question": {
-            "title": "Qaysi son 2\\frac{1}{4}*3\\frac{1}{90}ga teskari son?",
+            "title": "Qaysi son 2\\frac{1}{4} \u00d7 3\\frac{1}{9}ga teskari son?",
             "options": [
               "[*]\\frac{1}{7}",
               "36",
@@ -4473,7 +4474,7 @@
           "id": "math-uz-6-2-30-1",
           "pattern": 1,
           "question": {
-            "title": "Qaysi son \\frac{11}{34}+\\frac{15}{17} ga teskari son?",
+            "title": "Qaysi son \\frac{11}{34} + \\frac{15}{17} ga teskari son?",
             "options": [
               "[*]\\frac{34}{41}",
               "\\frac{41}{34}",
@@ -4977,7 +4978,7 @@
             "options": [
               {
                 "left": "Bo\u2018yi",
-                "sign": "<",
+                "sign": ">",
                 "right": "Bo\u2018yi"
               },
               {
@@ -5079,7 +5080,7 @@
             "options": [
               {
                 "left": "Bo\u2018yi",
-                "sign": "=",
+                "sign": ">",
                 "right": "Bo\u2018yi"
               },
               {
@@ -5533,7 +5534,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "12\\frac{5}{6}+2\\frac{7}{9}\u00d7(15\\frac{9}{10}-12\\frac{9}{10})-1\\frac{1}{6}"
+              "12\\frac{5}{6} + 2\\frac{7}{9} \u00d7 (15\\frac{9}{10} - 12\\frac{9}{10}) - 1\\frac{1}{6}"
             ],
             "solution": [
               "20"
@@ -5546,7 +5547,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "3\\frac{4}{17}\u00d75\\frac{2}{3}+3\\frac{4}{17}\u00d711\\frac{1}{3}"
+              "3\\frac{4}{17} \u00d7 5\\frac{2}{3} + 3\\frac{4}{17} \u00d7 11\\frac{1}{3}"
             ],
             "solution": [
               "55"
@@ -5559,7 +5560,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "51\\frac{7}{11}\u00d7\\frac{7}{11}-18\\frac{7}{11}\u00d7\\frac{7}{11}"
+              "51\\frac{7}{11} \u00d7 \\frac{7}{11} - 18\\frac{7}{11} \u00d7 \\frac{7}{11}"
             ],
             "solution": [
               "21"
@@ -5572,7 +5573,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "6\\frac{11}{14}\u00d7\\frac{4}{9}+2\\frac{3}{14}\u00d7\\frac{4}{9}"
+              "6\\frac{11}{14} \u00d7 \\frac{4}{9} + 2\\frac{3}{14} \u00d7 \\frac{4}{9}"
             ],
             "solution": [
               "4"
@@ -5585,7 +5586,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "2\\frac{2}{5}\u00d710\\frac{8}{9}-2\\frac{2}{5}\u00d72\\frac{5}{9}"
+              "2\\frac{2}{5} \u00d7 10\\frac{8}{9} - 2\\frac{2}{5} \u00d7 2\\frac{5}{9}"
             ],
             "solution": [
               "20"
@@ -5598,7 +5599,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(\\frac{3}{4}\u00f7\\frac{1}{4})\u00f7(\\frac{3}{10}\u00f7\\frac{1}{2})"
+              "(\\frac{3}{4} \u00f7 \\frac{1}{4}) \u00f7 (\\frac{3}{10} \u00f7 \\frac{1}{2})"
             ],
             "solution": [
               "5"
@@ -5611,7 +5612,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "2\\frac{2}{3}\u00f71\\frac{1}{7}\u00d73\\frac{3}{7}\u00d7\\frac{1}{4}"
+              "2\\frac{2}{3} \u00f7 1\\frac{1}{7} \u00d7 3\\frac{3}{7} \u00d7 \\frac{1}{4}"
             ],
             "solution": [
               "2"
@@ -5624,7 +5625,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(\\frac{3}{7}\u00f7\\frac{4}{8})\u00f7(\\frac{1}{7}\u00f7\\frac{2}{4})"
+              "(\\frac{3}{7} \u00f7 \\frac{4}{8}) \u00f7 (\\frac{1}{7} \u00f7 \\frac{2}{4})"
             ],
             "solution": [
               "3"
@@ -5637,7 +5638,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "1\\frac{8}{17}\u00d73\\frac{2}{5}\u00f7\\frac{11}{12}\u00d72\\frac{1}{5}\u00f7\\frac{4}{9}"
+              "1\\frac{8}{17} \u00d7 3\\frac{2}{5} \u00f7 \\frac{11}{12} \u00d7 2\\frac{1}{5} \u00f7 \\frac{4}{9}"
             ],
             "solution": [
               "27"
@@ -5650,7 +5651,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "\\frac{5}{11}\u00f7\\frac{15}{22}\u00d71\\frac{1}{2}"
+              "\\frac{5}{11} \u00f7 \\frac{15}{22} \u00d7 1\\frac{1}{2}"
             ],
             "solution": [
               "1"
@@ -5733,13 +5734,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{1}{2}\u00d7\\frac{2}{4}",
+              "[a]\\frac{1}{2} \u00d7 \\frac{2}{4}",
               "[a]\\frac{1}{4}",
-              "[b]5\u00d7\\frac{1}{3}",
+              "[b]5 \u00d7 \\frac{1}{3}",
               "[b]\\frac{5}{3}",
-              "[c]\\frac{6}{4}\u00f7\\frac{1}{2}",
+              "[c]\\frac{6}{4} \u00f7 \\frac{1}{2}",
               "[c]3",
-              "[d]4\u00f7\\frac{4}{5}",
+              "[d]4 \u00f7 \\frac{4}{5}",
               "[d]5"
             ]
           }
@@ -5750,14 +5751,14 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{10}{24}\u00d7\\frac{12}{4}",
+              "[a]\\frac{10}{24} \u00d7 \\frac{12}{4}",
               "[a]\\frac{5}{4}",
-              "[b]1\\frac{3}{4}\u00d7\\frac{16}{6}",
+              "[b]1\\frac{3}{4} \u00d7 \\frac{16}{6}",
               "[b]\\frac{14}{3}",
-              "[c]\\frac{6}{7}\u00f7\\frac{2}{21}",
+              "[c]\\frac{6}{7} \u00f7 \\frac{2}{21}",
               "[c]9",
-              "[d]\\frac{4}{6}",
-              "[d]\\frac{27}{5}"
+              "[d]\\frac{4}{6} \u00f7 \\frac{4}{12}",
+              "[d]2"
             ]
           }
         },
@@ -5767,13 +5768,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]8\u00d7\\frac{5}{16}",
+              "[a]8 \u00d7 \\frac{5}{16}",
               "[a]\\frac{5}{2}",
-              "[b]3\\frac{3}{4}\u00d7\\frac{32}{6}",
+              "[b]3\\frac{3}{4} \u00d7 \\frac{32}{6}",
               "[b]16",
-              "[c]\\frac{6}{13}\u00f7\\frac{12}{26}",
-              "[c]1",
-              "[d]1\\frac{1}{13}\u00f7\\frac{14}{13}",
+              "[c]\\frac{6}{13} \u00f7 \\frac{6}{26}",
+              "[c]2",
+              "[d]1\\frac{1}{13} \u00f7 \\frac{14}{13}",
               "[d]1"
             ]
           }
@@ -5784,13 +5785,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{14}{20}\u00d7\\frac{15}{4}",
+              "[a]\\frac{14}{20} \u00d7 \\frac{15}{4}",
               "[a]\\frac{21}{8}",
-              "[b]7\\frac{3}{4}\u00d7\\frac{32}{31}",
+              "[b]7\\frac{3}{4} \u00d7 \\frac{32}{31}",
               "[b]8",
-              "[c]\\frac{6}{17}\u00f7\\frac{24}{51}",
+              "[c]\\frac{6}{17} \u00f7 \\frac{24}{51}",
               "[c]\\frac{3}{4}",
-              "[d]21\u00f7\\frac{7}{5}",
+              "[d]21 \u00f7 \\frac{7}{5}",
               "[d]15"
             ]
           }
@@ -5801,13 +5802,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{11}{45}\u00d7\\frac{15}{44}",
+              "[a]\\frac{11}{45} \u00d7 \\frac{15}{44}",
               "[a]\\frac{1}{12}",
-              "[b]13\u00d71\\frac{12}{13}",
+              "[b]13 \u00d7 1\\frac{12}{13}",
               "[b]25",
-              "[c]21\u00f73\\frac{6}{5}",
+              "[c]21 \u00f7 3\\frac{6}{5}",
               "[c]5",
-              "[d]2\\frac{2}{17}\u00f71\\frac{2}{34}",
+              "[d]2\\frac{2}{17} \u00f7 1\\frac{2}{34}",
               "[d]2"
             ]
           }
@@ -5818,13 +5819,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]13\u00d73\\frac{3}{13}",
+              "[a]13 \u00d7 3\\frac{3}{13}",
               "[a]42",
-              "[b]6\\frac{6}{7}\u00d7\\frac{14}{48}",
+              "[b]6\\frac{6}{7} \u00d7 \\frac{14}{48}",
               "[b]2",
-              "[c]\\frac{7}{28}\u00f7\\frac{4}{28}",
+              "[c]\\frac{7}{28} \u00f7 \\frac{4}{28}",
               "[c]\\frac{7}{4}",
-              "[d]3\\frac{4}{6}\u00f72\\frac{2}{10}",
+              "[d]3\\frac{4}{6} \u00f7 2\\frac{2}{10}",
               "[d]\\frac{5}{3}"
             ]
           }
@@ -5835,13 +5836,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{14}{10}\u00d7\\frac{25}{7}",
+              "[a]\\frac{14}{10} \u00d7 \\frac{25}{7}",
               "[a]5",
-              "[b]9\u00d73\\frac{1}{18}",
+              "[b]9 \u00d7 3\\frac{1}{9}",
               "[b]28",
-              "[c]\\frac{10}{36}\u00f7\\frac{4}{18}",
+              "[c]\\frac{10}{36} \u00f7 \\frac{4}{18}",
               "[c]\\frac{5}{4}",
-              "[d]2\\frac{1}{7}\u00f72\\frac{2}{14}",
+              "[d]2\\frac{1}{7} \u00f7 2\\frac{2}{14}",
               "[d]1"
             ]
           }
@@ -5852,13 +5853,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]16\u00d72\\frac{1}{4}",
+              "[a]16 \u00d7 2\\frac{1}{4}",
               "[a]36",
-              "[b]4\\frac{1}{4}\u00d7\\frac{8}{17}",
+              "[b]4\\frac{1}{4} \u00d7 \\frac{8}{17}",
               "[b]2",
-              "[c]\\frac{49}{35}\u00f7\\frac{7}{5}",
+              "[c]\\frac{49}{35} \u00f7 \\frac{7}{5}",
               "[c]1",
-              "[d]32\u00f73\\frac{5}{9}",
+              "[d]32 \u00f7 3\\frac{5}{9}",
               "[d]9"
             ]
           }
@@ -5869,13 +5870,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{4}{5}\u00d7\\frac{45}{28}",
+              "[a]\\frac{4}{5} \u00d7 \\frac{45}{28}",
               "[a]\\frac{9}{7}",
-              "[b]1\\frac{4}{6}\u00d7\\frac{8}{10}",
+              "[b]1\\frac{4}{6} \u00d7 \\frac{8}{10}",
               "[b]\\frac{4}{3}",
-              "[c]\\frac{4}{13}\u00f7\\frac{2}{26}",
+              "[c]\\frac{4}{13} \u00f7 \\frac{2}{26}",
               "[c]4",
-              "[d]10\\frac{2}{3}\u00f71\\frac{4}{12}",
+              "[d]10\\frac{2}{3} \u00f7 1\\frac{4}{12}",
               "[d]8"
             ]
           }
@@ -5886,13 +5887,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]24\u00d71\\frac{1}{3}",
+              "[a]24 \u00d7 1\\frac{1}{3}",
               "[a]32",
-              "[b]3\\frac{3}{6}\u00d7\\frac{8}{7}",
+              "[b]3\\frac{3}{6} \u00d7 \\frac{8}{7}",
               "[b]4",
-              "[c]20\u00f72\\frac{6}{7}",
+              "[c]20 \u00f7 2\\frac{6}{7}",
               "[c]7",
-              "[d]9\\frac{1}{2}\u00f74\\frac{6}{8}",
+              "[d]9\\frac{1}{2} \u00f7 4\\frac{6}{8}",
               "[d]4"
             ]
           }
@@ -6232,9 +6233,9 @@
           "question": {
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
-              "[*]8,1 \u00d7 4=  32.4",
-              "16.2 \u00d7 5 =91",
-              "5.03 \u00d7 10  =  50.6",
+              "[*]8,1 \u00d7 4 = 32.4",
+              "16.2 \u00d7 5 = 91",
+              "5.03 \u00d7 10 = 50.6",
               "10.2 \u00d7 6 = 62.2"
             ]
           }
@@ -6245,9 +6246,9 @@
           "question": {
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
-              "[*]127 \u00d7 15,8 =  2006,6",
+              "[*]127 \u00d7 15,8 = 2006,6",
               "23,5 \u00d7 2 = 48",
-              "7,7 \u00d7 7  =  62,6",
+              "7,7 \u00d7 7 = 62,6",
               "2,14 \u00d7 10 = 214"
             ]
           }
@@ -6258,9 +6259,9 @@
           "question": {
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
-              "[*]2,13 \u00d7 3 =  63,9",
+              "[*]2,13 \u00d7 3 = 6,39",
               "1,3 \u00d7 8 = 11,4",
-              "1,23 \u00d7 5  =  6,04",
+              "1,23 \u00d7 5 = 6,04",
               "12,04 \u00d7 11 = 16,15"
             ]
           }
@@ -6272,8 +6273,8 @@
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
               "[*]5,05 \u00d7 10 = 50,5",
-              "30,2 \u00d7 4 =82,8",
-              "6,02 \u00d7 12  =  60,62",
+              "30,2 \u00d7 4 = 82,8",
+              "6,02 \u00d7 12 = 60,62",
               "25 \u00d7 0,2 = 12,5"
             ]
           }
@@ -6284,8 +6285,8 @@
           "question": {
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
-              "[*]17,5 \u00d7 11 =  192,5",
-              "42,2 \u00d7 5 =100",
+              "[*]17,5 \u00d7 11 = 192,5",
+              "42,2 \u00d7 5 = 100",
               "10,5 \u00d7 1,02  =  11",
               "1,07 \u00d7 10 = 10,71"
             ]
@@ -6323,9 +6324,9 @@
           "question": {
             "title": "To\u2018g\u2018ri bajarilgan ko\u2018paytmani toping?",
             "options": [
-              "[*]7 \u00d7 0,25 =  1,75",
-              "3,5 \u00d7 8 =21,5",
-              "5,7 \u00d7 7  =  40,6",
+              "[*]7 \u00d7 0,25  = 1,75",
+              "3,5 \u00d7 8 = 21,5",
+              "5,7 \u00d7 7 = 40,6",
               "1,51 \u00d7 10 = 151"
             ]
           }
@@ -6563,7 +6564,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -6631,7 +6632,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -6665,7 +6666,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": "<",
+                "sign": ">",
                 "right": "Asosining yuzi"
               },
               {
@@ -6704,7 +6705,7 @@
               },
               {
                 "left": "Hajmi",
-                "sign": "<",
+                "sign": ">",
                 "right": "Hajmi"
               }
             ]
@@ -6733,7 +6734,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -6767,7 +6768,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -6806,7 +6807,7 @@
               },
               {
                 "left": "Hajmi",
-                "sign": "=",
+                "sign": ">",
                 "right": "Hajmi"
               }
             ]
@@ -6835,7 +6836,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -6869,7 +6870,7 @@
               },
               {
                 "left": "Asosining yuzi",
-                "sign": "<",
+                "sign": ">",
                 "right": "Asosining yuzi"
               },
               {
@@ -7024,7 +7025,7 @@
               "4",
               "10,15",
               "1,(05)",
-              "24.(21)",
+              "24,(21)",
               "8,7",
               "-9",
               "11,(1)",
@@ -7093,7 +7094,7 @@
               [
                 "Davriy kasrlar",
                 "20,(78)",
-                "5,(28)",
+                "45,(28)",
                 "11,(06)",
                 "16,(75)"
               ]
@@ -7261,7 +7262,7 @@
               ],
               [
                 "O\u02bbnli kasrlar",
-                "19,7",
+                "-19,7",
                 "10,5",
                 "5,8",
                 "8,7"
@@ -7326,7 +7327,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "3,4\u00d71,6+2,3\u00d71,6+4,3\u00d70,7+4,3\u00d70,9"
+              "3,4 \u00d7 1,6 + 2,3 \u00d7 1,6 + 4,3 \u00d7 0,7 + 4,3 \u00d7 0,9"
             ],
             "solution": [
               "16"
@@ -7339,7 +7340,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "5,6\u00d73,8+5,6\u00d71,6+2,7\u00d74,6+2,9\u00d74,6"
+              "5,6 \u00d7 3,8 + 5,6 \u00d7 1,6 + 2,7 \u00d7 4,6 + 2,9 \u00d7 4,6"
             ],
             "solution": [
               "56"
@@ -7352,7 +7353,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "0,7\u00d72,3\u20130,7\u00d71,5+0,8\u00d71,2\u20130,8\u00d70,5"
+              "0,7 \u00d7 2,3 \u2013 0,7 \u00d7 1,5 + 0,8 \u00d7 1,2 \u2013 0,8 \u00d7 0,5"
             ],
             "solution": [
               "1,12"
@@ -7365,7 +7366,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "6,5\u00d72,5\u20131,6\u00d76,5+0,9\u00d70,7+0,8\u00d70,9"
+              "6,5 \u00d7 2,5 \u2013 1,6 \u00d7 6,5 + 0,9 \u00d7 0,7 + 0,8 \u00d7 0,9"
             ],
             "solution": [
               "7,2"
@@ -7378,7 +7379,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(20\u201322,05\u00f72,1)\u20136,4+9,2"
+              "(20 \u2013 22,05 \u00f7 2,1) \u2013 6,4 + 9,2"
             ],
             "solution": [
               "12,3"
@@ -7391,7 +7392,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "55,66\u00d78,7+109,7\u00d78,7+307,01\u00d75,1-18,72\u00d75,1"
+              "55,66 \u00d7 8,7 + 109,7 \u00d7 8,7 + 307,01 \u00d7 5,1 - 18,72 \u00d7 5,1"
             ],
             "solution": [
               "2908,911"
@@ -7404,7 +7405,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "7,73\u00d70,45+18,72\u00d77,73+307,01\u00d75,1"
+              "7,73 \u00d7 0,45 + 18,72 \u00d7 7,73 + 307,01 \u00d7 5,1"
             ],
             "solution": [
               "1713,9351"
@@ -7417,7 +7418,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "5,6\u00d73,8-5,6\u00d71,6\u20131,1\u00d72,6+1,3\u00d72,6"
+              "5,6 \u00d7 3,8 - 5,6 \u00d7 1,6 \u2013 1,1 \u00d7 2,6 + 1,3 \u00d7 2,6"
             ],
             "solution": [
               "12,84"
@@ -7430,7 +7431,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "50\u2013(22,95\u00f72,7+3,4)\u00d72,8"
+              "50 \u2013 (22,95 \u00f7 2,7 + 3,4) \u00d7 2,8"
             ],
             "solution": [
               "16,68"
@@ -7443,7 +7444,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "2,5\u00d78,7+0,5\u00d78,7-0,08\u00d70,4+0,8\u00d70,4"
+              "2,5 \u00d7 8,7 + 0,5 \u00d7 8,7 - 0,08 \u00d7 0,4 + 0,8 \u00d7 0,4"
             ],
             "solution": [
               "26,388"
@@ -7801,8 +7802,8 @@
             "options": [
               "[b]4,14",
               "[a]0,27",
-              "[d]97,2",
-              "[c]99,6"
+              "[c]97,2",
+              "[d]99,6"
             ]
           }
         },
@@ -7865,9 +7866,9 @@
             "title": "Sonlarni o\u02bbsish tartibida joylashtiring",
             "options": [
               "[a]2,32",
-              "[b]17,5",
+              "[c]17,5",
               "[d]24,1",
-              "[c]17,07"
+              "[b]17,07"
             ]
           }
         },
@@ -8038,10 +8039,10 @@
             "options": [
               "2,232 \u00f7 0,72 = 2,86",
               "[*]2,0592 \u00f7 0,072 = 28,6",
-              "[*]4,64 \u00d7 5,8 = 26.912",
-              "2,9 \u00d7 0,18 = 1.0682",
+              "[*]4,64 \u00d7 5,8 = 26,912",
+              "2,9 \u00d7 0,18 = 1,0682",
               "4,2 \u00f7 2,8 = 10,8",
-              "[*]7,67 \u00d7 0,65 = 4.9855"
+              "[*]7,67 \u00d7 0,65 = 4,9855"
             ]
           }
         },
@@ -8523,12 +8524,12 @@
           "question": {
             "title": "Berilgan sonlar orasidan -3 dan katta 24 dan kichiklarini belgilang",
             "options": [
-              "-14",
-              "-10",
-              "-8",
-              "-7",
-              "-4",
-              "[*]-1",
+              "- 14",
+              "- 10",
+              "- 8",
+              "- 7",
+              "- 4",
+              "[*]- 1",
               "[*]12",
               "[*]19",
               "[*]22",
@@ -8544,14 +8545,14 @@
           "question": {
             "title": "Berilgan sonlar orasidan -2 dan katta 8 dan kichiklarini belgilang",
             "options": [
-              "-11",
-              "-7",
-              "-5",
-              "-3",
-              "[*]-1",
+              "- 11",
+              "- 7",
+              "- 5",
+              "- 3",
+              "[*]- 1",
               "[*]1",
               "[*]2",
-              "[*6]",
+              "[*]6",
               "9",
               "12",
               "15",
@@ -8565,10 +8566,10 @@
           "question": {
             "title": "Berilgan sonlar orasidan -3 dan katta 12 dan kichiklarini belgilang",
             "options": [
-              "-10",
-              "-5",
-              "-4",
-              "[*]-1",
+              "- 10",
+              "- 5",
+              "- 4",
+              "[*]- 1",
               "[*]3",
               "[*]6",
               "[*]10",
@@ -8586,12 +8587,12 @@
           "question": {
             "title": "Berilgan sonlar orasidan -10 dan katta 2 dan kichiklarini belgilang",
             "options": [
-              "-17",
-              "-11",
-              "[*]-9",
-              "[*]-5",
-              "[*]-4",
-              "[*]-2",
+              "- 17",
+              "- 11",
+              "[*]- 9",
+              "[*]- 5",
+              "[*]- 4",
+              "[*]- 2",
               "[*]1",
               "3",
               "5",
@@ -8607,10 +8608,10 @@
           "question": {
             "title": "Berilgan sonlar orasidan -5 dan katta 25 dan kichiklarini belgilang",
             "options": [
-              "-11",
-              "-9",
-              "-8",
-              "[*]-3",
+              "- 11",
+              "- 9",
+              "- 8",
+              "[*]- 3",
               "[*]4",
               "[*]8",
               "[*]12",
@@ -8628,12 +8629,12 @@
           "question": {
             "title": "Berilgan sonlar orasidan -12 dan katta -4 dan kichiklarini belgilang",
             "options": [
-              "-15",
+              "- 15",
               "-13",
-              "[*]-10",
-              "[*]-8",
-              "[*]-6",
-              "[*]-5",
+              "[*]- 10",
+              "[*]- 8",
+              "[*]- 6",
+              "[*]- 5",
               "0",
               "3",
               "6",
@@ -8649,11 +8650,11 @@
           "question": {
             "title": "Berilgan sonlar orasidan -20 dan katta 20 dan kichiklarini belgilang",
             "options": [
-              "-32",
-              "-29",
-              "-25",
-              "[*]-14",
-              "[*]-8",
+              "- 32",
+              "- 29",
+              "- 25",
+              "[*]- 14",
+              "[*]- 8",
               "[*]0",
               "[*]6",
               "[*]17",
@@ -8670,11 +8671,11 @@
           "question": {
             "title": "Berilgan sonlar orasidan -6 dan katta 25 dan kichiklarini belgilang",
             "options": [
-              "-18",
-              "-13",
-              "-9",
-              "-7",
-              "[*]-3",
+              "- 18",
+              "- 13",
+              "- 9",
+              "- 7",
+              "[*]- 3",
               "[*]0",
               "[*]10",
               "[*]12",
@@ -8691,10 +8692,10 @@
           "question": {
             "title": "Berilgan sonlar orasidan -11 dan katta 7 dan kichiklarini belgilang",
             "options": [
-              "-41",
-              "-36",
-              "[*]-9",
-              "[*]-6",
+              "- 41",
+              "- 36",
+              "[*]- 9",
+              "[*]- 6",
               "[*]0",
               "[*]4",
               "12",
@@ -8712,12 +8713,12 @@
           "question": {
             "title": "Berilgan sonlar orasidan -3 dan katta 5 dan kichiklarini belgilang",
             "options": [
-              "-8",
-              "-6",
-              "-5",
-              "-4",
-              "[*]-2",
-              "[*]-1",
+              "- 8",
+              "- 6",
+              "- 5",
+              "- 4",
+              "[*]- 2",
+              "[*]- 1",
               "[*]1",
               "[*]2",
               "6",
@@ -9063,7 +9064,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "-6+(-9)\u00d7(-9)+21\u00f7(-3)"
+              "-6 + (-9) \u00d7 (-9) + 21 \u00f7 (-3)"
             ],
             "solution": [
               "68"
@@ -9076,7 +9077,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "4\u00d7((-9)\u00d72+105\u00f73)"
+              "4 \u00d7 ((-9) \u00d7 2 + 105 \u00f7 3)"
             ],
             "solution": [
               "68"
@@ -9089,7 +9090,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "84\u00f7(-3)+10\u00d7(4\u2013(-2))"
+              "84 \u00f7 (-3) + 10 \u00d7 (4 \u2013 (-2))"
             ],
             "solution": [
               "32"
@@ -9102,7 +9103,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "-54\u00f79+28-7\u00d72"
+              "-54 \u00f7 9 + 28 - 7 \u00d7 2"
             ],
             "solution": [
               "8"
@@ -9115,7 +9116,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "45\u00d75-50\u00d7(180\u00f760+1)"
+              "45 \u00d7 5-50 \u00d7 (180 \u00f7 60 + 1)"
             ],
             "solution": [
               "25"
@@ -9128,7 +9129,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(21-12)\u00f73+36\u00d73"
+              "(21 - 12) \u00f7 3 + 36 \u00d7 3"
             ],
             "solution": [
               "111"
@@ -9141,7 +9142,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "279\u00f7(41-17\u00d72+2)"
+              "279 \u00f7 (41 - 17 \u00d7 2 + 2)"
             ],
             "solution": [
               "31"
@@ -9154,7 +9155,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(630\u00f7(50+20)-12)\u00d7(-10)"
+              "(630 \u00f7 (50 + 20) -12) \u00d7 (-10)"
             ],
             "solution": [
               "30"
@@ -9167,7 +9168,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "(125+3)\u00f7(25\u00d72\u2013(-14))"
+              "(125 + 3) \u00f7 (25 \u00d7 2 \u2013 ( -14))"
             ],
             "solution": [
               "2"
@@ -9180,7 +9181,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "303\u00f7(9\u00d710+28\u00f72-3)"
+              "303 \u00f7 (9 \u00d7 10 + 28 \u00f7 2 - 3)"
             ],
             "solution": [
               "3"
@@ -9218,9 +9219,9 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-20\u00d71",
+                "left": "-20 \u00d7 1",
                 "sign": ">",
-                "right": "25\u00d7(-2)"
+                "right": "25 \u00d7 (-2)"
               },
               {
                 "left": "-4",
@@ -9228,9 +9229,9 @@
                 "right": "3"
               },
               {
-                "left": "-20\u00d7(-4)",
+                "left": "-20 \u00d7 (-4)",
                 "sign": ">",
-                "right": "25\u00d73"
+                "right": "25 \u00d7 3"
               }
             ]
           }
@@ -9247,14 +9248,14 @@
                 "right": "12"
               },
               {
-                "left": "11\u00d72",
+                "left": "11 \u00d7 2",
                 "sign": "<",
-                "right": "6\u00d74"
+                "right": "6 \u00d7 4"
               },
               {
-                "left": "7\u00d711",
+                "left": "7 \u00d7 11",
                 "sign": ">",
-                "right": "12\u00d76"
+                "right": "12 \u00d7 6"
               }
             ]
           }
@@ -9266,9 +9267,9 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-5\u00d71",
+                "left": "-5 \u00d7 1",
                 "sign": ">",
-                "right": "-10\u00d72"
+                "right": "-10 \u00d7 2"
               },
               {
                 "left": "12",
@@ -9276,9 +9277,9 @@
                 "right": "-6"
               },
               {
-                "left": "-5\u00d712",
+                "left": "-5 \u00d7 12",
                 "sign": "=",
-                "right": "10\u00d7(-6)"
+                "right": "10 \u00d7 (-6)"
               }
             ]
           }
@@ -9290,19 +9291,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-8\u00d72",
+                "left": "-8 \u00d7 2",
                 "sign": "<",
-                "right": "-4\u00d73"
+                "right": "-4 \u00d7 3"
               },
               {
-                "left": "-6+15",
+                "left": "-6 + 15",
                 "sign": ">",
-                "right": "-10+5"
+                "right": "-10 + 5"
               },
               {
-                "left": "-8\u00d7(-6)",
+                "left": "-8 \u00d7 (-6)",
                 "sign": ">",
-                "right": "(-4)\u00d7(-10)"
+                "right": "(-4) \u00d7 (-10)"
               }
             ]
           }
@@ -9314,19 +9315,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-9+12",
+                "left": "-9 + 12",
                 "sign": "<",
-                "right": "15+5"
+                "right": "15 + 5"
               },
               {
-                "left": "5-6",
+                "left": "5 - 6",
                 "sign": ">",
-                "right": "-3-6"
+                "right": "-3 - 6"
               },
               {
-                "left": "-9\u00d75",
+                "left": "-9 \u00d7 5",
                 "sign": "=",
-                "right": "15\u00d7(-3)"
+                "right": "15 \u00d7 (-3)"
               }
             ]
           }
@@ -9338,19 +9339,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-11\u00d72",
+                "left": "-11 \u00d7 2",
                 "sign": ">",
-                "right": "-12\u00d73"
+                "right": "-12 \u00d7 3"
               },
               {
-                "left": "11+5",
+                "left": "11 + 5",
                 "sign": ">",
-                "right": "7+(-11)"
+                "right": "7 + (-11)"
               },
               {
-                "left": "11\u00d711",
+                "left": "11 \u00d7 11",
                 "sign": ">",
-                "right": "-12\u00d77"
+                "right": "-12 \u00d7 7"
               }
             ]
           }
@@ -9362,17 +9363,17 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "10\u00d72",
+                "left": "10 \u00d7 2",
                 "sign": ">",
-                "right": "-15\u00d71"
+                "right": "-15 \u00d7 1"
               },
               {
-                "left": "20-5",
+                "left": "20 - 5",
                 "sign": ">",
-                "right": "-15+20"
+                "right": "-15 + 20"
               },
               {
-                "left": "10\u00d720",
+                "left": "10 \u00d7 20",
                 "sign": "<",
                 "right": "-15\u00d7(-15)"
               }
@@ -9386,19 +9387,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "45+2",
+                "left": "45 + 2",
                 "sign": ">",
-                "right": "-15+(-4)"
+                "right": "-15 + (-4)"
               },
               {
-                "left": "-3+10",
+                "left": "-3 + 10",
                 "sign": "<",
-                "right": "20-5"
+                "right": "20 - 5"
               },
               {
-                "left": "45\u00d7(-3)",
+                "left": "45 \u00d7 (-3)",
                 "sign": ">",
-                "right": "-15\u00d720"
+                "right": "-15 \u00d7 20"
               }
             ]
           }
@@ -9410,19 +9411,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "-20\u00d710",
+                "left": "-20 \u00d7 10",
                 "sign": "=",
-                "right": "-5\u00d740"
+                "right": "-5 \u00d7 40"
               },
               {
-                "left": "8+3",
+                "left": "8 + 3",
                 "sign": ">",
-                "right": "-9+3"
+                "right": "-9 + 3"
               },
               {
-                "left": "-20\u00d78",
+                "left": "-20 \u00d7 8",
                 "sign": "<",
-                "right": "-20\u00d7(-9)"
+                "right": "-20 \u00d7 (-9)"
               }
             ]
           }
@@ -9776,7 +9777,7 @@
           "question": {
             "title": "Butun sonlarni o\u02bbsish tartibida joylashtiring",
             "options": [
-              "[d]-22",
+              "[d]22",
               "[a] -102",
               "[c]3",
               "[b]-1"
@@ -9895,7 +9896,7 @@
             "options": [
               "[*]5 \u00d7 70",
               "-54 \u00f7 9",
-              "[*]-8 \u2013 (-28)",
+              "[*]-8 - (-28)",
               "(-3) + (-7)",
               "[*]6 \u00d7 3 - 17"
             ]
@@ -9908,7 +9909,7 @@
             "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
             "options": [
               "47 + 131",
-              "[*]-81 \u2013 (-18)",
+              "[*]-81 - (-18)",
               "[*]18 \u00d7 (-6)",
               "[*]-24 \u00f7 6",
               "-6 + 7 \u00d7 3"
@@ -9923,7 +9924,7 @@
             "options": [
               "[*](-2) \u00d7 (-9)",
               "[*]0 + 9",
-              "[*]-13 \u2013 (-44)",
+              "[*]-13 - (-44)",
               "-7 \u00f7 7",
               "20 \u2013 6 \u00d7 5"
             ]
@@ -9936,7 +9937,7 @@
             "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
             "options": [
               "(-4) + (-9)",
-              "[*]-16 \u2013 (-71)",
+              "[*]-16 - (-71)",
               "-16 \u00d7 4",
               "-54 \u00f7 9",
               "[*]36 \u00d7 2 \u00f7 12"
@@ -9975,7 +9976,7 @@
           "id": "math-uz-6-4-67-12",
           "pattern": 12,
           "question": {
-            "title": "Berilgan misollardan qaysilarining javobi musbat son chiqadi",
+            "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
             "options": [
               "[*]-29 - 24",
               "46+17",
@@ -9991,8 +9992,8 @@
           "question": {
             "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
             "options": [
-              "8 \u2013 (-18)",
-              "[*]\u20131 \u00d7 50",
+              "8 - (-18)",
+              "[*]-1 \u00d7 50",
               "122 + (-4)",
               "[*]-85 \u00f7 5",
               "125 + 10 \u00d7 (-11)"
@@ -10005,11 +10006,11 @@
           "question": {
             "title": "Berilgan misollardan qaysilarining javobi manfiy son chiqadi",
             "options": [
-              "12 \u2013 (-24)",
+              "12 - (-24)",
               "[*]-79 + 19",
               "[*]30 \u00d7 (-6)",
               "-72 \u00f7 (-12)",
-              "-50 + 12 \u2013 (-45)"
+              "-50 + 12 - (-45)"
             ]
           }
         },
@@ -10023,7 +10024,7 @@
               "-12 -7",
               "[*]-9 \u00d7 (-8)",
               "-48 \u00f7 6",
-              "[*]51 \u00d7 2 \u2013 97"
+              "[*]51 \u00d7 2 - 97"
             ]
           }
         },
@@ -11168,7 +11169,7 @@
                 "Ratsional sonlar",
                 "\\frac{7}{2}",
                 "\\frac{13}{3}",
-                "3",
+                "13",
                 "\\frac{13}{16}"
               ],
               [
@@ -11187,7 +11188,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "15\\frac{5}{7}\u00d7\\frac{3}{4}+12\\frac{2}{7}\u00d7\\frac{3}{4}"
+              "15\\frac{5}{7} \u00d7 \\frac{3}{4} + 12\\frac{2}{7} \u00d7 \\frac{3}{4}"
             ],
             "solution": [
               "21"
@@ -11200,7 +11201,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "7\\frac{5}{11}\u00d715+5\\frac{6}{11}\u00d715"
+              "7\\frac{5}{11} \u00d7 15 + 5\\frac{6}{11} \u00d7 15"
             ],
             "solution": [
               "195"
@@ -11213,7 +11214,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "-14\\frac{7}{9}\u00d716+18\\frac{7}{9}\u00d716"
+              "-14\\frac{7}{9} \u00d7 16 + 18\\frac{7}{9} \u00d7 16"
             ],
             "solution": [
               "64"
@@ -11226,10 +11227,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "131\\frac{4}{11}\u00d791-31\\frac{4}{11}\u00d791"
+              "131\\frac{4}{11} \u00d7 91 - 31\\frac{4}{11} \u00d7 91"
             ],
             "solution": [
-              "910"
+              "9100"
             ]
           }
         },
@@ -11239,10 +11240,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "37\u00d7112\\frac{2}{3}-37\u00d712\\frac{2}{3}"
+              "37 \u00d7 112\\frac{2}{3} - 37 \u00d7 12\\frac{2}{3}"
             ],
             "solution": [
-              "370"
+              "3700"
             ]
           }
         },
@@ -11252,7 +11253,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "124\u00d79\\frac{3}{4}-124\u00d74\\frac{3}{4}"
+              "124 \u00d7 9\\frac{3}{4} - 124 \u00d7 4\\frac{3}{4}"
             ],
             "solution": [
               "620"
@@ -11265,7 +11266,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "45\u00d721\\frac{5}{6}-45\u00d712\\frac{5}{6}"
+              "45 \u00d7 21\\frac{5}{6} - 45 \u00d7 12\\frac{5}{6}"
             ],
             "solution": [
               "405"
@@ -11278,7 +11279,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "31\u00d721\\frac{4}{5}-31\u00d710\\frac{4}{5}"
+              "31 \u00d7 21\\frac{4}{5} - 31 \u00d7 10\\frac{4}{5}"
             ],
             "solution": [
               "341"
@@ -11291,7 +11292,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "3\\frac{4}{17}\u00d75\\frac+3\\frac{4}{17}\u00d711\\frac{1}{3}"
+              "3\\frac{4}{17} \u00d7 5\\frac{2}{3} + 3\\frac{4}{17} \u00d7 11\\frac{1}{3}"
             ],
             "solution": [
               "55"
@@ -11304,7 +11305,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "21\u00d7(\\frac{2}{7}+\\frac{5}{21})"
+              "21 \u00d7 (\\frac{2}{7} + \\frac{5}{21})"
             ],
             "solution": [
               "11"
@@ -11343,7 +11344,7 @@
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
             "options": [
-              "[a]\\frac{27}{5}",
+              "[c]\\frac{27}{5}",
               "[b]5",
               "[d]\\frac{25}{3}",
               "[a]\\frac{17}{5}"
@@ -11369,10 +11370,10 @@
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
             "options": [
-              "[d]-\\frac{1}{7}",
+              "[d]- \\frac{1}{7}",
               "[a]-1",
-              "[c]-\\frac{1}{2}",
-              "[b]-\\frac{3}{5}"
+              "[c]- \\frac{1}{2}",
+              "[b]- \\frac{3}{5}"
             ]
           }
         },
@@ -11382,10 +11383,10 @@
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
             "options": [
-              "[b]-\\frac{5}{4}",
+              "[b]- \\frac{5}{4}",
               "[c]0",
               "[d]\\frac{1}{2}",
-              "[a]-1\\frac{1}{3}"
+              "[a]- 1\\frac{1}{3}"
             ]
           }
         },
@@ -11408,7 +11409,7 @@
           "question": {
             "title": "Ratsional sonlarni o\u02bbsish tartibida joylashtiring.",
             "options": [
-              "[a]-\\frac{45}{4}",
+              "[a]- \\frac{45}{4}",
               "[b]1",
               "[d]\\frac{25}{2}",
               "[c]\\frac{31}{3}"
@@ -11482,7 +11483,7 @@
               "[*]13",
               "[*]23",
               "[*]5",
-              "-\\frac{3}{7}"
+              "- \\frac{3}{7}"
             ]
           }
         },
@@ -11507,7 +11508,7 @@
           "question": {
             "title": "Cheksiz davriy  o\u2019nlikasrlarni toping",
             "options": [
-              "-\\frac{1}{2}",
+              "- \\frac{1}{2}",
               "7",
               "\\frac{36}{12}",
               "[*]\\frac{5}{9}",
@@ -11597,13 +11598,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{1}{2}\u00d7\\frac{5}{4}",
+              "[a]\\frac{1}{2} \u00d7 \\frac{5}{4}",
               "[a]\\frac{5}{8}",
-              "[b]5\u00d7\\frac{2}{3}",
+              "[b]5 \u00d7 \\frac{2}{3}",
               "[b]\\frac{10}{3}",
-              "[c]\\frac{6}{5}\u00f7\\frac{1}{2}",
+              "[c]\\frac{6}{5} \u00f7 \\frac{1}{2}",
               "[c]\\frac{12}{5}",
-              "[d]\\frac{5}{8}\u00f7\\frac{4}{5}",
+              "[d]\\frac{5}{8} \u00f7 \\frac{4}{5}",
               "[d]5"
             ]
           }
@@ -11614,13 +11615,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{1}{3}\u00d7\\frac{12}{7}",
+              "[a]\\frac{1}{3} \u00d7 \\frac{12}{7}",
               "[a]\\frac{4}{7}",
-              "[b]1\u00d7\\frac{16}{1}",
+              "[b]1 \u00d7 \\frac{16}{1}",
               "[b]16",
-              "[c]\\frac{6}{7}\u00f7\\frac{2}{21}",
+              "[c]\\frac{6}{7} \u00f7 \\frac{2}{21}",
               "[c]9",
-              "[d]9\u00f71\\frac{4}{5}",
+              "[d]9 \u00f7 1\\frac{4}{5}",
               "[d]5"
             ]
           }
@@ -11631,13 +11632,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]8\u00d7\\frac{5}{16}",
+              "[a]8 \u00d7 \\frac{5}{16}",
               "[a]\\frac{5}{2}",
-              "[b]3\\frac{3}{4}\u00d7\\frac{4}{5}",
+              "[b]3\\frac{3}{4} \u00d7 \\frac{4}{5}",
               "[b]8",
-              "[c]\\frac{6}{13}\u00f7\\frac{12}{26}",
-              "[c]1",
-              "[d]1\\frac{1}{17}\u00f7\\frac{18}{17}",
+              "[c]\\frac{6}{13} \u00f7 \\frac{6}{26}",
+              "[c]2",
+              "[d]1\\frac{1}{17} \u00f7 \\frac{18}{17}",
               "[d]1"
             ]
           }
@@ -11648,13 +11649,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{3}{20}\u00d7 \\frac{15}{4}",
+              "[a]\\frac{3}{20} \u00d7 \\frac{15}{4}",
               "[a]\\frac{9}{16}",
-              "[b]7\u00d73",
+              "[b]7 \u00d7 3",
               "[b]21",
-              "[c]\\frac{6}{17}\u00f7\\frac{24}{51}",
+              "[c]\\frac{6}{17} \u00f7 \\frac{24}{51}",
               "[c]\\frac{3}{40}",
-              "[d]21\u00f7 \\frac{7}{6}",
+              "[d]21 \u00f7  \\frac{7}{6}",
               "[d]18"
             ]
           }
@@ -11665,13 +11666,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{11}{45}\u00d7\\frac{15}{33}",
+              "[a]\\frac{11}{45} \u00d7 \\frac{15}{33}",
               "[a]\\frac{1}{9}",
-              "[b]7\u00d71\\frac{5}{7}",
+              "[b]7 \u00d7 1\\frac{5}{7}",
               "[b]12",
-              "[c]13\u00f73\\frac{1}{4}",
+              "[c]13 \u00f7 3\\frac{1}{4}",
               "[c]4",
-              "[d]72\u00f76",
+              "[d]72 \u00f7 6",
               "[d]12"
             ]
           }
@@ -11682,13 +11683,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]17\u00d72\\frac{3}{17}",
+              "[a]17 \u00d7 2\\frac{3}{17}",
               "[a]37",
-              "[b]6\\frac{2}{7}\u00d7\\frac{21}{44}",
-              "[b]3",
-              "[c]\\frac{7}{28}\u00f7\\frac{5}{28}",
+              "[b]6\\frac{2}{7} \u00d7 \\frac{14}{44}",
+              "[b]2",
+              "[c]\\frac{7}{28} \u00f7 \\frac{5}{28}",
               "[c]\\frac{7}{5}",
-              "[d]3\\frac{4}{5}\u00f71\\frac{4}{15}",
+              "[d]3\\frac{4}{5} \u00f7 1\\frac{4}{15}",
               "[d]3"
             ]
           }
@@ -11699,13 +11700,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{14}{1}\u00d7\\frac{25}{7}",
+              "[a]\\frac{14}{1} \u00d7 \\frac{25}{7}",
               "[a]50",
-              "[b]9\u00d7\\frac{1}{27}",
+              "[b]9 \u00d7 \\frac{1}{27}",
               "[b]\\frac{1}{3}",
-              "[c]\\frac{5}{36}\u00f7\\frac{4}{9}",
+              "[c]\\frac{5}{36} \u00f7 \\frac{4}{9}",
               "[c]\\frac{5}{16}",
-              "[d]1\\frac{4}{7}\u00f71\\frac{3}{14}",
+              "[d]1\\frac{4}{7} \u00f7 1\\frac{3}{14}",
               "[d]\\frac{22}{17}"
             ]
           }
@@ -11716,13 +11717,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]16\u00d71\\frac{3}{4}",
+              "[a]16 \u00d7 1\\frac{3}{4}",
               "[a]28",
-              "[b]\\frac{1}{4}\u00d7\\frac{8}{17}",
+              "[b]\\frac{1}{4} \u00d7 \\frac{8}{17}",
               "[b]\\frac{2}{17}",
-              "[c]\\frac{36}{35}\u00f7\\frac{6}{5}",
+              "[c]\\frac{36}{35} \u00f7 \\frac{6}{5}",
               "[c]\\frac{6}{7}",
-              "[d]32\u00f73\\frac{5}{9}",
+              "[d]32 \u00f7 3\\frac{5}{9}",
               "[d]9"
             ]
           }
@@ -11733,13 +11734,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]\\frac{4}{5}\u00d7\\frac{35}{32}",
+              "[a]\\frac{4}{5} \u00d7 \\frac{35}{32}",
               "[a]\\frac{7}{8}",
-              "[b]2\\frac{1}{6}\u00d7\\frac{8}{13}",
+              "[b]2\\frac{1}{6} \u00d7 \\frac{8}{13}",
               "[b]\\frac{4}{3}",
-              "[c]\\frac{4}{13}\u00f7\\frac{1}{26}",
+              "[c]\\frac{4}{13} \u00f7 \\frac{1}{26}",
               "[c]8",
-              "[d]54\u00f76",
+              "[d]54 \u00f7 6",
               "[d]9"
             ]
           }
@@ -11750,13 +11751,13 @@
           "question": {
             "title": "Misolni bajaring",
             "options": [
-              "[a]12\u00d71\\frac{1}{3}",
+              "[a]12 \u00d7 1\\frac{1}{3}",
               "[a]16",
-              "[b]2\\frac{1}{6}\u00d7\\frac{8}{7}",
+              "[b]2\\frac{1}{6} \u00d7 \\frac{8}{7}",
               "[b]\\frac{52}{21}",
-              "[c]10\u00f72\\frac{6}{7}",
+              "[c]10 \u00f7 2\\frac{6}{7}",
               "[c]\\frac{7}{2}",
-              "[d]1\\frac{1}{2}\u00f72\\frac{1}{4}",
+              "[d]1\\frac{1}{2} \u00f7 2\\frac{1}{4}",
               "[d]\\frac{2}{3}"
             ]
           }
@@ -11865,7 +11866,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Ratsional sonning qarama-qarshi soni bilan yig\u02bbindisi birga teng"
+              "Ratsional sonning qarama-qarshi son bilan yig\u02bbindisi birga teng"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -12168,7 +12169,7 @@
           "question": {
             "title": "0,36 km = ... cm",
             "options": [
-              "[*]360 cm",
+              "[*]36000 cm",
               "3,6 cm",
               "36 cm",
               "3600 cm"
@@ -12179,7 +12180,7 @@
           "id": "math-uz-6-6-70-1",
           "pattern": 1,
           "question": {
-            "title": "0,98 kg = __g",
+            "title": "0,98 kg = ...g",
             "options": [
               "[*]980 g",
               "9,8 g",
@@ -12648,7 +12649,7 @@
             "options": [
               {
                 "left": "Asosining yuzi",
-                "sign": ">",
+                "sign": "<",
                 "right": "Asosining yuzi"
               },
               {
@@ -12945,7 +12946,7 @@
               [
                 "O\u2018tmas burchaklar",
                 "98^\\circ",
-                "455^\\circ",
+                "155^\\circ",
                 "93^\\circ",
                 "137^\\circ"
               ]
@@ -12964,7 +12965,7 @@
               "127^\\circ",
               "91^\\circ",
               "46^\\circ",
-              "150",
+              "150^\\circ",
               "29^\\circ"
             ],
             "solution": [
@@ -13442,7 +13443,7 @@
               "[*](-11; -7)",
               "[*](-5; -18)",
               "(14; 1)",
-              "[*](-12; 6)",
+              "[*](-12; -6)",
               "(-10; 16)",
               "(1; 3)"
             ]
@@ -13457,7 +13458,7 @@
               "[*](11; -7)",
               "(4; 8)",
               "[*](8; -12)",
-              "[*](-10; 6)",
+              "[*](10; -6)",
               "(13; 3)",
               "(-12; 6)"
             ]
@@ -13523,7 +13524,7 @@
               "[c]56^\\circ, 56^\\circ",
               "[c]68^\\circ",
               "[d]70^\\circ",
-              "[d]54^\\circ"
+              "56^\\circ\" \"[d]54^\\circ\""
             ]
           }
         },
@@ -13940,7 +13941,7 @@
               "[*]252",
               "400",
               "300",
-              "252"
+              "262"
             ]
           }
         },
@@ -14194,6 +14195,13 @@
                 ":",
                 "4",
                 "8"
+              ],
+              [
+                "2",
+                "1",
+                ":",
+                "8",
+                "4"
               ]
             ]
           }
@@ -14216,6 +14224,13 @@
                 ":",
                 "3",
                 "6"
+              ],
+              [
+                "2",
+                "1",
+                ":",
+                "6",
+                "3"
               ]
             ]
           }
@@ -14397,7 +14412,7 @@
               },
               {
                 "left": "Olcha",
-                "sign": "<",
+                "sign": ">",
                 "right": "Olcha"
               },
               {
@@ -14720,7 +14735,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "12\u00f7120\u00d7100"
+              "12 \u00f7 120 \u00d7 100"
             ],
             "solution": [
               "10"
@@ -14733,7 +14748,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "150\u00f7500\u00d7100"
+              "150 \u00f7 500 \u00d7 100"
             ],
             "solution": [
               "30"
@@ -14746,7 +14761,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "450\u00f7500\u00d7100"
+              "450 \u00f7 500 \u00d7 100"
             ],
             "solution": [
               "90"
@@ -14759,7 +14774,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "120\u00f7100\u00d7 90"
+              "120 \u00f7 100 \u00d7  90"
             ],
             "solution": [
               "108"
@@ -14772,7 +14787,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "300\u00f7100\u00d75"
+              "300 \u00f7 100 \u00d7 5"
             ],
             "solution": [
               "15"
@@ -14785,7 +14800,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "200\u00f7100\u00d78"
+              "200 \u00f7 100 \u00d7 8"
             ],
             "solution": [
               "16"
@@ -14798,7 +14813,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "100\u00d7(1500-450)\u00f71500"
+              "100 \u00d7 (1500 - 450) \u00f7 1500"
             ],
             "solution": [
               "70"
@@ -14811,7 +14826,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "100\u00d7(500-200)\u00f7500"
+              "100 \u00d7 (500 - 200) \u00f7 500"
             ],
             "solution": [
               "60"
@@ -14824,7 +14839,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "1200\u00d745\u00f7100"
+              "1200 \u00d7 45 \u00f7 100"
             ],
             "solution": [
               "540"
@@ -14837,10 +14852,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "30\u00f7150\u00d7100"
+              "30 \u00f7 150 \u00d7 100"
             ],
             "solution": [
-              "33"
+              "20"
             ]
           }
         },
@@ -14957,7 +14972,7 @@
                 "right": "\\frac{31}{36}"
               },
               {
-                "left": "\\frac{1}{115}",
+                "left": "\\frac{11}{15}",
                 "sign": ">",
                 "right": "\\frac{2}{15}"
               }
@@ -15093,7 +15108,7 @@
               "[a]1:8",
               "[b]7:35",
               "[c]1:3",
-              "1:2"
+              "[d]1:2"
             ]
           }
         },
@@ -15144,7 +15159,7 @@
             "options": [
               "[a]1:5",
               "[b]2:6",
-              "[c]4:6\"",
+              "[c]4:6",
               "[d]8:9"
             ]
           }
@@ -15285,7 +15300,7 @@
               "9:20",
               "4:20",
               "[*]12:40",
-              "9:30"
+              "[*]9:30"
             ]
           }
         },
@@ -15431,7 +15446,7 @@
             "title": "Teng nisbatlarni birlashtiring",
             "options": [
               "[a]3:5",
-              "[a]27:35",
+              "[a]27:45",
               "[b]37:50",
               "[b]74:100",
               "[c]43:50",
@@ -15632,7 +15647,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "q"
+              "Kasrni foiz ko\u02bbrinishida ifodalash uchun uni 100 ga ko\u2019paytirish va natijaga % belgisini qo\u2019yish kerak"
             ],
             "solution": [
               "[*]To\u2018g\u2018ri",
@@ -15783,7 +15798,7 @@
           "id": "math-uz-6-8-90-1",
           "pattern": 1,
           "question": {
-            "title": "Korxona bankdan 40 million so\u02bbmni bir yil muddatga 20% yillik foiz stavkasi bilan\nolgan bo\u02bblsa, bir yildan so\u02bbng korxona jami qancha miqdorda bankka pul qaytaradi?",
+            "title": "Korxona bankdan 40 million so\u02bbmni bir yil muddatga 20 foiz yillik foiz stavkasi bilan\nolgan bo\u02bblsa, bir yildan so\u02bbng korxona jami qancha miqdorda bankka pul qaytaradi?",
             "options": [
               "[*]48 million so\u02bbm",
               "8 million so\u02bbm",
@@ -15798,12 +15813,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]b-18",
-              "[*]128-b",
-              "[*]a+b",
-              "12-10",
-              "13+12",
-              "11-1"
+              "[*]\\(b\\) - 18",
+              "[*]128 - \\(b\\)",
+              "[*]\\(a\\) + \\(b\\)",
+              "12 - 10",
+              "13 + 12",
+              "11 - 1"
             ]
           }
         },
@@ -15813,12 +15828,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]28-c",
-              "[*]3a+2b",
-              "[*]a-c",
-              "15+3",
-              "23-13",
-              "7+8"
+              "[*]28 - \\(c\\)",
+              "[*]3\\(a\\) + 2\\(b\\)",
+              "[*]\\(a\\) - \\(c\\)",
+              "15 + 3",
+              "23 - 13",
+              "7 + 8"
             ]
           }
         },
@@ -15828,12 +15843,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]c-b",
-              "[*]2c-a",
-              "[*]4c+b",
-              "3-2",
-              "1-5",
-              "7+6"
+              "[*]\\(c\\) - \\(b\\)",
+              "[*]2\\(c\\) - \\(a\\)",
+              "[*]4\\(c\\) + \\(b\\)",
+              "3 - 2",
+              "1 - 5",
+              "7 + 6"
             ]
           }
         },
@@ -15843,12 +15858,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]5b-a",
-              "[*]a-1c",
-              "[*]0-2a",
-              "1+11",
-              "5+6",
-              "8-5"
+              "[*]5\\(b\\) - \\(a\\)",
+              "[*]\\(a\\) - 1\\(c\\)",
+              "[*]0 - 2\\(a\\)",
+              "1 + 11",
+              "5 + 6",
+              "8 - 5"
             ]
           }
         },
@@ -15858,12 +15873,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]10-c",
-              "[*]m-n",
-              "[*]c-2b",
-              "0-23",
-              "14-6",
-              "34-20"
+              "[*]10 - \\(c\\)",
+              "[*]\\(m\\) - \\(n\\)",
+              "[*]\\(c\\) - 2\\(b\\)",
+              "0 - 23",
+              "14 - 6",
+              "34 - 20"
             ]
           }
         },
@@ -15873,12 +15888,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]25-cb",
-              "[*]12a-n",
-              "[*]b-c",
-              "23+7",
-              "0-8",
-              "2-5"
+              "[*]25 - \\(cb\\)",
+              "[*]12\\(a\\) - \\(n\\)",
+              "[*]\\(b\\) - \\(c\\)",
+              "23 + 7",
+              "0 - 8",
+              "2 - 5"
             ]
           }
         },
@@ -15888,12 +15903,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]c+b",
-              "[*]a-4n",
-              "[*]a-6c",
-              "21+6",
-              "11-8",
-              "4-5"
+              "[*]\\(c\\) + \\(b\\)",
+              "[*]\\(a\\) - 4\\(n\\)",
+              "[*]\\(a\\) - 6\\(c\\)",
+              "21 + 6",
+              "11 - 8",
+              "4 - 5"
             ]
           }
         },
@@ -15903,12 +15918,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]5a-ab",
-              "[*]c-7b",
-              "[*]3c+2a",
-              "12-7",
-              "15-12",
-              "17+3"
+              "[*]5\\(a\\) - \\(ab\\)",
+              "[*]\\(c\\) - 7\\(b\\)",
+              "[*]3\\(c\\) + 2\\(a\\)",
+              "12 - 7",
+              "15 - 12",
+              "17 + 3"
             ]
           }
         },
@@ -15918,12 +15933,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]5a+b",
-              "[*]c+ab",
-              "[*]9c-7a",
-              "1-13",
-              "10+3",
-              "11-6"
+              "[*]5\\(a\\) + \\(b\\)",
+              "[*]\\(c\\) + \\(ab\\)",
+              "[*]9\\(c\\) - 7\\(a\\)",
+              "1 - 13",
+              "10 + 3",
+              "11 - 6"
             ]
           }
         },
@@ -15933,12 +15948,12 @@
           "question": {
             "title": "Harfiy ifodani belgilang",
             "options": [
-              "[*]6c+a",
-              "[*]c+ac",
-              "[*]0c-1b",
-              "17+13",
-              "10+9",
-              "14-6"
+              "[*]6\\(c\\) + \\(a\\)",
+              "[*]\\(c\\) + \\(ac\\)",
+              "[*]10\\(c\\) - 1\\(b\\)",
+              "17 + 13",
+              "10 + 9",
+              "14 - 6"
             ]
           }
         },
@@ -15948,21 +15963,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "4-3",
-              "5-1",
-              "6\u20133",
-              "4+2"
+              "4 - 3",
+              "5 - 1",
+              "6 - 3",
+              "4 + 2"
             ],
             "solution": [
               [
-                "4-3",
+                "4 - 3",
                 "\u00d7",
-                "6\u20133"
+                "6 - 3"
               ],
               [
-                "6\u20133",
+                "6 - 3",
                 "\u00d7",
-                "4-3"
+                "4 - 3"
               ]
             ]
           }
@@ -15973,21 +15988,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "4+3",
-              "9-7",
-              "5+3",
-              "1+4"
+              "4 + 3",
+              "9 - 7",
+              "5 + 3",
+              "1 + 4"
             ],
             "solution": [
               [
-                "9-7",
+                "9 - 7",
                 "\u00d7",
-                "1+4"
+                "1 + 4"
               ],
               [
-                "1+4",
+                "1 + 4",
                 "\u00d7",
-                "9-7"
+                "9 - 7"
               ]
             ]
           }
@@ -15998,21 +16013,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "2+5",
-              "5+4",
-              "7\u20133",
-              "4\u20132"
+              "2 + 5",
+              "5 + 4",
+              "7 - 3",
+              "4 - 2"
             ],
             "solution": [
               [
-                "7\u20133",
+                "7 - 3",
                 "\u00d7",
-                "4\u20132"
+                "4 - 2"
               ],
               [
-                "4\u20132",
+                "4 - 2",
                 "\u00d7",
-                "7\u20133"
+                "7 - 3"
               ]
             ]
           }
@@ -16023,21 +16038,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "4-1",
-              "7-1",
-              "9\u20133",
-              "4+1"
+              "4 - 1",
+              "7 - 1",
+              "9 - 3",
+              "4 + 1"
             ],
             "solution": [
               [
-                "4-1",
+                "4 - 1",
                 "\u00d7",
-                "4+1"
+                "4 + 1"
               ],
               [
-                "4+1",
+                "4 + 1",
                 "\u00d7",
-                "4-1"
+                "4 - 1"
               ]
             ]
           }
@@ -16048,21 +16063,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "5-2",
-              "5+2",
-              "6\u20134",
-              "4\u20132"
+              "5 - 2",
+              "5 + 2",
+              "6 - 4",
+              "4 - 2"
             ],
             "solution": [
               [
-                "6\u20134",
+                "6 - 4",
                 "\u00d7",
-                "4\u20132"
+                "4 - 2"
               ],
               [
-                "4\u20132",
+                "4 - 2",
                 "\u00d7",
-                "6\u20134"
+                "6 - 4"
               ]
             ]
           }
@@ -16073,21 +16088,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "9\u20137",
-              "8\u20135",
-              "7+1",
-              "5\u20134"
+              "9 - 7",
+              "8 - 5",
+              "7 + 1",
+              "5 - 4"
             ],
             "solution": [
               [
-                "9\u20137",
+                "9 - 7",
                 "\u00d7",
-                "5\u20134"
+                "5 - 4"
               ],
               [
-                "5\u20134",
+                "5 - 4",
                 "\u00d7",
-                "9\u20137"
+                "9 - 7"
               ]
             ]
           }
@@ -16098,21 +16113,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "8\u20135",
-              "5+3",
-              "6+1",
-              "2+3"
+              "8 - 5",
+              "5 + 3",
+              "6 + 1",
+              "2 + 3"
             ],
             "solution": [
               [
-                "8\u20135",
+                "8 - 5",
                 "\u00d7",
-                "2+3"
+                "2 + 3"
               ],
               [
-                "2+3",
+                "2 + 3",
                 "\u00d7",
-                "8\u20135"
+                "8 - 5"
               ]
             ]
           }
@@ -16123,21 +16138,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "9-3",
-              "4+3",
-              "3+5",
-              "9\u20138"
+              "9 - 3",
+              "4 + 3",
+              "3 + 5",
+              "9 - 8"
             ],
             "solution": [
               [
-                "9-3",
+                "9 - 3",
                 "\u00d7",
-                "9\u20138"
+                "9 - 8"
               ],
               [
-                "9\u20138",
+                "9 - 8",
                 "\u00d7",
-                "9-3"
+                "9 - 3"
               ]
             ]
           }
@@ -16148,21 +16163,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "6+1",
-              "7-1",
-              "8\u20133",
-              "9-5"
+              "6 + 1",
+              "7 - 1",
+              "8 - 3",
+              "9 - 5"
             ],
             "solution": [
               [
-                "8\u20133",
+                "8 - 3",
                 "\u00d7",
-                "9-5"
+                "9 - 5"
               ],
               [
-                "9-5",
+                "9 - 5",
                 "\u00d7",
-                "8\u20133"
+                "8 - 3"
               ]
             ]
           }
@@ -16173,21 +16188,21 @@
           "question": {
             "title": "Eng kichik sonni hosil qilish uchun sonli ifodani hisoblab\nhar bir bo\u2018sh katakka bittadan raqamni joylashtiring\n",
             "problem": [
-              "9\u20131",
-              "8\u20132",
-              "7\u20133",
-              "6-4"
+              "9 - 1",
+              "8 - 2",
+              "7 - 3",
+              "6 - 4"
             ],
             "solution": [
               [
-                "7\u20133",
+                "7 - 3",
                 "\u00d7",
-                "6-4"
+                "6 - 4"
               ],
               [
-                "6-4",
+                "6 - 4",
                 "\u00d7",
-                "7\u20133"
+                "7 - 3"
               ]
             ]
           }
@@ -16198,29 +16213,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "5c+a",
-              "2c+c",
-              "6c-1b",
-              "5a+2c",
-              "15+1",
-              "13+0",
-              "12-7",
-              "19-1"
+              "5\\(c\\) + \\(a\\)",
+              "2\\(c\\) + \\(c\\)",
+              "6\\(c\\) - 1\\(b\\)",
+              "5\\(a\\) + 2\\(c\\)",
+              "15 + 1",
+              "13 + 0",
+              "12 - 7",
+              "19 - 1"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "15+1",
-                "13+0",
-                "12-7",
-                "19-1"
+                "15 + 1",
+                "13 + 0",
+                "12 - 7",
+                "19 - 1"
               ],
               [
                 "Harfiy ifodalar",
-                "5c+a",
-                "2c+c",
-                "12-7",
-                "19-1"
+                "5\\(c\\) + \\(a\\)",
+                "2\\(c\\) + \\(c\\)",
+                "6\\(c\\) - 1\\(b\\)",
+                "5\\(a\\) + 2\\(c\\)"
               ]
             ]
           }
@@ -16231,29 +16246,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "a+5b",
-              "c+6b",
-              "3c-1a",
-              "2a-5b",
-              "17-13",
-              "13+3",
-              "12-6",
-              "19-7"
+              "\\(a\\) + 5\\(b\\)",
+              "\\(c\\) + 6\\(b\\)",
+              "3\\(c\\) - 1\\(a\\)",
+              "2\\(a\\) - 5\\(b\\)",
+              "17 - 13",
+              "13 + 3",
+              "12 - 6",
+              "19 - 7"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "17-13",
-                "13+3",
-                "12-6",
-                "19-7"
+                "17 - 13",
+                "13 + 3",
+                "12 - 6",
+                "19 - 7"
               ],
               [
                 "Harfiy ifodalar",
-                "a+5b",
-                "c+6b",
-                "3c-1a",
-                "2a-5b"
+                "\\(a\\) + 5\\(b\\)",
+                "\\(c\\) + 6\\(b\\)",
+                "3\\(c\\) - 1\\(a\\)",
+                "2\\(a\\) - 5\\(b\\)"
               ]
             ]
           }
@@ -16264,29 +16279,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "a-2ab",
-              "4c-3ab",
-              "5c-2a",
-              "m-n",
-              "12-17",
-              "15-2",
-              "7+3",
-              "12+6"
+              "\\(a\\) - 2\\(ab\\)",
+              "4\\(c\\) - 3\\(ab\\)",
+              "5\\(c\\) - 2\\(a\\)",
+              "\\(m\\) - \\(n\\)",
+              "12 - 17",
+              "15 - 2",
+              "7 + 3",
+              "12 + 6"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "12-17",
-                "15-2",
-                "7+3",
-                "12+6"
+                "12 - 17",
+                "15 - 2",
+                "7 + 3",
+                "12 + 6"
               ],
               [
                 "Harfiy ifodalar",
-                "a-2ab",
-                "4c-3ab",
-                "5c-2a",
-                "m-n"
+                "\\(a\\) - 2\\(ab\\)",
+                "4\\(c\\) - 3\\(ab\\)",
+                "5\\(c\\) - 2\\(a\\)",
+                "\\(m\\) - \\(n\\)"
               ]
             ]
           }
@@ -16297,29 +16312,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "3c+b",
-              "5a-4n",
-              "7a-6c",
-              "m(1+3)",
-              "2-6",
-              "1+8",
-              "10-5",
-              "7+5"
+              "3\\(c\\) + \\(b\\)",
+              "5\\(a\\) - 4\\(n\\)",
+              "7\\(a\\) - 6\\(c\\)",
+              "\\(m\\)(1 + 3)",
+              "2 - 6",
+              "1 + 8",
+              "10 - 5",
+              "7 + 5"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "2-6",
-                "1+8",
-                "10-5",
-                "7+5"
+                "2 - 6",
+                "1 + 8",
+                "10 - 5",
+                "7 + 5"
               ],
               [
                 "Harfiy ifodalar",
-                "3c+b",
-                "5a-4n",
-                "7a-6c",
-                "m(1+3)"
+                "3\\(c\\) + \\(b\\)",
+                "5\\(a\\) - 4\\(n\\)",
+                "7\\(a\\) - 6\\(c\\)",
+                "\\(m\\)(1 + 3)"
               ]
             ]
           }
@@ -16330,29 +16345,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "13-cb",
-              "4a-2n",
-              "3b-ac",
-              "a(b+c)",
-              "19+5",
-              "16-8",
-              "12-5",
-              "17-5"
+              "13 - \\(cb\\)",
+              "4\\(a\\) - 2\\(n\\)",
+              "3\\(b\\) - \\(ac\\)",
+              "\\(a\\)(\\(b\\) + \\(c\\))",
+              "19 + 5",
+              "16 - 8",
+              "12 - 5",
+              "17 - 5"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "19+5",
-                "16-8",
-                "12-5",
-                "17-5"
+                "19 + 5",
+                "16 - 8",
+                "12 - 5",
+                "17 - 5"
               ],
               [
                 "Harfiy ifodalar",
-                "13-cb",
-                "4a-2n",
-                "3b-ac",
-                "a(b+c)"
+                "13 - \\(cb\\)",
+                "4\\(a\\) - 2\\(n\\)",
+                "3\\(b\\) - \\(ac\\)",
+                "\\(a\\)(\\(b\\) + \\(c\\))"
               ]
             ]
           }
@@ -16363,29 +16378,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "5-2c",
-              "5m-3n",
-              "5c-2b",
-              "m(1+n)",
-              "2-1",
-              "17-6",
-              "7-0",
-              "14-5"
+              "5 - 2\\(c\\)",
+              "5\\(m\\) - 3\\(n\\)",
+              "5\\(c\\) - 2\\(b\\)",
+              "\\(m\\)(1 + \\(n\\))",
+              "2 - 1",
+              "17 - 6",
+              "7 - 0",
+              "14 - 5"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "2-1",
-                "17-6",
-                "7-0",
-                "14-5"
+                "2 - 1",
+                "17 - 6",
+                "7 - 0",
+                "14 - 5"
               ],
               [
                 "Harfiy ifodalar",
-                "5-2c",
-                "5m-3n",
-                "5c-2b",
-                "m(1+n)"
+                "5 - 2\\(c\\)",
+                "5\\(m\\) - 3\\(n\\)",
+                "5\\(c\\) - 2\\(b\\)",
+                "\\(m\\)(1 + \\(n\\))"
               ]
             ]
           }
@@ -16396,29 +16411,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "b-16",
-              "125-b",
-              "8a+7b",
-              "3m-n",
-              "17-10",
-              "18+12",
-              "11-6",
-              "12+8"
+              "\\(b\\) - 16",
+              "125 - \\(b\\)",
+              "8\\(a\\) + 7\\(b\\)",
+              "3\\(m\\) - \\(n\\)",
+              "17 - 10",
+              "18 + 12",
+              "11 - 6",
+              "12 + 8"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "17-10",
-                "18+12",
-                "11-6",
-                "12+8"
+                "17 - 10",
+                "18 + 12",
+                "11 - 6",
+                "12 + 8"
               ],
               [
                 "Harfiy ifodalar",
-                "b-16",
-                "125-b",
-                "8a+7b",
-                "3m-n"
+                "\\(b\\) - 16",
+                "125 - \\(b\\)",
+                "8\\(a\\) + 7\\(b\\)",
+                "3\\(m\\) - \\(n\\)"
               ]
             ]
           }
@@ -16429,29 +16444,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "2-c",
-              "5a+2b",
-              "1+3",
-              "2-1",
-              "17+8",
-              "16-6",
-              "2a-bc",
-              "m-0"
+              "2 - \\(c\\)",
+              "5\\(a\\) + 2\\(b\\)",
+              "1 + 3",
+              "2 - 1",
+              "17 + 8",
+              "16 - 6",
+              "2\\(a\\) - \\(bc\\)",
+              "\\(m\\) - 0"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "1+3",
-                "2-1",
-                "17+8",
-                "16-6"
+                "1 + 3",
+                "2 - 1",
+                "17 + 8",
+                "16 - 6"
               ],
               [
                 "Harfiy ifodalar",
-                "2-c",
-                "5a+2b",
-                "2a-bc",
-                "m-0"
+                "2 - \\(c\\)",
+                "5\\(a\\) + 2\\(b\\)",
+                "2\\(a\\) - \\(bc\\)",
+                "\\(m\\) - 0"
               ]
             ]
           }
@@ -16462,29 +16477,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "7b-ac",
-              "9a-1c",
-              "1+1",
-              "15-6",
-              "10-2a",
-              "4m-5",
-              "8+5",
-              "17-8"
+              "7\\(b\\) - \\(ac\\)",
+              "9\\(a\\) - 1\\(c\\)",
+              "1 + 1",
+              "15 - 6",
+              "10 - 2\\(a\\)",
+              "4\\(m\\) - 5",
+              "8 + 5",
+              "17 - 28"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "1+1",
-                "15-6",
-                "8+5",
-                "17-28"
+                "1 + 1",
+                "15 - 6",
+                "8 + 5",
+                "17 - 28"
               ],
               [
                 "Harfiy ifodalar",
-                "7b-ac",
-                "9a-1c",
-                "10-2a",
-                "4m-5"
+                "7\\(b\\) - \\(ac\\)",
+                "9\\(a\\) - 1\\(c\\)",
+                "10 - 2\\(a\\)",
+                "4\\(m\\) - 5"
               ]
             ]
           }
@@ -16495,29 +16510,29 @@
           "question": {
             "title": "Berilgan ifodalarni to\u2018gri joylashtiring",
             "problem": [
-              "3m-ac",
-              "8a-1c",
-              "1-2a",
-              "1+9",
-              "18-6",
-              "4-5a",
-              "8+15",
-              "17-28"
+              "3\\(m\\) - \\(ac\\)",
+              "8\\(a\\) - 1\\(c\\)",
+              "1 - 2\\(a\\)",
+              "1 + 9",
+              "18 - 6",
+              "4 - 5\\(a\\)",
+              "8 + 15",
+              "17 - 28"
             ],
             "solution": [
               [
                 "Sonli ifodalar",
-                "1+9",
-                "18-6",
-                "8+15",
-                "17-28"
+                "1 + 9",
+                "18 - 6",
+                "8 + 15",
+                "17 - 28"
               ],
               [
                 "Harfiy ifodalar",
-                "3m-ac",
-                "8a-1c",
-                "1-2a",
-                "4-5a"
+                "3\\(m\\) - \\(ac\\)",
+                "8\\(a\\) - 1\\(c\\)",
+                "1 - 2\\(a\\)",
+                "4 - 5\\(a\\)"
               ]
             ]
           }
@@ -16528,7 +16543,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "127+108\u00f7(\u20133)\u201324"
+              "127 + 108 \u00f7 (\u20133) \u2013 24"
             ],
             "solution": [
               "67"
@@ -16541,7 +16556,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "12\u00d7(8)+88\u00d7(8)"
+              "12 \u00d7 8 + 88 \u00d7 8"
             ],
             "solution": [
               "800"
@@ -16554,7 +16569,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "13\u00d7(\u201388)+13\u00d788"
+              "13 \u00d7 (\u201388) + 13 \u00d7 88"
             ],
             "solution": [
               "0"
@@ -16567,7 +16582,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "4,5\u00d7(\u201323)+5,5\u00d723"
+              "4,5 \u00d7 (\u201323) + 5,5 \u00d7 23"
             ],
             "solution": [
               "23"
@@ -16580,7 +16595,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "0,05\u00d7(\u20131)+4,05"
+              "0,05 \u00d7 (\u20131) + 4,05"
             ],
             "solution": [
               "4"
@@ -16593,7 +16608,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "81\u00f79+12\u00d75"
+              "81 \u00f7 9 + 12 \u00d7 5"
             ],
             "solution": [
               "69"
@@ -16606,7 +16621,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "252\u00d780-252*70"
+              "252 \u00d7 80 - 252 \u00d7 70"
             ],
             "solution": [
               "2520"
@@ -16619,7 +16634,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "22\u00d74+180\u00f715+43"
+              "22 \u00d7 4 + 180 \u00f7 15 + 43"
             ],
             "solution": [
               "143"
@@ -16632,7 +16647,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "127\u00d72+145\u00f75"
+              "127 \u00d7 2 + 145 \u00f7 5"
             ],
             "solution": [
               "283"
@@ -16645,7 +16660,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "13\u00d7(-5)+98"
+              "13 \u00d7 (-5) + 98"
             ],
             "solution": [
               "33"
@@ -16659,19 +16674,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "45-32",
+                "left": "45 - 32",
                 "sign": ">",
-                "right": "6+6"
+                "right": "6 + 6"
               },
               {
-                "left": "5\u00d79",
+                "left": "5 \u00d7 9",
                 "sign": ">",
-                "right": "23+21"
+                "right": "23 + 21"
               },
               {
-                "left": "34\u00f72",
+                "left": "34 \u00f7 2",
                 "sign": "=",
-                "right": "25-8"
+                "right": "25 - 8"
               }
             ]
           }
@@ -16683,19 +16698,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "23+23",
+                "left": "23 + 23",
                 "sign": ">",
-                "right": "5\u00d79"
+                "right": "5 \u00d7 9"
               },
               {
-                "left": "99-27",
+                "left": "99 - 27",
                 "sign": "=",
-                "right": "7\u00d79"
+                "right": "8 \u00d7 9"
               },
               {
-                "left": "47+1",
+                "left": "47 + 2",
                 "sign": "=",
-                "right": "7\u00d77"
+                "right": "7 \u00d7 7"
               }
             ]
           }
@@ -16707,19 +16722,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "39+23",
+                "left": "39 + 23",
                 "sign": "<",
-                "right": "24\u00d73"
+                "right": "24 \u00d7 3"
               },
               {
-                "left": "100-3",
+                "left": "100 - 3",
                 "sign": ">",
-                "right": "16\u00d76"
+                "right": "16 \u00d7 6"
               },
               {
-                "left": "27-3",
+                "left": "27 - 3",
                 "sign": "<",
-                "right": "13+12"
+                "right": "13 + 12"
               }
             ]
           }
@@ -16731,19 +16746,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "56-33",
+                "left": "56 - 33",
                 "sign": "<",
-                "right": "10+22"
+                "right": "10 + 22"
               },
               {
-                "left": "88-44",
+                "left": "88 - 44",
                 "sign": "=",
-                "right": "11\u00d74"
+                "right": "11 \u00d7 4"
               },
               {
-                "left": "34+8",
+                "left": "34 + 8",
                 "sign": ">",
-                "right": "20+21"
+                "right": "20 + 21"
               }
             ]
           }
@@ -16755,19 +16770,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "12+39",
+                "left": "12 + 39",
                 "sign": "<",
-                "right": "30+22"
+                "right": "30 + 22"
               },
               {
-                "left": "13+17",
+                "left": "13 + 17",
                 "sign": "=",
-                "right": "5\u00d76"
+                "right": "5 \u00d7 6"
               },
               {
-                "left": "14+54",
+                "left": "14 + 54",
                 "sign": "<",
-                "right": "78-1"
+                "right": "78 - 1"
               }
             ]
           }
@@ -16779,19 +16794,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "78-18",
+                "left": "78 - 18",
                 "sign": "<",
-                "right": "30+31"
+                "right": "30 + 31"
               },
               {
-                "left": "33-21",
+                "left": "33 - 21",
                 "sign": ">",
-                "right": "5+6"
+                "right": "5 + 6"
               },
               {
-                "left": "76+24",
+                "left": "76 + 24",
                 "sign": "<",
-                "right": "31+70"
+                "right": "31 + 70"
               }
             ]
           }
@@ -16803,19 +16818,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "34+6",
+                "left": "34 + 6",
                 "sign": ">",
-                "right": "19+20"
+                "right": "19 + 20"
               },
               {
-                "left": "89-56",
+                "left": "89 - 56",
                 "sign": "=",
-                "right": "22+11"
+                "right": "22 + 11"
               },
               {
-                "left": "93-62",
+                "left": "93 - 62",
                 "sign": ">",
-                "right": "29+1"
+                "right": "29 + 1"
               }
             ]
           }
@@ -16827,19 +16842,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "44+4",
+                "left": "44 + 4",
                 "sign": "<",
-                "right": "7\u00d77"
+                "right": "7 \u00d7 7"
               },
               {
-                "left": "11\u00d73",
+                "left": "11 \u00d7 3",
                 "sign": "<",
-                "right": "17\u00d72"
+                "right": "17 \u00d7 2"
               },
               {
-                "left": "45-15",
+                "left": "45 - 15",
                 "sign": "<",
-                "right": "15+16"
+                "right": "15 + 16"
               }
             ]
           }
@@ -16851,19 +16866,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "56-6",
+                "left": "56 - 6",
                 "sign": "<",
-                "right": "70-19"
+                "right": "70 - 19"
               },
               {
-                "left": "11+38",
+                "left": "11 + 38",
                 "sign": "=",
-                "right": "7\u00d77"
+                "right": "7 \u00d7 7"
               },
               {
-                "left": "23-12",
+                "left": "23 - 12",
                 "sign": ">",
-                "right": "25-16"
+                "right": "25 - 16"
               }
             ]
           }
@@ -16875,19 +16890,19 @@
             "title": "Ifodalarni taqqoslang",
             "options": [
               {
-                "left": "1-24",
+                "left": "1 - 24",
                 "sign": ">",
-                "right": "4\u00d7(-6)"
+                "right": "4 \u00d7 (-6)"
               },
               {
-                "left": "2-51",
+                "left": "2 - 51",
                 "sign": "=",
-                "right": "7\u00d7(-7)"
+                "right": "7 \u00d7 (-7)"
               },
               {
-                "left": "3-75",
+                "left": "3 - 75",
                 "sign": ">",
-                "right": "7-80 "
+                "right": "7 - 80 "
               }
             ]
           }
@@ -16896,12 +16911,12 @@
           "id": "math-uz-6-8-61-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
+            "title": "Harfiy ifodada \\(m\\) = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
             "options": [
-              "[b]15 + m",
-              "[c]21 + m",
-              "[a]2m \u2013 10",
-              "[d]3m + 5"
+              "[b]15 + \\(m\\)",
+              "[c]21 + \\(m\\)",
+              "[a]2\\(m\\) \u2013 10",
+              "[d]3\\(m\\) + 5"
             ]
           }
         },
@@ -16909,12 +16924,12 @@
           "id": "math-uz-6-8-62-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 15 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
+            "title": "Harfiy ifodada \\(m\\) = 15 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
             "options": [
-              "[d]m + 53",
-              "[c]2m + 21",
-              "[b]3m \u2013 19",
-              "[a]2m \u2013 15"
+              "[d]\\(m\\) + 53",
+              "[c]2\\(m\\) + 21",
+              "[b]3\\(m\\) \u2013 19",
+              "[a]2\\(m\\) \u2013 15"
             ]
           }
         },
@@ -16922,12 +16937,12 @@
           "id": "math-uz-6-8-63-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 31 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
+            "title": "Harfiy ifodada \\(m\\) = 31 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
             "options": [
-              "[b]m \u2013 24",
-              "[c]3m \u2013 73",
-              "[a]m - 29",
-              "m - 1"
+              "[b]\\(m\\) \u2013 24",
+              "[c]3\\(m\\) \u2013 73",
+              "[a]\\(m\\) - 29",
+              "[d]\\(m\\) - 1"
             ]
           }
         },
@@ -16935,12 +16950,12 @@
           "id": "math-uz-6-8-64-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 45 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
+            "title": "Harfiy ifodada \\(m\\) = 45 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n\n",
             "options": [
-              "[a]m \u2013 15 * 3",
-              "[c]2m +  1",
-              "[d]m + 55",
-              "[b]m(1+1)"
+              "[a]\\(m\\) \u2013 15 * 3",
+              "[c]2\\(m\\) +  1",
+              "[d]\\(m\\) + 55",
+              "[b]\\(m\\)(1+1)"
             ]
           }
         },
@@ -16948,12 +16963,12 @@
           "id": "math-uz-6-8-65-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 1 va n = 3 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 1 va \\(n\\) = 3 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
             "options": [
-              "[c]14 - mn",
-              "[b]4n \u2013 2m",
-              "[a]3n - m",
-              "[d]5(n+m)"
+              "[c]14 - \\(mn\\)",
+              "[b]4\\(n\\) \u2013 2\\(m\\)",
+              "[a]3\\(n\\) - \\(m\\)",
+              "[d]5(\\(n\\) + \\(m\\))"
             ]
           }
         },
@@ -16961,12 +16976,12 @@
           "id": "math-uz-6-8-66-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 10 va n = 13 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 10 va \\(n\\) = 13 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
             "options": [
-              "[c]5m \u2013 3n",
-              "[a]3m - 3n",
-              "[b]n \u2013 m",
-              "[b]m(n-m)"
+              "[c]5\\(m\\) \u2013 3\\(n\\)",
+              "[a]3\\(m\\) - 3\\(n\\)",
+              "[b]\\(n\\) \u2013 \\(m\\)",
+              "[d]\\(m\\)(\\(n\\) - \\(m\\))"
             ]
           }
         },
@@ -16974,12 +16989,12 @@
           "id": "math-uz-6-8-67-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 7 va n = 8 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 7 va \\(n\\) = 8 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
             "options": [
-              "[a]mn \u2013 46",
-              "[b]125 \u2013 2mn",
-              "[d]8m + 7n",
-              "[c]3m + 2n"
+              "[a]\\(mn\\) \u2013 46",
+              "[b]125 \u2013 2\\(mn\\)",
+              "[d]8\\(m\\) + 7\\(n\\)",
+              "[c]3\\(m\\) + 2\\(n\\)"
             ]
           }
         },
@@ -16987,12 +17002,12 @@
           "id": "math-uz-6-8-68-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 9 va n = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 9 va \\(n\\) = 10 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
             "options": [
-              "[d]mn",
-              "[c]mn \u2013 2(m+n)",
-              "[b]m \u2013 0",
-              "[a]n \u2013 2"
+              "[d]\\(mn\\)",
+              "[c]\\(mn\\) \u2013 2(\\(m\\) + \\(n\\))",
+              "[b]\\(m\\) \u2013 0",
+              "[a]\\(n\\) \u2013 2"
             ]
           }
         },
@@ -17000,12 +17015,12 @@
           "id": "math-uz-6-8-69-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 1 va n = 0 ga teng bolsa ifodani \nqiymatini o\u2019sish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 1 va \\(n\\) = 0 ga teng bolsa ifodani \nqiymatini o\u2019sish tartibida joylashtiring\n",
             "options": [
-              "[b]1 + mn",
-              "[a]mn",
-              "[c]10 \u2013 7(m+n)",
-              "[d]10(m-n)"
+              "[b]1 + \\(mn\\)",
+              "[a]\\(mn\\)",
+              "[c]10 \u2013 7(\\(m\\) + \\(n\\))",
+              "[d]10(\\(m\\) - \\(n\\))"
             ]
           }
         },
@@ -17013,12 +17028,12 @@
           "id": "math-uz-6-8-70-11",
           "pattern": 11,
           "question": {
-            "title": "Harfiy ifodada m = 11 va n = 20 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
+            "title": "Harfiy ifodada \\(m\\) = 11 va \\(n\\) = 20 ga teng bo\u02bblsa ifodani \nqiymatini o\u02bbsish tartibida joylashtiring\n",
             "options": [
-              "[a]1 + n \u2013 m",
-              "[b]m + n",
-              "[c]100 \u2013 7(n - m)",
-              "[d]2(m +n)"
+              "[a]1 + \\(n\\) \u2013 \\(m\\)",
+              "[b]\\(m\\) + \\(n\\)",
+              "[c]100 \u2013 7(\\(n\\) - \\(m\\))",
+              "[d]2(\\(m\\) + \\(n\\))"
             ]
           }
         },
@@ -17028,12 +17043,12 @@
           "question": {
             "title": "Harfiy ifodalarni toping",
             "options": [
-              "[*]2b \u2013 1",
-              "[*]128 \u2013 ab",
-              "[*]a + cb",
+              "[*]2\\(b\\) - 1",
+              "[*]128 - \\(ab\\)",
+              "[*]\\(a\\) + \\(cb\\)",
               "42 - 30",
               "53 - 12",
-              "23 \u2013 3"
+              "23 - 3"
             ]
           }
         },
@@ -17043,9 +17058,9 @@
           "question": {
             "title": "Harfiy ifodalarni toping",
             "options": [
-              "[*]28a \u2013 c",
-              "[*]3a +b",
-              "[*]ab - c",
+              "[*]28\\(a\\) - \\(c\\)",
+              "[*]3\\(a\\) + \\(b\\)",
+              "[*]\\(ab\\) - \\(c\\)",
               "13 + 3",
               "2 + 0",
               "7 + 7"
@@ -17058,9 +17073,9 @@
           "question": {
             "title": "Harfiy ifodalarni toping",
             "options": [
-              "[*]4c - 3b",
-              "[*]2c - 2a",
-              "[*]5c + 3b",
+              "[*]4\\(c\\) - 3\\(b\\)",
+              "[*]2\\(c\\) - 2\\(a\\)",
+              "[*]5\\(c\\) + 3\\(b\\)",
               "31 + 7",
               "7 - 5",
               "14 + 6"
@@ -17073,9 +17088,9 @@
           "question": {
             "title": "Harfiy ifodalarni toping",
             "options": [
-              "[*]5b - 2a",
-              "[*]2a \u2013 ac",
-              "[*]7 \u2013 2a",
+              "[*]5\\(b\\) - 2\\(a\\)",
+              "[*]2\\(a\\) - \\(ac\\)",
+              "[*]7 \u2013 2\\(a\\)",
               "1 + 0",
               "15 + 6",
               "18 - 5"
@@ -17088,9 +17103,9 @@
           "question": {
             "title": "Harfiy ifodalarni toping",
             "options": [
-              "[*]11 - c",
-              "[*]2m - n",
-              "[*]4c \u2013 2b",
+              "[*]11 - \\(c\\)",
+              "[*]2\\(m\\) - \\(n\\)",
+              "[*]4\\(c\\) - 2\\(b\\)",
               "7 - 23",
               "14 - 14",
               "31 - 20"
@@ -17103,12 +17118,12 @@
           "question": {
             "title": "Sonli ifodalarni toping",
             "options": [
-              "25a - cb",
-              "2a - n",
-              "3b - 2c",
+              "25\\(a\\) - \\(cb\\)",
+              "2\\(a\\) - \\(n\\)",
+              "3\\(b\\) - 2\\(c\\)",
               "[*]3 + 7",
               "[*]10 - 8",
-              "[*]22 \u2013 5"
+              "[*]22 - 5"
             ]
           }
         },
@@ -17118,12 +17133,12 @@
           "question": {
             "title": "Sonli ifodalarni toping",
             "options": [
-              "ca + b",
-              "2a - 4n",
-              "3a - 1c",
+              "\\(ca\\) + \\(b\\)",
+              "2\\(a\\) - 4\\(n\\)",
+              "3\\(a\\) - 1\\(c\\)",
               "[*]2 + 3",
               "[*]15 - 8",
-              "[*]14 \u2013 5"
+              "[*]14 - 5"
             ]
           }
         },
@@ -17133,10 +17148,10 @@
           "question": {
             "title": "Sonli ifodalarni toping",
             "options": [
-              "5a \u2013 ab",
-              "3c - 7b",
-              "6c + 5a",
-              "[*]16 \u2013 7",
+              "5\\(a\\) - \\(ab\\)",
+              "3\\(c\\) - 7\\(b\\)",
+              "6\\(c\\) + 5\\(a\\)",
+              "[*]16 - 7",
               "[*]17 -12",
               "[*]18 + 3"
             ]
@@ -17148,10 +17163,10 @@
           "question": {
             "title": "Sonli ifodalarni toping",
             "options": [
-              "10a + 2b",
-              "ac + ab",
-              "9c - 4a",
-              "[*]27 \u2013 13",
+              "10\\(a\\) + 2\\(b\\)",
+              "\\(ac\\) + \\(ab\\)",
+              "9\\(c\\) - 4\\(a\\)",
+              "[*]27 - 13",
               "[*]27 + 3",
               "[*]33 - 8"
             ]
@@ -17163,9 +17178,9 @@
           "question": {
             "title": "Sonli ifodalarni toping",
             "options": [
-              "4c + 2a",
-              "c + ab",
-              "5c \u2013 1b",
+              "4\\(c\\) + 2\\(a\\)",
+              "\\(c\\) + \\(ab\\)",
+              "5\\(c\\) - 1\\(b\\)",
               "[*]17 + 23",
               "[*]10 + 19",
               "[*]24 - 16"
@@ -17178,14 +17193,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]-x+37 =7",
-              "[a]x=-30",
-              "[b]-x-45=-50",
-              "[b]x=5",
-              "[c]28-7x=35",
-              "[c]x=-1",
-              "[d]7,3-2x=13,3",
-              "[d]x=-3"
+              "[a]-x + 37 = 7",
+              "[a]x = 30",
+              "[b]-x - 45 = -50",
+              "[b]x = 5",
+              "[c]28 - 7x = 35",
+              "[c]x = -1",
+              "[d]7,3 - 2x = 13,3",
+              "[d]x = -3"
             ]
           }
         },
@@ -17195,14 +17210,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]x+12=3",
-              "[a]x=-9",
-              "[b]-x+37=-78",
-              "[b]x=115",
-              "[c]1,5x-12=3",
-              "[c]x=10",
-              "[d]2x+3=-13",
-              "[d]x=-8"
+              "[a]x + 12 = 3",
+              "[a]x = -9",
+              "[b]-x + 37 = -78",
+              "[b]x = 115",
+              "[c]1,5x - 12 = 3",
+              "[c]x = 10",
+              "[d]2x + 3 = -13",
+              "[d]x = -8"
             ]
           }
         },
@@ -17212,14 +17227,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]x+45=43",
-              "[a]x=-2",
-              "[b]22x-45=43",
-              "[b]x=4",
-              "[c]-4x+3=-13",
-              "[c]x=4",
-              "[d]x+27=-18",
-              "[d]x=-45"
+              "[a]x + 45 = 43",
+              "[a]x = -2",
+              "[b]22x - 45 = 43",
+              "[b]x = 4",
+              "[c]4x + 3 = -13",
+              "[c]x = -4",
+              "[d]x + 27 = -18",
+              "[d]x = -45"
             ]
           }
         },
@@ -17229,14 +17244,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]18-x=25",
-              "[a]x=-7",
-              "[b]17-x=19",
-              "[b]x=-2",
-              "[c]9x+15=-21",
-              "[c]x=-4",
-              "[d]3,8-2x=-40,2",
-              "[d]x=22"
+              "[a]18 - x = 25",
+              "[a]x = -7",
+              "[b]17 - x = 19",
+              "[b]x = -2",
+              "[c]9x + 15 = -21",
+              "[c]x = -4",
+              "[d]3,8 - 2x = -40,2",
+              "[d]x = 22"
             ]
           }
         },
@@ -17246,14 +17261,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]178-x=148",
-              "[a]x=30",
-              "[b]-x+66,7=70,7",
-              "[b]x=-4",
-              "[c]-9x+27=-63",
-              "[c]x=10",
-              "[d]7x=-20+(-29)",
-              "[d]x=-7"
+              "[a]178 - x = 148",
+              "[a]x = 30",
+              "[b]-x + 66,7 = 70,7",
+              "[b]x = -4",
+              "[c]-9x + 27 = -63",
+              "[c]x = 10",
+              "[d]7x = -20 + (-29)",
+              "[d]x = -7"
             ]
           }
         },
@@ -17263,14 +17278,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]1-x=99",
-              "[a]x=-98",
-              "[b]-x+54=45",
-              "[b]x=9",
-              "[c]36-14x=-34",
-              "[c]x=5",
-              "[d]15x+121=-14",
-              "[d]x=-9"
+              "[a]1 - x = 99",
+              "[a]x = -98",
+              "[b]-x + 54 = 45",
+              "[b]x = 9",
+              "[c]36 - 14x = -34",
+              "[c]x = 5",
+              "[d]15x + 121 = -14",
+              "[d]x = -9"
             ]
           }
         },
@@ -17280,14 +17295,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]17-x=-93",
-              "[a]x=110",
-              "[b]-x+23=43",
-              "[b]x=-11",
-              "[c]36-14x=-34",
-              "[c]x=5",
-              "[d]7x-27=22",
-              "[d]x=7"
+              "[a]17 - x = -93",
+              "[a]x = 110",
+              "[b]-x + 23 = 43",
+              "[b]x = -20",
+              "[c]36 - 14x = -34",
+              "[c]x = 5",
+              "[d]7x - 27 = 22",
+              "[d]x = 7"
             ]
           }
         },
@@ -17297,14 +17312,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]54-x=30",
-              "[a]x=24",
-              "[b]-x+13=43",
-              "[b]x=-30",
-              "[c]32-8x=72",
-              "[c]x=-5",
-              "[d]13x-25=1",
-              "[d]x=2"
+              "[a]54 - x = 30",
+              "[a]x = 24",
+              "[b]-x + 13 = 43",
+              "[b]x = -30",
+              "[c]32 - 8x = 72",
+              "[c]x = -5",
+              "[d]13x - 25 = 1",
+              "[d]x = 2"
             ]
           }
         },
@@ -17314,14 +17329,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]100-2x=30",
-              "[a]x=35",
-              "[b]-4x+16=48",
-              "[b]x=-8",
-              "[c]23-5x=-32",
-              "[c]x=11",
-              "[d] 19x-95=0",
-              "[d]x=5"
+              "[a]100 - 2x = 30",
+              "[a]x = 35",
+              "[b]-4x + 16 = 48",
+              "[b]x = -8",
+              "[c]23 - 5x = -32",
+              "[c]x = 11",
+              "[d] 19x - 95 = 0",
+              "[d]x = 5"
             ]
           }
         },
@@ -17331,14 +17346,14 @@
           "question": {
             "title": "Tenglamani yeching",
             "options": [
-              "[a]44-2x=22",
-              "[a]x=11",
-              "[b]-4x-3=45",
-              "[b]x=-12",
-              "[c]23-5x=-32",
-              "[c]x=11",
-              "[d]17x-34=51",
-              "[d]x=5"
+              "[a]44 - x = 22",
+              "[a]x = 22",
+              "[b]-4x - 3 = 45",
+              "[b]x = -12",
+              "[c]23 - 5x = -32",
+              "[c]x = 11",
+              "[d]17x - 34 = 51",
+              "[d]x = 5"
             ]
           }
         },
@@ -17404,7 +17419,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n2,8 \u2013 9 = 3,4 \u00d7 2"
+              "Tenglik to\u2018g\u2018rimi:\n2,8 - 9 = 3,4 \u00d7 2"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -17418,7 +17433,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n1,6 \u2013 4 = 0,8 \u00d7 2 + 4"
+              "Tenglik to\u2018g\u2018rimi:\n1,6 - 4 = 0,8 \u00d7 2 + 4"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -17432,7 +17447,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n0,9 \u00d7 6 = 10 \u2013 4,6"
+              "Tenglik to\u2018g\u2018rimi:\n0,9 \u00d7 6 = 10 - 4,6"
             ],
             "solution": [
               "[*]To\u2018g\u2018ri",
@@ -17446,7 +17461,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n\u20135 \u00d7 (\u2013 4,2) = 21"
+              "Tenglik to\u2018g\u2018rimi:\n-5 \u00d7 (- 4,2) = 21"
             ],
             "solution": [
               "[*]To\u2018g\u2018ri",
@@ -17460,7 +17475,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n1,6 \u2013 4 = 0,8 \u00d7 2 + 4"
+              "Tenglik to\u2018g\u2018rimi:\n1,6 - 4 = 0,8 \u00d7 2 + 4"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -17474,7 +17489,7 @@
           "question": {
             "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
             "problem": [
-              "Tenglik to\u2018g\u2018rimi:\n56 \u00f7 7 + (\u201312) \u00d7 (\u20135) = \u20138 + 60"
+              "Tenglik to\u2018g\u2018rimi:\n56 \u00f7 7 + (-12) \u00d7 (-5) = -8 + 60"
             ],
             "solution": [
               "To\u2018g\u2018ri",
@@ -17519,12 +17534,12 @@
           "id": "math-uz-6-9-93-1",
           "pattern": 1,
           "question": {
-            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n76%, 65%, 88%, 95%, 77%, 92%, 69%, 85%, 94%, 72%. Eng yuqori o\u2019zlashtirish necha foiz?\n",
+            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n76\\%, 65\\%, 88\\%, 95\\%, 77\\%, 92\\%, 69\\%, 85\\%, 94\\%, 72\\%. Eng yuqori o\u2019zlashtirish necha foiz?\n",
             "options": [
-              "[*]99%",
-              "95%",
-              "94%",
-              "92%"
+              "[*]99\\%",
+              "95\\%",
+              "\\94%",
+              "\\92%"
             ]
           }
         },
@@ -17558,12 +17573,12 @@
           "id": "math-uz-6-9-96-1",
           "pattern": 1,
           "question": {
-            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88%, 65%, 88%, 95%, 77%, 88%, 69%, 77%, 94%, 72%. Eng past o\u2019zlashtirish necha foiz?\n",
+            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88\\%, 65\\%, 88\\%, 95\\%, 77\\%, 88\\%, 69\\%, 77\\%, 94\\%, 72\\%. Eng past o\u2019zlashtirish necha foiz?\n",
             "options": [
-              "[*]65%",
-              "60%",
-              "69%",
-              "72%"
+              "[*]65\\%",
+              "60\\%",
+              "69\\%",
+              "72\\%"
             ]
           }
         },
@@ -17597,7 +17612,7 @@
           "id": "math-uz-6-9-99-1",
           "pattern": 1,
           "question": {
-            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88%, 65%, 88%, 95%, 77%, 88%, 69%, 77%, 94%, 72%, 65%. Nechta o\u02bbquvchi 79% dan kam o\u2019zlashtirish qayt etgan?\n",
+            "title": "O\u02bbquvchilarning chorak ohirida matematika fanidan fanni o\u02bbzlashtirish foizi:\n88\\%, 65\\%, 88\\%, 95\\%, 77\\%, 88\\%, 69\\%, 77\\%, 94\\%, 72\\%, 65\\%. Nechta o\u02bbquvchi 79\\% dan kam o\u2019zlashtirish qayt etgan?\n",
             "options": [
               "[*]6",
               "5",
@@ -17650,13 +17665,13 @@
               "3",
               "4",
               "5",
-              "1",
+              "5",
               "3",
               "5",
               "4",
               "2",
               "3",
-              "1",
+              "[*]1",
               "2"
             ]
           }
@@ -17667,7 +17682,7 @@
           "question": {
             "title": "Eng kam qayt etilgan sonlarni belgilang\n",
             "options": [
-              "5",
+              "4",
               "3",
               "4",
               "6",
@@ -17678,7 +17693,7 @@
               "1",
               "1",
               "4",
-              "5"
+              "[*]5"
             ]
           }
         },
@@ -17793,11 +17808,11 @@
           "question": {
             "title": "Eng kam qayt etilgan sonlarni belgilang\n",
             "options": [
-              "1",
+              "4",
               "3",
               "4",
               "6",
-              "1",
+              "[*]1",
               "[*]5",
               "3",
               "4",
@@ -17835,7 +17850,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "63\u2013(\u20134\u00d7(\u20133))"
+              "63 \u2013 (\u20134 \u00d7 (\u20133))"
             ],
             "solution": [
               "51"
@@ -17848,7 +17863,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "45\u00d74\u201328\u00d7(\u20134)"
+              "45 \u00d7 4 \u2013 28 \u00d7 (\u20134)"
             ],
             "solution": [
               "292"
@@ -17861,10 +17876,10 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "\u201312\u00d7(\u20137)\u2013(\u201314\u00d7(\u20136))"
+              "\u201312 \u00d7 (\u20137) \u2013 (\u201314 \u00d7 (\u20136))"
             ],
             "solution": [
-              "7"
+              "0"
             ]
           }
         },
@@ -17874,7 +17889,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "\u201342\u00d7(-3)+(\u201321\u00d7(\u20133))"
+              "\u201342 \u00d7 (-3) + (\u201321 \u00d7 (\u20133))"
             ],
             "solution": [
               "189"
@@ -17887,7 +17902,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "13\u00d7(\u20136)\u201332\u00d7(\u20133)"
+              "13 \u00d7 (\u20136) \u2013 32 \u00d7 (\u20133)"
             ],
             "solution": [
               "18"
@@ -17900,7 +17915,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "\u201372\u00f79+(18\u2013156\u00f7(\u201312))"
+              "\u201372 \u00f7 9 + (18 \u2013 156 \u00f7 (\u201312))"
             ],
             "solution": [
               "23"
@@ -17913,7 +17928,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "\u201345\u00d7(\u20139)\u00f7(\u201315)\u2013 6\u00d7(\u201363\u00f7(\u20137)\u201345)"
+              "(\u201345 \u00d7 (\u20139) \u00f7 15 \u2013 6)\u00d7 (\u201363 \u00f7 (\u20137)"
             ],
             "solution": [
               "189"
@@ -17926,7 +17941,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "32\u00d72+(\u201342\u00f7(\u201321)\u201315\u00d7(\u20134))"
+              "32 \u00d7 2 + (\u201342 \u00f7 (\u201321) \u2013 15 \u00d7 (\u20134))"
             ],
             "solution": [
               "126"
@@ -17939,7 +17954,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "25\u00f7(+5)\u201334\u00d7(\u20132)+45"
+              "25 \u00f7 (+5) \u2013 34 \u00d7 (\u20132) + 45"
             ],
             "solution": [
               "118"
@@ -17952,7 +17967,7 @@
           "question": {
             "title": "Hisoblang",
             "problem": [
-              "14\u00d72+(\u20138)"
+              "14 \u00d7 2 + (\u20138)"
             ],
             "solution": [
               "20"
@@ -17966,19 +17981,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "2,5,3,4,5",
+                "left": "2 , 5 , 3 , 4 , 5",
                 "sign": "<",
-                "right": "7,5,4,5,6"
+                "right": "7 , 5 , 4 , 5 , 6"
               },
               {
-                "left": "10,20,10,50,40",
+                "left": "10 , 20 , 10 , 50 , 40",
                 "sign": "<",
-                "right": "50,10,20,10,50,40"
+                "right": "50 , 10 , 20 , 10 , 50 , 40"
               },
               {
-                "left": "17,20,20,22,21",
+                "left": "17 , 20 , 20 , 22 , 21",
                 "sign": "=",
-                "right": "17,20,19,21,22,25"
+                "right": "17 , 20 , 19 , 21 , 22 , 25"
               }
             ]
           }
@@ -17990,19 +18005,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "7,12,21,13,5",
+                "left": "7 , 12 , 21 , 13 , 5",
                 "sign": ">",
-                "right": "9,10,18,22,13,15"
+                "right": "9 , 10 , 18 , 22 , 13 , 15"
               },
               {
-                "left": "10,20,10,50,40",
+                "left": "10 , 20 , 10 , 50 , 40",
                 "sign": "=",
-                "right": "50,10,20,10,50,40"
+                "right": "50 , 10 , 10 , 50 , 40"
               },
               {
-                "left": "12,43,40,52,32",
+                "left": "12 , 43 , 40 , 52 , 32",
                 "sign": "<",
-                "right": "43,29,50,32,27,65"
+                "right": "43 , 29 , 50 , 32 , 27 , 65"
               }
             ]
           }
@@ -18014,19 +18029,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "27,42,25,33,15",
+                "left": "27 , 42 , 25 , 33 , 15",
                 "sign": "<",
-                "right": "29,14,26,42,33"
+                "right": "29 , 14 , 26 , 42 , 33"
               },
               {
-                "left": "43,25,43,45,30,23",
+                "left": "43 , 25 , 43 , 45 , 30 , 23",
                 "sign": ">",
-                "right": "51,34,43,26,50"
+                "right": "51 , 34 , 43 , 26 , 50"
               },
               {
-                "left": "32,45,14,2,22",
+                "left": "32 , 45 , 14 , 2 , 22",
                 "sign": "=",
-                "right": "23,49,10,18,27,23"
+                "right": "23 , 49 , 10 , 18 , 27 , 23"
               }
             ]
           }
@@ -18038,19 +18053,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "47,44,65,43,35",
+                "left": "47 , 44 , 65 , 43 , 35",
                 "sign": ">",
-                "right": "29,74,64,42,43"
+                "right": "29 , 74 , 64 , 42 , 43"
               },
               {
-                "left": "4,45,44,50,35,43",
+                "left": "4 , 45 , 44 , 50 , 35 , 43",
                 "sign": "=",
-                "right": "54,37,47,26,38"
+                "right": "54 , 37 , 47 , 26 , 38"
               },
               {
-                "left": "62,75,64,2,22",
+                "left": "62 , 75 , 64 , 2 , 22",
                 "sign": "=",
-                "right": "3,42,60,68,24,43"
+                "right": "3 , 42 , 60 , 68 , 24 , 43"
               }
             ]
           }
@@ -18062,19 +18077,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "37,54,15,13,10",
+                "left": "37 , 54 , 15 , 13 , 10",
                 "sign": "=",
-                "right": "21,24,15,42,41"
+                "right": "21 , 24 , 15 , 42 , 41"
               },
               {
-                "left": "43,55,3,5,35,43",
+                "left": "43 , 55 , 3 , 5 , 35 , 43",
                 "sign": "=",
-                "right": "54,37,4,66,35"
+                "right": "54 , 37 , 4 , 66 , 35"
               },
               {
-                "left": "12,25,25,2,23",
+                "left": "12 , 25 , 25 , 2 , 23",
                 "sign": "=",
-                "right": "93,42,5,45,84,73"
+                "right": "93 , 42 , 5 , 45 , 84 , 73"
               }
             ]
           }
@@ -18086,19 +18101,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "23,62,21,33,15",
+                "left": "23 , 62 , 21 , 33 , 15",
                 "sign": ">",
-                "right": "29,14,22,18,42,33"
+                "right": "29 , 14 , 22 , 18 , 42 , 33"
               },
               {
-                "left": "63,25,43,47,70,36",
+                "left": "63 , 25 , 43 , 47 , 70 , 36",
                 "sign": ">",
-                "right": "31,84,44,28,50"
+                "right": "31 , 84 , 44 , 28 , 50"
               },
               {
-                "left": "72,85,14,42,92",
+                "left": "72 , 85 , 14 , 42 , 92",
                 "sign": ">",
-                "right": "22,59,10,78,97"
+                "right": "22 , 59 , 10 , 78 , 97"
               }
             ]
           }
@@ -18110,19 +18125,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "97,82,41,63,45",
+                "left": "97 , 82 , 41 , 63 , 45",
                 "sign": "<",
-                "right": "99,94,30,60,81,45"
+                "right": "99 , 94 , 30 , 60 , 81 , 45"
               },
               {
-                "left": "83,94,49,49,37",
+                "left": "83 , 94 , 49 , 49 , 37",
                 "sign": "<",
-                "right": "50,64,54,46,54,32"
+                "right": "50 , 64 , 54 , 46 , 54 , 32"
               },
               {
-                "left": "92,43,47,82,39",
+                "left": "92 , 43 , 47 , 82 , 39",
                 "sign": "<",
-                "right": "43,29,49,47,27,65"
+                "right": "43 , 29 , 49 , 47 , 27 , 65"
               }
             ]
           }
@@ -18134,19 +18149,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "47,48,27,93,85",
+                "left": "47 , 48 , 27 , 93 , 85",
                 "sign": ">",
-                "right": "29,14,26,42,33"
+                "right": "29 , 14 , 26 , 42 , 33"
               },
               {
-                "left": "93,65,52,54,38,73",
+                "left": "93 , 65 , 52 , 54 , 38 , 73",
                 "sign": "<",
-                "right": "51,34,54,26,50"
+                "right": "51 , 34 , 54 , 26 , 50"
               },
               {
-                "left": "32,95,94,24,72",
+                "left": "32 , 95 , 94 , 24 , 72",
                 "sign": ">",
-                "right": "23,49,94,92,97,83"
+                "right": "23 , 49 , 94 , 92 , 97 , 83"
               }
             ]
           }
@@ -18158,19 +18173,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "67,44,87,43,35",
+                "left": "67 , 44 , 87 , 43 , 35",
                 "sign": "<",
-                "right": "69,78,88,49,73"
+                "right": "69 , 78 , 88 , 49 , 73"
               },
               {
-                "left": "94,85,78,76,35,43",
+                "left": "94 , 85 , 78 , 76 , 35 , 43",
                 "sign": "=",
-                "right": "58,97,77,86,98"
+                "right": "58 , 97 , 77 , 86 , 98"
               },
               {
-                "left": "69,73,94,62,22",
+                "left": "69 , 73 , 94 , 62 , 22",
                 "sign": ">",
-                "right": "13,42,90,94,24,43"
+                "right": "13 , 42 , 90 , 94 , 24 , 43"
               }
             ]
           }
@@ -18182,19 +18197,19 @@
             "title": "Sonlarni medianasini topib taqqoslang",
             "options": [
               {
-                "left": "97,54,75,13,10",
+                "left": "97 , 54 , 75 , 13 , 10",
                 "sign": "=",
-                "right": "21,24,75,42,41"
+                "right": "21 , 24 , 75 , 42 , 41"
               },
               {
-                "left": "27,85,94,94,35,43",
+                "left": "27 , 85 , 94 , 94 , 35 , 43",
                 "sign": "=",
-                "right": "54,37,94,66,35"
+                "right": "54 , 37 , 94 , 66 , 35"
               },
               {
-                "left": "72,85,95,2,23",
+                "left": "72 , 85 , 94 , 2 , 23",
                 "sign": "<",
-                "right": "93,95,95,94,98,73"
+                "right": "93 , 95 , 95 , 94 , 98 , 73"
               }
             ]
           }
@@ -18886,7 +18901,7 @@
               "[a]55, 33, 11",
               "[a]33",
               "[b]8, 14, 5",
-              "[b]7",
+              "[b]9",
               "[c]13, 23, 33",
               "[c]23",
               "[d]24, 26",
@@ -18968,8 +18983,8 @@
           "question": {
             "title": "Sonlarni o\u02bbrta arifmetigini toping",
             "options": [
-              "[a]67, 21",
-              "[a]44",
+              "[a]67, 23",
+              "[a]45",
               "[b]47, 17",
               "[b]32",
               "[c]35, 11",
@@ -19198,7 +19213,7 @@
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
             "problem": [
-              "Aylana radiusini 2 marta orttirsak",
+              "Doira radiusini 2 marta orttirsak",
               "yuzi 4 marta ortadi"
             ],
             "solution": [
@@ -19259,7 +19274,7 @@
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
             "problem": [
-              "Perimetrlari teng bo\u2019lgan to\u2019rtburchaklar ichida eng katta yuzalisi \u2013 kvadrat"
+              "Perimetrlari teng bo\u2018lgan to\u2018rtburchaklar ichida eng katta yuzalisi \u2013 kvadrat"
             ],
             "solution": [
               "[*]Har doim",
@@ -19274,7 +19289,7 @@
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
             "problem": [
-              "Qirralari yig\u2019indisi teng bo\u2019lgan parallelopipedlarning eng katta hajmlisi \u2013 kub"
+              "Qirralari yig\u2018indisi teng bo\u2018lgan parallelopipedlarning eng katta hajmlisi \u2013 kub"
             ],
             "solution": [
               "[*]Har doim",
@@ -19289,7 +19304,7 @@
           "question": {
             "title": "Mulohazaga o'z fikringizni bildiring",
             "problem": [
-              "Har xil maxrajli kasrlarni qo\u2019shishda suratlari suratiga, \nmaxraji maxrajiga \nqo\u2019shiladi"
+              "Har xil maxrajli kasrlarni qo\u2018shishda suratlari suratiga, \nmaxraji maxrajiga \nqo\u2018shiladi"
             ],
             "solution": [
               "Har doim",
