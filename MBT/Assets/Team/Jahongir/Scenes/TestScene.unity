@@ -3902,6 +3902,14 @@ PrefabInstance:
       propertyPath: CurrentJsonText
       value: 
       objectReference: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
+    - target: {fileID: 9040421629640802139, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
+      propertyPath: InvitePrefEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: be1d89bf592ac8a45afd76f09adbb246, type: 2}
+    - target: {fileID: 9040421629640802139, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
+      propertyPath: NotLocatedEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 21c4e05f06594ce4ba2aaa3ac28689ce, type: 2}
     - target: {fileID: 9040421629741364668, guid: d2a0c924da7d35c4eace40180c2ae293, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 242.445
