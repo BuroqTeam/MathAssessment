@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 public class GameManagerPattern7 : MonoBehaviour
 {
-    public static GameManagerPattern7 Instance;
-    
+    public static GameManagerPattern7 Instance;    
     public int width;
     public int height;
     public GameObject PenTool;
@@ -18,7 +17,7 @@ public class GameManagerPattern7 : MonoBehaviour
     float percentage;
     public List<CellPattern7> CellGroup = new List<CellPattern7>();
     bool Yoqish = false;
-
+    bool _isTrueOneTime = true;
     private void Awake()
     {
         Instance = this;
@@ -77,7 +76,6 @@ public class GameManagerPattern7 : MonoBehaviour
             for (float j = 0; j < height; j += percentage)
             {
                 var SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
-                //SpawnedCell.name = $"Cell {i}, {j}";
                 CellGroup.Add(SpawnedCell.GetComponent<CellPattern7>());
             }
         }
@@ -85,7 +83,7 @@ public class GameManagerPattern7 : MonoBehaviour
     }
 
 
-    bool _isTrueOneTime = true;
+    
 
     void Update()
     {
