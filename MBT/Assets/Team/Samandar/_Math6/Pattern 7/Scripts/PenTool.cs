@@ -21,6 +21,7 @@ public class PenTool : MonoBehaviour
 
     public void AddDot()
     {
+        Debug.Log("1");
          if (currentLine == null)
          {
             currentLine = Instantiate(linePrefabs, Vector3.zero, Quaternion.identity, lineParent).GetComponent<LineControllerPattern7>();
@@ -35,6 +36,7 @@ public class PenTool : MonoBehaviour
 
     public Vector3 GetMousePosition()
     {
+        Debug.Log("2");
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldMousePosition.z = 0;
         pointsPattern7.Check();
