@@ -11,7 +11,7 @@ public class PenTool : MonoBehaviour
     public Transform lineParent;
     public Transform dotParent; 
     private LineControllerPattern7 currentLine;
-    public GameManagerPattern7 managerPattern7;
+    public Pattern_7 Pattern7;
     public PenCanvas penCanvas;
     
     void Start()
@@ -21,11 +21,11 @@ public class PenTool : MonoBehaviour
 
     public void AddDot()
     {
-        Debug.Log("1");
+        
          if (currentLine == null)
          {
             currentLine = Instantiate(linePrefabs, Vector3.zero, Quaternion.identity, lineParent).GetComponent<LineControllerPattern7>();
-            managerPattern7.False();
+            Pattern7.False();
          }
          GameObject dot = Instantiate(Point, GetMousePosition(), Quaternion.identity, dotParent);
          pointsPattern7.Check();
@@ -36,10 +36,10 @@ public class PenTool : MonoBehaviour
 
     public Vector3 GetMousePosition()
     {
-        Debug.Log("2");
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldMousePosition.z = 0;
         pointsPattern7.Check();
+        Debug.Log(worldMousePosition);
         return worldMousePosition;
     }
    
