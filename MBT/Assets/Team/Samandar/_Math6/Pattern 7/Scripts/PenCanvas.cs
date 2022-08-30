@@ -7,9 +7,6 @@ using UnityEngine.EventSystems;
 public class PenCanvas : MonoBehaviour, IPointerClickHandler
 {
     public Action OnPenCanvasLeftClickEvent;
-
-
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.pointerId == -1)

@@ -20,19 +20,21 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     }
 
-    private void Awake()
-    {
-        Check();
-    }
+    //private void Awake()
+    //{
+    //    Check();
+    //}
 
     public void Check()
     {
-        foreach (CellPattern7 cell in GameManagerPattern7.Instance.CellGroup)
+        Debug.Log("Check");
+        foreach (CellPattern7 cell in Pattern_7.Instance.CellGroup)
         {
             foreach (Vector3 aPoint in cell.points)
             {
-                if (Vector3.Distance(transform.position, aPoint) <= 0.7f)
+                if (Vector3.Distance(transform.position, aPoint) <= 0.35f)
                 {
+                    Debug.Log("If");
                     transform.position = aPoint;
                     break;
                 }

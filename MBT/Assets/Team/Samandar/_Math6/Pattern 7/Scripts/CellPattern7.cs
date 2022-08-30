@@ -12,7 +12,7 @@ public class CellPattern7 : MonoBehaviour
     public List<Vector3> points = new List<Vector3>();
 
 
-    private void Awake()
+    private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CollectPoints();
@@ -21,8 +21,9 @@ public class CellPattern7 : MonoBehaviour
 
     public void CollectPoints()
     {
-        float rightPointX = transform.position.x + spriteRenderer.bounds.size.x * 0.5f;
-        float upPointY = transform.position.y + spriteRenderer.bounds.size.y * 0.5f;
+        
+        float rightPointX = transform.position.x + spriteRenderer.bounds.size.x * 0.5f * gameObject.transform.localScale.x;
+        float upPointY = transform.position.y + spriteRenderer.bounds.size.y * 0.5f * gameObject.transform.localScale.y;
         points.Add(new Vector3(rightPointX, upPointY, 0));
         points.Add(new Vector3(rightPointX, -upPointY, 0));
         points.Add(new Vector3(-rightPointX, -upPointY, 0));
