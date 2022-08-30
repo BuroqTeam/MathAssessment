@@ -237,6 +237,29 @@ public class Data_1
 }
 
 
+/*
+
+public TEXConfiguration TexDraw;
+//FontChangeScript();    //  F++
+public void FontChangeScript()      // bu metod TexDrawdagi tilni o'zgartirish uchun yozilgan  F++
+    {
+        string languageKey = ES3.Load<string>("LanguageKey");
+        if (languageKey == "Uzb")
+        {
+            Debug.Log("LanguageKey = " + languageKey + " Default text font = " + TexDraw.Typeface.defaultTypeface);
+            TexDraw.Typeface.defaultTypeface = "cmr";
+        }
+        else
+        {
+            TexDraw.Typeface.defaultTypeface = "roboto";
+            Debug.Log("Boshqa til. ");
+        }
+    }
+
+
+*/
+
+
 //if (Pattern1Obj.title.Length > 150)       // Yozuv o'lchamini almashtirib beruvchi method.
 //{
 //    QuestionObj.GetComponent<TEXDraw>().size = 38;
