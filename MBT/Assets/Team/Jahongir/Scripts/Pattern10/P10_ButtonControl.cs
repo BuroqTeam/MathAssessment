@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public Pattern_10 Pattern10;
-    public int Value;
+    public float Value;
     public GameObject CanvasObj;
     private RectTransform _rectTransform;
     private new Vector3 _lastRectTransform;
@@ -14,12 +14,11 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
         _rectTransform = GetComponent<RectTransform>();
         _lastRectTransform = GetComponent<RectTransform>().anchoredPosition;
         _canvasGroup = GetComponent<CanvasGroup>();
-        Debug.Log(_lastRectTransform);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.DOScale(1.2f, 0);
+        transform.DOScale(1f, 0);
         GameObject obj = Instantiate(gameObject, gameObject.transform.parent);
         obj.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         _canvasGroup.blocksRaycasts = false;
@@ -30,19 +29,10 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.DOScale(0.7f, 0);
+        //transform.DOScale(0.7f, 0);
         _canvasGroup.blocksRaycasts = true;
         GetComponent<RectTransform>().anchoredPosition = _lastRectTransform;
-        Debug.Log(GetComponent<RectTransform>().anchoredPosition);
-        Debug.Log(_lastRectTransform);
+        Pattern10.Result();
+        Pattern10.DeleteWrongPrefab();
     }
-    public void NotLocated()
-    {
-        
-    }
-
-
-
-
-
 }

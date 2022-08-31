@@ -1,29 +1,50 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-
-public class P10_ItemSlot : MonoBehaviour
+public class P10_ItemSlot : MonoBehaviour, IDropHandler
 {
     public int Index;
+    public float CollectedNumber;
     public Pattern_10 Pattern10;
-    private int k;
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             eventData.pointerDrag.transform.SetParent(Pattern10.Tile1[Index - 1].transform);
-            k = transform.childCount;
+            Pattern10.CollectedPrefabs.Add(eventData.pointerDrag);
+            if (transform.childCount > 9)
+            {
+                eventData.pointerDrag.GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale;
+                for (int i = 1; i < transform.childCount; i++)
+                {
+                    //eventData.pointerDrag.GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale + new Vector3(0.1f, 0.1f, 0.1f);
+                    transform.GetChild(i).GetComponent<RectTransform>().localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+                    //if (i == transform.childCount-1)
+                    //{
+                    //    transform.GetChild(i).GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale;
+                    //}
+                }
+                GetComponent<HorizontalLayoutGroup>().spacing -= 15;
+            }
+            else
+            {
+                eventData.pointerDrag.GetComponent<RectTransform>().localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            }
             Pattern10.InvitePrefEvent.Raise();
+            DeactivationPrefabs();
+            Pattern10.Result();
         }
     }
-    public void Check()
+    public void DeactivationPrefabs()
     {
-        //if (eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition != GetComponent<RectTransform>().anchoredPosition)
-        //{
-        //    Pattern10.NotLocatedEvent.Raise();
-        //    Debug.Log("NotLocated");
-        //}
+        for (int i = 0; i < Pattern10.CollectedPrefabs.Count; i++)
+        {
+            if (Pattern10.CollectedPrefabs[i].GetComponent<P10_ButtonControl>().enabled)
+            {
+                Pattern10.CollectedPrefabs[i].GetComponent<P10_ButtonControl>().enabled = false;
+            }
+        }
     }
 }
