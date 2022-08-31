@@ -17,6 +17,8 @@ public class PenTool : MonoBehaviour
     void Start()
     {
         penCanvas.OnPenCanvasLeftClickEvent += AddDot;
+        dotParent = Pattern7.DotParent;
+        lineParent = Pattern7.LineParent;
     }
 
     public void AddDot()

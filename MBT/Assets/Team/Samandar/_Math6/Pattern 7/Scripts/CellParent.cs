@@ -6,7 +6,7 @@ public class CellParent : MonoBehaviour
 {
     public Pattern_7 Pattern_7;
     public GameObject Cell;
-    
+
     void Start()
     {
         SquareLocation();
@@ -23,8 +23,7 @@ public class CellParent : MonoBehaviour
                 
             }
         }
-        gameObject.transform.position = Pattern_7.Koordinata.transform.position;
-        //Pattern_7.Camera.transform.position = new Vector3((float)Pattern_7.width / 2 - 0.5f, (float)Pattern_7.height / 2 - 0.5f, transform.position.z);
+        gameObject.transform.position = Pattern_7.Koordinata.transform.position;        
     }
     void Update()
     {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Pattern_7 : MonoBehaviour
 {
@@ -9,33 +10,71 @@ public class Pattern_7 : MonoBehaviour
     public float width;
     public float height;
     public GameObject PenTool;
-    public List<GameObject> Button;
-    public GameObject LineParent;
-    public GameObject DotParent;
+    public List<Button> Buttons = new();
+    
+    public GameObject Line;
+    public GameObject Dot;
     public GameObject CellParent;
     public GameObject Cell;
     public GameObject Koordinata;
     GameObject CellInstanse;
     public Transform Camera;
     public float percentage;
-    public List<CellPattern7> CellGroup = new List<CellPattern7>();
+    public List<CellPattern7> CellGroup = new();
     bool Yoqish = false;
     bool _isTrueOneTime = true;
     public PointsPattern7 Point;
     public CellPattern7 cellPattern7;
+    public Transform DotParent;
+    public Transform LineParent;
+
     private void Awake()
     {
+        Transform dot = Instantiate(Dot.transform);
+        Transform line = Instantiate(Line.transform);
+        DotParent = dot;
+        LineParent = line;
         GameObject obj = Instantiate(CellParent);
         CellParent.GetComponent<CellParent>().Pattern_7 = this;
         Instance = this;
         percentage = Cell.transform.localScale.x;
+        CellPosition();
+        
     }
 
     void Start()
     {         
-        CellPosition();
+        
         //cellPattern7.CollectPoints();
     }
+
+
+    public void CheckToolIsEnable()
+    {
+        int n = 0;
+        foreach (Button btn in Buttons)
+        {
+            if (btn.GetComponent<ButtonClick>().IsEnable)
+            {
+                switch (n)
+                {
+                    case 0:
+                        Debug.Log("1st Tool");
+                        break;
+                    case 1:
+                        Debug.Log("2nd Tool");
+                        break;
+                    case 2:
+                        Debug.Log("3rd Tool");
+                        break;                  
+                }
+
+            }           
+            n++;
+        }
+    }
+
+
     public void TurnOnTurnOf()
     {
         if (Yoqish == false)
@@ -75,8 +114,10 @@ public class Pattern_7 : MonoBehaviour
         for (int i = 0; i < DotParent.transform.childCount; i++)
         {
             Destroy(DotParent.transform.GetChild(i).gameObject);
-        }         
+        }
     }
+
+
     //public void SquareLocation()
     //{
         

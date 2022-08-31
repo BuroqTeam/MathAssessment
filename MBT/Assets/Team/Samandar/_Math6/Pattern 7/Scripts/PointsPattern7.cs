@@ -20,21 +20,19 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     }
 
-    //private void Awake()
-    //{
-    //    Check();
-    //}
+    private void Start()
+    {
+        Check();
+    }
 
     public void Check()
-    {
-        Debug.Log("Check");
+    {        
         foreach (CellPattern7 cell in Pattern_7.Instance.CellGroup)
         {
             foreach (Vector3 aPoint in cell.points)
             {
                 if (Vector3.Distance(transform.position, aPoint) <= 0.35f)
                 {
-                    Debug.Log("If");
                     transform.position = aPoint;
                     break;
                 }
@@ -47,10 +45,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
     }
-    void Start()
-    {
-
-    }
+   
 
     void Update()
     {
