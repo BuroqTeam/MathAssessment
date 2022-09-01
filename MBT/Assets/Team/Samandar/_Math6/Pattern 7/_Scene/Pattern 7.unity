@@ -360,6 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1988394038}
   SpClicked: {fileID: 21300000, guid: 3ee9b74fd8a77444eb20894a23f22307, type: 3}
+  IsEnable: 0
 --- !u!1 &408260929
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1988394038}
   SpClicked: {fileID: 21300000, guid: f62a40286b51d0944a379056083fe8c8, type: 3}
+  IsEnable: 0
 --- !u!1 &531906502
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1988394038}
   SpClicked: {fileID: 21300000, guid: 9453275c4decead45a6a0d93b9311100, type: 3}
+  IsEnable: 0
 --- !u!1 &1344599088
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1404321281
 RectTransform:
   m_ObjectHideFlags: 0
