@@ -8,7 +8,7 @@ public class CellParent : MonoBehaviour
     public GameObject Cell;
 
     void Start()
-    {
+    {        
         SquareLocation();
     }
 
@@ -20,6 +20,7 @@ public class CellParent : MonoBehaviour
             {
                 GameObject SpawnedCell = Instantiate(Cell, new Vector3(j, i), Quaternion.identity, gameObject.transform);
                 Pattern_7.CellGroup.Add(SpawnedCell.GetComponent<CellPattern7>());
+                Pattern_7.CellObj.Add(SpawnedCell);
                 
             }
         }

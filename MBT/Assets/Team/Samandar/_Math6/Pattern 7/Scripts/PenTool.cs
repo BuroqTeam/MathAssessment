@@ -41,7 +41,6 @@ public class PenTool : MonoBehaviour
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldMousePosition.z = 0;
         pointsPattern7.Check();
-        Debug.Log(worldMousePosition);
         return worldMousePosition;
     }
    
