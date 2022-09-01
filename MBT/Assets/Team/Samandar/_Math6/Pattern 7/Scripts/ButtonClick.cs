@@ -19,8 +19,16 @@ public class ButtonClick : MonoBehaviour
         _spInitial = GetComponent<Image>().sprite;
         _button = GetComponent<Button>();
         _button.onClick.AddListener(TaskOnClick);
+        PointSprite();
     }
-
+    void PointSprite()
+    {
+        if (IsEnable == true)
+        {
+            GetComponent<Image>().sprite = GetComponent<ButtonClick>().SpClicked;
+        }
+        
+    }
 
 
     public void TaskOnClick()
@@ -29,9 +37,8 @@ public class ButtonClick : MonoBehaviour
         {
             if (_button.Equals(btn))
             {
-
                 btn.GetComponent<Image>().sprite = btn.GetComponent<ButtonClick>().SpClicked;
-                IsEnable = true;
+                IsEnable = true;                             
             }
             else
             {

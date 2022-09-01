@@ -29,8 +29,7 @@ public class CellPattern7 : MonoBehaviour
         points.Add(new Vector3(rightPointX_1, upPointY_1, 0));
         points.Add(new Vector3(rightPointX_2, upPointY_1, 0));
         points.Add(new Vector3(rightPointX_1, upPointY_2, 0));
-        points.Add(new Vector3(rightPointX_2
-            , upPointY_2, 0));
+        points.Add(new Vector3(rightPointX_2, upPointY_2, 0));
 
     }
 
