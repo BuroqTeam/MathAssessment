@@ -101,7 +101,7 @@ public class Pattern_10 : GeneralTest
             obj.transform.GetChild(1).GetComponent<TEXDraw>().text = " = " + Pattern_10Obj.options[i][1] + " " + Pattern_10Obj.options[i][2];
             obj.transform.GetChild(2).GetComponent<P10_ButtonControl>().Pattern10 = this;
             obj.transform.GetChild(2).GetComponent<P10_ButtonControl>().CanvasObj = _canvas;
-            obj.transform.GetChild(2).GetComponent<P10_ButtonControl>().Value = Int32.Parse(Pattern_10Obj.options[i][1]);
+            obj.transform.GetChild(2).GetComponent<P10_ButtonControl>().Value = float.Parse(Pattern_10Obj.options[i][1]);
         }
         //This is for Table1
         for (int i = 0; i < Pattern_10Obj.statements[0].Count; i++)
@@ -139,7 +139,7 @@ public class Pattern_10 : GeneralTest
                 obj1.transform.GetChild(1).gameObject.AddComponent<P10_ItemSlot>();
                 obj1.transform.GetChild(1).gameObject.GetComponent<P10_ItemSlot>().Index = i;
                 obj1.transform.GetChild(1).gameObject.GetComponent<P10_ItemSlot>().Pattern10 = this;
-                obj1.transform.GetChild(1).gameObject.GetComponent<P10_ItemSlot>().CollectedNumber = Int32.Parse(Pattern_10Obj.statements[1][i]);
+                obj1.transform.GetChild(1).gameObject.GetComponent<P10_ItemSlot>().CollectedNumber = float.Parse(Pattern_10Obj.statements[1][i]);
             }
         }
     }
@@ -195,15 +195,7 @@ public class Pattern_10 : GeneralTest
     //Bu metod 1 martalik orqaga qaytarish qismini bajarib beradi
     public void ReturnBUttonControl()
     {
-        int a = 0;
-        for (int i = 0; i < Tile1.Count; i++)
-        {
-            if (Tile1[i].transform.childCount > 1)
-            {
-                a++;
-            }
-        }
-        if (a == Tile1.Count)
+        if (CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount == 2)
         {
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
@@ -260,12 +252,16 @@ public class Pattern_10 : GeneralTest
             {
                 _resultNum += Tile1[i].transform.GetChild(j).GetComponent<P10_ButtonControl>().Value;
             }
+            Debug.Log(_resultNum);
+            Debug.Log(Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber);
             if (_resultNum == Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber)
             {
+                Debug.Log(_resultNum);
                 _correctCount++;
             }
             _resultNum = 0;
         }
+        Debug.Log(_correctCount);
         if (_correctCount == Tile1.Count)
         {
             CorrectPattern = true;
