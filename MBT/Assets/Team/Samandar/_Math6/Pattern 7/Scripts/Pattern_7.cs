@@ -157,7 +157,7 @@ public class Pattern_7 : GeneralTest
     {
         
         Yoqish = Buttons[0].GetComponent<ButtonClick>().IsEnable;
-        
+        Buttons[2].GetComponent<Button>().interactable = false;
         if (Yoqish == true)
         {
             PenTool.SetActive(true);
@@ -213,6 +213,8 @@ public class Pattern_7 : GeneralTest
         {
             Destroy(DotParent.transform.GetChild(i).gameObject);
         }
+        Buttons[0].GetComponent<Button>().interactable = true;
+        Buttons[1].GetComponent<Button>().interactable = false;
     }
     void Update()
     {
