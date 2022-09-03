@@ -7,7 +7,7 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public float Value;
     public GameObject CanvasObj;
     private RectTransform _rectTransform;
-    private new Vector3 _lastRectTransform;
+    private  Vector3 _lastRectTransform;
     private CanvasGroup _canvasGroup;
     private void Awake()
     {
