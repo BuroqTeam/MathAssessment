@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-;
 
 public class PenTool : MonoBehaviour
 {
@@ -24,20 +23,25 @@ public class PenTool : MonoBehaviour
     }
 
     public void AddDot()
-    {
-        
-         if (currentLine == null)
-         {
-            currentLine = Instantiate(linePrefabs, Vector3.zero, Quaternion.identity, lineParent.transform).GetComponent<LineControllerPattern7>();
-            Pattern7.False();
-         }
-         GameObject dot = Instantiate(Point, GetMousePosition(), Quaternion.identity, dotParent.transform);
-         pointsPattern7.Check();
-         currentLine.AddPoint(dot.transform);
-         if (Pattern7.CanvasOut[0].transform.childCount == Pattern7.Data7.options.Count)
-         {
+    {        
+        if (currentLine == null)
+        {
+           currentLine = Instantiate(linePrefabs, Vector3.zero, Quaternion.identity, lineParent.transform).GetComponent<LineControllerPattern7>();
+           Pattern7.False();
+        }
+        GameObject dot = Instantiate(Point, GetMousePosition(), Quaternion.identity, dotParent.transform);
+        pointsPattern7.Check();
+        currentLine.AddPoint(dot.transform);
+        if (Pattern7.CanvasOut[0].transform.childCount == Pattern7.Data7.options.Count)
+        {
+            Pattern7.Buttons[1].GetComponent<Button>().interactable = true;
             Pattern7.Buttons[0].GetComponent<Button>().interactable = false;
-         }
+            gameObject.SetActive(false);
+        }
+        else if (Pattern7.CanvasOut[0].transform.childCount == 1)
+        {
+            Pattern7.Buttons[2].GetComponent<Button>().interactable = true;
+        }
     }
 
   
@@ -49,7 +53,5 @@ public class PenTool : MonoBehaviour
         pointsPattern7.Check();
         return worldMousePosition;
     }
-   
-    // Update is called once per frame
     
 }
