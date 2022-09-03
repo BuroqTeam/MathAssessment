@@ -17,7 +17,7 @@ public class Pattern_7 : GeneralTest
     public float height;
     public GameObject PenTool;
     public List<Button> Buttons = new();
-    public Data_7 Data7 = new Data_7();
+    public Data_7 Data7 = new();
     public GameObject Line;
     public GameObject Dot;
     public GameObject DotPrefabs;
@@ -25,33 +25,27 @@ public class Pattern_7 : GeneralTest
     public GameObject Cell;
     public GameObject Koordinata;
     GameObject CellInstanse;
-    public Transform Camera;
     public float percentage;
     public List<CellPattern7> CellGroup = new();
     public List<GameObject> CellObj;
+    public List<GameObject> CanvasOut;
     bool Yoqish;
     public bool _istrue = true;
     bool _isTrueOneTime = true;
     public PointsPattern7 Point;
     public CellPattern7 cellPattern7;
-    public Transform DotParent;
-    public Transform LineParent;
+    public GameObject DotParent;
+    public GameObject LineParent;
     public int BobID, QuestionID;
     public GameObject Question;
     public bool _click;
     private void Awake()
     {
-        //Transform dot = Instantiate(Dot.transform);
-        //Transform line = Instantiate(Line.transform);
-        //DotParent = dot;
-        //LineParent = line;
-        //GameObject obj = Instantiate(CellParent);
-        //CellParent.GetComponent<CellParent>().Pattern_7 = this;
-        //DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
-        //Instance = this;
-        //percentage = Cell.transform.localScale.x;
-        //CellPosition();
-        
+        CellParent.GetComponent<CellParent>().Pattern_7 = this;
+        percentage = Cell.transform.localScale.x;
+        InstantiatePrefabs();
+        DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
+        Instance = this;        
     }
 
     public void ReadFromJson()
@@ -74,26 +68,31 @@ public class Pattern_7 : GeneralTest
         {
             _istrue = false;
             _jsonText = GetComponent<Pattern>().Json;
-            ReadFromJson();
-            
+            ReadFromJson();            
         }
-        Transform dot = Instantiate(Dot.transform);
-        Transform line = Instantiate(Line.transform);
-        DotParent = dot;
-        LineParent = line;
-        GameObject obj = Instantiate(CellParent);
-        CellParent.GetComponent<CellParent>().Pattern_7 = this;
-        DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
-        Instance = this;
-        percentage = Cell.transform.localScale.x;
-        CellPosition();
-        //DisplayQuestion(DataObj.title);
+        for (int i = 0; i < CanvasOut.Count; i++)
+        {
+            CanvasOut[i].SetActive(true);
+        }
+        DisplayQuestion(Data7.title);
 
     }
 
+    void InstantiatePrefabs()
+    {
+        GameObject dot = Instantiate(Dot);
+        GameObject line = Instantiate(Line);
+        DotParent = dot;
+        LineParent = line;
+        GameObject obj = Instantiate(CellParent);
+        CanvasOut.Add(dot);
+        CanvasOut.Add(line);
+        CanvasOut.Add(obj);
+    }
     void Start()
     {
-        ReadFromJson();
+        CellPosition();
+        //ReadFromJson();
     }
 
     public void Active()
@@ -140,16 +139,13 @@ public class Pattern_7 : GeneralTest
     }
     private void OnDisable()
     {
-        if (CellObj.Count > 0)
+        
+        if (CanvasOut.Count > 0)
         {
-            for (int i = 0; i < CellObj.Count; i++)
+            for (int i = 0; i < CanvasOut.Count; i++)
             {
-                CellObj[i].SetActive(false);
+                CanvasOut[i].SetActive(false);
             }
-            //for (int i = 0; i < Operations.Count; i++)
-            //{
-            //    Operations[i].SetActive(false);
-            //}
 
         }
     }
@@ -159,7 +155,9 @@ public class Pattern_7 : GeneralTest
     }
     public void TurnOnTurnOf()
     {
+        
         Yoqish = Buttons[0].GetComponent<ButtonClick>().IsEnable;
+        
         if (Yoqish == true)
         {
             PenTool.SetActive(true);
@@ -169,6 +167,7 @@ public class Pattern_7 : GeneralTest
     {
         GameObject obj = Instantiate(Koordinata);
         Koordinata.transform.position = PenTool.transform.position;
+        CanvasOut.Add(obj);
     }
     public void LineParentTurnOn()
     {
@@ -209,29 +208,12 @@ public class Pattern_7 : GeneralTest
     }
     public void OnDestroy()
     {
-        //Destroy(LineParent.transform.GetChild(0).gameObject);
-        //for (int i = 0; i < DotParent.transform.childCount; i++)
-        //{
-        //    Destroy(DotParent.transform.GetChild(i).gameObject);
-        //}
+        Destroy(LineParent.transform.GetChild(0).gameObject);
+        for (int i = 0; i < DotParent.transform.childCount; i++)
+        {
+            Destroy(DotParent.transform.GetChild(i).gameObject);
+        }
     }
-
-
-    //public void SquareLocation()
-    //{
-        
-    //    for (float i = 0; i < width; i += percentage)
-    //    {
-    //        for (float j = 0; j < height; j += percentage)
-    //        {
-    //            GameObject SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity, CellParent.transform);
-    //            CellGroup.Add(SpawnedCell.GetComponent<CellPattern7>());
-    //            CellInstanse = SpawnedCell;
-    //        }
-    //    }
-    //    Camera.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, transform.position.z);
-    //} 
-
     void Update()
     {
         if (_isTrueOneTime)
@@ -242,87 +224,6 @@ public class Pattern_7 : GeneralTest
 
 
 }
-
-
-
-
-public class Pattern5 : MonoBehaviour
-{
-    public TextAsset JsonText;
-    private GameObject MainParent;
-    public GameObject QuestionObj;
-
-    public int BobID, QuestionID;
-
-
-    public List<GameObject> positionObjs;
-    public GameObject NumPrefab;
-    //public GameObject Number;
-    public GameObject ParentForPos;
-    public Data_7 Pattern5Obj = new Data_7();
-
-    void Start()
-    {
-        //QuestionObject = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
-        MainParent = gameObject.transform.parent.transform.parent.gameObject;
-        //QuestionObj = MainParent.transform.GetChild(MainParent.transform.childCount - 2).gameObject;
-        QuestionObj = gameObject.transform.parent.transform.parent.GetChild(8).gameObject;
-
-
-        ReadFromJson();
-
-        CreatePrefabs();
-    }
-
-
-    public void DisplayQuestion()
-    {
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title[0];
-    }
-
-
-    public void ReadFromJson()
-    {
-        
-        BobID = Random.Range(0, 10);
-        QuestionID = Random.Range(40, 50);
-        Debug.Log("BobID = " + BobID + " QuestionID = " + QuestionID);
-        var jsonObj = JObject.Parse(JsonText.text);
-
-        //var likeName = jsonObj["chapters"][0]["questions"][0]["question"]["options"][1].Value<string>();        
-        //var test1 = jsonObj["chapters"][0]["questions"][40]["id"].Value<string>();
-        //Debug.Log("likeName = " + likeName + " test1 = " + test1);
-        Pattern5Obj = jsonObj["chapters"][0]["questions"][QuestionID].ToObject<Data_7>();
-        //var Pattern5Obj = jsonObj["chapters"][0]["questions"][40].ToObject<Pattern5Data>();
-
-        //Debug.Log("ID = " + Pattern5Obj.id + " Problems count = " + Pattern5Obj.problem.Count);
-        //for (int i = 0; i < Pattern5Obj.problem.Count; i++)        {
-        //    Debug.Log("    " + Pattern5Obj.problem[i]);
-        //}
-        QuestionObj.GetComponent<TEXDraw>().text = "320 150 000 000 000";
-
-        //QuestionObj.GetComponent<TEXDraw>().text = Pattern5Obj.title;
-
-       
-    }
-
-
-    public void CreatePrefabs()
-    {
-        for (int i = 0; i < positionObjs.Count; i++)
-        {
-            Vector3 locPos = positionObjs[i].GetComponent<RectTransform>().localPosition;
-
-            GameObject obj = Instantiate(NumPrefab, ParentForPos.transform);
-            obj.transform.localPosition = locPos;
-            //obj.transform.parent = ParentForPos.GetComponent<RectTransform>().transform;            
-            //obj.transform.SetParent(ParentForPos.transform);            
-        }
-    }
-
-
-}
-
 [SerializeField]
 public class Data_7
 {

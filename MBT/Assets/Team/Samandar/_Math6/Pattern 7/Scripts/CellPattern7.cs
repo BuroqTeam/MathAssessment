@@ -18,6 +18,7 @@ public class CellPattern7 : MonoBehaviour
         CollectPoints();
 
     }
+  
 
     public void CollectPoints()
     {
