@@ -252,13 +252,14 @@ public class Pattern_10 : GeneralTest
             {
                 _resultNum += Tile1[i].transform.GetChild(j).GetComponent<P10_ButtonControl>().Value;
             }
-            Debug.Log(_resultNum);
-            Debug.Log(Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber);
-            if (_resultNum == Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber)
+           
+            if (Mathf.Approximately(_resultNum, Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber))
             {
                 Debug.Log(_resultNum);
                 _correctCount++;
             }
+                
+           
             _resultNum = 0;
         }
         Debug.Log(_correctCount);
