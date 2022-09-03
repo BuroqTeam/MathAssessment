@@ -181,30 +181,34 @@ public class Pattern_7 : GeneralTest
     }
     void Rectangle()
     {
-        if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x)
+        if (DotsList.Count == 4)
         {
-            Debug.Log("1");
-            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+            if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x)
+            {
+                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x)
+            {
+                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
+            {
+                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
+            {
+                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+            }
         }
-        else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x)
-        {
-            Debug.Log("1");
-            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-        }
-        else if (DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
-        {
-            Debug.Log("1");
-            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-        }
-        else if (DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-        {
-            Debug.Log("1");
-            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-        }
+        
     }
 
     public void False()

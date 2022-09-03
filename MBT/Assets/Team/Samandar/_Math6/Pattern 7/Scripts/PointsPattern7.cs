@@ -39,23 +39,18 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         
         if (gameObject.transform.position.x < Pos_1.transform.GetComponent<CellPattern7>().points[3].x)
         {
-            Debug.Log("1");
-            //_initialPosition.position = new Vector3(_initial.position.x, _initial.position.y, 0);
             transform.DOMove(LastPosition, 0);
         }
         else if (gameObject.transform.position.x > Pos_2.transform.GetComponent<CellPattern7>().points[0].x)
         {
-            Debug.Log("2");
             transform.DOMove(LastPosition, 0);
         }
         else if (gameObject.transform.position.y < Pos_1.transform.GetComponent<CellPattern7>().points[3].y)
         {
-            Debug.Log("3");
             transform.DOMove(LastPosition, 0);
         }
         else if (gameObject.transform.position.y > Pos_2.transform.GetComponent<CellPattern7>().points[0].y)
         {
-            Debug.Log("4");
             transform.DOMove(LastPosition, 0);
         }
     }
@@ -81,9 +76,5 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
-    }
-   
-
-
-    
+    }    
 }
