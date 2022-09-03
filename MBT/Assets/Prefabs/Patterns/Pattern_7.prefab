@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b34b3937832463449bd0a1fc16a853f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32a0592da604fb84e8b0fcdee95c57d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 8480374622655341841}
-  SpClicked: {fileID: 21300000, guid: f62a40286b51d0944a379056083fe8c8, type: 3}
+  SpClicked: {fileID: 21300000, guid: 32a0592da604fb84e8b0fcdee95c57d4, type: 3}
   IsEnable: 0
 --- !u!1 &8480374622655341843
 GameObject:
@@ -248,6 +248,7 @@ MonoBehaviour:
   - {fileID: 8480374622921291010}
   - {fileID: 8480374622796216445}
   - {fileID: 8480374621945622630}
+  DotsList: []
   Line: {fileID: 4115138001954530373, guid: 4131c943c557e7147995389b855abfe8, type: 3}
   Dot: {fileID: 2598368186222215131, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
   DotPrefabs: {fileID: 5149375334438247198, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
@@ -424,7 +425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09f6694a869feb7419f58697eaa5cedf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d75bb6c0d2e2dfc40a2cf9a4bc6fc503, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bfe0a5888bc9fb14b86bbd5c0c98ade9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a1aa87c13d275b47bdaeb07f9d8b0d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -719,14 +720,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ec9dc01886f1c044b1106eebe4a8b14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8ea55617082d374e886d3acdc571047, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

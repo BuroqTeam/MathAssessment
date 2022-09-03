@@ -246,6 +246,10 @@ public class Pattern_7 : GeneralTest
         {
             Destroy(DotParent.transform.GetChild(i).gameObject);
         }
+        if (Buttons[0].GetComponent<ButtonClick>().IsEnable == false)
+        {
+            PenTool.SetActive(false);
+        }
         Buttons[0].GetComponent<Button>().interactable = true;
         Buttons[1].GetComponent<Button>().interactable = false;
         Buttons[2].GetComponent<Button>().interactable = false;
