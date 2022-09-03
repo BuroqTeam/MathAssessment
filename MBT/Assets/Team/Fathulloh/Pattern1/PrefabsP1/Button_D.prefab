@@ -236,6 +236,7 @@ MonoBehaviour:
   CurrentAnswer: 
   ABCD: []
   InitialTextColor: {r: 0, g: 0, b: 0, a: 0}
+  ColorCollection: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
   CorrectCircle: {fileID: 21300000, guid: cd5610f61daed614480a6984c1573570, type: 3}
   CorrectRectangle: {fileID: 21300000, guid: 30807b0ee26f420469aa257ad4f320b2, type: 3}
   WrongCircle: {fileID: 21300000, guid: 0195edfdfea74704db602cecdbcefc74, type: 3}

@@ -11,6 +11,8 @@ public class AnswerPattern1 : MonoBehaviour
     public List<GameObject> ABCD;
     public Color InitialTextColor;
 
+    public ColorCollectionSO ColorCollection;
+
     public Sprite CorrectCircle, CorrectRectangle;
     public Sprite WrongCircle, WrongRectangle;
 
@@ -38,7 +40,9 @@ public class AnswerPattern1 : MonoBehaviour
 
         gameObject.transform.GetChild(2).GetComponent<TEXDraw>().color = Color.white;
 
-        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        //gameObject.transform.GetChild(0).gameObject.SetActive(true);    //28Avg
+        gameObject.GetComponent<Image>().color = ColorCollection.Blue;  //28Avg ++
+
         int childsCount = gameObject.transform.childCount;
         gameObject.transform.GetChild(childsCount - 1).gameObject.SetActive(true);
 
@@ -61,7 +65,8 @@ public class AnswerPattern1 : MonoBehaviour
     {
         int childsCount = gameObject.transform.childCount;
         gameObject.transform.GetChild(childsCount - 1).gameObject.SetActive(false);
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        //gameObject.transform.GetChild(0).gameObject.SetActive(false);  // 28Avg
+        gameObject.GetComponent<Image>().color = ColorCollection.White;  // 28Avg  ++
         gameObject.transform.GetChild(2).GetComponent<TEXDraw>().color = InitialTextColor;
     }
 
