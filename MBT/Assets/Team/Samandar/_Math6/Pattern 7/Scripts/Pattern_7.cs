@@ -1,9 +1,8 @@
+using DG.Tweening;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Pattern_7 : GeneralTest
@@ -17,6 +16,7 @@ public class Pattern_7 : GeneralTest
     public float height;
     public GameObject PenTool;
     public List<Button> Buttons = new();
+    public List<GameObject> DotsList = new();
     public Data_7 Data7 = new();
     public GameObject Line;
     public GameObject Dot;
@@ -171,11 +171,39 @@ public class Pattern_7 : GeneralTest
     }
     public void LineParentTurnOn()
     {
+        Rectangle();
         LineParent.transform.GetChild(0).gameObject.SetActive(true);
         LineParent.transform.GetChild(0).transform.GetComponent<LineRenderer>().loop = true;
         if (Buttons[0].GetComponent<ButtonClick>().IsEnable == false)
         {
             PenTool.SetActive(false);
+        }
+    }
+    void Rectangle()
+    {
+        if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x)
+        {
+            Debug.Log("1");
+            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+        }
+        else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x)
+        {
+            Debug.Log("1");
+            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+        }
+        else if (DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
+        {
+            Debug.Log("1");
+            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+        }
+        else if (DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
+        {
+            Debug.Log("1");
+            DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
+            DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
         }
     }
 
@@ -208,6 +236,7 @@ public class Pattern_7 : GeneralTest
     }
     public void OnDestroy()
     {
+        DotsList.Clear();
         Destroy(LineParent.transform.GetChild(0).gameObject);
         for (int i = 0; i < DotParent.transform.childCount; i++)
         {
@@ -215,6 +244,7 @@ public class Pattern_7 : GeneralTest
         }
         Buttons[0].GetComponent<Button>().interactable = true;
         Buttons[1].GetComponent<Button>().interactable = false;
+        Buttons[2].GetComponent<Button>().interactable = false;
     }
     void Update()
     {

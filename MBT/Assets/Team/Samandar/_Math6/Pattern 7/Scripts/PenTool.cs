@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PenTool : MonoBehaviour
@@ -30,6 +27,8 @@ public class PenTool : MonoBehaviour
            Pattern7.False();
         }
         GameObject dot = Instantiate(Point, GetMousePosition(), Quaternion.identity, dotParent.transform);
+        Pattern7.DotsList.Add(dot);
+        dot.GetComponent<PointsPattern7>().LastPosition = dot.transform.position;
         pointsPattern7.Check();
         currentLine.AddPoint(dot.transform);
         if (Pattern7.CanvasOut[0].transform.childCount == Pattern7.Data7.options.Count)
