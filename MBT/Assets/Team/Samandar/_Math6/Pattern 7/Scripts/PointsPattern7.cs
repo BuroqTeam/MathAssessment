@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,7 +9,8 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
   
     private GameObject Pos_1;
     private GameObject Pos_2;
-
+    public List<string> NumberY;
+    public List<string> NumberX;
     public Vector3 LastPosition;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -20,19 +22,149 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     private void Start()
     {
-        Check();
+        PositionCheck();
     }
 
 
 
     public void OnEndDrag(PointerEventData eventData)
-    {
-       
-        Check();
+    {       
+        PositionCheck();
         BackToLastPosition();
+        Check();
     }
 
-  
+    public void Check()
+    {
+        NumberX.Clear();
+        NumberY.Clear();
+        for (int i = 0; i < Pattern_7.PositionOut[0].transform.childCount; i++)
+        {
+            if (Pattern_7.PositionOut[0].transform.GetChild(i).position.x == gameObject.transform.position.x)
+            {
+                if (i == 0)
+                {
+                    Debug.Log("x-5");
+                    NumberX.Add("-5");
+                }
+                if (i == 1)
+                {
+                    Debug.Log("x-4");
+                    NumberX.Add("-4");
+                }
+                if (i == 2)
+                {
+                    Debug.Log("x-3");
+                    NumberX.Add("-3");
+                }
+                if (i == 3)
+                {
+                    Debug.Log("x-2");
+                    NumberX.Add("-2");
+                }
+                if (i == 4)
+                {
+                    Debug.Log("x-1");
+                    NumberX.Add("-1");
+                }
+                if (i == 5)
+                {
+                    Debug.Log("x");
+                    NumberX.Add("0");
+                }
+                if (i == 6)
+                {
+                    Debug.Log("x+1");
+                    NumberX.Add("1");
+                }
+                if (i == 7)
+                {
+                    Debug.Log("x+2");
+                    NumberX.Add("2");
+                }
+                if (i == 8)
+                {
+                    Debug.Log("x+3");
+                    NumberX.Add("3");
+                }
+                if (i == 9)
+                {
+                    Debug.Log("x+4");
+                    NumberX.Add("4");
+                }
+                if (i == 10)
+                {
+                    Debug.Log("x+5");
+                    NumberX.Add("5");
+                }              
+            }
+        }
+        for (int i = 0; i < Pattern_7.PositionOut[1].transform.childCount; i++)
+        {
+            if (Pattern_7.PositionOut[1].transform.GetChild(i).position.y == gameObject.transform.position.y)
+            {
+                if (i == 0)
+                {
+                    Debug.Log("x-5");
+                    NumberY.Add("-5");
+                }
+                if (i == 1)
+                {
+                    Debug.Log("x-4");
+                    NumberY.Add("-4");
+                }
+                if (i == 2)
+                {
+                    Debug.Log("x-3");
+                    NumberY.Add("-3");
+                }
+                if (i == 3)
+                {
+                    Debug.Log("x-2");
+                    NumberY.Add("-2");
+                }
+                if (i == 4)
+                {
+                    Debug.Log("x-1");
+                    NumberY.Add("-1");
+                }
+                if (i == 5)
+                {
+                    Debug.Log("x");
+                    NumberY.Add("0");
+                }
+                if (i == 6)
+                {
+                    Debug.Log("x+1");
+                    NumberY.Add("1");
+                }
+                if (i == 7)
+                {
+                    Debug.Log("x+2");
+                    NumberY.Add("2");
+                }
+                if (i == 8)
+                {
+                    Debug.Log("x+3");
+                    NumberY.Add("3");
+                }
+                if (i == 9)
+                {
+                    Debug.Log("x+4");
+                    NumberY.Add("4");
+                }
+                if (i == 10)
+                {
+                    Debug.Log("x+5");
+                    NumberY.Add("5");
+                }                
+            }
+            else
+            {
+                NumberY.Add("-111");
+            }
+        }
+    }
 
     void BackToLastPosition()
     {
@@ -55,7 +187,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         }
     }
 
-    public void Check()
+    public void PositionCheck()
     {        
         foreach (CellPattern7 cell in Pattern_7.Instance.CellGroup)
         {

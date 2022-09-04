@@ -17,12 +17,17 @@ public class Pattern_7 : GeneralTest
     public GameObject DotParent;
     public GameObject LineParent;
     public GameObject PenTool;
+    public GameObject PositionY;
+    public GameObject PositionX;
     public GameEvent FinishButton;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
+    public List<GameObject> PositionOut;
     public List<GameObject> DotsList = new();
     public List<CellPattern7> CellGroup = new();
     public List<Button> Buttons = new();
+    //public List<string> NumberY;
+    //public List<string> NumberX;
     public static Pattern_7 Instance;
     public float width;
     public float height;
@@ -40,7 +45,6 @@ public class Pattern_7 : GeneralTest
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
         Instance = this;        
     }
-
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
@@ -65,7 +69,11 @@ public class Pattern_7 : GeneralTest
         }
         for (int i = 0; i < CanvasOut.Count; i++)
         {
-            CanvasOut[i].SetActive(true);
+            CanvasOut[i].SetActive(true);            
+        }
+        for (int i = 0; i < PositionOut.Count; i++)
+        {
+            PositionOut[i].SetActive(true);
         }
         DisplayQuestion(Data7.title);
 
@@ -75,6 +83,10 @@ public class Pattern_7 : GeneralTest
     {
         GameObject dot = Instantiate(Dot);
         GameObject line = Instantiate(Line);
+        GameObject posY = Instantiate(PositionY);
+        GameObject posX = Instantiate(PositionX);
+        PositionOut.Add(posX);
+        PositionOut.Add(posY);
         DotParent = dot;
         LineParent = line;
         GameObject obj = Instantiate(CellParent);
@@ -129,12 +141,15 @@ public class Pattern_7 : GeneralTest
     }
     private void OnDisable()
     {
-        
         if (CanvasOut.Count > 0)
         {
             for (int i = 0; i < CanvasOut.Count; i++)
             {
                 CanvasOut[i].SetActive(false);
+            }
+            for (int i = 0; i < PositionOut.Count; i++)
+            {
+                PositionOut[i].SetActive(false);
             }
 
         }
