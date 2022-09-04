@@ -1,5 +1,5 @@
+using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,23 +8,28 @@ public class QuestionNumber : MonoBehaviour
 {
     
     public int Index;
-    Button btn;
+    public Sprite SpriteON;
+    public Sprite SpriteOFF;
+    public bool IsAnimationable;
+    public TMP_Text NumberText;
+    public Color BlueColor;
 
-
-
-    TMP_Text _numberText;
+    Button _btn;
+    
+    
+    
 
     private void Awake()
     {
-        _numberText = transform.GetChild(0).GetComponent<TMP_Text>();
-        btn = GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-
-
+        NumberText = transform.GetChild(0).GetComponent<TMP_Text>();
+        BlueColor = NumberText.color;
+        _btn = GetComponent<Button>();
+        _btn.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
+        PlayAnimation();
         GameManager.Instance.CurrentQuestionNumber = Index;
         GameManager.Instance.SetActiveNextQuestion();
     }
@@ -34,9 +39,48 @@ public class QuestionNumber : MonoBehaviour
     {
         Index = number;
         number++;
-        _numberText.text = number.ToString();
-
-
+        NumberText.text = number.ToString();
     }
-   
+
+    
+    IEnumerator AnimateQuestionNumber()
+    {
+        if (IsAnimationable)
+        {
+            transform.DOScale(0.9f, 0.2f);
+            yield return new WaitForSeconds(0.2f);
+            transform.DOScale(1, 0.2f);
+            yield return new WaitForSeconds(0.2f);
+            StartCoroutine(AnimateQuestionNumber());
+        }
+    }
+    public void PlayAnimation()
+    {
+        foreach (QuestionNumber questionNumber in GameManager.Instance.QuestionNumbers)
+        {
+            if (questionNumber != this)
+            {
+                if (questionNumber.IsAnimationable)
+                {
+                    questionNumber.StopAnimation();
+                    if (!TestManager.Instance.ActivePatterns[questionNumber.Index].GetComponent<Pattern>().IsEdited)
+                    {
+                        questionNumber.GetComponent<Image>().sprite = questionNumber.SpriteOFF;
+                        questionNumber.NumberText.color = questionNumber.BlueColor;
+                    }
+                }
+            }
+        }
+        IsAnimationable = true;
+        GetComponent<Image>().sprite = SpriteON;
+        NumberText.color = Color.white;
+        StartCoroutine(AnimateQuestionNumber());
+    }
+
+    public void StopAnimation()
+    {
+        IsAnimationable = false;
+    }
+
+  
 }

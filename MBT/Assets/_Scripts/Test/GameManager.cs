@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent FinishEvent;
 
    
-    public List<QuestionNumber> CircleGroup = new();
+    public List<QuestionNumber> QuestionNumbers = new();
     
     public int CurrentQuestionNumber, MaximumQuestionNumber;
    
@@ -50,10 +50,11 @@ public class GameManager : MonoBehaviour
             questionNumber.transform.SetParent(NumberParent.transform);
             questionNumber.transform.localScale = Vector3.one;
             questionNumber.GetComponent<QuestionNumber>().InitialCondition(i);
-            CircleGroup.Add(questionNumber.GetComponent<QuestionNumber>());
+            QuestionNumbers.Add(questionNumber.GetComponent<QuestionNumber>());
         }
         TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
-
+        NewQuestionEvent.Invoke();
+        QuestionNumbers[0].PlayAnimation();
     }
 
 
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void SetActiveNextQuestion()
     {
+        NewQuestionEvent.Invoke();
         foreach (GameObject obj in TestManager.Instance.ActivePatterns)
         {
             if (obj.activeSelf)
