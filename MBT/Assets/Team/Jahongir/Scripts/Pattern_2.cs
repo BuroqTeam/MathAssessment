@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Pattern_2 : GeneralTest
 {
-    public GameEvent ActNext;
-    public GameEvent DeactNext;
     public GameEvent FinishEvent;
     public GameObject Button;
     private TextAsset _currentJsonText;
@@ -28,11 +26,11 @@ public class Pattern_2 : GeneralTest
         DisplayQuestion(Pattern_2Obj.title);
         if (ES3.Load<bool>("Pattern_2_Check"))
         {
-            ActNext.Raise();
+            
         }
         else
         {
-            DeactNext.Raise();
+            
         }
     }
     public override void DisplayQuestion(string questionStr)
@@ -99,38 +97,7 @@ public class Pattern_2 : GeneralTest
             }   
         }
     }
-    //public void Result()
-    //{
-    //    for (int i = 0; i < Buttons.Count; i++)
-    //    {
-    //        if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
-    //        {
-    //            CorrectAnswerNumber++;
-    //        }
-    //        if (Buttons[i].GetComponent<P2_ButtonControl>().Select)
-    //        {
-    //            SelectAnswerNumber++;
-    //        }
-    //        if (Buttons[i].GetComponent<P2_ButtonControl>().Select && Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
-    //        {
-    //            ResultNumber++;
-    //        }
-    //    }
-    //    if (CorrectAnswerNumber == SelectAnswerNumber && ResultNumber == SelectAnswerNumber)
-    //    {
-    //        Debug.Log("Correct");
-    //        CorrectAnswerNumber = 0;
-    //        SelectAnswerNumber = 0;
-    //        ResultNumber = 0;
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Wrong");
-    //        CorrectAnswerNumber = 0;
-    //        SelectAnswerNumber = 0;
-    //        ResultNumber = 0;
-    //    }
-    //}
+   
     public void CheckButton()
     {
         int a = 0;
@@ -149,13 +116,12 @@ public class Pattern_2 : GeneralTest
             }
             else
             {
-                ActNext.Raise();                
+                   
             }
             ES3.Save<bool>("Pattern_2_Check", true);
         }
         else
         {
-            DeactNext.Raise();
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             ES3.Save<bool>("Pattern_2_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;

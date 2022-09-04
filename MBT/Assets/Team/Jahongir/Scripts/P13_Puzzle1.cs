@@ -24,7 +24,6 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         transform.GetChild(1).transform.DOScale(1.2f, 0);
         _lastPos = transform.GetChild(1).transform.position;
         siblingIndexObj = transform.GetSiblingIndex();
-        //Debug.Log("indexObject = " + siblingIndexObj);
         transform.SetSiblingIndex(Pattern13.QuestionPuzles.Count - 1);
     }
 

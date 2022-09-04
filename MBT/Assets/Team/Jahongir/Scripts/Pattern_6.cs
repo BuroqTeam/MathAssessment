@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Pattern_6 : GeneralTest
 {
-    public GameEvent ActNext;
-    public GameEvent DeactNext;
     public GameEvent FinishEvent;
     private  TextAsset _currentJsonText;
     bool _isTrue = true;
@@ -23,11 +21,11 @@ public class Pattern_6 : GeneralTest
         DisplayQuestion(Pattern_6Obj.title);
         if (ES3.Load<bool>("Pattern_6_Check"))
         {
-            ActNext.Raise();
+            
         }
         else
         {
-            DeactNext.Raise();
+            
         }
     }
     public override void DisplayQuestion(string questionStr)

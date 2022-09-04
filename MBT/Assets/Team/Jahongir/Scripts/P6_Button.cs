@@ -15,12 +15,10 @@ public class P6_Button : MonoBehaviour
         }
         if (Answer.text != null)
         {
-            Pattern6.ActNext.Raise();
             ES3.Save<bool>("Pattern_6_Check", true);
         }
         else
         {
-            Pattern6.DeactNext.Raise();
             ES3.Save<bool>("Pattern_6_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;
@@ -34,7 +32,6 @@ public class P6_Button : MonoBehaviour
         }
         if (Answer.text.Length == 0)
         {
-            Pattern6.DeactNext.Raise();
             ES3.Save<bool>("Pattern_6_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
         }
@@ -46,7 +43,7 @@ public class P6_Button : MonoBehaviour
             }
             else
             {
-                Pattern6.ActNext.Raise();
+
             }
             ES3.Save<bool>("Pattern_6_Check", true);
         }

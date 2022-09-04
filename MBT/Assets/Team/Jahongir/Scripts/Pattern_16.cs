@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class Pattern_16 : GeneralTest
 {
-    public GameEvent ActNext;
-    public GameEvent DeactNext;
     public GameEvent FinishEvent;
     public List<GameObject> ExistentPrefabs = new();
     public List<GameObject> ActivePrefabs = new();
@@ -42,11 +40,11 @@ public class Pattern_16 : GeneralTest
         DisplayQuestion(Pattern_16Obj.title);
         if (ES3.Load<bool>("Pattern_16_Check"))
         {
-            ActNext.Raise();
+            
         }
         else
         {
-            DeactNext.Raise();
+            
         }
     }
     private void OnDisable()
@@ -223,13 +221,12 @@ public class Pattern_16 : GeneralTest
             }
             else
             {
-                ActNext.Raise();
+                
             }
             ES3.Save<bool>("Pattern_16_Check", true);
         }
         else
         {
-            DeactNext.Raise();
             ES3.Save<bool>("Pattern_16_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false; 
             GetComponent<Pattern>().IsStatus = false;
