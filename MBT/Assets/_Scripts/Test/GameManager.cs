@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
 
    
     public List<QuestionNumber> CircleGroup = new();
-    [HideInInspector]
+    
     public int CurrentQuestionNumber, MaximumQuestionNumber;
    
-    public QuestionNumber CurrentCircleObj;
+   
     public static GameManager Instance;
     public int MaximumPatternNumber;
 
@@ -52,28 +52,14 @@ public class GameManager : MonoBehaviour
             questionNumber.GetComponent<QuestionNumber>().InitialCondition(i);
             CircleGroup.Add(questionNumber.GetComponent<QuestionNumber>());
         }
-        UpdateTestView(0, false);
-        
+        TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
+
     }
 
 
-    public void UpdateTestView(int circleIdentity, bool IsNext)
-    {
-               
-        NewQuestionEvent.Invoke();
+  
 
-        if (IsNext)
-        {
-            SetActiveNextQuestion();
-        }
-        else
-        {
-            TestManager.Instance.ActivePatterns[CurrentQuestionNumber].SetActive(true);
-        }
-        
-    }
-
-    void SetActiveNextQuestion()
+    public void SetActiveNextQuestion()
     {
         foreach (GameObject obj in TestManager.Instance.ActivePatterns)
         {

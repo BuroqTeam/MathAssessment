@@ -228,7 +228,7 @@ public class Pattern_16 : GeneralTest
         else
         {
             ES3.Save<bool>("Pattern_16_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false; 
+            
             GetComponent<Pattern>().IsStatus = false;
         }
 

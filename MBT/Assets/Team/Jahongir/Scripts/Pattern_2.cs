@@ -122,9 +122,9 @@ public class Pattern_2 : GeneralTest
         }
         else
         {
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             ES3.Save<bool>("Pattern_2_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }

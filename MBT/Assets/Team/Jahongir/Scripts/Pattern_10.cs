@@ -185,7 +185,7 @@ public class Pattern_10 : GeneralTest
             CollectedPrefabs.Clear();
         }
         ES3.Save<bool>("Pattern_10_Check", false);
-        GameManager.Instance.CurrentCircleObj.IsDone = false;
+        
         GetComponent<Pattern>().IsStatus = false;
     }
 
@@ -198,7 +198,7 @@ public class Pattern_10 : GeneralTest
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             ES3.Save<bool>("Pattern_10_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
         else
@@ -236,7 +236,7 @@ public class Pattern_10 : GeneralTest
         else
         {
             ES3.Save<bool>("Pattern_10_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }

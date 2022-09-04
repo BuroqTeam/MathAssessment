@@ -20,7 +20,7 @@ public class P6_Button : MonoBehaviour
         else
         {
             ES3.Save<bool>("Pattern_6_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }
@@ -33,7 +33,7 @@ public class P6_Button : MonoBehaviour
         if (Answer.text.Length == 0)
         {
             ES3.Save<bool>("Pattern_6_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
         }
         else
         {
