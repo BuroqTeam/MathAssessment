@@ -97,14 +97,14 @@ public class Pattern_7 : GeneralTest
     {
         if (_click)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishButton.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishButton.Raise();
+            //}
+            //else
+            //{
                 
-            }
+            //}
             ES3.Save<bool>("Pattern_7_Check", true);
         }
     }

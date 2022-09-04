@@ -45,10 +45,10 @@ public class Pattern_3 : GeneralTest
         }
         if (n == problem1.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishButton.Raise();
-            }
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishButton.Raise();
+            //}
             ES3.Save<bool>("Pattern_3_Check", true);           
             
         }
@@ -56,7 +56,7 @@ public class Pattern_3 : GeneralTest
         {            
             ES3.Save<bool>("Pattern_3_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
 

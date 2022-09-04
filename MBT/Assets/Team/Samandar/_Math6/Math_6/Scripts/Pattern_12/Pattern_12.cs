@@ -46,21 +46,21 @@ public class Pattern_12 : GeneralTest
         }
         if (n > 0)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishButton.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishButton.Raise();
+            //}
+            //else
+            //{
                
-            }           
+            //}           
             ES3.Save<bool>("Pattern_12_Check", true);
         }
         else if (n == 0)
         {
             ES3.Save<bool>("Pattern_12_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
 

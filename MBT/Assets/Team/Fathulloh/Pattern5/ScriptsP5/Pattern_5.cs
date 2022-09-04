@@ -177,14 +177,14 @@ public class Pattern_5 : GeneralTest
         //Debug.Log(fullPositions);
         if (FullPositions == EmptyPositions.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
-                //ActiveNext.Raise();
-            }
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
+            //    //ActiveNext.Raise();
+            //}
             
             if (TotalCorrectAns == numbers)
             {
@@ -203,7 +203,7 @@ public class Pattern_5 : GeneralTest
 
             ES3.Save<bool>("Pattern_5_Check", false);
            
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
             
     }

@@ -203,14 +203,14 @@ public class Pattern_1 : GeneralTest
     {
         if (_IsActiveButton)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
-                //ActiveNext.Raise();
-            }
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
+            //    //ActiveNext.Raise();
+            //}
             
             //_IsActiveButton = false;
             ES3.Save<bool>("Pattern_1_Check", true);
@@ -220,7 +220,7 @@ public class Pattern_1 : GeneralTest
             //DeactiveNext.Raise();
             ES3.Save<bool>("Pattern_1_Check", false);
            
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
        
     }

@@ -68,14 +68,14 @@ public class Pattern_11 : GeneralTest
 
         if (n == str.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishButton.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishButton.Raise();
+            //}
+            //else
+            //{
                 
-            }
+            //}
             ES3.Save<bool>("Pattern_11_Check", true);
         }
         else
@@ -83,7 +83,7 @@ public class Pattern_11 : GeneralTest
             
             ES3.Save<bool>("Pattern_11_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
     }
 

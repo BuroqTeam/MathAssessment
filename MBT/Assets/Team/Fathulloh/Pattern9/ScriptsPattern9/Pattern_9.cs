@@ -187,10 +187,10 @@ public class Pattern_9 : GeneralTest
 
         if (correctCount == Pattern_9Obj.options.Count)
         {
-            if (TestManager.Instance.CheckIsLast())            
-                FinishEvent.Raise();            
-            else            
-                //ActiveNext.Raise();
+            //if (TestManager.Instance.CheckIsLast())            
+            //    FinishEvent.Raise();            
+            //else            
+            //    //ActiveNext.Raise();
             
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_9_Check", true);
@@ -201,7 +201,7 @@ public class Pattern_9 : GeneralTest
             //Debug.Log("DeactiveNext.Raise()");
             ES3.Save<bool>("Pattern_9_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
 

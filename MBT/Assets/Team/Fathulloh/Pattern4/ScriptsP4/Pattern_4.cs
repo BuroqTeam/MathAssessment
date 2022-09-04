@@ -265,14 +265,14 @@ public class Pattern_4 : GeneralTest
 
         if (correctCount == Pattern_4Obj.options.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
-                //ActiveNext.Raise();
-            }
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
+            //    //ActiveNext.Raise();
+            //}
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_4_Check", true);
         }
@@ -282,7 +282,7 @@ public class Pattern_4 : GeneralTest
             //Debug.Log("DeactiveNext.Raise()");
             ES3.Save<bool>("Pattern_4_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
 
     }
