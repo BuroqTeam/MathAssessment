@@ -33,10 +33,11 @@ public class Pattern_10 : GeneralTest
         float result = (float)Screen.width / (float)Screen.height;
         if (result >= 2)
         {
-            Debug.Log("Long Phone");
+            transform.GetChild(3).GetComponent<RectTransform>().anchoredPosition = new Vector3(-165, 246);
         }
         else if (result > 1.5)
         {
+            transform.GetChild(3).GetComponent<RectTransform>().anchoredPosition = new Vector3(-165, 288);
             transform.GetChild(0).GetComponent<RectTransform>().offsetMin = new Vector2(25, 242-(485/2));
             transform.GetChild(0).GetComponent<RectTransform>().offsetMax = new Vector2(-1427, transform.GetChild(0).GetComponent<RectTransform>().offsetMin.y + 485f);
             transform.GetChild(1).GetComponent<RectTransform>().offsetMin = new Vector2(693, 242 - (485 / 2));
@@ -44,6 +45,7 @@ public class Pattern_10 : GeneralTest
         }
         else if (result < 1.5)
         {
+            transform.GetChild(3).GetComponent<RectTransform>().anchoredPosition = new Vector3(-165, 370);
             transform.GetChild(0).GetComponent<RectTransform>().offsetMin = new Vector2(30, 242 - (485 / 2));
             transform.GetChild(0).GetComponent<RectTransform>().offsetMax = new Vector2(-1153, transform.GetChild(0).GetComponent<RectTransform>().offsetMin.y + 485f);
             transform.GetChild(0).GetComponent<RectTransform>().DOScale(0.8f, 0);
@@ -87,9 +89,8 @@ public class Pattern_10 : GeneralTest
 
     public void CreatePrefabs()
     {
-        //transform.GetChild(3).GetChild(0).GetComponent<P10_ReturnControl>().Pattern10 = this;
-        //transform.GetChild(3).GetChild(1).GetComponent<P10_DeleteControl>().Pattern10 = this;
-
+        transform.GetChild(3).GetChild(0).GetComponent<P10_ReturnControl>().Pattern10 = this;
+        transform.GetChild(3).GetChild(1).GetComponent<P10_DeleteControl>().Pattern10 = this;
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
@@ -123,10 +124,6 @@ public class Pattern_10 : GeneralTest
             if (i == 0)
             {
                 obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text = Pattern_10Obj.statements[1][i];
-                GameObject deleteButton = Instantiate(DeleteButton, obj1.transform.GetChild(1));
-                deleteButton.GetComponent<P10_DeleteControl>().Pattern10 = this;
-                GameObject returnButton = Instantiate(ReturnButton, obj1.transform.GetChild(1));
-                returnButton.GetComponent<P10_ReturnControl>().Pattern10 = this;
                 obj1.transform.GetChild(0).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
                 obj1.transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().color = new Color32(0, 72, 124, 255);
             }
