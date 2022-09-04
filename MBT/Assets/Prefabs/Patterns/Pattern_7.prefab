@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsStatus: 0
+  IsEdited: 0
   PatternID: 7
   IsAvailable: 1
   Event: {fileID: 11400000, guid: be19bccffcde863468454550708cae65, type: 2}
@@ -237,37 +237,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
-  _jsonText: {fileID: 0}
-  FinishButton: {fileID: 0}
-  ActiveNext: {fileID: 0}
-  DeactiveNext: {fileID: 0}
-  width: 5.5
-  height: 5.5
-  PenTool: {fileID: 8480374623243577127}
-  Buttons:
-  - {fileID: 8480374622921291010}
-  - {fileID: 8480374622796216445}
-  - {fileID: 8480374621945622630}
-  DotsList: []
   Line: {fileID: 4115138001954530373, guid: 4131c943c557e7147995389b855abfe8, type: 3}
   Dot: {fileID: 2598368186222215131, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
   DotPrefabs: {fileID: 5149375334438247198, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
   CellParent: {fileID: 1030882763487033111, guid: 16e5f9ec286cc2142ac11553ad82fb19, type: 3}
   Cell: {fileID: 70179340380105239, guid: 7559c2acee0144f4389e9b3e5de2f00d, type: 3}
   Koordinata: {fileID: 7639303591341396122, guid: c7f2f59fe22b72f43968737697f116c3, type: 3}
-  percentage: 0
-  CellGroup: []
-  CellObj: []
-  CanvasOut: []
-  _istrue: 1
-  Point: {fileID: 5149375334438247186, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
-  cellPattern7: {fileID: 2537801333308582981, guid: 7559c2acee0144f4389e9b3e5de2f00d, type: 3}
   DotParent: {fileID: 2598368186222215131, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
   LineParent: {fileID: 4115138001954530373, guid: 4131c943c557e7147995389b855abfe8, type: 3}
-  BobID: 0
-  QuestionID: 0
-  Question: {fileID: 0}
+  PenTool: {fileID: 8480374623243577127}
+  PositionY: {fileID: 509012852131046448, guid: f5cb31884b29006469fa38cc3937d492, type: 3}
+  PositionX: {fileID: 7027923410662090923, guid: 5c5b12efc284ece458ef6f5d65fbf139, type: 3}
+  FinishButton: {fileID: 0}
+  CellObj: []
+  CanvasOut: []
+  DotsList: []
+  CellGroup: []
+  Buttons:
+  - {fileID: 8480374622921291010}
+  - {fileID: 8480374622796216445}
+  - {fileID: 8480374621945622630}
+  width: 5.5
+  height: 5.5
+  _istrue: 1
   _click: 0
+  percentage: 0
 --- !u!1 &8480374622705754555
 GameObject:
   m_ObjectHideFlags: 0
