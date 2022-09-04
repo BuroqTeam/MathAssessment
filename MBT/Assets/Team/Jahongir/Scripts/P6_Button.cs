@@ -12,40 +12,34 @@ public class P6_Button : MonoBehaviour
         if (Answer.text.Length <17)
         {
             Answer.text = Answer.text.Insert(Answer.text.Length, transform.GetChild(0).GetComponent<TEXDraw>().text);
+            Pattern6.Check();
+            Pattern6.AnswerDone();
         }
-        if (Answer.text != null)
-        {
-            ES3.Save<bool>("Pattern_6_Check", true);
-        }
-        else
-        {
-            ES3.Save<bool>("Pattern_6_Check", false);
-            
-            
-        }
+        //if (Answer.text != null)
+        //{
+        //    ES3.Save<bool>("Pattern_6_Check", true);
+        //}
+        //else
+        //{
+        //    ES3.Save<bool>("Pattern_6_Check", false);
+        //}
     }
     public void DeleteAnswer()
     {
-        if (Answer.text.Length>0)
+        if (Answer.text.Length>1)
         {
             Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
+            Pattern6.Check();
         }
-        if (Answer.text.Length == 0)
+        else if(Answer.text.Length == 1)
         {
-            ES3.Save<bool>("Pattern_6_Check", false);
-            
+            Answer.text = Answer.text.Remove(Answer.text.Length - 1, 1);
+            Pattern6.Check();
+            Pattern6.AnswerDone();
         }
         else
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    Pattern6.FinishEvent.Raise();
-            //}
-            //else
-            //{
-
-            //}
-            ES3.Save<bool>("Pattern_6_Check", true);
+            Pattern6.AnswerDone();
         }
     }
 }

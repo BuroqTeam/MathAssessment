@@ -8,6 +8,9 @@ public class P2_ButtonControl : MonoBehaviour
     public bool CorrectAnswer;
     public bool Select;
     public Pattern_2 Pattern2;
+    public int CorrectAnswerNumber = 0;
+    public int SelectAnswerNumber = 0;
+    public int ResultNumber = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,6 @@ public class P2_ButtonControl : MonoBehaviour
     }
     public void OnClick()
     {
-
         if (Select)
         {
             transform.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -32,6 +34,6 @@ public class P2_ButtonControl : MonoBehaviour
             transform.GetChild(0).GetComponent<TEXDraw>().color = new Color32(255, 255, 255, 255);
             Select = true;
         }
-        Pattern2.CheckButton();
+        Pattern2.Check();
     }
 }

@@ -24,14 +24,14 @@ public class Pattern_2 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_2Obj.title);
-        if (ES3.Load<bool>("Pattern_2_Check"))
-        {
+        //if (ES3.Load<bool>("Pattern_2_Check"))
+        //{
             
-        }
-        else
-        {
+        //}
+        //else
+        //{
             
-        }
+        //}
     }
     public override void DisplayQuestion(string questionStr)
     {
@@ -100,6 +100,7 @@ public class Pattern_2 : GeneralTest
    
     public void CheckButton()
     {
+        Debug.Log("CheckButton");
         int a = 0;
         for (int i = 0; i < Buttons.Count; i++)
         {
@@ -110,27 +111,16 @@ public class Pattern_2 : GeneralTest
         }
         if (a>0)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-                   
-            //}
-            ES3.Save<bool>("Pattern_2_Check", true);
+            GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
-            
-            ES3.Save<bool>("Pattern_2_Check", false);
-            
-            
+            GetComponent<Pattern>().IsEdited = false;
         }
     }
     public void Check()
     {
-        //Result();
+        CheckButton();
         for (int i = 0; i < Buttons.Count; i++)
         {
             if (Buttons[i].GetComponent<P2_ButtonControl>().CorrectAnswer)
@@ -166,7 +156,7 @@ public class Pattern_2 : GeneralTest
             SelectAnswerNumber = 0;
         }
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_2_Check", true);
+        //ES3.Save<bool>("Pattern_2_Check", true);
     }
 
     void ActivateNext()
