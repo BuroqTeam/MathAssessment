@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class Pattern_5 : GeneralTest
 {    
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
+   
     public GameEvent FinishEvent;
 
     //public TextAsset CurrentJsonText;
@@ -32,10 +31,10 @@ public class Pattern_5 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_5_Check"))
         {
-            ActiveNext.Raise();
+            //ActiveNext.Raise();
         }
         else
-            DeactiveNext.Raise();
+            //DeactiveNext.Raise();
 
         if (_isTrue)
         {
@@ -184,7 +183,7 @@ public class Pattern_5 : GeneralTest
             }
             else
             {
-                ActiveNext.Raise();
+                //ActiveNext.Raise();
             }
             
             if (TotalCorrectAns == numbers)
@@ -200,7 +199,7 @@ public class Pattern_5 : GeneralTest
         else
         {
             CurrentAnswerStatus = false;
-            DeactiveNext.Raise();
+            //DeactiveNext.Raise();
 
             ES3.Save<bool>("Pattern_5_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
