@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Pattern : MonoBehaviour
 {
-    public bool IsStatus;
+    public bool IsEdited;
     public string PatternID;
     public bool IsAvailable;    
     public GameEvent Event;

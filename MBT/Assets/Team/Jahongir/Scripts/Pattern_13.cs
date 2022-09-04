@@ -86,21 +86,21 @@ public class Pattern_13 : GeneralTest
     {
         if (SelectedPuzles.Count == QuestionPuzles.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
                 
-            }
+            //}
             ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
         {
             ES3.Save<bool>("Pattern_13_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
     }
     public void Check()

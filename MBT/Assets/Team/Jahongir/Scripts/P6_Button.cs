@@ -21,7 +21,7 @@ public class P6_Button : MonoBehaviour
         {
             ES3.Save<bool>("Pattern_6_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
     public void DeleteAnswer()
@@ -37,14 +37,14 @@ public class P6_Button : MonoBehaviour
         }
         else
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                Pattern6.FinishEvent.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    Pattern6.FinishEvent.Raise();
+            //}
+            //else
+            //{
 
-            }
+            //}
             ES3.Save<bool>("Pattern_6_Check", true);
         }
     }

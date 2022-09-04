@@ -215,21 +215,21 @@ public class Pattern_16 : GeneralTest
         }
         if (b>0)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
                 
-            }
+            //}
             ES3.Save<bool>("Pattern_16_Check", true);
         }
         else
         {
             ES3.Save<bool>("Pattern_16_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
 
     }

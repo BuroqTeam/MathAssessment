@@ -183,7 +183,7 @@ public class Pattern_10 : GeneralTest
         }
         ES3.Save<bool>("Pattern_10_Check", false);
         
-        GetComponent<Pattern>().IsStatus = false;
+       
     }
 
 
@@ -196,7 +196,7 @@ public class Pattern_10 : GeneralTest
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             ES3.Save<bool>("Pattern_10_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+           
         }
         else
         {
@@ -220,21 +220,21 @@ public class Pattern_10 : GeneralTest
 
         if (a==Tile1.Count)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
 
-            }
+            //}
             ES3.Save<bool>("Pattern_10_Check", true);
         }
         else
         {
             ES3.Save<bool>("Pattern_10_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
     public void Check()

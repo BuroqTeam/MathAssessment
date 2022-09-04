@@ -152,29 +152,7 @@ public class TestManager : MonoBehaviour
     }
 
 
-    public bool CheckIsLast()
-    {        
-        int n = 0;
-        foreach (GameObject obj in ActivePatterns)
-        {
-            if (obj.GetComponent<Pattern>().IsStatus)
-            {
-                n++;
-            }           
-        }
-        if (n.Equals(ActivePatterns.Count - 1))
-        {
-            Debug.Log(n);
-            Debug.Log("Salam");
-            return true;
-        }
-        else
-        {
-            Debug.Log("Not Salam");
-            return false;
-        }
-    }
-
+    
 
 
 

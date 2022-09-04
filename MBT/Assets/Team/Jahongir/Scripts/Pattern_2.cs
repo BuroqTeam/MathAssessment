@@ -110,14 +110,14 @@ public class Pattern_2 : GeneralTest
         }
         if (a>0)
         {
-            if (TestManager.Instance.CheckIsLast())
-            {
-                FinishEvent.Raise();
-            }
-            else
-            {
+            //if (TestManager.Instance.CheckIsLast())
+            //{
+            //    FinishEvent.Raise();
+            //}
+            //else
+            //{
                    
-            }
+            //}
             ES3.Save<bool>("Pattern_2_Check", true);
         }
         else
@@ -125,7 +125,7 @@ public class Pattern_2 : GeneralTest
             
             ES3.Save<bool>("Pattern_2_Check", false);
             
-            GetComponent<Pattern>().IsStatus = false;
+            
         }
     }
     public void Check()
