@@ -135,7 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d6d8cb516639341af3ed65439466d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDone: 0
+  Index: 0
+  SpriteON: {fileID: 21300000, guid: 118fe615d1ec0fc4fa3629e7bf9f7d07, type: 3}
+  SpriteOFF: {fileID: 21300000, guid: 712c9db12a4a6be479c220d66f0cf8d3, type: 3}
 --- !u!1 &5942341914709549180
 GameObject:
   m_ObjectHideFlags: 0
