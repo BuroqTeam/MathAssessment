@@ -6,6 +6,7 @@ using UnityEngine;
 public class Pattern_6 : GeneralTest
 {
     public GameEvent FinishEvent;
+    public TEXDraw AnswerText;
     private  TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new();
@@ -40,16 +41,9 @@ public class Pattern_6 : GeneralTest
         Pattern_6Obj = jo.ToObject<Data_6>();
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_6Obj.problem[0];
     }
-    public void Result()
-    {
-        if (transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text == Pattern_6Obj.solution[0])
-        {
-            
-        }
-    }
+   
     public void Check()
     {
-        Result();
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (transform.GetChild(1).GetChild(0).GetComponent<TEXDraw>().text == Pattern_6Obj.solution[0])
@@ -63,7 +57,21 @@ public class Pattern_6 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_6_Check", true);
+        //ES3.Save<bool>("Pattern_6_Check", true);
+    }
+
+    public void AnswerDone()
+    {
+        if (AnswerText.text.Length != 0)
+        {
+            GetComponent<Pattern>().IsEdited = true;
+            Debug.Log("True");
+        }
+        else
+        {
+            GetComponent<Pattern>().IsEdited = false;
+            Debug.Log("False");
+        }
     }
 }
 
