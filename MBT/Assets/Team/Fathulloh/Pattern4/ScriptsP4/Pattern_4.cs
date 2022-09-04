@@ -7,8 +7,7 @@ using UnityEngine.UI;
 
 public class Pattern_4 : GeneralTest
 {    
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
+    
     public GameEvent FinishEvent;
     //public TextAsset CurrentJsonText;   //-
     private TextAsset _currentJsonText;
@@ -35,10 +34,10 @@ public class Pattern_4 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_4_Check"))
         {
-            ActiveNext.Raise();
+            //ActiveNext.Raise();
         }
         else
-            DeactiveNext.Raise();
+            //DeactiveNext.Raise();
 
         if (_isTrue)
         {
@@ -272,14 +271,14 @@ public class Pattern_4 : GeneralTest
             }
             else
             {
-                ActiveNext.Raise();
+                //ActiveNext.Raise();
             }
             //Debug.Log("ActiveNext.Raise()");
             ES3.Save<bool>("Pattern_4_Check", true);
         }
         else
         {
-            DeactiveNext.Raise();
+            //DeactiveNext.Raise();
             //Debug.Log("DeactiveNext.Raise()");
             ES3.Save<bool>("Pattern_4_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
