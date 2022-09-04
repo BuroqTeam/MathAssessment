@@ -23,7 +23,9 @@ public class Pattern_7 : GeneralTest
     public List<GameObject> DotsList = new();
     public List<CellPattern7> CellGroup = new();
     public List<Button> Buttons = new();
-    public static Pattern_7 Instance;    
+    public static Pattern_7 Instance;
+    public float width;
+    public float height;
     bool Yoqish;
     public bool _istrue = true;
     bool _isTrueOneTime = true;
