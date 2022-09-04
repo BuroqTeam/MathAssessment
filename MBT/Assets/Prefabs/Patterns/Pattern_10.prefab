@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsStatus: 0
   PatternID: 10
-  IsAvailable: 1
+  IsAvailable: 0
   Event: {fileID: 11400000, guid: a91b8277a94abe145a9936e233126704, type: 2}
   QuestionNumber: 0
   Json: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
@@ -200,8 +200,6 @@ MonoBehaviour:
   ActNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
   DeactNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  InvitePrefEvent: {fileID: 11400000, guid: be1d89bf592ac8a45afd76f09adbb246, type: 2}
-  NotLocatedEvent: {fileID: 11400000, guid: 21c4e05f06594ce4ba2aaa3ac28689ce, type: 2}
   SpriteCollectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   OptionPrefab: {fileID: 4621097452131093444, guid: 8c30a3ac27d9efa419e0f3c6df53a731, type: 3}
   Tile1Prefab: {fileID: 4712184987817004093, guid: 952547496acd906498cf7bcefa70e940, type: 3}
