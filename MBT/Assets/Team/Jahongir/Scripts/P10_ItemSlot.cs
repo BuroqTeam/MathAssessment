@@ -19,12 +19,7 @@ public class P10_ItemSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale;
                 for (int i = 1; i < transform.childCount; i++)
                 {
-                    //eventData.pointerDrag.GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale + new Vector3(0.1f, 0.1f, 0.1f);
                     transform.GetChild(i).GetComponent<RectTransform>().localScale -= new Vector3(0.1f, 0.1f, 0.1f);
-                    //if (i == transform.childCount-1)
-                    //{
-                    //    transform.GetChild(i).GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale;
-                    //}
                 }
                 GetComponent<HorizontalLayoutGroup>().spacing -= 15;
             }
@@ -32,7 +27,6 @@ public class P10_ItemSlot : MonoBehaviour, IDropHandler
             {
                 eventData.pointerDrag.GetComponent<RectTransform>().localScale = new Vector3(0.7f, 0.7f, 0.7f);
             }
-            Pattern10.InvitePrefEvent.Raise();
             DeactivationPrefabs();
             Pattern10.Result();
         }

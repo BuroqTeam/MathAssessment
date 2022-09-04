@@ -11,8 +11,6 @@ public class Pattern_10 : GeneralTest
     public GameEvent ActNext;
     public GameEvent DeactNext;
     public GameEvent FinishEvent;
-    public GameEvent InvitePrefEvent;
-    public GameEvent NotLocatedEvent;
     public SpriteCollectionSO SpriteCollectionSO;
     private TextAsset _currentJsonText;
     public GameObject OptionPrefab;
@@ -91,6 +89,9 @@ public class Pattern_10 : GeneralTest
 
     public void CreatePrefabs()
     {
+        transform.GetChild(3).GetChild(0).GetComponent<P10_ReturnControl>().Pattern10 = this;
+        transform.GetChild(3).GetChild(1).GetComponent<P10_DeleteControl>().Pattern10 = this;
+
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
         {
