@@ -7,36 +7,29 @@ using UnityEngine.UI;
 
 public class Pattern_7 : GeneralTest
 {
-    public TextAsset _jsonText;
-    public GameEvent FinishButton;
-    public static Pattern_7 Instance;    
-    public float width;
-    public float height;
-    public GameObject PenTool;
-    public List<Button> Buttons = new();
-    public List<GameObject> DotsList = new();
-    public Data_7 Data7 = new();
+    private TextAsset _jsonText;
     public GameObject Line;
     public GameObject Dot;
     public GameObject DotPrefabs;
     public GameObject CellParent;
     public GameObject Cell;
     public GameObject Koordinata;
-    GameObject CellInstanse;
-    public float percentage;
-    public List<CellPattern7> CellGroup = new();
+    public GameObject DotParent;
+    public GameObject LineParent;
+    public GameObject PenTool;
+    public GameEvent FinishButton;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
+    public List<GameObject> DotsList = new();
+    public List<CellPattern7> CellGroup = new();
+    public List<Button> Buttons = new();
+    public static Pattern_7 Instance;    
     bool Yoqish;
     public bool _istrue = true;
     bool _isTrueOneTime = true;
-    public PointsPattern7 Point;
-    public CellPattern7 cellPattern7;
-    public GameObject DotParent;
-    public GameObject LineParent;
-    public int BobID, QuestionID;
-    public GameObject Question;
     public bool _click;
+    public Data_7 Data7 = new();
+    public float percentage;
     private void Awake()
     {
         CellParent.GetComponent<CellParent>().Pattern_7 = this;
