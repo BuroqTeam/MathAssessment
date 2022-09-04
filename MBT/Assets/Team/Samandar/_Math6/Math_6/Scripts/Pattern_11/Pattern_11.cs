@@ -8,8 +8,6 @@ using UnityEngine;
 public class Pattern_11 : GeneralTest
 {
     public GameEvent FinishButton;
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
     public GameObject PushableShadow;
     public GameObject PushableRectangle;
     public GameObject PanelLeft;
@@ -30,11 +28,11 @@ public class Pattern_11 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_11_Check"))
         {
-            ActiveNext.Raise();
+            
         }
         else
         {
-            DeactiveNext.Raise();
+            
         }
         if (_istrue)
         {
@@ -76,13 +74,13 @@ public class Pattern_11 : GeneralTest
             }
             else
             {
-                ActiveNext.Raise();
+                
             }
             ES3.Save<bool>("Pattern_11_Check", true);
         }
         else
         {
-            DeactiveNext.Raise();
+            
             ES3.Save<bool>("Pattern_11_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;

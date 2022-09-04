@@ -9,8 +9,6 @@ public class Pattern_7 : GeneralTest
 {
     public TextAsset _jsonText;
     public GameEvent FinishButton;
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
     public static Pattern_7 Instance;    
     public float width;
     public float height;
@@ -58,11 +56,11 @@ public class Pattern_7 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_7_Check"))
         {
-            ActiveNext.Raise();
+            
         }
         else
         {
-            //DeactiveNext.Raise();
+            
         }
         if (_istrue)
         {
@@ -105,7 +103,7 @@ public class Pattern_7 : GeneralTest
             }
             else
             {
-                ActiveNext.Raise();
+                
             }
             ES3.Save<bool>("Pattern_7_Check", true);
         }
@@ -120,15 +118,12 @@ public class Pattern_7 : GeneralTest
                 switch (n)
                 {
                     case 0:
-                        Debug.Log("1");
                         TurnOnTurnOf();
                         break;
-                    case 1:
-                        Debug.Log("2");
+                    case 1:                        
                         LineParentTurnOn();
                         break;
-                    case 2:
-                        Debug.Log("3");
+                    case 2:                        
                         OnDestroy();
                         break;                  
                 }
@@ -183,29 +178,45 @@ public class Pattern_7 : GeneralTest
     {
         if (DotsList.Count == 4)
         {
-            if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x)
+            if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("1");
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
-            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x)
+            else if (DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("1");
+                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
+                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
+            {
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
-            else if (DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
+            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
             {
-                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
+                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
+            {
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
-            else if (DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
+            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("1");
+                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
+                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
+            }
+            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
+            {              
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
+                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);                             
+            }
+            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
+            {
+                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
+                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
             }
         }
         
