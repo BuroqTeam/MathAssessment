@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TestManager : MonoBehaviour
 {
-    public TEXDraw ActiveNumber;
+   
     public TEXDraw Number;
     public TEXDraw QuestionText;
     public GameObject PatternParent;       
