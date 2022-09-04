@@ -200,7 +200,7 @@ public class Pattern_9 : GeneralTest
             //DeactiveNext.Raise();
             //Debug.Log("DeactiveNext.Raise()");
             ES3.Save<bool>("Pattern_9_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }

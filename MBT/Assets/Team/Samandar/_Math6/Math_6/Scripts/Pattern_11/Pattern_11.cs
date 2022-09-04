@@ -82,7 +82,7 @@ public class Pattern_11 : GeneralTest
         {
             
             ES3.Save<bool>("Pattern_11_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }

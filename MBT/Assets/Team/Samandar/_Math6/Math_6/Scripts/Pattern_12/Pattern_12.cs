@@ -59,7 +59,7 @@ public class Pattern_12 : GeneralTest
         else if (n == 0)
         {
             ES3.Save<bool>("Pattern_12_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+            
             GetComponent<Pattern>().IsStatus = false;
         }
     }

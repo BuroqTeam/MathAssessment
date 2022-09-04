@@ -219,7 +219,7 @@ public class Pattern_1 : GeneralTest
         {
             //DeactiveNext.Raise();
             ES3.Save<bool>("Pattern_1_Check", false);
-            GameManager.Instance.CurrentCircleObj.IsDone = false;
+           
             GetComponent<Pattern>().IsStatus = false;
         }
        
