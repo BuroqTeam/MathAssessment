@@ -205,6 +205,7 @@ public class Pattern_16 : GeneralTest
 
     public void CheckButton()
     {
+        Debug.Log("CheckButton");
         int b = 0;
         for (int i = 0; i < _resultPrefab.transform.childCount-1; i++)
         {
@@ -224,27 +225,30 @@ public class Pattern_16 : GeneralTest
                 
             //}
             ES3.Save<bool>("Pattern_16_Check", true);
+            GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
             ES3.Save<bool>("Pattern_16_Check", false);
-            
-            
+            GetComponent<Pattern>().IsEdited = false;
         }
 
     }
 
     public void Check()
     {
+        Debug.Log("Check");
         Result();
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (_resultValue == _prefabsIndex[_prefabsIndex.Count - 2])
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("Correct");
         }
         else
         {
+            Debug.Log("Wrong");
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("ResultList", currentList);

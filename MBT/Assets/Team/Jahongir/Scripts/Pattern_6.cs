@@ -65,12 +65,10 @@ public class Pattern_6 : GeneralTest
         if (AnswerText.text.Length != 0)
         {
             GetComponent<Pattern>().IsEdited = true;
-            Debug.Log("True");
         }
         else
         {
             GetComponent<Pattern>().IsEdited = false;
-            Debug.Log("False");
         }
     }
 }

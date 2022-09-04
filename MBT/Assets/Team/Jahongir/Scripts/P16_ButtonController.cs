@@ -48,6 +48,7 @@ public class P16_ButtonController : MonoBehaviour, IPointerClickHandler
             transform.GetComponent<Image>().color = new Color32(0, 148, 255, 255);
             Select = true;
         }
-        Pattern16.CheckButton();
+        //Pattern16.CheckButton();
+        //Pattern16.Check();
     }
 }

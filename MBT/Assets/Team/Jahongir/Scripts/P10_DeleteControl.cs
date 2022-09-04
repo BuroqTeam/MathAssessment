@@ -9,5 +9,7 @@ public class P10_DeleteControl : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Pattern10.DeleteButtonControl();
+        Pattern10.Result();
+        Pattern10.Check();
     }
 }

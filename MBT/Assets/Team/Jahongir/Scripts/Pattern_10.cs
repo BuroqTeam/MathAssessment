@@ -181,28 +181,30 @@ public class Pattern_10 : GeneralTest
         {
             CollectedPrefabs.Clear();
         }
-        ES3.Save<bool>("Pattern_10_Check", false);
-        
-       
+        //ES3.Save<bool>("Pattern_10_Check", false);
+        //GetComponent<Pattern>().IsEdited = false;
+        //Result();
     }
 
 
     //Bu metod 1 martalik orqaga qaytarish qismini bajarib beradi
     public void ReturnBUttonControl()
     {
-        if (CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount == 2)
+        if (CollectedPrefabs.Count == 1)
         {
+            Debug.Log("Uchdi");
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
-            ES3.Save<bool>("Pattern_10_Check", false);
-            
-           
+            //ES3.Save<bool>("Pattern_10_Check", false);
+            GetComponent<Pattern>().IsEdited = false;
         }
         else
         {
+            Debug.Log("Yongan");
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
         }
+        //Result();
     }
 
 
@@ -218,7 +220,7 @@ public class Pattern_10 : GeneralTest
             }
         }
 
-        if (a==Tile1.Count)
+        if (a>0)
         {
             //if (TestManager.Instance.CheckIsLast())
             //{
@@ -228,13 +230,13 @@ public class Pattern_10 : GeneralTest
             //{
 
             //}
+            GetComponent<Pattern>().IsEdited = true;
             ES3.Save<bool>("Pattern_10_Check", true);
         }
         else
         {
-            ES3.Save<bool>("Pattern_10_Check", false);
-            
-            
+            //ES3.Save<bool>("Pattern_10_Check", false);
+            GetComponent<Pattern>().IsEdited = false;
         }
     }
     public void Check()
