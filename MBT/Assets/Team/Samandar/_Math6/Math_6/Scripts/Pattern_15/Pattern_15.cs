@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class Pattern_15 : GeneralTest
 {
     public GameEvent FinishButton;
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
     private TextAsset _jsonText;
     public GameObject Problem;
     public Data_15 DataObj;
@@ -25,11 +23,11 @@ public class Pattern_15 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_15_Check"))
         {
-            ActiveNext.Raise();
+            
         }
         else
         {
-            DeactiveNext.Raise();
+            
         }
         if (_istrue)
         {
@@ -72,7 +70,7 @@ public class Pattern_15 : GeneralTest
             }
             else
             {
-                ActiveNext.Raise();
+               
             }
             ES3.Save<bool>("Pattern_15_Check", true);
         }

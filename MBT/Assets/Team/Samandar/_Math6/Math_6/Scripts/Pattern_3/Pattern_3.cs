@@ -8,9 +8,7 @@ using UnityEngine.UI;
 
 public class Pattern_3 : GeneralTest
 {
-    public GameEvent FinishButton;
-    public GameEvent ActiveNext;
-    public GameEvent DeactiveNext;
+    public GameEvent FinishButton;    
     private TextAsset _jsonText;
     public string sampleQuestion;
     public List<TEXDraw> NumbersText;
@@ -51,16 +49,11 @@ public class Pattern_3 : GeneralTest
             {
                 FinishButton.Raise();
             }
-            else
-            {
-                ActiveNext.Raise();
-            }
             ES3.Save<bool>("Pattern_3_Check", true);           
             
         }
         else
-        {
-            DeactiveNext.Raise();
+        {            
             ES3.Save<bool>("Pattern_3_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;
@@ -75,11 +68,11 @@ public class Pattern_3 : GeneralTest
     {
         if (ES3.Load<bool>("Pattern_3_Check"))
         {
-            ActiveNext.Raise();
+            
         }
         else
         {
-            DeactiveNext.Raise();
+
         }
         if (_istrue)
         {
