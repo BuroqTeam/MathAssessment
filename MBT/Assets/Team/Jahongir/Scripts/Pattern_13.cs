@@ -84,7 +84,7 @@ public class Pattern_13 : GeneralTest
 
     public void CheckButton()
     {
-        if (SelectedPuzles.Count == QuestionPuzles.Count)
+        if (SelectedPuzles.Count > 0)
         {
             //if (TestManager.Instance.CheckIsLast())
             //{
@@ -95,12 +95,12 @@ public class Pattern_13 : GeneralTest
                 
             //}
             ES3.Save<bool>("Pattern_13_Check", true);
+            GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
             ES3.Save<bool>("Pattern_13_Check", false);
-            
-           
+            GetComponent<Pattern>().IsEdited = false;
         }
     }
     public void Check()
@@ -114,6 +114,8 @@ public class Pattern_13 : GeneralTest
         }
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
+        Debug.Log(_resultNumber);
+        Debug.Log(QuestionPuzles.Count);
         if (_resultNumber == QuestionPuzles.Count)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;

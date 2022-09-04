@@ -27,5 +27,6 @@ public class Uchburchak : MonoBehaviour, IPointerClickHandler
             Select = true;
         }
         Pattern16.CheckButton();
+        Pattern16.Check();
     }
 }

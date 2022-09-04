@@ -29,6 +29,7 @@ public class P10_ItemSlot : MonoBehaviour, IDropHandler
             }
             DeactivationPrefabs();
             Pattern10.Result();
+            Pattern10.Check();
         }
     }
     public void DeactivationPrefabs()

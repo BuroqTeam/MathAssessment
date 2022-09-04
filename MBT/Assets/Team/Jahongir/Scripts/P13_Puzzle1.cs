@@ -74,6 +74,8 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         }
         _selectedAnswerId = -1;
         Pattern13.CheckButton();
+        Pattern13.Check();
+
         transform.SetSiblingIndex(siblingIndexObj);
     }
 }
