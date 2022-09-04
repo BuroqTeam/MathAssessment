@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class Pattern_10 : GeneralTest 
 {
-    public GameEvent ActNext;
-    public GameEvent DeactNext;
     public GameEvent FinishEvent;
     public SpriteCollectionSO SpriteCollectionSO;
     private TextAsset _currentJsonText;
@@ -66,11 +64,11 @@ public class Pattern_10 : GeneralTest
         DisplayQuestion(Pattern_10Obj.title);
         if (ES3.Load<bool>("Pattern_10_Check"))
         {
-            ActNext.Raise();
+            
         }
         else
         {
-            DeactNext.Raise();
+           
         }
     }
 
@@ -89,8 +87,8 @@ public class Pattern_10 : GeneralTest
 
     public void CreatePrefabs()
     {
-        transform.GetChild(3).GetChild(0).GetComponent<P10_ReturnControl>().Pattern10 = this;
-        transform.GetChild(3).GetChild(1).GetComponent<P10_DeleteControl>().Pattern10 = this;
+        //transform.GetChild(3).GetChild(0).GetComponent<P10_ReturnControl>().Pattern10 = this;
+        //transform.GetChild(3).GetChild(1).GetComponent<P10_DeleteControl>().Pattern10 = this;
 
         //This is for options
         for (int i = 0; i < Pattern_10Obj.options.Count; i++)
@@ -186,7 +184,6 @@ public class Pattern_10 : GeneralTest
         {
             CollectedPrefabs.Clear();
         }
-        DeactNext.Raise();
         ES3.Save<bool>("Pattern_10_Check", false);
         GameManager.Instance.CurrentCircleObj.IsDone = false;
         GetComponent<Pattern>().IsStatus = false;
@@ -200,7 +197,6 @@ public class Pattern_10 : GeneralTest
         {
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
-            DeactNext.Raise();
             ES3.Save<bool>("Pattern_10_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;
@@ -233,13 +229,12 @@ public class Pattern_10 : GeneralTest
             }
             else
             {
-                ActNext.Raise();
+
             }
             ES3.Save<bool>("Pattern_10_Check", true);
         }
         else
         {
-            DeactNext.Raise();
             ES3.Save<bool>("Pattern_10_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;

@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Pattern_13 : GeneralTest
 {
-    public GameEvent ActNext;
-    public GameEvent DeactNext;
     public GameEvent FinishEvent;
     public GameObject PuzzleQuestion;
     public GameObject PuzzleAnswer;
@@ -33,11 +31,11 @@ public class Pattern_13 : GeneralTest
         DisplayQuestion(Pattern_13Obj.title);
         if (ES3.Load<bool>("Pattern_13_Check"))
         {
-            ActNext.Raise();
+
         }
         else
         {
-            DeactNext.Raise();
+            
         }
     }
 
@@ -94,13 +92,12 @@ public class Pattern_13 : GeneralTest
             }
             else
             {
-                ActNext.Raise();
+                
             }
             ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
         {
-            DeactNext.Raise();
             ES3.Save<bool>("Pattern_13_Check", false);
             GameManager.Instance.CurrentCircleObj.IsDone = false;
             GetComponent<Pattern>().IsStatus = false;
