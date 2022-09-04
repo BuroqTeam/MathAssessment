@@ -8,17 +8,17 @@ public class GameManager : MonoBehaviour
 
     public ProgressKeySO ProgressSave;
     public ResultSO ResultSO;
-    public GameObject CirclePrefab;
-    public GameObject CircleParent;
+    public GameObject NumberPrefab;
+    public GameObject NumberParent;
     public UnityEvent NewQuestionEvent;
     public UnityEvent FinishEvent;
 
-    [HideInInspector]
-    public List<Circle> CircleGroup = new();
+   
+    public List<QuestionNumber> CircleGroup = new();
     [HideInInspector]
     public int CurrentQuestionNumber, MaximumQuestionNumber;
-    [HideInInspector]
-    public Circle CurrentCircleObj;
+   
+    public QuestionNumber CurrentCircleObj;
     public static GameManager Instance;
     public int MaximumPatternNumber;
 
@@ -40,17 +40,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CreateCircles()
+    public void CreateNumbers()
     {
        
         MaximumQuestionNumber = TestManager.Instance.ActivePatterns.Count;
         for (int i = 0; i < TestManager.Instance.ActivePatterns.Count; i++)
         {
-            GameObject circle = Instantiate(CirclePrefab, CircleParent.transform.position, Quaternion.identity);
-            circle.transform.SetParent(CircleParent.transform);
-            circle.transform.localScale = Vector3.one;
-            circle.GetComponent<Circle>().InitialCondition(i);
-            CircleGroup.Add(circle.GetComponent<Circle>());
+            GameObject questionNumber = Instantiate(NumberPrefab, NumberParent.transform.position, Quaternion.identity);
+            questionNumber.transform.SetParent(NumberParent.transform);
+            questionNumber.transform.localScale = Vector3.one;
+            questionNumber.GetComponent<QuestionNumber>().InitialCondition(i);
+            CircleGroup.Add(questionNumber.GetComponent<QuestionNumber>());
         }
         UpdateTestView(0, false);
         
@@ -59,11 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateTestView(int circleIdentity, bool IsNext)
     {
-        
-        CircleGroup[CurrentQuestionNumber].MakeDone();
-        CurrentQuestionNumber = circleIdentity;        
-        CurrentCircleObj = CircleGroup[CurrentQuestionNumber];       
-        CircleGroup[CurrentQuestionNumber].MakeActive();
+               
         NewQuestionEvent.Invoke();
 
         if (IsNext)
