@@ -25,12 +25,12 @@ public class Pattern_9 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_9_Check"))
-        {
-            //ActiveNext.Raise();
-        }
-        else
-            //DeactiveNext.Raise();
+        //if (ES3.Load<bool>("Pattern_9_Check"))
+        //{
+        //    //ActiveNext.Raise();
+        //}
+        //else
+        //    //DeactiveNext.Raise();
 
         if (_isTrue)
         {
@@ -129,7 +129,7 @@ public class Pattern_9 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
 
-        ES3.Save<bool>("Pattern_9_Check", true);
+        //ES3.Save<bool>("Pattern_9_Check", true);
         //ActivateNext();
     }
 
@@ -147,8 +147,9 @@ public class Pattern_9 : GeneralTest
     public int correctCount;
     public void CheckAllAnswers()
     {
-        int n = Pattern_9Obj.options.Count;
+        PatternButtonBlue();
 
+        int n = Pattern_9Obj.options.Count;
         totalFullAns = 0;
         totalCorrectAns = 0;
 
@@ -185,26 +186,44 @@ public class Pattern_9 : GeneralTest
             }
         }
 
-        if (correctCount == Pattern_9Obj.options.Count)
-        {
-            //if (TestManager.Instance.CheckIsLast())            
-            //    FinishEvent.Raise();            
-            //else            
-            //    //ActiveNext.Raise();
-            
-            //Debug.Log("ActiveNext.Raise()");
-            ES3.Save<bool>("Pattern_9_Check", true);
-        }
-        else
-        {
-            //DeactiveNext.Raise();
-            //Debug.Log("DeactiveNext.Raise()");
-            ES3.Save<bool>("Pattern_9_Check", false);
-            
-            
-        }
+        //if (correctCount == Pattern_9Obj.options.Count)
+        //{
+        //    //if (TestManager.Instance.CheckIsLast())            
+        //    //    FinishEvent.Raise();            
+        //    //else            
+        //    //    //ActiveNext.Raise();           
+        //    //ES3.Save<bool>("Pattern_9_Check", true);
+        //}
+        //else
+        //{
+        //    //DeactiveNext.Raise();
+        //    //Debug.Log("DeactiveNext.Raise()");
+        //    ES3.Save<bool>("Pattern_9_Check", false);            
+        //}
     }
 
+
+    void PatternButtonBlue()
+    {
+        int fullDropDowns = 0;
+        for (int i = 0; i < ComparisonObjects.Count; i++)
+        {
+            int currentAnswerLength = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer.Length;
+            string currentAnswerStr = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().CurrentAnswer;
+            string initialStr = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP9>().InitialStr;
+
+            if ((currentAnswerLength == 1) && (currentAnswerStr != initialStr))            
+                fullDropDowns++;            
+        }
+
+        if (fullDropDowns > 0)
+        {
+            GetComponent<Pattern>().IsEdited = true;
+        }
+        else        
+            GetComponent<Pattern>().IsEdited = false;
+        
+    }
 
 }
 

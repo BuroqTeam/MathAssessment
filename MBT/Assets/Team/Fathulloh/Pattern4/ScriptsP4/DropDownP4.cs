@@ -20,6 +20,7 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
     public string CorrectAnswer;        // boshqa skriptdan buyerga to'g'ri javobni berib olamiz.
     public string CurrentAnswer;
 
+    public string InitialStr;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
 
     void PopulateList()
     {
+        InitialStr = I2.Loc.LocalizationManager.GetTranslation(AddressToTerm);
         StrList = new List<string>() { I2.Loc.LocalizationManager.GetTranslation(AddressToTerm), ">", "<", "=" };
         DropDownObj.AddOptions(StrList);        
     }

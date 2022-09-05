@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Pattern_1 : GeneralTest
 {
-   
+    
     public GameEvent FinishEvent;
     //public TextAsset CurrentJsonText;
     private TextAsset _currentJsonText;
@@ -27,14 +27,14 @@ public class Pattern_1 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_1_Check"))
-        {
-            //ActiveNext.Raise();
-        }
-        else
-        {
-            //DeactiveNext.Raise();
-        }
+        //if (ES3.Load<bool>("Pattern_1_Check"))
+        //{
+        //    //ActiveNext.Raise();
+        //}
+        //else
+        //{
+        //    //DeactiveNext.Raise();
+        //}
 
         if (_isTrue)
         {
@@ -53,10 +53,7 @@ public class Pattern_1 : GeneralTest
 
     //    //Mbt.SaveJsonPath("Pattern_1", 7, 7);
     //    //ES3.Save<string>("LanguageKey", "Uzb");
-    //    //ES3.Save<int>("ClassKey", 6);
-    //    ////JsonCollectionSO.DataBase.Clear();
-    //    ////CurrentJsonText = Mbt.GetDesiredData(JsonCollectionSONew);
-
+    //    //ES3.Save<int>("ClassKey", 6);    
     //    //ReadFromJson();
     //}
 
@@ -134,7 +131,9 @@ public class Pattern_1 : GeneralTest
 
     
     public void Check()
-    {        
+    {
+        ActeveteButton();
+
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
 
@@ -151,7 +150,7 @@ public class Pattern_1 : GeneralTest
         ES3.Save("ResultList", currentList);
         //ES3.Save("myList", currentList);
 
-        ES3.Save<bool>("Pattern_1_Check", true);
+        //ES3.Save<bool>("Pattern_1_Check", true);
         //ActivateNext();
     }
 
@@ -176,7 +175,41 @@ public class Pattern_1 : GeneralTest
     }
 
 
-    /// <summary>
+
+    //bool _IsActiveButton = true;   
+
+    public void ActeveteButton()
+    {
+        GetComponent<Pattern>().IsEdited = true;
+        //if (_IsActiveButton)
+        //{
+        //    //if (TestManager.Instance.CheckIsLast())            
+        //    //    FinishEvent.Raise();            
+        //    //else            
+        //    //    //ActiveNext.Raise();                      
+        //    //_IsActiveButton = false;
+        //    ES3.Save<bool>("Pattern_1_Check", true);// 5-Sen
+        //}
+        //else
+        //{
+        //    //DeactiveNext.Raise();
+        //    ES3.Save<bool>("Pattern_1_Check", false);           
+        //}       
+    }
+
+
+}
+
+[SerializeField]
+public class Data_1
+{
+    public string title;
+    public List<string> options;
+}
+
+
+/*
+/// <summary>
     /// Xato javob belgilangan bo'lsa qizilga bo'yab beruvchi method. 
     /// Ushbu methodni Tugatish tugmasi bosilgandan keyin chaqirishimiz zarur.
     /// </summary>
@@ -193,51 +226,9 @@ public class Pattern_1 : GeneralTest
         //else
             //Debug.Log("Answer is Correct. The best Answer :) ");
     }
-
-
-
-    bool _IsActiveButton = true;
-    
-
-    public void ActeveteButton()
-    {
-        if (_IsActiveButton)
-        {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-            //    //ActiveNext.Raise();
-            //}
-            
-            //_IsActiveButton = false;
-            ES3.Save<bool>("Pattern_1_Check", true);
-        }
-        else
-        {
-            //DeactiveNext.Raise();
-            ES3.Save<bool>("Pattern_1_Check", false);
-           
-           
-        }
-       
-    }
-
-
-}
-
-[SerializeField]
-public class Data_1
-{
-    public string title;
-    public List<string> options;
-}
-
+*/
 
 /*
-
 public TEXConfiguration TexDraw;
 //FontChangeScript();    //  F++
 public void FontChangeScript()      // bu metod TexDrawdagi tilni o'zgartirish uchun yozilgan  F++
@@ -254,8 +245,6 @@ public void FontChangeScript()      // bu metod TexDrawdagi tilni o'zgartirish u
             Debug.Log("Boshqa til. ");
         }
     }
-
-
 */
 
 
