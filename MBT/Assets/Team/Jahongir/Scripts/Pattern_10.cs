@@ -29,11 +29,11 @@ public class Pattern_10 : GeneralTest
 
     private void Awake()
     {
-        _canvas = GameObject.FindGameObjectWithTag("Canvas").gameObject;
+        _canvas = GameObject.FindGameObjectWithTag("Canvas").gameObject; 
         float result = (float)Screen.width / (float)Screen.height;
         if (result >= 2)
         {
-            transform.GetChild(3).GetComponent<RectTransform>().anchoredPosition = new Vector3(-165, 246);
+            transform.GetChild(3).GetComponent<RectTransform>().anchoredPosition = new Vector3(-287, 246);
         }
         else if (result > 1.5)
         {
