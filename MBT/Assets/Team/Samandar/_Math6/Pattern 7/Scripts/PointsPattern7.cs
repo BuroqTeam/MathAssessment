@@ -6,16 +6,15 @@ using UnityEngine.EventSystems;
 public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public Pattern_7 Pattern_7;
-  
     private GameObject Pos_1;
     private GameObject Pos_2;
-    public List<string> NumberY;
-    public List<string> NumberX;
+    public string NumberY;
+    public string NumberX;
+    public string Point;
     public Vector3 LastPosition;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-      
         Pos_1 = Pattern_7.CellObj[0];
         Pos_2 = Pattern_7.CellObj[99];
     }
@@ -31,139 +30,137 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {       
         PositionCheck();
         BackToLastPosition();
-        Check();
+        GetData();
+        Numbers();
+        Pattern_7.CheckDrop();
     }
-
-    public void Check()
+    public void Numbers()
     {
-        NumberX.Clear();
-        NumberY.Clear();
+        Pattern_7.NumberList.Clear();
+        if (Pattern_7.Data7.options.Count == 3)
+        {
+            for (int i = 0; i < Pattern_7.DotsList.Count; i++)
+            {
+                string str = Pattern_7.DotsList[i].transform.GetComponent<PointsPattern7>().Point;
+                Pattern_7.NumberList.Add(str);
+            }
+            
+        }
+        else if (Pattern_7.Data7.options.Count == 4)
+        {
+            for (int i = 0; i < Pattern_7.DotsList.Count; i++)
+            {
+                string str = Pattern_7.DotsList[i].transform.GetComponent<PointsPattern7>().Point;
+                Pattern_7.NumberList.Add(str);
+            }
+        }
+    }
+    public void GetData()
+    {
+        NumberX = null;
+        NumberY = null;
+        Point = null;
         for (int i = 0; i < Pattern_7.PositionOut[0].transform.childCount; i++)
         {
-            if (Pattern_7.PositionOut[0].transform.GetChild(i).position.x == gameObject.transform.position.x)
+            if (Mathf.Approximately(Pattern_7.PositionOut[0].transform.GetChild(i).position.x , gameObject.transform.position.x))
             {
                 if (i == 0)
                 {
-                    Debug.Log("x-5");
-                    NumberX.Add("-5");
+                    NumberX = ("-5");
                 }
                 if (i == 1)
                 {
-                    Debug.Log("x-4");
-                    NumberX.Add("-4");
+                    NumberX = ("-4");
                 }
                 if (i == 2)
                 {
-                    Debug.Log("x-3");
-                    NumberX.Add("-3");
+                    NumberX = ("-3");
                 }
                 if (i == 3)
                 {
-                    Debug.Log("x-2");
-                    NumberX.Add("-2");
+                    NumberX = ("-2");
                 }
                 if (i == 4)
                 {
-                    Debug.Log("x-1");
-                    NumberX.Add("-1");
+                    NumberX = ("-1");
                 }
                 if (i == 5)
                 {
-                    Debug.Log("x");
-                    NumberX.Add("0");
+                    NumberX = ("0");
                 }
                 if (i == 6)
                 {
-                    Debug.Log("x+1");
-                    NumberX.Add("1");
+                    NumberX = ("1");
                 }
                 if (i == 7)
                 {
-                    Debug.Log("x+2");
-                    NumberX.Add("2");
+                    NumberX = ("2");
                 }
                 if (i == 8)
                 {
-                    Debug.Log("x+3");
-                    NumberX.Add("3");
+                    NumberX = ("3");
                 }
                 if (i == 9)
                 {
-                    Debug.Log("x+4");
-                    NumberX.Add("4");
+                    NumberX = ("4");
                 }
                 if (i == 10)
                 {
-                    Debug.Log("x+5");
-                    NumberX.Add("5");
-                }              
-            }
+                    NumberX = ("5");
+                }               
+            }            
         }
         for (int i = 0; i < Pattern_7.PositionOut[1].transform.childCount; i++)
         {
-            if (Pattern_7.PositionOut[1].transform.GetChild(i).position.y == gameObject.transform.position.y)
+            if (Mathf.Approximately(Pattern_7.PositionOut[1].transform.GetChild(i).position.y , gameObject.transform.position.y))
             {
                 if (i == 0)
                 {
-                    Debug.Log("x-5");
-                    NumberY.Add("-5");
+                    NumberY = ("-5");
                 }
                 if (i == 1)
                 {
-                    Debug.Log("x-4");
-                    NumberY.Add("-4");
+                    NumberY = ("-4");
                 }
                 if (i == 2)
                 {
-                    Debug.Log("x-3");
-                    NumberY.Add("-3");
+                    NumberY = ("-3");
                 }
                 if (i == 3)
                 {
-                    Debug.Log("x-2");
-                    NumberY.Add("-2");
+                    NumberY = ("-2");
                 }
                 if (i == 4)
                 {
-                    Debug.Log("x-1");
-                    NumberY.Add("-1");
+                    NumberY = ("-1");
                 }
                 if (i == 5)
                 {
-                    Debug.Log("x");
-                    NumberY.Add("0");
+                    NumberY = ("0");
                 }
                 if (i == 6)
                 {
-                    Debug.Log("x+1");
-                    NumberY.Add("1");
+                    NumberY = ("1");
                 }
                 if (i == 7)
                 {
-                    Debug.Log("x+2");
-                    NumberY.Add("2");
+                    NumberY = ("2");
                 }
                 if (i == 8)
                 {
-                    Debug.Log("x+3");
-                    NumberY.Add("3");
+                    NumberY = ("3");
                 }
                 if (i == 9)
                 {
-                    Debug.Log("x+4");
-                    NumberY.Add("4");
+                    NumberY = ("4");
                 }
                 if (i == 10)
                 {
-                    Debug.Log("x+5");
-                    NumberY.Add("5");
+                    NumberY = ("5");
                 }                
-            }
-            else
-            {
-                NumberY.Add("-111");
-            }
+            }           
         }
+        Point = NumberX + "," + NumberY;
     }
 
     void BackToLastPosition()
@@ -186,7 +183,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
             transform.DOMove(LastPosition, 0);
         }
     }
-
+    
     public void PositionCheck()
     {        
         foreach (CellPattern7 cell in Pattern_7.Instance.CellGroup)
