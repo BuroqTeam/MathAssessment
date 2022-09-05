@@ -32,12 +32,12 @@ public class Pattern_4 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_4_Check"))
-        {
-            //ActiveNext.Raise();
-        }
-        else
-            //DeactiveNext.Raise();
+        //if (ES3.Load<bool>("Pattern_4_Check"))
+        //{
+        //    //ActiveNext.Raise();
+        //}
+        //else
+        //    //DeactiveNext.Raise();
 
         if (_isTrue)
         {
@@ -198,9 +198,8 @@ public class Pattern_4 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
-        //ES3.Save("myList", currentList);
-
-        ES3.Save<bool>("Pattern_4_Check", true);
+        
+        //ES3.Save<bool>("Pattern_4_Check", true);
         //ActivateNext();
     }
 
@@ -217,6 +216,8 @@ public class Pattern_4 : GeneralTest
     int correctCount;
     public void CheckAllAnswers()
     {
+        PatternButtonBlue();
+
         totalFullAns = 0;
         totalCorrectAns = 0;
         int n = Pattern_4Obj.options.Count;
@@ -229,16 +230,7 @@ public class Pattern_4 : GeneralTest
                 totalFullAns++;
             if (correctAnswer == currentAnswer)            
                 totalCorrectAns++;
-
-            //if (currentAnswer != null)
-            //{
-            //    Debug.Log("i = " + i + " currentAnswer = " + currentAnswer.Length);
-            //}
-            //else if (currentAnswer == null)
-            //{
-            //    Debug.Log("i = " + i + " currentAnswer  = null");
-            //}
-
+            
         }
 
         if ((totalCorrectAns == n) && (totalFullAns == n))
@@ -265,27 +257,43 @@ public class Pattern_4 : GeneralTest
 
         if (correctCount == Pattern_4Obj.options.Count)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
+            //if (TestManager.Instance.CheckIsLast())            
+            //    FinishEvent.Raise();            
+            //else            
             //    //ActiveNext.Raise();
-            //}
-            //Debug.Log("ActiveNext.Raise()");
-            ES3.Save<bool>("Pattern_4_Check", true);
+            //ES3.Save<bool>("Pattern_4_Check", true);
         }
         else
         {
-            //DeactiveNext.Raise();
-            //Debug.Log("DeactiveNext.Raise()");
-            ES3.Save<bool>("Pattern_4_Check", false);
-            
-           
+            //DeactiveNext.Raise();            
+            //ES3.Save<bool>("Pattern_4_Check", false);          
         }
 
     }
+
+
+    void PatternButtonBlue()
+    {        
+        int fullDropDowns = 0;
+        for (int i = 0; i < ComparisonObjects.Count; i++)
+        {
+            int currentAnswerLength = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CurrentAnswer.Length;
+            string currentAnswerStr = ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().CurrentAnswer;
+            
+            if ((currentAnswerLength == 1) && (currentAnswerStr != ComparisonObjects[i].transform.GetChild(1).GetComponent<DropDownP4>().InitialStr))            
+                fullDropDowns++;            
+        }
+
+        if (fullDropDowns > 0)
+        {
+            GetComponent<Pattern>().IsEdited = true;            
+        }            
+        else
+        {
+            GetComponent<Pattern>().IsEdited = false;
+        }            
+    }
+
 
 }
 

@@ -29,12 +29,12 @@ public class Pattern_5 : GeneralTest
 
     private void OnEnable()       // +++
     {
-        if (ES3.Load<bool>("Pattern_5_Check"))
-        {
-            //ActiveNext.Raise();
-        }
-        else
-            //DeactiveNext.Raise();
+        //if (ES3.Load<bool>("Pattern_5_Check"))
+        //{
+        //    //ActiveNext.Raise();
+        //}
+        //else
+        //    //DeactiveNext.Raise();
 
         if (_isTrue)
         {
@@ -138,7 +138,7 @@ public class Pattern_5 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
 
-        ES3.Save<bool>("Pattern_5_Check", true);
+        //ES3.Save<bool>("Pattern_5_Check", true);
 
         //ActivateNext();
     }
@@ -158,6 +158,8 @@ public class Pattern_5 : GeneralTest
 
     public void CheckIsFinishing()
     {
+        PaintToBlue();     //Eng kamida bitta son joylashtirilgan bo'lsa tugmani bo'yaydi.
+
         int numbers = Numbers.Count;
         TotalCorrectAns = 0;
         for (int i = 0; i < numbers; i++)
@@ -174,18 +176,13 @@ public class Pattern_5 : GeneralTest
             if (!EmptyPositions[i].GetComponent<NumBoxP_5>()._IsEmpty)            
                 FullPositions++;            
         }
-        //Debug.Log(fullPositions);
+        
         if (FullPositions == EmptyPositions.Count)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-            //    //ActiveNext.Raise();
-            //}
-            
+            //if (TestManager.Instance.CheckIsLast())            
+            //    FinishEvent.Raise();            
+            //else            
+            //    //ActiveNext.Raise();                   
             if (TotalCorrectAns == numbers)
             {
                 CurrentAnswerStatus = true;
@@ -194,19 +191,42 @@ public class Pattern_5 : GeneralTest
             //else
                 //Debug.Log(TotalCorrectAns + " You are fall. ");
 
-            ES3.Save<bool>("Pattern_5_Check", true);
+            //ES3.Save<bool>("Pattern_5_Check", true);       // 5-Sen   
         }
         else
         {
             CurrentAnswerStatus = false;
             //DeactiveNext.Raise();
-
-            ES3.Save<bool>("Pattern_5_Check", false);
-           
-           
+            //ES3.Save<bool>("Pattern_5_Check", false);     // 5-Sen       
         }
-            
+                           
     }
+
+
+    public int JoylashtirilganSonlar;
+
+    void PaintToBlue()
+    {
+        JoylashtirilganSonlar = 0;
+        for (int i = 0; i < Numbers.Count; i++)
+        {
+            if (Numbers[i].GetComponent<DragAndDropPattern5>().LastPos != null)
+            {
+                JoylashtirilganSonlar++;
+            }
+        }
+
+        if (JoylashtirilganSonlar > 0)
+        {
+            GetComponent<Pattern>().IsEdited = true;
+        }
+        else if (JoylashtirilganSonlar == 0)
+        {
+            GetComponent<Pattern>().IsEdited = false;
+        }
+    }
+
+
 
 
 }

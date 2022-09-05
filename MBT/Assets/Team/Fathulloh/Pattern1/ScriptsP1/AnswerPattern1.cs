@@ -54,7 +54,7 @@ public class AnswerPattern1 : MonoBehaviour
             //Debug.Log("Wrong Answer.");
             PatternOne.CurrentAnswerStatus = false;
         }
-        PatternOne.ActeveteButton();
+        PatternOne.Check();
     }
 
 
