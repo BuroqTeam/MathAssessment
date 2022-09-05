@@ -1023,10 +1023,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  CircleGroup: []
+  QuestionNumbers: []
   CurrentQuestionNumber: 0
   MaximumQuestionNumber: 0
-  CurrentCircleObj: {fileID: 0}
   MaximumPatternNumber: 16
 --- !u!1 &780593594
 GameObject:
@@ -2767,6 +2766,8 @@ GameObject:
   - component: {fileID: 1550526896}
   - component: {fileID: 1550526895}
   - component: {fileID: 1550526898}
+  - component: {fileID: 1550526900}
+  - component: {fileID: 1550526899}
   m_Layer: 5
   m_Name: Video
   m_TagString: Untagged
@@ -2837,31 +2838,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1550526896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 265139303}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1210561866965951176}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1550526896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,6 +2892,37 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &1550526899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550526893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2b1058b77a8f84ca66eb9c1f16ac7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WebLink: 
+--- !u!114 &1550526900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550526893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753a7156ec84ca849aa8cd5702c09e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddressableDataCSV:
+    m_AssetGUID: bea7f060d4a978b4ca338e0061d449ff
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  LocalDataCSV: {fileID: 0}
 --- !u!1 &1575963715
 GameObject:
   m_ObjectHideFlags: 0
