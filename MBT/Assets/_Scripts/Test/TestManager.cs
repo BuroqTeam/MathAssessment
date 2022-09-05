@@ -151,6 +151,22 @@ public class TestManager : MonoBehaviour
         ES3.Save<List<bool>>("ResultList", resultList);
     }
 
+    public void CheckAllIsDone()
+    {
+        int n = 0;
+        foreach (GameObject pattern in ActivePatterns)
+        {
+            if (pattern.GetComponent<Pattern>().IsEdited)
+            {
+                n++;
+            }
+        }
+        if (n.Equals(ActivePatterns.Count))
+        {
+            GameManager.Instance.EnableFinishButton();
+        }
+    }
+
 
     
 
