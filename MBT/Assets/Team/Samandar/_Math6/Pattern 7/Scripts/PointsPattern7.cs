@@ -32,6 +32,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         BackToLastPosition();
         GetData();
         Numbers();
+        Pattern_7.NewPosPoint();
         Pattern_7.CheckDrop();
     }
     public void Numbers()
@@ -52,6 +53,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
             {
                 string str = Pattern_7.DotsList[i].transform.GetComponent<PointsPattern7>().Point;
                 Pattern_7.NumberList.Add(str);
+                
             }
         }
     }
@@ -161,6 +163,7 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
             }           
         }
         Point = NumberX + "," + NumberY;
+        Numbers();
     }
 
     void BackToLastPosition()

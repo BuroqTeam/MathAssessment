@@ -198,8 +198,18 @@ public class Pattern_7 : GeneralTest
         {
             DotsList[i].transform.GetComponent<PointsPattern7>().GetData();
             DotsList[i].transform.GetComponent<PointsPattern7>().Numbers();
+            
         }
         Check();
+    }
+    public void NewPosPoint()
+    {
+        NumberList.Clear();
+        for (int i = 0; i < DotsList.Count; i++)
+        {
+
+            DotsList[i].GetComponent<PointsPattern7>().GetData();
+        }
     }
     void Rectangle()
     {
