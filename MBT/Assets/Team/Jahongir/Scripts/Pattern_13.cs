@@ -105,6 +105,7 @@ public class Pattern_13 : GeneralTest
     }
     public void Check()
     {
+        List<bool> currentList = new();
         if (SelectedPuzles.Count == AnswerPuzles.Count)
         {
             for (int i = 0; i < QuestionPuzles.Count; i++)
@@ -114,7 +115,6 @@ public class Pattern_13 : GeneralTest
                     _resultNumber++;
                 }
             }
-            List<bool> currentList = new();
             currentList = ES3.Load<List<bool>>("ResultList");
             Debug.Log(_resultNumber);
             Debug.Log(QuestionPuzles.Count);
@@ -133,9 +133,11 @@ public class Pattern_13 : GeneralTest
         }
         else
         {
+            currentList = ES3.Load<List<bool>>("ResultList");
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
-        
+        _resultNumber = 0;
     } 
 }
 [SerializeField]
