@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-
+    public GameObject FinishButton;
     public ProgressKeySO ProgressSave;
     public ResultSO ResultSO;
     public GameObject NumberPrefab;
@@ -113,6 +113,18 @@ public class GameManager : MonoBehaviour
 
         }
         
+    }
+
+    public void EnableFinishButton()
+    {
+        FinishButton.SetActive(true);
+    }
+
+    public void ClickFiishButton()
+    {
+        CalculateResult();
+        UpdateProgress();
+        FinishEvent.Invoke();
     }
 
 }
