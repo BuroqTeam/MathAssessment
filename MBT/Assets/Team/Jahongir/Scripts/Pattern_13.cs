@@ -94,40 +94,48 @@ public class Pattern_13 : GeneralTest
             //{
                 
             //}
-            ES3.Save<bool>("Pattern_13_Check", true);
+            //ES3.Save<bool>("Pattern_13_Check", true);
             GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
-            ES3.Save<bool>("Pattern_13_Check", false);
+            //ES3.Save<bool>("Pattern_13_Check", false);
             GetComponent<Pattern>().IsEdited = false;
         }
     }
     public void Check()
     {
-        for (int i = 0; i < QuestionPuzles.Count; i++)
+        if (SelectedPuzles.Count == AnswerPuzles.Count)
         {
-            if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
+            for (int i = 0; i < QuestionPuzles.Count; i++)
             {
-                _resultNumber++;
+                if (QuestionPuzles[i].GetComponent<P13_Puzzle1>().QuestionId == QuestionPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
+                {
+                    _resultNumber++;
+                }
             }
-        }
-        List<bool> currentList = new();
-        currentList = ES3.Load<List<bool>>("ResultList");
-        Debug.Log(_resultNumber);
-        Debug.Log(QuestionPuzles.Count);
-        if (_resultNumber == QuestionPuzles.Count)
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            List<bool> currentList = new();
+            currentList = ES3.Load<List<bool>>("ResultList");
+            Debug.Log(_resultNumber);
+            Debug.Log(QuestionPuzles.Count);
+            if (_resultNumber == QuestionPuzles.Count)
+            {
+                currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                Debug.Log("Correct");
+            }
+            else
+            {
+                currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                Debug.Log("Wrong");
+            }
+            ES3.Save("ResultList", currentList);
+            ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
         {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
-        ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_13_Check", true);
+        
     } 
 }
 [SerializeField]
