@@ -35,9 +35,10 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
     
     public void OnEndDrag(PointerEventData eventData)
     {        
-        Check();
+        Checking();
         Pattern3.CheckingAnswer();
         Pattern3.OnTrue();
+        Pattern3.Check();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -55,7 +56,7 @@ public class Number : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
         parentObj.transform.SetSiblingIndex(Pattern3.NumbersParent.Count - 1);
     }
        
-    void Check()
+    void Checking()
     {
         int k = 0;
         for (int i = 0; i < Positions.Count; i++)

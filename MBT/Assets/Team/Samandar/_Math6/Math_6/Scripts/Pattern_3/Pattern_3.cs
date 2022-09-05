@@ -55,8 +55,8 @@ public class Pattern_3 : GeneralTest
         else
         {            
             ES3.Save<bool>("Pattern_3_Check", false);
-            
-            
+            GetComponent<Pattern>().IsEdited = true;
+
         }
     }
 
@@ -208,14 +208,10 @@ public class Pattern_3 : GeneralTest
     public void Check()
     {        
         List<bool> currentList = new();
-        currentList = ES3.Load<List<bool>>("ResultList"); 
-        
-        int k = 0;
-
-        
+        currentList = ES3.Load<List<bool>>("ResultList");         
+        int k = 0;        
         foreach (List<string> list in newSolution)        
-        {
-            
+        {            
             if (list.SequenceEqual(Ansver))
             {                
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
@@ -227,16 +223,15 @@ public class Pattern_3 : GeneralTest
                 k++;
             }           
         }
-
         if (k.Equals(newSolution.Count))
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
             
         }
+        GetComponent<Pattern>().IsEdited = true;
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_3_Check", true);
-        
+        ES3.Save<bool>("Pattern_3_Check", true);        
     }
 
     void JsonList()

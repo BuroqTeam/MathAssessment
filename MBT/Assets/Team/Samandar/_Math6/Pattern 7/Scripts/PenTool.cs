@@ -42,6 +42,11 @@ public class PenTool : MonoBehaviour
         {
             Pattern7.Buttons[2].GetComponent<Button>().interactable = true;
         }
+        for (int i = 0; i < Pattern7.DotsList.Count; i++)
+        {
+            Pattern7.DotsList[i].transform.GetComponent<PointsPattern7>().GetData();
+        }
+        
     }
 
   
