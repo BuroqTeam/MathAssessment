@@ -8,7 +8,6 @@ public class P10_ReturnControl : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Pattern10.ReturnBUttonControl();
-        Pattern10.Result();
         Pattern10.Check();
     }
 }

@@ -170,6 +170,10 @@ public class Pattern_10 : GeneralTest
     //Bu metod barcha joylangan prefablarni o‘chirib beradi
     public void DeleteButtonControl()
     {
+        if (CorrectPattern)
+        {  
+            CorrectPattern = false;
+        }
         for (int i = 0; i < Tile1.Count; i++)
         {
             for (int j = 1; j < Tile1[i].transform.childCount; j++)
@@ -181,9 +185,7 @@ public class Pattern_10 : GeneralTest
         {
             CollectedPrefabs.Clear();
         }
-        //ES3.Save<bool>("Pattern_10_Check", false);
-        //GetComponent<Pattern>().IsEdited = false;
-        //Result();
+        GetComponent<Pattern>().IsEdited = false;
     }
 
 
@@ -200,11 +202,18 @@ public class Pattern_10 : GeneralTest
         }
         else
         {
+            if (CollectedPrefabs[CollectedPrefabs.Count - 1] .transform.parent.childCount > 9)
+            {
+                for (int i = 0; i < CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount; i++)
+                {
+                    CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetChild(i).GetComponent<RectTransform>().localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                }
+                CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 15;
+            }
             Debug.Log("Yongan");
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
         }
-        //Result();
     }
 
 
@@ -253,8 +262,6 @@ public class Pattern_10 : GeneralTest
                 Debug.Log(_resultNum);
                 _correctCount++;
             }
-                
-           
             _resultNum = 0;
         }
         Debug.Log(_correctCount);
@@ -265,9 +272,7 @@ public class Pattern_10 : GeneralTest
         else
         {
             CorrectPattern = false;
-
         }
-        _correctCount = 0;
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (CorrectPattern)
@@ -280,6 +285,7 @@ public class Pattern_10 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             Debug.Log("Wrong");
         }
+        _correctCount = 0;
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_10_Check", true);
     }
