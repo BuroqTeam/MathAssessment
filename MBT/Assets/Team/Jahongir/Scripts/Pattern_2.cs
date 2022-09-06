@@ -117,6 +117,7 @@ public class Pattern_2 : GeneralTest
         {
             GetComponent<Pattern>().IsEdited = false;
         }
+        TestManager.Instance.CheckAllIsDone();
     }
     public void Check()
     {
