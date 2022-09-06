@@ -20,6 +20,7 @@ public class ChapterManager : MonoBehaviour
     private DataBaseSO _jsonCollectionSO;
 
     IList<ChapterRaw> _chapterGorup;
+    JObject _jo;
 
 
     private void Awake()
@@ -31,16 +32,16 @@ public class ChapterManager : MonoBehaviour
         else
         {
             _jsonCollectionSO = group[1];
-        }       
-        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);       
+        }
+        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
         _jsonCollectionSO.DataBase.Clear();
         ReadJSON();
     }
 
     void ReadJSON()
     {
-        var jo = JObject.Parse(_curentJson.text);
-        JArray chapters = (JArray)jo["chapters"];
+        _jo = JObject.Parse(_curentJson.text);
+        JArray chapters = (JArray)_jo["chapters"];
         NumberOfChapter = chapters.Count;
         _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();        
         CreateChapters();
@@ -77,11 +78,11 @@ public class ChapterManager : MonoBehaviour
                 ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
             GridLayout.gameObject.SetActive(false);
-            StartCoroutine(DisplayChapters());
+            DisplayChapters();
         }       
     }
 
-    IEnumerator DisplayChapters()
+    void DisplayChapters()
     {   
         
         GridLayout.gameObject.SetActive(true);
@@ -95,11 +96,11 @@ public class ChapterManager : MonoBehaviour
             k++;
         }
         foreach (Chapter item in ChapterGorup)
-        { 
-            item.UpdateInfo(JObject.Parse(_curentJson.text));            
+        {
+            item.UpdateInfo(_jo);
         }
         GetComponent<ProgressManager>().CheckSaveCondition();
-        yield return new WaitForSeconds(0.1f);
+       
     }
 
 

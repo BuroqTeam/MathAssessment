@@ -125,7 +125,7 @@ public class TestGroupManager : MonoBehaviour
             int k = 0;
             foreach (float testGroupProgress in list)
             {
-                Debug.Log(testGroupProgress);
+                
                 TestGroupButtons[k].RadialSliderValue = testGroupProgress;
                 TestGroupButtons[k].UpdateInfo();
                 k++;
