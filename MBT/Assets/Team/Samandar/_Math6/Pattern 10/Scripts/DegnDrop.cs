@@ -20,7 +20,7 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     void Check()
     {
-        foreach (Cell cell in GameManagerPattern10.Instance.CellGroup)
+        foreach (Cell cell in Pattern_8.Instance.CellGroup)
         {
             foreach (Vector3 aPoint in cell.points)
             {
