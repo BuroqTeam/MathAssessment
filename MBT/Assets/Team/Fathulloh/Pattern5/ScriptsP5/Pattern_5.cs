@@ -129,17 +129,16 @@ public class Pattern_5 : GeneralTest
         if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
 
         //ES3.Save<bool>("Pattern_5_Check", true);
-
         //ActivateNext();
     }
 
@@ -224,7 +223,7 @@ public class Pattern_5 : GeneralTest
         else if (JoylashtirilganSonlar == 0)
         {
             GetComponent<Pattern>().IsEdited = false;
-            TestManager.Instance.CheckAllIsDone();   // false qiladigan kod yozish kerak.
+            TestManager.Instance.CheckAllIsDone();   
         }
     }
 

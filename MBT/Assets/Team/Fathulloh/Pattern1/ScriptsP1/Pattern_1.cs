@@ -104,7 +104,7 @@ public class Pattern_1 : GeneralTest
             GameObject obj = Instantiate(PrefabA, this.transform);
             Vector3 oldPos = obj.transform.localPosition;
             obj.transform.localPosition = new Vector3(oldPos.x, yPos - yLength * i, 0);
-            //Debug.Log( yPos - yLength * i);
+            
             obj.transform.GetChild(1).GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
             ABCD.Add(obj);
         }
@@ -140,12 +140,12 @@ public class Pattern_1 : GeneralTest
         if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         //ES3.Save("myList", currentList);

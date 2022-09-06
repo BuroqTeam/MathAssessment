@@ -163,7 +163,11 @@ public class TestManager : MonoBehaviour
         }
         if (n.Equals(ActivePatterns.Count))
         {
-            GameManager.Instance.EnableFinishButton();
+            GameManager.Instance.EnableFinishButton(true);
+        }
+        else
+        {
+            GameManager.Instance.EnableFinishButton(false);
         }
     }
 

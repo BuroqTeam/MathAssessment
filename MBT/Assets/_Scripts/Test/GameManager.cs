@@ -115,9 +115,9 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void EnableFinishButton()
+    public void EnableFinishButton(bool isTrue)
     {
-        FinishButton.SetActive(true);
+        FinishButton.SetActive(isTrue);
     }
 
     public void ClickFiishButton()
