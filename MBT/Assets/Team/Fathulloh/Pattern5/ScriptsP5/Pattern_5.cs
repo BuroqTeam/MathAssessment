@@ -219,10 +219,12 @@ public class Pattern_5 : GeneralTest
         if (JoylashtirilganSonlar > 0)
         {
             GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }
         else if (JoylashtirilganSonlar == 0)
         {
             GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();   // false qiladigan kod yozish kerak.
         }
     }
 
