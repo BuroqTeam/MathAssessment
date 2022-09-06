@@ -419,6 +419,11 @@ public class Pattern_7 : GeneralTest
                     Debug.Log("Corrent1");
                 }                
             }
+            else
+            {
+                currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                Debug.Log("Corrent2");
+            }
         }
         else
         {
