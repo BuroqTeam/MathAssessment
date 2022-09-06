@@ -50,7 +50,7 @@ public class ProgressManager : MonoBehaviour
             
             for (int i = 0; i < item.Value.Count; i++)
             {
-                Debug.Log(item.Value[i]);
+                
                 if (item.Value[i] > 0)
                 {
                     overAllPercentage += item.Value[i];

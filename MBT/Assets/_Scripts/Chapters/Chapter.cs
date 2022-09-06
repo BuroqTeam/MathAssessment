@@ -26,8 +26,8 @@ public class Chapter : MonoBehaviour
         ChapterNameTxt.text = chapterRaw.name;
         jo = jsonObj;
         JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
-        questionGroup = questions.ToObject<IList<Question>>();        
-       
+        questionGroup = questions.ToObject<IList<Question>>();
+
         // questionGroup.Count  100
         // TestGroup.questions o'ziga tegishli savollar ni oladi       
     }
