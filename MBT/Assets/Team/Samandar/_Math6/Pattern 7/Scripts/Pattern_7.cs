@@ -45,7 +45,8 @@ public class Pattern_7 : GeneralTest
         percentage = Cell.transform.localScale.x;
         InstantiatePrefabs();
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
-        Instance = this;        
+        Instance = this;
+        Debug.Log(PenTool.transform.position);
     }
     public void ReadFromJson()
     {
@@ -98,6 +99,7 @@ public class Pattern_7 : GeneralTest
     }
     void Start()
     {
+        
         CellPosition();
         //ReadFromJson();
     }
@@ -182,8 +184,9 @@ public class Pattern_7 : GeneralTest
     void CellPosition()
     {
         GameObject obj = Instantiate(Koordinata);
-        Koordinata.transform.position = PenTool.transform.position;
+        obj.transform.position = PenTool.transform.position;
         CanvasOut.Add(obj);
+        Debug.Log(obj.transform.position);
     }
     public void LineParentTurnOn()
     {
