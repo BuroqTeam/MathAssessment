@@ -481,6 +481,7 @@ public class Pattern_7 : GeneralTest
         Buttons[2].GetComponent<Button>().interactable = false;
         NumberList.Clear();
         GetComponent<Pattern>().IsEdited = false;
+        TestManager.Instance.CheckAllIsDone();
     }
     void Update()
     {
