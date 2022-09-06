@@ -1,7 +1,6 @@
 using DG.Tweening;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -222,14 +221,6 @@ public class Pattern_10 : GeneralTest
 
         if (a>0)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-
-            //}
             GetComponent<Pattern>().IsEdited = true;
         }
         else

@@ -29,14 +29,6 @@ public class Pattern_13 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_13Obj.title);
-        if (ES3.Load<bool>("Pattern_13_Check"))
-        {
-
-        }
-        else
-        {
-            
-        }
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -86,14 +78,6 @@ public class Pattern_13 : GeneralTest
     {
         if (SelectedPuzles.Count > 0)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-                
-            //}
             GetComponent<Pattern>().IsEdited = true;
         }
         else
@@ -115,17 +99,13 @@ public class Pattern_13 : GeneralTest
                 }
             }
             currentList = ES3.Load<List<bool>>("ResultList");
-            Debug.Log(_resultNumber);
-            Debug.Log(QuestionPuzles.Count);
             if (_resultNumber == QuestionPuzles.Count)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Debug.Log("Correct");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Debug.Log("Wrong");
             }
             ES3.Save("ResultList", currentList);
         }
@@ -133,7 +113,6 @@ public class Pattern_13 : GeneralTest
         {
             currentList = ES3.Load<List<bool>>("ResultList");
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
         }
         _resultNumber = 0;
     } 
