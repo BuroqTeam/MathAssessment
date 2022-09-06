@@ -224,15 +224,13 @@ public class Pattern_16 : GeneralTest
             //{
                 
             //}
-            ES3.Save<bool>("Pattern_16_Check", true);
             GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
-            ES3.Save<bool>("Pattern_16_Check", false);
             GetComponent<Pattern>().IsEdited = false;
         }
-
+        TestManager.Instance.CheckAllIsDone();
     }
 
     public void Check()

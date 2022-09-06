@@ -94,14 +94,13 @@ public class Pattern_13 : GeneralTest
             //{
                 
             //}
-            //ES3.Save<bool>("Pattern_13_Check", true);
             GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
-            //ES3.Save<bool>("Pattern_13_Check", false);
             GetComponent<Pattern>().IsEdited = false;
         }
+        TestManager.Instance.CheckAllIsDone();
     }
     public void Check()
     {
@@ -129,7 +128,6 @@ public class Pattern_13 : GeneralTest
                 Debug.Log("Wrong");
             }
             ES3.Save("ResultList", currentList);
-            ES3.Save<bool>("Pattern_13_Check", true);
         }
         else
         {

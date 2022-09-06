@@ -57,7 +57,6 @@ public class Pattern_6 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
-        //ES3.Save<bool>("Pattern_6_Check", true);
     }
 
     public void AnswerDone()
@@ -70,6 +69,7 @@ public class Pattern_6 : GeneralTest
         {
             GetComponent<Pattern>().IsEdited = false;
         }
+        TestManager.Instance.CheckAllIsDone();
     }
 }
 
