@@ -55,8 +55,7 @@ public class Pattern_3 : GeneralTest
         else
         {            
             ES3.Save<bool>("Pattern_3_Check", false);
-            GetComponent<Pattern>().IsEdited = true;
-
+            //GetComponent<Pattern>().IsEdited = true;
         }
     }
 
