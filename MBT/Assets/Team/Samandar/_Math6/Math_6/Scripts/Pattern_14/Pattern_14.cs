@@ -67,17 +67,11 @@ public class Pattern_14 : GeneralTest
     public void Active()
     {
         if (_click)
-        {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishButton.Raise();
-            //}
-            //else
-            //{
-                
-            //}
+        {            
             ES3.Save<bool>("Pattern_14_Check", true);
-        }
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
+        }        
     }
     public void ReadFromJson()
     {

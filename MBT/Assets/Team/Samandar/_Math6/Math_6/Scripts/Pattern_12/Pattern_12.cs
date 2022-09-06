@@ -45,22 +45,16 @@ public class Pattern_12 : GeneralTest
             }
         }
         if (n > 0)
-        {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishButton.Raise();
-            //}
-            //else
-            //{
-               
-            //}           
+        {                    
             ES3.Save<bool>("Pattern_12_Check", true);
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }
         else if (n == 0)
         {
             ES3.Save<bool>("Pattern_12_Check", false);
-            
-            
+            GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
         }
     }
 

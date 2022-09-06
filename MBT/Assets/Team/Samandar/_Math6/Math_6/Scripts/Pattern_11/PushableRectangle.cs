@@ -52,8 +52,9 @@ public class PushableRectangle : MonoBehaviour, IDragHandler, IBeginDragHandler,
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        Check();
+        Checking();
         Pattern11.OnTrue();
+        Pattern11.Check();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -63,7 +64,7 @@ public class PushableRectangle : MonoBehaviour, IDragHandler, IBeginDragHandler,
         _rectTransform.anchoredPosition3D = new Vector3(_rectTransform.anchoredPosition3D.x, _rectTransform.anchoredPosition3D.y, 0);
     }
 
-    void Check()
+    void Checking()
     {
         int k = 0;
         for (int i = 0; i < Positions.Count; i++)

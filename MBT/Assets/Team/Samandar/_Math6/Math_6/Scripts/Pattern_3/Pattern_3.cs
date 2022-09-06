@@ -51,11 +51,13 @@ public class Pattern_3 : GeneralTest
             //}
             ES3.Save<bool>("Pattern_3_Check", true);
             GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
         }
         else
         {            
             ES3.Save<bool>("Pattern_3_Check", false);
-            //GetComponent<Pattern>().IsEdited = true;
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }
     }
 
@@ -228,7 +230,7 @@ public class Pattern_3 : GeneralTest
             Debug.Log("Wrong");
             
         }
-        GetComponent<Pattern>().IsEdited = true;
+        //GetComponent<Pattern>().IsEdited = true;
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_3_Check", true);        
     }
