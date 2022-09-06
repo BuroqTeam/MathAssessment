@@ -181,6 +181,7 @@ public class Pattern_1 : GeneralTest
     public void ActeveteButton()
     {
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
         //if (_IsActiveButton)
         //{
         //    //if (TestManager.Instance.CheckIsLast())            

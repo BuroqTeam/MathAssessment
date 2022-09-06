@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e23dc3d272b06246b65dd5fd3f0d697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinishButton: {fileID: 0}
+  FinishButton: {fileID: 1442455927}
   ProgressSave: {fileID: 11400000, guid: bfe2b15e6e49054408508815a517112f, type: 2}
   ResultSO: {fileID: 11400000, guid: 71cd443cc2f0ba941824d4a8d16d6996, type: 2}
   NumberPrefab: {fileID: 5428392269490327285, guid: e6aa4920bb23e7947bc0426160848bf9, type: 3}
@@ -2859,7 +2859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1442455928
 RectTransform:
   m_ObjectHideFlags: 0
