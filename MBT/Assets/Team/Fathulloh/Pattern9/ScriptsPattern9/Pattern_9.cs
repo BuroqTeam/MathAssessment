@@ -120,12 +120,12 @@ public class Pattern_9 : GeneralTest
         if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
 
@@ -219,9 +219,13 @@ public class Pattern_9 : GeneralTest
         if (fullDropDowns > 0)
         {
             GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }
-        else        
+        else
+        {
             GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
+        }
         
     }
 
