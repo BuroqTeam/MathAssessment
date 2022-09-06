@@ -38,7 +38,7 @@ public class Pattern_3 : GeneralTest
         for (int i = 0; i < problem1.Count; i++)
         {
             bool _onTrue = NumberInstantiate[i].GetComponent<NumberArea>()._IsEmpty;
-            if (!_onTrue)
+            if (_onTrue)
             {
                 n++;
             }
@@ -49,8 +49,8 @@ public class Pattern_3 : GeneralTest
             //{
             //    FinishButton.Raise();
             //}
-            ES3.Save<bool>("Pattern_3_Check", true);           
-            
+            ES3.Save<bool>("Pattern_3_Check", true);
+            GetComponent<Pattern>().IsEdited = false;
         }
         else
         {            
