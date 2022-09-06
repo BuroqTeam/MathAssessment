@@ -203,7 +203,7 @@ public class Pattern_9 : GeneralTest
     }
 
 
-    void PatternButtonBlue()
+    void PatternButtonBlue()        // Pattern scriptidagi isEdited ni true yoki false qilib beruvchi metod.
     {
         int fullDropDowns = 0;
         for (int i = 0; i < ComparisonObjects.Count; i++)

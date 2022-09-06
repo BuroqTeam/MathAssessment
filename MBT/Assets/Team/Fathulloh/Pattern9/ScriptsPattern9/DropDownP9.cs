@@ -72,6 +72,7 @@ public class DropDownP9 : MonoBehaviour
     void CheckingAnswer()
     {
         Pattern9.CheckAllAnswers();
+        Pattern9.Check();
     }
 
         

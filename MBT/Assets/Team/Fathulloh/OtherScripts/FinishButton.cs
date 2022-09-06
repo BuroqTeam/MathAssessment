@@ -15,9 +15,8 @@ public class FinishButton : MonoBehaviour
     {
         
     }
-
     
-   
+
 
 
     void CheckingAllPattern()
@@ -50,7 +49,6 @@ public class FinishButton : MonoBehaviour
         //{
         //    gameObject.GetComponent<Button>().onClick.Invoke();
         //}
-
     }
 
 
