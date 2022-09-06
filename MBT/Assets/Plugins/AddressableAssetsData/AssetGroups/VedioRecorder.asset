@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: VedioRecorder
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: VedioRecorder
   m_Data:
     m_SerializedData: []
   m_GUID: 19f5a74fa0d7cdb42838fb00368470a6
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: bea7f060d4a978b4ca338e0061d449ff
+    m_Address: "VedioRecordingMBT - \u041B\u0438\u0441\u04421 (2)"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 20480b5fab56d69479d857d3d22b6615, type: 2}
   m_SchemaSet:

@@ -244,7 +244,6 @@ public class Pattern_10 : GeneralTest
         }
         else
         {
-            //ES3.Save<bool>("Pattern_10_Check", false);
             GetComponent<Pattern>().IsEdited = false;
         }
     }
