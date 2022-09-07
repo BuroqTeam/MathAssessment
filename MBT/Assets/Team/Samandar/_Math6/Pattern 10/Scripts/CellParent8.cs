@@ -14,9 +14,9 @@ public class CellParent8 : MonoBehaviour
 
     public void SquareLocation()
     {
-        for (float i = 0; i < Pattern_8.width; i += Pattern_8.percentage)
+        for (float i = -4.5f * Pattern_8.percentage; i < Pattern_8.width - 4.5f * Pattern_8.percentage; i += Pattern_8.percentage)
         {
-            for (float j = 0; j < Pattern_8.height; j += Pattern_8.percentage)
+            for (float j = -4.5f * Pattern_8.percentage; j < Pattern_8.height - 4.5f * Pattern_8.percentage; j += Pattern_8.percentage)
             {
                 GameObject SpawnedCell = Instantiate(Cell, new Vector3(j, i), Quaternion.identity, gameObject.transform);
                 Pattern_8.CellGroup.Add(SpawnedCell.GetComponent<Cell>());
