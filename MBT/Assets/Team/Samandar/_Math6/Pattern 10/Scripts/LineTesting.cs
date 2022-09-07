@@ -8,7 +8,7 @@ public class LineTesting : MonoBehaviour
     [SerializeField] private LineControllarPattern10 Line;
     void Start()
     {
-        Line.SetUpLine(points);
+        //Line.SetUpLine(points);
     }
 
     // Update is called once per frame

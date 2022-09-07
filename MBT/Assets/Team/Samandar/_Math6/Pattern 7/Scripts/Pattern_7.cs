@@ -348,7 +348,7 @@ public class Pattern_7 : GeneralTest
             {
                 if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
                 {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;                    
                     Debug.Log("Wrong1");
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
@@ -448,6 +448,7 @@ public class Pattern_7 : GeneralTest
         GetComponent<Pattern>().IsEdited = true; ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
     public void Check()
     {
@@ -468,6 +469,7 @@ public class Pattern_7 : GeneralTest
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
 
     public void DestroyPointLine()

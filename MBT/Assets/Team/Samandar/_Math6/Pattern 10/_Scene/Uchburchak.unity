@@ -157,7 +157,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 750, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &531906502
 GameObject:
@@ -316,10 +316,10 @@ RectTransform:
   m_Father: {fileID: 3274087441427222565}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760979278
 MonoBehaviour:
@@ -333,10 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f1ba9d7e31b64eba08391399c3359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CellPosition: {fileID: 0}
-  width: 7
-  height: 7
+  CellPosition: {fileID: 362271678}
+  CellParent: {fileID: 1629004405538977974, guid: eaedb1c6e3b0fce46acf182b2a4789e2, type: 3}
+  CanvasOut: []
+  CellObj: []
+  width: 6
+  height: 6
   Cell: {fileID: 70179340380105239, guid: 29f7251c423bcd548864d20f3c22dfef, type: 3}
+  percentage: 0
   CellGroup: []
 --- !u!1 &1955864974
 GameObject:
