@@ -18,7 +18,7 @@ public class Pattern_7 : GeneralTest
     public GameObject DotParent;
     public GameObject LineParent;
     public GameObject PenTool;
-    public GameObject PositionY;
+    //public GameObject PositionY;
     public GameObject PositionX;
     public GameEvent FinishButton;
     public List<GameObject> CellObj;
@@ -26,6 +26,7 @@ public class Pattern_7 : GeneralTest
     public List<GameObject> PositionOut;
     public List<GameObject> DotsList = new();
     public List<CellPattern7> CellGroup = new();
+    public List<float> PositionOY;
     public List<Button> Buttons = new();
     public List<string> NumberList;
     //public List<string> NumberY;
@@ -47,6 +48,7 @@ public class Pattern_7 : GeneralTest
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
         Instance = this;
         Debug.Log(PenTool.transform.position);
+        
     }
     public void ReadFromJson()
     {
@@ -86,10 +88,10 @@ public class Pattern_7 : GeneralTest
     {
         GameObject dot = Instantiate(Dot);
         GameObject line = Instantiate(Line);
-        GameObject posY = Instantiate(PositionY);
+        //GameObject posY = Instantiate(PositionY);
         GameObject posX = Instantiate(PositionX);
         PositionOut.Add(posX);
-        PositionOut.Add(posY);
+        //PositionOut.Add(posY);
         DotParent = dot;
         LineParent = line;
         GameObject obj = Instantiate(CellParent);
@@ -97,10 +99,20 @@ public class Pattern_7 : GeneralTest
         CanvasOut.Add(line);
         CanvasOut.Add(obj);
     }
+    public void PosY()
+    {
+        float pos1 = CanvasOut[3].transform.position.y - 6 * percentage;
+        for (int i = 0; i < 11; i++)
+        {
+            pos1 += percentage;
+            PositionOY.Add(pos1);
+        }
+    }
     void Start()
     {
         
         CellPosition();
+        PosY();
         //ReadFromJson();
     }
 
@@ -153,8 +165,7 @@ public class Pattern_7 : GeneralTest
                 if (CanvasOut[i] != null)
                 {
                     CanvasOut[i].SetActive(false);
-                }
-                
+                }                
             }
             for (int i = 0; i < PositionOut.Count; i++)
             {
