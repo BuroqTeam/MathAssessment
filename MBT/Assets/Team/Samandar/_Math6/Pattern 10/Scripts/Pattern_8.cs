@@ -6,12 +6,15 @@ public class Pattern_8 : MonoBehaviour
 {
     public static Pattern_8 Instance;
     public GameObject CellPosition;
-    public int width;
-    public int height;
+    public GameObject CellParent;
+    public List<GameObject> CanvasOut;
+    public List<GameObject> CellObj;
+    public float width;
+    public float height;
     //public float tileSize;
     public GameObject Cell;
     //public Transform Camera;
-    float percentage;
+    public float percentage;
     public List<Cell> CellGroup = new List<Cell>();
 
 
@@ -19,13 +22,20 @@ public class Pattern_8 : MonoBehaviour
     {
         Instance = this;
         percentage = Cell.transform.localScale.x;
+        InstantiateObj();
+
     }
 
     void Start()
     {
-        SquareLocation();
+        //SquareLocation();
     }
-
+    void InstantiateObj()
+    {
+        GameObject parent = Instantiate(CellParent);
+        CanvasOut.Add(parent);
+        CanvasOut[0].transform.GetComponent<CellParent8>().Pattern_8 = this;
+    }
     public void SquareLocation()
     {
         for (float i = 0; i < width; i+=percentage)
@@ -33,12 +43,10 @@ public class Pattern_8 : MonoBehaviour
             for (float j = 0; j < height; j+=percentage)
             {
                 GameObject SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
-                //SpawnedCell.name = $"Cell {i}, {j}";
-                SpawnedCell.transform.position = CellPosition.transform.position;
+                //SpawnedCell.name = $"Cell {i}, {j}";                
                 CellGroup.Add(SpawnedCell.GetComponent<Cell>());                
             }
-        }
-        //Camera.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, transform.position.z - 200);
+        }        
     }
 
     void Update()
