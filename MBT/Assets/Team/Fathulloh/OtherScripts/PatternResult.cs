@@ -15,8 +15,10 @@ public class PatternResult : MonoBehaviour      //F++
         PatternFinishResult();
     }
 
-
-    void PatternFinishResult()
+    /// <summary>
+    /// Qaysi Patternlar xato ishlanganini aniqlab Result Panelga chiqarib beruvchi metod.
+    /// </summary>
+    void PatternFinishResult()  
     {
         ResultList = new(ES3.Load<List<bool>>("ResultList"));
         for (int i = 0; i < ResultList.Count; i++)
