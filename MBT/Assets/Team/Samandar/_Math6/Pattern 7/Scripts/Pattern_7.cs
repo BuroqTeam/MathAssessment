@@ -20,7 +20,6 @@ public class Pattern_7 : GeneralTest
     public GameObject PenTool;
     //public GameObject PositionY;
     public GameObject PositionX;
-    public GameEvent FinishButton;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
     public List<GameObject> PositionOut;
