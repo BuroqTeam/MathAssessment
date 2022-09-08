@@ -17,14 +17,14 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         Check();
 
     }
-
+    
     void Check()
     {
         foreach (Cell cell in Pattern_8.Instance.CellGroup)
         {
             foreach (Vector3 aPoint in cell.points)
             {
-                if (Vector3.Distance(transform.position, aPoint) <= 0.7f)
+                if (Vector3.Distance(transform.position, aPoint) <= 0.45f)
                 {
                     transform.position = aPoint;
                     break;
