@@ -83,6 +83,8 @@ public class TestGroupManager : MonoBehaviour
                 GameObject obj = Instantiate(TestGroupObj);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
+                obj.transform.GetComponent<SceneManager>().Loading = this.GetComponent<SceneManager>().Loading;     //F++
+                obj.transform.GetComponent<SceneManager>().Notification = this.GetComponent<SceneManager>().Notification; //F++
                 TestGroupButtons.Add(obj.GetComponent<TestGroup>());
             }
             

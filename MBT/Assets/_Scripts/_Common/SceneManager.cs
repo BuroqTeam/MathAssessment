@@ -16,7 +16,7 @@ public class SceneManager : MonoBehaviour
 
     //F++
     public GameObject Notification;
-    public GameObject LoadingObj;
+    public GameObject Loading;
     public GameEvent LoadingEvent;
 
     bool m_ReadyToLoad = true;
@@ -26,41 +26,49 @@ public class SceneManager : MonoBehaviour
 
 
     //private void Start()
-    //{
+    //{        
     //    // 100 % bo'lsa
     //    //LoadingEvent.Raise();
     //}
 
     public void LoadLocalScene()
-    {
-        //if (LoadingObj != null)    // F++
-        //{
-        //    LoadingObj.SetActive(true);
+    {        
+        if (Loading != null)    // F++
+        {
+            Debug.Log("Loading is full");
+            LoadingEvent = Loading.transform.GetChild(0).GetComponent<GameEventListener>().Event;            
+            Loading.SetActive(true);
 
-        //    StartCoroutine(CheckInternetConnection(isConnected =>
-        //    {
-        //        if (isConnected || PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
-        //        {
-        //            if (m_ReadyToLoad)
-        //            {
-        //                PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
-        //                loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
-        //                loadHandle.Completed += SceneLoadComplete;
-        //            }
-        //            else
-        //            {
-        //                Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
-        //            }
+            StartCoroutine(CheckInternetConnection(isConnected =>
+            {
+                if (isConnected || PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
+                {
+                    if (m_ReadyToLoad)
+                    {
+                        PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
+                        loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
+                        loadHandle.Completed += SceneLoadComplete;
+                        Debug.Log(1);
+                    }
+                    else
+                    {
+                        Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
+                        Debug.Log(2);
+                    }
+                }
+                else
+                {
+                    Notification.SetActive(true);
+                }
+            }));
+        }
+        else if (Loading == null)
+        {
+            Debug.Log("LoadingObj is null.");
+            Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
+        }
 
-        //        }
-        //        else
-        //        {
-        //            Notification.SetActive(true);
-        //        }
-        //    }));
-        //}
-
-        Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
+        //Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
     }
 
     public void LoadCurrentScene()
