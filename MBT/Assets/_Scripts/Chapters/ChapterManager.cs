@@ -22,6 +22,10 @@ public class ChapterManager : MonoBehaviour
     IList<ChapterRaw> _chapterGorup;
     JObject _jo;
 
+    //F++
+    public GameObject LoadingObj;
+    public GameObject NotificationObj;
+    //F++
 
     private void Awake()
     {
@@ -74,6 +78,8 @@ public class ChapterManager : MonoBehaviour
                 GameObject obj = Instantiate(ChapterPrefab);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
+                obj.transform.GetComponent<SceneManager>().Notification = NotificationObj;      //F++
+                obj.transform.GetComponent<SceneManager>().Loading = LoadingObj;                //F++
                 obj.GetComponent<RectTransform>().DOAnchorPos3DZ(0, 0);
                 ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
