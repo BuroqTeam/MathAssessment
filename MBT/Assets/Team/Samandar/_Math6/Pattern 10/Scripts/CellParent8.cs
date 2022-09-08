@@ -5,15 +5,15 @@ using UnityEngine;
 public class CellParent8 : MonoBehaviour
 {
     public Pattern_8 Pattern_8;
-    public GameObject Cell;
-
+    public GameObject Cell;    
     void Start()
     {
-        SquareLocation();
+        SquareLocation();        
     }
 
+   
     public void SquareLocation()
-    {
+    {      
         for (float i = -4.5f * Pattern_8.percentage; i < Pattern_8.width - 4.5f * Pattern_8.percentage; i += Pattern_8.percentage)
         {
             for (float j = -4.5f * Pattern_8.percentage; j < Pattern_8.height - 4.5f * Pattern_8.percentage; j += Pattern_8.percentage)
@@ -23,6 +23,7 @@ public class CellParent8 : MonoBehaviour
                 Pattern_8.CellObj.Add(SpawnedCell);
             }
         }
-        gameObject.transform.position = Pattern_8.CellPosition.transform.position;
+        Debug.Log("2");
+        gameObject.transform.position = Pattern_8.CellPosition.transform.position;        
     }
 }

@@ -46,8 +46,7 @@ public class Pattern_7 : GeneralTest
         InstantiatePrefabs();
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
         Instance = this;
-        Debug.Log(PenTool.transform.position);
-        
+        Debug.Log(PenTool.transform.position);        
     }
     public void ReadFromJson()
     {

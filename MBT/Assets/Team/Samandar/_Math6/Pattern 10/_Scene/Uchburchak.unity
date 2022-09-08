@@ -335,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CellPosition: {fileID: 362271678}
   CellParent: {fileID: 1629004405538977974, guid: eaedb1c6e3b0fce46acf182b2a4789e2, type: 3}
+  PointParent: {fileID: 6134824156028195565, guid: 78e120d842d9f6b44a4045e92fe6710b, type: 3}
   CanvasOut: []
   CellObj: []
   width: 5.9
@@ -342,6 +343,7 @@ MonoBehaviour:
   Cell: {fileID: 70179340380105239, guid: 29f7251c423bcd548864d20f3c22dfef, type: 3}
   percentage: 0
   CellGroup: []
+  Pivot: 0
 --- !u!1 &1955864974
 GameObject:
   m_ObjectHideFlags: 0

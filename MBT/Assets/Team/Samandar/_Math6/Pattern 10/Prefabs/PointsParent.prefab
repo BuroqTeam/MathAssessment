@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6134824156028195564}
+  - component: {fileID: 4809957561053956040}
   m_Layer: 0
   m_Name: PointsParent
   m_TagString: Untagged
@@ -31,3 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4809957561053956040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134824156028195565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c46878bd9861c4aa7627ccf25e9090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pattern_8: {fileID: 0}
+  PointPrefabs: {fileID: 3588872867120745422, guid: 83ef9d02015278642856425208e4feed, type: 3}
+  PointNumber: 3
+  Pointlist: []
