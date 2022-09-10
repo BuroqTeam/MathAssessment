@@ -25,7 +25,7 @@ public class PushableRectangle : MonoBehaviour, IDragHandler, IBeginDragHandler,
     {
         Positions = Pattern11.LeftList;
         InitialList = Pattern11.RightList;
-        Debug.Log(Positions[0].name);
+        //Debug.Log(Positions[0].name);
     }
     public void Order()
     {
