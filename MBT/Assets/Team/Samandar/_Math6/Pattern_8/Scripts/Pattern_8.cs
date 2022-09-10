@@ -85,21 +85,25 @@ public class Pattern_8 : GeneralTest
     }
     public void JsonTextToInt()
     {
+        Logging.Log("Togri burchakli uchburchak");
         string figureString_1 = "rightTriangle";
         string figureString_2 = "triangle";
         string figureString_3 = "rectangle";
         string figureType = Data8.figureType;
+        Logging.Log(figureType);
         if (figureType == figureString_1)
         {
-            
+            Logging.Log("Togri burchakli uchburchak");
             Figure[0] = 2;
         }
         else if(figureType == figureString_2)
         {
+            Logging.Log("Uchburchak");
             Figure[1] = 3;
         }
         else if (figureType == figureString_3)
         {
+            Logging.Log("Turtburchak");
             Figure[2] = 4;
         }
     }

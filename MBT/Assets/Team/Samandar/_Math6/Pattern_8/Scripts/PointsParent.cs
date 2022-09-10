@@ -15,33 +15,13 @@ public class PointsParent : MonoBehaviour
         //PointPosition();
     }
     public void InstantiatePoints()
-    {
-        if (PointNumber[0] == 2 )
+    {       
+        for (int i = 0; i < 3; i++)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                GameObject point = Instantiate(PointPrefabs, gameObject.transform);
-                Pattern_8.PointList.Add(point);                
-            }
+            GameObject point = Instantiate(PointPrefabs, gameObject.transform);
+            Pattern_8.PointList.Add(point);                
         }
-        else if (PointNumber[1] == 3)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                GameObject point = Instantiate(PointPrefabs, gameObject.transform);
-                Pattern_8.PointList.Add(point);
-            }
-        }
-        else if (PointNumber[2] == 4)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                GameObject point = Instantiate(PointPrefabs, gameObject.transform);
-                Pattern_8.PointList.Add(point);
-            }
-        }
-
-
+        
         Pattern_8.Point();
     }    
     public void PointPosition()

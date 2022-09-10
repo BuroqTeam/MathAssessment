@@ -25,8 +25,7 @@ public class CellParent8 : MonoBehaviour
                 Pattern_8.CellGroup.Add(SpawnedCell.GetComponent<Cell>());
                 Pattern_8.CellObj.Add(SpawnedCell);
             }
-        }
-        Debug.Log("2");
+        }        
         gameObject.transform.position = Pattern_8.CellPosition.transform.position;        
     }
 }
