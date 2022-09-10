@@ -216,7 +216,7 @@ public class Pattern_3 : GeneralTest
             if (list.SequenceEqual(Ansver))
             {                
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Debug.Log("Corrent");
+                //Debug.Log("Corrent");
                 break;
             }
             else
@@ -227,7 +227,7 @@ public class Pattern_3 : GeneralTest
         if (k.Equals(newSolution.Count))
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
             
         }
         //GetComponent<Pattern>().IsEdited = true;

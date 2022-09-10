@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    public Pattern_8 Pattern_8;
+    //public Pattern_8 Pattern_8;
     SpriteRenderer spriteRenderer;    
     public List<Vector3> points = new();
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CollectPoints();
-        PointPosition();
+        CollectPoints();       
     }
-    
+    private void Awake()
+    {
+        
+    }
     public void CollectPoints()
     {
-        Debug.Log("3");
+        //Debug.Log("3");
         float rightPointX_1 = transform.position.x + spriteRenderer.bounds.size.x * 0.5f;
         float rightPointX_2 = transform.position.x - spriteRenderer.bounds.size.x * 0.5f;
         float upPointY_1 = transform.position.y + spriteRenderer.bounds.size.y * 0.5f;
@@ -25,11 +27,5 @@ public class Cell : MonoBehaviour
         points.Add(new Vector3(rightPointX_2, upPointY_1, 0));
         points.Add(new Vector3(rightPointX_1, upPointY_2, 0));
         points.Add(new Vector3(rightPointX_2, upPointY_2, 0));
-    }
-    void PointPosition()
-    {
-        Pattern_8.PointList[0].transform.position = points[0];
-        Pattern_8.PointList[1].transform.position = points[1];
-        Pattern_8.PointList[2].transform.position = points[2];
-    }
+    }   
 }
