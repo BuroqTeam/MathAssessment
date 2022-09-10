@@ -10,7 +10,12 @@ public class SceneManager : MonoBehaviour
     public AssetReference Scene;
     public AssetReference CurrentScene;
 
-   
+    private void Start()
+    {
+        Logging.Log("Salam");
+    }
+
+
 
     public void LoadLocalScene()
     {
