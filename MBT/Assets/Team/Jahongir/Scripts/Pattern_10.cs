@@ -1,6 +1,7 @@
 using DG.Tweening;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -186,13 +187,15 @@ public class Pattern_10 : GeneralTest
     {
         if (CollectedPrefabs.Count == 1)
         {
-            GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
+            Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             GetComponent<Pattern>().IsEdited = false;
             TestManager.Instance.CheckAllIsDone();
         }
         else
         {
+            Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
+            CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             if (CollectedPrefabs[CollectedPrefabs.Count - 1] .transform.parent.childCount > 9)
             {
                 for (int i = 0; i < CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount; i++)
@@ -201,9 +204,8 @@ public class Pattern_10 : GeneralTest
                 }
                 CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 15;
             }
-            GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
-            CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
         }
+        StartCoroutine(ResultForReturn());
     }
 
 
@@ -218,7 +220,6 @@ public class Pattern_10 : GeneralTest
                 a++;
             }
         }
-
         if (a>0)
         {
             GetComponent<Pattern>().IsEdited = true;
@@ -228,6 +229,7 @@ public class Pattern_10 : GeneralTest
             GetComponent<Pattern>().IsEdited = false;
         }
         TestManager.Instance.CheckAllIsDone();
+
         for (int i = 0; i < Tile1.Count; i++)
         {
             for (int j = 1; j < Tile1[i].transform.childCount; j++)
@@ -237,16 +239,21 @@ public class Pattern_10 : GeneralTest
 
             if (Mathf.Approximately(_resultNum, Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber))
             {
-                Debug.Log(_resultNum);
                 _correctCount++;
             }
             _resultNum = 0;
         }
-        Debug.Log(_correctCount);
     }
+
+    public IEnumerator ResultForReturn()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Result();
+        Check();
+    }
+
     public void Check()
     {
-        
         if (_correctCount == Tile1.Count)
         {
             CorrectPattern = true;
@@ -260,12 +267,10 @@ public class Pattern_10 : GeneralTest
         if (CorrectPattern)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
         }
         _correctCount = 0;
         ES3.Save("ResultList", currentList);
