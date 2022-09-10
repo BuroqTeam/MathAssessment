@@ -70,6 +70,7 @@ public class UpdateAnim : MonoBehaviour
     public void TuronOff()
     {
         gameObject.transform.parent.gameObject.SetActive(false);
+        Debug.Log("sasasasa");
     }
 
 }

@@ -36,7 +36,7 @@ public class SceneManager : MonoBehaviour
         if (Loading != null)    // F++
         {
             Logging.Log("Loading is full");
-            LoadingEvent = Loading.transform.GetChild(0).GetComponent<GameEventListener>().Event;            
+                        
             Loading.SetActive(true);
 
             StartCoroutine(CheckInternetConnection(isConnected =>
@@ -45,7 +45,7 @@ public class SceneManager : MonoBehaviour
                 {
                     if (m_ReadyToLoad)
                     {
-                        LoadingEvent.Raise();
+                        //LoadingEvent.Raise();
                         PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
                         loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
                         loadHandle.Completed += SceneLoadComplete;
@@ -63,7 +63,7 @@ public class SceneManager : MonoBehaviour
                 }
             }));
         }
-        else if (Loading == null)
+        else if (Loading == null)// bu shart loading hali qo'shilmagan paytda qolganlarni ishiga hal bermaslik uchun yozilgan edi.
         {
             Logging.Log("LoadingObj is null.");
             Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
