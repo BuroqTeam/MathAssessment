@@ -6,16 +6,49 @@ using UnityEngine.EventSystems;
 
 public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    public Pattern_8 Pattern_8;
+    private GameObject Pos_1;
+    private GameObject Pos_2;
+    public Vector3 LastPosition;
+    void Start()
+    {
+        Pattern_8.PointList[0].transform.position = Pattern_8.CellObj[24].transform.GetComponent<Cell>().points[1];
+        Pattern_8.PointList[1].transform.position = Pattern_8.CellObj[53].transform.GetComponent<Cell>().points[1];
+        Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[77].transform.GetComponent<Cell>().points[1];
+        Pattern_8.LinePosition.GetComponent<LineTesting>().PointTransform();        
+    }
+    void BackToLastPosition()
+    {
+
+        if (gameObject.transform.position.x < Pos_1.transform.GetComponent<Cell>().points[3].x)
+        {
+            transform.DOMove(LastPosition, 0);
+        }
+        else if (gameObject.transform.position.x > Pos_2.transform.GetComponent<Cell>().points[0].x)
+        {
+            transform.DOMove(LastPosition, 0);
+        }
+        else if (gameObject.transform.position.y < Pos_1.transform.GetComponent<Cell>().points[3].y)
+        {
+            transform.DOMove(LastPosition, 0);
+        }
+        else if (gameObject.transform.position.y > Pos_2.transform.GetComponent<Cell>().points[0].y)
+        {
+            transform.DOMove(LastPosition, 0);
+        }
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //transform.DOScale(new Vector3(2, 2, 2), 1);
+        Pos_1 = Pattern_8.CellObj[0];
+        Pos_2 = Pattern_8.CellObj[99];
+        LastPosition = gameObject.transform.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         //transform.DOScale(new Vector3(3, 3, 3), 2);
         Check();
-
+        BackToLastPosition();
     }
     
     void Check()
@@ -39,10 +72,7 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
     }
-    void Start()
-    {
-        
-    }
+   
   
     void Update()
     {

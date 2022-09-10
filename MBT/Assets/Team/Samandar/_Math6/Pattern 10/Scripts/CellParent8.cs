@@ -8,10 +8,13 @@ public class CellParent8 : MonoBehaviour
     public GameObject Cell;    
     void Start()
     {
-        SquareLocation();        
+        SquareLocation();
+    }
+    private void Awake()
+    {
+        
     }
 
-   
     public void SquareLocation()
     {      
         for (float i = -4.5f * Pattern_8.percentage; i < Pattern_8.width - 4.5f * Pattern_8.percentage; i += Pattern_8.percentage)

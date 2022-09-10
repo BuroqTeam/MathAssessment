@@ -46,7 +46,7 @@ public class Pattern_7 : GeneralTest
         InstantiatePrefabs();
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
         Instance = this;
-        Debug.Log(PenTool.transform.position);        
+        //Debug.Log(PenTool.transform.position);        
     }
     public void ReadFromJson()
     {
@@ -195,7 +195,7 @@ public class Pattern_7 : GeneralTest
         GameObject obj = Instantiate(Koordinata);
         obj.transform.position = PenTool.transform.position;
         CanvasOut.Add(obj);
-        Debug.Log(obj.transform.position);
+        //Debug.Log(obj.transform.position);
     }
     public void LineParentTurnOn()
     {
@@ -228,98 +228,82 @@ public class Pattern_7 : GeneralTest
         if (DotsList.Count == 4)
         {
             if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-            {
-                Debug.Log("1");
+            {                
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("2");
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
             {
-                Debug.Log("3");
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
             {
-                Debug.Log("4");
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("5");
                 DotsList[1].transform.DOMove(DotsList[0].transform.position, 0);
                 DotsList[0].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("6");
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
             {
-                Debug.Log("7");
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
             {
-                Debug.Log("8");
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
             {
-                Debug.Log("9");
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
             {
-                Debug.Log("10");
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
             }
             else if (DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("11");
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
             {
-                Debug.Log("12");
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
             {
-                Debug.Log("13");
                 DotsList[1].transform.DOMove(DotsList[0].transform.position, 0);
                 DotsList[0].transform.DOMove(DotsList[1].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
             {
-                Debug.Log("14");
                 DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
                 DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
             {
-                Debug.Log("15");
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
             }
             else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
             {
-                Debug.Log("16");
                 DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
                 DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
             }           
@@ -348,99 +332,99 @@ public class Pattern_7 : GeneralTest
                 if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;                    
-                    Debug.Log("Wrong1");
+                   
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong2");
+                   
                 }
                 else if (DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong3");
+                    
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong4");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong5");
+                    
                 }
                 else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong6");
+                    
                 }
                 else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong7");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong8");
+                    
                 }
                 else if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong9");
+                    
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong10");
+                    
                 }
                 else if (DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong11");
+                    
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong12");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong13");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong14");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong15");
+                    
                 }
                 else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Debug.Log("Wrong16");
+                    
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Debug.Log("Corrent1");
+                    
                 }                
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Debug.Log("Corrent2");
+                
             }
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
@@ -458,12 +442,12 @@ public class Pattern_7 : GeneralTest
         if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Corrent");             
+            
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);

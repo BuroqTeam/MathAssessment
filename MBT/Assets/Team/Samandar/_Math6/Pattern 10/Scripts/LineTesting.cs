@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class LineTesting : MonoBehaviour
 {
-    [SerializeField] private Transform[] points;
-    [SerializeField] private LineControllarPattern10 Line;
+    public Pattern_8 Pattern_8;
+    public Transform[] points;
+    public LineControllarPattern10 Line;
     void Start()
     {
-        //Line.SetUpLine(points);
+        //PointTransform();
+        
     }
-
-    // Update is called once per frame
+    public void PointTransform()
+    {
+        points[0] = Pattern_8.PointList[0].transform;
+        points[1] = Pattern_8.PointList[1].transform;
+        points[2] = Pattern_8.PointList[2].transform;
+        points[3] = Pattern_8.PointList[0].transform;
+    }
+    public void LinePoint()
+    {
+        Line.SetUpLine(points);
+    }
     void Update()
     {
 
