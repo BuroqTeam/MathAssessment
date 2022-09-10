@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class P6_Button : MonoBehaviour
 {
@@ -15,14 +12,6 @@ public class P6_Button : MonoBehaviour
             Pattern6.Check();
             Pattern6.AnswerDone();
         }
-        //if (Answer.text != null)
-        //{
-        //    ES3.Save<bool>("Pattern_6_Check", true);
-        //}
-        //else
-        //{
-        //    ES3.Save<bool>("Pattern_6_Check", false);
-        //}
     }
     public void DeleteAnswer()
     {

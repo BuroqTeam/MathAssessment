@@ -245,18 +245,20 @@ MonoBehaviour:
   Koordinata: {fileID: 7639303591341396122, guid: c7f2f59fe22b72f43968737697f116c3, type: 3}
   DotParent: {fileID: 2598368186222215131, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
   LineParent: {fileID: 4115138001954530373, guid: 4131c943c557e7147995389b855abfe8, type: 3}
-  PenTool: {fileID: 8480374623243577127}
+  PenTool: {fileID: 8480374622705754555}
   PositionY: {fileID: 509012852131046448, guid: f5cb31884b29006469fa38cc3937d492, type: 3}
   PositionX: {fileID: 7027923410662090923, guid: 5c5b12efc284ece458ef6f5d65fbf139, type: 3}
   FinishButton: {fileID: 0}
   CellObj: []
   CanvasOut: []
+  PositionOut: []
   DotsList: []
   CellGroup: []
   Buttons:
   - {fileID: 8480374622921291010}
   - {fileID: 8480374622796216445}
   - {fileID: 8480374621945622630}
+  NumberList: []
   width: 5.5
   height: 5.5
   _istrue: 1
@@ -271,8 +273,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8480374622705754554}
-  - component: {fileID: 8480374622705754553}
   - component: {fileID: 8480374622705754503}
+  - component: {fileID: 8480374622705754553}
   - component: {fileID: 8480374622705754552}
   m_Layer: 5
   m_Name: PenCanvas
@@ -301,18 +303,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -60, y: -60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8480374622705754553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8480374622705754555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba70c4b6ebc05d34b9fbb8659b29ac5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8480374622705754503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +333,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8480374622705754553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480374622705754555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba70c4b6ebc05d34b9fbb8659b29ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPattern7: {fileID: 5149375334438247186, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
+  linePrefabs: {fileID: 3870348556494033743, guid: 3e46237a1066fbb47a1142d9bd3ba4b8, type: 3}
+  Point: {fileID: 5149375334438247198, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
+  lineParent: {fileID: 4115138001954530373, guid: 4131c943c557e7147995389b855abfe8, type: 3}
+  dotParent: {fileID: 2598368186222215131, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
+  HandPosition: {x: 0, y: 0, z: 0}
+  Pattern7: {fileID: 8480374622655341841}
 --- !u!222 &8480374622705754552
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -781,10 +790,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94166060d1e2a1340bc8ac7f53c947b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsPattern7: {fileID: 5149375334438247186, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
-  linePrefabs: {fileID: 3870348556494033743, guid: 3e46237a1066fbb47a1142d9bd3ba4b8, type: 3}
-  Point: {fileID: 5149375334438247198, guid: ef5072478f50b564a821d64a9552ff6c, type: 3}
-  lineParent: {fileID: 4115138001954530374, guid: 4131c943c557e7147995389b855abfe8, type: 3}
-  dotParent: {fileID: 2598368186222215130, guid: 48c72810c4b2010429a00d03a60fed20, type: 3}
-  Pattern7: {fileID: 8480374622655341841}
-  penCanvas: {fileID: 8480374622705754553}

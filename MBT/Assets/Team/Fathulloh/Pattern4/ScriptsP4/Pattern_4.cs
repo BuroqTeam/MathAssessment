@@ -21,7 +21,7 @@ public class Pattern_4 : GeneralTest
     Data_4 Pattern_4Obj = new();
     float yDistance, xDistance;
 
-    public string Statement1, Statement2, ImagePath1, ImagePath2;       //    
+    public string Statement1, Statement2, ImagePath1, ImagePath2;          
     Sprite spriteOfImage;
     public int totalFullAns, totalCorrectAns;
 
@@ -32,21 +32,15 @@ public class Pattern_4 : GeneralTest
 
     private void OnEnable()
     {
-        //if (ES3.Load<bool>("Pattern_4_Check"))
-        //{
-        //    //ActiveNext.Raise();
-        //}
+        //if (ES3.Load<bool>("Pattern_4_Check"))        
+        //    //ActiveNext.Raise();        
         //else
         //    //DeactiveNext.Raise();
 
         if (_isTrue)
         {
             _isTrue = false;
-            _currentJsonText = GetComponent<Pattern>().Json;
-            //if (_currentJsonText != null)            
-            //    Debug.Log(_currentJsonText.text);            
-            //else            
-            //    Debug.Log("Not Found Data");            
+            _currentJsonText = GetComponent<Pattern>().Json;                        
             ReadFromJson();
         }
 
@@ -115,7 +109,6 @@ public class Pattern_4 : GeneralTest
             
             ComparisonObjects.Add(obj);
         }
-
         WriteToPrefab();
     }
 
@@ -124,15 +117,15 @@ public class Pattern_4 : GeneralTest
     public void DeviceDetector(float width, float height, GameObject obj, int i)
     {            // ushbu kod deviceni ni tekshirib beradi. Bazi o'yin obyektlari devicega qarab o'z pozitsiyasini o'zgartiradi.
         if (width / height >= 2)        {
-            //Debug.Log("Long phone.");
+            //"Long phone"
             obj.GetComponent<RectTransform>().anchoredPosition = PosLongPhone[i];
         }
         else if (width / height > 1.5f)        {
-            //Debug.Log("Phone");
+            //"Phone"
             obj.GetComponent<RectTransform>().anchoredPosition = PosPhone[i];
         }
         else if (width / height < 1.5f)        {
-            //Debug.Log("Tablet");
+            //"Tablet"
             obj.GetComponent<RectTransform>().anchoredPosition = PosTablet[i];
         }
     }
@@ -144,13 +137,13 @@ public class Pattern_4 : GeneralTest
         {
             if (i == 0)            {
                 MainObjs[0].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
-                Statement1 = Pattern_4Obj.statements[i].statement;//
-                ImagePath1 = Pattern_4Obj.statements[i].image;//
+                Statement1 = Pattern_4Obj.statements[i].statement;
+                ImagePath1 = Pattern_4Obj.statements[i].image;
             }
             else if (i == 1)            {
                 MainObjs[2].transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_4Obj.statements[i].statement;
-                Statement2 = Pattern_4Obj.statements[i].statement;//
-                ImagePath2 = Pattern_4Obj.statements[i].image;//
+                Statement2 = Pattern_4Obj.statements[i].statement;
+                ImagePath2 = Pattern_4Obj.statements[i].image;
             }
         }
 
@@ -190,12 +183,12 @@ public class Pattern_4 : GeneralTest
         if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         
@@ -229,19 +222,16 @@ public class Pattern_4 : GeneralTest
             if (currentAnswer != null)            
                 totalFullAns++;
             if (correctAnswer == currentAnswer)            
-                totalCorrectAns++;
-            
+                totalCorrectAns++;            
         }
 
         if ((totalCorrectAns == n) && (totalFullAns == n))
         {
             CurrentAnswerStatus = true;
-            //Debug.Log("Everything is true.");
         }                    
         else if (totalFullAns == n)
         {
             CurrentAnswerStatus = false;
-            //Debug.Log("Some thing is wrong.");
         }
 
 
@@ -286,11 +276,13 @@ public class Pattern_4 : GeneralTest
 
         if (fullDropDowns > 0)
         {
-            GetComponent<Pattern>().IsEdited = true;            
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }            
         else
         {
             GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
         }            
     }
 
@@ -323,7 +315,6 @@ public class Option_4
 
 /*
   //int ranNum = Random.Range(20, 29);
-  //Debug.Log("ranNum = " + ranNum);
   //Mbt.SaveJsonPath("Pattern_4", 6, ranNum );
 //ES3.Save<string>("LanguageKey", "Uzb");
 //ES3.Save<int>("ClassKey", 6);

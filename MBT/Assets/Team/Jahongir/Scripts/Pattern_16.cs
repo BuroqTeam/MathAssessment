@@ -38,14 +38,6 @@ public class Pattern_16 : GeneralTest
             Operations[i].SetActive(true);
         }
         DisplayQuestion(Pattern_16Obj.title);
-        if (ES3.Load<bool>("Pattern_16_Check"))
-        {
-            
-        }
-        else
-        {
-            
-        }
     }
     private void OnDisable()
     {
@@ -59,7 +51,6 @@ public class Pattern_16 : GeneralTest
             {
                 Operations[i].SetActive(false);
             }
-
         }
     }
     public override void DisplayQuestion(string questionStr)
@@ -175,10 +166,6 @@ public class Pattern_16 : GeneralTest
             }
             ActivePrefabs.Add(prefab);
         }
-
-        
-        //operation1.transform.position = Vector3.Lerp(ActivePrefabs[1].transform.position, ActivePrefabs[0].transform.position, 0.5f);
-        //Operations.Add(operation1);//operation2.transform.position = Vector3.Lerp(ActivePrefabs[2].transform.position, ActivePrefabs[1].transform.position, 0.5f);
     }
 
     public void Result()
@@ -191,21 +178,10 @@ public class Pattern_16 : GeneralTest
                 _resultValue++;
             }
         }
-        Debug.Log(_resultValue);
-        Debug.Log(_prefabsIndex[_prefabsIndex.Count - 2]);
-        if (_resultValue == _prefabsIndex[_prefabsIndex.Count - 2])
-        {
-            Debug.Log("Correct");
-        }
-        else
-        {
-            Debug.Log("Wrong");
-        }
     }
 
     public void CheckButton()
     {
-        Debug.Log("CheckButton");
         int b = 0;
         for (int i = 0; i < _resultPrefab.transform.childCount-1; i++)
         {
@@ -216,43 +192,29 @@ public class Pattern_16 : GeneralTest
         }
         if (b>0)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-                
-            //}
-            ES3.Save<bool>("Pattern_16_Check", true);
             GetComponent<Pattern>().IsEdited = true;
         }
         else
         {
-            ES3.Save<bool>("Pattern_16_Check", false);
             GetComponent<Pattern>().IsEdited = false;
         }
-
+        TestManager.Instance.CheckAllIsDone();
     }
 
     public void Check()
     {
-        Debug.Log("Check");
         Result();
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         if (_resultValue == _prefabsIndex[_prefabsIndex.Count - 2])
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
         }
         else
         {
-            Debug.Log("Wrong");
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
         }
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_16_Check", true);
     }
 }
 [SerializeField]

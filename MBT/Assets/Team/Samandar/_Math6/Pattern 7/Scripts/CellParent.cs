@@ -7,7 +7,7 @@ public class CellParent : MonoBehaviour
 
     void Start()
     {        
-        SquareLocation();
+        SquareLocation();      
     }
 
     public void SquareLocation()
@@ -18,11 +18,10 @@ public class CellParent : MonoBehaviour
             {
                 GameObject SpawnedCell = Instantiate(Cell, new Vector3(j, i), Quaternion.identity, gameObject.transform);
                 Pattern_7.CellGroup.Add(SpawnedCell.GetComponent<CellPattern7>());
-                Pattern_7.CellObj.Add(SpawnedCell);
-                
+                Pattern_7.CellObj.Add(SpawnedCell);                
             }
         }
-        gameObject.transform.position = Pattern_7.Koordinata.transform.position;        
+        gameObject.transform.position = Pattern_7.CanvasOut[3].transform.position;        
     }
     void Update()
     {

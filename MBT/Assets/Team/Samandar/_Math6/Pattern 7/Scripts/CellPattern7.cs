@@ -20,8 +20,7 @@ public class CellPattern7 : MonoBehaviour
   
 
     public void CollectPoints()
-    {
-        
+    {        
         float rightPointX_1 = transform.position.x + spriteRenderer.bounds.size.x * 0.5f;
         float rightPointX_2 = transform.position.x - spriteRenderer.bounds.size.x * 0.5f;
         float upPointY_1 = transform.position.y + spriteRenderer.bounds.size.y * 0.5f;
@@ -30,7 +29,6 @@ public class CellPattern7 : MonoBehaviour
         points.Add(new Vector3(rightPointX_2, upPointY_1, 0));
         points.Add(new Vector3(rightPointX_1, upPointY_2, 0));
         points.Add(new Vector3(rightPointX_2, upPointY_2, 0));
-
     }
 
 

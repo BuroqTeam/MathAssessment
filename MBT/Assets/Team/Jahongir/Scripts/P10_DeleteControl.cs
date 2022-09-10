@@ -10,5 +10,6 @@ public class P10_DeleteControl : MonoBehaviour, IPointerClickHandler
     {
         Pattern10.CorrectPattern = false;
         Pattern10.DeleteButtonControl();
+        Pattern10.Check();
     }
 }

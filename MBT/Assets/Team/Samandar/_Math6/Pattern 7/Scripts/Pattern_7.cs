@@ -18,14 +18,14 @@ public class Pattern_7 : GeneralTest
     public GameObject DotParent;
     public GameObject LineParent;
     public GameObject PenTool;
-    public GameObject PositionY;
+    //public GameObject PositionY;
     public GameObject PositionX;
-    public GameEvent FinishButton;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
     public List<GameObject> PositionOut;
     public List<GameObject> DotsList = new();
     public List<CellPattern7> CellGroup = new();
+    public List<float> PositionOY;
     public List<Button> Buttons = new();
     public List<string> NumberList;
     //public List<string> NumberY;
@@ -45,7 +45,8 @@ public class Pattern_7 : GeneralTest
         percentage = Cell.transform.localScale.x;
         InstantiatePrefabs();
         DotPrefabs.GetComponent<PointsPattern7>().Pattern_7 = this;
-        Instance = this;        
+        Instance = this;
+        Debug.Log(PenTool.transform.position);        
     }
     public void ReadFromJson()
     {
@@ -85,10 +86,10 @@ public class Pattern_7 : GeneralTest
     {
         GameObject dot = Instantiate(Dot);
         GameObject line = Instantiate(Line);
-        GameObject posY = Instantiate(PositionY);
+        //GameObject posY = Instantiate(PositionY);
         GameObject posX = Instantiate(PositionX);
         PositionOut.Add(posX);
-        PositionOut.Add(posY);
+        //PositionOut.Add(posY);
         DotParent = dot;
         LineParent = line;
         GameObject obj = Instantiate(CellParent);
@@ -96,9 +97,20 @@ public class Pattern_7 : GeneralTest
         CanvasOut.Add(line);
         CanvasOut.Add(obj);
     }
+    public void PosY()
+    {
+        float pos1 = CanvasOut[3].transform.position.y - 6 * percentage;
+        for (int i = 0; i < 11; i++)
+        {
+            pos1 += percentage;
+            PositionOY.Add(pos1);
+        }
+    }
     void Start()
     {
+        
         CellPosition();
+        PosY();
         //ReadFromJson();
     }
 
@@ -151,8 +163,7 @@ public class Pattern_7 : GeneralTest
                 if (CanvasOut[i] != null)
                 {
                     CanvasOut[i].SetActive(false);
-                }
-                
+                }                
             }
             for (int i = 0; i < PositionOut.Count; i++)
             {
@@ -182,8 +193,9 @@ public class Pattern_7 : GeneralTest
     void CellPosition()
     {
         GameObject obj = Instantiate(Koordinata);
-        Koordinata.transform.position = PenTool.transform.position;
+        obj.transform.position = PenTool.transform.position;
         CanvasOut.Add(obj);
+        Debug.Log(obj.transform.position);
     }
     public void LineParentTurnOn()
     {
@@ -335,7 +347,7 @@ public class Pattern_7 : GeneralTest
             {
                 if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
                 {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;                    
                     Debug.Log("Wrong1");
                 }
                 else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
@@ -435,6 +447,7 @@ public class Pattern_7 : GeneralTest
         GetComponent<Pattern>().IsEdited = true; ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
     public void Check()
     {
@@ -455,6 +468,7 @@ public class Pattern_7 : GeneralTest
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
 
     public void DestroyPointLine()
@@ -478,6 +492,7 @@ public class Pattern_7 : GeneralTest
         Buttons[2].GetComponent<Button>().interactable = false;
         NumberList.Clear();
         GetComponent<Pattern>().IsEdited = false;
+        TestManager.Instance.CheckAllIsDone();
     }
     void Update()
     {

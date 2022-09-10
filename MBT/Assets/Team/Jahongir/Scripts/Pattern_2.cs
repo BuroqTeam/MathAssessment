@@ -24,14 +24,6 @@ public class Pattern_2 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_2Obj.title);
-        //if (ES3.Load<bool>("Pattern_2_Check"))
-        //{
-            
-        //}
-        //else
-        //{
-            
-        //}
     }
     public override void DisplayQuestion(string questionStr)
     {
@@ -100,7 +92,6 @@ public class Pattern_2 : GeneralTest
    
     public void CheckButton()
     {
-        Debug.Log("CheckButton");
         int a = 0;
         for (int i = 0; i < Buttons.Count; i++)
         {
@@ -117,6 +108,7 @@ public class Pattern_2 : GeneralTest
         {
             GetComponent<Pattern>().IsEdited = false;
         }
+        TestManager.Instance.CheckAllIsDone();
     }
     public void Check()
     {
@@ -142,7 +134,6 @@ public class Pattern_2 : GeneralTest
         if (CorrectAnswerNumber == ResultNumber && ResultNumber== SelectAnswerNumber)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
             CorrectAnswerNumber = 0;
             ResultNumber = 0;
             SelectAnswerNumber = 0;
@@ -150,24 +141,12 @@ public class Pattern_2 : GeneralTest
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
             CorrectAnswerNumber = 0;
             ResultNumber = 0;
             SelectAnswerNumber = 0;
         }
         ES3.Save("ResultList", currentList);
-        //ES3.Save<bool>("Pattern_2_Check", true);
     }
-
-    void ActivateNext()
-    {
-        int index = TestManager.Instance.ActivePatterns.FindIndex(o => o == gameObject);
-        index++;
-        TestManager.Instance.ActivePatterns[index].SetActive(true);
-        gameObject.SetActive(false);
-    }
-
-
 }
 
 

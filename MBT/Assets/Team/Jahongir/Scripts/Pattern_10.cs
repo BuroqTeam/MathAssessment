@@ -1,7 +1,6 @@
 using DG.Tweening;
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -64,14 +63,6 @@ public class Pattern_10 : GeneralTest
             ReadFromJson();
         }
         DisplayQuestion(Pattern_10Obj.title);
-        if (ES3.Load<bool>("Pattern_10_Check"))
-        {
-            
-        }
-        else
-        {
-           
-        }
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -186,6 +177,7 @@ public class Pattern_10 : GeneralTest
             CollectedPrefabs.Clear();
         }
         GetComponent<Pattern>().IsEdited = false;
+        TestManager.Instance.CheckAllIsDone();
     }
 
 
@@ -194,11 +186,10 @@ public class Pattern_10 : GeneralTest
     {
         if (CollectedPrefabs.Count == 1)
         {
-            Debug.Log("Uchdi");
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
-            //ES3.Save<bool>("Pattern_10_Check", false);
             GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
         }
         else
         {
@@ -210,7 +201,6 @@ public class Pattern_10 : GeneralTest
                 }
                 CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 15;
             }
-            Debug.Log("Yongan");
             GameObject.Destroy(CollectedPrefabs[CollectedPrefabs.Count - 1]);
             CollectedPrefabs.Remove(CollectedPrefabs[CollectedPrefabs.Count - 1]);
         }
@@ -231,31 +221,20 @@ public class Pattern_10 : GeneralTest
 
         if (a>0)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishEvent.Raise();
-            //}
-            //else
-            //{
-
-            //}
             GetComponent<Pattern>().IsEdited = true;
-            ES3.Save<bool>("Pattern_10_Check", true);
         }
         else
         {
             GetComponent<Pattern>().IsEdited = false;
         }
-    }
-    public void Check()
-    {
+        TestManager.Instance.CheckAllIsDone();
         for (int i = 0; i < Tile1.Count; i++)
         {
             for (int j = 1; j < Tile1[i].transform.childCount; j++)
             {
                 _resultNum += Tile1[i].transform.GetChild(j).GetComponent<P10_ButtonControl>().Value;
             }
-           
+
             if (Mathf.Approximately(_resultNum, Tile1[i].GetComponent<P10_ItemSlot>().CollectedNumber))
             {
                 Debug.Log(_resultNum);
@@ -264,6 +243,10 @@ public class Pattern_10 : GeneralTest
             _resultNum = 0;
         }
         Debug.Log(_correctCount);
+    }
+    public void Check()
+    {
+        
         if (_correctCount == Tile1.Count)
         {
             CorrectPattern = true;
@@ -286,7 +269,6 @@ public class Pattern_10 : GeneralTest
         }
         _correctCount = 0;
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_10_Check", true);
     }
 }
 

@@ -112,12 +112,14 @@ public class PointsPattern7 : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
                 }               
             }            
         }
-        for (int i = 0; i < Pattern_7.PositionOut[1].transform.childCount; i++)
-        {
-            if (Mathf.Approximately(Pattern_7.PositionOut[1].transform.GetChild(i).position.y , gameObject.transform.position.y))
+        for (int i = 0; i < Pattern_7.PositionOY.Count; i++)
+        {            
+            if (Mathf.Approximately(Pattern_7.PositionOY[i], gameObject.transform.position.y))
             {
+                //Debug.Log("1");
                 if (i == 0)
                 {
+                    Debug.Log("-5");
                     NumberY = ("-5");
                 }
                 if (i == 1)

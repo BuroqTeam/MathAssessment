@@ -62,6 +62,7 @@ public class AnswerPattern_15 : MonoBehaviour
             }
         }
         Pattern15.Active();
+        Pattern15.Check();
     }
 
     public void Check()
