@@ -35,7 +35,7 @@ public class SceneManager : MonoBehaviour
     {        
         if (Loading != null)    // F++
         {
-            Debug.Log("Loading is full");
+            Logging.Log("Loading is full");
             LoadingEvent = Loading.transform.GetChild(0).GetComponent<GameEventListener>().Event;            
             Loading.SetActive(true);
 
@@ -45,15 +45,16 @@ public class SceneManager : MonoBehaviour
                 {
                     if (m_ReadyToLoad)
                     {
+                        LoadingEvent.Raise();
                         PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
                         loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
                         loadHandle.Completed += SceneLoadComplete;
-                        Debug.Log(1);
+                        Logging.Log(1);
                     }
                     else
                     {
                         Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
-                        Debug.Log(2);
+                        Logging.Log(2);
                     }
                 }
                 else
@@ -64,7 +65,7 @@ public class SceneManager : MonoBehaviour
         }
         else if (Loading == null)
         {
-            Debug.Log("LoadingObj is null.");
+            Logging.Log("LoadingObj is null.");
             Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
         }
 
