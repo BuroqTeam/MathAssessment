@@ -87,7 +87,7 @@ public class MainManager : MonoBehaviour
         _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
         _jsonCollectionSO.DataBase.Clear();
         
-        Logging.Log("Json Cheking: " + _curentJson.text.Length + "  Json Cheking: " + _curentJson.dataSize);
+        //Logging.Log("Json Cheking: " + _curentJson.text.Length + "  Json Cheking: " + _curentJson.dataSize);
         
         if (_curentJson.text.Length != 0)
         {

@@ -32,42 +32,40 @@ public class SceneManager : MonoBehaviour
     //}
 
     public void LoadLocalScene()
-    {        
-        if (Loading != null)    // F++
-        {
-            Logging.Log("Loading is full");
-                        
-            Loading.SetActive(true);
+    {
+        //Logging.Log("Loading is full");
+        //Loading.SetActive(true);
 
-            StartCoroutine(CheckInternetConnection(isConnected =>
+        StartCoroutine(CheckInternetConnection(isConnected =>
+        {
+            if (isConnected || PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
             {
-                if (isConnected || PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
+                if (m_ReadyToLoad)
                 {
-                    if (m_ReadyToLoad)
-                    {
-                        //LoadingEvent.Raise();
-                        PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
-                        loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
-                        loadHandle.Completed += SceneLoadComplete;
-                        Logging.Log(1);
-                    }
-                    else
-                    {
-                        Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
-                        Logging.Log(2);
-                    }
+                    //Logging.Log("Load new Scene");
+                    PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
+                    loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
+                    loadHandle.Completed += SceneLoadComplete;
                 }
                 else
                 {
-                    Notification.SetActive(true);
+                    Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
                 }
-            }));
-        }
-        else if (Loading == null)// bu shart loading hali qo'shilmagan paytda qolganlarni ishiga hal bermaslik uchun yozilgan edi.
-        {
-            Logging.Log("LoadingObj is null.");
-            Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
-        }
+            }
+            else
+            {
+                Notification.SetActive(true);
+            }
+        }));
+
+        //if (Loading != null)    // F++
+        //{
+            
+        //}
+        //else if (Loading == null)// bu shart loading hali qo'shilmagan paytda qolganlarni ishiga hal bermaslik uchun yozilgan edi.
+        //{
+        //    Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
+        //}
 
         //Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
     }

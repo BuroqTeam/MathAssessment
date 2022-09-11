@@ -657,6 +657,14 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  CurrentScene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Notification: {fileID: 0}
+  Loading: {fileID: 0}
+  LoadingEvent: {fileID: 11400000, guid: 3e039cdc13d313543953f82257f36b05, type: 2}
 --- !u!114 &8668835121732822969
 MonoBehaviour:
   m_ObjectHideFlags: 0
