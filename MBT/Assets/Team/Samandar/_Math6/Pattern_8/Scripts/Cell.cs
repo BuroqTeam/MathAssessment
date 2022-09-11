@@ -18,7 +18,7 @@ public class Cell : MonoBehaviour
     }
     public void CollectPoints()
     {
-        //Debug.Log("3");
+       
         float rightPointX_1 = transform.position.x + spriteRenderer.bounds.size.x * 0.5f;
         float rightPointX_2 = transform.position.x - spriteRenderer.bounds.size.x * 0.5f;
         float upPointY_1 = transform.position.y + spriteRenderer.bounds.size.y * 0.5f;

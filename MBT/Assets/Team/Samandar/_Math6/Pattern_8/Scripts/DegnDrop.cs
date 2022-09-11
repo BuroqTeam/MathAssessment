@@ -12,10 +12,30 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public Vector3 LastPosition;
     void Start()
     {
-        Pattern_8.PointList[0].transform.position = Pattern_8.CellObj[24].transform.GetComponent<Cell>().points[1];
-        Pattern_8.PointList[1].transform.position = Pattern_8.CellObj[53].transform.GetComponent<Cell>().points[1];
-        Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[77].transform.GetComponent<Cell>().points[1];
-        Pattern_8.LinePosition.GetComponent<LineTesting>().PointTransform();        
+        PointPosition();
+        
+    }
+    void PointPosition()
+    {
+        if (Pattern_8.Figure == 2)
+        {
+            Pattern_8.PointList[0].transform.position = Pattern_8.CellObj[23].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[1].transform.position = Pattern_8.CellObj[53].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[58].transform.GetComponent<Cell>().points[1];
+        }
+        else if (Pattern_8.Figure == 3)
+        {
+            Pattern_8.PointList[0].transform.position = Pattern_8.CellObj[24].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[1].transform.position = Pattern_8.CellObj[53].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[77].transform.GetComponent<Cell>().points[1];
+        }
+        else if (Pattern_8.Figure == 4)
+        {
+            Pattern_8.PointList[0].transform.position = Pattern_8.CellObj[23].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[1].transform.position = Pattern_8.CellObj[63].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[67].transform.GetComponent<Cell>().points[1];
+            Pattern_8.PointList[3].transform.position = Pattern_8.CellObj[27].transform.GetComponent<Cell>().points[1];
+        }
     }
     void BackToLastPosition()
     {
