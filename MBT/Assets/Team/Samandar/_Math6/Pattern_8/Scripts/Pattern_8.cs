@@ -73,30 +73,59 @@ public class Pattern_8 : GeneralTest
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         List<string> proportion = Data8.proportion;
-
+        
         if (Figure == 2)
         {
-            if (PointList[0].transform.position.x == PointList[1].transform.position.x && PointList[0].transform.position.y == PointList[2].transform.position.y)
+            Transform pos1 = PointList[0].transform;
+            Transform pos2 = PointList[1].transform;
+            Transform pos3 = PointList[2].transform;
+            float a;
+            float b;
+            float c;
+            if (pos1.position.x == pos2.position.x && pos1.position.y == pos3.position.y)
+            {
+                if (pos1.position.y > pos2.position.y)
+                {
+                    float AB = pos1.position.y - pos2.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos1.position.y < pos2.position.y)
+                {
+                    float AB = pos2.position.y - pos1.position.y;
+                    c = AB / percentage;
+                }
+                if (pos1.position.x > pos3.position.x)
+                {
+                    float AC = pos1.position.x - pos3.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos1.position.x < pos3.position.x)
+                {
+                    float AC = pos3.position.x - pos1.position.x;
+                    b = AC / percentage;
+                }
+                //if (c / b ==  )
+                //{
+
+                //}
+            }
+            else if (pos1.position.x == pos3.position.x && pos1.position.y == pos2.position.y)
             {
 
             }
-            else if (PointList[0].transform.position.x == PointList[2].transform.position.x && PointList[0].transform.position.y == PointList[1].transform.position.y)
+            else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
             {
 
             }
-            else if (PointList[1].transform.position.x == PointList[0].transform.position.x && PointList[1].transform.position.y == PointList[2].transform.position.y)
+            else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
             {
 
             }
-            else if (PointList[1].transform.position.x == PointList[2].transform.position.x && PointList[1].transform.position.y == PointList[0].transform.position.y)
+            else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
             {
 
             }
-            else if (PointList[2].transform.position.x == PointList[0].transform.position.x && PointList[2].transform.position.y == PointList[1].transform.position.y)
-            {
-
-            }
-            else if (PointList[2].transform.position.x == PointList[1].transform.position.x && PointList[2].transform.position.y == PointList[0].transform.position.y)
+            else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
             {
 
             }
