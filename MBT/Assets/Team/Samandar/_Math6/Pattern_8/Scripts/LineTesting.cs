@@ -5,23 +5,53 @@ using UnityEngine;
 public class LineTesting : MonoBehaviour
 {
     public Pattern_8 Pattern_8;
-    public Transform[] points;
+    public List<Transform> Points;
     public LineControllarPattern10 Line;
     void Start()
     {
-        //PointTransform();
         
     }
     public void PointTransform()
     {
-        points[0] = Pattern_8.PointList[0].transform;
-        points[1] = Pattern_8.PointList[1].transform;
-        points[2] = Pattern_8.PointList[2].transform;
-        points[3] = Pattern_8.PointList[0].transform;
+        if (Pattern_8.Figure == 2)
+        {
+            Transform Points0 = Pattern_8.PointList[0].transform;
+            Transform Points1 = Pattern_8.PointList[1].transform;
+            Transform Points2 = Pattern_8.PointList[2].transform;
+            Transform Points3 = Pattern_8.PointList[0].transform;
+            Points.Add(Points0);
+            Points.Add(Points1);
+            Points.Add(Points2);
+            Points.Add(Points3);
+        }
+        else if (Pattern_8.Figure == 3)
+        {
+            Transform Points0 = Pattern_8.PointList[0].transform;
+            Transform Points1 = Pattern_8.PointList[1].transform;
+            Transform Points2 = Pattern_8.PointList[2].transform;
+            Transform Points3 = Pattern_8.PointList[0].transform;
+            Points.Add(Points0);
+            Points.Add(Points1);
+            Points.Add(Points2);
+            Points.Add(Points3);
+        }
+        else if (Pattern_8.Figure == 4)
+        {
+            Transform Points0 = Pattern_8.PointList[0].transform;
+            Transform Points1 = Pattern_8.PointList[1].transform;
+            Transform Points2 = Pattern_8.PointList[2].transform;
+            Transform Points3 = Pattern_8.PointList[3].transform;
+            Transform Points4 = Pattern_8.PointList[0].transform;
+            Points.Add(Points0);
+            Points.Add(Points1);
+            Points.Add(Points2);
+            Points.Add(Points3);
+            Points.Add(Points4);
+        }
     }
     public void LinePoint()
     {
-        Line.SetUpLine(points);
+        Line.SetUpLine(Points);
     }
     void Update()
     {

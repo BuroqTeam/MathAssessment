@@ -50,11 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pattern_8: {fileID: 0}
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Points: []
   Line: {fileID: 6571481933523355587, guid: bf52ef794bc2c894da0795d9d089a78d, type: 3}
 --- !u!1 &4178776882047007349
 GameObject:
@@ -192,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0f1ba9d7e31b64eba08391399c3359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionText: {fileID: 0}
   CellPosition: {fileID: 4178776882047007349}
   CellParent: {fileID: 1629004405538977974, guid: eaedb1c6e3b0fce46acf182b2a4789e2, type: 3}
   PointParent: {fileID: 6134824156028195565, guid: 78e120d842d9f6b44a4045e92fe6710b, type: 3}
@@ -207,6 +204,8 @@ MonoBehaviour:
   percentage: 0
   CellGroup: []
   Pivot: 0
+  _istrue: 1
+  Figure: 0
 --- !u!1 &4178776883116648862
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,9 +256,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pattern_8: {fileID: 4178776883076726917}
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Points: []
   Line: {fileID: 0}

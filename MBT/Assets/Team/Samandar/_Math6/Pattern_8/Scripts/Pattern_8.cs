@@ -1,5 +1,6 @@
 using MBT.Extension;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,10 +26,11 @@ public class Pattern_8 : GeneralTest
     public float Pivot;
     public bool _istrue = true;
     public Data_8 Data8 = new();
-    public List<int> Figure;    
+    public int Figure;
+    List<int> Parties;
     private void Awake()
     {
-        JsonTextToInt();
+        
         Instance = this;
         percentage = Cell.transform.localScale.x;
         InstantiateObj();
@@ -55,7 +57,54 @@ public class Pattern_8 : GeneralTest
             CanvasOut[i].SetActive(true);
         }        
         DisplayQuestion(Data8.title);
+        JsonTextToInt();
+        DataParties();
     }
+    void DataParties()
+    {
+        List<string> proportion = Data8.proportion;
+        int m = Int32.Parse(proportion[0]);
+        int n = Int32.Parse(proportion[1]);
+        Parties.Add(m);
+        Parties.Add(n);
+    }
+    public void Check()
+    {
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        List<string> proportion = Data8.proportion;
+
+        if (Figure == 2)
+        {
+            if (PointList[0].transform.position.x == PointList[1].transform.position.x && PointList[0].transform.position.y == PointList[2].transform.position.y)
+            {
+
+            }
+        }
+        else if (Figure == 3)
+        {
+
+        }
+        else if (Figure == 4)
+        {
+
+        }
+        //if ()
+        //{
+        //    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+
+        //}
+        //else
+        //{
+        //    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+
+        //}
+        //ES3.Save("ResultList", currentList);
+        //ES3.Save<bool>("Pattern_15_Check", true);
+        //GetComponent<Pattern>().IsEdited = true;
+        //TestManager.Instance.CheckAllIsDone();
+    }
+
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
@@ -85,26 +134,25 @@ public class Pattern_8 : GeneralTest
     }
     public void JsonTextToInt()
     {
-        Logging.Log("Togri burchakli uchburchak");
+        
         string figureString_1 = "rightTriangle";
         string figureString_2 = "triangle";
         string figureString_3 = "rectangle";
-        string figureType = Data8.figureType;
-        Logging.Log(figureType);
+        string figureType = Data8.figureType;        
         if (figureType == figureString_1)
         {
             Logging.Log("Togri burchakli uchburchak");
-            Figure[0] = 2;
+            Figure = 2;
         }
         else if(figureType == figureString_2)
         {
             Logging.Log("Uchburchak");
-            Figure[1] = 3;
+            Figure = 3;
         }
         else if (figureType == figureString_3)
         {
             Logging.Log("Turtburchak");
-            Figure[2] = 4;
+            Figure = 4;
         }
     }
     public void Point()
