@@ -29,10 +29,14 @@ public class TestManager : MonoBehaviour
 
     public static TestManager Instance;
     public UnityEvent CircleEvent;
-   
+
+
+    public GameObject Loading;
+    public GameEvent LoadingEvent;
 
     private void Awake()
     {
+        Loading.SetActive(true);
         Instance = this;
     }
 
@@ -149,6 +153,9 @@ public class TestManager : MonoBehaviour
             resultList.Add(false);
         }
         ES3.Save<List<bool>>("ResultList", resultList);
+
+        LoadingEvent.Raise();
+        //Loading.transform.GetChild(0).GetComponent<GameEventListener>().Event.Raise();
     }
 
     public void CheckAllIsDone()

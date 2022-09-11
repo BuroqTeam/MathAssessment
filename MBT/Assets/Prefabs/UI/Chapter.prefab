@@ -928,6 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FlowerSo: {fileID: 11400000, guid: dead205292d9243438e0cce8175c8b82, type: 2}
   LeafGroup: []
+  Center: {fileID: 0}
 --- !u!1 &8267410294875729853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1236,6 @@ MonoBehaviour:
   SliderFill: {fileID: 8267410294764248708}
   ChapterNumberTxt: {fileID: 8267410295622969514}
   ChapterNameTxt: {fileID: 8267410294682784005}
-  TestGroup: {fileID: 11400000, guid: c5a8c1bd3f3470b40865e0dfc8d5e763, type: 2}
 --- !u!114 &2248578362195717944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,6 +1253,14 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  CurrentScene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Notification: {fileID: 0}
+  Loading: {fileID: 0}
+  LoadingEvent: {fileID: 11400000, guid: 3e039cdc13d313543953f82257f36b05, type: 2}
 --- !u!1 &8267410295622969512
 GameObject:
   m_ObjectHideFlags: 0
