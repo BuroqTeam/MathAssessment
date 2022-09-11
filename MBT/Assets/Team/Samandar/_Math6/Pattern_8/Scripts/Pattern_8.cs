@@ -80,6 +80,26 @@ public class Pattern_8 : GeneralTest
             {
 
             }
+            else if (PointList[0].transform.position.x == PointList[2].transform.position.x && PointList[0].transform.position.y == PointList[1].transform.position.y)
+            {
+
+            }
+            else if (PointList[1].transform.position.x == PointList[0].transform.position.x && PointList[1].transform.position.y == PointList[2].transform.position.y)
+            {
+
+            }
+            else if (PointList[1].transform.position.x == PointList[2].transform.position.x && PointList[1].transform.position.y == PointList[0].transform.position.y)
+            {
+
+            }
+            else if (PointList[2].transform.position.x == PointList[0].transform.position.x && PointList[2].transform.position.y == PointList[1].transform.position.y)
+            {
+
+            }
+            else if (PointList[2].transform.position.x == PointList[1].transform.position.x && PointList[2].transform.position.y == PointList[0].transform.position.y)
+            {
+
+            }
         }
         else if (Figure == 3)
         {
