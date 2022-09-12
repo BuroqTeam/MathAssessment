@@ -67,11 +67,12 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         //transform.DOScale(new Vector3(3, 3, 3), 2);
-        Check();
+        Checking();
         BackToLastPosition();
+        Pattern_8.Check();
     }
     
-    void Check()
+    void Checking()
     {
         foreach (Cell cell in Pattern_8.Instance.CellGroup)
         {

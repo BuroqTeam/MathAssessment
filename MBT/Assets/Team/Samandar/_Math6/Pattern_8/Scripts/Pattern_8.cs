@@ -27,7 +27,10 @@ public class Pattern_8 : GeneralTest
     public bool _istrue = true;
     public Data_8 Data8 = new();
     public int Figure;
-    List<int> Parties;
+    public List<float> Parties;
+    public float a;
+    public float b;
+    public float c;
     private void Awake()
     {
         
@@ -62,12 +65,14 @@ public class Pattern_8 : GeneralTest
     }
     void DataParties()
     {
+        Parties.Clear();
         List<string> proportion = Data8.proportion;
-        int m = Int32.Parse(proportion[0]);
-        int n = Int32.Parse(proportion[1]);
+        float m = float.Parse(proportion[0]);
+        float n = float.Parse(proportion[1]);
         Parties.Add(m);
         Parties.Add(n);
     }
+  
     public void Check()
     {
         List<bool> currentList = new();
@@ -79,9 +84,7 @@ public class Pattern_8 : GeneralTest
             Transform pos1 = PointList[0].transform;
             Transform pos2 = PointList[1].transform;
             Transform pos3 = PointList[2].transform;
-            float a;
-            float b;
-            float c;
+           
             if (pos1.position.x == pos2.position.x && pos1.position.y == pos3.position.y)
             {
                 if (pos1.position.y > pos2.position.y)
@@ -104,30 +107,216 @@ public class Pattern_8 : GeneralTest
                     float AC = pos3.position.x - pos1.position.x;
                     b = AC / percentage;
                 }
-                //if (c / b ==  )
-                //{
-
-                //}
+                if ((float) c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
             }
             else if (pos1.position.x == pos3.position.x && pos1.position.y == pos2.position.y)
             {
-
+                if (pos1.position.y > pos3.position.y)
+                {
+                    float AB = pos1.position.y - pos3.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos1.position.y < pos3.position.y)
+                {
+                    float AB = pos3.position.y - pos1.position.y;
+                    c = AB / percentage;
+                }
+                if (pos1.position.x > pos2.position.x)
+                {
+                    float AC = pos1.position.x - pos2.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos1.position.x < pos2.position.x)
+                {
+                    float AC = pos2.position.x - pos1.position.x;
+                    b = AC / percentage;
+                }
+                if ((float)c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
             }
             else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
             {
-
+                if (pos2.position.y > pos1.position.y)
+                {
+                    float AB = pos2.position.y - pos1.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos2.position.y < pos1.position.y)
+                {
+                    float AB = pos1.position.y - pos2.position.y;
+                    c = AB / percentage;
+                }
+                if (pos2.position.x > pos3.position.x)
+                {
+                    float AC = pos2.position.x - pos3.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos2.position.x < pos3.position.x)
+                {
+                    float AC = pos3.position.x - pos2.position.x;
+                    b = AC / percentage;
+                }
+                if ((float)c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
             }
             else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
             {
-
+                if (pos2.position.y > pos3.position.y)
+                {
+                    float AB = pos2.position.y - pos3.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos2.position.y < pos3.position.y)
+                {
+                    float AB = pos3.position.y - pos2.position.y;
+                    c = AB / percentage;
+                }
+                if (pos2.position.x > pos1.position.x)
+                {
+                    float AC = pos2.position.x - pos1.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos2.position.x < pos1.position.x)
+                {
+                    float AC = pos1.position.x - pos2.position.x;
+                    b = AC / percentage;
+                }
+                if ((float)c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
             }
             else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
             {
-
+                if (pos3.position.y > pos1.position.y)
+                {
+                    float AB = pos3.position.y - pos1.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos3.position.y < pos1.position.y)
+                {
+                    float AB = pos1.position.y - pos3.position.y;
+                    c = AB / percentage;
+                }
+                if (pos3.position.x > pos2.position.x)
+                {
+                    float AC = pos3.position.x - pos2.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos3.position.x < pos2.position.x)
+                {
+                    float AC = pos2.position.x - pos3.position.x;
+                    b = AC / percentage;
+                }
+                if ((float)c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
             }
             else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
             {
-
+                if (pos3.position.y > pos2.position.y)
+                {
+                    float AB = pos3.position.y - pos2.position.y;
+                    c = AB / percentage;
+                }
+                else if (pos3.position.y < pos2.position.y)
+                {
+                    float AB = pos2.position.y - pos3.position.y;
+                    c = AB / percentage;
+                }
+                if (pos3.position.x > pos1.position.x)
+                {
+                    float AC = pos3.position.x - pos1.position.x;
+                    b = AC / percentage;
+                }
+                else if (pos3.position.x < pos1.position.x)
+                {
+                    float AC = pos1.position.x - pos3.position.x;
+                    b = AC / percentage;
+                }
+                if ((float)c / b == Parties[0] / Parties[1])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else if ((float)c / b == Parties[1] / Parties[0])
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+                    Logging.Log("current");
+                }
+                else
+                {
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                    Logging.Log("wrong");
+                }
+            }
+            else
+            {
+                currentList[GetComponent<Pattern>().QuestionNumber] = false;
+                Logging.Log("wrong");
             }
         }
         else if (Figure == 3)
