@@ -13,13 +13,13 @@ public class ReadCSVRecorder : MonoBehaviour
 
     private void Awake()
     {
-        AddressableDataCSV.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;
+        //AddressableDataCSV.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;
     }
 
     private void OnTextJsonLoaded(AsyncOperationHandle<TextAsset> obj)
     {
         LocalDataCSV = obj.Result;
-        ReadCSV();
+        //ReadCSV();
     }
 
 
