@@ -16,8 +16,8 @@ public class SceneManager : MonoBehaviour
 
     //F++
     public GameObject Notification;
-    public GameObject Loading;
-    public GameEvent LoadingEvent;
+    //public GameObject Loading;
+    //public GameEvent LoadingEvent;
 
     bool m_ReadyToLoad = true;
     private AsyncOperationHandle<SceneInstance> loadHandle;

@@ -79,7 +79,6 @@ public class ChapterManager : MonoBehaviour
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
                 obj.transform.GetComponent<SceneManager>().Notification = NotificationObj;      //F++
-                obj.transform.GetComponent<SceneManager>().Loading = LoadingObj;                //F++
                 obj.GetComponent<RectTransform>().DOAnchorPos3DZ(0, 0);
                 ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
