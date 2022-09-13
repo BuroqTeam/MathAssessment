@@ -18,8 +18,6 @@ public class Pattern_7 : GeneralTest
     public GameObject DotParent;
     public GameObject LineParent;
     public GameObject PenTool;
-    public GameObject Y;
-    public GameObject X;
     //public GameObject PositionY;
     public GameObject PositionX;
     public List<GameObject> CellObj;
@@ -108,19 +106,11 @@ public class Pattern_7 : GeneralTest
             PositionOY.Add(pos1);
         }
     }
-
-    public void XYPosition()
-    {
-        X.transform.position = new Vector3(CellObj[49].transform.position.x + CellObj[49].GetComponent<Transform>().localScale.x * 1.2f, CellObj[49].transform.position.y * 1.1f, 0);
-        Y.transform.position = new Vector3(CellObj[94].transform.position.x , CellObj[94].transform.position.y + CellObj[94].GetComponent<Transform>().localScale.y, 0);
-    }
-         
     void Start()
     {
         
         CellPosition();
         PosY();
-        
         //ReadFromJson();
     }
 

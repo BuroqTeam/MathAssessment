@@ -3,7 +3,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Pattern_8 : GeneralTest
@@ -29,13 +28,10 @@ public class Pattern_8 : GeneralTest
     public Data_8 Data8 = new();
     public int Figure;
     public List<float> Parties;
-    public List<int> PartiesInt;
     public float a;
     public float b;
     public float c;
     public float d;
-    public List<float> Tomonlar;
-    public List<int> TomonlarInt;
     private void Awake()
     {
         
@@ -71,16 +67,11 @@ public class Pattern_8 : GeneralTest
     void DataParties()
     {
         Parties.Clear();
-        PartiesInt.Clear();
         List<string> proportion = Data8.proportion;
         float m = float.Parse(proportion[0]);
         float n = float.Parse(proportion[1]);
         Parties.Add(m);
         Parties.Add(n);
-        int a = Int32.Parse(proportion[0]);
-        int b = Int32.Parse(proportion[1]);
-        PartiesInt.Add(a);
-        PartiesInt.Add(b);
     }
   
     public void Check()
@@ -101,10 +92,20 @@ public class Pattern_8 : GeneralTest
         {
             rectangle();
         }
-        ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_8_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
-        TestManager.Instance.CheckAllIsDone();
+        //if ()
+        //{
+        //    currentList[GetComponent<Pattern>().QuestionNumber] = true;
+
+        //}
+        //else
+        //{
+        //    currentList[GetComponent<Pattern>().QuestionNumber] = false;
+
+        //}
+        //ES3.Save("ResultList", currentList);
+        //ES3.Save<bool>("Pattern_15_Check", true);
+        //GetComponent<Pattern>().IsEdited = true;
+        //TestManager.Instance.CheckAllIsDone();
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -175,155 +176,13 @@ public class Pattern_8 : GeneralTest
         GameObject lineRenderer = Instantiate(LineRenderer);
         CanvasOut.Add(lineRenderer);
         CanvasOut[2].transform.GetComponent<LineControllarPattern10>().Pattern_8 = this;
-        //GameObject meshRenderer = Instantiate(MeshRenderer);
-        //CanvasOut.Add(meshRenderer);
-        //CanvasOut[3].transform.GetComponent<MeshController>().Pattern_8 = this;
+        GameObject meshRenderer = Instantiate(MeshRenderer);
+        CanvasOut.Add(meshRenderer);
+        CanvasOut[3].transform.GetComponent<MeshController>().Pattern_8 = this;
     }
     void rectangle()
     {
-        List<bool> currentList = new();
-        currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> proportion = Data8.proportion;
 
-        Transform pos1 = PointList[0].transform;
-        Transform pos2 = PointList[1].transform;
-        Transform pos3 = PointList[2].transform;
-        Transform pos4 = PointList[3].transform;
-        Tomonlar.Clear();
-        Tomonlar.Clear();
-        if (pos1.position.x == pos4.position.x && pos2.position.x == pos3.position.x && pos1.position.y == pos2.position.y && pos3.position.y == pos4.position.y)
-        {
-            if (pos1.position.y > pos4.position.y)
-            {
-                float BC = pos1.position.y - pos4.position.y;
-                a = BC / percentage;
-            }
-            else if (pos1.position.y < pos4.position.y)
-            {
-                float BC = pos4.position.y - pos1.position.y;
-                a = BC / percentage;
-            }
-            if (pos2.position.y > pos3.position.y)
-            {
-                float AC = pos2.position.y - pos3.position.y;
-                b = AC / percentage;
-            }
-            else if (pos2.position.y < pos3.position.y)
-            {
-                float AC = pos3.position.y - pos2.position.y;
-                b = AC / percentage;
-            }
-            if (pos1.position.x > pos2.position.x)
-            {
-                float AB = pos1.position.x - pos2.position.x;
-                c = AB / percentage;
-            }
-            else if (pos1.position.x < pos2.position.x)
-            {
-                float AB = pos2.position.x - pos1.position.x;
-                c = AB / percentage;
-            }
-            if (pos3.position.x > pos4.position.x)
-            {
-                float AB = pos3.position.x - pos4.position.x;
-                d = AB / percentage;
-            }
-            else if (pos3.position.x < pos4.position.x)
-            {
-                float AB = pos4.position.x - pos3.position.x;
-                d = AB / percentage;
-            }
-            Tomonlar.Add(a);
-            Tomonlar.Add(c);
-            int someInt = (int)Tomonlar[0];
-            int someInt1 = (int)Tomonlar[1];
-            TomonlarInt.Add(someInt);
-            TomonlarInt.Add(someInt1);
-            if (Mathf.Approximately(a, b) && Mathf.Approximately(c, d))
-            {
-                bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
-                
-                if (isEqual)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Logging.Log("Tortburchak current-1");
-                }
-                else
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Logging.Log("Tortburchak wrong-2");
-                }
-            }
-        }
-        else if (pos1.position.x == pos2.position.x && pos3.position.x == pos4.position.x && pos1.position.y == pos4.position.y && pos2.position.y == pos3.position.y)
-        {
-            if (pos1.position.y > pos2.position.y)
-            {
-                float BC = pos1.position.y - pos2.position.y;
-                a = BC / percentage;
-            }
-            else if (pos1.position.y < pos2.position.y)
-            {
-                float BC = pos2.position.y - pos1.position.y;
-                a = BC / percentage;
-            }
-            if (pos3.position.y > pos4.position.y)
-            {
-                float AC = pos3.position.y - pos4.position.y;
-                b = AC / percentage;
-            }
-            else if (pos3.position.y < pos4.position.y)
-            {
-                float AC = pos4.position.y - pos3.position.y;
-                b = AC / percentage;
-            }
-            if (pos1.position.x > pos4.position.x)
-            {
-                float AB = pos4.position.x - pos1.position.x;
-                c = AB / percentage;
-            }
-            else if (pos1.position.x < pos4.position.x)
-            {
-                float AB = pos4.position.x - pos1.position.x;
-                c = AB / percentage;
-            }
-            if (pos2.position.x > pos3.position.x)
-            {
-                float AB = pos2.position.x - pos3.position.x;
-                d = AB / percentage;
-            }
-            else if (pos2.position.x < pos3.position.x)
-            {
-                float AB = pos3.position.x - pos2.position.x;
-                d = AB / percentage;
-            }
-            Tomonlar.Add(a);
-            Tomonlar.Add(c);
-            int someInt = (int)Tomonlar[0];
-            int someInt1 = (int)Tomonlar[1];
-            TomonlarInt.Add(someInt);
-            TomonlarInt.Add(someInt1);
-            if (Mathf.Approximately(a, b) && Mathf.Approximately(c, d))
-            {
-                bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
-
-                if (isEqual)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Logging.Log("Tortburchak current-1");
-                }
-                else
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Logging.Log("Tortburchak wrong-2");
-                }
-            }
-        }
-        else
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("Tortburchak wrong-5");
-        }
     }
     void Triangle()
     {
