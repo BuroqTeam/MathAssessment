@@ -208,7 +208,7 @@ public class Pattern_8 : GeneralTest
         TomonlarInt.Clear();
         if (pos1.position.x == pos4.position.x && pos2.position.x == pos3.position.x && pos1.position.y == pos2.position.y && pos3.position.y == pos4.position.y)
         {
-            Logging.Log("123");
+            //Logging.Log("123");
             // (pos3.positi.x == pos2.position.x && pos1.position.x == pos4.position.x && pos2.position.y == pos1.position.y && pos3.position.y == pos4.position.y)on
             if (pos1.position.y > pos4.position.y)
             {
@@ -263,18 +263,18 @@ public class Pattern_8 : GeneralTest
                 if (isEqual)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Logging.Log("Tortburchak current-1");
+                    //Logging.Log("Tortburchak current-1");
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Logging.Log("Tortburchak wrong-2");
+                    //Logging.Log("Tortburchak wrong-2");
                 }
             }
         }
         else if (pos1.position.x == pos2.position.x && pos3.position.x == pos4.position.x && pos1.position.y == pos4.position.y && pos2.position.y == pos3.position.y)
         {
-            Logging.Log("1234");
+            //Logging.Log("1234");
             if (pos1.position.y > pos2.position.y)
             {
                 float BC = pos1.position.y - pos2.position.y;
@@ -328,12 +328,12 @@ public class Pattern_8 : GeneralTest
                 if (isEqual)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Logging.Log("Tortburchak current-1");
+                    //Logging.Log("Tortburchak current-1");
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Logging.Log("Tortburchak wrong-2");
+                    //Logging.Log("Tortburchak wrong-2");
                 }
             }
 
@@ -342,7 +342,7 @@ public class Pattern_8 : GeneralTest
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("Tortburchak wrong-5");
+            //Logging.Log("Tortburchak wrong-5");
         }
     }
     void Triangle()
@@ -390,12 +390,12 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately (a , Parties[0]) && Mathf.Approximately(d , Parties[1]) && Mathf.Approximately(b , Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-1");
+                //Logging.Log("current-1");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-2");
+                //Logging.Log("wrong-2");
             }
         }
         else if (pos1.position.y == pos2.position.y)
@@ -476,12 +476,12 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately(a, Parties[0]) && Mathf.Approximately(d, Parties[1]) && Mathf.Approximately(b, Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-4");
+                //Logging.Log("current-4");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-5");
+                //Logging.Log("wrong-5");
             }
         }
         else if (pos1.position.y == pos3.position.y)
@@ -519,12 +519,12 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately(a, Parties[0]) && Mathf.Approximately(d, Parties[1]) && Mathf.Approximately(b, Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-6");
+                //Logging.Log("current-6");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }       
         else if (pos2.position.x == pos3.position.x)
@@ -562,12 +562,12 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately(a, Parties[0]) && Mathf.Approximately(d, Parties[1]) && Mathf.Approximately(b, Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-8");
+                //Logging.Log("current-8");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-9");
+                //Logging.Log("wrong-9");
             }
         }
         else if (pos2.position.y == pos3.position.y)
@@ -605,18 +605,18 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately(a, Parties[0]) && Mathf.Approximately(d, Parties[1]) && Mathf.Approximately(b, Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-10");
+                //Logging.Log("current-10");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-11");
+                //Logging.Log("wrong-11");
             }
         }       
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("wrong-20");
+            //Logging.Log("wrong-20");
         }
     }
     void RightTriangle()
@@ -662,12 +662,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }            
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else if (pos1.position.x == pos3.position.x && pos1.position.y == pos2.position.y)
@@ -702,12 +702,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
@@ -742,12 +742,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
@@ -782,12 +782,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
@@ -822,12 +822,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
@@ -862,18 +862,18 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
+                //Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
+                //Logging.Log("wrong-7");
             }
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("wrong19");
+            //Logging.Log("wrong19");
         }
     }
 }
