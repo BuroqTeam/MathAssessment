@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 1142064493}
   - component: {fileID: 1142064492}
   - component: {fileID: 1142064491}
+  - component: {fileID: 1142064494}
   m_Layer: 5
   m_Name: Algebra
   m_TagString: Untagged
@@ -606,7 +607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5df82d12f5544c8469e1a70d04a406f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c50572ac646d0f84096f30602f9ff30e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -624,6 +625,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142064489}
   m_CullTransparentMesh: 1
+--- !u!114 &1142064494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142064489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!224 &1456025679 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1459786876119680968, guid: bb56164435de8f740982dc1e23ed1107, type: 3}
@@ -790,6 +806,7 @@ GameObject:
   - component: {fileID: 1593808718}
   - component: {fileID: 1593808717}
   - component: {fileID: 1593808716}
+  - component: {fileID: 1593808719}
   m_Layer: 5
   m_Name: Geometriya
   m_TagString: Untagged
@@ -906,7 +923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5df82d12f5544c8469e1a70d04a406f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c50572ac646d0f84096f30602f9ff30e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -924,6 +941,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593808714}
   m_CullTransparentMesh: 1
+--- !u!114 &1593808719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593808714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: -4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2003417390
 GameObject:
   m_ObjectHideFlags: 0
