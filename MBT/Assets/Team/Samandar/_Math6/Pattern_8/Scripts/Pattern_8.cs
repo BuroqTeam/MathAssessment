@@ -102,7 +102,7 @@ public class Pattern_8 : GeneralTest
         }
 
         ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_15_Check", true);
+        ES3.Save<bool>("Pattern_8_Check", true);
         GetComponent<Pattern>().IsEdited = true;
         TestManager.Instance.CheckAllIsDone();
     }
