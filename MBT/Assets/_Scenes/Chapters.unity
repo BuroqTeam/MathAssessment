@@ -165,8 +165,6 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   Notification: {fileID: 1591855047}
-  Loading: {fileID: 0}
-  LoadingEvent: {fileID: 0}
 --- !u!4 &354233176
 Transform:
   m_ObjectHideFlags: 0
@@ -202,8 +200,23 @@ MonoBehaviour:
   NumberOfChapter: 0
   ChapterGorup: []
   ChapterPrefab: {fileID: 8267410294984318487, guid: 5e6b95eae22598b4b9616fa660f3071d, type: 3}
-  LoadingObj: {fileID: 0}
+  ChapterButtons: []
   NotificationObj: {fileID: 1591855047}
+  ButtonEnableFalse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 354233177}
+        m_TargetAssemblyTypeName: ChapterManager, Assembly-CSharp
+        m_MethodName: UnEnableButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &354233178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833100258059695005, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 833100258059695005, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -828,6 +841,14 @@ PrefabInstance:
     - target: {fileID: 2289702975197885437, guid: e27889518a45a684280d007b548d262d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641635975480480624, guid: e27889518a45a684280d007b548d262d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641635975480480624, guid: e27889518a45a684280d007b548d262d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27889518a45a684280d007b548d262d, type: 3}

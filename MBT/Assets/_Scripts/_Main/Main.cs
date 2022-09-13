@@ -42,4 +42,16 @@ public class Main : MonoBehaviour
     }
 
 
+    public void UnEnableButtons(bool _isTrue)
+    {
+        for (int i = 0; i < SinfButtonGroup.Count; i++)
+        {
+            if (SinfButtonGroup[i].GetComponent<Button>().interactable)
+            {
+                SinfButtonGroup[i].GetComponent<Button>().enabled = _isTrue;
+            }            
+        }
+        Logging.Log("Main UnEnableButtons() " + _isTrue);
+    }
+
 }

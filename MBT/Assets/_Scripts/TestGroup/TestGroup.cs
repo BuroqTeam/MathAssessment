@@ -13,6 +13,8 @@ public class TestGroup : MonoBehaviour
     public TestGroupRaw RawTestGroup = new TestGroupRaw();
     Button button;
 
+    public GameObject MainObject;
+
     void Start()
     {
         RadilaSlider.color = colorSO.Blue;
@@ -24,6 +26,7 @@ public class TestGroup : MonoBehaviour
     {
         ES3.Save<int>("TestGroup", int.Parse(RawTestGroup.number));       
         GetComponent<SceneManager>().LoadLocalScene();
+        MainObject.GetComponent<TestGroupManager>().UnEnableButtons();
     }
 
     public void UpdateInfo()
