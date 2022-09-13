@@ -7,7 +7,8 @@ public class CellParent : MonoBehaviour
 
     void Start()
     {        
-        SquareLocation();      
+        SquareLocation();
+        Pattern_7.XYPosition();
     }
 
     public void SquareLocation()
