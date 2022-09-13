@@ -101,10 +101,7 @@ public class Pattern_8 : GeneralTest
             rectangle();
         }
 
-        ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_8_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
-        TestManager.Instance.CheckAllIsDone();
+        
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -344,6 +341,10 @@ public class Pattern_8 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             //Logging.Log("Tortburchak wrong-5");
         }
+        ES3.Save("ResultList", currentList);
+        ES3.Save<bool>("Pattern_8_Check", true);
+        GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
     void Triangle()
     {
@@ -618,6 +619,10 @@ public class Pattern_8 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             //Logging.Log("wrong-20");
         }
+        ES3.Save("ResultList", currentList);
+        ES3.Save<bool>("Pattern_8_Check", true);
+        GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
     void RightTriangle()
     {
@@ -875,6 +880,10 @@ public class Pattern_8 : GeneralTest
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
             //Logging.Log("wrong19");
         }
+        ES3.Save("ResultList", currentList);
+        ES3.Save<bool>("Pattern_8_Check", true);
+        GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
 }
 [SerializeField]
