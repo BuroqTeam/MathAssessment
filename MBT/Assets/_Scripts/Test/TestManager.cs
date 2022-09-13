@@ -36,6 +36,7 @@ public class TestManager : MonoBehaviour
 
     private void Awake()
     {
+        //Logging.Log("Beginning");
         Loading.SetActive(true);
         Instance = this;
     }
@@ -155,7 +156,7 @@ public class TestManager : MonoBehaviour
         ES3.Save<List<bool>>("ResultList", resultList);
 
         LoadingEvent.Raise();
-        //Loading.transform.GetChild(0).GetComponent<GameEventListener>().Event.Raise();
+        //Logging.Log("End");
     }
 
     public void CheckAllIsDone()
