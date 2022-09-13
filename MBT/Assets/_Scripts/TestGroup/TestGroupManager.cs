@@ -24,6 +24,8 @@ public class TestGroupManager : MonoBehaviour
     private TextAsset _curentJson;
     private DataBaseSO _jsonCollectionSO;
 
+    public List<GameObject> TestButtons;    //F++
+
 
     private void Awake()
     {
@@ -84,6 +86,8 @@ public class TestGroupManager : MonoBehaviour
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;                
                 obj.transform.GetComponent<SceneManager>().Notification = this.GetComponent<SceneManager>().Notification; //F++
+                obj.GetComponent<TestGroup>().MainObject = this.gameObject;   //F++
+                TestButtons.Add(obj);   //F++
                 TestGroupButtons.Add(obj.GetComponent<TestGroup>());
             }
             
@@ -134,4 +138,15 @@ public class TestGroupManager : MonoBehaviour
         }
         
     }
+
+
+    public void UnEnableButtons()
+    {
+        for (int i = 0; i < TestButtons.Count; i++)
+        {
+            TestButtons[i].GetComponent<Button>().enabled = false;
+        }
+        Logging.Log("TestGroupManager UnEnableButtons() ");
+    }
+
 }
