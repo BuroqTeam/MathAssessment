@@ -49,12 +49,12 @@ public class Pattern_15 : GeneralTest
         if (_pattenBool == true && _click == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Corrent");
+            //Debug.Log("Corrent");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_15_Check", true);
@@ -63,17 +63,11 @@ public class Pattern_15 : GeneralTest
     public void Active()
     {
         if (_click)
-        {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishButton.Raise();
-            //}
-            //else
-            //{
-               
-            //}
+        {            
             ES3.Save<bool>("Pattern_15_Check", true);
-        }
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
+        }        
     }
    
     public void ReadFromJson()

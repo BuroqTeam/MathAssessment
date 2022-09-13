@@ -7,7 +7,7 @@ public class CellParent : MonoBehaviour
 
     void Start()
     {        
-        SquareLocation();
+        SquareLocation();      
     }
 
     public void SquareLocation()

@@ -28,6 +28,7 @@ public class ButtonAnswer : MonoBehaviour
             gameObject.transform.GetChild(1).GetComponent<TEXDraw>().color = ColorCollectionSO.DarkBlue;
         }
         Pattern12.OnTrue();
+        Pattern12.Check();
     }
 
     public void WriteCurrentAnswer(string str)

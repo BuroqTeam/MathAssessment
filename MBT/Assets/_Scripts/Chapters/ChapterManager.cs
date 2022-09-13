@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class ChapterManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class ChapterManager : MonoBehaviour
     IList<ChapterRaw> _chapterGorup;
     JObject _jo;
 
+    //F++
+    public List<GameObject> ChapterButtons;
+    public GameObject NotificationObj;
+    public UnityEvent ButtonEnableFalse;
+    //F++
 
     private void Awake()
     {
@@ -74,6 +80,10 @@ public class ChapterManager : MonoBehaviour
                 GameObject obj = Instantiate(ChapterPrefab);
                 obj.transform.SetParent(GridLayout.transform);
                 obj.transform.localScale = Vector3.one;
+                obj.transform.GetComponent<SceneManager>().Notification = NotificationObj;      //F++
+                //obj.transform.GetComponent<SceneManager>().ButtonEnableFalse = ButtonEnableFalse;  //F++
+                obj.GetComponent<Chapter>().MainObject = this.gameObject;
+                ChapterButtons.Add(obj);    //F++
                 obj.GetComponent<RectTransform>().DOAnchorPos3DZ(0, 0);
                 ChapterGorup.Add(obj.GetComponent<Chapter>());
             }
@@ -117,6 +127,18 @@ public class ChapterManager : MonoBehaviour
         }
         return k;
     }
+
+
+    public void UnEnableButtons()
+    {
+        for (int i = 0; i < ChapterButtons.Count; i++)
+        {
+            ChapterButtons[i].GetComponent<Button>().enabled = false;
+        }
+        Logging.Log("ChapterManager UnEnableButtons()");
+    }
+
+
 
 }
 

@@ -674,7 +674,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: UNITY_VISUAL_SCRIPTING;TextMeshPro
+    Android: UNITY_VISUAL_SCRIPTING;TextMeshPro;ENABLE_LOG
     CloudRendering: UNITY_VISUAL_SCRIPTING;TextMeshPro
     EmbeddedLinux: UNITY_VISUAL_SCRIPTING;TextMeshPro
     GameCoreXboxOne: TextMeshPro

@@ -59,6 +59,7 @@ public class DropDownP4 : MonoBehaviour/*, IPointerClickHandler*/
             //Debug.Log("Noto'g'ri javob tanlandi.");
         }
         Pattern4.CheckAllAnswers();
+        Pattern4.Check();
     }
 
 

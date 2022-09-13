@@ -48,22 +48,13 @@ public class DropDownP9 : MonoBehaviour
     public void DropDown_IndexChangedd(int index)
     {        
         CurrentAnswer = StrList[index];
-        Debug.Log("index = " + index + "  " + StrList[index]);
+        //Logging.Log("index = " + index + "  " + StrList[index]);
         DropDownGameObject.GetComponent<Image>().sprite = DropDownBlueSprite;
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         DropDownObj.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color = new Color(1, 1, 1, 1);
 
         DropDownObj.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = SpriteCornerDown;
-        //if (_IsFirstTime)        {
-        //    _IsFirstTime = false;
-        //    DropDownObj.ClearOptions();
-        //    StrList = new List<string>() { ">", "<", "=" };
-        //    DropDownObj.AddOptions(StrList);
-        //    DropDownObj.captionText.text = CurrentAnswer;
-        //    //DropDownObj.options.RemoveAt(0);
-        //    //DropDownObj.OnSelect(DropDownObj.options[1]);   
-        //}
-        
+                
         CheckingAnswer();
     }
 
@@ -72,6 +63,7 @@ public class DropDownP9 : MonoBehaviour
     void CheckingAnswer()
     {
         Pattern9.CheckAllAnswers();
+        Pattern9.Check();
     }
 
         

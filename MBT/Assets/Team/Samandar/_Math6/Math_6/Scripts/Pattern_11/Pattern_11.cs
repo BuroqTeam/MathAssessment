@@ -60,30 +60,23 @@ public class Pattern_11 : GeneralTest
         for (int i = 0; i < str.Count; i++)
         {
             bool _onTrue = LeftList[i].GetComponent<PushableShadow>()._IsEmpty;
-            if (!_onTrue)
+            if (_onTrue)
             {
                 n++;
             }
         }
 
         if (n == str.Count)
-        {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishButton.Raise();
-            //}
-            //else
-            //{
-                
-            //}
+        {            
+            GetComponent<Pattern>().IsEdited = false;
             ES3.Save<bool>("Pattern_11_Check", true);
+            TestManager.Instance.CheckAllIsDone();
         }
         else
-        {
-            
+        {           
             ES3.Save<bool>("Pattern_11_Check", false);
-            
-           
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
         }
     }
 
@@ -187,17 +180,17 @@ public class Pattern_11 : GeneralTest
         if (Correct.SequenceEqual(Answer))
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else if (ReverseCorrect.SequenceEqual(Answer))
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("Wrong");
+            //Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_11_Check", true);

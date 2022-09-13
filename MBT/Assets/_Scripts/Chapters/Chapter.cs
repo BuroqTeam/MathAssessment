@@ -15,9 +15,9 @@ public class Chapter : MonoBehaviour
 
     public ChapterRaw chapterRaw = new();
     JObject jo;
-  
 
 
+    public GameObject MainObject;   //F++
 
 
     public void UpdateInfo(JObject jsonObj)
@@ -49,6 +49,7 @@ public class Chapter : MonoBehaviour
         ES3.Save<string>("ChapterName", chapterRaw.name);
         ES3.Save<string>("ChapterDescription", chapterRaw.description);        
         GetComponent<SceneManager>().LoadLocalScene();
+        MainObject.GetComponent<ChapterManager>().UnEnableButtons();    //F++
     }
 
 }

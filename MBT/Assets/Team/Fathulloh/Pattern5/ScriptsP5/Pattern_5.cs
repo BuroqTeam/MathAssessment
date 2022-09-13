@@ -198,7 +198,8 @@ public class Pattern_5 : GeneralTest
             //DeactiveNext.Raise();
             //ES3.Save<bool>("Pattern_5_Check", false);     // 5-Sen       
         }
-                           
+
+        Check();
     }
 
 
