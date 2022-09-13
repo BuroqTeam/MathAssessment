@@ -9,6 +9,8 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 public class MainManager : MonoBehaviour
 {
     public Main MainObj;
+    public AssetReference AddressableDateAlgebra;
+    public AssetReference AddressableDateGeometry;
     public AssetReference AddressableMainData;
    
     
@@ -26,7 +28,10 @@ public class MainManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        
+        if (ES3.Load<string>("Subject").Equals("Algebra"))
+            AddressableMainData = AddressableDateAlgebra;
+        else
+            AddressableMainData = AddressableDateGeometry;
         AddressableMainData.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;                
     }
 

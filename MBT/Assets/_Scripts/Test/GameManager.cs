@@ -84,7 +84,8 @@ public class GameManager : MonoBehaviour
         List<bool> resultList = new(ES3.Load<List<bool>>("ResultList"));
         for (int i = 0; i < resultList.Count; i++)
         {
-            Debug.Log(resultList[i]);
+            //Debug.Log(resultList[i]);
+            Logging.Log(resultList[i]);
             if (resultList[i])
             {
                 correctVal++;
