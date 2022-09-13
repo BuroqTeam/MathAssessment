@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1203395149595312261}
   - component: {fileID: 1203395149595312258}
   - component: {fileID: 4700237501330652485}
+  - component: {fileID: 7035057648575941377}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -69,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17d725727faa04f42a3f26d03c4ab695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 167524eaa4de9884da504844c82099ff, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -150,6 +151,24 @@ MonoBehaviour:
   CorrectAnswer: 0
   Select: 0
   Pattern2: {fileID: 0}
+  CorrectAnswerNumber: 0
+  SelectAnswerNumber: 0
+  ResultNumber: 0
+--- !u!114 &7035057648575941377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203395149595312256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 2.81, y: -1.73}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1203395149681104075
 GameObject:
   m_ObjectHideFlags: 0

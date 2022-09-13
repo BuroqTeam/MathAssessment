@@ -6,6 +6,7 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public Pattern_10 Pattern10;
     public float Value;
     public GameObject CanvasObj;
+    private int siblingIndexObj;
     private RectTransform _rectTransform;
     private  Vector3 _lastRectTransform;
     private CanvasGroup _canvasGroup;
@@ -19,6 +20,8 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.DOScale(1f, 0);
+        //siblingIndexObj = transform.GetSiblingIndex();
+        //transform.SetSiblingIndex(Pattern10.transform.childCount -1);
         GameObject obj = Instantiate(gameObject, gameObject.transform.parent);
         obj.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         _canvasGroup.blocksRaycasts = false;
@@ -30,6 +33,7 @@ public class P10_ButtonControl : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public void OnEndDrag(PointerEventData eventData)
     {
         //transform.DOScale(0.7f, 0);
+        //transform.SetSiblingIndex(siblingIndexObj);
         _canvasGroup.blocksRaycasts = true;
         GetComponent<RectTransform>().anchoredPosition = _lastRectTransform;
         Pattern10.Result();
