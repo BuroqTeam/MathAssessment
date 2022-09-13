@@ -180,6 +180,20 @@ public class Pattern_8 : GeneralTest
         CanvasOut.Add(meshRenderer);
         CanvasOut[3].transform.GetComponent<MeshController>().Pattern_8 = this;
     }
+    
+    public void SquareLocation()
+    {
+        for (float i = 0; i < width; i+=percentage)
+        {
+            for (float j = 0; j < height; j+=percentage)
+            {
+                GameObject SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
+                //SpawnedCell.name = $"Cell {i}, {j}";                
+                CellGroup.Add(SpawnedCell.GetComponent<Cell>());                
+            }
+        }        
+    }
+
     void rectangle()
     {
 
