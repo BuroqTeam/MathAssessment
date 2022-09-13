@@ -34,15 +34,14 @@ public class Pattern_8 : GeneralTest
     public float b;
     public float c;
     public float d;
-    List<float> Tomonlar;
+    public List<float> Tomonlar;
     public List<int> TomonlarInt;
+    public GameObject Olcham;
     private void Awake()
-    {
-        
+    {        
         Instance = this;
         percentage = Cell.transform.localScale.x;
-        InstantiateObj();
-        
+        InstantiateObj();        
     }
     private void OnEnable()
     {
@@ -176,11 +175,12 @@ public class Pattern_8 : GeneralTest
         GameObject lineRenderer = Instantiate(LineRenderer);
         CanvasOut.Add(lineRenderer);
         CanvasOut[2].transform.GetComponent<LineControllarPattern10>().Pattern_8 = this;
-        GameObject meshRenderer = Instantiate(MeshRenderer);
-        CanvasOut.Add(meshRenderer);
-        CanvasOut[3].transform.GetComponent<MeshController>().Pattern_8 = this;
+        
     }
-    
+    public void OlchamPosition()
+    {
+        Olcham.transform.position = new Vector3(CellObj[9].transform.position.x + 1.7f * percentage, CellObj[9].transform.position.y, 0);
+    }
     public void SquareLocation()
     {
         for (float i = 0; i < width; i+=percentage)
@@ -205,9 +205,11 @@ public class Pattern_8 : GeneralTest
         Transform pos3 = PointList[2].transform;
         Transform pos4 = PointList[3].transform;
         Tomonlar.Clear();
-        Tomonlar.Clear();
+        TomonlarInt.Clear();
         if (pos1.position.x == pos4.position.x && pos2.position.x == pos3.position.x && pos1.position.y == pos2.position.y && pos3.position.y == pos4.position.y)
         {
+            Logging.Log("123");
+            // (pos3.positi.x == pos2.position.x && pos1.position.x == pos4.position.x && pos2.position.y == pos1.position.y && pos3.position.y == pos4.position.y)on
             if (pos1.position.y > pos4.position.y)
             {
                 float BC = pos1.position.y - pos4.position.y;
@@ -250,8 +252,8 @@ public class Pattern_8 : GeneralTest
             }
             Tomonlar.Add(a);
             Tomonlar.Add(c);
-            int someInt = (int)Tomonlar[0];
-            int someInt1 = (int)Tomonlar[1];
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
             TomonlarInt.Add(someInt);
             TomonlarInt.Add(someInt1);
             if (Mathf.Approximately(a, b) && Mathf.Approximately(c, d))
@@ -272,6 +274,7 @@ public class Pattern_8 : GeneralTest
         }
         else if (pos1.position.x == pos2.position.x && pos3.position.x == pos4.position.x && pos1.position.y == pos4.position.y && pos2.position.y == pos3.position.y)
         {
+            Logging.Log("1234");
             if (pos1.position.y > pos2.position.y)
             {
                 float BC = pos1.position.y - pos2.position.y;
@@ -294,7 +297,7 @@ public class Pattern_8 : GeneralTest
             }
             if (pos1.position.x > pos4.position.x)
             {
-                float AB = pos4.position.x - pos1.position.x;
+                float AB = pos1.position.x - pos4.position.x;
                 c = AB / percentage;
             }
             else if (pos1.position.x < pos4.position.x)
@@ -314,8 +317,8 @@ public class Pattern_8 : GeneralTest
             }
             Tomonlar.Add(a);
             Tomonlar.Add(c);
-            int someInt = (int)Tomonlar[0];
-            int someInt1 = (int)Tomonlar[1];
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
             TomonlarInt.Add(someInt);
             TomonlarInt.Add(someInt1);
             if (Mathf.Approximately(a, b) && Mathf.Approximately(c, d))
@@ -333,7 +336,9 @@ public class Pattern_8 : GeneralTest
                     Logging.Log("Tortburchak wrong-2");
                 }
             }
+
         }
+        
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
@@ -623,7 +628,8 @@ public class Pattern_8 : GeneralTest
         Transform pos1 = PointList[0].transform;
         Transform pos2 = PointList[1].transform;
         Transform pos3 = PointList[2].transform;
-
+        Tomonlar.Clear();
+        TomonlarInt.Clear();
         if (pos1.position.x == pos2.position.x && pos1.position.y == pos3.position.y)
         {
             if (pos1.position.y > pos2.position.y)
@@ -646,16 +652,18 @@ public class Pattern_8 : GeneralTest
                 float AC = pos3.position.x - pos1.position.x;
                 b = AC / percentage;
             }
-            if (Mathf.Approximately (c / b , Parties[0] / Parties[1]))
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
                 Logging.Log("current-5");
-            }
-            else if (Mathf.Approximately (c / b , Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-6");
-            }
+            }            
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
@@ -684,20 +692,22 @@ public class Pattern_8 : GeneralTest
                 float AC = pos2.position.x - pos1.position.x;
                 b = AC / percentage;
             }
-            if (Mathf.Approximately(c / b, Parties[0] / Parties[1]))
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current4");
-            }
-            else if (Mathf.Approximately(c / b, Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current5");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong6");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
@@ -722,20 +732,22 @@ public class Pattern_8 : GeneralTest
                 float AC = pos3.position.x - pos2.position.x;
                 b = AC / percentage;
             }
-            if (Mathf.Approximately(c / b, Parties[0] / Parties[1]))
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current7");
-            }
-            else if (Mathf.Approximately(c / b, Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current8");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong9");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
@@ -760,20 +772,22 @@ public class Pattern_8 : GeneralTest
                 float AC = pos1.position.x - pos2.position.x;
                 b = AC / percentage;
             }
-            if (Mathf.Approximately(c / b, Parties[0] / Parties[1]))
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current10");
-            }
-            else if (Mathf.Approximately(c / b, Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current11");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong12");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
@@ -798,20 +812,22 @@ public class Pattern_8 : GeneralTest
                 float AC = pos2.position.x - pos3.position.x;
                 b = AC / percentage;
             }
-            if (Mathf.Approximately(c / b, Parties[0] / Parties[1]))
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current13");
-            }
-            else if (Mathf.Approximately(c / b, Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current14");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong15");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
@@ -836,20 +852,22 @@ public class Pattern_8 : GeneralTest
                 float AC = pos1.position.x - pos3.position.x;
                 b = AC / percentage;
             }
-            if (c / b == Parties[0] / Parties[1])
+            Tomonlar.Add(c);
+            Tomonlar.Add(b);
+            int someInt = Convert.ToInt32(Tomonlar[0]);
+            int someInt1 = Convert.ToInt32(Tomonlar[1]);
+            TomonlarInt.Add(someInt);
+            TomonlarInt.Add(someInt1);
+            bool isEqual = PartiesInt.OrderBy(x => x).SequenceEqual(TomonlarInt.OrderBy(x => x));
+            if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current16");
-            }
-            else if (Mathf.Approximately(c / b, Parties[1] / Parties[0]))
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current17");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong18");
+                Logging.Log("wrong-7");
             }
         }
         else

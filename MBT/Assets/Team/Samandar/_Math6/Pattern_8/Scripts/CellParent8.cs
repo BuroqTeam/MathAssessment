@@ -9,6 +9,7 @@ public class CellParent8 : MonoBehaviour
     void Start()
     {
         SquareLocation();
+        Pattern_8.OlchamPosition();
     }
     private void Awake()
     {
