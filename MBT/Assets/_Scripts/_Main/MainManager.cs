@@ -41,7 +41,7 @@ public class MainManager : MonoBehaviour
 
     public void SetClassKey(int index)
     {
-        ES3.Save<int>("ClassKey", index);
+        ES3.Save<int>("ClassKey", index);        
         CheckJsonFile();//F++
         //GetComponent<SceneManager>().LoadLocalScene();
     }
@@ -91,6 +91,7 @@ public class MainManager : MonoBehaviour
         
         if (_curentJson.text.Length != 0)
         {
+            MainObj.UnEnableButtons(false);     //F++
             GetComponent<SceneManager>().LoadLocalScene();
         }
         else

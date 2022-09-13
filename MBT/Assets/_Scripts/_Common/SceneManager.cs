@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -16,7 +17,7 @@ public class SceneManager : MonoBehaviour
 
     //F++
     public GameObject Notification;
-    //public GameObject Loading;
+    //public UnityEvent ButtonEnableFalse;    
     //public GameEvent LoadingEvent;
 
     bool m_ReadyToLoad = true;
@@ -33,7 +34,11 @@ public class SceneManager : MonoBehaviour
 
     public void LoadLocalScene()
     {
-        //Logging.Log("Loading is full");
+        //if (ButtonEnableFalse != null)
+        //{
+        //    ButtonEnableFalse.Invoke();
+        //}
+        
         //Loading.SetActive(true);
 
         StartCoroutine(CheckInternetConnection(isConnected =>
@@ -56,16 +61,7 @@ public class SceneManager : MonoBehaviour
             {
                 Notification.SetActive(true);
             }
-        }));
-
-        //if (Loading != null)    // F++
-        //{
-            
-        //}
-        //else if (Loading == null)// bu shart loading hali qo'shilmagan paytda qolganlarni ishiga hal bermaslik uchun yozilgan edi.
-        //{
-        //    Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
-        //}
+        }));        
 
         //Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
     }
