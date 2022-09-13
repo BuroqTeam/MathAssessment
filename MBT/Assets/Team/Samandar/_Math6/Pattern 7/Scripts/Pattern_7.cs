@@ -18,6 +18,8 @@ public class Pattern_7 : GeneralTest
     public GameObject DotParent;
     public GameObject LineParent;
     public GameObject PenTool;
+    public GameObject Y;
+    public GameObject X;
     //public GameObject PositionY;
     public GameObject PositionX;
     public List<GameObject> CellObj;
@@ -39,6 +41,7 @@ public class Pattern_7 : GeneralTest
     public bool _click;
     public Data_7 Data7 = new();
     public float percentage;
+
     private void Awake()
     {
         CellParent.GetComponent<CellParent>().Pattern_7 = this;
@@ -96,6 +99,11 @@ public class Pattern_7 : GeneralTest
         CanvasOut.Add(dot);
         CanvasOut.Add(line);
         CanvasOut.Add(obj);
+    }
+    public void XYPosition()
+    {
+        X.transform.position = new Vector3(CellObj[49].transform.position.x + CellObj[49].GetComponent<Transform>().localScale.x * 1.2f, CellObj[49].transform.position.y * 1.1f, 0);
+        Y.transform.position = new Vector3(CellObj[94].transform.position.x, CellObj[94].transform.position.y + CellObj[94].GetComponent<Transform>().localScale.y, 0);
     }
     public void PosY()
     {
