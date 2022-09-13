@@ -51,7 +51,7 @@ public class Main : MonoBehaviour
                 SinfButtonGroup[i].GetComponent<Button>().enabled = _isTrue;
             }            
         }
-        Logging.Log("Main UnEnableButtons() " + _isTrue);
+        //Logging.Log("Main UnEnableButtons() " + _isTrue);
     }
 
 }

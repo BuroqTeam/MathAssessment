@@ -404,7 +404,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 90, y: -90}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060647748
 MonoBehaviour:
@@ -703,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NotificationInternet
       objectReference: {fileID: 0}
+    - target: {fileID: 833100258059695004, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 833100258059695005, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -842,6 +846,26 @@ PrefabInstance:
     - target: {fileID: 833100258093404518, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 833100258252072984, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_fontSize
+      value: 42.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 833100258252072984, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
+    - target: {fileID: 833100258252072984, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 833100258252072984, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3648660828451113216, guid: 907397e6e5950334cb36bce5b6c8dfa7, type: 2}
+    - target: {fileID: 833100258252072984, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9916b67d274c1af49bb7321611149ed0, type: 3}

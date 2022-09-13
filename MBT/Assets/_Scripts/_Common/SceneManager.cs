@@ -34,11 +34,11 @@ public class SceneManager : MonoBehaviour
 
     public void LoadLocalScene()
     {
-        //if (ButtonEnableFalse != null)
+        //if (Scene.SubObjectName == "Test")
         //{
-        //    ButtonEnableFalse.Invoke();
+        //    Logging.Log("")
         //}
-        
+
         //Loading.SetActive(true);
 
         StartCoroutine(CheckInternetConnection(isConnected =>
