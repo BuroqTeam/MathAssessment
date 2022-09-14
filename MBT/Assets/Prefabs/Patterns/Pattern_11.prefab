@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5085727252323486133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsStatus: 0
+  IsEdited: 0
   PatternID: 11
   IsAvailable: 1
   Event: {fileID: 11400000, guid: 1604a74512447ee4baddce6e6923b2d6, type: 2}
@@ -100,8 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
   FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
-  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   PushableShadow: {fileID: 5744802171599968904, guid: 40cdd1848defa094eafa90b0531daf13, type: 3}
   PushableRectangle: {fileID: 4632583525186074256, guid: c58deb2526df73346b11449a0407aa04, type: 3}
   PanelLeft: {fileID: 5085727253473711642}
@@ -126,6 +124,7 @@ GameObject:
   - component: {fileID: 5085727252675868509}
   - component: {fileID: 5085727252675868510}
   - component: {fileID: 5085727252675868508}
+  - component: {fileID: 3580995643231641043}
   m_Layer: 5
   m_Name: PanelRight
   m_TagString: Untagged
@@ -150,8 +149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -350, y: 0}
-  m_SizeDelta: {x: 700, y: 0}
+  m_AnchoredPosition: {x: -350, y: -0.00012207031}
+  m_SizeDelta: {x: 700, y: -95.1317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5085727252675868509
 CanvasRenderer:
@@ -181,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf2de56672a004947a8685f712165a5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb55df9b9a4678742b4089ac54f6a85e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -217,6 +216,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3580995643231641043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085727252675868504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -4.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5085727253473711642
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +243,7 @@ GameObject:
   - component: {fileID: 5085727253473711646}
   - component: {fileID: 5085727253473711647}
   - component: {fileID: 5085727253473711640}
+  - component: {fileID: 6462090627946233343}
   m_Layer: 5
   m_Name: PanelLeft
   m_TagString: Untagged
@@ -253,8 +268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: 0}
-  m_SizeDelta: {x: 700, y: 0}
+  m_AnchoredPosition: {x: 350, y: -0.00012207031}
+  m_SizeDelta: {x: 700, y: -95.1317}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5085727253473711646
 CanvasRenderer:
@@ -284,7 +299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf2de56672a004947a8685f712165a5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb55df9b9a4678742b4089ac54f6a85e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -320,6 +335,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6462090627946233343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085727253473711642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -4.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5085727253484278856
 GameObject:
   m_ObjectHideFlags: 0

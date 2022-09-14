@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestionId: 
   Pattern13: {fileID: 0}
-  AttechedPuzzle: []
+  AttechedPuzzle: {fileID: 0}
 --- !u!1 &4203156823039964664
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b6b1d20260b89c64cbd78cc3950bf995, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba56740f479d1bf43ab461f3616d72dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
