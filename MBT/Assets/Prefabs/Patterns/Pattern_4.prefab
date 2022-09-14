@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ebaccdd204d86644eac03d1d24a844ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1049f2fdea5d658439f91f26e7cf5bfc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ebaccdd204d86644eac03d1d24a844ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1049f2fdea5d658439f91f26e7cf5bfc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d50d6d35f9407844a3b6613d667e78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsStatus: 0
+  IsEdited: 0
   PatternID: 4
   IsAvailable: 1
   Event: {fileID: 11400000, guid: 59456c10ba3b2334fb455fefabd02af1, type: 2}
@@ -417,8 +417,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
-  ActiveNext: {fileID: 11400000, guid: f126d3b8f4acfcb4c90f8fcde7019c9f, type: 2}
-  DeactiveNext: {fileID: 11400000, guid: 614f45add33573c45baf71359ca71af8, type: 2}
   FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
   spriteCOllectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
   PicturePrefab: {fileID: 6769031063644269278, guid: 1bbec0ca5e8926a46acaff2102b63427, type: 3}
@@ -451,6 +449,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8380820865305673208}
     m_Modifications:
+    - target: {fileID: 2260346863381847400, guid: 0d7afb1aa17512f4b81d39ce46ba6259, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e577a108e4400ac4f89670a2618f53e5, type: 3}
+    - target: {fileID: 2260346863381847402, guid: 0d7afb1aa17512f4b81d39ce46ba6259, type: 3}
+      propertyPath: DropDownBlueSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d51f12cec63db04cbae01131090f940, type: 3}
     - target: {fileID: 2260346863381847406, guid: 0d7afb1aa17512f4b81d39ce46ba6259, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

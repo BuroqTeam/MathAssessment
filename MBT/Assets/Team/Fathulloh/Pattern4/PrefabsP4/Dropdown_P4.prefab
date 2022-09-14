@@ -147,7 +147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 496bf2416485b89478457471efdf7cb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e577a108e4400ac4f89670a2618f53e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -235,15 +235,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd686f779fb9ccf4c8be4aff2bea1dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pattern4: {fileID: 0}
   AddressToTerm: Math6/Test/Pattern_9/DropDown
   StrList: []
   DropDownObj: {fileID: 2260346863381847401}
   DropDownGameObject: {fileID: 2260346863381847407}
-  DropDownBlueSprite: {fileID: 21300000, guid: 5a3090b930b72ae48951bc73701f944b, type: 3}
+  DropDownBlueSprite: {fileID: 21300000, guid: 5d51f12cec63db04cbae01131090f940, type: 3}
   SpriteCornerUp: {fileID: 21300000, guid: 81323c5e4e04dd44399159771cccf701, type: 3}
   SpriteCornerDown: {fileID: 21300000, guid: da3a67b631946fc429fb9e3bb159e0e4, type: 3}
   CorrectAnswer: 
   CurrentAnswer: 
+  InitialStr: 
 --- !u!1 &2260346863428202117
 GameObject:
   m_ObjectHideFlags: 0

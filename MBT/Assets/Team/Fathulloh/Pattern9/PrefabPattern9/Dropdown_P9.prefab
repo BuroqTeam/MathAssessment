@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 5301482960826709795}
   - component: {fileID: 5301482960826709794}
   - component: {fileID: 5301482960826709805}
+  - component: {fileID: 8012574247132377286}
   m_Layer: 5
   m_Name: Dropdown_P9
   m_TagString: Untagged
@@ -319,7 +320,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 496bf2416485b89478457471efdf7cb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e577a108e4400ac4f89670a2618f53e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -407,15 +408,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0cfb4f69885a041a02911046232a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pattern9: {fileID: 0}
   AddressToTerm: Math6/Test/Pattern_9/DropDown
   StrList: []
   DropDownObj: {fileID: 5301482960826709794}
   DropDownGameObject: {fileID: 5301482960826709796}
-  DropDownBlueSprite: {fileID: 21300000, guid: 5a3090b930b72ae48951bc73701f944b, type: 3}
+  DropDownBlueSprite: {fileID: 21300000, guid: 5d51f12cec63db04cbae01131090f940, type: 3}
   SpriteCornerUp: {fileID: 21300000, guid: 81323c5e4e04dd44399159771cccf701, type: 3}
   SpriteCornerDown: {fileID: 21300000, guid: da3a67b631946fc429fb9e3bb159e0e4, type: 3}
   CorrectAnswer: 
   CurrentAnswer: 
+  InitialStr: 
+--- !u!114 &8012574247132377286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5301482960826709796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 0, y: -1.5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5301482960979205982
 GameObject:
   m_ObjectHideFlags: 0
