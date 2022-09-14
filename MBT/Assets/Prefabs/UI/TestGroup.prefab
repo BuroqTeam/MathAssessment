@@ -415,7 +415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.55, y: -58.28}
+  m_AnchoredPosition: {x: -0.55, y: -42.8}
   m_SizeDelta: {x: 50, y: 56.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1568044705313005611
@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 1568044705980880529}
   - component: {fileID: 8668835121732822968}
   - component: {fileID: 8668835121732822969}
+  - component: {fileID: 9143676051102187567}
   m_Layer: 5
   m_Name: TestGroup
   m_TagString: Untagged
@@ -555,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 290, y: 310}
+  m_AnchoredPosition: {x: -0.7551, y: 1.5103}
+  m_SizeDelta: {x: 274.897, y: 294.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1568044705980880531
 CanvasRenderer:
@@ -586,7 +587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f6bf935681a5c840a1e00a3a4a5b95f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 007b5e2f726a6364f9ac2d1914354b3e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -663,8 +664,6 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   Notification: {fileID: 0}
-  Loading: {fileID: 0}
-  LoadingEvent: {fileID: 11400000, guid: 3e039cdc13d313543953f82257f36b05, type: 2}
 --- !u!114 &8668835121732822969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,3 +681,19 @@ MonoBehaviour:
   RadilaSlider: {fileID: 987064294711842326}
   RadialSliderValue: 0
   colorSO: {fileID: 11400000, guid: 754646115b95419449f82abba2718578, type: 2}
+  MainObject: {fileID: 0}
+--- !u!114 &9143676051102187567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568044705980880535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
