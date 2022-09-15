@@ -20,8 +20,8 @@ public class MainManager : MonoBehaviour
 
     //F++
     public DataBaseSO[] group;
-    private TextAsset _curentJson;
-    private DataBaseSO _jsonCollectionSO;
+    //private TextAsset _curentJson;
+    //private DataBaseSO _jsonCollectionSO;
     public GameObject NoDataPanel;
     //F++
 
@@ -46,9 +46,10 @@ public class MainManager : MonoBehaviour
 
     public void SetClassKey(int index)
     {
-        ES3.Save<int>("ClassKey", index);        
-        CheckJsonFile();//F++
-        //GetComponent<SceneManager>().LoadLocalScene();
+        ES3.Save<int>("ClassKey", index);
+        //CheckJsonFile();//F++
+        MainObj.UnEnableButtons(false);
+        GetComponent<SceneManager>().LoadLocalScene();
     }
 
     void EnableButtons()
@@ -82,28 +83,26 @@ public class MainManager : MonoBehaviour
     }
 
     
-    void CheckJsonFile()    //F++
-    {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))        
-            _jsonCollectionSO = group[0];        
-        else        
-            _jsonCollectionSO = group[1];        
+    //void CheckJsonFile()    //F++
+    //{
+    //    if (ES3.Load<string>("Subject").Equals("Algebra"))        
+    //        _jsonCollectionSO = group[0];        
+    //    else        
+    //        _jsonCollectionSO = group[1];        
 
-        _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
-        _jsonCollectionSO.DataBase.Clear();
-        
-        //Logging.Log("Json Cheking: " + _curentJson.text.Length + "  Json Cheking: " + _curentJson.dataSize);
-        
-        if (_curentJson.text.Length != 0)
-        {
-            MainObj.UnEnableButtons(false);     //F++
-            GetComponent<SceneManager>().LoadLocalScene();
-        }
-        else
-        {
-            NoDataPanel.SetActive(true);
-        }
-    }
+    //    _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
+    //    _jsonCollectionSO.DataBase.Clear();
+                        
+    //    if (_curentJson.text.Length != 0)
+    //    {
+    //        MainObj.UnEnableButtons(false);     //F++
+    //        GetComponent<SceneManager>().LoadLocalScene();
+    //    }
+    //    else
+    //    {
+    //        NoDataPanel.SetActive(true);
+    //    }
+    //}
 
 
 }

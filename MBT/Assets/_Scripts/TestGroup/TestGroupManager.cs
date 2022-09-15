@@ -140,13 +140,13 @@ public class TestGroupManager : MonoBehaviour
     }
 
 
-    public void UnEnableButtons()
+    public void UnEnableButtons()       //F++
     {
         for (int i = 0; i < TestButtons.Count; i++)
         {
             TestButtons[i].GetComponent<Button>().enabled = false;
         }
-        Logging.Log("TestGroupManager UnEnableButtons() ");
+        //Logging.Log("TestGroupManager UnEnableButtons() ");
     }
 
 }

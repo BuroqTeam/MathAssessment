@@ -26,7 +26,8 @@ public class ChapterManager : MonoBehaviour
     //F++
     public List<GameObject> ChapterButtons;
     public GameObject NotificationObj;
-    public UnityEvent ButtonEnableFalse;
+    //public UnityEvent ButtonEnableFalse;
+    public GameObject NoDataPanel;
     //F++
 
     private void Awake()
@@ -41,7 +42,17 @@ public class ChapterManager : MonoBehaviour
         }
         _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
         _jsonCollectionSO.DataBase.Clear();
-        ReadJSON();
+
+        //ReadJSON();
+
+        if (_curentJson.text.Length != 0)
+        {
+            ReadJSON();
+        }
+        else
+        {
+            NoDataPanel.SetActive(true);
+        }
     }
 
     void ReadJSON()
@@ -135,7 +146,7 @@ public class ChapterManager : MonoBehaviour
         {
             ChapterButtons[i].GetComponent<Button>().enabled = false;
         }
-        Logging.Log("ChapterManager UnEnableButtons()");
+        //Logging.Log("ChapterManager UnEnableButtons()");
     }
 
 

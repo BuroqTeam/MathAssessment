@@ -33,35 +33,35 @@ public class SceneManager : MonoBehaviour
     //}
 
     public void LoadLocalScene()
-    {
-        //if (Scene.SubObjectName == "Test")
-        //{
-        //    Logging.Log("")
-        //}
-
-        //Loading.SetActive(true);
-
-        StartCoroutine(CheckInternetConnection(isConnected =>
+    {        
+        if (PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
         {
-            if (isConnected || PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
+            Logging.Log("PlayerPrefs.GetInt = |" + PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) );
+            Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
+        }
+        else
+        {
+            StartCoroutine(CheckInternetConnection(isConnected =>
             {
-                if (m_ReadyToLoad)
+                if (isConnected /*|| PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0*/)
                 {
-                    //Logging.Log("Load new Scene");
-                    PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
-                    loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
-                    loadHandle.Completed += SceneLoadComplete;
+                    if (m_ReadyToLoad)
+                    {
+                        PlayerPrefs.SetInt("Initial" + Scene.SubObjectName.ToString(), 1);
+                        loadHandle = Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single, true, 100);
+                        loadHandle.Completed += SceneLoadComplete;
+                    }
+                    else
+                    {
+                        Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
+                    }
                 }
                 else
                 {
-                    Addressables.UnloadSceneAsync(m_LoadedScene).Completed += OnSceneUnloaded;
+                    Notification.SetActive(true);
                 }
-            }
-            else
-            {
-                Notification.SetActive(true);
-            }
-        }));        
+            }));
+        }                
 
         //Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
     }
@@ -79,6 +79,7 @@ public class SceneManager : MonoBehaviour
 
     public void LoadCustonScene(string name)
     {
+        Logging.Log("LoadCustomScene ");
         UnityEngine.SceneManagement.SceneManager.LoadScene(name);
     }
 
