@@ -70,7 +70,7 @@ public class UpdateAnim : MonoBehaviour
     public void TuronOff()
     {
         gameObject.transform.parent.gameObject.SetActive(false);
-        Logging.Log("Turn Off Loading.");
+        //Logging.Log("Turn Off Loading.");
     }
 
 }
