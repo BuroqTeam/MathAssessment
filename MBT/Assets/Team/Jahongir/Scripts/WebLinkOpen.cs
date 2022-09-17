@@ -8,6 +8,13 @@ public class WebLinkOpen : MonoBehaviour, IPointerDownHandler
     public string WebLink;
     public void OnPointerDown(PointerEventData eventData)
     {
-        Application.OpenURL(WebLink);
+        if (WebLink.Length>2)
+        {
+            Application.OpenURL(WebLink);
+        }
+        else 
+        {
+           
+        }
     }
 }
