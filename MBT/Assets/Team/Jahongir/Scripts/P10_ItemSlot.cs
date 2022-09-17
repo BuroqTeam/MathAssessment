@@ -9,7 +9,7 @@ public class P10_ItemSlot : MonoBehaviour, IDropHandler
     public Pattern_10 Pattern10;
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null)
+        if (eventData.pointerDrag != null && transform.childCount < 17)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             eventData.pointerDrag.transform.SetParent(Pattern10.Tile1[Index - 1].transform);
@@ -19,9 +19,16 @@ public class P10_ItemSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().localScale = transform.GetChild(1).GetComponent<RectTransform>().localScale;
                 for (int i = 1; i < transform.childCount; i++)
                 {
-                    transform.GetChild(i).GetComponent<RectTransform>().localScale -= new Vector3(0.1f, 0.1f, 0.1f);
+                    transform.GetChild(i).GetComponent<RectTransform>().localScale -= new Vector3(0.05f, 0.05f, 0.05f);
                 }
-                GetComponent<HorizontalLayoutGroup>().spacing -= 15;
+                if (transform.childCount < 12)
+                {
+                    GetComponent<HorizontalLayoutGroup>().spacing -= 15;
+                }
+                else
+                {
+                    GetComponent<HorizontalLayoutGroup>().spacing -= 5;
+                }
             }
             else
             {

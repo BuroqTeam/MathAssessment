@@ -200,9 +200,18 @@ public class Pattern_10 : GeneralTest
             {
                 for (int i = 0; i < CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount; i++)
                 {
-                    CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetChild(i).GetComponent<RectTransform>().localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                    CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetChild(i).GetComponent<RectTransform>().localScale += new Vector3(0.05f, 0.05f, 0.05f);
                 }
-                CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 15;
+                if (CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.childCount < 12)
+                {
+                    CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 15;
+                }
+                else
+                {
+                    CollectedPrefabs[CollectedPrefabs.Count - 1].transform.parent.GetComponent<HorizontalLayoutGroup>().spacing += 5;
+
+                }
+                
             }
         }
         StartCoroutine(ResultForReturn());
