@@ -36,25 +36,30 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             Pattern_8.PointList[2].transform.position = Pattern_8.CellObj[68].transform.GetComponent<Cell>().points[1];
             Pattern_8.PointList[3].transform.position = Pattern_8.CellObj[28].transform.GetComponent<Cell>().points[1];
         }
+        Checking();
     }
     void BackToLastPosition()
     {
-
+        
         if (gameObject.transform.position.x < Pos_1.transform.GetComponent<Cell>().points[3].x)
         {
             transform.DOMove(LastPosition, 0);
+            Logging.Log("1");
         }
         else if (gameObject.transform.position.x > Pos_2.transform.GetComponent<Cell>().points[0].x)
         {
             transform.DOMove(LastPosition, 0);
+            Logging.Log("2");
         }
         else if (gameObject.transform.position.y < Pos_1.transform.GetComponent<Cell>().points[3].y)
         {
             transform.DOMove(LastPosition, 0);
+            Logging.Log("3");
         }
         else if (gameObject.transform.position.y > Pos_2.transform.GetComponent<Cell>().points[0].y)
         {
             transform.DOMove(LastPosition, 0);
+            Logging.Log("4");
         }
     }
     public void OnBeginDrag(PointerEventData eventData)
@@ -80,23 +85,19 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             {
                 if (Vector3.Distance(transform.position, aPoint) <= 0.45f)
                 {
-                    transform.position = aPoint;
+                    transform.position = aPoint;                    
                     break;
                 }
             }            
         }
-        
+        Logging.Log(gameObject.name + " Go to Square corner. pozitsiya" + transform.position);
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(pos.x, pos.y, 0);
-    }
-   
+    }   
   
-    void Update()
-    {
-        
-    }
 }
