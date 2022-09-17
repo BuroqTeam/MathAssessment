@@ -205,7 +205,7 @@ public class Pattern_8 : GeneralTest
         TomonlarInt.Clear();
         if (pos1.position.x == pos4.position.x && pos2.position.x == pos3.position.x && pos1.position.y == pos2.position.y && pos3.position.y == pos4.position.y)
         {
-            //Logging.Log("123");
+            Logging.Log("Rectangle first if condition.");
             // (pos3.positi.x == pos2.position.x && pos1.position.x == pos4.position.x && pos2.position.y == pos1.position.y && pos3.position.y == pos4.position.y)on
             if (pos1.position.y > pos4.position.y)
             {
@@ -260,18 +260,18 @@ public class Pattern_8 : GeneralTest
                 if (isEqual)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    //Logging.Log("Tortburchak current-1");
+                    Logging.Log("Rectangle correct. ");
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    //Logging.Log("Tortburchak wrong-2");
+                    Logging.Log("Rectangle wrong. ");
                 }
             }
         }
         else if (pos1.position.x == pos2.position.x && pos3.position.x == pos4.position.x && pos1.position.y == pos4.position.y && pos2.position.y == pos3.position.y)
         {
-            //Logging.Log("1234");
+            Logging.Log("Rectangle second if condition.");
             if (pos1.position.y > pos2.position.y)
             {
                 float BC = pos1.position.y - pos2.position.y;
@@ -325,12 +325,12 @@ public class Pattern_8 : GeneralTest
                 if (isEqual)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    //Logging.Log("Tortburchak current-1");
+                    Logging.Log("Rectangle Correct Condition 2");
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    //Logging.Log("Tortburchak wrong-2");
+                    Logging.Log("Rectangle Wrong Condition 2");
                 }
             }
 
@@ -339,7 +339,7 @@ public class Pattern_8 : GeneralTest
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            //Logging.Log("Tortburchak wrong-5");
+            Logging.Log("Rectangle is not Correct.");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
@@ -667,12 +667,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("current-5");
             }            
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos1.position.x == pos3.position.x && pos1.position.y == pos2.position.y)
@@ -707,12 +707,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
@@ -747,12 +747,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
@@ -787,12 +787,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
@@ -827,12 +827,12 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("correct-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
@@ -867,18 +867,18 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-5");
+                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-7");
+                Logging.Log("wrong-7");
             }
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            //Logging.Log("wrong19");
+            Logging.Log("wrong19");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);

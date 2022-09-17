@@ -36,7 +36,7 @@ public class SceneManager : MonoBehaviour
     {        
         if (PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) > 0)
         {
-            Logging.Log("PlayerPrefs.GetInt = |" + PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) );
+            //Logging.Log("PlayerPrefs.GetInt = |" + PlayerPrefs.GetInt("Initial" + Scene.SubObjectName) );
             Addressables.LoadSceneAsync(Scene, LoadSceneMode.Single).Completed += SceneLoaded;
         }
         else
