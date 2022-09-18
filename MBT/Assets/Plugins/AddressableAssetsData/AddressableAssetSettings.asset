@@ -96,7 +96,7 @@ MonoBehaviour:
       - m_Id: 7e6d1dd581251ca448c9e81ea8727996
         m_Value: ServerData/[BuildTarget]
       - m_Id: 18626f9a5a1015e43a786187b6b3b39a
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://storage.googleapis.com/aljabrmath/production/v1/[BuildTarget]
     - m_InheritedParent: 
       m_Id: dc7d58fcc8e4c5242aaaa955ba21d14b
       m_ProfileName: New Profile
@@ -145,7 +145,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f96f7cccaad92724f9f08366db3a5bdf, type: 2}
   - {fileID: 11400000, guid: 50aaf8d5c187cf94d949401a5bd23669, type: 2}
   - {fileID: 11400000, guid: 9b190f58e04679b4895908f813d024d3, type: 2}
-  m_ActiveProfileId: aeee915684fe54d47a08aef326b97563
+  m_ActiveProfileId: dd75cd7eb04f42f4c9c90f2248f57700
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
