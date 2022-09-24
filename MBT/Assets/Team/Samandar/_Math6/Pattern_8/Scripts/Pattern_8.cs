@@ -44,7 +44,7 @@ public class Pattern_8 : GeneralTest
         InstantiateObj();        
     }
     private void OnEnable()
-    {
+    {        
         if (ES3.Load<bool>("Pattern_8_Check"))
         {
 
@@ -98,7 +98,7 @@ public class Pattern_8 : GeneralTest
         }
         else if (Figure == 4)
         {
-            rectangle();
+            Rectangle();
         }
 
         
@@ -129,7 +129,7 @@ public class Pattern_8 : GeneralTest
     }
     void Start()
     {
-        
+        //CanvasOut[0].GetComponent<CellParent8>().PointPosition();
     }
     public void JsonTextToInt()
     {
@@ -171,8 +171,7 @@ public class Pattern_8 : GeneralTest
         CanvasOut[1].transform.GetComponent<PointsParent>().Pattern_8 = this;
         GameObject lineRenderer = Instantiate(LineRenderer);
         CanvasOut.Add(lineRenderer);
-        CanvasOut[2].transform.GetComponent<LineControllarPattern10>().Pattern_8 = this;
-        
+        CanvasOut[2].transform.GetComponent<LineControllarPattern_8>().Pattern_8 = this;        
     }
     public void OlchamPosition()
     {
@@ -185,13 +184,34 @@ public class Pattern_8 : GeneralTest
             for (float j = 0; j < height; j+=percentage)
             {
                 GameObject SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
-                //SpawnedCell.name = $"Cell {i}, {j}";                
                 CellGroup.Add(SpawnedCell.GetComponent<Cell>());                
             }
         }        
     }
-
-    void rectangle()
+    public void PointPosition()
+    {
+        if (Figure == 2)
+        {
+            PointList[0].transform.position = CellObj[35].transform.GetComponent<Cell>().points[1];
+            PointList[1].transform.position = CellObj[55].transform.GetComponent<Cell>().points[1];
+            PointList[2].transform.position = CellObj[58].transform.GetComponent<Cell>().points[1];
+        }
+        else if (Figure == 3)
+        {
+            PointList[0].transform.position = CellObj[34].transform.GetComponent<Cell>().points[1];
+            PointList[1].transform.position = CellObj[53].transform.GetComponent<Cell>().points[1];
+            PointList[2].transform.position = CellObj[77].transform.GetComponent<Cell>().points[1];
+        }
+        else if (Figure == 4)
+        {
+            PointList[0].transform.position = CellObj[33].transform.GetComponent<Cell>().points[1];
+            PointList[1].transform.position = CellObj[63].transform.GetComponent<Cell>().points[1];
+            PointList[2].transform.position = CellObj[68].transform.GetComponent<Cell>().points[1];
+            PointList[3].transform.position = CellObj[38].transform.GetComponent<Cell>().points[1];
+        }
+        
+    }
+    void Rectangle()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
@@ -633,6 +653,9 @@ public class Pattern_8 : GeneralTest
         Transform pos1 = PointList[0].transform;
         Transform pos2 = PointList[1].transform;
         Transform pos3 = PointList[2].transform;
+        //Logging.Log(pos1.localPosition);
+        //Logging.Log(pos2.localPosition);
+        //Logging.Log(pos3.localPosition);
         Tomonlar.Clear();
         TomonlarInt.Clear();
         if (pos1.position.x == pos2.position.x && pos1.position.y == pos3.position.y)

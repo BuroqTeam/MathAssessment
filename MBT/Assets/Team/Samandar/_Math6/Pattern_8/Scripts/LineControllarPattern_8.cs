@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineControllarPattern10 : MonoBehaviour
+public class LineControllarPattern_8 : MonoBehaviour
 {
     public Pattern_8 Pattern_8;
     private LineRenderer lineRenderer;
@@ -16,9 +16,7 @@ public class LineControllarPattern10 : MonoBehaviour
     {
         Pattern_8.LinePosition.GetComponent<LineTesting>().Line = this;
         Pattern_8.LinePosition.GetComponent<LineTesting>().PointTransform();
-        Pattern_8.LinePosition.GetComponent<LineTesting>().LinePoint();
-        //Pattern_8.CanvasOut[3].GetComponent<MeshController>().MeshPointPosition();
-        //Pattern_8.CanvasOut[3].GetComponent<MeshController>().StartMetod();
+        Pattern_8.LinePosition.GetComponent<LineTesting>().LinePoint();        
     }
 
     public void SetUpLine(List<Transform> points)

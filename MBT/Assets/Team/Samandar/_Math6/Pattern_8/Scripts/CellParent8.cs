@@ -10,12 +10,12 @@ public class CellParent8 : MonoBehaviour
     {
         SquareLocation();
         Pattern_8.OlchamPosition();
+        //Pattern_8.CanvasOut[1].GetComponent<PointsParent>().InstantiatePoints();        
     }
     private void Awake()
     {
-        
-    }
-
+       
+    }  
     public void SquareLocation()
     {      
         for (float i = -4.5f * Pattern_8.percentage; i < Pattern_8.width - 4.5f * Pattern_8.percentage; i += Pattern_8.percentage)
@@ -27,6 +27,7 @@ public class CellParent8 : MonoBehaviour
                 Pattern_8.CellObj.Add(SpawnedCell);
             }
         }        
-        gameObject.transform.position = Pattern_8.CellPosition.transform.position;        
+        gameObject.transform.position = Pattern_8.CellPosition.transform.position;
+        
     }
 }
