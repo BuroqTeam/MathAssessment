@@ -10,15 +10,14 @@ public class Cell : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CollectPoints();       
+        CollectPoints();
     }
     private void Awake()
     {
         
     }
     public void CollectPoints()
-    {
-       
+    {       
         float rightPointX_1 = transform.position.x + spriteRenderer.bounds.size.x * 0.5f;
         float rightPointX_2 = transform.position.x - spriteRenderer.bounds.size.x * 0.5f;
         float upPointY_1 = transform.position.y + spriteRenderer.bounds.size.y * 0.5f;

@@ -6,7 +6,7 @@ public class LineTesting : MonoBehaviour
 {
     public Pattern_8 Pattern_8;
     public List<Transform> Points;
-    public LineControllarPattern10 Line;
+    public LineControllarPattern_8 Line;
     void Start()
     {
         

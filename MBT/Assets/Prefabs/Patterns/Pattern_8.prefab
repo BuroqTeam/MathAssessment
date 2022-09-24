@@ -145,10 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsEdited: 0
   PatternID: 8
-  IsAvailable: 0
+  IsAvailable: 1
   Event: {fileID: 11400000, guid: f63fad839eeb0324280acbfdbebaa1cd, type: 2}
   QuestionNumber: 0
-  Json: {fileID: 0}
+  Json: {fileID: 4900000, guid: 37a6776bf46905a478660bfa338f7d5a, type: 3}
 --- !u!114 &4973383442335354156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pattern_8: {fileID: 4178776883076726917}
   Points: []
-  Line: {fileID: 0}
+  Line: {fileID: 5426875382694894080, guid: bf52ef794bc2c894da0795d9d089a78d, type: 3}
 --- !u!1 &4539302101443127358
 GameObject:
   m_ObjectHideFlags: 0
