@@ -25,7 +25,6 @@ public class LineControllarPattern_8 : MonoBehaviour
         this.points = points;
     }
 
-    // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < points.Count; i++)

@@ -150,24 +150,6 @@ public class Pattern_3 : GeneralTest
     {
         base.DisplayQuestion(questionStr);
     }
-    //public void ClearData()
-    //{
-    //    List<string> solution1 = DataObj.solution[0];
-    //    int javoblarSoni = solution1.Count - 1;
-    //    for (int i = 0; i < javoblarSoni; i++)
-    //    {
-    //        if (javoblarSoni == 4)
-    //        {
-    //            bool _istrue = CheckList4[i].transform.GetChild(0).GetComponent<NumberArea>()._IsEmpty;
-    //            if (!_istrue)
-    //            {
-    //                Ansver.Clear();
-    //            }
-    //        }
-
-    //    }
-    //}
-
     public int totalBoxNumber;
     public bool _isWorking = true;
     public void CheckingAnswer()
