@@ -43,6 +43,7 @@ public class Pattern_8 : GeneralTest
         percentage = Cell.transform.localScale.x;
         InstantiateObj();        
     }
+
     private void OnEnable()
     {        
         if (ES3.Load<bool>("Pattern_8_Check"))
@@ -68,6 +69,7 @@ public class Pattern_8 : GeneralTest
         DataParties();
         
     }
+
     void DataParties()
     {
         Parties.Clear();
@@ -132,11 +134,7 @@ public class Pattern_8 : GeneralTest
             }           
         }
     }
-    void Start()
-    {
-        //GetComponent<Pattern>().IsEdited = false;
-        //CanvasOut[0].GetComponent<CellParent8>().PointPosition();
-    }
+   
     public void JsonTextToInt()
     {
         
@@ -146,20 +144,18 @@ public class Pattern_8 : GeneralTest
         string figureType = Data8.figureType;        
         if (figureType == figureString_1)
         {
-            Logging.Log("Togri burchakli uchburchak");
             Figure = 2;
         }
         else if(figureType == figureString_2)
         {
-            Logging.Log("Uchburchak");
             Figure = 3;
         }
         else if (figureType == figureString_3)
         {
-            Logging.Log("Turtburchak");
             Figure = 4;
         }
     }
+
     public void Point()
     {
         for (int i = 0; i < PointList.Count; i++)
@@ -167,6 +163,7 @@ public class Pattern_8 : GeneralTest
             PointList[i].GetComponent<DegnDrop>().Pattern_8 = this;
         }
     }
+
     void InstantiateObj()
     {
         GameObject cellParent = Instantiate(CellParent);       
@@ -179,21 +176,12 @@ public class Pattern_8 : GeneralTest
         CanvasOut.Add(lineRenderer);
         CanvasOut[2].transform.GetComponent<LineControllarPattern_8>().Pattern_8 = this;        
     }
+
     public void OlchamPosition()
     {
         Olcham.transform.position = new Vector3(CellObj[9].transform.position.x + 1.7f * percentage, CellObj[9].transform.position.y, 0);
     }
-    public void SquareLocation()
-    {
-        for (float i = 0; i < width; i+=percentage)
-        {
-            for (float j = 0; j < height; j+=percentage)
-            {
-                GameObject SpawnedCell = Instantiate(Cell, new Vector3(i, j), Quaternion.identity);
-                CellGroup.Add(SpawnedCell.GetComponent<Cell>());                
-            }
-        }        
-    }
+    
     void Rectangle()
     {
         List<bool> currentList = new();
@@ -206,7 +194,6 @@ public class Pattern_8 : GeneralTest
         TomonlarInt.Clear();
         if (Mathf.Approximately(pos1.position.x, pos4.position.x) && Mathf.Approximately(pos2.position.x, pos3.position.x) && Mathf.Approximately(pos1.position.y, pos2.position.y) && Mathf.Approximately(pos3.position.y, pos4.position.y))
         {
-            Logging.Log("Rectangle first if condition.");
             // (pos3.positi.x == pos2.position.x && pos1.position.x == pos4.position.x && pos2.position.y == pos1.position.y && pos3.position.y == pos4.position.y)on
             if (pos1.position.y > pos4.position.y)
             {
@@ -261,12 +248,10 @@ public class Pattern_8 : GeneralTest
                 if (isEqual)
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    Logging.Log("Rectangle correct. ");
                 }
                 else
                 {
                     currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    Logging.Log("Rectangle wrong. ");
                 }
             }
         }
@@ -340,7 +325,6 @@ public class Pattern_8 : GeneralTest
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("Rectangle is not Correct.");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
@@ -389,12 +373,10 @@ public class Pattern_8 : GeneralTest
             if (Mathf.Approximately (a , Parties[0]) && Mathf.Approximately(d , Parties[1]) && Mathf.Approximately(b , Parties[0] / 2))
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                //Logging.Log("current-1");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                //Logging.Log("wrong-2");
             }
         }
         else if (Mathf.Approximately(pos1.position.y, pos2.position.y))
@@ -615,7 +597,6 @@ public class Pattern_8 : GeneralTest
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            //Logging.Log("wrong-20");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
@@ -663,12 +644,10 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
             }            
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else if (Mathf.Approximately(pos1.position.x, pos3.position.x) && Mathf.Approximately(pos1.position.y, pos2.position.y))
@@ -703,12 +682,10 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else if (Mathf.Approximately(pos2.position.x, pos1.position.x) && Mathf.Approximately(pos2.position.y, pos3.position.y))
@@ -743,12 +720,10 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else if (Mathf.Approximately(pos2.position.x, pos3.position.x)  &&  Mathf.Approximately(pos2.position.y, pos1.position.y))
@@ -783,12 +758,10 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else if (Mathf.Approximately(pos3.position.x, pos1.position.x) && Mathf.Approximately(pos3.position.y, pos2.position.y))
@@ -823,12 +796,10 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("correct-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else if (Mathf.Approximately(pos3.position.x, pos2.position.x) && Mathf.Approximately(pos3.position.y, pos1.position.y))
@@ -863,24 +834,22 @@ public class Pattern_8 : GeneralTest
             if (isEqual)
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                Logging.Log("current-5");
             }
             else
             {
                 currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                Logging.Log("wrong-7");
             }
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Logging.Log("wrong19");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
         TestManager.Instance.CheckAllIsDone();
     }
 }
+
 [SerializeField]
 public class Data_8
 {
