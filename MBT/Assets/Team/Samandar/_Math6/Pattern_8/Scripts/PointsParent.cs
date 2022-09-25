@@ -25,8 +25,6 @@ public class PointsParent : MonoBehaviour
         {            
             for (int i = 0; i < 3; i++)
             {
-                //Logging.Log("2Isgkfhwieu");
-                //Vector3 pos = Pattern_8.CellObj[i ^ 3 + 15].GetComponent<Cell>().points[0];
                 GameObject point = Instantiate(PointPrefabs, gameObject.transform);
                 Pattern_8.PointList.Add(point);                 
             }
@@ -36,7 +34,6 @@ public class PointsParent : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                //Logging.Log("1Isgkfhwieu");
                 GameObject point = Instantiate(PointPrefabs, gameObject.transform);
                 Pattern_8.PointList.Add(point);
             }
@@ -46,7 +43,6 @@ public class PointsParent : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
-                //Logging.Log("Isgkfhwieu");
                 GameObject point = Instantiate(PointPrefabs, gameObject.transform);
                 Pattern_8.PointList.Add(point);
             }

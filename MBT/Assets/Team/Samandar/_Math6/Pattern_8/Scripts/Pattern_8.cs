@@ -66,6 +66,7 @@ public class Pattern_8 : GeneralTest
         DisplayQuestion(Data8.title);
         JsonTextToInt();
         DataParties();
+        
     }
     void DataParties()
     {
@@ -81,27 +82,31 @@ public class Pattern_8 : GeneralTest
         PartiesInt.Add(a);
         PartiesInt.Add(b);
     }
-  
-    public void Check()
+
+    public void ActeveteButton()
     {
+        GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
+    }
+
+    public void Check()
+    {            
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> proportion = Data8.proportion;
-        
+             
         if (Figure == 2)
-        {
+        {            
             RightTriangle();
         }
         else if (Figure == 3)
-        {
+        {           
             Triangle();
         }
         else if (Figure == 4)
-        {
+        {         
             Rectangle();
         }
-
-        
+        //GetComponent<Pattern>().IsEdited = true;
     }
 
     public override void DisplayQuestion(string questionStr)
@@ -129,6 +134,7 @@ public class Pattern_8 : GeneralTest
     }
     void Start()
     {
+        //GetComponent<Pattern>().IsEdited = false;
         //CanvasOut[0].GetComponent<CellParent8>().PointPosition();
     }
     public void JsonTextToInt()
@@ -188,42 +194,17 @@ public class Pattern_8 : GeneralTest
             }
         }        
     }
-    public void PointPosition()
-    {
-        if (Figure == 2)
-        {
-            PointList[0].transform.position = CellObj[35].transform.GetComponent<Cell>().points[1];
-            PointList[1].transform.position = CellObj[55].transform.GetComponent<Cell>().points[1];
-            PointList[2].transform.position = CellObj[58].transform.GetComponent<Cell>().points[1];
-        }
-        else if (Figure == 3)
-        {
-            PointList[0].transform.position = CellObj[34].transform.GetComponent<Cell>().points[1];
-            PointList[1].transform.position = CellObj[53].transform.GetComponent<Cell>().points[1];
-            PointList[2].transform.position = CellObj[77].transform.GetComponent<Cell>().points[1];
-        }
-        else if (Figure == 4)
-        {
-            PointList[0].transform.position = CellObj[33].transform.GetComponent<Cell>().points[1];
-            PointList[1].transform.position = CellObj[63].transform.GetComponent<Cell>().points[1];
-            PointList[2].transform.position = CellObj[68].transform.GetComponent<Cell>().points[1];
-            PointList[3].transform.position = CellObj[38].transform.GetComponent<Cell>().points[1];
-        }
-        
-    }
     void Rectangle()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> proportion = Data8.proportion;
-
         Transform pos1 = PointList[0].transform;
         Transform pos2 = PointList[1].transform;
         Transform pos3 = PointList[2].transform;
         Transform pos4 = PointList[3].transform;
         Tomonlar.Clear();
         TomonlarInt.Clear();
-        if (pos1.position.x == pos4.position.x && pos2.position.x == pos3.position.x && pos1.position.y == pos2.position.y && pos3.position.y == pos4.position.y)
+        if (Mathf.Approximately(pos1.position.x, pos4.position.x) && Mathf.Approximately(pos2.position.x, pos3.position.x) && Mathf.Approximately(pos1.position.y, pos2.position.y) && Mathf.Approximately(pos3.position.y, pos4.position.y))
         {
             Logging.Log("Rectangle first if condition.");
             // (pos3.positi.x == pos2.position.x && pos1.position.x == pos4.position.x && pos2.position.y == pos1.position.y && pos3.position.y == pos4.position.y)on
@@ -289,7 +270,7 @@ public class Pattern_8 : GeneralTest
                 }
             }
         }
-        else if (pos1.position.x == pos2.position.x && pos3.position.x == pos4.position.x && pos1.position.y == pos4.position.y && pos2.position.y == pos3.position.y)
+        else if (Mathf.Approximately(pos1.position.x, pos2.position.x) && Mathf.Approximately(pos3.position.x, pos4.position.x) && Mathf.Approximately(pos1.position.y, pos4.position.y) && Mathf.Approximately(pos2.position.y, pos3.position.y))
         {
             Logging.Log("Rectangle second if condition.");
             if (pos1.position.y > pos2.position.y)
@@ -363,20 +344,17 @@ public class Pattern_8 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
         TestManager.Instance.CheckAllIsDone();
     }
     void Triangle()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> proportion = Data8.proportion;
-
         Transform pos1 = PointList[0].transform;
         Transform pos2 = PointList[1].transform;
         Transform pos3 = PointList[2].transform;
 
-        if (pos1.position.x == pos2.position.x)
+        if (Mathf.Approximately(pos1.position.x, pos2.position.x))
         {
             if (pos1.position.y > pos2.position.y)
             {                
@@ -419,7 +397,7 @@ public class Pattern_8 : GeneralTest
                 //Logging.Log("wrong-2");
             }
         }
-        else if (pos1.position.y == pos2.position.y)
+        else if (Mathf.Approximately(pos1.position.y, pos2.position.y))
         {
             if (pos1.position.x > pos2.position.x)
             {
@@ -462,7 +440,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-4");
             }
         }
-        else if (pos1.position.x == pos3.position.x)
+        else if (Mathf.Approximately(pos1.position.x, pos3.position.x))
         {
             if (pos1.position.y > pos3.position.y)
             {
@@ -505,7 +483,7 @@ public class Pattern_8 : GeneralTest
                 //Logging.Log("wrong-5");
             }
         }
-        else if (pos1.position.y == pos3.position.y)
+        else if (Mathf.Approximately(pos1.position.y, pos3.position.y))
         {
             if (pos1.position.x > pos3.position.x)
             {
@@ -548,7 +526,7 @@ public class Pattern_8 : GeneralTest
                 //Logging.Log("wrong-7");
             }
         }       
-        else if (pos2.position.x == pos3.position.x)
+        else if (Mathf.Approximately(pos2.position.x, pos3.position.x))
         {
             if (pos2.position.y > pos3.position.y)
             {
@@ -591,7 +569,7 @@ public class Pattern_8 : GeneralTest
                 //Logging.Log("wrong-9");
             }
         }
-        else if (pos2.position.y == pos3.position.y)
+        else if (Mathf.Approximately(pos2.position.y, pos3.position.y))
         {
             if (pos2.position.x > pos3.position.x)
             {
@@ -641,24 +619,19 @@ public class Pattern_8 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
         TestManager.Instance.CheckAllIsDone();
     }
+
     void RightTriangle()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> proportion = Data8.proportion;
-
         Transform pos1 = PointList[0].transform;
         Transform pos2 = PointList[1].transform;
-        Transform pos3 = PointList[2].transform;
-        //Logging.Log(pos1.localPosition);
-        //Logging.Log(pos2.localPosition);
-        //Logging.Log(pos3.localPosition);
+        Transform pos3 = PointList[2].transform;        
         Tomonlar.Clear();
-        TomonlarInt.Clear();
-        if (pos1.position.x == pos2.position.x && pos1.position.y == pos3.position.y)
+        TomonlarInt.Clear();        
+        if (Mathf.Approximately(pos1.position.x, pos2.position.x) && Mathf.Approximately(pos1.position.y, pos3.position.y))
         {
             if (pos1.position.y > pos2.position.y)
             {
@@ -698,7 +671,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-7");
             }
         }
-        else if (pos1.position.x == pos3.position.x && pos1.position.y == pos2.position.y)
+        else if (Mathf.Approximately(pos1.position.x, pos3.position.x) && Mathf.Approximately(pos1.position.y, pos2.position.y))
         {
             if (pos1.position.y > pos3.position.y)
             {
@@ -738,7 +711,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-7");
             }
         }
-        else if (pos2.position.x == pos1.position.x && pos2.position.y == pos3.position.y)
+        else if (Mathf.Approximately(pos2.position.x, pos1.position.x) && Mathf.Approximately(pos2.position.y, pos3.position.y))
         {
             if (pos2.position.y > pos1.position.y)
             {
@@ -778,7 +751,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-7");
             }
         }
-        else if (pos2.position.x == pos3.position.x && pos2.position.y == pos1.position.y)
+        else if (Mathf.Approximately(pos2.position.x, pos3.position.x)  &&  Mathf.Approximately(pos2.position.y, pos1.position.y))
         {
             if (pos2.position.y > pos3.position.y)
             {
@@ -818,7 +791,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-7");
             }
         }
-        else if (pos3.position.x == pos1.position.x && pos3.position.y == pos2.position.y)
+        else if (Mathf.Approximately(pos3.position.x, pos1.position.x) && Mathf.Approximately(pos3.position.y, pos2.position.y))
         {
             if (pos3.position.y > pos1.position.y)
             {
@@ -858,7 +831,7 @@ public class Pattern_8 : GeneralTest
                 Logging.Log("wrong-7");
             }
         }
-        else if (pos3.position.x == pos2.position.x && pos3.position.y == pos1.position.y)
+        else if (Mathf.Approximately(pos3.position.x, pos2.position.x) && Mathf.Approximately(pos3.position.y, pos1.position.y))
         {
             if (pos3.position.y > pos2.position.y)
             {
@@ -905,7 +878,6 @@ public class Pattern_8 : GeneralTest
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_8_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
         TestManager.Instance.CheckAllIsDone();
     }
 }

@@ -72,12 +72,13 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         //transform.DOScale(new Vector3(3, 3, 3), 2);
         Checking();
-        BackToLastPosition();
-        Pattern_8.Check();
+        Pattern_8.ActeveteButton();
+        
     }
     
     void Checking()
     {
+        bool isGoToLast = false;
         foreach (Cell cell in Pattern_8.Instance.CellGroup)
         {
             foreach (Vector3 aPoint in cell.points)
@@ -85,12 +86,20 @@ public class DegnDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
                 if (Vector3.Distance(transform.position, aPoint) <= 0.45f)
                 {
                     transform.position = aPoint;                    
+                    isGoToLast = true;
                     break;
-                }
+                }              
             }            
         }
-        Logging.Log(gameObject.name + " Go to Square corner. pozitsiya" + transform.position);
 
+        if (!isGoToLast)
+        {
+            BackToLastPosition();
+        }
+        else
+        {
+            Pattern_8.Check();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
