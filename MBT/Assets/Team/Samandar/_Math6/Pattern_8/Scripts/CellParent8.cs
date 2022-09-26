@@ -28,6 +28,5 @@ public class CellParent8 : MonoBehaviour
             }
         }        
         gameObject.transform.position = Pattern_8.CellPosition.transform.position;
-        
     }
 }

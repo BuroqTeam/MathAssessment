@@ -14,7 +14,6 @@ public class Pattern_8 : GeneralTest
     public GameObject CellParent;
     public GameObject PointParent;
     public GameObject LineRenderer;
-    public GameObject MeshRenderer;
     public GameObject LinePosition;
     public List<int> PartiesInt;
     public List<GameObject> CanvasOut;
@@ -167,7 +166,7 @@ public class Pattern_8 : GeneralTest
     void InstantiateObj()
     {
         GameObject cellParent = Instantiate(CellParent);       
-        CanvasOut.Add(cellParent);        
+        CanvasOut.Add(cellParent);
         CanvasOut[0].transform.GetComponent<CellParent8>().Pattern_8 = this;        
         GameObject pointsParent = Instantiate(PointParent);
         CanvasOut.Add(pointsParent);

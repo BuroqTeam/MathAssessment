@@ -8,7 +8,6 @@ public class PointsParent : MonoBehaviour
     public GameObject PointPrefabs;
     public int PointNumber;
     public List<GameObject> Pointlist;
-    int k = 0;
     void Start()
     {
         PointNumber = Pattern_8.Figure;
