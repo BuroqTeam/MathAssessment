@@ -125,6 +125,7 @@ public class TestGroupManager : MonoBehaviour
         if (ES3.KeyExists(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString()))
         {
             int selectedChapter = ES3.Load<int>("Chapter");
+            Debug.Log(selectedChapter);
             Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
             List<float> list = dict.ElementAt(selectedChapter).Value;
             int k = 0;

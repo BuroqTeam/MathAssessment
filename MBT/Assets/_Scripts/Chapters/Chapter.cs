@@ -25,9 +25,10 @@ public class Chapter : MonoBehaviour
         ChapterNumberTxt.text = chapterRaw.number;
         ChapterNameTxt.text = chapterRaw.name;
         jo = jsonObj;
-        JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
+        
+        JArray questions = (JArray)jo["chapters"][chapterRaw.index]["questions"];
         questionGroup = questions.ToObject<IList<Question>>();
-
+        
         // questionGroup.Count  100
         // TestGroup.questions o'ziga tegishli savollar ni oladi       
     }
@@ -43,8 +44,8 @@ public class Chapter : MonoBehaviour
                 k++;
             }
         }
-        JArray questions = (JArray)jo["chapters"][int.Parse(chapterRaw.number)]["questions"];
-        ES3.Save<int>("Chapter", int.Parse(chapterRaw.number));        
+        JArray questions = (JArray)jo["chapters"][chapterRaw.index]["questions"];
+        ES3.Save<int>("Chapter", chapterRaw.index);        
         ES3.Save<int>("NumberOfTestGroup", k);
         ES3.Save<string>("ChapterName", chapterRaw.name);
         ES3.Save<string>("ChapterDescription", chapterRaw.description);        
@@ -61,6 +62,7 @@ public class ChapterRaw
     public string number;
     public string name;
     public string description;
+    public int index;
     
 }
 
