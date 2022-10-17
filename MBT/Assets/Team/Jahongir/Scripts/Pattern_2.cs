@@ -42,13 +42,13 @@ public class Pattern_2 : GeneralTest
     {
         if (Pattern_2Obj.options.Count % 4 == 0)
         {
-            int x = -100, y = 100, w = 0;
+            int x = -100, y = 110, w = 0;
             for (int i = 0; i < Pattern_2Obj.options.Count; i++)
             {
                 if (i < Pattern_2Obj.options.Count / 2)
                 {
                     GameObject button = Instantiate(Button, transform);
-                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - i) * 200, y, 0);
+                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - i) * 220, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     Buttons.Add(button);
@@ -56,7 +56,7 @@ public class Pattern_2 : GeneralTest
                 else
                 {
                     GameObject button = Instantiate(Button, transform);
-                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - w) * 200, -y, 0);
+                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(x - ((Pattern_2Obj.options.Count / 4 - 1) - w) * 220, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     w++;
@@ -66,13 +66,13 @@ public class Pattern_2 : GeneralTest
         }
         else
         {
-            int y = 100, q = 0;
+            int y = 110, q = 0;
             for (int i = 0; i < Pattern_2Obj.options.Count; i++)
             {
                 if (i < Pattern_2Obj.options.Count / 2)
                 {
                     GameObject button = Instantiate(Button, transform);
-                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + i) * 200, y, 0);
+                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + i) * 220, y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     Buttons.Add(button);
@@ -80,7 +80,7 @@ public class Pattern_2 : GeneralTest
                 else
                 {
                     GameObject button = Instantiate(Button, transform);
-                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + q) * 200, -y, 0);
+                    button.GetComponent<RectTransform>().anchoredPosition3D = new Vector3((-(Pattern_2Obj.options.Count / 4) + q) * 220, -y, 0);
                     button.transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_2Obj.options[i];
                     button.GetComponent<P2_ButtonControl>().Pattern2 = this;
                     q++;

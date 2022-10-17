@@ -1,0 +1,1572 @@
+{
+    "meta": {
+        "date": "2022-10-17 17:54:13",
+        "grade": 10,
+        "subject": "math",
+        "language": "uz"
+    },
+    "chapters": [
+        {
+            "number": 1,
+            "name": "1-bob",
+            "description": "ELEMENTAR FUNKSIYALAR",
+            "questions": [
+                {
+                    "id": "math-uz-10-1-1-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = kx + b\\) funksiyaning aniqlanish sohasi va qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.\n",
+                        "options": [
+                            "[*]\\(D(f)=(-\\infty; +\\infty) \\w  E(f)=(-\\infty; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty) \\w  E(f)=[0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; \\w 0) \\cup (0; +\\infty) \\w E(f)=(-\\infty; \\w 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=[0; +\\infty) \\w E(f)=[0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = x^2\\) funksiyaning aniqlanish sohasi va qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.\n",
+                        "options": [
+                            "[*]\\(D(f)=(-\\infty; +\\infty) \\w  E(f)=[0; +\\infty)\\)",
+                            "\\(D(f)=[0; +\\infty) \\w  E(f)=[0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; \\w 0) \\cup (0; +\\infty) \\w E(f)=(-\\infty; \\w 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=[0; +\\infty) \\w E(f)=(-\\infty; \\w 0]\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = \\sqrt{-x}\\) funksiyaning aniqlanish sohasi to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.",
+                        "options": [
+                            "[*]\\(D(f)=(-\\infty; \\w 0]\\)",
+                            "\\(D(f)=(-\\infty; \\w 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty)\\)",
+                            "\\(D(f)=[0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = \\sqrt{x}\\) funksiyaning aniqlanish sohasi to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang. ",
+                        "options": [
+                            "\\(D(f)=(-\\infty; \\w 0]\\)",
+                            "\\(D(f)=(-\\infty; \\w 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty)\\)",
+                            "[*]\\(D(f)=[0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = x^3\\) funksiyaning qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.\n",
+                        "options": [
+                            "\\(E(f)=[0; +\\infty)\\)",
+                            "[*]\\(E(f)=(-\\infty; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; 0) \\cup (0; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; 0]\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = \\frac{2}{x - 5}\\) funksiyaning aniqlanish sohasi to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.\n",
+                        "options": [
+                            "\\(D(f)=(-\\infty; +\\infty)\\)",
+                            "[*]\\(D(f)=(-\\infty;\\w 5) \\cup (5; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; -5) \\cup (5; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; \\w0) \\cup (0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = |x|\\) funksiyaning qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.",
+                        "options": [
+                            "[*]\\(E(f)=[0; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; 0) \\cup (0; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; 0]\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = x^2 - 4\\) funksiyaning qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.",
+                        "options": [
+                            "[*]\\(E(f)=[-4; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; +\\infty)\\)",
+                            "\\(E(f)=(4; +\\infty)\\)",
+                            "\\(E(f)=(-\\infty; \\w 4]\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = 5x^2 + 2\\) funksiyaning aniqlanish sohasi va qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.",
+                        "options": [
+                            "[*]\\(D(f)=(-\\infty; +\\infty) \\w E(f)=[2; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty) \\w E(f)=[0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty) \\w E(f)=(-\\infty; -2) \\cup (2; +\\infty)\\)",
+                            "\\(D(f)=[0; +\\infty) \\w E(f)=[0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(y = \\frac{1}{x - 3}\\) funksiyaning aniqlanish sohasi va qiymatlar to\u02bbplami to\u02bbg\u02bbri ko\u02bbrsatilgan javobni belgilang.\n",
+                        "options": [
+                            "\\(D(f)=(3; +\\infty) \\w E(f)=(-\\infty; 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty; +\\infty) \\w E(f)=[0; +\\infty)\\)",
+                            "[*]\\(D(f)=(-\\infty;\\w 3) \\cup (3; +\\infty) \\w E(f)=(-\\infty; \\w 0) \\cup (0; +\\infty)\\)",
+                            "\\(D(f)=(-\\infty;\\w 3) \\cup (3; +\\infty) \\w E(f)=[0; +\\infty)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = 2x+1\\) funksiyaning grafigi o\u02bbtadi.",
+                        "options": [
+                            "[*]A(5; 11)",
+                            "[*]B(0; 1)",
+                            "[*]C(-1; -1)",
+                            "[*]D(2; 5)",
+                            "E(5; 7)",
+                            "F(10; 2)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y=x^2+2x+1\\) funksiyaning grafigi o\u02bbtadi.",
+                        "options": [
+                            "A(1; 5)",
+                            "[*]B(2; 9)",
+                            "C(-1; 1)",
+                            "[*]D(4; 25)",
+                            "E(0; 10)",
+                            "[*]F(-5; 16)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = 3x\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "A(1; 7)",
+                            "[*]B(3; 9)",
+                            "C(-1; 3)",
+                            "[*]D(2; 6)",
+                            "[*]E(0; 0)",
+                            "F(-5; 16)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = x^2 - 6\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "[*]A(1; -5)",
+                            "B(-1; 5)",
+                            "[*]C(3; 3)",
+                            "D(4; 6)",
+                            "[*]E(-3; 3)",
+                            "F(1; 10)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = x^3 + 2x\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "A(1; 4)",
+                            "[*]B(0; 0)",
+                            "[*]C(1; 3)",
+                            "[*]D(2; 12)",
+                            "E(-2; 3)",
+                            "F(-5; 16)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = |x| + x\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "[*]A(1; 2)",
+                            "B(0; 1)",
+                            "[*]C(-2; 0)",
+                            "D(2; 12)",
+                            "E(-2; 4)",
+                            "[*]F(-5; 0)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = 1 + \\sqrt{x}\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "A(1; 4)",
+                            "B(25; 5)",
+                            "[*]C(4; 3)",
+                            "D(4; 6)",
+                            "[*]E(1; 2)",
+                            "[*]F(0; 1)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = |x|\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "A(1; -1)",
+                            "B(25; 5)",
+                            "C(5; -5)",
+                            "[*]D(-4; 4)",
+                            "[*]E(1; 1)",
+                            "[*]F(5; 5)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = x^2 - 4\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "[*]A(2; 0)",
+                            "[*]B(1; -3)",
+                            "C(4; -5)",
+                            "D(-4; 4)",
+                            "[*]E(3; 5)",
+                            "[*]F(5; 21)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Ushbu nuqtalarni qaysilaridan \\(y = |x| - x\\) funksiya grafigi o\u02bbtadi.",
+                        "options": [
+                            "[*]A(1; 0)",
+                            "[*]B(0; 0)",
+                            "C(2; 3)",
+                            "[*]D(-6; 12)",
+                            "E(-2; 3)",
+                            "F(-5; 21)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w 3)\\)",
+                            "\\((5; \\w 11)\\)",
+                            "\\((-4; \\w -7)\\)",
+                            "\\((2; \\w 5)\\)",
+                            "\\((-2; \\w 2)\\)",
+                            "\\((5; \\w 5)\\)",
+                            "\\((3; \\w 3)\\)",
+                            "\\((-7; \\w 7)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = 2x + 1\\)",
+                                "\\((1; \\w 3)\\)",
+                                "\\((5; \\w 11)\\)",
+                                "\\((-4; \\w -7)\\)",
+                                "\\((2; \\w 5)\\)"
+                            ],
+                            [
+                                "\\(f(x) = |x|\\)",
+                                "\\((-2; \\w 2)\\)",
+                                "\\((5; \\w 5)\\)",
+                                "\\((3; \\w 3)\\)",
+                                "\\((-7; \\w 7)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((2; \\w 4)\\)",
+                            "\\((-1; \\w 1)\\)",
+                            "\\((-4; \\w 16)\\)",
+                            "\\((5; \\w 25)\\)",
+                            "\\((-3; \\w -27)\\)",
+                            "\\((3; \\w 27)\\)",
+                            "\\((-1; \\w -1)\\)",
+                            "\\((2; \\w 8)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = x^2\\)",
+                                "\\((2; \\w 4)\\)",
+                                "\\((-1; \\w 1)\\)",
+                                "\\((-4; \\w 16)\\)",
+                                "\\((5; \\w 25)\\)"
+                            ],
+                            [
+                                "\\(f(x) = x^3\\)",
+                                "\\((-3; \\w -27)\\)",
+                                "\\((3; \\w 27)\\)",
+                                "\\((-1; \\w -1)\\)",
+                                "\\((2; \\w 8)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w 1)\\)",
+                            "\\((9; \\w 3)\\)",
+                            "\\((16; \\w 4)\\)",
+                            "\\((25; \\w 5)\\)",
+                            "\\((3; \\w 0)\\)",
+                            "\\((8; \\w 10)\\)",
+                            "\\((5; \\w 4)\\)",
+                            "\\((-1; \\w -8)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = \\sqrt{x}\\)",
+                                "\\((1; \\w 1)\\)",
+                                "\\((9; \\w 3)\\)",
+                                "\\((16; \\w 4)\\)",
+                                "\\((25; \\w 5)\\)"
+                            ],
+                            [
+                                "\\(f(x) = 2x - 6\\)",
+                                "\\((3; \\w 0)\\)",
+                                "\\((8; \\w 10)\\)",
+                                "\\((5; \\w 4)\\)",
+                                "\\((-1; \\w -8)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((0; \\w 0)\\)",
+                            "\\((1; \\w 3)\\)",
+                            "\\((-1; \\w -1)\\)",
+                            "\\((4; \\w 24)\\)",
+                            "\\((2; \\w 2)\\)",
+                            "\\((1; \\w 0)\\)",
+                            "\\((4; \\w 6)\\)",
+                            "\\((-2; \\w 6)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = x^2 + 2x\\)",
+                                "\\((0; \\w 0)\\)",
+                                "\\((1; \\w 3)\\)",
+                                "\\((-1; \\w -1)\\)",
+                                "\\((4; \\w 24)\\)"
+                            ],
+                            [
+                                "\\(f(x) = 2|x - 1|\\)",
+                                "\\((2; \\w 2)\\)",
+                                "\\((1; \\w 0)\\)",
+                                "\\((4; \\w 6)\\)",
+                                "\\((-2; \\w 6)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w -4)\\)",
+                            "\\((4; \\w 11)\\)",
+                            "\\((-1; \\w -4)\\)",
+                            "\\((-3; \\w 4)\\)",
+                            "\\((1; \\w 2)\\)",
+                            "\\((4; \\w 3)\\)",
+                            "\\((100; \\w 11)\\)",
+                            "\\((9; \\w 4)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = x^2 - 5\\)",
+                                "\\((1; \\w -4)\\)",
+                                "\\((4; \\w 11)\\)",
+                                "\\((-1; \\w -4)\\)",
+                                "\\((-3; \\w 4)\\)"
+                            ],
+                            [
+                                "\\(f(x) = 1 + \\sqrt{x}\\)",
+                                "\\((1; \\w 2)\\)",
+                                "\\((4; \\w 3)\\)",
+                                "\\((100; \\w 11)\\)",
+                                "\\((9; \\w 4)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w -1)\\)",
+                            "\\((2; \\w -4)\\)",
+                            "\\((-2; \\w -4)\\)",
+                            "\\((5; \\w -25)\\)",
+                            "\\((1; \\w -3)\\)",
+                            "\\((-1; \\w -3)\\)",
+                            "\\((2; \\w 0)\\)",
+                            "\\((5; \\w 21)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = -x^2\\)",
+                                "\\((1; \\w -1)\\)",
+                                "\\((2; \\w -4)\\)",
+                                "\\((-2; \\w -4)\\)",
+                                "\\((5; \\w -25)\\)"
+                            ],
+                            [
+                                "\\(f(x) = x^2 - 4\\)",
+                                "\\((1; \\w -3)\\)",
+                                "\\((-1; \\w -3)\\)",
+                                "\\((2; \\w 0)\\)",
+                                "\\((5; \\w 21)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w -4)\\)",
+                            "\\((2; \\w -9)\\)",
+                            "\\((-2; \\w -1)\\)",
+                            "\\((-5; \\w -16)\\)",
+                            "\\((1; \\w 3)\\)",
+                            "\\((-1; \\w 3)\\)",
+                            "\\((2; \\w 48)\\)",
+                            "\\((-2; 48)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(g(x) = - (x + 1)^2\\)",
+                                "\\((1; \\w -4)\\)",
+                                "\\((2; \\w -9)\\)",
+                                "\\((-2; \\w -1)\\)",
+                                "\\((-5; \\w -16)\\)"
+                            ],
+                            [
+                                "\\(g(x) = 3x^4\\)",
+                                "\\((1; \\w 3)\\)",
+                                "\\((-1; \\w 3)\\)",
+                                "\\((2; \\w 48)\\)",
+                                "\\((-2; 48)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w 0)\\)",
+                            "\\((0; \\w 1)\\)",
+                            "\\((2; \\w -15)\\)",
+                            "\\((3; \\w -80)\\)",
+                            "\\((1; \\w -7)\\)",
+                            "\\((-1; \\w -9)\\)",
+                            "\\((2; \\w 0)\\)",
+                            "\\((3; \\w 19)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = 1 - x^4\\)",
+                                "\\((1; \\w 0)\\)",
+                                "\\((0; \\w 1)\\)",
+                                "\\((2; \\w -15)\\)",
+                                "\\((3; \\w -80)\\)"
+                            ],
+                            [
+                                "\\(f(x) = x^3 - 8\\)",
+                                "\\((1; \\w -7)\\)",
+                                "\\((-1; \\w -9)\\)",
+                                "\\((2; \\w 0)\\)",
+                                "\\((3; \\w 19)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((-1; \\w 2)\\)",
+                            "\\((2; \\w 0)\\)",
+                            "\\((-3; \\w 6)\\)",
+                            "\\((-4; \\w 8)\\)",
+                            "\\((-1; \\w 5)\\)",
+                            "\\((2; \\w 1)\\)",
+                            "\\((-3; \\w 9)\\)",
+                            "\\((4; \\w 5)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(f(x) = |x| - x\\)",
+                                "\\((-1; \\w 2)\\)",
+                                "\\((2; \\w 0)\\)",
+                                "\\((-3; \\w 6)\\)",
+                                "\\((-4; \\w 8)\\)"
+                            ],
+                            [
+                                "\\(f(x) = |2x - 3|\\)",
+                                "\\((-1; \\w 5)\\)",
+                                "\\((2; \\w 1)\\)",
+                                "\\((-3; \\w 9)\\)",
+                                "\\((4; \\w 5)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-5",
+                    "pattern": 5,
+                    "question": {
+                        "title": "Berilgan \\((x, \\w f(x))\\) nuqtalarni qaysi funksiya grafigiga tegishli bo\u02bblsa o\u02bbsha funksiya joylashgan qutiga joylashtiring.",
+                        "problem": [
+                            "\\((1; \\w 6)\\)",
+                            "\\((2; \\w 8)\\)",
+                            "\\((0; \\w 4)\\)",
+                            "\\((-5; \\w -6)\\)",
+                            "\\((1; \\w 4)\\)",
+                            "\\((2; \\w 2)\\)",
+                            "\\((-3; \\w -48)\\)",
+                            "\\((-5; \\w -110)\\)"
+                        ],
+                        "solution": [
+                            [
+                                "\\(g(x) = 2x + 4\\)",
+                                "\\((1; \\w 6)\\)",
+                                "\\((2; \\w 8)\\)",
+                                "\\((0; \\w 4)\\)",
+                                "\\((-5; \\w -6)\\)"
+                            ],
+                            [
+                                "\\(g(x) = -3x^2 + 7x\\)",
+                                "\\((1; \\w 4)\\)",
+                                "\\((2; \\w 2)\\)",
+                                "\\((-3; \\w -48)\\)",
+                                "\\((-5; \\w -110)\\)"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(4)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=4x^2+8x+24\\)"
+                        ],
+                        "solution": [
+                            "120"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(6)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^3+2x^2-6x + 1\\)"
+                        ],
+                        "solution": [
+                            "253"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(-3)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^2 - 14x - 11\\)"
+                        ],
+                        "solution": [
+                            "40"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(2)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=2x^3 + 2x^2 + 2x + 2\\)"
+                        ],
+                        "solution": [
+                            "30"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(2)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^4 + x^2 + 16\\)"
+                        ],
+                        "solution": [
+                            "36"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(-1)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x) = x^3 - 2x^2 + 2x + 5\\)"
+                        ],
+                        "solution": [
+                            "0"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(-3)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^3 + 3x\\)"
+                        ],
+                        "solution": [
+                            "-36"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(3)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^3 + 3x\\)"
+                        ],
+                        "solution": [
+                            "36"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(6)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^2 + 8x + 16\\)"
+                        ],
+                        "solution": [
+                            "100"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Funksiyaning \\(f(-10)\\) argumentdagi qiymatini toping\n",
+                        "problem": [
+                            "\\(f(x)=x^2 + 8x + 16\\)"
+                        ],
+                        "solution": [
+                            "36"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar chiziqli funksiya?",
+                        "options": [
+                            "[*]\\(y=2x+5\\)",
+                            "[*]\\(y=5x-1\\)",
+                            "\\(y=x^2+6x+5\\)",
+                            "\\(y=x^3\\)",
+                            "[*]\\(y=-2x+12\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar darajali funksiya?",
+                        "options": [
+                            "\\(y=4x+16\\)",
+                            "[*]\\(y=x^4\\)",
+                            "[*]\\(y=x^6\\)",
+                            "\\(y=x^2-16\\)",
+                            "[*]\\(y=x^10\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar kvadratik funksiya?",
+                        "options": [
+                            "\\(y=4x+16\\)",
+                            "[*]\\(y=2x^2 + 5x + 6\\)",
+                            "[*]\\(y=x^2 + 16\\)",
+                            "[*]\\(y=x^2-16\\)",
+                            "\\(y=x^{10}\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Keltirilgan funksiyalar orasidan irratsional funksiyalarni belgilang.",
+                        "options": [
+                            "[*]\\(y=2\\sqrt{x}\\)",
+                            "[*]\\(y=\\sqrt[3]{3x}\\)",
+                            "\\(y=2x^3+3x\\)",
+                            "\\(y=5x+6\\)",
+                            "\\(y=|x|+x\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Keltirilgan funksiyalar orasidan irratsional funksiyalarni belgilang.",
+                        "options": [
+                            "[*]\\(y=\\sqrt[3]{x + 5}\\)",
+                            "\\(y=\\frac{5x+1}{2}\\)",
+                            "[*]\\(y=\\sqrt{x^2+1}\\)",
+                            "\\(y=x^2+5x+6\\)",
+                            "\\(y=x^3+6x^2+12x+6\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar kvadratik funksiya.",
+                        "options": [
+                            "[*]\\(y=5x^2+25x+30\\)",
+                            "[*]\\(y=100-5x^2\\)",
+                            "\\(y=2x^4+2x^3\\)",
+                            "\\(y=10x+7\\)",
+                            "\\(y=1+\\sqrt{16x}\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar davriy funksiya.",
+                        "options": [
+                            "[*]\\(y = \\{x\\}\\)",
+                            "\\(y = 2x + 1\\)",
+                            "\\(y =2^x\\)",
+                            "\\(y = \\sqrt{4x + 16}\\)",
+                            "\\(y = x^3 + 5\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Funksiyalarning berilish usullarini belgilang.",
+                        "options": [
+                            "[*]\\( Analitik \\w usul\\)",
+                            "[*]\\(Jadval \\w usuli\\)",
+                            "[*]\\(Grafik \\w usul\\)",
+                            "[*]\\(Matnli \\w usul\\)",
+                            "\\( Sonli \\w usul\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar juft ham emas, toq ham emas.",
+                        "options": [
+                            "[*]\\(f(x) = x^3 - 5\\)",
+                            "[*]\\(f(x) = 2x^3 + 5x^2 - 3x + 1\\)",
+                            "\\(y = x^2 - 4\\)",
+                            "\\(y = \\sqrt{x^2 + 25}\\)",
+                            "\\(y = x^5 - 5x^3\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Qaysi funksiyalar juft ham emas, toq ham emas.",
+                        "options": [
+                            "\\(f(x) = \\sqrt[3]{x}\\)",
+                            "\\(f(x) = 5x\\)",
+                            "[*]\\(f(x) = 2^x\\)",
+                            "\\(f(x) = |x|\\)",
+                            "[*]\\(f(x) = \\sqrt{x^2 - 8x + 16}\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan funksiyaga mos keluvchi funksiya qiymatlarini argumentlar bilan birlashtiring.   \\(f(x) = x^2 - 6\\)",
+                        "options": [
+                            "[a]\\(f(-3)\\)",
+                            "[a]3",
+                            "[b]\\(f(4)\\)",
+                            "[b]10",
+                            "[c]\\(f(0)\\)",
+                            "[c]-6"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "\\(f(x) = x^3 + 2x\\) funksiyaning berilgan argumentlarga mos keluvchi qiymatlarini argumentlar bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(f(-2)\\)",
+                            "[a]-12",
+                            "[b]\\(f(-1)\\)",
+                            "[b]-3",
+                            "[c]\\(f(0)\\)",
+                            "[c]0"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = 2 - 5x\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring. ",
+                        "options": [
+                            "[a]\\(f(8)\\)",
+                            "[a]-38",
+                            "[b]\\(f(-7)\\)",
+                            "[b]37",
+                            "[c]\\(f(-1)\\)",
+                            "[c]7"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) =|x + 4|\\) funksiyaga mos keluvchi funksiya qiymatlarini argumentlar bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(f(5)\\)",
+                            "[a]9",
+                            "[b]\\(f(-1)\\)",
+                            "[b]3",
+                            "[c]\\(f(10)\\)",
+                            "[c]14"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = 3x^3 + 8\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(f(-2)\\)",
+                            "[a]-16",
+                            "[b]\\(f(-1)\\)",
+                            "[b]5",
+                            "[c]\\(f(1)\\)",
+                            "[c]11"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = 2(x - 1)^2\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring.\n",
+                        "options": [
+                            "[a]\\(f(5)\\)",
+                            "[a]32",
+                            "[b]\\(f(-1)\\)",
+                            "[b]8",
+                            "[c]\\(f(10)\\)",
+                            "[c]162"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = x^2 + 2x\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring.\n",
+                        "options": [
+                            "[a]\\(f(8)\\)",
+                            "[a]80",
+                            "[b]\\(f(-8)\\)",
+                            "[b]48",
+                            "[c]\\(f(-3)\\)",
+                            "[c]3"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = -x^2 - 2x + 3\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(f(0)\\)",
+                            "[a]3",
+                            "[b]\\(f(2)\\)",
+                            "[b]-5",
+                            "[c]\\(f(1)\\)",
+                            "[c]0"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = 2|x - 1|\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring. ",
+                        "options": [
+                            "[a]\\(f(-2)\\)",
+                            "[a]6",
+                            "[b]\\(f(7)\\)",
+                            "[b]12",
+                            "[c]\\(f(0)\\)",
+                            "[c]2"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan  \\(f(x) = \\sqrt{2x + 16}\\) funksiyaning argumentlarini mos funksiya qiymatlari bilan birlashtiring. \n",
+                        "options": [
+                            "[a]\\(f(0)\\)",
+                            "[a]4",
+                            "[b]\\(f(10)\\)",
+                            "[b]6",
+                            "[c]\\(f(-6)\\)",
+                            "[c]2"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Agar ixtiyoriy \\(x \\in D(f)\\) nuqta uchun \\(f(-x)=f(x)\\) tenglik bajarilsa",
+                            "u holda \\(y= f(x)\\) juft funksiya deyiladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Agarda ixtiyoriy \\(x \\in D(f )\\) element uchun \\(f(\u2013x)=\u2013f(x)\\) tenglik bajarilsa",
+                            "u holda \\(y=f(x)\\) toq funksiya deyiladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = kx + b \\) ko\u02bbrinishidagi funksiyalarga chiziqli funksiyalar deyiladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = ax^2 + bx + c \\)  ko\u02bbrinishidagi funksiyalarga darajali funksiyalar deyiladi."
+                        ],
+                        "solution": [
+                            "To\u2018g\u2018ri",
+                            "[*]Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = |x| + 1 \\) funksiya X o\u02bbqi bilan kesishmaydi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Agar funksiya bitta yoki bir nechta formula yoki tenglamalar bilan berilgan bo\u02bblsa",
+                            "u holda bu funksiya \\(analitik \\w usulda \\w berilgan \\w funksiya\\) deyiladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = 2x^2 + 5 \\) funksiya toq funksiya."
+                        ],
+                        "solution": [
+                            "To\u2018g\u2018ri",
+                            "[*]Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = x^3 + x\\) funksiyaga juft funksiya deyiladi."
+                        ],
+                        "solution": [
+                            "To\u2018g\u2018ri",
+                            "[*]Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Funksiyalar \\(analitik \\w usulda",
+                            "\\w jadval \\w usulda",
+                            "\\w grafik \\w usulda \\w va \\w matn \\w usulida\\) berilishi mumkin."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "\\(y = \\{ x \\} \\) funksiya davriy funksiya bo\u02bbladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = x^2 + 6\\)"
+                        ],
+                        "solution": [
+                            "[*]Juft funksiya",
+                            "Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = 5 x^3 + x\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "[*]Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = 100 - 4x^2\\)"
+                        ],
+                        "solution": [
+                            "[*]Juft funksiya",
+                            "Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = \\sqrt{16 - x}\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "Toq funksiya",
+                            "[*]Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = x^4 + 1\\)"
+                        ],
+                        "solution": [
+                            "[*]Juft funksiya",
+                            "Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = 5x^3 - 5x\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "[*]Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = \\sqrt{x^2 - 8x + 16}\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "Toq funksiya",
+                            "[*]Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = x^2 + 2x -3\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "Toq funksiya",
+                            "[*]Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = \\sqrt[3]{x}\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "[*]Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan funksiya uchun to\u02bbg\u02bbri xossani belgilang.",
+                        "problem": [
+                            "\\(y = \\sqrt{x^5}\\)"
+                        ],
+                        "solution": [
+                            "Juft funksiya",
+                            "[*]Toq funksiya",
+                            "Juft ham toq ham emas"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(y = x^2 - 6\\) funksiyaning \\(f(6)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]30",
+                            "43",
+                            "58",
+                            "75"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(y = x^3 + 2x\\) funksiyaning \\(f(-5)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]-135",
+                            "135",
+                            "-5",
+                            "-115"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(y = -x^2 - 2x + 3\\) funksiyaning \\(f(-2)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]3",
+                            "-4",
+                            "-5",
+                            "0"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(y = \\sqrt{25 - x^2}\\) funksiyaning aniqlanish sohasini belgilang.",
+                        "options": [
+                            "[*]\\(D(y) = [-5; \\w 5]\\)",
+                            "\\(D(y) = [-5; \\w 0]\\)",
+                            "\\(D(y) = [0; \\w 5]\\)",
+                            "\\(D(y) = (-5; \\w 5)\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(g(x) = \\sqrt{x^2 - 2x - 8}\\) funksiyaning \\(g(6)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]4",
+                            "\\sqrt{56}",
+                            "\\sqrt{20}",
+                            "5"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(f(x) = \\frac{x + 2}{x^2 - 1}\\) funksiyaning \\(f(4)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]\\frac{6}{15}",
+                            "\\frac{6}{16}",
+                            "\\frac{5}{8}",
+                            "\\frac{4}{3}"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(f(x) = \\sqrt{1 - 2x}\\) funksiyaning \\(f(-40)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]9",
+                            "\\sqrt{79}",
+                            "\\sqrt{82}",
+                            "4\\sqrt{5}"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(f(x) =\\frac{3}{\\sqrt{x-4}}\\) funksiyaning \\(f(29)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]\\frac{3}{5}",
+                            "\\frac{3}{4}",
+                            "\\frac{3}{6}",
+                            "\\frac{3}{\\sqrt{33}}"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(f(x) = x^3 - 5x - 4\\) funksiyaning \\(f(4)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]40",
+                            "48",
+                            "-40",
+                            "88"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(f(x) = \\frac{\\sqrt{x + 3}}{x - 1}\\) funksiyaning \\(f(13)\\) argumentdagi qiymatini topib belgilang.",
+                        "options": [
+                            "[*]\\frac{4}{12}",
+                            "\\frac{\\sqrt{10}}{12}",
+                            "\\frac{10}{13}",
+                            "\\frac{3}{13}"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-1-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = 2x + 5\\) funksiya grafigiga tegishli (2, f(2)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "1"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-2-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = x^3\\) funksiya grafigiga tegishli (-3, f(-3)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "3"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-3-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = 5x^2 + 2\\) funksiya grafigiga tegishli (-2, f(-2)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "2"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-4-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = 1 - x^4\\) funksiya grafigiga tegishli (2, f(2)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "4"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-5-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = -(x + 1)^2\\) funksiya grafigiga tegishli (-4, f(-4)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "3"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-6-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(g(x) = |x| + x\\) funksiya grafigiga tegishli (3, g(3)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "1"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-7-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = |2x|\\) funksiya grafigiga tegishli (-3, f(-3)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "2"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-8-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(g(x) = x^2 - x - 20\\) funksiya grafigiga tegishli (7, g(7)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "1"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-9-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = 8x - x^2\\) funksiya grafigiga tegishli (-5, f(-5)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "3"
+                        ]
+                    }
+                },
+                {
+                    "id": "math-uz-10-1-10-18",
+                    "pattern": 18,
+                    "question": {
+                        "title": "\\(f(x) = -x \\) funksiya grafigiga tegishli (5, f(5)) nuqta qaysi chorakda joylashganligini belgilang.",
+                        "options": [
+                            "4"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
