@@ -5,7 +5,7 @@ public class ProgressManager : MonoBehaviour
 {
 
     public ChapterManager chapterManager;
-    public ProgressKeySO ProgressSave;
+    public ProgressKeySO ProgressSave; // Conflict bo'lganda SO dan Key ni o'zgartirib qo'yish kerak
 
     private void Awake()
     {
@@ -35,14 +35,15 @@ public class ProgressManager : MonoBehaviour
         for (int i = 0; i < chapterManager.NumberOfChapter; i++)
         {
             dict.Add(i, list);
-        }
+        }       
         ES3.Save<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString(), dict);
     }
 
     void UpdateChapterProgressView()
-    {
-        int indexOfChapter = 0; 
+    {       
+        int indexOfChapter = 0;        
         Dictionary<int, List<float>> dict = ES3.Load<Dictionary<int, List<float>>>(ProgressSave.Key + ES3.Load<string>("Subject") + ES3.Load<int>("ClassKey").ToString());
+        Debug.Log(dict.Count);
         foreach (KeyValuePair<int, List<float>> item in dict)
         {
             int leafByPercentage = 0; int maximumTestGroup = 0; float overAllPercentage = 0;

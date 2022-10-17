@@ -58,7 +58,7 @@ public class ChapterManager : MonoBehaviour
     void ReadJSON()
     {
         _jo = JObject.Parse(_curentJson.text);
-        JArray chapters = (JArray)_jo["chapters"];
+        JArray chapters = (JArray)_jo["chapters"];        
         NumberOfChapter = chapters.Count;
         _chapterGorup = chapters.ToObject<IList<ChapterRaw>>();        
         CreateChapters();
