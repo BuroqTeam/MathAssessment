@@ -85,7 +85,7 @@ public class Pattern_4 : GeneralTest
             string str = Pattern_4Obj.statements[i].image;
             spriteOfImage = GetDesiredSprite(str, spriteCOllectionSO);
             GameObject obj = Instantiate(PicturePrefab, transform);
-
+            Debug.Log(spriteOfImage.name);
             obj.transform.GetChild(1).GetComponent<Image>().sprite = spriteOfImage;
             Vector2 newSize = new(spriteOfImage.texture.width / 5 * 3, spriteOfImage.texture.height / 5 * 3);   // spritening 80% ga moslab oladi.  
             obj.transform.GetChild(1).GetComponent<RectTransform>().sizeDelta = newSize; 
