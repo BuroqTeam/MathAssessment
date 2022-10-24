@@ -1,0 +1,1647 @@
+{
+    "meta": {
+        "date": "2022-10-24 16:58:27",
+        "grade": 10,
+        "subject": "geometry",
+        "language": "uz"
+    },
+    "chapters": [
+        {
+            "number": 1,
+            "name": "1-bob",
+            "description": "PLANIMETRIYANI TIZIMLI TAKRORLASH",
+            "questions": [
+                {
+                    "id": "geometry-uz-10-1-1-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Kvadratning tomoni \\(20 \\w cm\\) ga teng. Bu kvadratga ichki chizilgan aylana radiusini toping.",
+                        "options": [
+                            "[*]\\(10 \\w cm \\)",
+                            "\\(15 \\w cm \\)",
+                            "\\(8 \\w cm \\)",
+                            "\\(12 \\w cm \\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Trapetsiyaning bitta asosi ikkinchisidan \\(8 \\w cm\\) ga uzun, o\u2018rta chizig\u2018i esa \\(10 \\w cm\\) ga teng. Trapetsiyaning kichik asosini toping.",
+                        "options": [
+                            "[*]\\(6 \\w cm \\)",
+                            "\\(10 \\w cm \\)",
+                            "\\(8 \\w cm \\)",
+                            "\\(14 \\w cm \\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Diagonallari \\(10 \\w cm\\) va \\(36 \\w cm\\) bo\u2018lgan rombning yuzini toping.",
+                        "options": [
+                            "[*]\\(180 \\w cm^2\\)",
+                            "\\(150 \\w cm^2\\)",
+                            "\\(360 \\w cm^2\\)",
+                            "\\(160 \\w cm^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Kvadratning tomoni \\( 10 \\w cm \\) ga teng. Bu kvadratga ichki chizilgan aylana radiusini toping.",
+                        "options": [
+                            "[*]\\(5 \\w cm \\)",
+                            "\\(8 \\w cm \\)",
+                            "\\(4 \\w cm \\)",
+                            "\\(6 \\w cm \\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Yuzi \\(9\\pi \\w cm^2\\) bo\u2018lgan doira kvadratga ichki chizilgan. Doiraning aylanasi uzunligini va kvadratning perimetrini toping.",
+                        "options": [
+                            "[*]\\(L = 6\\pi \\w cm, \\w P = 24 \\w cm\\)",
+                            "\\(L = 8\\pi \\w cm, \\w P = 24 \\w cm\\)",
+                            "\\(L = 10\\pi \\w cm, \\w P = 24 \\w cm\\)",
+                            "\\(L = 6\\pi \\w cm, \\w P = 20 \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Tomoni \\(6 \\w cm\\) ga teng bo\u2018lgan kvadratga ichki chizilgan doira yuzini toping.",
+                        "options": [
+                            "[*]\\(9\\pi \\w cm^2\\)",
+                            "\\(8\\pi \\w cm^2\\)",
+                            "\\(16\\pi \\w cm^2\\)",
+                            "\\(36\\pi \\w cm^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Futbol maydonining perimetri \\(340 \\w m\\), bo\u2018yi esa enidan \\(50 \\w m\\) uzun bo\u2018lsa, maydon o\u2018lchamlarini toping.",
+                        "options": [
+                            "[*]\\(60 \\w m, \\w 110 \\w m\\)",
+                            "\\(60 \\w m, \\w 100 \\w m\\)",
+                            "\\(50 \\w m, \\w 100 \\w m\\)",
+                            "\\(40 \\w m, \\w 90 \\w m\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Diagonallari \\(5 \\w m\\) va \\(18 \\w m\\) bo\u2018lgan rombning yuzini toping.",
+                        "options": [
+                            "[*]\\(45 \\w m^2\\)",
+                            "\\(90 \\w m^2\\)",
+                            "\\(60 \\w m^2\\)",
+                            "\\(120 \\w m^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "\\(AB\\) kesmani \\(O\\) nuqta uzunligi \\(18 \\w cm\\) va \\(14 \\w cm\\) bo\u2018lgan bo\u2018laklarga bo\u2018ladi. Agar \\(K\\) va \\(M\\) nuqtalar \\(AO\\) va \\(BO\\) kesmalarning o\u2018rtasi bo\u2018lsa, \\(KM\\) kesma uzunligini toping.",
+                        "options": [
+                            "[*]\\(16 \\w cm \\)",
+                            "\\(18 \\w cm \\)",
+                            "\\(8 \\w cm \\)",
+                            "\\(14 \\w cm \\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-1",
+                    "pattern": 1,
+                    "question": {
+                        "title": "Doira shaklidagi ikkita gulzor yuzlari yig\u2018indisi \\(90\\pi \\w m^2\\), ayirmasi \\(72\\pi \\w m^2\\). Har bir gulzorning yuzlarini toping.",
+                        "options": [
+                            "[*]\\(81\\pi \\w m^2\\), \\(9\\pi \\w m^2\\)",
+                            "\\(80\\pi \\w m^2\\), \\(10\\pi \\w m^2\\)",
+                            "\\(85\\pi \\w m^2\\), \\(5\\pi \\w m^2\\)",
+                            "\\(9\\pi \\w m^2\\), \\(80\\pi \\w m^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 3:4:2 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]60^\\circ",
+                            "50^\\circ",
+                            "30^\\circ",
+                            "70^\\circ",
+                            "[*]80^\\circ",
+                            "[*]40^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 5:3:1 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]100^\\circ",
+                            "50^\\circ",
+                            "10^\\circ",
+                            "70^\\circ",
+                            "[*]60^\\circ",
+                            "[*]20^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 9:4:5 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]90^\\circ",
+                            "10^\\circ",
+                            "[*]50^\\circ",
+                            "[*]40^\\circ",
+                            "30^\\circ",
+                            "70^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 6:7:5 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]60^\\circ",
+                            "[*]70^\\circ",
+                            "[*]50^\\circ",
+                            "40^\\circ",
+                            "90^\\circ",
+                            "80^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 3:1:2 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "20^\\circ",
+                            "[*]90^\\circ",
+                            "[*]30^\\circ",
+                            "40^\\circ",
+                            "[*]60^\\circ",
+                            "50^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 6:4:2 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]90^\\circ",
+                            "20^\\circ",
+                            "100^\\circ",
+                            "50^\\circ",
+                            "[*]60^\\circ",
+                            "[*]30^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 7:5:3 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "15^\\circ",
+                            "[*]84^\\circ",
+                            "[*]60^\\circ",
+                            "[*]36^\\circ",
+                            "75^\\circ",
+                            "72^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 9:7:2 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]90^\\circ",
+                            "40^\\circ",
+                            "50^\\circ",
+                            "[*]70^\\circ",
+                            "[*]20^\\circ",
+                            "10^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 10:5:3 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "90^\\circ",
+                            "[*]100^\\circ",
+                            "45^\\circ",
+                            "[*]50^\\circ",
+                            "110^\\circ",
+                            "[*]30^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-2",
+                    "pattern": 2,
+                    "question": {
+                        "title": "Uchburchakning ichki burchaklari 5:6:1 nisbatda. Burchaklarning gradus o\u2018lchovini toping.",
+                        "options": [
+                            "[*]75^\\circ",
+                            "110^\\circ",
+                            "[*]90^\\circ",
+                            "105^\\circ",
+                            "[*]15^\\circ",
+                            "60^\\circ"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 14 \\w cm\\), \\(BC = 9 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "3",
+                            "4"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "4",
+                                ":",
+                                "2",
+                                "3"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 13 \\w cm\\), \\(BC = 12 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "3",
+                            "5"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "3",
+                                ":",
+                                "2",
+                                "5"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 12 \\w cm\\), \\(BC = 2 AB\\) bo\u2018lsa \\(BC : AC\\) nisbatning qiymatini toping.",
+                        "problem": [
+                            "2",
+                            "3",
+                            "4",
+                            "6"
+                        ],
+                        "solution": [
+                            [
+                                "2",
+                                "4",
+                                ":",
+                                "3",
+                                "6"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AC = 25 \\w cm\\), \\(BC = 7 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "5",
+                            "8"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "8",
+                                ":",
+                                "2",
+                                "5"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 17 \\w cm\\), \\(BC = AB + 8 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "4",
+                            "7"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "7",
+                                ":",
+                                "4",
+                                "2"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 15 \\w cm\\), \\(AC = 2AB + 11 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(BC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "5",
+                            "6"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "5",
+                                ":",
+                                "2",
+                                "6"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = 5 \\w cm\\), \\(BC = 3AB \\w cm\\) bo\u2018lsa \\(BC\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "0",
+                            "1",
+                            "2",
+                            "5"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "5",
+                                ":",
+                                "2",
+                                "0"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AB = BC - 5 \\w cm\\), \\(BC = 23 \\w cm\\) bo\u2018lsa \\(BC\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "3",
+                            "4"
+                        ],
+                        "solution": [
+                            [
+                                "2",
+                                "3",
+                                ":",
+                                "4",
+                                "1"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AC = 36 \\w cm\\), \\(BC = 16 \\w cm\\) bo\u2018lsa \\(AB\\) kesmaning \\(AC\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "0",
+                            "2",
+                            "3",
+                            "6"
+                        ],
+                        "solution": [
+                            [
+                                "2",
+                                "0",
+                                ":",
+                                "3",
+                                "6"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-3",
+                    "pattern": 3,
+                    "question": {
+                        "title": "\\(A\\), \\(B\\), \\(C\\) nuqtalar bitta to\u2018g\u2018ri chiziqda yotadi. \\(AC = 40 \\w cm\\), \\(BC = 13 \\w cm\\) bo\u2018lsa \\(BC\\) kesmaning \\(AB\\) kesmaga nisbatini toping.",
+                        "problem": [
+                            "1",
+                            "2",
+                            "3",
+                            "7"
+                        ],
+                        "solution": [
+                            [
+                                "1",
+                                "3",
+                                ":",
+                                "2",
+                                "7"
+                            ]
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "Berilgan to\u2018g\u2018ri burchakli uchburchaklarning perimetrlari va yuzalarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi uchburchak",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_01.png"
+                            },
+                            {
+                                "statement": "Ikkinchi uchburchak",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_02.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": ">",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": ">",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "Berilgan to\u2018g\u2018ri burchakli uchburchaklarning perimetrlari va yuzalarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi uchburchak",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_03.png"
+                            },
+                            {
+                                "statement": "Ikkinchi uchburchak",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_04.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": ">",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": ">",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "Berilgan doiralarning yuzalarini va aylanalarining uzunliklarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_05.png"
+                            },
+                            {
+                                "statement": "Ikkinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_06.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Aylana uzunligi",
+                                "sign": "<",
+                                "right": "Aylana uzunligi"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "<",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "To\u2018g\u2018ri to\u2018rtburchak shaklidagi maydonlarning yuzalarini va perimetrlarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_07.png"
+                            },
+                            {
+                                "statement": "Ikkinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_08.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": "=",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "<",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "To\u2018g\u2018ri to\u2018rtburchak shaklidagi maydonlarning yuzalarini va perimetrlarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_09.png"
+                            },
+                            {
+                                "statement": "Ikkinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_10.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": "=",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": ">",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "To\u2018g\u2018ri to\u2018rtburchak shaklidagi maydonlarning yuzalarini va perimetrlarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_11.png"
+                            },
+                            {
+                                "statement": "Ikkinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_12.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": "=",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "<",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "To\u2018g\u2018ri to\u2018rtburchak shaklidagi maydonlarning yuzalarini va perimetrlarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_13.png"
+                            },
+                            {
+                                "statement": "Ikkinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_14.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": "<",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "<",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "To\u2018g\u2018ri to\u2018rtburchak shaklidagi maydonlarning yuzalarini va perimetrlarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_15.png"
+                            },
+                            {
+                                "statement": "Ikkinchi maydon",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_16.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Perimetri",
+                                "sign": ">",
+                                "right": "Perimetri"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "=",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "Berilgan doiralarning yuzalarini va aylanalarining uzunliklarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_17.png"
+                            },
+                            {
+                                "statement": "Ikkinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_18.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Aylana uzunligi",
+                                "sign": ">",
+                                "right": "Aylana uzunligi"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": ">",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-4",
+                    "pattern": 4,
+                    "question": {
+                        "title": "Berilgan doiralarning yuzalarini va aylanalarining uzunliklarini taqqoslang.",
+                        "statements": [
+                            {
+                                "statement": "Birinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_19.png"
+                            },
+                            {
+                                "statement": "Ikkinchi doira",
+                                "image": "Assets\\Sprites\\AddressableSprites\\Geometry10bob1_20.png"
+                            }
+                        ],
+                        "options": [
+                            {
+                                "left": "Aylana uzunligi",
+                                "sign": "<",
+                                "right": "Aylana uzunligi"
+                            },
+                            {
+                                "left": "Yuzasi",
+                                "sign": "<",
+                                "right": "Yuzasi"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Asosi \\(a = 6\\) ga teng balandligi esa \\(h_a = 5\\) bo\u2018lgan uchburchakning yuzini hisoblang.",
+                        "problem": [
+                            "\\(S = \\frac{1}{2}ah_a\\)"
+                        ],
+                        "solution": [
+                            "15"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Asosi \\(a = 10\\) ga teng balandligi esa \\(h_a = 8\\) bo\u2018lgan uchburchakning yuzini hisoblang.",
+                        "problem": [
+                            "\\(S = \\frac{1}{2}ah_a\\)"
+                        ],
+                        "solution": [
+                            "40"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Diagonallari \\(6 \\w cm \\) va \\(4 \\w cm \\) ga teng bo\u2018lgan rombning yuzini toping.",
+                        "problem": [
+                            "\\(S = (d_1 \\times d_2) \\frac{1}{2}\\)"
+                        ],
+                        "solution": [
+                            "12"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Diagonallari \\(12 \\w cm \\) va \\(10 \\w cm \\) ga teng bo\u2018lgan rombning yuzini toping.",
+                        "problem": [
+                            "\\(S = (d_1 \\times d_2) \\frac{1}{2}\\)"
+                        ],
+                        "solution": [
+                            "60"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Diagonallari \\(16 \\w cm \\) va \\(8 \\w cm \\) ga teng bo\u2018lgan rombning yuzini toping.",
+                        "problem": [
+                            "\\(S = (d_1 \\times d_2) \\frac{1}{2}\\)"
+                        ],
+                        "solution": [
+                            "64"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Diagonallari \\( 24 \\w cm \\) va \\( 18 \\w cm \\) bo\u2018lgan rombning perimetrini toping.",
+                        "problem": [
+                            "\\(P = 4a = 4 \\sqrt{(d_1/2)^2 + (d_2/2)^2}\\)"
+                        ],
+                        "solution": [
+                            "60"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Diagonallari \\( 8 \\w cm\\) va \\( 6 \\w cm\\) bo\u2018lgan rombning perimetrini toping.",
+                        "problem": [
+                            "\\(P = 4a = 4 \\sqrt{(d_1/2)^2 + (d_2/2)^2}\\)"
+                        ],
+                        "solution": [
+                            "20"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "To\u2018g\u2018ri burchakli uchburchakning katetlari \\( 40 \\w cm\\) va \\( 30 \\w cm\\) ga teng. Uchburchakning yuzini hisoblang.",
+                        "problem": [
+                            "\\(S = ab\\frac{1}{2}\\)"
+                        ],
+                        "solution": [
+                            "600"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Trapetsiyaning kichik asosi \\( 8 \\w cm\\), katta asosi \\( 16 \\w cm\\) ga va balandligi \\( 8 \\w cm\\) ga teng. Trapetsiya yuzasini hisoblang.",
+                        "problem": [
+                            "\\(S = \\frac{1}{2}(a + b)h\\)"
+                        ],
+                        "solution": [
+                            "96"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-6",
+                    "pattern": 6,
+                    "question": {
+                        "title": "Trapetsiyaning kichik asosi \\(16 \\w cm\\), katta asosi \\( 24 \\w cm\\) ga va balandligi \\( 12 \\w cm\\) ga teng. Trapetsiya yuzasini hisoblang.",
+                        "problem": [
+                            "\\(S = \\frac{1}{2}(a + b)h\\)"
+                        ],
+                        "solution": [
+                            "240"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Geometrik shakllarning ta\u2019rifsiz qabul qilinganlarini belgilang.",
+                        "options": [
+                            "[*]nuqta",
+                            "burchak",
+                            "[*]tekislik",
+                            "[*]to\u02bbg\u02bbri chiziq",
+                            "kesma"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Ta\u2019rif berilgan geometrik shakllarni belgilang.",
+                        "options": [
+                            "[*]uchburchak",
+                            "nuqta",
+                            "[*]nur",
+                            "[*]kesma",
+                            "tekislik"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "\\(AC\\) kesma \\(BC\\) kesmadan uch marta uzun. Bu munosabat ko\u2018rsatilgan ikkita javobni aniqlang.",
+                        "options": [
+                            "[*]\\(AC = 3BC\\)",
+                            "\\(3AC = BC\\)",
+                            "\\(AC + BC = 4AC\\)",
+                            "[*]\\(BC=\\frac{1}{3}AC\\)",
+                            "\\(2AC = BC\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "\\(AC\\) kesma \\(BC\\) kesmadan 2 cm ga qisqa. Shu munosabat ko\u2018rsatilgan ikkita bandni aniqlang.",
+                        "options": [
+                            "[*]\\(AC = BC - 2\\)",
+                            "\\(AC = 2BC\\)",
+                            "[*]\\(AC + 2 = BC\\)",
+                            "\\(2AC = BC\\)",
+                            "\\(AC - 2 = BC\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Noyevklid geometriyasini yaratishga katta hissa qo\u2018shgan olimlarni belgilang.",
+                        "options": [
+                            "[*]Yanosh Boyyai",
+                            "Platon",
+                            "[*]Karl Fridrix Gauss",
+                            "[*]Nikolay Ivanovich Lobachevskiy",
+                            "Yevklid"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "\\(\u201cHayyom - Sakkeri \\w to\u02bbrtburchagi\u201d\\) qaysi olimlar sharafiga qo\u02bbyilgan.",
+                        "options": [
+                            "[*]Italiyalik matematik J. Sakkeri",
+                            "Rus matematigi Nikolay Ivanovich Lobachevskiy",
+                            "Ingliz matematigi Yan Pleyfer",
+                            "[*]Faylasuf va matematik Umar Hayyom",
+                            "Venger matematigi Yanosh Boyyai"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Uchburchakning yuzasini hisoblash uchun ishlatiladigan formulalarni belgilang.",
+                        "options": [
+                            "\\(S = ab\\)",
+                            "[*]\\(S = \\sqrt{p(p-a)(p-b)(p-c)}\\)",
+                            "\\(S = a^2\\)",
+                            "[*]\\(S = \\frac{1}{2}ah_a\\)",
+                            "\\(S = \\pi R^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Geometriya ikki qismdan iborat. Geometriyaning qismlari keltirilgan javob variyantlarini belgilang.",
+                        "options": [
+                            "[*]Planimetriya",
+                            "[*]Stereometriya",
+                            "Yevklid geometriyasi",
+                            "Trigonametriya"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Yevklidning \u201cNegizlar\u201d asarida nimalar berilgan.",
+                        "options": [
+                            "[*]23 ta tarif",
+                            "[*]5 ta postulat",
+                            "13 ta teorema",
+                            "[*]9 ta aksioma"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-12",
+                    "pattern": 12,
+                    "question": {
+                        "title": "Geometriyani mustaqil fan sifatida asoslashga hissa qo\u2018shgan yunon olimlarini belgilang.",
+                        "options": [
+                            "Umar Hayyom",
+                            "[*]Platon",
+                            "[*]Gippokrat Xiosskiy",
+                            "[*]Yevklid",
+                            "Lobachevskiy"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Berilgan radiuslarga mos keluvchi doira yuzalarini radiuslar bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(R = 6 \\w cm\\)",
+                            "[a]\\(S=36\\pi \\w cm^2\\)",
+                            "[b]\\(R = 11 \\w cm\\)",
+                            "[b]\\(S = 121\\pi \\w cm^2\\)",
+                            "[c]\\(R = 10 \\w cm\\)",
+                            "[c]\\(S = 100\\pi \\w cm^2\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": "Doira yuzasini uni o\u2018rab turgan aylana uzunligi bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(S = 9\\pi \\w cm^2\\)",
+                            "[a]\\(L = 6\\pi \\w cm\\)",
+                            "[b]\\(S = 36\\pi \\w cm^2\\)",
+                            "[b]\\(L = 12\\pi cm\\)",
+                            "[c]\\(S = 4\\pi \\w cm^2\\)",
+                            "[c]\\(L = 4\\pi \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Doira yuzasini uni o\u2018rab turgan aylana uzunligi bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(S = 16\\pi \\w cm^2\\)",
+                            "[a]\\(L = 8\\pi \\w cm\\)",
+                            "[b]\\(S = 25\\pi \\w cm^2\\)",
+                            "[b]\\(L = 10\\pi \\w cm\\)",
+                            "[c]\\(S = 49\\pi \\w cm^2\\)",
+                            "[c]\\(L = 14\\pi \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Doira yuzasini uni o\u2018rab turgan aylana uzunligi bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(S = 81\\pi \\w cm^2\\)",
+                            "[a]\\(L = 18\\pi \\w cm\\)",
+                            "[b]\\(S = 64\\pi \\w cm^2\\)",
+                            "[b]\\(L = 16\\pi \\w cm\\)",
+                            "[c]\\(S = 144\\pi \\w cm^2\\)",
+                            "[c]\\(L = 24\\pi \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Doira yuzasini uni o\u2018rab turgan aylana uzunligi bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(S = 49\\pi \\w cm^2\\)",
+                            "[a]\\(L = 14\\pi \\w cm\\)",
+                            "[b]\\(S = 81\\pi \\w cm^2\\)",
+                            "[b]\\(L = 18\\pi \\w cm\\)",
+                            "[c]\\(S = 225\\pi \\w cm^2\\)",
+                            "[c]\\(L = 30\\pi \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Berilgan radiusga mos keluvchi doira yuzasini radius bilan birlashtiring.",
+                        "options": [
+                            "[a]\\(R = 8 \\w cm\\)",
+                            "[a]\\(S = 64 \\w cm^2\\)",
+                            "[b]\\(R = 15 \\w cm\\)",
+                            "[b]\\(S = 225 \\w cm^2 \\)",
+                            "[c]\\(R = 20 \\w cm\\)",
+                            "[c]\\(S = 400 \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Kvadratlarning tomoni berilgan. Kvadratlarga ichki chizilgan aylana radiuslarini toping.",
+                        "options": [
+                            "[a]\\(a = 10 \\w cm\\)",
+                            "[a]\\(r = 5 \\w cm\\)",
+                            "[b]\\(a = 12 \\w cm\\)",
+                            "[b]\\(r = 6 \\w cm\\)",
+                            "[c]\\(a = 14 \\w cm\\)",
+                            "[c]\\(r = 7 \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Kvadratlarning tomoni berilgan. Kvadratlarga ichki chizilgan aylana radiuslarini toping.",
+                        "options": [
+                            "[a]\\(a = 20 \\w cm\\)",
+                            "[a]\\(r = 10 \\w cm\\)",
+                            "[b]\\(a = 8 \\w cm\\)",
+                            "[b]\\(r = 4 \\w cm\\)",
+                            "[c]\\(a = 16 \\w cm\\)",
+                            "[c]\\(r = 8 \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Kvadratlarga ichki chizilgan aylana radiuslari berilgan. Kvadratlarning diogonallarini toping.",
+                        "options": [
+                            "[a]\\(r = 5 \\w cm\\)",
+                            "[a]\\(d = 10\\sqrt{2} \\w cm\\)",
+                            "[b]\\(r = 6 \\w cm\\)",
+                            "[b]\\(d = 12\\sqrt{2} \\w cm\\)",
+                            "[c]\\(r = 4 \\w cm}\\)",
+                            "[c]\\(d = 8\\sqrt{2} \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-13",
+                    "pattern": 13,
+                    "question": {
+                        "title": " Kvadratlarga ichki chizilgan aylana radiuslari berilgan. Kvadratlarning diogonallarini toping.",
+                        "options": [
+                            "[a]\\(r = 3 \\w cm\\)",
+                            "[a]\\(a = 6\\sqrt{2} \\w cm\\)",
+                            "[b]\\(r = 8 \\w cm\\)",
+                            "[b]\\(a = 16\\sqrt{2} \\w cm\\)",
+                            "[c]\\(r = 7 \\w cm\\)",
+                            "[c]\\(a = 14\\sqrt{2} \\w cm\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Hamma geometrik shakllarga ham ta\u2019rif berib bo\u2018lmaydi. Geometrik shakllarning bir nechtasini ta\u2019rifsiz qabul qilishga majburmiz."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Planimetriyaning asosiy shakllari bu nuqta",
+                            "to\u2018g\u2018ri chiziq va tekislik. Ularni ta\u2019rifsiz qabul qilamiz."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Planimetriya fazodagi geometrik shakllarning xossalarini o\u2018rganadi."
+                        ],
+                        "solution": [
+                            "To\u2018g\u2018ri",
+                            "[*]Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Stereometriya fazodagi geometrik shakllarning xossalarini o\u2018rganadi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Biror tasdiqning to\u2018g\u2018riligini mantiqiy mulohazalar yordamida keltirib chiqarish isbot deb ataladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Teorema odatda \\(shart\\) va \\(xulosa\\) qismlardan iborat bo\u2018ladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Har qanday ikki nuqtadan istalgancha to\u2018g\u2018ri chiziq o\u2018tkazish mumkin."
+                        ],
+                        "solution": [
+                            "To\u2018g\u2018ri",
+                            "[*]Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Har qanday markazdan ixtiyoriy radiusda aylana yasash mumkin."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "Aksioma deb to\u2018g\u2018riligi isbotsiz qabul qilinadigan xossaga aytiladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-14",
+                    "pattern": 14,
+                    "question": {
+                        "title": "Mulohazalarning to\u2018g\u2018ri yoki noto\u2018g\u2018riligini belgilang",
+                        "problem": [
+                            "To\u2018g\u2018riligi isbotlash yo\u2018li bilan asoslanadigan tasdiq teorema deb ataladi."
+                        ],
+                        "solution": [
+                            "[*]To\u2018g\u2018ri",
+                            "Noto\u2018g\u2018ri"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Har qanday ikki nuqtadan faqat bitta to\u2018g\u2018ri chiziq o\u2018tkazish mumkin."
+                        ],
+                        "solution": [
+                            "[*]Postulat",
+                            "Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "To\u2018g\u2018ri chiziq kesmasini cheksiz davom ettirish mumkin."
+                        ],
+                        "solution": [
+                            "[*]Postulat",
+                            "Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Har qanday markazdan ixtiyoriy radiusda aylana yasash mumkin."
+                        ],
+                        "solution": [
+                            "[*]Postulat",
+                            "Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Har qanday ikki nuqtadan faqat bitta to\u2018g\u2018ri chiziq o\u2018tadi."
+                        ],
+                        "solution": [
+                            "Postulat",
+                            "[*]Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Bir to\u2018g\u2018ri chiziqda olingan istalgan uchta nuqtaning faqat bittasi qolgan ikkitasining orasida yotadi."
+                        ],
+                        "solution": [
+                            "Postulat",
+                            "[*]Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Har bir to\u2018g\u2018ri chiziq tekislikni ikki bo\u2018lakka ikkita yarimtekislikka ajratadi."
+                        ],
+                        "solution": [
+                            "Postulat",
+                            "[*]Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Tekislikda to\u2018g\u2018ri chiziqdan tashqarida olingan nuqtadan bu to\u2018g\u2018ri chiziqqa faqat bitta parallel to\u2018g\u2018ri chiziq o\u2018tkazish mumkin."
+                        ],
+                        "solution": [
+                            "Postulat",
+                            "[*]Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Ixtiyoriy nurga uning uchidan boshlab",
+                            "berilgan kesmaga teng yagona kesmani qo\u2018yish mumkin."
+                        ],
+                        "solution": [
+                            "Postulat",
+                            "[*]Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan mulohaza postulatmi, teoremami yoki aksiomami aniqlang.",
+                        "problem": [
+                            "Hamma to\u2018g\u2018ri burchaklar o\u2018zaro teng."
+                        ],
+                        "solution": [
+                            "[*]Postulat",
+                            "Aksioma",
+                            "Teorema"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-15",
+                    "pattern": 15,
+                    "question": {
+                        "title": "Berilgan formuladan qaysi geometrik shaklning yuzasini hisoblashda foydalaniladi.",
+                        "problem": [
+                            "\\(S = \\sqrt{p(p-a)(p-b)(p-c)}\\)"
+                        ],
+                        "solution": [
+                            "[*]Uchburchak",
+                            "Doira",
+                            "To\u2018rtburchak"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-1-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Kvadratning tomoni \\(20 \\w cm \\) ga teng. Bu kvadratga ichki chizilgan aylana radiusi va tashqi chizilgan aylana radiusini toping.",
+                        "options": [
+                            "[*]\\(r = 10, \\w R = 10\\sqrt{2}\\)",
+                            "\\(r = 5\\sqrt{2}, \\w R = 10\\sqrt{2}\\)",
+                            "\\(r = 10, \\w R = 12\\)",
+                            "\\(r = 10\\sqrt{2}, \\w R = 12\\sqrt{2}\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-2-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Ichki burchaklari yig\u2018indisi 720 bo\u2018lgan muntazam ko\u2018pburchakning tomonlari sonini toping.",
+                        "options": [
+                            "[*]6",
+                            "10",
+                            "8",
+                            "14"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-3-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Ichki burchaklari yig\u2018indisi 1080 bo\u2018lgan muntazam ko\u2018pburchakning tomonlari sonini toping.",
+                        "options": [
+                            "7",
+                            "9",
+                            "[*]8",
+                            "6"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-4-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Ichki burchaklari yig\u2018indisi 1440 bo\u2018lgan muntazam ko\u2018pburchakning tomonlari sonini toping.",
+                        "options": [
+                            "9",
+                            "[*]10",
+                            "12",
+                            "14"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-5-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Kvadratning tomoni \\(16 \\w cm \\) ga teng. Bu kvadratga ichki chizilgan aylana radiusi va tashqi chizilgan aylana radiusini toping.",
+                        "options": [
+                            "[*]\\(r = 8, \\w R = 8\\sqrt{2}\\)",
+                            "\\(r = 8\\sqrt{2}, \\w R = 16\\)",
+                            "\\(r = 8\\sqrt{2}, \\w R = 8\\)",
+                            "\\(r = 4\\sqrt{2}, \\w R = 8\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-6-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(100 \\w m\\) uzunlikdagi panjara bilan qanday o\u2018lchamdagi eng katta yuzali to\u2018g\u2018ri to\u2018rt burchak shakldagi maydonni o\u2018rab olish mumkin?",
+                        "options": [
+                            "[*]\\(a = 25 \\w m, \\w b = 25 \\w m\\)",
+                            "\\(a = 30 \\w m, \\w b = 20 \\w m\\)",
+                            "\\(a = 40 \\w m, \\w b = 10 \\w m\\)",
+                            "\\(a = 24 \\w m, \\w b = 26 \\w m\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-7-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(160 \\w m\\) uzunlikdagi panjara bilan qanday o\u2018lchamdagi eng katta yuzali to\u2018g\u2018ri to\u2018rt burchak shakldagi maydonni o\u2018rab olish mumkin?",
+                        "options": [
+                            "[*]\\(a = 40 \\w m , \\w b = 40 \\w m\\)",
+                            "\\(a = 50 \\w m, \\w b = 30  \\w m\\)",
+                            "\\(a = 60 \\w m, \\w b = 20  \\w m\\)",
+                            "\\(a = 45 \\w m, \\w b = 35 \\w m\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-8-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "\\(200 \\w m\\) uzunlikdagi panjara bilan qanday o\u2018lchamdagi eng katta yuzali to\u2018g\u2018ri to\u2018rt burchak shakldagi maydonni o\u2018rab olish mumkin?",
+                        "options": [
+                            "[*]\\(a = 50 \\w m, \\w b = 50 \\w m\\)",
+                            "\\(a = 60 \\w m, \\w b = 40 \\w m\\)",
+                            "\\(a = 80 \\w m, \\w b = 20 \\w m\\)",
+                            "\\(a = 70 \\w m, \\w b = 30 \\w m\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-9-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Kvadratning tomoni \\( 6 \\w cm \\) ga teng. Bu kvadratga ichki chizilgan aylana radiusi va tashqi chizilgan aylana radiusini toping.",
+                        "options": [
+                            "[*]\\(r = 3, \\w R = 3\\sqrt{2}\\)",
+                            "\\(r = 4, \\w R = 4\\sqrt{2}\\)",
+                            "\\(r = 2\\sqrt{2}, \\w R = 4\\)",
+                            "\\(r = 2, \\w R = 2\\sqrt{2}\\)"
+                        ]
+                    }
+                },
+                {
+                    "id": "geometry-uz-10-1-10-17",
+                    "pattern": 17,
+                    "question": {
+                        "title": "Ichki burchaklari yig\u2018indisi 1800 bo\u2018lgan muntazam ko\u2018pburchakning tomonlari sonini toping.",
+                        "options": [
+                            "[*]12",
+                            "10",
+                            "13",
+                            "14"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
