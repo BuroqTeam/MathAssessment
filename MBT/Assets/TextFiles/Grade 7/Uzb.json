@@ -1,6 +1,6 @@
 {
   "meta": {
-    "date": "2022-10-15 15:58:37",
+    "date": "2022-10-26 11:21:48",
     "grade": 7,
     "subject": "math",
     "language": "uz"
@@ -46,7 +46,7 @@
               "a(bc + cd)",
               "b(ac + cd)",
               "c(ab + bd)",
-              "[*]\\bc(a + d)"
+              "[*]bc(a + d)"
             ]
           }
         },
@@ -121,8 +121,8 @@
           "question": {
             "title": "Birhadlarni ko\u02bbpaytiring. (2a) (3a^2) (4a^3) (5a^4)",
             "options": [
-              "[*]120a^9",
-              "120a^{10}",
+              "[*]120a^{10}",
+              "120a^9",
               "14a^9",
               "14a^{24}"
             ]
@@ -164,7 +164,7 @@
           "question": {
             "title": "Sonli ifodalarni belgilang.\n",
             "options": [
-              "6 + 3",
+              "[*]6 + 3",
               "n + m",
               "[*]6 \u00d7 5",
               "2x",
@@ -239,7 +239,7 @@
               "[*]3 - 2",
               "abc",
               "xy",
-              "10 : 5"
+              "[*]10 : 5"
             ]
           }
         },
@@ -330,7 +330,7 @@
               [
                 "Birhadlar",
                 "2xy",
-                "-4bc\"",
+                "-4bc",
                 "135",
                 "5"
               ],
@@ -495,7 +495,8 @@
               [
                 "Birhadlar",
                 "4ab",
-                "cxy\"",
+                "c",
+                "xy",
                 "2^5",
                 "a"
               ],
@@ -553,8 +554,8 @@
               "3,2 \u00d7 10^2",
               "10^2",
               "8500",
-              "3 000",
-              "5 700",
+              "3000",
+              "5700",
               "243"
             ],
             "solution": [
@@ -1113,7 +1114,7 @@
           "question": {
             "title": "O\u02bbxshash hadlar to\u02bbg\u02bbri ixchamlangan misollarni belgilang",
             "options": [
-              "430,2 \u00f7 2,4 = 170,25",
+              "430,2 \u00f7 2,4 = 179,25",
               "[*]2,6 \u00f7 6,5 = 0,4",
               "27,6 \u00f7 5,2 = 5,3",
               "[*]43,2 \u00f7 4,5 = 9,6",
@@ -1340,7 +1341,7 @@
             "title": "Ko\u02bbpaytmalarning daraja shaklini toping.",
             "options": [
               "[a](2^3)^4 \u00d7 4",
-              "[a]2^{12}",
+              "[a]2^{14}",
               "[b](2 \u00d7 5)^{10}",
               "[b]2^{10} \u00d7 5^{10}",
               "[c](2^3)^2 \u00d7 4^2",
@@ -1352,12 +1353,12 @@
           "id": "math-uz-7-1-10-13",
           "pattern": 13,
           "question": {
-            "title": "Bo\u02bblinmaning daraja shaklini toping.\n",
+            "title": "Bo\u02bblinmaning daraja shaklini toping.",
             "options": [
               "[a]2^{15} : 4^3",
               "[a]2^9",
               "[b]3^{13} : 9^5",
-              "[b]5^3",
+              "[b]3^3",
               "[c]2^{17} : 8^2",
               "[c]2^{11}"
             ]
@@ -1916,7 +1917,7 @@
           "question": {
             "title": "Kvadratlar ayirmasi formulasidan foydalanib hisoblang va 250 dan kichik sonlarni belgilang",
             "options": [
-              "14 \u00d7 16",
+              "[*]14 \u00d7 16",
               "11 \u00d7 23",
               "[*]13 \u00d7 15",
               "[*]12 \u00d7 16",
@@ -1952,256 +1953,6 @@
               "26 \u00d7 30",
               "[*]20 \u00d7 35",
               "[*]22 \u00d7 30"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-1-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(7 - 3)^2",
-              "(12 - 6)^2",
-              "(9 - 5)^2",
-              "(5 + 3)^2"
-            ],
-            "solution": [
-              [
-                "(7 - 3)^2",
-                "\u00d7",
-                "(9 - 5)^2"
-              ],
-              [
-                "(9 - 5)^2",
-                "\u00d7",
-                "(7 - 3)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-2-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(8 - 5)^2",
-              "(8 - 6)^2",
-              "(10 - 5)^2",
-              "(3 + 3)^2"
-            ],
-            "solution": [
-              [
-                "(8 - 5)^2",
-                "\u00d7",
-                "(8 - 6)^2"
-              ],
-              [
-                "(8 - 6)^2",
-                "\u00d7",
-                "(8 - 5)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-3-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(8 - 6)^2",
-              "(10 - 7)^2",
-              "(12 - 8)^2",
-              "(10 - 9)^2"
-            ],
-            "solution": [
-              [
-                "(8 - 6)^2",
-                "\u00d7",
-                "(10 - 9)^2"
-              ],
-              [
-                "(10 - 9)^2",
-                "\u00d7",
-                "(8 - 6)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-4-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(14 - 10)^2",
-              "(15 - 5)^2",
-              "(17 - 12)^2",
-              "(20 - 14)^2"
-            ],
-            "solution": [
-              [
-                "(15 - 5)^2",
-                "\u00d7",
-                "(17 - 12)^2"
-              ],
-              [
-                "(17 - 12)^2",
-                "\u00d7",
-                "(15 - 5)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-5-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(16 - 10)^2",
-              "(13 - 11)^2",
-              "(12 - 7)^2",
-              "(1 + 2)^2"
-            ],
-            "solution": [
-              [
-                "(13 - 11)^2",
-                "\u00d7",
-                "(1 + 2)^2"
-              ],
-              [
-                "(1 + 2)^2",
-                "\u00d7",
-                "(13 - 11)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-6-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(5 - 2)^2",
-              "(7 - 3)^2",
-              "(9 - 4)^2",
-              "(8 - 5)^2"
-            ],
-            "solution": [
-              [
-                "(5 - 2)^2",
-                "\u00d7",
-                "(8 - 5)^2"
-              ],
-              [
-                "(8 - 5)^2",
-                "\u00d7",
-                "(5 - 2)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-7-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(12 - 7)^2",
-              "(14 - 10)^2",
-              "(15 - 8)^2",
-              "(13 - 5)^2"
-            ],
-            "solution": [
-              [
-                "(12 - 7)^2",
-                "\u00d7",
-                "(14 - 10)^2"
-              ],
-              [
-                "(14 - 10)^2",
-                "\u00d7",
-                "(12 - 7)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-8-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(1 + 3)^2",
-              "(2 + 2)^2",
-              "(3 + 4)^2",
-              "(4 + 1)^2"
-            ],
-            "solution": [
-              [
-                "(1 + 3)^2",
-                "\u00d7",
-                "(2 + 2)^2"
-              ],
-              [
-                "(2 + 2)^2",
-                "\u00d7",
-                "(1 + 3)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-9-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(3 + 5)^2",
-              "(2 + 2)^2",
-              "(11 - 6)^2",
-              "(15 - 9)^2"
-            ],
-            "solution": [
-              [
-                "(2 + 2)^2",
-                "\u00d7",
-                "(11 - 6)^2"
-              ],
-              [
-                "(11 - 6)^2",
-                "\u00d7",
-                "(2 + 2)^2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-10-3",
-          "pattern": 3,
-          "question": {
-            "title": "Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan ifodani joylashtiring",
-            "problem": [
-              "(4 - 1)^2",
-              "(6 - 2)^2",
-              "(9 - 3)^2",
-              "(3 + 2)^2"
-            ],
-            "solution": [
-              [
-                "(4 - 1)^2",
-                "\u00d7",
-                "(6 - 2)^2"
-              ],
-              [
-                "(6 - 2)^2",
-                "\u00d7",
-                "(4 - 1)^2"
-              ]
             ]
           }
         },
@@ -2570,7 +2321,7 @@
               "29 \u00d7 31"
             ],
             "solution": [
-              "899\u202c"
+              "899"
             ]
           }
         },
@@ -2685,7 +2436,7 @@
             "options": [
               "[a]5^3 - 3 \u00d7 5^2 \u00d7 4 + 3 \u00d7 5 \u00d7 4^2 - 4^3",
               "[b]7^3 - 3 \u00d7 7^2 \u00d7 3 + 3 \u00d7 7 \u00d7 3^2 - 3^3",
-              "[d]4^3 + 3 \u00d7 16 \u00d7 6 + 3 \u00d7 4 \u00d7 36 + 6^3"
+              "[c]4^3 + 3 \u00d7 16 \u00d7 6 + 3 \u00d7 4 \u00d7 36 + 6^3"
             ]
           }
         },
@@ -2732,8 +2483,8 @@
             "title": "Berilgan ifodalarni o\u2018sish tartibida joylashtiring ",
             "options": [
               "[a](8 - 3) (8^2 + 8 \u00d7 3 + 3^2)",
-              "[b] (9 - 5) (9^2 + 9 \u00d7 5 + 5^2)",
-              "[c] (11 - 2) (11^2 + 11 \u00d7 2 + 2^2)"
+              "[b](9 - 5) (9^2 + 9 \u00d7 5 + 5^2)",
+              "[c](11 - 2) (11^2 + 11 \u00d7 2 + 2^2)"
             ]
           }
         },
@@ -3244,156 +2995,6 @@
               "[*]Noto\u2018g\u2018ri"
             ]
           }
-        },
-        {
-          "id": "math-uz-7-2-1-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{20^2 - 13^2}{31^2 - 24^2}",
-              "[a]\\frac{3}{5}",
-              "[b]\\frac{17^2 - 22^2}{49^2 - 10^2}",
-              "[b]- \\frac{5}{59}",
-              "[c]\\frac{37^2 - 47^2}{72^2 - 12^2}",
-              "[c]- \\frac{1}{6}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-2-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{100^2 - 60^2}{70^2 - 90^2}",
-              "[a]- 2",
-              "[b]\\frac{38^2 - 28^2}{47^2 - 19^2}",
-              "[b]\\frac{5}{14}",
-              "[c]\\frac{53^2 - 25^2}{79^2 - 51^2}",
-              "[c]- \\frac{39}{65}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-3-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{181^2 - 61^2}{319^2 - 77^2}",
-              "[a]\\frac{60}{197}",
-              "[b]\\frac{200^2 - 380^2}{420^2 - 160^2}",
-              "[b]- \\frac{9}{13}",
-              "[c]\\frac{100^2 - 50^2}{75^2 - 25^2}",
-              "[c]\\frac{3}{2}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-4-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{81^2 - 21^2}{61^2 - 41^2}",
-              "[a]3",
-              "[b]\\frac{76^2 - 55^2}{66^2 - 65^2}",
-              "[b]21",
-              "[c]\\frac{99^2 - 55^2}{88^2 - 66^2}",
-              "[c]2"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-5-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{36^2 - 8^2}{32^2 - 10^2}",
-              "[a]\\frac{4}{3}",
-              "[b]\\frac{70^2 - 20^2}{60^2 - 20^2}",
-              "[b]\\frac{45}{32}",
-              "[c]\\frac{38^2 - 10^2}{9^2 - 33^2}",
-              "[c]- \\frac{4}{3}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-6-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{51^3 - 49^3}{51 - 49} + 51 \u00d7 49",
-              "[a]100^3",
-              "[b]\\frac{67^3 + 47^3}{67 + 47} - 67 \u00d7 47",
-              "[b]30^3",
-              "[c]\\frac{84^3 + 44^3}{84 + 44} - 84 \u00d7 44",
-              "[c]40^3"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-7-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{1,8^2 - 0,7^2}{2,5 \u00d7 0,7 - 4,5}",
-              "[a]- 1",
-              "[b]\\frac{0.8^2 + 1,12 + 0,7^2}{0,8^2 - 0,7^2}",
-              "[b]15",
-              "[c]\\frac{1,4^2 - 10^2}{9^2 - 33^2}",
-              "[c]- 29"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-8-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{7^3 - 1^3}{7^2 + 7 \u00d7 1 + 1^2}",
-              "[a]6",
-              "[b]\\frac{8^3 + 1^3}{8^2 - 8 \u00d7 1 + 1^2}",
-              "[b]9",
-              "[c]\\frac{3^2 - 3 \u00d7 5 + 5^2}{3^3 + 5^3}",
-              "[c]\\frac{1}{8}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-9-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]\\frac{6^2 + 6 \u00d7 2 + 2^2}{6^3 - 2^3}",
-              "[a]\\frac{1}{4}",
-              "[b]\\frac{8^2 + 8 \u00d7 5 + 5^2}{8^3 - 5^3}",
-              "[b]\\frac{1}{3}",
-              "[c]\\frac{6^2 - 6 \u00d7 7 + 7^2}{6^3 + 7^3}",
-              "[c]\\frac{1}{17}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-2-10-21",
-          "pattern": 21,
-          "question": {
-            "title": "Qisqa ko\u2018paytirish formulasidan foydalanib hisoblang",
-            "options": [
-              "[a]1999 \u00d7 2001",
-              "[a]3999999",
-              "[b]175 \u00d7 225",
-              "[b]39375",
-              "[c]2,8 \u00d7 3,2",
-              "[c]8,96"
-            ]
-          }
         }
       ]
     },
@@ -3403,7 +3004,7 @@
       "description": "ALGEBRAIK KASRLAR",
       "questions": [
         {
-          "id": "math-uz-7-3-31-1",
+          "id": "math-uz-7-3-21-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{19}{21} \u00d7 \\frac{42}{38}",
@@ -3416,7 +3017,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-32-1",
+          "id": "math-uz-7-3-22-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{45}{77} \u00d7 \\frac{49}{54}",
@@ -3429,7 +3030,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-33-1",
+          "id": "math-uz-7-3-23-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{36}{55} \u00d7 \\frac{25}{72}",
@@ -3442,12 +3043,12 @@
           }
         },
         {
-          "id": "math-uz-7-3-34-1",
+          "id": "math-uz-7-3-24-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{16}{23} \u00d7 \\frac{69}{100} ",
             "options": [
-              "[*]\\frac{8}{25}",
+              "[*]\\frac{12}{25}",
               "\\frac{8}{50}",
               "\\frac{8}{5}",
               "\\frac{16}{25}"
@@ -3455,7 +3056,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-35-1",
+          "id": "math-uz-7-3-25-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang 84 \u00d7 \\frac{11}{12}",
@@ -3468,7 +3069,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-36-1",
+          "id": "math-uz-7-3-26-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang 50 \u00d7 \\frac{33}{55}",
@@ -3481,7 +3082,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-37-1",
+          "id": "math-uz-7-3-27-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{2}{10} : \\frac{2}{5}",
@@ -3494,7 +3095,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-38-1",
+          "id": "math-uz-7-3-28-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{3}{10} : \\frac{6}{5}",
@@ -3507,7 +3108,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-39-1",
+          "id": "math-uz-7-3-29-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{3}{11} : \\frac{9}{5}",
@@ -3520,7 +3121,7 @@
           }
         },
         {
-          "id": "math-uz-7-3-40-1",
+          "id": "math-uz-7-3-30-1",
           "pattern": 1,
           "question": {
             "title": "Hisoblang \\frac{7}{8} : \\frac{49}{64}",
@@ -3616,7 +3217,7 @@
               "[*]x + 3",
               "x + 6",
               "[*]5x + 2",
-              "3x - 2",
+              "[*]3x - 2",
               "2x + 1",
               "[*]x + 2"
             ]
@@ -3679,261 +3280,6 @@
               "3x - 2",
               "2x + 1",
               "[*]x - 1"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-11-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 408 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "3",
-              "4"
-            ],
-            "solution": [
-              [
-                "1",
-                "2",
-                "\u00d7",
-                "3",
-                "4"
-              ],
-              [
-                "3",
-                "4",
-                "\u00d7",
-                "1",
-                "2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-12-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 756 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "3",
-              "6"
-            ],
-            "solution": [
-              [
-                "3",
-                "6",
-                "\u00d7",
-                "2",
-                "1"
-              ],
-              [
-                "2",
-                "1",
-                "\u00d7",
-                "3",
-                "6"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-13-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 391 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "3",
-              "7"
-            ],
-            "solution": [
-              [
-                "1",
-                "7",
-                "\u00d7",
-                "2",
-                "3"
-              ],
-              [
-                "2",
-                "3",
-                "\u00d7",
-                "1",
-                "7"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-14-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 8 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "6",
-              "9"
-            ],
-            "solution": [
-              [
-                "9",
-                "6",
-                "\u00f7",
-                "1",
-                "2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-15-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 7 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "4",
-              "8"
-            ],
-            "solution": [
-              [
-                "8",
-                "4",
-                "\u00f7",
-                "1",
-                "2"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-16-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 5 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "3",
-              "5",
-              "6"
-            ],
-            "solution": [
-              [
-                "6",
-                "5",
-                "\u00f7",
-                "1",
-                "3"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-17-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 744 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "3",
-              "4"
-            ],
-            "solution": [
-              [
-                "3",
-                "1",
-                "\u00d7",
-                "2",
-                "4"
-              ],
-              [
-                "2",
-                "4",
-                "\u00d7",
-                "3",
-                "1"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-18-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 494 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "2",
-              "6",
-              "9"
-            ],
-            "solution": [
-              [
-                "1",
-                "9",
-                "\u00d7",
-                "2",
-                "6"
-              ],
-              [
-                "2",
-                "6",
-                "\u00d7",
-                "1",
-                "9"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-19-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 7 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "4",
-              "8",
-              "9"
-            ],
-            "solution": [
-              [
-                "9",
-                "8",
-                "\u00f7",
-                "1",
-                "4"
-              ]
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-20-3",
-          "pattern": 3,
-          "question": {
-            "title": "Natijasi 4 bo\u2018ladigan ifoda tuzing",
-            "problem": [
-              "1",
-              "6",
-              "7",
-              "9"
-            ],
-            "solution": [
-              [
-                "7",
-                "6",
-                "\u00f7",
-                "1",
-                "9"
-              ]
             ]
           }
         },
@@ -4276,7 +3622,7 @@
               "\\frac{a^2 - 1}{1 + a}"
             ],
             "solution": [
-              "1"
+              "5"
             ]
           }
         },
@@ -4354,7 +3700,7 @@
               "\\frac{(z + 2)^2}{z - 1}"
             ],
             "solution": [
-              "9"
+              "12"
             ]
           }
         },
@@ -4405,7 +3751,7 @@
             "options": [
               {
                 "left": "\\frac{-35}{-49}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{-125}{175}"
               },
               {
@@ -4424,7 +3770,7 @@
             "options": [
               {
                 "left": "\\frac{40}{120}",
-                "sign": "<",
+                "sign": "=",
                 "right": "\\frac{30}{90}"
               },
               {
@@ -4444,11 +3790,11 @@
               {
                 "left": "\\frac{-54}{-36}",
                 "sign": "<",
-                "right": "\\frac{-150}{25}"
+                "right": "\\frac{150}{25}"
               },
               {
                 "left": "49 \u00d7 \\frac{11}{7}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{76}{5} \u00d7 \\frac{25}{5}"
               }
             ]
@@ -4481,12 +3827,12 @@
             "options": [
               {
                 "left": "\\frac{-12}{-36}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{25}{100}"
               },
               {
                 "left": "32 \u00d7 \\frac{2}{62}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{35}{5} \u00d7 \\frac{10}{70}"
               }
             ]
@@ -4500,7 +3846,7 @@
             "options": [
               {
                 "left": "\\frac{24}{18}",
-                "sign": "<",
+                "sign": "=",
                 "right": "\\frac{100}{75}"
               },
               {
@@ -4524,7 +3870,7 @@
               },
               {
                 "left": "96 \u00d7 \\frac{1}{16}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{32}{3} \u00d7 \\frac{15}{32}"
               }
             ]
@@ -4543,7 +3889,7 @@
               },
               {
                 "left": "55 \u00d7 \\frac{11}{11}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{9}{3} \u00d7 \\frac{54}{3}"
               }
             ]
@@ -4562,7 +3908,7 @@
               },
               {
                 "left": "77 \u00d7 \\frac{11}{7}",
-                "sign": "<",
+                "sign": "=",
                 "right": "\\frac{77}{7} \u00d7 \\frac{55}{5}"
               }
             ]
@@ -4576,12 +3922,12 @@
             "options": [
               {
                 "left": "\\frac{42}{35}",
-                "sign": "<",
+                "sign": "=",
                 "right": "\\frac{48}{40}"
               },
               {
                 "left": "68 \u00d7 \\frac{10}{17}",
-                "sign": "<",
+                "sign": ">",
                 "right": "\\frac{90}{15} \u00d7 \\frac{30}{6}"
               }
             ]
@@ -4634,7 +3980,7 @@
             "options": [
               "[a]b",
               "[b]a",
-              "[c]a - b",
+              "[c]a + b",
               "[d]a^2 - b^2"
             ]
           }
@@ -4658,9 +4004,9 @@
           "question": {
             "title": "Berilgan ifodalarda m = 2 va n = 7 ga teng bo\u2018lsa ifodalarni o\u2018sish tartibida joylashtiring",
             "options": [
-              "[a]m",
-              "[b]n",
-              "[c]-(n - m)",
+              "[a]-(n - m)",
+              "[b]m",
+              "[c]n",
               "[d]m + n"
             ]
           }
@@ -4794,10 +4140,10 @@
             "title": "Teng ifodalarni belgilang",
             "options": [
               "[*]-\\frac{abc}{a^5b}",
-              "[*]-\\frac{8^2a^2c}{4^3a^4}",
+              "[*]-\\frac{8^2a^2c}{4^3a^6}",
               "[*]-\\frac{c}{a^4}",
               "\\frac{abc}{2a^5b}",
-              "-\\frac{c}{a^4}"
+              "\\frac{c}{a^4}"
             ]
           }
         },
@@ -4821,7 +4167,7 @@
           "question": {
             "title": "Teng ifodalarni belgilang",
             "options": [
-              "[*]-\\frac{18xy^3}{12x^2x^2y}",
+              "[*]-\\frac{18xy^3}{12x^2y}",
               "[*]-\\frac{3y^2}{2x}",
               "\\frac{6xy^3}{4x^2y}",
               "-\\frac{3x^2}{2y}",
@@ -4864,7 +4210,7 @@
             "title": "Qisqartiring",
             "options": [
               "[a]\\frac{2a^2}{3b^2} \u00d7 \\frac{9b^2}{4a^2}",
-              "[a]\\frac{3b}{5a}",
+              "[a]\\frac{3b}{2a}",
               "[b]\\frac{3a}{b} \u00d7 \\frac{b}{6a}",
               "[b]\\frac{1}{2}",
               "[c]\\frac{a^2b}{12c} \u00d7 \\frac{c}{ab^2}",
@@ -4939,7 +4285,7 @@
             "title": "Qisqartiring",
             "options": [
               "[a]ab : \\frac{a}{b}",
-              "[a]a^2",
+              "[a]b^2",
               "[b]\\frac{a^3}{b^2} : \\frac{a^4}{b^5}",
               "[b]\\frac{b^3}{a}",
               "[c]\\frac{a^3}{b^{11}} : \\frac{a^9}{b^5}",
@@ -4958,7 +4304,7 @@
               "[b]\\frac{7m}{8n} : \\frac{49m^3}{64n^5}",
               "[b]\\frac{8n^4}{7m^2}",
               "[c]abc : \\frac{bc}{a}",
-              "[c](bc)^2"
+              "[c]a^2"
             ]
           }
         },
@@ -4968,12 +4314,12 @@
           "question": {
             "title": "Qisqartiring",
             "options": [
-              "[a]\\frac{a - 5}{b^9} : \\frac{a - 5}{b^14}",
+              "[a]\\frac{a - 5}{b^9} : \\frac{a - 5}{b^{14}}",
               "[a]b^5",
               "[b]\\Big(\\frac{4a^3}{5b^2})^2 : \\Big(\\frac{2a^5}{5b^3})^3",
-              "[b]\\frac{1}{2}",
-              "[c]\\frac{a^2b}{12c}\u00d7\\frac{c}{ab^2}",
-              "[c]\\frac{10b^5}{a^9}"
+              "[b]\\frac{10b^5}{a^9}",
+              "[c]\\frac{a^2b}{2c}\u00d7\\frac{c}{ab^2}",
+              "[c]\\frac{a}{2b}"
             ]
           }
         },
@@ -5004,136 +4350,6 @@
               "[b]\\frac{8}{11ab}",
               "[c]\\frac{m^3n}{k^5} : \\frac{m^2n^5}{k^6}",
               "[c]\\frac{mk}{n^4}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-1-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{a^9}{a^{13}}",
-            "options": [
-              "[*]\\frac{1}{a^4}",
-              "\\frac{1}{4}",
-              "\\frac{1}{a}",
-              "a"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-2-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{a^{43}}{a^{49}}",
-            "options": [
-              "[*]\\frac{1}{a^6}",
-              "\\frac{1}{a^4}",
-              "\\frac{1}{6}",
-              "\\frac{a}{a^6}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-3-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{15a}{25a^2}",
-            "options": [
-              "[*]\\frac{3}{5a}",
-              "\\frac{3}{5}",
-              "\\frac{a^3}{a^5}",
-              "\\frac{3a}{5a^2}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-4-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{35ab}{56ac}",
-            "options": [
-              "[*]\\frac{5b}{8c}",
-              "\\frac{5}{8}",
-              "\\frac{5c}{8b}",
-              "\\frac{8c}{5b}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-5-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{a^7}{3a^9}",
-            "options": [
-              "[*]\\frac{1}{3a^2}",
-              "\\frac{1}{3}",
-              "\\frac{3a^2}{2}",
-              "\\frac{1}{a^2}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-6-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{4x^{2y}}{6xy^2}",
-            "options": [
-              "[*]\\frac{2x}{3y}",
-              "\\frac{2y}{3x}",
-              "\\frac{2}{3}",
-              "\\frac{3}{2}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-7-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{a^7b^{10}}{a^9b^5}",
-            "options": [
-              "[*]\\frac{b^5}{a^2}",
-              "\\frac{a^2}{b^5}",
-              "\\frac{b^15}{a^15}",
-              "\\frac{b}{a}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-8-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{36a^9b^7}{54a^2b^{13}}",
-            "options": [
-              "[*]\\frac{2a^7}{3b^6}",
-              "\\frac{2}{3}",
-              "\\frac{2b^6}{3a^7}",
-              "\\frac{2a}{3b}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-9-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{12ab}{15ac}",
-            "options": [
-              "[*]\\frac{4b}{5c}",
-              "\\frac{4}{5}",
-              "\\frac{4c}{5b}",
-              "\\frac{5c}{4b}"
-            ]
-          }
-        },
-        {
-          "id": "math-uz-7-3-10-17",
-          "pattern": 17,
-          "question": {
-            "title": "Algebraik kasrni qisqartiring:  \\frac{16ac^2}{a^3c}",
-            "options": [
-              "[*]\\frac{4c}{a^2}",
-              "\\frac{4}{a^2}",
-              "\\frac{a^}{4}",
-              "\\frac{4c}{a^3}"
             ]
           }
         }
