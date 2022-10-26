@@ -395,6 +395,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  SceneName: TestGroup
   Notification: {fileID: 1591855047}
 --- !u!4 &354233176
 Transform:
@@ -426,6 +427,7 @@ MonoBehaviour:
   group:
   - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
+  - {fileID: 11400000, guid: 6036faa2dc3e18249876acdcc9a0b359, type: 2}
   GridLayout: {fileID: 4819203435645070525}
   ScrollRectObj: {fileID: 1659680619}
   NumberOfChapter: 0

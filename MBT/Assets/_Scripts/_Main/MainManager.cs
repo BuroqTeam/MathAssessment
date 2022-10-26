@@ -28,11 +28,13 @@ public class MainManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (ES3.Load<string>("Subject").Equals("Algebra"))
-            AddressableMainData = AddressableDateAlgebra;
-        else
-            AddressableMainData = AddressableDateGeometry;
-        AddressableMainData.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;                
+        //if (ES3.Load<string>("Subject").Equals("Algebra"))
+        //    AddressableMainData = AddressableDateAlgebra;
+        //else
+        //    AddressableMainData = AddressableDateGeometry;
+        //AddressableMainData.LoadAssetAsync<TextAsset>().Completed += OnTextJsonLoaded;
+
+        CheckSubject();
     }
 
     private void OnTextJsonLoaded(AsyncOperationHandle<TextAsset> obj)
@@ -42,15 +44,16 @@ public class MainManager : MonoBehaviour
         EnableButtons();
     }
 
-   
+    
 
-    public void SetClassKey(int index)
+    public void SetClassKey(int index)  // Sinf raqamini saqlaydi.
     {
         ES3.Save<int>("ClassKey", index);
         //CheckJsonFile();//F++
         MainObj.UnEnableButtons(false);
         GetComponent<SceneManager>().LoadLocalScene();
     }
+
 
     void EnableButtons()
     {
@@ -82,6 +85,27 @@ public class MainManager : MonoBehaviour
        
     }
 
+
+    //F++
+    public TextAsset MatematikaText;
+    public TextAsset AlgebraText;
+    public TextAsset GeometriyaText;
+    public TextAsset CurrentText;
+
+
+    void CheckSubject() //F++
+    {
+        if (ES3.Load<string>("Subject").Equals("Matematika"))        
+            CurrentText = MatematikaText;        
+        else if (ES3.Load<string>("Subject").Equals("Algebra"))        
+            CurrentText = AlgebraText;        
+        else if (ES3.Load<string>("Subject").Equals("Geometriya"))        
+            CurrentText = GeometriyaText;
+                
+
+        _mySinfList = JsonConvert.DeserializeObject<SinfList>(CurrentText.text);
+        EnableButtons();
+    }
     
     //void CheckJsonFile()    //F++
     //{

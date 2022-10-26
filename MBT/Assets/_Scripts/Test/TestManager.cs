@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TestManager : MonoBehaviour
 {
-   
+    
     public TEXDraw Number;
     public TEXDraw QuestionText;
     public GameObject PatternParent;       
@@ -55,10 +55,15 @@ public class TestManager : MonoBehaviour
             PatternSO = PatternGroup[0];
             JsonCollectionSO = Group[0];
         }
-        else
+        else if (ES3.Load<string>(subjectKey).Equals("Geometriya"))
         {
             PatternSO = PatternGroup[1];
             JsonCollectionSO = Group[1];
+        }
+        else
+        {
+            PatternSO = PatternGroup[2];
+            JsonCollectionSO = Group[2];
         }
         CountNumberOfQuestions();
     }

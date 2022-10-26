@@ -33,10 +33,15 @@ public class TestGroupManager : MonoBehaviour
         {
             _jsonCollectionSO = group[0];
         }
-        else
+        else if (ES3.Load<string>("Subject").Equals("Geometriya"))
         {
             _jsonCollectionSO = group[1];
         }
+        else if (ES3.Load<string>("Subject").Equals("Matematika"))
+        {
+            _jsonCollectionSO = group[2];
+        }
+
         ChapterName.text = ES3.Load<string>("ChapterName");
         ChapterDescription.text = ES3.Load<string>("ChapterDescription");
         _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);

@@ -358,7 +358,12 @@ MonoBehaviour:
   group:
   - {fileID: 11400000, guid: a910386fdd2bc514b86f0685f889595f, type: 2}
   - {fileID: 11400000, guid: ac4805bf24008054784c3fe4c3a6ea5e, type: 2}
+  - {fileID: 11400000, guid: 6036faa2dc3e18249876acdcc9a0b359, type: 2}
   NoDataPanel: {fileID: 2615785681132753838}
+  MatematikaText: {fileID: 4900000, guid: efd30177aabd246419091e7e2dfc1555, type: 3}
+  AlgebraText: {fileID: 4900000, guid: 14c16d18f87d92c4db3d6dce3082d6ce, type: 3}
+  GeometriyaText: {fileID: 4900000, guid: cee79a943452d40469634d1fc7bd7924, type: 3}
+  CurrentText: {fileID: 0}
 --- !u!114 &963619306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +386,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  SceneName: Chapters
   Notification: {fileID: 1764279338}
 --- !u!4 &963619307
 Transform:

@@ -376,6 +376,19 @@ MonoBehaviour:
       - "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435"
       Flags: 00000000000000
       Languages_Touch: []
+    - Term: Math6/Subject/Matematika
+      TermType: 0
+      Description: 
+      Languages:
+      - Matematika
+      - 'Matematika '
+      - "\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430"
+      - "\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430"
+      - "\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430"
+      - Matematika
+      - "\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430"
+      Flags: 00000000000000
+      Languages_Touch: []
     CaseInsensitiveTerms: 0
     OnMissingTranslation: 1
     mTerm_AppName: 
@@ -413,7 +426,7 @@ MonoBehaviour:
     GoogleUpdateSynchronization: 1
     GoogleUpdateDelay: 0
     Assets: []
-    Spreadsheet_LocalFileName: TextFiles/Math 6 - I2Localization.csv
+    Spreadsheet_LocalFileName: TextFiles/Math 6 - Localization New.csv
     Spreadsheet_LocalCSVSeparator: ','
     Spreadsheet_LocalCSVEncoding: utf-8
     Spreadsheet_SpecializationAsRows: 1
