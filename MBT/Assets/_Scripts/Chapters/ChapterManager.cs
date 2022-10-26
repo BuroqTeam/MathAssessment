@@ -36,15 +36,19 @@ public class ChapterManager : MonoBehaviour
         {
             _jsonCollectionSO = group[0];
         }
-        else
+        else if (ES3.Load<string>("Subject").Equals("Geometriya"))
         {
             _jsonCollectionSO = group[1];
         }
+        else 
+        {
+            _jsonCollectionSO = group[2];
+        }
+
         _curentJson = Mbt.GetDesiredJSONData(_jsonCollectionSO);
         _jsonCollectionSO.DataBase.Clear();
 
-        //ReadJSON();
-
+        
         if (_curentJson.text.Length != 0)
         {
             ReadJSON();
