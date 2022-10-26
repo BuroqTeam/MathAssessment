@@ -55,7 +55,7 @@ public class P21_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             {
                 for (int i = 0; i < Pattern13.SelectedPuzles.Count; i++)
                 {
-                    if (GetComponent<P13_Puzzle1>().QuestionId == Pattern13.SelectedPuzles[i].transform.GetComponent<P13_Puzzle1>().QuestionId)
+                    if (GetComponent<P21_Puzzle1>().QuestionId == Pattern13.SelectedPuzles[i].transform.GetComponent<P21_Puzzle1>().QuestionId)
                     {
                         a++;
                     }
