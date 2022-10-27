@@ -16,11 +16,11 @@ public class Pattern_18 : GeneralTest
     public GameObject Y;
     public GameObject X;
     public GameObject PositionX;
+    public List<Button> Choraklar;
     public string chorak;
     public string ChorakNumber;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
-    public List<GameObject> PositionOut;
     public List<CellPattern_18> CellGroup = new();
     public List<float> PositionOY;
     public List<Button> Buttons = new();
@@ -45,6 +45,7 @@ public class Pattern_18 : GeneralTest
         GetComponent<Pattern>().IsEdited = true;
         //TestManager.Instance.CheckAllIsDone();
         chorak = Data18.options;
+        chorak = 1.ToString();
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
 
@@ -86,11 +87,11 @@ public class Pattern_18 : GeneralTest
         {
             CanvasOut[i].SetActive(true);
         }
-        for (int i = 0; i < PositionOut.Count; i++)
-        {
-            PositionOut[i].SetActive(true);
-        }
-        DisplayQuestion(Data18.title);
+        //for (int i = 0; i < PositionOut.Count; i++)
+        //{
+        //    PositionOut[i].SetActive(true);
+        //}
+        //DisplayQuestion(Data18.title);
 
     }
 

@@ -239,7 +239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -25.000015}
+  m_AnchoredPosition: {x: 1.5, y: -25.000015}
   m_SizeDelta: {x: 275, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307781112
@@ -526,6 +526,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4839683682015325617}
+  - {fileID: 1570036505}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1033,6 +1034,87 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354175205}
+  m_CullTransparentMesh: 1
+--- !u!1 &1570036504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1570036505}
+  - component: {fileID: 1570036507}
+  - component: {fileID: 1570036506}
+  m_Layer: 5
+  m_Name: wwe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1570036505
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570036504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 617591253}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.65, y: -610.92}
+  m_SizeDelta: {x: 1249.9, y: 179.16}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1570036506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570036504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11dd23e08e5cb942a6a6b4da8d43711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Alignment: {x: 0.5, y: 0.5}
+  m_Text: '\((5a^6 b^9 )^3 : (5a^3 b^6)^2\)'
+  m_Size: 36
+  m_ScrollArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_Padding:
+    left: 2
+    right: 2
+    top: 2
+    bottom: 2
+  m_Overflow: 0
+--- !u!222 &1570036507
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570036504}
   m_CullTransparentMesh: 1
 --- !u!1 &1679562974
 GameObject:
@@ -3610,9 +3692,15 @@ MonoBehaviour:
   Y: {fileID: 6373852847966164047}
   X: {fileID: 4292437423890493444}
   PositionX: {fileID: 7027923410662090923, guid: 3fe32c431ecb0e7418a032b03717216c, type: 3}
+  Choraklar:
+  - {fileID: 950990594}
+  - {fileID: 1704328832}
+  - {fileID: 525960254}
+  - {fileID: 706546692}
+  chorak: 
+  ChorakNumber: 
   CellObj: []
   CanvasOut: []
-  PositionOut: []
   CellGroup: []
   PositionOY: []
   Buttons: []
@@ -3622,8 +3710,6 @@ MonoBehaviour:
   _istrue: 1
   _click: 0
   percentage: 0
-  chorak: 
-  ChorakNumber: 
 --- !u!1 &7569078241351636038
 GameObject:
   m_ObjectHideFlags: 0
