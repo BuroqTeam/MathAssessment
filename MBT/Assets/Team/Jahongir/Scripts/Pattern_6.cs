@@ -10,7 +10,30 @@ public class Pattern_6 : GeneralTest
     private  TextAsset _currentJsonText;
     bool _isTrue = true;
     Data_6 Pattern_6Obj = new();
-   
+
+
+    private void Start()
+    {
+        float result = (float)Screen.width / (float)Screen.height;
+        if (result >= 2)
+        {
+            transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector3(810, 195);
+            transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(1275, 150);
+
+            //Debug.Log("2");
+        }
+        else if (result > 1.5)
+        {
+            transform.GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector3(700, 210);
+            transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(1050, 120);
+        }
+        else if (result < 1.5)
+        {
+
+        }
+    }
+
+
     private void OnEnable()
     {
         if (_isTrue)
