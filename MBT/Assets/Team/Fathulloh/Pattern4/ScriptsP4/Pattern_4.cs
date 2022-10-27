@@ -25,7 +25,7 @@ public class Pattern_4 : GeneralTest
     Sprite spriteOfImage;
     public int totalFullAns, totalCorrectAns;
 
-    public List<Vector3> PosLongPhone, PosPhone, PosTablet;
+    public List<Vector3> PosLongPhone, PosSmallLongPhone, PosPhone, PosTablet;
 
     public bool CurrentAnswerStatus;
     bool _isTrue = true;
@@ -116,9 +116,14 @@ public class Pattern_4 : GeneralTest
     
     public void DeviceDetector(float width, float height, GameObject obj, int i)
     {            // ushbu kod deviceni ni tekshirib beradi. Bazi o'yin obyektlari devicega qarab o'z pozitsiyasini o'zgartiradi.
-        if (width / height >= 2)        {
+        if (width / height > 2)        {
             //"Long phone"
             obj.GetComponent<RectTransform>().anchoredPosition = PosLongPhone[i];
+        }
+        else if (width / height == 2)   // Samandarning telini o'lchamiga qarab olindi.
+        {
+            //Debug.Log("PosSmallLongPhone");
+            obj.GetComponent<RectTransform>().anchoredPosition = PosSmallLongPhone[i];
         }
         else if (width / height > 1.5f)        {
             //"Phone"
