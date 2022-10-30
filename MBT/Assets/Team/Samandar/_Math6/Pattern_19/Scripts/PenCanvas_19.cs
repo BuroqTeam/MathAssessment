@@ -37,10 +37,10 @@ public class PenCanvas_19 : MonoBehaviour, IPointerClickHandler
             Pattern_19.Buttons[0].GetComponent<Button>().interactable = false;
             gameObject.SetActive(false);
         }
-        else if (Pattern_19.CanvasOut[0].transform.childCount == 1)
-        {
-            Pattern_19.Buttons[2].GetComponent<Button>().interactable = true;
-        }
+        //else if (Pattern_19.CanvasOut[0].transform.childCount == 1)
+        //{
+        //    Pattern_19.Buttons[2].GetComponent<Button>().interactable = true;
+        //}
         for (int i = 0; i < Pattern_19.DotsList.Count; i++)
         {
             Pattern_19.DotsList[i].transform.GetComponent<PointsPattern_19>().GetData();
