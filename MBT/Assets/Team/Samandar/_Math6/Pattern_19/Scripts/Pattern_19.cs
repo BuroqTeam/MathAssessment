@@ -9,14 +9,14 @@ using UnityEngine.UI;
 public class Pattern_19 : GeneralTest
 {
     private TextAsset _jsonText;
-    public GameObject Line;
+    //public GameObject Line;
     public GameObject Dot;
     public GameObject DotPrefabs;
     public GameObject CellParent;
     public GameObject Cell;
     public GameObject Koordinata;
     public GameObject DotParent;
-    public GameObject LineParent;
+    //public GameObject LineParent;
     public GameObject PenTool;
     public GameObject Y;
     public GameObject X;
@@ -88,16 +88,16 @@ public class Pattern_19 : GeneralTest
     void InstantiatePrefabs()
     {
         GameObject dot = Instantiate(Dot);
-        GameObject line = Instantiate(Line);
+        //GameObject line = Instantiate(Line);
         //GameObject posY = Instantiate(PositionY);
         GameObject posX = Instantiate(PositionX);
         PositionOut.Add(posX);
         //PositionOut.Add(posY);
         DotParent = dot;
-        LineParent = line;
+        //LineParent = line;
         GameObject obj = Instantiate(CellParent);
         CanvasOut.Add(dot);
-        CanvasOut.Add(line);
+        //CanvasOut.Add(line);
         CanvasOut.Add(obj);
     }
     public void XYPosition()
@@ -107,7 +107,7 @@ public class Pattern_19 : GeneralTest
     }
     public void PosY()
     {
-        float pos1 = CanvasOut[3].transform.position.y - 6 * percentage;
+        float pos1 = CanvasOut[2].transform.position.y - 6 * percentage;
         for (int i = 0; i < 11; i++)
         {
             pos1 += percentage;
@@ -150,11 +150,8 @@ public class Pattern_19 : GeneralTest
                         TurnOnTurnOf();
                         break;
                     case 1:
-                        LineParentTurnOn();
-                        break;
-                    case 2:
                         DestroyPointLine();
-                        break;
+                        break;   
                 }
 
             }
@@ -205,23 +202,7 @@ public class Pattern_19 : GeneralTest
         CanvasOut.Add(obj);
         //Debug.Log(obj.transform.position);
     }
-    public void LineParentTurnOn()
-    {
-        Rectangle();
-        LineParent.transform.GetChild(0).gameObject.SetActive(true);
-        LineParent.transform.GetChild(0).transform.GetComponent<LineRenderer>().loop = true;
-        if (Buttons[0].GetComponent<ButtonClick>().IsEnable == false)
-        {
-            PenTool.SetActive(false);
-        }
-        for (int i = 0; i < DotsList.Count; i++)
-        {
-            DotsList[i].transform.GetComponent<PointsPattern_19>().GetData();
-            DotsList[i].transform.GetComponent<PointsPattern_19>().Numbers();
-
-        }
-        Check();
-    }
+ 
     public void NewPosPoint()
     {
         NumberList.Clear();
@@ -230,247 +211,32 @@ public class Pattern_19 : GeneralTest
 
             DotsList[i].GetComponent<PointsPattern_19>().GetData();
         }
-    }
-    void Rectangle()
-    {
-        if (DotsList.Count == 4)
-        {
-            if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[0].transform.position, 0);
-                DotsList[0].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
-            {
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
-            {
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-            }
-            else if (DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
-            {
-                DotsList[1].transform.DOMove(DotsList[0].transform.position, 0);
-                DotsList[0].transform.DOMove(DotsList[1].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[3].transform.position, 0);
-                DotsList[3].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-            else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
-            {
-                DotsList[2].transform.DOMove(DotsList[1].transform.position, 0);
-                DotsList[1].transform.DOMove(DotsList[2].transform.position, 0);
-            }
-        }
+    }   
+    //public void Check()
+    //{
+    //    List<bool> currentList = new();
+    //    currentList = ES3.Load<List<bool>>("ResultList");
+    //    List<string> options = Data19.options;
+    //    bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
+    //    if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
 
-    }
+    //    }
+    //    else
+    //    {
+    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
 
-    public void False()
-    {
-        if (LineParent.transform.childCount == 1)
-        {
-            _isTrueOneTime = false;
-            LineParent.transform.GetChild(0).gameObject.SetActive(false);
-        }
-    }
-    public void CheckDrop()
-    {
-        List<bool> currentList = new();
-        currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> options = Data19.options;
-        bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
-        if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
-        {
-            if (DotsList.Count == 4)
-            {
-                if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[2].transform.position.x < DotsList[0].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y > DotsList[3].transform.position.y && DotsList[2].transform.position.y > DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y > DotsList[2].transform.position.y && DotsList[3].transform.position.y > DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[1].transform.position.x && DotsList[2].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[2].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x < DotsList[2].transform.position.x && DotsList[3].transform.position.x < DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[1].transform.position.x && DotsList[2].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y < DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x > DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[1].transform.position.y && DotsList[2].transform.position.y < DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[3].transform.position.x && DotsList[2].transform.position.x > DotsList[1].transform.position.x && DotsList[0].transform.position.y < DotsList[2].transform.position.y && DotsList[1].transform.position.y > DotsList[3].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-                }
-                else
-                {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
-
-                }
-            }
-            else
-            {
-                currentList[GetComponent<Pattern>().QuestionNumber] = true;
-
-            }
-        }
-        else
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-        }
-        ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_19_Check", true);
-        GetComponent<Pattern>().IsEdited = true; ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_19_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
-        TestManager.Instance.CheckAllIsDone();
-    }
-    public void Check()
-    {
-        List<bool> currentList = new();
-        currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> options = Data19.options;
-        bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
-        if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = true;
-
-        }
-        else
-        {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-        }
-        ES3.Save("ResultList", currentList);
-        ES3.Save<bool>("Pattern_19_Check", true);
-        GetComponent<Pattern>().IsEdited = true;
-        TestManager.Instance.CheckAllIsDone();
-    }
+    //    }
+    //    ES3.Save("ResultList", currentList);
+    //    ES3.Save<bool>("Pattern_19_Check", true);
+    //    GetComponent<Pattern>().IsEdited = true;
+    //    TestManager.Instance.CheckAllIsDone();
+    //}
 
     public void DestroyPointLine()
     {
         DotsList.Clear();
-        if (LineParent.transform.GetChild(0).gameObject != null)
-        {
-            Destroy(LineParent.transform.GetChild(0).gameObject);
-        }
-
         for (int i = 0; i < DotParent.transform.childCount; i++)
         {
             Destroy(DotParent.transform.GetChild(i).gameObject);
