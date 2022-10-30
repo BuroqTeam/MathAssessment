@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Pattern_18 : GeneralTest
 {
+    public GameEvent FinishButton;
     private TextAsset _jsonText;
     public GameObject CellParent;
     public GameObject Cell;
@@ -38,18 +39,16 @@ public class Pattern_18 : GeneralTest
         percentage = Cell.transform.localScale.x;
         InstantiatePrefabs();
         Instance = this;
-        chorak = 1.ToString();
+        
     }
     public void Check() 
     {
+        List<string> chorakdata = Data18.options;
         GetComponent<Pattern>().IsEdited = true;
-        //TestManager.Instance.CheckAllIsDone();
-        chorak = Data18.options;
-        chorak = 1.ToString();
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
 
-        if (chorak == ChorakNumber)
+        if (chorakdata[0] == ChorakNumber)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
             Debug.Log("correct");
@@ -69,14 +68,14 @@ public class Pattern_18 : GeneralTest
     }
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_18_Check"))
-        {
+        //if (ES3.Load<bool>("Pattern_18_Check"))
+        //{
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-        }
+        //}
         if (_istrue)
         {
             _istrue = false;
@@ -91,10 +90,28 @@ public class Pattern_18 : GeneralTest
         //{
         //    PositionOut[i].SetActive(true);
         //}
-        //DisplayQuestion(Data18.title);
-
+        DisplayQuestion(Data18.title);
     }
-
+    private void OnDisable()
+    {
+        if (CanvasOut.Count > 0)
+        {
+            for (int i = 0; i < CanvasOut.Count; i++)
+            {
+                if (CanvasOut[i] != null)
+                {
+                    CanvasOut[i].SetActive(false);
+                }
+            }
+            //for (int i = 0; i < PositionOut.Count; i++)
+            //{
+            //    if (PositionOut[i] != null)
+            //    {
+            //        PositionOut[i].SetActive(false);
+            //    }
+            //}
+        }
+    }
     void InstantiatePrefabs()
     {        
         GameObject obj = Instantiate(CellParent);
@@ -120,15 +137,6 @@ public class Pattern_18 : GeneralTest
         CellPosition();
         PosY();       
     }
-
-    public void Active()
-    {
-        if (_click)
-        {
-           ES3.Save<bool>("Pattern_18_Check", true);
-        }
-    }
-    
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
@@ -146,5 +154,5 @@ public class Pattern_18 : GeneralTest
 public class Data_18
 {
     public string title;
-    public string options;
+    public List<string> options;
 }

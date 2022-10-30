@@ -9,18 +9,15 @@ using UnityEngine.UI;
 public class Pattern_19 : GeneralTest
 {
     private TextAsset _jsonText;
-    //public GameObject Line;
     public GameObject Dot;
     public GameObject DotPrefabs;
     public GameObject CellParent;
     public GameObject Cell;
     public GameObject Koordinata;
     public GameObject DotParent;
-    //public GameObject LineParent;
     public GameObject PenTool;
     public GameObject Y;
     public GameObject X;
-    //public GameObject PositionY;
     public GameObject PositionX;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
@@ -30,8 +27,6 @@ public class Pattern_19 : GeneralTest
     public List<float> PositionOY;
     public List<Button> Buttons = new();
     public List<string> NumberList;
-    //public List<string> NumberY;
-    //public List<string> NumberX;
     public static Pattern_19 Instance;
     public float width;
     public float height;
@@ -48,8 +43,7 @@ public class Pattern_19 : GeneralTest
         percentage = Cell.transform.localScale.x;
         InstantiatePrefabs();
         DotPrefabs.GetComponent<PointsPattern_19>().Pattern_19 = this;
-        Instance = this;
-        //Debug.Log(PenTool.transform.position);        
+        Instance = this;        
     }
     public void ReadFromJson()
     {
@@ -88,16 +82,11 @@ public class Pattern_19 : GeneralTest
     void InstantiatePrefabs()
     {
         GameObject dot = Instantiate(Dot);
-        //GameObject line = Instantiate(Line);
-        //GameObject posY = Instantiate(PositionY);
         GameObject posX = Instantiate(PositionX);
         PositionOut.Add(posX);
-        //PositionOut.Add(posY);
         DotParent = dot;
-        //LineParent = line;
         GameObject obj = Instantiate(CellParent);
         CanvasOut.Add(dot);
-        //CanvasOut.Add(line);
         CanvasOut.Add(obj);
     }
     public void XYPosition()
@@ -119,21 +108,12 @@ public class Pattern_19 : GeneralTest
 
         CellPosition();
         PosY();
-        //ReadFromJson();
     }
 
     public void Active()
     {
         if (_click)
         {
-            //if (TestManager.Instance.CheckIsLast())
-            //{
-            //    FinishButton.Raise();
-            //}
-            //else
-            //{
-
-            //}
             ES3.Save<bool>("Pattern_19_Check", true);
         }
     }
@@ -153,12 +133,10 @@ public class Pattern_19 : GeneralTest
                         DestroyPointLine();
                         break;   
                 }
-
             }
             n++;
         }
     }
-
     private void OnDisable()
     {
         if (CanvasOut.Count > 0)
@@ -168,13 +146,6 @@ public class Pattern_19 : GeneralTest
                 if (CanvasOut[i] != null)
                 {
                     CanvasOut[i].SetActive(false);
-                }
-            }
-            for (int i = 0; i < PositionOut.Count; i++)
-            {
-                if (PositionOut[i] != null)
-                {
-                    PositionOut[i].SetActive(false);
                 }
             }
         }
@@ -187,9 +158,8 @@ public class Pattern_19 : GeneralTest
 
     public void TurnOnTurnOf()
     {
-
         Yoqish = Buttons[0].GetComponent<ButtonClick>().IsEnable;
-        Buttons[2].GetComponent<Button>().interactable = false;
+        Buttons[1].GetComponent<Button>().interactable = false;
         if (Yoqish == true)
         {
             PenTool.SetActive(true);
@@ -200,7 +170,6 @@ public class Pattern_19 : GeneralTest
         GameObject obj = Instantiate(Koordinata);
         obj.transform.position = PenTool.transform.position;
         CanvasOut.Add(obj);
-        //Debug.Log(obj.transform.position);
     }
  
     public void NewPosPoint()
@@ -208,31 +177,28 @@ public class Pattern_19 : GeneralTest
         NumberList.Clear();
         for (int i = 0; i < DotsList.Count; i++)
         {
-
             DotsList[i].GetComponent<PointsPattern_19>().GetData();
         }
-    }   
-    //public void Check()
-    //{
-    //    List<bool> currentList = new();
-    //    currentList = ES3.Load<List<bool>>("ResultList");
-    //    List<string> options = Data19.options;
-    //    bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
-    //    if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = true;
-
-    //    }
-    //    else
-    //    {
-    //        currentList[GetComponent<Pattern>().QuestionNumber] = false;
-
-    //    }
-    //    ES3.Save("ResultList", currentList);
-    //    ES3.Save<bool>("Pattern_19_Check", true);
-    //    GetComponent<Pattern>().IsEdited = true;
-    //    TestManager.Instance.CheckAllIsDone();
-    //}
+    }
+    public void Check()
+    {
+        List<bool> currentList = new();
+        currentList = ES3.Load<List<bool>>("ResultList");
+        List<string> options = Data19.options;
+        bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
+        if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = true;
+        }
+        else
+        {
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;
+        }
+        ES3.Save("ResultList", currentList);
+        ES3.Save<bool>("Pattern_19_Check", true);
+        GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
+    }
 
     public void DestroyPointLine()
     {
@@ -247,10 +213,9 @@ public class Pattern_19 : GeneralTest
         }
         Buttons[0].GetComponent<Button>().interactable = true;
         Buttons[1].GetComponent<Button>().interactable = false;
-        Buttons[2].GetComponent<Button>().interactable = false;
         NumberList.Clear();
         GetComponent<Pattern>().IsEdited = false;
-        TestManager.Instance.CheckAllIsDone();
+        //TestManager.Instance.CheckAllIsDone();
     }
     void Update()
     {
