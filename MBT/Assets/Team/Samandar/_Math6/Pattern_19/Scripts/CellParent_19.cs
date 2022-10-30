@@ -22,7 +22,8 @@ public class CellParent_19 : MonoBehaviour
                 Pattern_19.CellObj.Add(SpawnedCell);
             }
         }
-        gameObject.transform.position = Pattern_19.CanvasOut[3].transform.position;
+        gameObject.transform.position = Pattern_19.CanvasOut[2].transform.position;
+        //Pattern_19.Check();
     }
     void Update()
     {

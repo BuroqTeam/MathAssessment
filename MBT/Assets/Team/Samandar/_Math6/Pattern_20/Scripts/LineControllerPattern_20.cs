@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineControllerPattern_19 : MonoBehaviour
+public class LineControllerPattern_20 : MonoBehaviour
 {
     private LineRenderer lr;
     private List<Transform> points;
@@ -34,6 +34,5 @@ public class LineControllerPattern_19 : MonoBehaviour
                 lr.SetPosition(i, points[i].position);
             }
         }
-
     }
 }

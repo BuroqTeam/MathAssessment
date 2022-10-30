@@ -10,7 +10,6 @@ public class PenCanvas_19 : MonoBehaviour, IPointerClickHandler
     public GameObject Point;
     public GameObject lineParent;
     public GameObject dotParent;
-    private LineControllerPattern_19 currentLine;
     public Action OnPenCanvasLeftClickEvent;
     public Vector3 HandPosition;
     Camera main;
@@ -21,23 +20,17 @@ public class PenCanvas_19 : MonoBehaviour, IPointerClickHandler
     }
     private void Start()
     {
-        //dotParent = Pattern_19.DotParent;
+        dotParent = Pattern_19.DotParent;
         //lineParent = Pattern_19.LineParent;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
         Vector3 point = main.ScreenToWorldPoint(new Vector3(eventData.position.x, eventData.position.y, 0));
         point = new Vector3(point.x, point.y, 0);
-        if (currentLine == null)
-        {
-            currentLine = Instantiate(linePrefabs, Vector3.zero, Quaternion.identity, lineParent.transform).GetComponent<LineControllerPattern_19>();
-            Pattern_19.False();
-        }
         GameObject dot = Instantiate(Point, point, Quaternion.identity, dotParent.transform);
         Pattern_19.DotsList.Add(dot);
         dot.GetComponent<PointsPattern_19>().LastPosition = dot.transform.position;
         pointsPattern_19.PositionCheck();
-        currentLine.AddPoint(dot.transform);
         if (Pattern_19.CanvasOut[0].transform.childCount == Pattern_19.Data19.options.Count)
         {
             Pattern_19.Buttons[1].GetComponent<Button>().interactable = true;
