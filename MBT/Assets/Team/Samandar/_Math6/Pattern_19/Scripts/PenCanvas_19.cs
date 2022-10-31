@@ -21,7 +21,6 @@ public class PenCanvas_19 : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         dotParent = Pattern_19.DotParent;
-        //lineParent = Pattern_19.LineParent;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -37,20 +36,10 @@ public class PenCanvas_19 : MonoBehaviour, IPointerClickHandler
             Pattern_19.Buttons[0].GetComponent<Button>().interactable = false;
             gameObject.SetActive(false);
         }
-        //else if (Pattern_19.CanvasOut[0].transform.childCount == 1)
-        //{
-        //    Pattern_19.Buttons[2].GetComponent<Button>().interactable = true;
-        //}
-        for (int i = 0; i < Pattern_19.DotsList.Count; i++)
-        {
-            Pattern_19.DotsList[i].transform.GetComponent<PointsPattern_19>().GetData();
-        }
-        //Debug.Log(point);
-        //GameObject circle =  Instantiate(circle, point);
-
         if (eventData.pointerId == -1)
         {
             OnPenCanvasLeftClickEvent?.Invoke();
         }
+        //Pattern_19.Check();
     }
 }

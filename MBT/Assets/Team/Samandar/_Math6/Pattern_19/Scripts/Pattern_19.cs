@@ -105,7 +105,6 @@ public class Pattern_19 : GeneralTest
     }
     void Start()
     {
-
         CellPosition();
         PosY();
     }
@@ -122,7 +121,7 @@ public class Pattern_19 : GeneralTest
         int n = 0;
         foreach (Button btn in Buttons)
         {
-            if (btn.GetComponent<ButtonClick>().IsEnable)
+            if (btn.GetComponent<ButtonClick_19>().IsEnable)
             {
                 switch (n)
                 {
@@ -158,11 +157,12 @@ public class Pattern_19 : GeneralTest
 
     public void TurnOnTurnOf()
     {
-        Yoqish = Buttons[0].GetComponent<ButtonClick>().IsEnable;
+        Yoqish = Buttons[0].GetComponent<ButtonClick_19>().IsEnable;
         Buttons[1].GetComponent<Button>().interactable = false;
         if (Yoqish == true)
         {
             PenTool.SetActive(true);
+            PenTool.transform.GetChild(0).transform.gameObject.SetActive(true);
         }
     }
     void CellPosition()
@@ -171,28 +171,29 @@ public class Pattern_19 : GeneralTest
         obj.transform.position = PenTool.transform.position;
         CanvasOut.Add(obj);
     }
- 
-    public void NewPosPoint()
-    {
-        NumberList.Clear();
-        for (int i = 0; i < DotsList.Count; i++)
-        {
-            DotsList[i].GetComponent<PointsPattern_19>().GetData();
-        }
-    }
     public void Check()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         List<string> options = Data19.options;
+        for (int i = 0; i < options.Count; i++)
+        {
+            Debug.Log(options[i]);
+        }
+        for (int i = 0; i < options.Count; i++)
+        {
+            Debug.Log(NumberList[i]);
+        }
         bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
-        if (isEqual == true && Buttons[1].transform.GetComponent<ButtonClick>().IsEnable == true)
+        if (isEqual == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Debug.Log("correct");
         }
         else
-        {
+        {   
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Debug.Log("wrong");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_19_Check", true);
@@ -207,15 +208,16 @@ public class Pattern_19 : GeneralTest
         {
             Destroy(DotParent.transform.GetChild(i).gameObject);
         }
-        if (Buttons[0].GetComponent<ButtonClick>().IsEnable == false)
+        if (Buttons[0].GetComponent<ButtonClick_19>().IsEnable == false)
         {
-            PenTool.SetActive(false);
+            PenTool.SetActive(true);
+            PenTool.transform.GetChild(0).transform.gameObject.SetActive(false);
         }
         Buttons[0].GetComponent<Button>().interactable = true;
         Buttons[1].GetComponent<Button>().interactable = false;
         NumberList.Clear();
         GetComponent<Pattern>().IsEdited = false;
-        //TestManager.Instance.CheckAllIsDone();
+        TestManager.Instance.CheckAllIsDone();
     }
     void Update()
     {
@@ -224,8 +226,6 @@ public class Pattern_19 : GeneralTest
 
         }
     }
-
-
 }
 [SerializeField]
 public class Data_19
