@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4715580554306674146}
   - component: {fileID: 4715580554306674147}
   - component: {fileID: 4715580554306674144}
-  - component: {fileID: 4715580554306674149}
+  - component: {fileID: 3168703870115147189}
   m_Layer: 5
   m_Name: Delete
   m_TagString: Untagged
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4715580554306674149
+--- !u!114 &3168703870115147189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,10 +212,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4715580554306674078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e43c523151e3f74887a75d3ca9c88a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a7077af6dfa1544bac5eab452c81ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
+  Panel: {fileID: 4715580555224533147}
   SpClicked: {fileID: 21300000, guid: 32a0592da604fb84e8b0fcdee95c57d4, type: 3}
   IsEnable: 0
 --- !u!1 &4715580555140467773
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 4715580555478685830}
   - component: {fileID: 4715580555478685831}
   - component: {fileID: 4715580555478685828}
-  - component: {fileID: 4715580555478685833}
+  - component: {fileID: 1940964176327377162}
   m_Layer: 5
   m_Name: Point
   m_TagString: Untagged
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4715580555478685833
+--- !u!114 &1940964176327377162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,11 +676,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4715580555478685826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e43c523151e3f74887a75d3ca9c88a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a7077af6dfa1544bac5eab452c81ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
-  SpClicked: {fileID: 21300000, guid: 3ee9b74fd8a77444eb20894a23f22307, type: 3}
+  Panel: {fileID: 4715580555224533147}
+  SpClicked: {fileID: 21300000, guid: 8b448e19132218845a9c16d00f6a21bd, type: 3}
   IsEnable: 1
 --- !u!1 &4715580555676453537
 GameObject:

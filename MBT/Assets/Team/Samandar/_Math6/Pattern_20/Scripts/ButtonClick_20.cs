@@ -46,7 +46,6 @@ public class ButtonClick_20 : MonoBehaviour
                 btn.GetComponent<Image>().sprite = btn.GetComponent<ButtonClick_20>()._spInitial;
                 btn.GetComponent<ButtonClick_20>().IsEnable = false;
             }
-
         }
         Panel.CheckToolIsEnable();
     }

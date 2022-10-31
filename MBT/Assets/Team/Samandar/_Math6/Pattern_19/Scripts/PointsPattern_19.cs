@@ -18,41 +18,24 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         Pos_1 = Pattern_19.CellObj[0];
         Pos_2 = Pattern_19.CellObj[99];
     }
-
     private void Start()
     {
         PositionCheck();
     }
-
-
-
     public void OnEndDrag(PointerEventData eventData)
     {
         PositionCheck();
         BackToLastPosition();
-        GetData();
         Numbers();
-        Pattern_19.NewPosPoint();
+        //Pattern_19.Check();
     }
     public void Numbers()
     {
         Pattern_19.NumberList.Clear();
-        if (Pattern_19.Data19.options.Count == 3)
+        for (int i = 0; i < Pattern_19.DotsList.Count; i++)
         {
-            for (int i = 0; i < Pattern_19.DotsList.Count; i++)
-            {
-                string str = Pattern_19.DotsList[i].transform.GetComponent<PointsPattern_19>().Point;
-                Pattern_19.NumberList.Add(str);
-            }
-
-        }
-        else if (Pattern_19.Data19.options.Count == 4)
-        {
-            for (int i = 0; i < Pattern_19.DotsList.Count; i++)
-            {
-                string str = Pattern_19.DotsList[i].transform.GetComponent<PointsPattern_19>().Point;
-                Pattern_19.NumberList.Add(str);
-            }
+            string str = Pattern_19.DotsList[i].transform.GetComponent<PointsPattern_19>().Point;
+            Pattern_19.NumberList.Add(str);
         }
     }
     public void GetData()
@@ -62,6 +45,7 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         Point = null;
         for (int i = 0; i < Pattern_19.PositionOut[0].transform.childCount; i++)
         {
+            
             if (Mathf.Approximately(Pattern_19.PositionOut[0].transform.GetChild(i).position.x, gameObject.transform.position.x))
             {
                 if (i == 0)
@@ -114,11 +98,9 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         {
             if (Mathf.Approximately(Pattern_19.PositionOY[i], gameObject.transform.position.y))
             {
-                //Debug.Log("1");
                 if (i == 0)
                 {
-                    Debug.Log("-5");
-                    NumberY = ("-5");
+                    NumberY = ("10");
                 }
                 if (i == 1)
                 {
@@ -164,11 +146,11 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         }
         Point = NumberX + "," + NumberY;
         Numbers();
+        Pattern_19.Check();
     }
 
     void BackToLastPosition()
     {
-
         if (gameObject.transform.position.x < Pos_1.transform.GetComponent<CellPattern_19>().points[3].x)
         {
             transform.DOMove(LastPosition, 0);
@@ -201,9 +183,8 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
                 }
             }
         }
-
+        GetData();
     }
-
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
