@@ -12,7 +12,7 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
     public string NumberX;
     public string Point;
     private Vector3 LastPosition;
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         Pos_1 = Pattern_20.CellObj[0];
@@ -26,32 +26,18 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
     public void OnEndDrag(PointerEventData eventData)
     {
         PositionCheck();
-        BackToLastPosition();
-        GetData();
-        Numbers();
-        Pattern_20.NewPosPoint();
+        BackToLastPosition();        
+        Numbers();        
     }
     public void Numbers()
     {
-        Pattern_20.NumberList.Clear();
-        if (Pattern_20.Data20.options.Count == 3)
+        GetData();
+        Pattern_20.NumbersList.Clear();
+        for (int i = 0; i < Pattern_20.PointList.Count; i++)
         {
-            for (int i = 0; i < Pattern_20.DotsList.Count; i++)
-            {
-                string str = Pattern_20.DotsList[i].transform.GetComponent<PointsPattern_20>().Point;
-                Pattern_20.NumberList.Add(str);
-            }
-
-        }
-        else if (Pattern_20.Data20.options.Count == 4)
-        {
-            for (int i = 0; i < Pattern_20.DotsList.Count; i++)
-            {
-                string str = Pattern_20.DotsList[i].transform.GetComponent<PointsPattern_20>().Point;
-                Pattern_20.NumberList.Add(str);
-
-            }
-        }
+            string str = Pattern_20.PointList[i].transform.GetComponent<PointsPattern_20>().Point;
+            Pattern_20.NumbersList.Add(str);
+        }     
     }
     public void GetData()
     {
@@ -113,25 +99,24 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
             if (Mathf.Approximately(Pattern_20.PositionOY[i], gameObject.transform.position.y))
             {
                 if (i == 0)
-                {
-                    Debug.Log("-5");
-                    NumberY = ("-5");
+                {                    
+                    NumberY = ("5");
                 }
                 if (i == 1)
                 {
-                    NumberY = ("-4");
+                    NumberY = ("4");
                 }
                 if (i == 2)
                 {
-                    NumberY = ("-3");
+                    NumberY = ("3");
                 }
                 if (i == 3)
                 {
-                    NumberY = ("-2");
+                    NumberY = ("2");
                 }
                 if (i == 4)
                 {
-                    NumberY = ("-1");
+                    NumberY = ("1");
                 }
                 if (i == 5)
                 {
@@ -139,28 +124,27 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
                 }
                 if (i == 6)
                 {
-                    NumberY = ("1");
+                    NumberY = ("-1");
                 }
                 if (i == 7)
                 {
-                    NumberY = ("2");
+                    NumberY = ("-2");
                 }
                 if (i == 8)
                 {
-                    NumberY = ("3");
+                    NumberY = ("-3");
                 }
                 if (i == 9)
                 {
-                    NumberY = ("4");
+                    NumberY = ("-4");
                 }
                 if (i == 10)
                 {
-                    NumberY = ("5");
+                    NumberY = ("-5");
                 }
             }
         }
-        Point = NumberX + "," + NumberY;
-        Numbers();
+        Point = NumberX + "," + NumberY;        
     }
     void BackToLastPosition()
     {
@@ -196,7 +180,6 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
                 }
             }
         }
-
     }
 
     public void OnDrag(PointerEventData eventData)

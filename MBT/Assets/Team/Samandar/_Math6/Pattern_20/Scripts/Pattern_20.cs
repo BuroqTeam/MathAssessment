@@ -22,13 +22,14 @@ public class Pattern_20 : GeneralTest
     public List<char> AlphabetList;
     public GameObject PositionX;
     public List<GameObject> PointList;
+    public List<GameObject> PointPositionList;
     public List<GameObject> CellObj;
     public List<GameObject> CanvasOut;
     public List<GameObject> PositionOut;
     public List<GameObject> DotsList = new();
     public List<CellPattern_20> CellGroup = new();
     public List<float> PositionOY;
-    public List<string> NumberList;
+    public List<string> NumbersList;
     public static Pattern_20 Instance;
     public float width;
     public float height;
@@ -84,12 +85,9 @@ public class Pattern_20 : GeneralTest
         {
             PointList[i].transform.GetComponent<PointsPattern_20>().Pattern_20 = this;
         }
-        
     }
     void InstantiatePrefabs()
     {
-        List<string> options = Data20.options;      
-
         GameObject posX = Instantiate(PositionX);
         PositionOut.Add(posX);        
         GameObject obj = Instantiate(CellParent);
@@ -112,20 +110,7 @@ public class Pattern_20 : GeneralTest
         float offset = dot.GetComponent<SpriteRenderer>().sprite.bounds.size.x * 0.5f * 0.3f;
         pos = new Vector3(pos.x - (50 * offset), transform.position.y, 0);
         dot.transform.position = pos;        
-    }
-    //void PointData()
-    //{
-    //    for (char ci = 'A'; ci <= 'Z'; ++ci)
-    //    {
-    //        AlphabetList.Add(ci);
-    //    }
-    //    List<string> options = Data20.options;
-    //    for (int i = 0; i < PointPositionList.Count; i++)
-    //    {
-    //        PointPositionList[i].transform.GetChild(0).transform.GetComponent<TEXDraw>().text = options[i];
-    //        PointList[i].transform.GetChild(0).transform.GetComponent<TEXDraw>().text = AlphabetList[i].ToString();
-    //    }
-    //}
+    }   
     public void XYPosition()
     {
         X.transform.position = new Vector3(CellObj[49].transform.position.x + CellObj[49].GetComponent<Transform>().localScale.x * 1.2f, CellObj[49].transform.position.y * 1.1f, 0);
@@ -133,10 +118,10 @@ public class Pattern_20 : GeneralTest
     }
     public void PosY()
     {
-        float pos1 = CanvasOut[0].transform.position.y - 6 * percentage;
+        float pos1 = PenTool.transform.position.y + 6 * percentage;
         for (int i = 0; i < 11; i++)
         {
-            pos1 += percentage;
+            pos1 -= percentage;
             PositionOY.Add(pos1);
         }
     }
@@ -177,21 +162,13 @@ public class Pattern_20 : GeneralTest
         GameObject obj = Instantiate(Koordinata);
         obj.transform.position = new Vector3(PenTool.transform.position.x, PenTool.transform.position.y, -1);
         CanvasOut.Add(obj);
-    }
-    public void NewPosPoint()
-    {
-        NumberList.Clear();
-        for (int i = 0; i < DotsList.Count; i++)
-        {
-            DotsList[i].GetComponent<PointsPattern_20>().GetData();
-        }
-    }
+    }    
     public void Check()
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
         List<string> options = Data20.options;
-        bool isEqual = NumberList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
+        bool isEqual = NumbersList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
         if (isEqual == true)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;

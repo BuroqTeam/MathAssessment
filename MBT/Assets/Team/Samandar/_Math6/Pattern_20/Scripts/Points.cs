@@ -12,7 +12,7 @@ public class Points : MonoBehaviour
     public float SizeBolak;
     public float percentage;
     public List<char> AlphabetList;
-    void Start()
+    void Awake()
     {
         percentage = gameObject.transform.localScale.x;
         float _size = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size.y * percentage;
@@ -60,7 +60,7 @@ public class Points : MonoBehaviour
         {
             AlphabetList.Add(ci);
         }
-        List<string> options = Pattern_20.Data20.options;
+        //List<string> options = Pattern_20.Data20.options;
         Pattern_20.PointList.Reverse();
         for (int i = 0; i < Pattern_20.PointList.Count; i++)
         {

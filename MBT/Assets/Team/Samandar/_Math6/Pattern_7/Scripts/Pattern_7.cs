@@ -107,10 +107,10 @@ public class Pattern_7 : GeneralTest
     }
     public void PosY()
     {
-        float pos1 = CanvasOut[3].transform.position.y - 6 * percentage;
+        float pos1 = CanvasOut[3].transform.position.y + 6 * percentage;
         for (int i = 0; i < 11; i++)
         {
-            pos1 += percentage;
+            pos1 -= percentage;
             PositionOY.Add(pos1);
         }
     }
