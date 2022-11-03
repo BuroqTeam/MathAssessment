@@ -22,6 +22,6 @@ public class CellParent_20 : MonoBehaviour
                 Pattern_20.CellObj.Add(SpawnedCell);
             }
         }
-        gameObject.transform.position = Pattern_20.CanvasOut[3].transform.position;
+        gameObject.transform.position = Pattern_20.CanvasOut[0].transform.position;
     }   
 }
