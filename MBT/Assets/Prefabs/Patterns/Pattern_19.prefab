@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
+  FinishButton: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
   Dot: {fileID: 2598368186222215131, guid: 2e81d63b62e50384bbede3b1dfcdb347, type: 3}
   DotPrefabs: {fileID: 5149375334438247198, guid: 706820581c857f245aebce080beca5f0, type: 3}
   CellParent: {fileID: 1030882763487033111, guid: 85da2dd6a38add24a96076a436c2174d, type: 3}

@@ -27,7 +27,7 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         PositionCheck();
         BackToLastPosition();
         Numbers();
-        //Pattern_19.Check();
+        Pattern_19.Check();
     }
     public void Numbers()
     {
@@ -100,7 +100,7 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
             {
                 if (i == 0)
                 {
-                    NumberY = ("10");
+                    NumberY = ("-5");
                 }
                 if (i == 1)
                 {

@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - TextMeshPro-Text
   - Water
   - UI
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Becground
+    uniqueID: 1674763265
+    locked: 0
+  - name: Orqa fon
+    uniqueID: 3390130415
     locked: 0

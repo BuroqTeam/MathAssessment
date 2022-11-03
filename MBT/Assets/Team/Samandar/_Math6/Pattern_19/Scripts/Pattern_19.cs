@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Pattern_19 : GeneralTest
 {
+    public GameEvent FinishButton;
     private TextAsset _jsonText;
     public GameObject Dot;
     public GameObject DotPrefabs;
@@ -53,14 +54,14 @@ public class Pattern_19 : GeneralTest
     }
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_19_Check"))
-        {
+        //if (ES3.Load<bool>("Pattern_19_Check"))
+        //{
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-        }
+        //}
         if (_istrue)
         {
             _istrue = false;
@@ -76,7 +77,6 @@ public class Pattern_19 : GeneralTest
             PositionOut[i].SetActive(true);
         }
         DisplayQuestion(Data19.title);
-
     }
 
     void InstantiatePrefabs()
@@ -180,7 +180,7 @@ public class Pattern_19 : GeneralTest
         {
             Debug.Log(options[i]);
         }
-        for (int i = 0; i < options.Count; i++)
+        for (int i = 0; i < NumberList.Count; i++)
         {
             Debug.Log(NumberList[i]);
         }
