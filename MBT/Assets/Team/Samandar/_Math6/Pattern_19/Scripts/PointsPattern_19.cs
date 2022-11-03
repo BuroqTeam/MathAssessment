@@ -100,23 +100,23 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
             {
                 if (i == 0)
                 {
-                    NumberY = ("-5");
+                    NumberY = ("5");
                 }
                 if (i == 1)
                 {
-                    NumberY = ("-4");
+                    NumberY = ("4");
                 }
                 if (i == 2)
                 {
-                    NumberY = ("-3");
+                    NumberY = ("3");
                 }
                 if (i == 3)
                 {
-                    NumberY = ("-2");
+                    NumberY = ("2");
                 }
                 if (i == 4)
                 {
-                    NumberY = ("-1");
+                    NumberY = ("1");
                 }
                 if (i == 5)
                 {
@@ -124,23 +124,23 @@ public class PointsPattern_19 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
                 }
                 if (i == 6)
                 {
-                    NumberY = ("1");
+                    NumberY = ("-1");
                 }
                 if (i == 7)
                 {
-                    NumberY = ("2");
+                    NumberY = ("-2");
                 }
                 if (i == 8)
                 {
-                    NumberY = ("3");
+                    NumberY = ("-3");
                 }
                 if (i == 9)
                 {
-                    NumberY = ("4");
+                    NumberY = ("-4");
                 }
                 if (i == 10)
                 {
-                    NumberY = ("5");
+                    NumberY = ("-5");
                 }
             }
         }

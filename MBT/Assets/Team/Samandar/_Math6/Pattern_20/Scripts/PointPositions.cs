@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PointPositions : MonoBehaviour
 {
     public Pattern_20 Pattern_20;
     public GameObject PointPositionsPrefabs;
-    public List<GameObject> PointPositionList;
     public float Top;
     public float Size;
     public float SizeBolak;
@@ -54,6 +54,13 @@ public class PointPositions : MonoBehaviour
         for (float i = startPosition; i < gameObject.transform.position.y + _size/2; i += SizeBolak)
         {
             GameObject SpawnedCell = Instantiate(PointPositionsPrefabs, new Vector3(gameObject.transform.position.x, i), Quaternion.identity, gameObject.transform);
+            Pattern_20.PointPositionList.Add(SpawnedCell);
+        }
+        List<string> options = Pattern_20.Data20.options;
+        Pattern_20.PointPositionList.Reverse();
+        for (int i = 0; i < Pattern_20.PointPositionList.Count; i++)
+        {
+            Pattern_20.PointPositionList[i].transform.GetChild(0).transform.GetComponent<TMP_Text>().text = options[i].ToString();
         }
     }   
 }

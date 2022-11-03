@@ -107,7 +107,6 @@ public class Pattern_8 : GeneralTest
         {         
             Rectangle();
         }
-        //GetComponent<Pattern>().IsEdited = true;
     }
 
     public override void DisplayQuestion(string questionStr)
