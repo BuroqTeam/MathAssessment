@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Pattern_20 : GeneralTest
 {
+    public GameEvent FinishButton;
     private TextAsset _jsonText;
     public GameObject PenTool;
     public GameObject PointPositions;
@@ -33,13 +34,13 @@ public class Pattern_20 : GeneralTest
     public static Pattern_20 Instance;
     public float width;
     public float height;
-    bool Yoqish;
+    //bool Yoqish;
     public bool _istrue = true;
-    bool _isTrueOneTime = true;
+    //bool _isTrueOneTime = true;
     public bool _click;
     public Data_20 Data20 = new();
     public float percentage;
-
+    public List<string> _pointData;
     private void Awake()
     {
         CellParent.GetComponent<CellParent_20>().Pattern_20 = this;
@@ -85,6 +86,29 @@ public class Pattern_20 : GeneralTest
         {
             PointList[i].transform.GetComponent<PointsPattern_20>().Pattern_20 = this;
         }
+        Main();
+    }
+    void Main()
+    {
+        for (int i = 0; i < Data20.options.Count; i++)
+        {
+            var likeName = Data20.options[i];
+            likeName = likeName.Remove(0,1);
+            
+            if (likeName.Contains('('))
+            {
+                likeName = likeName.Replace("(", "");
+            }
+            if (likeName.Contains(')'))
+            {
+                likeName = likeName.Replace(")", "");
+            }
+            if (likeName.Contains(';'))
+            {
+                likeName = likeName.Replace(";", ",");
+            }
+            _pointData.Add(likeName);
+        }        
     }
     void InstantiatePrefabs()
     {
@@ -167,15 +191,15 @@ public class Pattern_20 : GeneralTest
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-        List<string> options = Data20.options;
-        bool isEqual = NumbersList.OrderBy(x => x).SequenceEqual(options.OrderBy(x => x));
-        if (isEqual == true)
+        if(NumbersList.SequenceEqual(_pointData))
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
+            Logging.Log("true");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
+            Logging.Log("false");
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_20_Check", true);
