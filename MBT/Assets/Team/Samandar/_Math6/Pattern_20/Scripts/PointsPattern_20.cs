@@ -18,7 +18,7 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
         Pos_1 = Pattern_20.CellObj[0];
         Pos_2 = Pattern_20.CellObj[99];
     }
-
+    
     private void Start()
     {
         PositionCheck();
@@ -27,7 +27,8 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
     {
         PositionCheck();
         BackToLastPosition();        
-        Numbers();        
+        Numbers();
+        Pattern_20.Check();
     }
     public void Numbers()
     {
