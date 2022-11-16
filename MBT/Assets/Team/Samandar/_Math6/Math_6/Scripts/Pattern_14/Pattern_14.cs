@@ -42,6 +42,7 @@ public class Pattern_14 : GeneralTest
     
     private void OnEnable()
     {
+        //Debug.Log("Pattern_14_Check = " + ES3.Load<bool>("Pattern_14_Check"));
         if (ES3.Load<bool>("Pattern_14_Check"))
         {
            

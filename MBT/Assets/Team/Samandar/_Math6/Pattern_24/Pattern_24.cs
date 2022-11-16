@@ -42,14 +42,15 @@ public class Pattern_24 : GeneralTest
 
     private void OnEnable()
     {
-        if (ES3.Load<bool>("Pattern_24_Check"))
-        {
+        //Debug.Log("Pattern_24_Check = " + ES3.Load<bool>("Pattern_24_Check"));
+        //if (ES3.Load<bool>("Pattern_24_Check"))
+        //{
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-        }
+        //}
         if (_istrue)
         {
             _istrue = false;
@@ -61,16 +62,17 @@ public class Pattern_24 : GeneralTest
 
         //_jsonText = Mbt.GetDesiredData(_jsCollection);
         DisplayQuestion(DataObj.title);
-
     }
 
     public void Active()
     {
+        Debug.Log("Active()");
         if (_click)
         {
             ES3.Save<bool>("Pattern_24_Check", true);
             GetComponent<Pattern>().IsEdited = true;
             TestManager.Instance.CheckAllIsDone();
+            Debug.Log(" + Pattern24 ");
         }
     }
     public void ReadFromJson()
@@ -80,9 +82,9 @@ public class Pattern_24 : GeneralTest
         DataObj = jo.ToObject<Data_24>();
     }
     string str;
+
     void StartMetod()
     {
-        //string str;
         List<string> problem1 = DataObj.problem;
         for (int i = 0; i < problem1.Count; i++)
         {
