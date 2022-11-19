@@ -52,7 +52,7 @@ public class Pattern_22 : GeneralTest
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_currentJsonText.text);
-        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_6");
+        JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_22");
         Pattern_6Obj = jo.ToObject<Data_22>();
         transform.GetChild(0).GetComponent<TEXDraw>().text = Pattern_6Obj.problem[0];
     }
