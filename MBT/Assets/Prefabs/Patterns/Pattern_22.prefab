@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2407683841632806281}
   - component: {fileID: 2407683841632806280}
   - component: {fileID: 2407683841632806279}
-  - component: {fileID: 2407683841632806278}
+  - component: {fileID: 7791451844267958239}
   m_Layer: 5
   m_Name: Button0
   m_TagString: Untagged
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683841632806278}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 7791451844267958239}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -135,19 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683841632806278
+--- !u!114 &7791451844267958239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,11 +144,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683841632806276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683841663027600
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +161,7 @@ GameObject:
   - component: {fileID: 2407683841663027604}
   - component: {fileID: 2407683841663027603}
   - component: {fileID: 2407683841663027602}
-  - component: {fileID: 2407683841663027605}
+  - component: {fileID: 5801185449224301120}
   m_Layer: 5
   m_Name: Button7
   m_TagString: Untagged
@@ -284,8 +272,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683841663027605}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 5801185449224301120}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -296,19 +284,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683841663027605
+--- !u!114 &5801185449224301120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,11 +293,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683841663027600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683841727641195
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +310,7 @@ GameObject:
   - component: {fileID: 2407683841727641199}
   - component: {fileID: 2407683841727641198}
   - component: {fileID: 2407683841727641197}
-  - component: {fileID: 2407683841727641168}
+  - component: {fileID: 5088946045054225422}
   m_Layer: 5
   m_Name: Button9
   m_TagString: Untagged
@@ -445,8 +421,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683841727641168}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 5088946045054225422}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -457,19 +433,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683841727641168
+--- !u!114 &5088946045054225422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -478,11 +442,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683841727641195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683841765778380
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +732,7 @@ GameObject:
   - component: {fileID: 2407683841890934423}
   - component: {fileID: 2407683841890934422}
   - component: {fileID: 2407683841890934421}
-  - component: {fileID: 2407683841890934424}
+  - component: {fileID: 8075695885294031602}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -879,8 +843,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683841890934424}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 8075695885294031602}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -891,19 +855,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683841890934424
+--- !u!114 &8075695885294031602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -912,11 +864,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683841890934419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842030346373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1038,7 @@ GameObject:
   - component: {fileID: 2407683842223629640}
   - component: {fileID: 2407683842223629639}
   - component: {fileID: 2407683842223629638}
-  - component: {fileID: 2407683842223629637}
+  - component: {fileID: 5475618425467261191}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -1197,8 +1149,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842223629637}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 5475618425467261191}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -1209,19 +1161,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842223629637
+--- !u!114 &5475618425467261191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1230,11 +1170,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842223629635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842315538329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1268,7 @@ GameObject:
   - component: {fileID: 2407683842330748318}
   - component: {fileID: 2407683842330748317}
   - component: {fileID: 2407683842330748316}
-  - component: {fileID: 2407683842330748319}
+  - component: {fileID: 3396027072173733550}
   m_Layer: 5
   m_Name: Button6
   m_TagString: Untagged
@@ -1439,8 +1379,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842330748319}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 3396027072173733550}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -1451,19 +1391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842330748319
+--- !u!114 &3396027072173733550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1472,11 +1400,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842330748314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842515876292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1417,7 @@ GameObject:
   - component: {fileID: 2407683842515876296}
   - component: {fileID: 2407683842515876295}
   - component: {fileID: 2407683842515876294}
-  - component: {fileID: 2407683842515876297}
+  - component: {fileID: 4956187037893145368}
   m_Layer: 5
   m_Name: Button4
   m_TagString: Untagged
@@ -1600,8 +1528,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842515876297}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 4956187037893145368}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -1612,19 +1540,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842515876297
+--- !u!114 &4956187037893145368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1633,11 +1549,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842515876292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842602545370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,7 +1566,7 @@ GameObject:
   - component: {fileID: 2407683842602545374}
   - component: {fileID: 2407683842602545373}
   - component: {fileID: 2407683842602545372}
-  - component: {fileID: 2407683842602545375}
+  - component: {fileID: 9180416955798238920}
   m_Layer: 5
   m_Name: Button5
   m_TagString: Untagged
@@ -1761,8 +1677,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842602545375}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 9180416955798238920}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -1773,19 +1689,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842602545375
+--- !u!114 &9180416955798238920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1794,11 +1698,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842602545370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842767628184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,7 +1796,7 @@ GameObject:
   - component: {fileID: 2407683842785544072}
   - component: {fileID: 2407683842785544071}
   - component: {fileID: 2407683842785544070}
-  - component: {fileID: 2407683842785544073}
+  - component: {fileID: 4525618241503628193}
   m_Layer: 5
   m_Name: Button8
   m_TagString: Untagged
@@ -2003,8 +1907,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842785544073}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 4525618241503628193}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -2015,19 +1919,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842785544073
+--- !u!114 &4525618241503628193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2036,11 +1928,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842785544068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842793564101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2256,7 @@ GameObject:
   - component: {fileID: 2407683842922858585}
   - component: {fileID: 2407683842922858584}
   - component: {fileID: 2407683842922858583}
-  - component: {fileID: 2407683842922858586}
+  - component: {fileID: 880756782397364309}
   m_Layer: 5
   m_Name: Button 11
   m_TagString: Untagged
@@ -2475,8 +2367,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842922858586}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 880756782397364309}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -2487,19 +2379,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842922858586
+--- !u!114 &880756782397364309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2508,11 +2388,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842922858581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842933346915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2405,7 @@ GameObject:
   - component: {fileID: 2407683842933346920}
   - component: {fileID: 2407683842933346919}
   - component: {fileID: 2407683842933346918}
-  - component: {fileID: 2407683842933346917}
+  - component: {fileID: 983060469304653701}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
@@ -2636,8 +2516,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683842933346917}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 983060469304653701}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -2648,19 +2528,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683842933346917
+--- !u!114 &983060469304653701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2669,11 +2537,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683842933346915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683842981858105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,7 +2716,7 @@ GameObject:
   - component: {fileID: 2407683843139145818}
   - component: {fileID: 2407683843139145817}
   - component: {fileID: 2407683843139145816}
-  - component: {fileID: 2407683843139145819}
+  - component: {fileID: 9212591830918969388}
   m_Layer: 5
   m_Name: Button10
   m_TagString: Untagged
@@ -2959,8 +2827,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2407683843139145819}
-        m_TargetAssemblyTypeName: P6_Button, Assembly-CSharp
+      - m_Target: {fileID: 9212591830918969388}
+        m_TargetAssemblyTypeName: P22_Button, Assembly-CSharp
         m_MethodName: InputAnswer
         m_Mode: 1
         m_Arguments:
@@ -2971,19 +2839,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pattern_6, Assembly-CSharp
-        m_MethodName: Result
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2407683843139145819
+--- !u!114 &9212591830918969388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2992,11 +2848,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2407683843139145814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 874e19d3e6be49d42b6ffa235dbfdb81, type: 3}
+  m_Script: {fileID: 11500000, guid: 9195bc070c1bf69449606a5443ce6c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: {fileID: 2407683843337617212}
-  Pattern6: {fileID: 0}
+  Pattern22: {fileID: 6003580059548926010}
 --- !u!1 &2407683843165425119
 GameObject:
   m_ObjectHideFlags: 0
