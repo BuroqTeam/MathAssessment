@@ -13,6 +13,9 @@ public class Pattern_26 : GeneralTest
     public SpriteCollectionSO SpriteCollectionSO;
     public List<GameObject> ComparisonObjects;
 
+    public bool CurrentAnswerStatus;
+    public int correctCount;
+
     public int totalFullAns, totalCorrectAns;
 
     private TextAsset _currentJsonText;
@@ -72,6 +75,7 @@ public class Pattern_26 : GeneralTest
             obj.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = _spriteImage;
             obj.transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite = _spriteImage1;
             ComparisonObjects.Add(obj);
+            Debug.Log(obj.transform.GetChild(0).GetComponent<DropDownP26>().StrList.Count);
         }
 
     }
@@ -80,43 +84,23 @@ public class Pattern_26 : GeneralTest
     {
         List<bool> currentList = new();
         currentList = ES3.Load<List<bool>>("ResultList");
-
-        int fullDropDowns = 0;
-        for (int i = 0; i < ComparisonObjects.Count; i++)
-        {
-            string currentAnswerStr = ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().CurrentAnswer;
-            Debug.Log(currentAnswerStr);
-            if ((currentAnswerStr != ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().StrList[0]) && currentAnswerStr != "")
-            {
-                fullDropDowns++;
-            }
-            else
-            {
-                ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().DropDownNonActive();
-            }
-        }
-
-        Debug.Log(fullDropDowns);
-        if (fullDropDowns > 0)
+        if (CurrentAnswerStatus)
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
-            GetComponent<Pattern>().IsEdited = true;
-            TestManager.Instance.CheckAllIsDone();
+            Debug.Log("true");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            GetComponent<Pattern>().IsEdited = false;
-            TestManager.Instance.CheckAllIsDone();
+            Debug.Log("false");
         }
         ES3.Save("ResultList", currentList);
     }
 
-    public bool CurrentAnswerStatus;
-    public int correctCount;
     public void CheckAllAnswers()
     {
-        int n = Pattern_26Obj.options.Count;
+        PatternButtonBlue();
+        int n = ComparisonObjects.Count;
         totalFullAns = 0;
         totalCorrectAns = 0;
 
@@ -153,27 +137,28 @@ public class Pattern_26 : GeneralTest
         }
     }
 
-    //void PatternButtonBlue()        // Pattern scriptidagi isEdited ni true yoki false qilib beruvchi metod.
-    //{
-    //    int fullDropDowns = 0;
-    //    for (int i = 0; i < ComparisonObjects.Count; i++)
-    //    {
-    //        string currentAnswerStr = ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().CurrentAnswer;
-    //        if (currentAnswerStr != ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().StrList[0])
-    //            fullDropDowns++;
-    //    }
-
-    //    if (fullDropDowns > 0)
-    //    {
-    //        GetComponent<Pattern>().IsEdited = true;
-    //        TestManager.Instance.CheckAllIsDone();
-    //    }
-    //    else
-    //    {
-    //        GetComponent<Pattern>().IsEdited = false;
-    //        TestManager.Instance.CheckAllIsDone();
-    //    }
-    //}
+    public void PatternButtonBlue()        // Pattern scriptidagi isEdited ni true yoki false qilib beruvchi metod.
+    {
+        int fullDropDowns = 0;
+        for (int i = 0; i < ComparisonObjects.Count; i++)
+        {
+            string currentAnswerStr = ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().CurrentAnswer;
+            Debug.Log(ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().StrList[0]);
+            if (currentAnswerStr != ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().StrList[0])
+                fullDropDowns++;
+            else ComparisonObjects[i].transform.GetChild(0).GetComponent<DropDownP26>().DropDownNonActive();
+        }
+        if (fullDropDowns > 0)
+        {
+            GetComponent<Pattern>().IsEdited = true;
+            TestManager.Instance.CheckAllIsDone();
+        }
+        else
+        {
+            GetComponent<Pattern>().IsEdited = false;
+            TestManager.Instance.CheckAllIsDone();
+        }
+    }
 
     public static Sprite GetDesiredSprite(string spriteAddress, SpriteCollectionSO spriteCollectionSO)
     {

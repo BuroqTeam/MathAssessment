@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7763912309295517948}
   - component: {fileID: 7763912309295517951}
   - component: {fileID: 7763912309295517949}
+  - component: {fileID: -6623882670681350818}
+  - component: {fileID: -6380891766010263490}
   m_Layer: 5
   m_Name: Pattern_26
   m_TagString: Untagged
@@ -80,9 +82,9 @@ MonoBehaviour:
   IsEdited: 0
   PatternID: 26
   IsAvailable: 1
-  Event: {fileID: 0}
+  Event: {fileID: 11400000, guid: 2bd70c2f39b47324d84ca65e245a3e05, type: 2}
   QuestionNumber: 0
-  Json: {fileID: 0}
+  Json: {fileID: 4900000, guid: ea73e83cfd900b841b798035a5b4eab6, type: 3}
 --- !u!114 &7763912309295517949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +98,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionText: {fileID: 0}
-  FinishEvent: {fileID: 11400000, guid: 2bd70c2f39b47324d84ca65e245a3e05, type: 2}
+  FinishEvent: {fileID: 11400000, guid: c92027a0c90ee85489503368b6e88187, type: 2}
   P26_Prefab: {fileID: 7327156044438125981, guid: 510ee9cdbc7d9be4ba9f06290a43b25f, type: 3}
   SpriteCollectionSO: {fileID: 11400000, guid: 98256845bddd16c4981ce9dbd5627ca9, type: 2}
+  ComparisonObjects: []
+  CurrentAnswerStatus: 0
+  correctCount: 0
+  totalFullAns: 0
+  totalCorrectAns: 0
+--- !u!114 &-6623882670681350818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763912309295517827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &-6380891766010263490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763912309295517827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd3980ad14540540a4baef7afe7ffa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2bd70c2f39b47324d84ca65e245a3e05, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7763912309295517949}
+        m_TargetAssemblyTypeName: Pattern_26, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
