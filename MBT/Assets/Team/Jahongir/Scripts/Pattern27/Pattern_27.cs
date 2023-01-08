@@ -95,12 +95,14 @@ public class Pattern_27 : GeneralTest
                 Buttons_27[i].GetComponent<Image>().color = new Color32(255, 255, 255, 250);
             }
         }
-        TestManager.Instance.CheckAllIsDone();
         GetComponent<Pattern>().IsEdited = true;
+        TestManager.Instance.CheckAllIsDone();
     }
 
     public void Check()
     {
+        TestManager.Instance.CheckAllIsDone();
+        GetComponent<Pattern>().IsEdited = true;
         int a = 0;
         for (int i = 0; i < Buttons_27.Count; i++)
         {
