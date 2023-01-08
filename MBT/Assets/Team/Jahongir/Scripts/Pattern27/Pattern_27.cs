@@ -23,6 +23,7 @@ public class Pattern_27 : GeneralTest
     private Sprite _spriteImage;
 
     public SpriteCollectionSO SpriteCollectionSO;
+
     
     bool _isTrue = true;
 
@@ -114,13 +115,10 @@ public class Pattern_27 : GeneralTest
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = true;
             GetComponent<Pattern>().IsEdited = true;
-            Debug.Log("truee");
         }
         else
         {
             currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            Debug.Log("falsee");
-            Debug.Log(a);
         }
         ES3.Save("ResultList", currentList);
     }
