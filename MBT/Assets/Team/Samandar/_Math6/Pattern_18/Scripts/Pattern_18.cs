@@ -59,6 +59,8 @@ public class Pattern_18 : GeneralTest
             Debug.Log("Wrong");
         }
         ES3.Save("ResultList", currentList);
+
+        TestManager.Instance.CheckAllIsDone();
     }
     public void ReadFromJson()
     {
