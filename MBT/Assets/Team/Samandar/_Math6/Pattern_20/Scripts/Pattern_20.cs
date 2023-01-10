@@ -41,6 +41,8 @@ public class Pattern_20 : GeneralTest
     public Data_20 Data20 = new();
     public float percentage;
     public List<string> _pointData;
+
+
     private void Awake()
     {
         CellParent.GetComponent<CellParent_20>().Pattern_20 = this;
@@ -49,12 +51,15 @@ public class Pattern_20 : GeneralTest
         Points.GetComponent<Points>().Pattern_20 = this;        
         Instance = this;
     }
+
+
     public void ReadFromJson()
     {
         var jsonObj = JObject.Parse(_jsonText.text);
         JObject jo = Mbt.LoadJsonPath(jsonObj, "Pattern_20");
         Data20 = jo.ToObject<Data_20>();
     }
+
     private void OnEnable()
     {
         if (_istrue)
@@ -72,8 +77,9 @@ public class Pattern_20 : GeneralTest
             PositionOut[i].SetActive(true);
         }
         DisplayQuestion(Data20.title);
-
     }
+
+
     void Start()
     {
         CellPosition();
@@ -82,12 +88,14 @@ public class Pattern_20 : GeneralTest
         //PointData();
         ReDotPositions();
         RePositions();
+
         for (int i = 0; i < PointList.Count; i++)
         {
             PointList[i].transform.GetComponent<PointsPattern_20>().Pattern_20 = this;
         }
         Main();
     }
+
     void Main()
     {
         for (int i = 0; i < Data20.options.Count; i++)
@@ -110,6 +118,7 @@ public class Pattern_20 : GeneralTest
             _pointData.Add(likeName);
         }        
     }
+
     void InstantiatePrefabs()
     {
         GameObject posX = Instantiate(PositionX);
@@ -117,6 +126,7 @@ public class Pattern_20 : GeneralTest
         GameObject obj = Instantiate(CellParent);
         CanvasOut.Add(obj);
     }
+
     void ReDotPositions()
     {        
         GameObject dotposition = Instantiate(PointPositions);
@@ -126,6 +136,7 @@ public class Pattern_20 : GeneralTest
         pos = new Vector3(pos.x - (10 * offset), transform.position.y, 0);
         dotposition.transform.position = pos;
     }
+
     void RePositions()
     {
         GameObject dot = Instantiate(Points);
@@ -135,11 +146,13 @@ public class Pattern_20 : GeneralTest
         pos = new Vector3(pos.x - (50 * offset), transform.position.y, 0);
         dot.transform.position = pos;        
     }   
+
     public void XYPosition()
     {
         X.transform.position = new Vector3(CellObj[49].transform.position.x + CellObj[49].GetComponent<Transform>().localScale.x * 1.2f, CellObj[49].transform.position.y * 1.1f, 0);
         Y.transform.position = new Vector3(CellObj[94].transform.position.x, CellObj[94].transform.position.y + CellObj[94].GetComponent<Transform>().localScale.y, 0);
     }
+
     public void PosY()
     {
         float pos1 = PenTool.transform.position.y + 6 * percentage;
@@ -149,6 +162,7 @@ public class Pattern_20 : GeneralTest
             PositionOY.Add(pos1);
         }
     }
+
     public void Active()
     {
         if (_click)
@@ -177,16 +191,19 @@ public class Pattern_20 : GeneralTest
             }
         }
     }
+
     public override void DisplayQuestion(string questionStr)
     {
         base.DisplayQuestion(questionStr);
     }
+
     void CellPosition()
     {
         GameObject obj = Instantiate(Koordinata);
         obj.transform.position = new Vector3(PenTool.transform.position.x, PenTool.transform.position.y, -1);
         CanvasOut.Add(obj);
     }    
+
     public void Check()
     {
         List<bool> currentList = new();
@@ -207,6 +224,7 @@ public class Pattern_20 : GeneralTest
         TestManager.Instance.CheckAllIsDone();
     }
 }
+
 [SerializeField]
 public class Data_20
 {
