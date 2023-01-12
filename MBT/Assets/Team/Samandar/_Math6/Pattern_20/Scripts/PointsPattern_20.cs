@@ -11,7 +11,7 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
     public string NumberY;
     public string NumberX;
     public string Point;
-    private Vector3 LastPosition;
+    public Vector3 LastPosition;
     
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -25,8 +25,9 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+        //Numbers();
         PositionCheck();
-        BackToLastPosition();        
+        BackToLastPosition();
         Numbers();
         Pattern_20.Check();
     }
@@ -40,6 +41,7 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
             Pattern_20.NumbersList.Add(str);
         }     
     }
+    
     public void GetData()
     {
         NumberX = null;
@@ -145,8 +147,9 @@ public class PointsPattern_20 : MonoBehaviour, IDragHandler, IBeginDragHandler, 
                 }
             }
         }
-        Point = NumberX + "," + NumberY;        
+        Point = NumberX + ", " + NumberY;        
     }
+    
     void BackToLastPosition()
     {
         if (gameObject.transform.position.x < Pos_1.transform.GetComponent<CellPattern_20>().points[3].x)

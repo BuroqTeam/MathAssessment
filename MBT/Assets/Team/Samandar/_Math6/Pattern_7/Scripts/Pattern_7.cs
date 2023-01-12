@@ -414,13 +414,11 @@ public class Pattern_7 : GeneralTest
                 }
                 else if (DotsList[0].transform.position.x > DotsList[2].transform.position.x && DotsList[1].transform.position.x < DotsList[3].transform.position.x && DotsList[0].transform.position.y < DotsList[3].transform.position.y && DotsList[2].transform.position.y < DotsList[1].transform.position.y)
                 {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = false;
-                    
+                    currentList[GetComponent<Pattern>().QuestionNumber] = false;                    
                 }
                 else
                 {
-                    currentList[GetComponent<Pattern>().QuestionNumber] = true;
-                    
+                    currentList[GetComponent<Pattern>().QuestionNumber] = true;                    
                 }                
             }
             else
@@ -431,8 +429,7 @@ public class Pattern_7 : GeneralTest
         }
         else
         {
-            currentList[GetComponent<Pattern>().QuestionNumber] = false;
-            
+            currentList[GetComponent<Pattern>().QuestionNumber] = false;            
         }
         ES3.Save("ResultList", currentList);
         ES3.Save<bool>("Pattern_7_Check", true);
