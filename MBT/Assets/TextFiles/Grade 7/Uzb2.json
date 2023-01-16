@@ -1,6 +1,6 @@
 {
     "meta": {
-        "date": "2023-01-16 13:28:16",
+        "date": "2023-01-12 11:22:40",
         "grade": 7,
         "subject": "math",
         "language": "uz"
@@ -5911,8 +5911,8 @@
                             "[b]\\(- 2\\)",
                             "[c]\\(5x + 49 = x + 1\\)",
                             "[c]\\(- 12\\)",
-                            "[d]\\(8x = - 32\\)",
-                            "[d]\\(- 4\\)"
+                            "[d]\\(8x = - 2\\)",
+                            "[d]\\(- \\frac{1}{4}\\)"
                         ]
                     }
                 },
@@ -7132,8 +7132,8 @@
                             "[b]\\(x = 7\\)",
                             "[c]\\(y = 7x - 21\\)",
                             "[c]\\(x = 3\\)",
-                            "[d]\\(y = 5x + 25\\)",
-                            "[d]\\(x = - 5\\)"
+                            "[d]\\(y = 5x - 1\\)",
+                            "[d]\\(x = \\frac{1}{5}\\)"
                         ]
                     }
                 },
@@ -8113,8 +8113,8 @@
                             "\\(\\left\\{\\nfrac{6x - 4y = 10}{y + 4x = 3}\\right\\)",
                             "\\(\\left\\{\\nfrac{x + y = 2}{3x + 3y = 6}\\right\\)",
                             "\\(\\left\\{\\nfrac{y = x - 3}{x - y = 3}\\right\\)",
-                            "\\(\\left\\{\\nfrac{3y - 12 = -3x}{x + y = 4}\\right\\)",
-                            "\\(\\left\\{\\nfrac{x + y = 45}{2x + 2y = 90}\\right\\)"
+                            "\\(\\left\\{\\nfrac{y - 4 = x}{x + y = 4}\\right\\)",
+                            "\\(\\left\\{\\nfrac{x + y = 45}{x + y = 45}\\right\\)"
                         ],
                         "solution": [
                             [
@@ -8128,7 +8128,7 @@
                                 "Yechimi cheksiz ko\u02bbp",
                                 "\\(\\left\\{\\nfrac{x + y = 2}{3x + 3y = 6}\\right\\)",
                                 "\\(\\left\\{\\nfrac{y = x - 3}{x - y = 3}\\right\\)",
-                                "\\(\\left\\{\\nfrac{3y - 12 = -3x}{x + y = 4}\\right\\)",
+                                "\\(\\left\\{\\nfrac{y - 4 = x}{x + y = 4}\\right\\)",
                                 "\\(\\left\\{\\nfrac{x + y = 45}{2x + 2y = 90}\\right\\)"
                             ]
                         ]
@@ -8242,11 +8242,11 @@
                             "\\(\\left\\{\\nfrac{-x - 2y = 7}{2x + 4y = 2}\\right\\)",
                             "\\(\\left\\{\\nfrac{x + y = 3}{y + x = 7}\\right\\)",
                             "\\(\\left\\{\\nfrac{7x + 14y = 7}{x + 2y = 3}\\right\\)",
-                            "\\(\\left\\{\\nfrac{4x + y = 9}{4x + y = 2}\\right\\)",
+                            "\\(\\left\\{\\nfrac{4x + y = 9}{x + \\frac{1}{4}y = 6}\\right\\)",
                             "\\(\\left\\{\\nfrac{-x - 2y = 1}{2x + 4y = -2}\\right\\)",
                             "\\(\\left\\{\\nfrac{x + y = 7}{y + x = 7}\\right\\)",
                             "\\(\\left\\{\\nfrac{7x + 14y = 7}{x + 2y = 1}\\right\\)",
-                            "\\(\\left\\{\\nfrac{4x + y = 8}{8x + 2y = 16}\\right\\)"
+                            "\\(\\left\\{\\nfrac{4x + y = 8}{x + \\frac{1}{4}y = 2}\\right\\)"
                         ],
                         "solution": [
                             [
@@ -8254,14 +8254,14 @@
                                 "\\(\\left\\{\\nfrac{-x - 2y = 7}{2x + 4y = 2}\\right\\)",
                                 "\\(\\left\\{\\nfrac{x + y = 3}{y + x = 7}\\right\\)",
                                 "\\(\\left\\{\\nfrac{7x + 14y = 7}{x + 2y = 3}\\right\\)",
-                                "\\(\\left\\{\\nfrac{4x + y = 9}{4x + y = 2}\\right\\)"
+                                "\\(\\left\\{\\nfrac{4x + y = 9}{x + \\frac{1}{4}y = 6}\\right\\)"
                             ],
                             [
                                 "Yechimi cheksiz ko\u02bbp",
                                 "\\(\\left\\{\\nfrac{-x - 2y = 1}{2x + 4y = -2}\\right\\)",
                                 "\\(\\left\\{\\nfrac{x + y = 7}{y + x = 7}\\right\\)",
                                 "\\(\\left\\{\\nfrac{7x + 14y = 7}{x + 2y = 1}\\right\\)",
-                                "\\(\\left\\{\\nfrac{4x + y = 8}{8x + 2y = 16}\\right\\)"
+                                "\\(\\left\\{\\nfrac{4x + y = 8}{x + \\frac{1}{4}y = 2}\\right\\)"
                             ]
                         ]
                     }
@@ -8581,9 +8581,10 @@
                         "options": [
                             "[*]\\(-2x - y = 3\\)",
                             "[*]\\(4x + 2y = 5\\)",
-                            "[*]\\(8x + 4y = 2\\)",
+                            "[*]\\(8x - 4y = 2\\)",
                             "\\(2x + 2y = 3\\)",
-                            "\\(4x - y = 3\\)"
+                            "\\(4x - y = 3\\)",
+                            "\\(2x - y = 7\\)"
                         ]
                     }
                 },
@@ -8672,7 +8673,7 @@
                             "[*]\\(6x - 2y = 2\\)",
                             "[*]\\(-9x + 3y = 7\\)",
                             "\\(-3x - y = 3\\)",
-                            "[*]\\(-6x + 2y = 6\\)",
+                            "\\(-6x + 2y = 6\\)",
                             "\\(x - y = 4\\)"
                         ]
                     }
@@ -9036,7 +9037,7 @@
                     "id": "math-uz-7-6-26-17",
                     "pattern": 17,
                     "question": {
-                        "title": "Tenglamalar sistemasini yeching: \\(\\left\\{\\nfrac{y = x - 3}{x + y = 7}\\right\\)",
+                        "title": "Tenglamalar sistemasini yeching: \\(\\left\\{\\nfrac{x = 8y - 7}{x + y = 7}\\right\\)",
                         "options": [
                             "[*](5; 2)",
                             "(2; 5)",
@@ -9101,7 +9102,7 @@
                     "id": "math-uz-7-6-11-18",
                     "pattern": 18,
                     "question": {
-                        "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasi qaysi chorakda joylashganligini belgilang: \\(y = 5 - x\\) va \\(y = 2x - 4\\)",
+                        "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(y = 5 - x\\) va \\(y = 2x - 4\\)",
                         "options": [
                             "1"
                         ]
@@ -9111,7 +9112,7 @@
                     "id": "math-uz-7-6-12-18",
                     "pattern": 18,
                     "question": {
-                        "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini qaysi chorakda joylashganligini belgilang: \\(x - y = 3\\) va \\(3x + y = 1\\)",
+                        "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(x - y = 3\\) va \\(3x + y = 1\\)",
                         "options": [
                             "4"
                         ]
@@ -9163,7 +9164,7 @@
                     "question": {
                         "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(y - x = 3\\) va \\(y - 2x = 1\\)",
                         "options": [
-                            "1"
+                            "2"
                         ]
                     }
                 },
@@ -9173,7 +9174,7 @@
                     "question": {
                         "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(y = -2x + 3\\) va \\(x = y - 6\\)",
                         "options": [
-                            "2"
+                            "4"
                         ]
                     }
                 },
@@ -9233,7 +9234,7 @@
                     "question": {
                         "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(x - y = 1\\) va \\(3x + y = 7\\)",
                         "options": [
-                            "2,1"
+                            "3,2"
                         ]
                     }
                 },
@@ -9273,7 +9274,7 @@
                     "question": {
                         "title": "Quyidagi ikkita to\u02bbg\u02bbri chiziqning kesishish nuqtasini belgilang: \\(y = -2x + 3\\) va \\(x = y - 6\\)",
                         "options": [
-                            "-1,5"
+                            "3,-3"
                         ]
                     }
                 },
@@ -9301,7 +9302,7 @@
                     "id": "math-uz-7-6-1-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(x - y = 3\\) va \\(3x + y = 1\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(x - y = 3\\) va \\(3x + y = 1\\)",
                         "options": [
                             "1,-2"
                         ]
@@ -9311,7 +9312,7 @@
                     "id": "math-uz-7-6-2-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(x - y = 1\\) va \\(3x + y = 7\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(x - y = 1\\) va \\(3x + y = 7\\)",
                         "options": [
                             "2,1"
                         ]
@@ -9321,7 +9322,7 @@
                     "id": "math-uz-7-6-3-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(2x - y = 3\\) va \\(2x + y = 1\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(2x - y = 3\\) va \\(2x + y = 1\\)",
                         "options": [
                             "1,-1"
                         ]
@@ -9331,7 +9332,7 @@
                     "id": "math-uz-7-6-4-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(y = x\\)  va \\(y + x = 4\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(y = x\\)  va \\(y + x = 4\\)",
                         "options": [
                             "2,2"
                         ]
@@ -9341,7 +9342,7 @@
                     "id": "math-uz-7-6-5-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(2x + y = 9\\) va \\(x + 2y = 3\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(2x + y = 9\\) va \\(x + 2y = 3\\)",
                         "options": [
                             "5,-1"
                         ]
@@ -9351,7 +9352,7 @@
                     "id": "math-uz-7-6-6-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(5x + 6y = 17\\) va \\(10x - 6y = -2\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(5x + 6y = 17\\) va \\(10x - 6y = -2\\)",
                         "options": [
                             "1,2"
                         ]
@@ -9361,7 +9362,7 @@
                     "id": "math-uz-7-6-7-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(x + y = 7\\) va \\(3x - y = 13\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(x + y = 7\\) va \\(3x - y = 13\\)",
                         "options": [
                             "5,2"
                         ]
@@ -9371,7 +9372,7 @@
                     "id": "math-uz-7-6-8-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(2x + 4y = 14\\) va \\(3x - 4y =1\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(2x + 4y = 14\\) va \\(3x - 4y =1\\)",
                         "options": [
                             "3,2"
                         ]
@@ -9381,7 +9382,7 @@
                     "id": "math-uz-7-6-9-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang:\\(-x + 3y = 6\\) va \\(4x + 3y = -9\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping:\\(-x + 3y = 6\\) va \\(4x + 3y = -9\\)",
                         "options": [
                             "-3,1"
                         ]
@@ -9391,7 +9392,7 @@
                     "id": "math-uz-7-6-10-25",
                     "pattern": 25,
                     "question": {
-                        "title": "Berilgan funksiyalarning kesishish nuqtasini belgilang: \\(x + y = 1\\) va \\(x - y = 7\\)",
+                        "title": "Berilgan funksiyalarning kesishish nuqtasini toping: \\(x + y = 1\\) va \\(x - y = 7\\)",
                         "options": [
                             "4,-3"
                         ]
@@ -9475,7 +9476,7 @@
                     "question": {
                         "title": "Bir savatda 20 ta, ikkinchisida esa 13 ta olma bor. Savatlardan bitta olmani necha xil usulda tanlash mumkin?",
                         "options": [
-                            "[*]33",
+                            "[*]23",
                             "25",
                             "20",
                             "21"
@@ -9566,7 +9567,7 @@
                         "title": " Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan raqamni joylashtiring",
                         "problem": [
                             "3! - 2!",
-                            "3!",
+                            "3 \u00b7 2!",
                             "4!",
                             "5! - 4!"
                         ],
@@ -9574,10 +9575,10 @@
                             [
                                 "3! - 2!",
                                 "\u00b7",
-                                "3!"
+                                "3! + 2!"
                             ],
                             [
-                                "3!",
+                                "3! + 2!",
                                 "\u00b7",
                                 "3! - 2!"
                             ]
@@ -9597,13 +9598,13 @@
                         ],
                         "solution": [
                             [
-                                "2! + 2!",
+                                "2! - 2!",
                                 "\u00b7",
                                 "2! + 3!"
                             ],
                             [
                                 "2! + 3!",
-                                "\u00b72! + 2!\""
+                                "\u00b72! - 2!\""
                             ]
                         ]
                     }
@@ -9614,21 +9615,21 @@
                     "question": {
                         "title": " Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan raqamni joylashtiring",
                         "problem": [
-                            "5! - 2!",
+                            "5! - 5!",
                             "1!",
                             "3! - 1!",
                             "3!"
                         ],
                         "solution": [
                             [
-                                "3! - 1!",
+                                "5! - 5!",
                                 "\u00b7",
                                 "1!"
                             ],
                             [
                                 "1!",
                                 "\u00b7",
-                                "3! - 1!"
+                                "5! - 5!"
                             ]
                         ]
                     }
@@ -9639,21 +9640,21 @@
                     "question": {
                         "title": " Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan raqamni joylashtiring",
                         "problem": [
-                            "3! - 2!",
+                            "4! - 4!",
                             "3! + 1!",
                             "4!",
                             "6! - 5!"
                         ],
                         "solution": [
                             [
-                                "3! - 2!",
+                                "4! - 4!",
                                 "\u00b7",
                                 "3! + 1!"
                             ],
                             [
                                 "3! + 1!",
                                 "\u00b7",
-                                "3! - 2!"
+                                "4! - 4!"
                             ]
                         ]
                     }
@@ -9664,20 +9665,20 @@
                     "question": {
                         "title": " Eng kichik sonni hosil qilish uchun har bir bo\u2018sh katakka bittadan raqamni joylashtiring",
                         "problem": [
-                            "5!",
-                            "7!",
-                            "3!",
-                            "6!"
+                            "4! - 4!",
+                            "1! + 1!",
+                            "3! - 2!",
+                            "3!"
                         ],
                         "solution": [
                             [
-                                "3!",
+                                "4! - 4!",
                                 "\u00b7",
-                                "5!"
+                                "1! + 1!"
                             ],
                             [
-                                "5!",
-                                "\u00b73!\""
+                                "1! + 1!",
+                                "\u00b74! - 4!\""
                             ]
                         ]
                     }
@@ -10445,7 +10446,7 @@
                             "[a]20",
                             "[b]C_{23}^3",
                             "[b]1771",
-                            "[c]C_{26}^{24}",
+                            "[c]C_{26}^24",
                             "[c]325",
                             "[d]C_{21}^2",
                             "[d]210"
@@ -10663,7 +10664,7 @@
                     "id": "math-uz-7-7-35-17",
                     "pattern": 17,
                     "question": {
-                        "title": "Hisoblang: C_{13}^{11}",
+                        "title": "Hisoblang: C_{13}^11",
                         "options": [
                             "[*]78",
                             "72",
@@ -10704,9 +10705,9 @@
                     "question": {
                         "title": "Hisoblang: C_8^5",
                         "options": [
-                            "72",
+                            "[*]72",
                             "91",
-                            "[*]56",
+                            "56",
                             "64"
                         ]
                     }
@@ -10860,10 +10861,10 @@
                     "question": {
                         "title": "Hisoblang",
                         "problem": [
-                            "5! + 4!"
+                            "(7! - 6!) : 5! - 3! \u00b7 3!"
                         ],
                         "solution": [
-                            "144"
+                            "0"
                         ]
                     }
                 },
