@@ -66,13 +66,13 @@ public class Pattern_24 : GeneralTest
 
     public void Active()
     {
-        Debug.Log("Active()");
+        //Debug.Log("Active()");
         if (_click)
         {
             ES3.Save<bool>("Pattern_24_Check", true);
             GetComponent<Pattern>().IsEdited = true;
             TestManager.Instance.CheckAllIsDone();
-            Debug.Log(" + Pattern24 ");
+            //Debug.Log(" + Pattern24 ");
         }
     }
     public void ReadFromJson()
