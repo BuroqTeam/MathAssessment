@@ -2,7 +2,6 @@ using MBT.Extension;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using MBT.Extension;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,18 +31,18 @@ public class Pattern_27 : GeneralTest
     {
         if (_isTrue)
         {
-            Debug.Log("11");
+            //Debug.Log("11");
             _isTrue = false;
             _currentJsonText = GetComponent<Pattern>().Json;
             
             ReadFromJson();
         }
-        Debug.Log(Pattern_27Obj.title);
+        //Debug.Log(Pattern_27Obj.title);
         DisplayQuestion(Pattern_27Obj.title);
     }
     public override void DisplayQuestion(string questionStr)
     {
-        Debug.Log("111");
+        //Debug.Log("111");
         base.DisplayQuestion(questionStr);
     }
 
@@ -67,7 +66,7 @@ public class Pattern_27 : GeneralTest
                 obj.GetComponent<ButtonControl_27>().Answer = true;
                 str.Replace("[*]", "");
             }
-            Debug.Log(str);
+            //Debug.Log(str);
             _spriteImage = GetDesiredSprite(str, SpriteCollectionSO);
             obj.transform.GetChild(0).GetComponent<Image>().sprite = _spriteImage;
             Buttons_27.Add(obj);
