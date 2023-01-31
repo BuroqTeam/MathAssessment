@@ -35,6 +35,7 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        int a = 0;
         for ( int i = 0; i < Pattern13.AnswerPuzles.Count; i++)
         {
             if (Vector2.Distance(transform.GetChild(1).transform.position, Pattern13.AnswerPuzles[i].transform.GetChild(1).transform.position) < 0.7f)
@@ -42,7 +43,14 @@ public class P13_Puzzle1 : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
                 _selectedAnswerId = i;
             }
         }
-        if (_selectedAnswerId != -1)
+        for (int i = 0; i < Pattern13.SelectedPuzles.Count; i++)
+        {
+            if (Pattern13.AnswerPuzles[_selectedAnswerId].GetComponent<P13_Puzzle2>().AnswerId == Pattern13.SelectedPuzles[i].GetComponent<P13_Puzzle1>().AttechedPuzzle.GetComponent<P13_Puzzle2>().AnswerId)
+            {
+                a++;
+            }
+        }
+        if (_selectedAnswerId != -1 && a == 0)
         {
             transform.GetChild(1).transform.position = Pattern13.AnswerPuzles[_selectedAnswerId].transform.GetChild(1).transform.position;
             AttechedPuzzle = Pattern13.AnswerPuzles[_selectedAnswerId];
