@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Main : MonoBehaviour
 {
     public List<Button> SinfButtonGroup = new List<Button>();
-  
 
 
     private void Awake()
