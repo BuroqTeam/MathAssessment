@@ -143,6 +143,149 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.5803922, b: 1, a: 0.5}
   m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
+--- !u!1001 &94557650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 547715198}
+    m_Modifications:
+    - target: {fileID: 4213566648271782822, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_text
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048539, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_Name
+      value: ChapterLoyihaIshi_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048539, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 287.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 324.922
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -169
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1064780340}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoyihaIshi.LoyihaSceneManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LoyihaIshi2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338441876275840052, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: SceneName
+      value: LoyihaIshi2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+--- !u!224 &94557651 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+  m_PrefabInstance: {fileID: 94557650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &94557652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4213566648686048539, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+  m_PrefabInstance: {fileID: 94557650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220587725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1153,7 @@ RectTransform:
   - {fileID: 1614919197}
   - {fileID: 8105678089580505797}
   - {fileID: 1701705894}
+  - {fileID: 94557651}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1110,6 +1254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064780339}
   - component: {fileID: 1064780338}
+  - component: {fileID: 1064780340}
   m_Layer: 0
   m_Name: LoyihaManager
   m_TagString: Untagged
@@ -1132,6 +1277,7 @@ MonoBehaviour:
   ProjectButtons:
   - {fileID: 8105678089580505794}
   - {fileID: 1701705895}
+  - {fileID: 94557652}
   ParentObj: {fileID: 1177075878}
 --- !u!4 &1064780339
 Transform:
@@ -1148,6 +1294,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064780340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064780337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aad903f3cd8529498f0214847211b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168247594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChapterLoyihaIshi_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048539, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1744,6 +1906,30 @@ PrefabInstance:
     - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1064780340}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoyihaIshi.LoyihaSceneManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LoyihaIshi2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6338441876275840052, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: SceneName
@@ -2034,6 +2220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChapterLoyihaIshi_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048539, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2117,6 +2307,30 @@ PrefabInstance:
     - target: {fileID: 4213566648686048540, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1064780340}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoyihaIshi.LoyihaSceneManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LoyihaIshi2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213566648686048541, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6338441876275840052, guid: aaf079a17a79dc247b61343e0e29168a, type: 3}
       propertyPath: SceneName

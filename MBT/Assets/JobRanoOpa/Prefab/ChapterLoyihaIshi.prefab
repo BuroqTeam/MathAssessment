@@ -886,8 +886,6 @@ GameObject:
   - component: {fileID: 4213566648686048543}
   - component: {fileID: 4213566648686048542}
   - component: {fileID: 4213566648686048541}
-  - component: {fileID: 4213566648686048528}
-  - component: {fileID: 6338441876275840052}
   - component: {fileID: 7269350812114990942}
   m_Layer: 5
   m_Name: ChapterLoyihaIshi
@@ -1003,59 +1001,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4213566648686048528}
-        m_TargetAssemblyTypeName: Chapter, Assembly-CSharp
-        m_MethodName: SetPath
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4213566648686048528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4213566648686048539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d19b36fdd2c21547a66ba5b34b2316b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FlowerObj: {fileID: 4213566649095737394}
-  SliderFill: {fileID: 4213566649006781832}
-  ChapterNumberTxt: {fileID: 4213566648271782822}
-  ChapterNameTxt: {fileID: 4213566648920472073}
-  MainObject: {fileID: 0}
---- !u!114 &6338441876275840052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4213566648686048539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be623b1fa7707040badd7b2ff7f4178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Scene:
-    m_AssetGUID: 2cda990e2423bbf4892e6590ba056729
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  CurrentScene:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  SceneName: 
-  Notification: {fileID: 0}
 --- !u!114 &7269350812114990942
 MonoBehaviour:
   m_ObjectHideFlags: 0

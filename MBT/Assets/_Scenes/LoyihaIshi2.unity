@@ -312,6 +312,7 @@ MonoBehaviour:
   - {fileID: 675526160}
   - {fileID: 1910795110}
   - {fileID: 1422571893}
+  _index: 0
 --- !u!1 &42202939
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +994,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 779284175}
   m_Father: {fileID: 1658871448}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1093,7 +1095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89de18f01442df543bb9cedb461d1ae1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50ce29cd83c54a54d890454d443c7483, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5044,6 +5046,82 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &779284174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779284175}
+  - component: {fileID: 779284177}
+  - component: {fileID: 779284176}
+  m_Layer: 5
+  m_Name: Image_Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779284175
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779284174}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 154995624}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &779284176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779284174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6d0f4b919c4beaa409c840ba851b1b55, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &779284177
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779284174}
+  m_CullTransparentMesh: 1
 --- !u!4 &790436080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7368015738926786432, guid: 70bc829ab51c2c64e91ae1ec626711f1, type: 3}
@@ -5061,6 +5139,7 @@ GameObject:
   - component: {fileID: 810776238}
   - component: {fileID: 810776237}
   - component: {fileID: 810776239}
+  - component: {fileID: 810776240}
   m_Layer: 0
   m_Name: SittingBoy
   m_TagString: Untagged
@@ -5195,7 +5274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810776235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fda30fe0ea920ca46b6cbfcfa537dc40, type: 3}
   m_Name: 
@@ -5209,6 +5288,30 @@ MonoBehaviour:
   - {fileID: 2055996666}
   - {fileID: 1508036}
   - {fileID: 2129929248}
+--- !u!114 &810776240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810776235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0989e2b5921b847a6192142d95c7fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cinemaline: {fileID: 1414965605}
+  FirstChair: {fileID: 790436080}
+  LastChair: {fileID: 2129929248}
+  Seats:
+  - {fileID: 790436080}
+  - {fileID: 145079375}
+  - {fileID: 815571333}
+  - {fileID: 1872213174}
+  - {fileID: 2055996666}
+  - {fileID: 1508036}
+  - {fileID: 2129929248}
+  _disVec: {x: 0, y: 0, z: 0}
 --- !u!1001 &815571332
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace LoyihaIshi
 {
@@ -16,5 +17,15 @@ namespace LoyihaIshi
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sceneName"></param>
+        public void LoadSceneByScene(Scene sceneName)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName.ToString());
+        }
+
     }
 }
