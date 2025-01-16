@@ -7,7 +7,7 @@ namespace LoyihaIshi
         public LineRenderer Linerenederer;
         public Transform TetaObject;
         private float xLeft = -6f; // Minimum X value
-        private float xRight = 3f; // Maximum X value
+        private float xRight = 2f; // Maximum X value
         private bool isDragging = false;
         private float offsetX;
 

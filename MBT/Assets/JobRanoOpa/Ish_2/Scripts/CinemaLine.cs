@@ -9,11 +9,17 @@ namespace LoyihaIshi
         public Transform SittingBoy;
         private LineRenderer lineRenderer;
         private Vector3 distanceVec;
+        public Transform TetaObject;
+        Vector2 posOne;
+        Vector2 posTwo;
+        Vector2 posThree;
+        Vector2 posMiddle;
 
         void Start()
         {
             lineRenderer = gameObject.GetComponent<LineRenderer>();
             distanceVec = SittingBoy.position - lineRenderer.GetPosition(1);
+            SetMiddlePos();
         }
 
         public void DrawLine(Vector3 pos)
@@ -23,14 +29,20 @@ namespace LoyihaIshi
             UpdateTetaCornerPos();
         }
 
-        public Transform TetaObject;
+        void SetMiddlePos()
+        {
+            posOne = lineRenderer.GetPosition(0);
+            posThree = lineRenderer.GetPosition(2);
+            posMiddle = (posOne + posThree) / 2;
+            //Debug.Log("posMiddle = " + posMiddle);
+        }
+        
         void UpdateTetaCornerPos()
         {
-            Vector2 posOne = lineRenderer.GetPosition(0);
-            Vector2 posTwo = lineRenderer.GetPosition(0);
-            Vector2 posThree = lineRenderer.GetPosition(0);
-            Vector2 tetaPos = TetaObject.position;
-            TetaObject.position = new Vector3(tetaPos.x, (posTwo.y + (posOne.y + posThree.y) / 2));
+            posTwo = lineRenderer.GetPosition(1);
+            float xPos = posTwo.x + (1f / 4f) * (posMiddle.x - posTwo.x);
+            float yPos = posTwo.y + (1f / 5f) * (posMiddle.y - posTwo.y);
+            TetaObject.position = new Vector2(xPos, yPos);
         }
 
     }

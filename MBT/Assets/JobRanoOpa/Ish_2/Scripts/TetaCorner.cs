@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace LoyihaIshi
 {
+    //Keraksiz script
     public class TetaCorner : MonoBehaviour
     {
         //public LineRenderer Line;
