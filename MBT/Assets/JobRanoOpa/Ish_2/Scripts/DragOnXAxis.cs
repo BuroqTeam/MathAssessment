@@ -5,8 +5,9 @@ namespace LoyihaIshi
     public class DragOnXAxis : MonoBehaviour
     {
         public LineRenderer Linerenederer;
+        public Transform TetaObject;
         private float xLeft = -6f; // Minimum X value
-        private float xRight = 4f; // Maximum X value
+        private float xRight = 3f; // Maximum X value
         private bool isDragging = false;
         private float offsetX;
 
@@ -45,8 +46,18 @@ namespace LoyihaIshi
             Vector3 vec3 = Linerenederer.GetPosition(0);
             vec3.x = flo + 0.2f;
             Linerenederer.SetPosition(0, vec3);
+            UpdateCornerPosition();
         }
 
+        private void UpdateCornerPosition()
+        {
+            Vector3 pointAPosition = Linerenederer.GetPosition(0);
+            float xpos = Linerenederer.GetPosition(1).x;
+            float ypos = (Linerenederer.GetPosition(2).y + Linerenederer.GetPosition(1).y) / 2;
+            Vector3 pointBPosition = new Vector2(xpos, ypos);
+            // Calculate the new position for the corner object
+            TetaObject.position = pointAPosition + (2f / 7f) * (pointBPosition - pointAPosition);
+        }
 
     }
 }

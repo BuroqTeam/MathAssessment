@@ -19,15 +19,19 @@ namespace LoyihaIshi
         {
             if (ES3.Load<string>("Subject").Equals("Algebra") && ES3.Load<int>("ClassKey").Equals(10))
             {
-                SwitchButtons();
+                SwitchButtons(true);
+            }
+            else
+            {
+                SwitchButtons(false);
             }
         }
 
-        void SwitchButtons()
+        void SwitchButtons(bool isTrue)
         {
             for (int i = 0; i < ProjectButtons.Length; i++)
             {
-                ProjectButtons[i].SetActive(true);
+                ProjectButtons[i].SetActive(isTrue);
                 ProjectButtons[i].transform.SetParent(ParentObj.transform);
             }
         }
