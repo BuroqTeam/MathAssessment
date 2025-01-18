@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace LoyihaIshiBir
@@ -16,8 +17,8 @@ namespace LoyihaIshiBir
 
         [Header("Stories array")]
         public GameObject[] Stories = new GameObject[3];
-        
-
+        public UnityEvent CorrectEvent;
+        public UnityEvent WrongEvent;
 
         void Start()
         {
@@ -41,9 +42,49 @@ namespace LoyihaIshiBir
         {
             for (int i = 0; i < GraphicObjects.Length; i++)
             {
+                string spriteName = GraphicSprites[i].name;
+                /*System.Convert.ToInt32(spriteName[0].ToString())*/
+                int indexOfStory = System.Int32.Parse(spriteName[0].ToString());
                 GraphicObjects[i].GetComponent<Image>().sprite = GraphicSprites[i];
+                
+                if (indexOfStory < 4)
+                {
+                    GraphicObjects[i].GetComponent<GraphicDragAndDrop>().AnswerObject = Stories[indexOfStory - 1];
+                }
             }
             
+        }
+
+        public int[] DistributeCandies(int candies, int num_people)
+        {
+            int initial = 0;
+            int[] ans = new int[num_people];
+
+            while (candies > 0)
+            {
+                for (int i = 0; i < num_people; i++)
+                {
+                    int curVal = initial + (i + 1);
+                    if (candies >= curVal)
+                    {
+                        candies -= curVal;
+                        ans[i] = ans[i] + curVal;
+                        if (candies == 0)
+                        {
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        ans[i] = ans[i] + candies;
+                        candies = 0;
+                        break;
+                    }
+                }
+                initial += num_people;
+            }
+
+            return ans;
         }
 
     }
