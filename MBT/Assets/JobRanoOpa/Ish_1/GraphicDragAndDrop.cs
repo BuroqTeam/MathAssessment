@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace LoyihaIshiBir
 {
@@ -14,12 +16,15 @@ namespace LoyihaIshiBir
         private CanvasGroup _canvasGroup;      // For managing raycast blocking
         private Vector3 _originalPosition;     // To reset position if dropped incorrectly
         private RectTransform _rectTransform;  // Reference to the RectTransform of the image
-        
+        private Image _imageObj;
+
         [HideInInspector] public int GraphicOrder;
         public GameObject AnswerObject;        // Assign the correct drop target in the Inspector
         [Header("Target")]
         private GameObject _targetObject;
-
+        private Color _errorColor = new Color(0.89f, 0.65f, 0.65f, 1);
+        private Color _correctColor = new Color(0.76f, 0.92f, 0.81f, 1);
+        private Color _whiteColor = new Color(1, 1, 1, 1);
 
         private void Start()
         {
@@ -58,26 +63,31 @@ namespace LoyihaIshiBir
                     _rectTransform.anchorMin = _targetObject.GetComponent<RectTransform>().anchorMin;
                     _rectTransform.anchorMax = _targetObject.GetComponent<RectTransform>().anchorMax;
 
+                    StartCoroutine(ChangeColor(_whiteColor, _correctColor));
                     LoyihaBirManager.CorrectEvent.Invoke();
-                    LoyihaBirManager.NextTask(GraphicOrder);
+                    LoyihaBirManager.NextTask2(GraphicOrder);
                 }
                 else
                 {
-                    _rectTransform.position = _originalPosition;
+                    //_rectTransform.position = _originalPosition;
+                    _rectTransform.DOMove(_originalPosition, 0.2f);
+                    StartCoroutine(ChangeColor(_whiteColor, _errorColor));
                     LoyihaBirManager.WrongEvent.Invoke();
-                    //Debug.Log("Return old pos = " + Vector2.Distance(transform.position, AnswerObject.transform.position));
                 }
             }
             else
             {
-                _rectTransform.position = _originalPosition;
+                //_rectTransform.position = _originalPosition;
+                _rectTransform.DOMove(_originalPosition, 0.2f);
+                StartCoroutine(ChangeColor(_whiteColor, _errorColor));
                 LoyihaBirManager.WrongEvent.Invoke();
-            }            
+            }
             
         }
 
         IEnumerator SetInitialThings()
         {
+            _imageObj = GetComponent<Image>();
             _rectTransform = GetComponent<RectTransform>();
             _canvasGroup = GetComponent<CanvasGroup>();
             _originalPosition = _rectTransform.anchoredPosition;
@@ -85,10 +95,15 @@ namespace LoyihaIshiBir
             if (AnswerObject != null)
             {
                 _targetObject = AnswerObject.transform.GetChild(0).gameObject;
-            }
-            
+            }            
         }
 
+        IEnumerator ChangeColor(Color initialColor, Color eventColor)
+        {
+            _imageObj.DOColor(eventColor, 0.1f);
+            yield return new WaitForSeconds(0.5f);
+            _imageObj.DOColor(initialColor, 0.5f);
+        }
 
     }
 }

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ namespace LoyihaIshiBir
 
         [Header("Stories array")]
         public GameObject[] Stories = new GameObject[3];
-        
+
         [HideInInspector] public bool[] GraphicStatus = new bool[4] { false, false, false, false };
 
         public GameObject CanvasObj;
@@ -33,12 +34,34 @@ namespace LoyihaIshiBir
         public UnityEvent CorrectEvent;
         public UnityEvent WrongEvent;
 
+
+        [Header("Task three objects")]
+        public GameObject TaskThreeParent;
+        public Image GraphicABC;
+        public GameObject ParentStory;
+        public Image QuestionImage;
+        public TMP_Text QuestionOne;
+        public TMP_Text QuestionTwo;
+        public GameObject[] QuestionOneAnswers;
+        public GameObject[] QuestionTwoAnswers;
+
+
+        [Header("Task Four objects")]
+        public GameObject TaskFourParent;
+        public GameObject TaskFourPanel;
+
+        private float _duration = 0.7f;
+        private Color _errorColor = new Color(0.89f, 0.65f, 0.65f, 1);
+        private Color _correctColor = new Color(0.76f, 0.92f, 0.81f, 1);
+        private Color _whiteColor = new Color(1, 1, 1, 1);
+        private bool _isTaskThreeFinished = false;
+
+
         void Start()
         {
             ShuffleSprites();
             SetInitialTasks();
             Invoke("SetGraphics", 0.05f);
-            
         }
 
 
@@ -57,11 +80,22 @@ namespace LoyihaIshiBir
 
         void SetInitialTasks()
         {
+            _canvasWidth = CanvasObj.gameObject.GetComponent<RectTransform>().rect.width;
             RectStories.gameObject.SetActive(true);
             RectGraphics.gameObject.SetActive(true);
 
             TaskTwoPanel.SetActive(false);
             TaskTwoParent.SetActive(false);
+
+            TaskThreeParent.SetActive(false);
+            ParentStory.GetComponent<Image>().DOFade(0, 0);
+            ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(0, 0);
+            GraphicABC.DOFade(0, 0);
+            TaskThreeSetQuestions(0);
+
+            TaskFourParent.SetActive(false);
+            TaskFourPanel.SetActive(false);
+            
         }
 
 
@@ -82,36 +116,168 @@ namespace LoyihaIshiBir
                 {
                     GraphicStatus[i] = true;
                 }
-            }            
+            }
         }
 
 
         /// <summary>
-        /// This metod responsible call next task.
+        /// This metod responsible call Task Two and out Task One objects.
         /// </summary>
-        public void NextTask(int graphicOrder)
+        public void NextTask2(int graphicOrder)
         {
             GraphicStatus[graphicOrder] = true;
             if (GraphicStatus.All(b => b))
             {
-                Debug.Log("Next task work");
-                StartCoroutine(OutObjectsFromScene());
+                StartCoroutine(OutTaskOneObjectsFromScene());
             }
         }
 
         
-        IEnumerator OutObjectsFromScene()
+        IEnumerator OutTaskOneObjectsFromScene() // Out task one and set task two.
         {
             yield return new WaitForSeconds(1);
-            _canvasWidth = CanvasObj.gameObject.GetComponent<RectTransform>().rect.width;
-            RectStories.DOAnchorPosX(_canvasWidth, 0.7f);
-            RectGraphics.DOAnchorPosX(-_canvasWidth, 0.7f);
-            LeftButton.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, 0.7f);
-            RightButton.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, 0.7f);
+            
+            RectStories.DOAnchorPosX(_canvasWidth, _duration);
+            RectGraphics.DOAnchorPosX(-_canvasWidth, _duration);
+            LeftButton.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, _duration);
+            RightButton.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
             yield return new WaitForSeconds(1.0f);
             TaskTwoPanel.SetActive(true);
             TaskTwoParent.SetActive(true);
         }
+
+
+        /// <summary>
+        /// This method must called in "Yakunlash Button"
+        /// </summary>
+        public void NextTask3()
+        {
+            StartCoroutine(SettingTaskThree());
+        }
+
+
+        IEnumerator SettingTaskThree()
+        {
+            TaskThreeParent.gameObject.SetActive(true);
+            yield return new WaitForSeconds(2.0f);
+            TaskTwoPanel.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            TaskTwoParent.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            yield return new WaitForSeconds(1);
+            
+            ParentStory.GetComponent<Image>().DOFade(1, _duration);
+            yield return new WaitForSeconds(_duration / 2);
+            ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(1, _duration);
+            yield return new WaitForSeconds(2 * _duration);
+            GraphicABC.DOFade(1, _duration);
+            yield return new WaitForSeconds(_duration);
+            TaskThreeSetQuestions(1);
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="questionOrder">question order index</param>
+        public void TaskThreeSetQuestions(int questionOrder)
+        {
+            switch (questionOrder)
+            {
+                case 0:
+                    QuestionImage.DOFade(0, _duration);
+                    QuestionOne.DOFade(0, _duration);
+                    QuestionTwo.DOFade(0, _duration);
+                    StartCoroutine(FadeObject(QuestionOneAnswers, 0, _duration));
+                    StartCoroutine(FadeObject(QuestionTwoAnswers, 0, _duration));
+                    break;
+                case 1:
+                    QuestionImage.DOFade(1, _duration);
+                    QuestionOne.DOFade(1, _duration);
+                    StartCoroutine(FadeObject(QuestionOneAnswers, 1, _duration));
+                    break;
+                case 2:
+                    QuestionOne.DOFade(0, _duration);
+                    QuestionTwo.DOFade(1, _duration);
+                    StartCoroutine(FadeObject(QuestionOneAnswers, 0, _duration));
+                    StartCoroutine(FadeObject(QuestionTwoAnswers, 1, _duration));
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        IEnumerator FadeObject(GameObject[] objs, float fadeVal, float duration)
+        {
+            yield return new WaitForSeconds(duration);
+            
+            for (int i = 0; i < objs.Length; i++)
+            {
+                if (fadeVal == 0)
+                {
+                    objs[i].SetActive(false);
+                }
+                else
+                {
+                    objs[i].SetActive(true);
+                }
+                objs[i].GetComponent<Image>().DOFade(fadeVal, _duration);
+                objs[i].transform.GetChild(0).GetComponent<TMP_Text>().DOFade(fadeVal, _duration);
+            }
+        }
+
+        
+        public void CorrectAnimation(Image imag)
+        {
+            CorrectEvent.Invoke();
+            imag.DOColor(_correctColor, 0.5f);
+            StartCoroutine(ReturnInitialColor(imag, true));
+        }
+
+
+        public void WrongAnimation(Image imag)
+        {
+            WrongEvent.Invoke();
+            imag.DOColor(_errorColor, 0.5f);
+            StartCoroutine(ReturnInitialColor(imag, false));
+        }
+
+        
+        IEnumerator ReturnInitialColor(Image imag, bool isTrue)
+        {
+            yield return new WaitForSeconds(1);
+            imag.DOColor(_whiteColor, 0.5f);
+            yield return new WaitForSeconds(0.5f);
+            if (_isTaskThreeFinished)
+            {
+                Debug.Log("TaskFour");
+                NextTask4();
+            }
+            else if (isTrue)
+            {
+                _isTaskThreeFinished = true;
+                TaskThreeSetQuestions(2);
+            }
+        }
+
+
+        /// <summary>
+        /// This method responsible for calling Task4.
+        /// </summary>
+        public void NextTask4()
+        {
+            StartCoroutine(SettingTaskFour());
+        }
+
+
+        IEnumerator SettingTaskFour()
+        {
+            yield return new WaitForSeconds(2.0f);
+            TaskThreeParent.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            yield return new WaitForSeconds(1.0f);
+            TaskFourParent.SetActive(true);
+            TaskFourPanel.SetActive(true);
+        }
+
+
 
         /// <summary>
         /// This is for leetcode
@@ -149,7 +315,6 @@ namespace LoyihaIshiBir
             }
             return ans;
         }
-
 
     }
 }
