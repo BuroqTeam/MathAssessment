@@ -13,6 +13,8 @@ namespace LoyihaIshiBir
     /// </summary>
     public class LoyihaBir : MonoBehaviour
     {
+        [Header("Parent task One")]
+        public GameObject TaskOneParent;
         [Header("Sprites of graphics")]
         public Sprite[] GraphicSprites = new Sprite[4];
         public GameObject[] GraphicObjects = new GameObject[4];
@@ -45,6 +47,9 @@ namespace LoyihaIshiBir
         public GameObject[] QuestionOneAnswers;
         public GameObject[] QuestionTwoAnswers;
 
+        [Header("Question three objs")]
+        public GameObject QuestionObj;
+        public GameObject InputFieldObj;
 
         [Header("Task Four objects")]
         public GameObject TaskFourParent;
@@ -90,6 +95,8 @@ namespace LoyihaIshiBir
             TaskThreeParent.SetActive(false);
             ParentStory.GetComponent<Image>().DOFade(0, 0);
             ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(0, 0);
+            QuestionObj.SetActive(false);//++
+            InputFieldObj.SetActive(false);//++
             GraphicABC.DOFade(0, 0);
             TaskThreeSetQuestions(0);
 
@@ -136,11 +143,11 @@ namespace LoyihaIshiBir
         IEnumerator OutTaskOneObjectsFromScene() // Out task one and set task two.
         {
             yield return new WaitForSeconds(1);
-            
-            RectStories.DOAnchorPosX(_canvasWidth, _duration);
-            RectGraphics.DOAnchorPosX(-_canvasWidth, _duration);
-            LeftButton.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, _duration);
-            RightButton.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            TaskOneParent.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, _duration);
+            //RectStories.DOAnchorPosX(_canvasWidth, _duration);
+            //RectGraphics.DOAnchorPosX(_canvasWidth, _duration);
+            //LeftButton.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            //RightButton.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
             yield return new WaitForSeconds(1.0f);
             TaskTwoPanel.SetActive(true);
             TaskTwoParent.SetActive(true);
@@ -160,8 +167,8 @@ namespace LoyihaIshiBir
         {
             TaskThreeParent.gameObject.SetActive(true);
             yield return new WaitForSeconds(2.0f);
-            TaskTwoPanel.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
-            TaskTwoParent.GetComponent<RectTransform>().DOAnchorPosX(_canvasWidth, _duration);
+            TaskTwoPanel.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, _duration);
+            TaskTwoParent.GetComponent<RectTransform>().DOAnchorPosX(-_canvasWidth, _duration);
             yield return new WaitForSeconds(1);
             
             ParentStory.GetComponent<Image>().DOFade(1, _duration);
@@ -200,6 +207,11 @@ namespace LoyihaIshiBir
                     StartCoroutine(FadeObject(QuestionOneAnswers, 0, _duration));
                     StartCoroutine(FadeObject(QuestionTwoAnswers, 1, _duration));
                     break;
+                case 3:
+                    QuestionImage.DOFade(0, _duration);
+                    QuestionTwo.DOFade(0, _duration);
+                    StartCoroutine(FadeObject(QuestionTwoAnswers, 0, _duration));
+                    break;
                 default:
                     break;
             }
@@ -224,12 +236,17 @@ namespace LoyihaIshiBir
             }
         }
 
-        
+
+        /// <summary>
+        /// This metod called in button.
+        /// </summary>
+        /// <param name="imag"></param>
         public void CorrectAnimation(Image imag)
         {
             CorrectEvent.Invoke();
             imag.DOColor(_correctColor, 0.5f);
-            StartCoroutine(ReturnInitialColor(imag, true));
+            StartCoroutine(ReturnInitialColor(imag));
+            StartCoroutine(CallNextTask(imag, true));
         }
 
 
@@ -237,25 +254,40 @@ namespace LoyihaIshiBir
         {
             WrongEvent.Invoke();
             imag.DOColor(_errorColor, 0.5f);
-            StartCoroutine(ReturnInitialColor(imag, false));
+            StartCoroutine(ReturnInitialColor(imag));
         }
 
         
-        IEnumerator ReturnInitialColor(Image imag, bool isTrue)
+        IEnumerator CallNextTask(Image imag, bool isTrue)
         {
-            yield return new WaitForSeconds(1);
-            imag.DOColor(_whiteColor, 0.5f);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.5f);
             if (_isTaskThreeFinished)
             {
                 Debug.Log("TaskFour");
-                NextTask4();
+                // I add my code hear
+                StartCoroutine(CallQuestionThree());
+                //NextTask4();
             }
             else if (isTrue)
             {
                 _isTaskThreeFinished = true;
                 TaskThreeSetQuestions(2);
             }
+        }
+
+        /// <summary>
+        /// This method call question three for Task two.
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator CallQuestionThree()
+        {
+            ParentStory.GetComponent<Image>().DOFade(0, _duration);
+            ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(0, _duration);
+            TaskThreeSetQuestions(3);
+            yield return new WaitForSeconds(1);
+            //ParentStory.SetActive(false);
+            QuestionObj.SetActive(true);
+            InputFieldObj.SetActive(true);
         }
 
 
@@ -277,6 +309,12 @@ namespace LoyihaIshiBir
             TaskFourPanel.SetActive(true);
         }
 
+
+        IEnumerator ReturnInitialColor(Image imag)
+        {
+            yield return new WaitForSeconds(1.0f);
+            imag.DOColor(_whiteColor, 0.5f);
+        }
 
 
         /// <summary>

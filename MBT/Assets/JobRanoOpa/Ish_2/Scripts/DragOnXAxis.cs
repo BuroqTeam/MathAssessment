@@ -6,8 +6,9 @@ namespace LoyihaIshi
     {
         public LineRenderer Linerenederer;
         public Transform TetaObject;
+        public GameObject TetaObjectUpper;
         private float xLeft = -6f; // Minimum X value
-        private float xRight = 2f; // Maximum X value
+        private float xRight = 4.5f; // Maximum X value
         private bool isDragging = false;
         private float offsetX;
 
@@ -36,8 +37,7 @@ namespace LoyihaIshi
         }
 
         private void OnMouseUp()
-        {
-            // Stop dragging
+        {   // Stop dragging
             isDragging = false;
         }
 
@@ -56,7 +56,21 @@ namespace LoyihaIshi
             float ypos = (Linerenederer.GetPosition(2).y + Linerenederer.GetPosition(1).y) / 2;
             Vector3 pointBPosition = new Vector2(xpos, ypos);
             // Calculate the new position for the corner object
-            TetaObject.position = pointAPosition + (2f / 7f) * (pointBPosition - pointAPosition);
+            if (transform.position.x < 3.5f)
+            {
+                TetaObject.position = pointAPosition + (4f / 14f) * (pointBPosition - pointAPosition);
+                if (!TetaObject.gameObject.activeSelf)
+                {
+                    TetaObjectUpper.SetActive(false);
+                    TetaObject.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                TetaObjectUpper.SetActive(true);
+                TetaObject.gameObject.SetActive(false);
+            }
+            
         }
 
     }
