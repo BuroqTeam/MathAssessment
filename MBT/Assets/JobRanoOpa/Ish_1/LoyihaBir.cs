@@ -13,8 +13,13 @@ namespace LoyihaIshiBir
     /// </summary>
     public class LoyihaBir : MonoBehaviour
     {
-        [Header("Parent task One")]
+        [Header("Parents")]
         public GameObject TaskOneParent;
+        public GameObject TaskTwoParent;
+        public GameObject TaskThreeParent;
+        public GameObject TaskThreeParent_2;
+        public GameObject TaskFourParent;
+
         [Header("Sprites of graphics")]
         public Sprite[] GraphicSprites = new Sprite[4];
         public GameObject[] GraphicObjects = new GameObject[4];
@@ -30,7 +35,7 @@ namespace LoyihaIshiBir
         public GameObject LeftButton;
         public GameObject RightButton;
         public GameObject TaskTwoPanel;
-        public GameObject TaskTwoParent;
+        //public GameObject TaskTwoParent;
         private float _canvasWidth;
 
         public UnityEvent CorrectEvent;
@@ -38,7 +43,6 @@ namespace LoyihaIshiBir
 
 
         [Header("Task three objects")]
-        public GameObject TaskThreeParent;
         public Image GraphicABC;
         public GameObject ParentStory;
         public Image QuestionImage;
@@ -52,7 +56,6 @@ namespace LoyihaIshiBir
         public GameObject InputFieldObj;
 
         [Header("Task Four objects")]
-        public GameObject TaskFourParent;
         public GameObject TaskFourPanel;
 
         private float _duration = 0.7f;
@@ -89,20 +92,20 @@ namespace LoyihaIshiBir
             RectStories.gameObject.SetActive(true);
             RectGraphics.gameObject.SetActive(true);
 
-            TaskTwoPanel.SetActive(false);
+            //TaskTwoPanel.SetActive(false);
             TaskTwoParent.SetActive(false);
-
             TaskThreeParent.SetActive(false);
-            ParentStory.GetComponent<Image>().DOFade(0, 0);
-            ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(0, 0);
-            QuestionObj.SetActive(false);//++
-            InputFieldObj.SetActive(false);//++
-            GraphicABC.DOFade(0, 0);
-            TaskThreeSetQuestions(0);
-
+            TaskThreeParent_2.SetActive(false);
             TaskFourParent.SetActive(false);
-            TaskFourPanel.SetActive(false);
+
+            //ParentStory.GetComponent<Image>().DOFade(0, 0);
+            //ParentStory.transform.GetChild(0).GetComponent<TMP_Text>().DOFade(0, 0);
+            //QuestionObj.SetActive(false);//++
+            //InputFieldObj.SetActive(false);//++
+            //GraphicABC.DOFade(0, 0);
+            //TaskThreeSetQuestions(0);
             
+            //TaskFourPanel.SetActive(false);            
         }
 
 
@@ -132,11 +135,11 @@ namespace LoyihaIshiBir
         /// </summary>
         public void NextTask2(int graphicOrder)
         {
-            GraphicStatus[graphicOrder] = true;
-            if (GraphicStatus.All(b => b))
-            {
-                StartCoroutine(OutTaskOneObjectsFromScene());
-            }
+            //GraphicStatus[graphicOrder] = true;
+            //if (GraphicStatus.All(b => b))
+            //{
+            //    StartCoroutine(OutTaskOneObjectsFromScene());
+            //}
         }
 
         
@@ -246,7 +249,7 @@ namespace LoyihaIshiBir
             CorrectEvent.Invoke();
             imag.DOColor(_correctColor, 0.5f);
             StartCoroutine(ReturnInitialColor(imag));
-            StartCoroutine(CallNextTask(imag, true));
+            //StartCoroutine(CallNextTask(imag, true));
         }
 
 
@@ -315,6 +318,9 @@ namespace LoyihaIshiBir
             yield return new WaitForSeconds(1.0f);
             imag.DOColor(_whiteColor, 0.5f);
         }
+
+
+
 
 
         /// <summary>

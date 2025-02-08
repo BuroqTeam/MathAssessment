@@ -18,10 +18,10 @@ namespace LoyihaIshiBir
             _buttons[0] = ButtonObjects[0].GetComponent<Button>();
             _buttons[1] = ButtonObjects[1].GetComponent<Button>();
 
-            ActivateButtons(false);
-            _index = Slides.Length;
-            //SetInitial(_index);
-            //_buttons[0].interactable = false;
+            //ActivateButtons(false);
+            _index = 0/*Slides.Length*/;
+            SetInitial(_index);
+            _buttons[0].interactable = false;
         }
 
         public void NextToLeft()
@@ -39,7 +39,7 @@ namespace LoyihaIshiBir
         {
             _index++;
             SetInitial(_index);
-            if (_index == 2)
+            if (_index == Slides.Length - 1)
             {
                 _buttons[1].interactable = false;
             }
@@ -66,15 +66,11 @@ namespace LoyihaIshiBir
         {
             ButtonObjects[0].SetActive(isTrue);
             ButtonObjects[1].SetActive(isTrue);
-            SetToZero();
+            //SetToZero();
             SetInitial(_index);
         }
 
-        public void SetSlides()
-        {
-
-        }
-
+        
         public void SetToZero()
         {
             for (int i = 0; i < Slides.Length; i++)
