@@ -9,11 +9,13 @@ namespace LoyihaIshi
         Button[] _buttons = new Button[2];
         public GameObject[] Slides;
         [SerializeField] private int _index = 0;
+        int _countSlides;
 
         private void Awake()
         {
             _buttons[0] = ButtonObjects[0].GetComponent<Button>();
             _buttons[1] = ButtonObjects[1].GetComponent<Button>();
+            _countSlides = Slides.Length - 1;
 
             SetInitial(_index);
             _buttons[0].interactable = false;
@@ -34,7 +36,7 @@ namespace LoyihaIshi
         {
             _index++;
             SetInitial(_index);
-            if (_index == 2)
+            if (_index == _countSlides)
             {
                 _buttons[1].interactable = false;
             }
@@ -55,6 +57,7 @@ namespace LoyihaIshi
                 }
             }
         }
+
 
     }
 }

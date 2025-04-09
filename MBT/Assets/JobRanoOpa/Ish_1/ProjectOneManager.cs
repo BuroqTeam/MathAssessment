@@ -17,7 +17,6 @@ namespace LoyihaIshiBir
         {
             _buttons[0] = ButtonObjects[0].GetComponent<Button>();
             _buttons[1] = ButtonObjects[1].GetComponent<Button>();
-
             //ActivateButtons(false);
             _index = 0/*Slides.Length*/;
             SetInitial(_index);
