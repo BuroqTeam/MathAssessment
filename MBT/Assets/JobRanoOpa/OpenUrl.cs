@@ -45,4 +45,12 @@ public class OpenUrl : MonoBehaviour
         Application.OpenURL("www.geogebra.org/graphing");
     }
 
+
+    private void OnMouseDown()
+    {
+        Debug.Log($"{gameObject.name} clicked!");
+        // Qo‘shimcha amallarni shu yerga yozing
+        Openurl();
+    }
+
 }

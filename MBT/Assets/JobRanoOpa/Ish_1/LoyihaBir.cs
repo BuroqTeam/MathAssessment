@@ -103,8 +103,7 @@ namespace LoyihaIshiBir
             //QuestionObj.SetActive(false);//++
             //InputFieldObj.SetActive(false);//++
             //GraphicABC.DOFade(0, 0);
-            //TaskThreeSetQuestions(0);
-            
+            //TaskThreeSetQuestions(0);            
             //TaskFourPanel.SetActive(false);            
         }
 
