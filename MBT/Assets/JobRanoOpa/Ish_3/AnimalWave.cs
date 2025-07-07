@@ -20,13 +20,13 @@ namespace LoyihaIshiUch
         void Start()
         {
             //MyLineRenderer = GetComponent<LineRenderer>();
-            //Draw();
+            Draw();
         }
 
 
         void Update()
         {
-            Draw();
+            //Draw();
         }
 
         void Draw()
